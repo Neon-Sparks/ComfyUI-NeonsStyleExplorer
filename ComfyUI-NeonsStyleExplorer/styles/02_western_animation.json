@@ -1,0 +1,1272 @@
+{
+  "schema": 1,
+  "family": "Western Animation",
+  "styles": [
+    {
+      "id": "western.1920s_rubber_hose",
+      "name": "[Cartoon] 1920s Rubber-Hose",
+      "family": "Western Animation",
+      "axis": "style",
+      "medium": "cartoon style image",
+      "nl": "1920s rubber-hose animation: bendy limbs with no joints, pie-cut eyes, inky black-and-white brush line, bouncing flat shapes, projector flicker and dust, cartoon style image.",
+      "tags": [
+        "monochrome",
+        "retro_artstyle",
+        "outline",
+        "flat_color",
+        "film_grain"
+      ],
+      "tags_negative": [
+        "photorealistic",
+        "colorful"
+      ],
+      "negative": "colour rendering, realistic anatomy",
+      "aliases": [],
+      "written": true
+    },
+    {
+      "id": "western.1930s_golden_age_short",
+      "name": "[Cartoon] 1930s Golden Age Short",
+      "family": "Western Animation",
+      "axis": "style",
+      "medium": "cartoon style image",
+      "nl": "1930s theatrical short: soft-round character construction, painted grey backgrounds, ink line of even weight, gentle two-tone shading, nitrate-soft film grain, cartoon style image.",
+      "tags": [
+        "retro_artstyle",
+        "monochrome",
+        "flat_color",
+        "film_grain",
+        "outline"
+      ],
+      "tags_negative": [
+        "highres"
+      ],
+      "negative": "digital sharpness, saturated modern colour",
+      "aliases": [],
+      "written": true
+    },
+    {
+      "id": "western.1940s_theatrical_slapstick",
+      "name": "[Cartoon] 1940s Theatrical Slapstick",
+      "family": "Western Animation",
+      "axis": "style",
+      "medium": "cartoon style image",
+      "nl": "1940s slapstick cel: elastic squash-and-stretch shapes, hot primary paint, bold black outline, impact smear frames, technicolor saturation, cartoon style image.",
+      "tags": [
+        "retro_artstyle",
+        "colorful",
+        "outline",
+        "flat_color",
+        "motion_blur"
+      ],
+      "tags_negative": [
+        "muted_color"
+      ],
+      "negative": "muted realism, delicate line",
+      "aliases": [],
+      "written": true
+    },
+    {
+      "id": "western.1950s_upa_flat_graphic",
+      "name": "[Cartoon] 1950s UPA Flat Graphic",
+      "family": "Western Animation",
+      "axis": "style",
+      "medium": "cartoon style image",
+      "nl": "1950s UPA graphic style: flat colour fields, mid-century design shapes, angular caricature, minimal detail, textured paper ground, cartoon style image.",
+      "tags": [
+        "flat_color",
+        "retro_artstyle",
+        "minimalism",
+        "limited_palette",
+        "textured"
+      ],
+      "tags_negative": [
+        "photorealistic"
+      ],
+      "negative": "volumetric shading, photographic depth",
+      "aliases": [],
+      "written": true
+    },
+    {
+      "id": "western.1960s_saturday_morning",
+      "name": "[Cartoon] 1960s Saturday-Morning",
+      "family": "Western Animation",
+      "axis": "style",
+      "medium": "cartoon style image",
+      "nl": "1960s Saturday-morning cel: reused pose library flatness, thick uniform ink, three-colour characters, sparse painted background, telecine warmth, cartoon style image.",
+      "tags": [
+        "retro_artstyle",
+        "flat_color",
+        "limited_palette",
+        "outline",
+        "film_grain"
+      ],
+      "tags_negative": [
+        "highres"
+      ],
+      "negative": "lush full animation detail, digital polish",
+      "aliases": [],
+      "written": true
+    },
+    {
+      "id": "western.1960s_tv_limited",
+      "name": "[Cartoon] 1960s TV Limited",
+      "family": "Western Animation",
+      "axis": "style",
+      "medium": "cartoon style image",
+      "nl": "1960s limited TV animation: held drawings, separated mouth and limb cels, flat unshaded colour, simple graphic backgrounds, dusty film texture, cartoon style image.",
+      "tags": [
+        "retro_artstyle",
+        "flat_color",
+        "limited_palette",
+        "film_grain"
+      ],
+      "tags_negative": [
+        "3d"
+      ],
+      "negative": "full-shaded rendering, CGI",
+      "aliases": [],
+      "written": true
+    },
+    {
+      "id": "western.1980s_saturday_morning_cel",
+      "name": "[Cartoon] 1980s Saturday-Morning Cel",
+      "family": "Western Animation",
+      "axis": "style",
+      "medium": "cartoon style image",
+      "nl": "1980s Saturday-morning cel: bright toyetic palette, thick black outline, two-band shadow, airbrushed effect glow, painted matte backdrop, video grain, cartoon style image.",
+      "tags": [
+        "retro_artstyle",
+        "1980s_(style)",
+        "outline",
+        "flat_color",
+        "airbrush_(medium)"
+      ],
+      "tags_negative": [
+        "muted_color"
+      ],
+      "negative": "muted arthouse palette, painterly blending",
+      "aliases": [],
+      "written": true
+    },
+    {
+      "id": "western.1990s_cable_bold",
+      "name": "[Cartoon] 1990s Cable Bold",
+      "family": "Western Animation",
+      "axis": "style",
+      "medium": "cartoon style image",
+      "nl": "1990s cable-cartoon style: chunky asymmetric shapes, bold uneven outline, acid-bright flat colour, wonky perspective, gritty ink texture, cartoon style image.",
+      "tags": [
+        "1990s_(style)",
+        "outline",
+        "flat_color",
+        "colorful"
+      ],
+      "tags_negative": [
+        "photorealistic"
+      ],
+      "negative": "realistic proportion, soft pastel shading",
+      "aliases": [],
+      "written": true
+    },
+    {
+      "id": "western.1990s_feature_2d_renaissance",
+      "name": "[Cartoon] 1990s Feature 2D Renaissance",
+      "family": "Western Animation",
+      "axis": "style",
+      "medium": "oil painting style image",
+      "nl": "1990s 2D feature look: hand-painted backgrounds in oil and gouache, soft airbrushed character shading, warm cinematic colour script, subtle grain, oil painting style image.",
+      "tags": [
+        "painting_(medium)",
+        "airbrush_(medium)",
+        "cinematic_lighting",
+        "traditional_media"
+      ],
+      "tags_negative": [
+        "flat_color"
+      ],
+      "negative": "flat TV shading, harsh outline",
+      "aliases": [],
+      "written": true
+    },
+    {
+      "id": "western.1990s_paint_and_trace_kids",
+      "name": "[Cartoon] 1990s Paint-and-Trace Kids",
+      "family": "Western Animation",
+      "axis": "style",
+      "medium": "cartoon style image",
+      "nl": "1990s paint-and-trace kids animation: crisp traced ink line, flat cel paint with single shadow tone, cheerful primaries, plain painted board, cartoon style image.",
+      "tags": [
+        "1990s_(style)",
+        "flat_color",
+        "outline",
+        "colorful"
+      ],
+      "tags_negative": [
+        "3d"
+      ],
+      "negative": "CGI shading, gritty texture",
+      "aliases": [],
+      "written": true
+    },
+    {
+      "id": "western.american_newspaper_strip",
+      "name": "[Cartoon] American Newspaper Strip",
+      "family": "Western Animation",
+      "axis": "style",
+      "medium": "comic style image",
+      "nl": "Newspaper-strip rendering: economical pen line, benday dot tone, four-colour newsprint registration, small-panel clarity, paper yellowing, comic style image.",
+      "tags": [
+        "comic",
+        "halftone",
+        "limited_palette",
+        "textured",
+        "lineart"
+      ],
+      "tags_negative": [
+        "highres"
+      ],
+      "negative": "painterly rendering, glossy digital colour",
+      "aliases": [],
+      "written": true
+    },
+    {
+      "id": "western.angular_action_animation",
+      "name": "[Cartoon] Angular Action Animation",
+      "family": "Western Animation",
+      "axis": "style",
+      "medium": "cartoon style image",
+      "nl": "Angular action-cartoon rendering: sharp geometric character shapes, thick tapering outline, flat saturated colour, wide empty staging, cartoon style image.",
+      "tags": [
+        "outline",
+        "flat_color",
+        "high_contrast",
+        "minimalism"
+      ],
+      "tags_negative": [
+        "photorealistic"
+      ],
+      "negative": "soft rounded rendering, painterly texture",
+      "aliases": [],
+      "written": true
+    },
+    {
+      "id": "western.anime_influenced_adventure",
+      "name": "[Cartoon] Anime-Influenced Adventure",
+      "family": "Western Animation",
+      "axis": "style",
+      "medium": "cartoon style image",
+      "nl": "Western-anime hybrid animation: sharper cel shading than usual, dynamic camera angles, saturated adventure palette, clean bold line, cartoon style image.",
+      "tags": [
+        "cel_shading",
+        "anime_coloring",
+        "outline",
+        "colorful"
+      ],
+      "tags_negative": [
+        "photorealistic"
+      ],
+      "negative": "photo realism, muddy painterly texture",
+      "aliases": [],
+      "written": true
+    },
+    {
+      "id": "western.bouncing_ball_sing_along",
+      "name": "[Cartoon] Bouncing-Ball Sing-Along",
+      "family": "Western Animation",
+      "axis": "style",
+      "medium": "cartoon style image",
+      "nl": "Sing-along-short rendering: black-and-white ink figures over grey wash, lyric card lettering space, projector flicker and dust, cartoon style image.",
+      "tags": [
+        "monochrome",
+        "retro_artstyle",
+        "film_grain",
+        "outline"
+      ],
+      "tags_negative": [
+        "colorful"
+      ],
+      "negative": "colour rendering, modern digital cleanliness",
+      "aliases": [],
+      "written": true
+    },
+    {
+      "id": "western.british_storybook_annual",
+      "name": "[Cartoon] British Storybook Annual",
+      "family": "Western Animation",
+      "axis": "style",
+      "medium": "illustration style image",
+      "nl": "British annual illustration: ink outline with watercolour wash, cosy muted palette, cross-hatched shadow, printed paper tooth, illustration style image.",
+      "tags": [
+        "watercolor_(medium)",
+        "ink_(medium)",
+        "muted_color",
+        "cross-hatching",
+        "traditional_media"
+      ],
+      "tags_negative": [
+        "neon_palette"
+      ],
+      "negative": "neon colour, glossy vector finish",
+      "aliases": [],
+      "written": true
+    },
+    {
+      "id": "western.estonian_puppet",
+      "name": "[Cartoon] Estonian Puppet",
+      "family": "Western Animation",
+      "axis": "style",
+      "medium": "handmade style image",
+      "nl": "Puppet-animation rendering: coarse cloth and wood figures, grubby handmade texture, cold practical light, cramped set depth, handmade style image.",
+      "tags": [
+        "stop_motion",
+        "textured",
+        "dark",
+        "wood"
+      ],
+      "tags_negative": [
+        "colorful"
+      ],
+      "negative": "glossy CGI, cheerful flat colour",
+      "aliases": [],
+      "written": true
+    },
+    {
+      "id": "western.feature_background_painting",
+      "name": "[Cartoon] Feature Background Painting",
+      "family": "Western Animation",
+      "axis": "style",
+      "medium": "painting style image",
+      "nl": "Feature background plate: gouache-painted architecture and foliage, no outlines, layered aerial perspective, warm keyed colour script, board texture, painting style image.",
+      "tags": [
+        "scenery",
+        "painting_(medium)",
+        "no_lineart",
+        "traditional_media"
+      ],
+      "tags_negative": [
+        "lineart"
+      ],
+      "negative": "character outlines, flat vector fills",
+      "aliases": [],
+      "written": true
+    },
+    {
+      "id": "western.flash_vector_web",
+      "name": "[Cartoon] Flash Vector Web",
+      "family": "Western Animation",
+      "axis": "style",
+      "medium": "vector style image",
+      "nl": "Flash-era vector animation: uniform stroke weight, flat symbol fills, tween-smooth shapes, limited web palette, hard-edged geometry, vector style image.",
+      "tags": [
+        "vector_trace",
+        "flat_color",
+        "outline",
+        "limited_palette"
+      ],
+      "tags_negative": [
+        "textured",
+        "film_grain"
+      ],
+      "negative": "grain, painterly texture",
+      "aliases": [],
+      "written": true
+    },
+    {
+      "id": "western.flat_folk_animation",
+      "name": "[Cartoon] Flat Folk Animation",
+      "family": "Western Animation",
+      "axis": "style",
+      "medium": "cartoon style image",
+      "nl": "Flat folk-animation rendering: decorative flattened perspective, illuminated-manuscript pattern, warm limited palette, clean shape outline, cartoon style image.",
+      "tags": [
+        "flat_color",
+        "limited_palette",
+        "lineart",
+        "traditional_media"
+      ],
+      "tags_negative": [
+        "photorealistic"
+      ],
+      "negative": "perspective depth, photographic shading",
+      "aliases": [],
+      "written": true
+    },
+    {
+      "id": "western.franco_belgian_atom_style",
+      "name": "[Cartoon] Franco-Belgian Atom Style",
+      "family": "Western Animation",
+      "axis": "style",
+      "medium": "comic style image",
+      "nl": "Atom-style Franco-Belgian rendering: bouncy geometric character design, even ligne-claire outline, flat retro colour, mid-century pattern accents, comic style image.",
+      "tags": [
+        "comic",
+        "flat_color",
+        "lineart",
+        "retro_artstyle"
+      ],
+      "tags_negative": [
+        "photorealistic"
+      ],
+      "negative": "photographic depth, heavy hatching",
+      "aliases": [],
+      "written": true
+    },
+    {
+      "id": "western.gross_out_close_up",
+      "name": "[Cartoon] Gross-Out Close-Up",
+      "family": "Western Animation",
+      "axis": "style",
+      "medium": "cartoon style image",
+      "nl": "Gross-out cartoon rendering: sudden hyper-detailed painted close-up amid flat cel art, greasy texture, bulging veins and sweat, cartoon style image.",
+      "tags": [
+        "painting_(medium)",
+        "textured",
+        "high_contrast",
+        "colorful"
+      ],
+      "tags_negative": [
+        "minimalism"
+      ],
+      "negative": "clean flat design, gentle pastel palette",
+      "aliases": [],
+      "written": true
+    },
+    {
+      "id": "western.grotesque_tv_animation",
+      "name": "[Cartoon] Grotesque TV Animation",
+      "family": "Western Animation",
+      "axis": "style",
+      "medium": "cartoon style image",
+      "nl": "Grotesque cartoon rendering: bulging asymmetric features, scratchy uneven outline, sour clashing colour, collaged photo backgrounds, cartoon style image.",
+      "tags": [
+        "outline",
+        "colorful",
+        "collage",
+        "high_contrast"
+      ],
+      "tags_negative": [
+        "minimalism"
+      ],
+      "negative": "clean geometric design, muted palette",
+      "aliases": [],
+      "written": true
+    },
+    {
+      "id": "western.late_night_flat_black_comedy",
+      "name": "[Cartoon] Late-Night Flat Black Comedy",
+      "family": "Western Animation",
+      "axis": "style",
+      "medium": "cartoon style image",
+      "nl": "Late-night flat comedy animation: blunt simple shapes, thin even outline, dull-bright colour, deadpan flat staging, no shading, cartoon style image.",
+      "tags": [
+        "flat_color",
+        "outline",
+        "minimalism",
+        "limited_palette"
+      ],
+      "tags_negative": [
+        "cinematic_lighting"
+      ],
+      "negative": "dramatic lighting, detailed rendering",
+      "aliases": [],
+      "written": true
+    },
+    {
+      "id": "western.late_night_lo_fi",
+      "name": "[Cartoon] Late-Night Lo-Fi",
+      "family": "Western Animation",
+      "axis": "style",
+      "medium": "cartoon style image",
+      "nl": "Lo-fi adult-animation rendering: minimal held drawings, thin uneven outline, muddy limited palette, deadpan flat staging, cartoon style image.",
+      "tags": [
+        "flat_color",
+        "limited_palette",
+        "outline",
+        "muted_color"
+      ],
+      "tags_negative": [
+        "cinematic_lighting"
+      ],
+      "negative": "lush lighting, dense detail",
+      "aliases": [],
+      "written": true
+    },
+    {
+      "id": "western.ligne_claire",
+      "name": "[Cartoon] Ligne Claire",
+      "family": "Western Animation",
+      "axis": "style",
+      "medium": "comic style image",
+      "nl": "Ligne-claire rendering: uniform confident contour, no hatching, flat even colour, clear readable space, precise architectural detail, comic style image.",
+      "tags": [
+        "comic",
+        "lineart",
+        "flat_color",
+        "minimalism"
+      ],
+      "tags_negative": [
+        "cross-hatching"
+      ],
+      "negative": "hatched shading, gritty texture",
+      "aliases": [],
+      "written": true
+    },
+    {
+      "id": "western.modern_tv_calarts_adjacent",
+      "name": "[Cartoon] Modern TV CalArts-adjacent",
+      "family": "Western Animation",
+      "axis": "style",
+      "medium": "cartoon style image",
+      "nl": "Modern TV cartoon rendering: rounded bean shapes, thin coloured outline, soft pastel-bright palette, minimal shading, clean digital finish, cartoon style image.",
+      "tags": [
+        "flat_color",
+        "outline",
+        "pastel_colors",
+        "minimalism"
+      ],
+      "tags_negative": [
+        "photorealistic"
+      ],
+      "negative": "gritty realism, heavy chiaroscuro",
+      "aliases": [],
+      "written": true
+    },
+    {
+      "id": "western.m_tal_hurlant_adult_comic",
+      "name": "[Cartoon] Métal Hurlant Adult Comic",
+      "family": "Western Animation",
+      "axis": "style",
+      "medium": "comic style image",
+      "nl": "Métal-Hurlant rendering: dense ink linework, airbrushed sci-fi gradients, acid-and-earth palette, ornate machine detail, printed grain, comic style image.",
+      "tags": [
+        "comic",
+        "airbrush_(medium)",
+        "ink_(medium)",
+        "colorful",
+        "textured"
+      ],
+      "tags_negative": [
+        "minimalism"
+      ],
+      "negative": "minimal flat design, cute rounding",
+      "aliases": [],
+      "written": true
+    },
+    {
+      "id": "western.painted_prestige_hybrid",
+      "name": "[Cartoon] Painted Prestige Hybrid",
+      "family": "Western Animation",
+      "axis": "style",
+      "medium": "painting style image",
+      "nl": "Painted prestige animation: brush-textured characters matched to painted environments, muted cinematic palette, soft edge control, film grain, painting style image.",
+      "tags": [
+        "painting_(medium)",
+        "muted_color",
+        "cinematic_lighting",
+        "film_grain"
+      ],
+      "tags_negative": [
+        "flat_color"
+      ],
+      "negative": "flat vector shapes, hard outline",
+      "aliases": [],
+      "written": true
+    },
+    {
+      "id": "western.pixilation",
+      "name": "[Cartoon] Pixilation",
+      "family": "Western Animation",
+      "axis": "style",
+      "medium": "photograph style image",
+      "nl": "Pixilation rendering: live subjects frozen frame by frame, slight pose jumps, hard practical light, real-world texture, photograph style image.",
+      "tags": [
+        "stop_motion",
+        "photo_(medium)",
+        "motion_blur",
+        "textured"
+      ],
+      "tags_negative": [
+        "3d"
+      ],
+      "negative": "drawn cartoon shapes, CGI smoothness",
+      "aliases": [],
+      "written": true
+    },
+    {
+      "id": "western.preschool_vector",
+      "name": "[Cartoon] Preschool Vector",
+      "family": "Western Animation",
+      "axis": "style",
+      "medium": "vector style image",
+      "nl": "Preschool-animation rendering: simple rounded vector shapes, thick soft outline, primary-bright flat fills, no shading at all, vector style image.",
+      "tags": [
+        "vector_trace",
+        "flat_color",
+        "outline",
+        "colorful"
+      ],
+      "tags_negative": [
+        "textured"
+      ],
+      "negative": "texture, dramatic shadow, fine detail",
+      "aliases": [],
+      "written": true
+    },
+    {
+      "id": "western.psychedelic_1960s_feature",
+      "name": "[Cartoon] Psychedelic 1960s Feature",
+      "family": "Western Animation",
+      "axis": "style",
+      "medium": "cartoon style image",
+      "nl": "1960s psychedelic feature: flowing warped forms, clashing saturated colour fields, collage textures, pattern-filled space, hand-inked line, cartoon style image.",
+      "tags": [
+        "psychedelic",
+        "colorful",
+        "collage",
+        "flat_color",
+        "high_saturation"
+      ],
+      "tags_negative": [
+        "muted_color"
+      ],
+      "negative": "naturalistic palette, photographic depth",
+      "aliases": [],
+      "written": true
+    },
+    {
+      "id": "western.replacement_cutout",
+      "name": "[Cartoon] Replacement Cutout",
+      "family": "Western Animation",
+      "axis": "style",
+      "medium": "handmade style image",
+      "nl": "Cutout animation: paper limb pieces on hinges, visible edges and drop shadows, flat printed textures, slight jitter between poses, handmade style image.",
+      "tags": [
+        "papercraft",
+        "collage",
+        "flat_color",
+        "textured"
+      ],
+      "tags_negative": [
+        "3d"
+      ],
+      "negative": "smooth digital tweening, CGI",
+      "aliases": [],
+      "written": true
+    },
+    {
+      "id": "western.rotoscope_stylized",
+      "name": "[Cartoon] Rotoscope Stylized",
+      "family": "Western Animation",
+      "axis": "style",
+      "medium": "cartoon style image",
+      "nl": "Rotoscoped animation: traced live-action proportion and motion, flat posterised colour zones, wobbling hand-drawn contour, cartoon style image.",
+      "tags": [
+        "flat_color",
+        "outline",
+        "high_contrast",
+        "limited_palette"
+      ],
+      "tags_negative": [
+        "photorealistic"
+      ],
+      "negative": "photographic texture, cel-cute stylisation",
+      "aliases": [],
+      "written": true
+    },
+    {
+      "id": "western.silhouette_cut_paper",
+      "name": "[Cartoon] Silhouette Cut-Paper",
+      "family": "Western Animation",
+      "axis": "style",
+      "medium": "handmade style image",
+      "nl": "Silhouette cut-paper animation: black paper figures against backlit colour washes, sharp scissor contours, layered translucent grounds, handmade style image.",
+      "tags": [
+        "silhouette",
+        "papercraft",
+        "backlighting",
+        "high_contrast"
+      ],
+      "tags_negative": [
+        "photorealistic"
+      ],
+      "negative": "full-colour characters, volumetric shading",
+      "aliases": [],
+      "written": true
+    },
+    {
+      "id": "western.soviet_painted_short",
+      "name": "[Cartoon] Soviet Painted Short",
+      "family": "Western Animation",
+      "axis": "style",
+      "medium": "painting style image",
+      "nl": "Soviet painted animation: gouache-textured characters and grounds, muted folk palette, soft brush edges, hand-painted grain, painting style image.",
+      "tags": [
+        "painting_(medium)",
+        "muted_color",
+        "traditional_media",
+        "textured"
+      ],
+      "tags_negative": [
+        "outline"
+      ],
+      "negative": "hard black outline, saturated toy colour",
+      "aliases": [],
+      "written": true
+    },
+    {
+      "id": "western.sunday_fun_page_color",
+      "name": "[Cartoon] Sunday Fun-Page Color",
+      "family": "Western Animation",
+      "axis": "style",
+      "medium": "comic style image",
+      "nl": "Sunday funnies rendering: bright four-colour newsprint inks, visible dot rosettes, slight plate misregistration, simple pen line, paper cream, comic style image.",
+      "tags": [
+        "comic",
+        "halftone",
+        "colorful",
+        "textured",
+        "limited_palette"
+      ],
+      "tags_negative": [
+        "highres"
+      ],
+      "negative": "glossy digital colour, painterly shading",
+      "aliases": [],
+      "written": true
+    },
+    {
+      "id": "western.whiteboard_marker",
+      "name": "[Cartoon] Whiteboard Marker",
+      "family": "Western Animation",
+      "axis": "style",
+      "medium": "drawing style image",
+      "nl": "Whiteboard-marker rendering: squeaky dry-erase strokes on white, uneven ink coverage, ghosted erasures, one or two accent colours, drawing style image.",
+      "tags": [
+        "sketch",
+        "white_theme",
+        "limited_palette",
+        "lineart"
+      ],
+      "tags_negative": [
+        "photorealistic"
+      ],
+      "negative": "painterly shading, photographic detail",
+      "aliases": [],
+      "written": true
+    },
+    {
+      "id": "western.zagreb_modernist",
+      "name": "[Cartoon] Zagreb Modernist",
+      "family": "Western Animation",
+      "axis": "style",
+      "medium": "cartoon style image",
+      "nl": "Modernist-animation rendering: spare graphic figures, flat mid-century colour, textured paper ground, huge empty space, cartoon style image.",
+      "tags": [
+        "flat_color",
+        "minimalism",
+        "limited_palette",
+        "textured",
+        "retro_artstyle"
+      ],
+      "tags_negative": [
+        "photorealistic"
+      ],
+      "negative": "detailed rendering, photographic depth",
+      "aliases": [],
+      "written": true
+    },
+    {
+      "id": "western.adventure_time_v2",
+      "name": "[Cartoon][v2] Adventure Time",
+      "family": "Western Animation",
+      "axis": "style",
+      "medium": "cartoon style image",
+      "nl": "Noodle-limb cartoon rendering: simple dot-eyed faces, bendy rubbery limbs, flat candy palette, thin even outline, soft pastel skies, cartoon style image.",
+      "tags": [
+        "flat_color",
+        "outline",
+        "pastel_colors",
+        "minimalism"
+      ],
+      "tags_negative": [
+        "photorealistic"
+      ],
+      "negative": "realistic anatomy, dramatic shading",
+      "aliases": [
+        "[Cartoon][Clio] Adventure Time"
+      ],
+      "written": true
+    },
+    {
+      "id": "western.arcane_animation_still_v2",
+      "name": "[Cartoon][v2] Arcane Animation Still",
+      "family": "Western Animation",
+      "axis": "style",
+      "medium": "painting style image",
+      "nl": "Painted 2.5D animation still: visible oil-brush texture over sculpted forms, teal-and-ember colour script, sharp rim light, cinematic grain, painting style image.",
+      "tags": [
+        "painting_(medium)",
+        "cinematic_lighting",
+        "rim_lighting",
+        "textured",
+        "film_grain"
+      ],
+      "tags_negative": [
+        "flat_color"
+      ],
+      "negative": "flat TV cel colour, clean vector edges",
+      "aliases": [
+        "[Cartoon][Clio] Arcane Animation Still"
+      ],
+      "written": true
+    },
+    {
+      "id": "western.bruce_timm_noir_v2",
+      "name": "[Cartoon][v2] Bruce Timm Noir",
+      "family": "Western Animation",
+      "axis": "style",
+      "medium": "cartoon style image",
+      "nl": "Deco-noir animation rendering: heavy black shape blocking, angular art-deco design, limited palette against dark grounds, hard graphic shadow, cartoon style image.",
+      "tags": [
+        "art_deco",
+        "high_contrast",
+        "flat_color",
+        "dark",
+        "limited_palette"
+      ],
+      "tags_negative": [
+        "pastel_colors"
+      ],
+      "negative": "pastel softness, fussy detail",
+      "aliases": [
+        "[Cartoon][Clio] Bruce Timm Noir"
+      ],
+      "written": true
+    },
+    {
+      "id": "western.cartoon_v2",
+      "name": "[Cartoon][v2] Cartoon",
+      "family": "Western Animation",
+      "axis": "style",
+      "medium": "cartoon style image",
+      "nl": "General cartoon rendering: bold even outline, flat bright colour, exaggerated squashy shapes, single soft shadow tone, cartoon style image.",
+      "tags": [
+        "outline",
+        "flat_color",
+        "colorful"
+      ],
+      "tags_negative": [
+        "photorealistic",
+        "3d"
+      ],
+      "negative": "photo realism, CGI render",
+      "aliases": [
+        "[Cartoon][Clio] Cartoon"
+      ],
+      "written": true
+    },
+    {
+      "id": "western.classic_disney_feature_animation_v2",
+      "name": "[Cartoon][v2] Classic Disney Feature Animation",
+      "family": "Western Animation",
+      "axis": "style",
+      "medium": "cartoon style image",
+      "nl": "Classic feature-animation rendering: soft airbrushed cel shading, warm rounded appeal, painted watercolour backgrounds, gentle glow, film grain, cartoon style image.",
+      "tags": [
+        "airbrush_(medium)",
+        "watercolor_(medium)",
+        "traditional_media",
+        "flat_color",
+        "film_grain"
+      ],
+      "tags_negative": [
+        "high_contrast"
+      ],
+      "negative": "harsh flat contrast, gritty line",
+      "aliases": [
+        "[Cartoon][Clio] Classic Disney Feature Animation"
+      ],
+      "written": true
+    },
+    {
+      "id": "western.cyberpunk_edgerunners_v2",
+      "name": "[Cartoon][v2] Cyberpunk: Edgerunners",
+      "family": "Western Animation",
+      "axis": "style",
+      "medium": "cartoon style image",
+      "nl": "Neon action-animation rendering: acid magenta and cyan lighting, hard cel shadows, glitch chroma fringing, saturated impact glow, cartoon style image.",
+      "tags": [
+        "neon_palette",
+        "cel_shading",
+        "glowing",
+        "glitch",
+        "high_contrast"
+      ],
+      "tags_negative": [
+        "muted_color"
+      ],
+      "negative": "muted pastel calm, soft painterly blending",
+      "aliases": [
+        "[Cartoon][Clio] Cyberpunk: Edgerunners"
+      ],
+      "written": true
+    },
+    {
+      "id": "western.disney_ultradetailed_illustration_v2",
+      "name": "[Cartoon][v2] Disney Ultradetailed Illustration",
+      "family": "Western Animation",
+      "axis": "style",
+      "medium": "illustration style image",
+      "nl": "Ultradetailed feature-illustration rendering: polished airbrush gradients, luminous eyes, ornate costume detail, warm storybook light, illustration style image.",
+      "tags": [
+        "airbrush_(medium)",
+        "gradient",
+        "highres",
+        "glowing"
+      ],
+      "tags_negative": [
+        "sketch"
+      ],
+      "negative": "rough sketch, flat TV shading",
+      "aliases": [
+        "[Cartoon][Clio] Disney Ultradetailed Illustration"
+      ],
+      "written": true
+    },
+    {
+      "id": "western.family_guy_v2",
+      "name": "[Cartoon][v2] Family Guy",
+      "family": "Western Animation",
+      "axis": "style",
+      "medium": "cartoon style image",
+      "nl": "Flat sitcom-animation rendering: rounded simple heads, thin uniform outline, unshaded flat colour, plain suburban backdrops, cartoon style image.",
+      "tags": [
+        "flat_color",
+        "outline",
+        "minimalism",
+        "limited_palette"
+      ],
+      "tags_negative": [
+        "cinematic_lighting"
+      ],
+      "negative": "dramatic lighting, textured brushwork",
+      "aliases": [
+        "[Cartoon][Clio] Family Guy"
+      ],
+      "written": true
+    },
+    {
+      "id": "western.futurama_v2",
+      "name": "[Cartoon][v2] Futurama",
+      "family": "Western Animation",
+      "axis": "style",
+      "medium": "cartoon style image",
+      "nl": "Retro-future sitcom rendering: thick clean outline, flat colour with one shadow tone, chrome-and-teal palette, receding grid perspective, cartoon style image.",
+      "tags": [
+        "outline",
+        "flat_color",
+        "retro_artstyle",
+        "limited_palette"
+      ],
+      "tags_negative": [
+        "photorealistic"
+      ],
+      "negative": "painterly texture, photo realism",
+      "aliases": [
+        "[Cartoon][Clio] Futurama"
+      ],
+      "written": true
+    },
+    {
+      "id": "western.gravity_falls_v2",
+      "name": "[Cartoon][v2] Gravity Falls",
+      "family": "Western Animation",
+      "axis": "style",
+      "medium": "cartoon style image",
+      "nl": "Mystery-cartoon rendering: chunky rounded shapes, thin brown outline, autumn pine palette, flat colour with soft shadow, cartoon style image.",
+      "tags": [
+        "outline",
+        "flat_color",
+        "brown_theme",
+        "limited_palette"
+      ],
+      "tags_negative": [
+        "photorealistic"
+      ],
+      "negative": "realistic rendering, neon palette",
+      "aliases": [
+        "[Cartoon][Clio] Gravity Falls"
+      ],
+      "written": true
+    },
+    {
+      "id": "western.hanna_barbera_v2",
+      "name": "[Cartoon][v2] Hanna-Barbera",
+      "family": "Western Animation",
+      "axis": "style",
+      "medium": "cartoon style image",
+      "nl": "Hanna-Barbera limited rendering: flat three-colour characters, thick ink line, repeated background panning plates, telecine warmth and dust, cartoon style image.",
+      "tags": [
+        "retro_artstyle",
+        "flat_color",
+        "outline",
+        "limited_palette",
+        "film_grain"
+      ],
+      "tags_negative": [
+        "highres"
+      ],
+      "negative": "full animation detail, digital gloss",
+      "aliases": [
+        "[Cartoon][Clio] Hanna-Barbera"
+      ],
+      "written": true
+    },
+    {
+      "id": "western.invader_zim_v2",
+      "name": "[Cartoon][v2] Invader Zim",
+      "family": "Western Animation",
+      "axis": "style",
+      "medium": "cartoon style image",
+      "nl": "Angular gothic-cartoon rendering: spindly sharp shapes, acid green and purple palette, harsh perspective distortion, thick jagged outline, cartoon style image.",
+      "tags": [
+        "outline",
+        "green_theme",
+        "purple_theme",
+        "high_contrast",
+        "flat_color"
+      ],
+      "tags_negative": [
+        "pastel_colors"
+      ],
+      "negative": "soft pastel rounding, gentle light",
+      "aliases": [
+        "[Cartoon][Clio] Invader Zim"
+      ],
+      "written": true
+    },
+    {
+      "id": "western.modern_cartoon_v2",
+      "name": "[Cartoon][v2] Modern Cartoon",
+      "family": "Western Animation",
+      "axis": "style",
+      "medium": "cartoon style image",
+      "nl": "Modern cartoon rendering: confident simplified outline, flat bright fills, minimal contact shadow, geometric appeal, clean digital edges, cartoon style image.",
+      "tags": [
+        "flat_color",
+        "outline",
+        "minimalism",
+        "colorful"
+      ],
+      "tags_negative": [
+        "film_grain"
+      ],
+      "negative": "film grain, painterly texture",
+      "aliases": [
+        "[Cartoon][Clio] Modern Cartoon"
+      ],
+      "written": true
+    },
+    {
+      "id": "western.nickelodeon_animation_v2",
+      "name": "[Cartoon][v2] Nickelodeon Animation",
+      "family": "Western Animation",
+      "axis": "style",
+      "medium": "cartoon style image",
+      "nl": "Nickelodeon-style rendering: rubbery asymmetric shapes, uneven brush outline, saturated slime-bright palette, wobbly hand-drawn energy, cartoon style image.",
+      "tags": [
+        "outline",
+        "colorful",
+        "flat_color",
+        "1990s_(style)"
+      ],
+      "tags_negative": [
+        "minimalism"
+      ],
+      "negative": "minimal geometric restraint, muted palette",
+      "aliases": [
+        "[Cartoon][Clio] Nickelodeon Animation"
+      ],
+      "written": true
+    },
+    {
+      "id": "western.peanuts_cartoon_v2",
+      "name": "[Cartoon][v2] Peanuts Cartoon",
+      "family": "Western Animation",
+      "axis": "style",
+      "medium": "comic style image",
+      "nl": "Peanuts-strip rendering: wobbling thin pen line, tiny simple features, flat pale colour, huge empty white ground, comic style image.",
+      "tags": [
+        "comic",
+        "lineart",
+        "white_theme",
+        "minimalism",
+        "limited_palette"
+      ],
+      "tags_negative": [
+        "high_contrast"
+      ],
+      "negative": "dense rendering, dramatic shadow",
+      "aliases": [
+        "[Cartoon][Clio] Peanuts Cartoon"
+      ],
+      "written": true
+    },
+    {
+      "id": "western.rick_and_morty_v2",
+      "name": "[Cartoon][v2] Rick and Morty",
+      "family": "Western Animation",
+      "axis": "style",
+      "medium": "cartoon style image",
+      "nl": "Wobble-line sci-fi cartoon rendering: nervous uneven outline, bulging eyes, flat pastel-acid palette, minimal shading, cartoon style image.",
+      "tags": [
+        "outline",
+        "flat_color",
+        "pastel_colors",
+        "limited_palette"
+      ],
+      "tags_negative": [
+        "photorealistic"
+      ],
+      "negative": "realistic anatomy, painterly shading",
+      "aliases": [
+        "[Cartoon][Clio] Rick and Morty"
+      ],
+      "written": true
+    },
+    {
+      "id": "western.rubber_hose_cartoon_v2",
+      "name": "[Cartoon][v2] Rubber Hose Cartoon",
+      "family": "Western Animation",
+      "axis": "style",
+      "medium": "cartoon style image",
+      "nl": "Rubber-hose rendering: jointless curving limbs, pie-cut eyes, glove hands, black-and-white ink with grey wash, projector flicker, cartoon style image.",
+      "tags": [
+        "monochrome",
+        "retro_artstyle",
+        "outline",
+        "film_grain"
+      ],
+      "tags_negative": [
+        "colorful"
+      ],
+      "negative": "modern colour palette, realistic anatomy",
+      "aliases": [
+        "[Cartoon][Clio] Rubber Hose Cartoon"
+      ],
+      "written": true
+    },
+    {
+      "id": "western.simpsons_v2",
+      "name": "[Cartoon][v2] Simpsons",
+      "family": "Western Animation",
+      "axis": "style",
+      "medium": "cartoon style image",
+      "nl": "Yellow-family sitcom rendering: overbite profiles, thick uniform black outline, flat unshaded colour, primary-heavy palette, cartoon style image.",
+      "tags": [
+        "outline",
+        "flat_color",
+        "yellow_theme",
+        "limited_palette"
+      ],
+      "tags_negative": [
+        "photorealistic"
+      ],
+      "negative": "shading gradients, photographic realism",
+      "aliases": [
+        "[Cartoon][Clio] Simpsons"
+      ],
+      "written": true
+    },
+    {
+      "id": "western.south_park_v2",
+      "name": "[Cartoon][v2] South Park",
+      "family": "Western Animation",
+      "axis": "style",
+      "medium": "cartoon style image",
+      "nl": "Construction-paper cutout rendering: flat geometric shapes, thin dark outline, matte paper colour, deliberately stiff staging, cartoon style image.",
+      "tags": [
+        "papercraft",
+        "flat_color",
+        "outline",
+        "minimalism"
+      ],
+      "tags_negative": [
+        "photorealistic"
+      ],
+      "negative": "volumetric shading, detailed anatomy",
+      "aliases": [
+        "[Cartoon][Clio] South Park"
+      ],
+      "written": true
+    },
+    {
+      "id": "western.steven_universe_v2",
+      "name": "[Cartoon][v2] Steven Universe",
+      "family": "Western Animation",
+      "axis": "style",
+      "medium": "cartoon style image",
+      "nl": "Soft-shape cartoon rendering: rounded chunky forms, thin coloured outline, gradient sunset palette, gentle glow shading, cartoon style image.",
+      "tags": [
+        "outline",
+        "gradient",
+        "pastel_colors",
+        "glowing"
+      ],
+      "tags_negative": [
+        "high_contrast"
+      ],
+      "negative": "hard black outline, gritty contrast",
+      "aliases": [
+        "[Cartoon][Clio] Steven Universe"
+      ],
+      "written": true
+    },
+    {
+      "id": "western.tex_avery_v2",
+      "name": "[Cartoon][v2] Tex Avery",
+      "family": "Western Animation",
+      "axis": "style",
+      "medium": "cartoon style image",
+      "nl": "Tex-Avery rendering: extreme squash-and-stretch, popping eye takes, hot saturated primaries, bold ink line, wild smear frames, cartoon style image.",
+      "tags": [
+        "retro_artstyle",
+        "outline",
+        "colorful",
+        "motion_blur",
+        "flat_color"
+      ],
+      "tags_negative": [
+        "minimalism"
+      ],
+      "negative": "restrained minimalism, soft pastel",
+      "aliases": [
+        "[Cartoon][Clio] Tex Avery"
+      ],
+      "written": true
+    },
+    {
+      "id": "western.toon_shader_v2",
+      "name": "[Cartoon][v2] Toon Shader",
+      "family": "Western Animation",
+      "axis": "style",
+      "medium": "cgi style image",
+      "nl": "Toon-shaded 3D rendering: cel-banded lighting on sculpted geometry, inked contour outline, flat colour zones, clean specular dots, cgi style image.",
+      "tags": [
+        "3d",
+        "cel_shading",
+        "outline",
+        "flat_color"
+      ],
+      "tags_negative": [
+        "photorealistic"
+      ],
+      "negative": "photoreal shading, painterly texture",
+      "aliases": [
+        "[Cartoon][Clio] Toon Shader"
+      ],
+      "written": true
+    }
+  ]
+}

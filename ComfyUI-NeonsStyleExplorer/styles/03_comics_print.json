@@ -1,0 +1,2940 @@
+{
+  "schema": 1,
+  "family": "Comics & Print",
+  "styles": [
+    {
+      "id": "comics.dot_gain",
+      "name": "[Finish] Dot Gain",
+      "family": "Comics & Print",
+      "axis": "finish",
+      "medium": "comic style image",
+      "nl": "Dot-gain finish: halftone dots spreading into each other, darkened mid tones, ink bleeding into absorbent stock, comic style image.",
+      "tags": [
+        "halftone",
+        "textured",
+        "muted_color"
+      ],
+      "tags_negative": [
+        "highres"
+      ],
+      "negative": "crisp digital print, glossy coated stock",
+      "aliases": [],
+      "written": true
+    },
+    {
+      "id": "comics.emboss_deboss",
+      "name": "[Finish] Emboss Deboss",
+      "family": "Comics & Print",
+      "axis": "finish",
+      "medium": "graphic style image",
+      "nl": "Emboss finish: raised and recessed areas catching raking light, soft shadow in the depressions, thick paper relief, graphic style image.",
+      "tags": [
+        "textured",
+        "traditional_media",
+        "monochrome"
+      ],
+      "tags_negative": [
+        "shiny"
+      ],
+      "negative": "flat printed surface, glossy gradients",
+      "aliases": [],
+      "written": true
+    },
+    {
+      "id": "comics.foil_stamp",
+      "name": "[Finish] Foil Stamp",
+      "family": "Comics & Print",
+      "axis": "finish",
+      "medium": "graphic style image",
+      "nl": "Foil-stamp finish: mirrored metallic areas catching the light, crisp stamped edges, slight debossed depth, graphic style image.",
+      "tags": [
+        "metallic",
+        "shiny",
+        "gold"
+      ],
+      "tags_negative": [
+        "textured"
+      ],
+      "negative": "flat matte ink, rough handmade texture",
+      "aliases": [],
+      "written": true
+    },
+    {
+      "id": "comics.moir_screen",
+      "name": "[Finish] Moiré Screen",
+      "family": "Comics & Print",
+      "axis": "finish",
+      "medium": "comic style image",
+      "nl": "Moiré finish: overlapping halftone screens beating against each other, interference rosettes, slight colour shimmer, comic style image.",
+      "tags": [
+        "halftone",
+        "glitch",
+        "textured"
+      ],
+      "tags_negative": [
+        "highres"
+      ],
+      "negative": "clean continuous tone, smooth gradients",
+      "aliases": [],
+      "written": true
+    },
+    {
+      "id": "comics.uncoated_paper",
+      "name": "[Finish] Uncoated Paper",
+      "family": "Comics & Print",
+      "axis": "finish",
+      "medium": "comic style image",
+      "nl": "Uncoated-stock finish: matte fibrous surface, ink sinking slightly, softened edges, muted colour absorption, comic style image.",
+      "tags": [
+        "textured",
+        "muted_color",
+        "traditional_media"
+      ],
+      "tags_negative": [
+        "shiny"
+      ],
+      "negative": "glossy coated sheen, saturated screen colour",
+      "aliases": [],
+      "written": true
+    },
+    {
+      "id": "comics.sunday_broadsheet_strip",
+      "name": "[Comic] Sunday Broadsheet Strip",
+      "family": "Comics & Print",
+      "axis": "format",
+      "medium": "comic style image",
+      "nl": "Composed as a Sunday broadsheet strip: a wide tier of panels with a title panel, benday colour, newsprint bleed, comic style image.",
+      "tags": [
+        "comic",
+        "halftone",
+        "multiple_views",
+        "textured",
+        "limited_palette"
+      ],
+      "tags_negative": [
+        "highres"
+      ],
+      "negative": "single splash image, glossy digital colour",
+      "aliases": [],
+      "written": true
+    },
+    {
+      "id": "comics.album_cover",
+      "name": "[Format] Album Cover",
+      "family": "Comics & Print",
+      "axis": "format",
+      "medium": "graphic style image",
+      "nl": "Composed as a square album sleeve: centred iconic subject, print-flat colour, generous margin for a title block, sleeve-edge crop, graphic style image.",
+      "tags": [
+        "album_cover",
+        "poster",
+        "flat_color",
+        "simple_background"
+      ],
+      "tags_negative": [],
+      "negative": "busy edge clutter, snapshot framing",
+      "aliases": [],
+      "written": true
+    },
+    {
+      "id": "comics.app_icon",
+      "name": "[Format] App Icon",
+      "family": "Comics & Print",
+      "axis": "format",
+      "medium": "vector style image",
+      "nl": "Composed as an app icon: one bold centred symbol, rounded-square safe area, flat colour with a soft inner gradient, readable at thumbnail size, vector style image.",
+      "tags": [
+        "icon_(computing)",
+        "flat_color",
+        "gradient",
+        "simple_background"
+      ],
+      "tags_negative": [
+        "textured"
+      ],
+      "negative": "fine detail, photographic texture",
+      "aliases": [
+        "icon"
+      ],
+      "written": true
+    },
+    {
+      "id": "comics.arcade_cabinet_art",
+      "name": "[Format] Arcade Cabinet Art",
+      "family": "Comics & Print",
+      "axis": "format",
+      "medium": "poster style image",
+      "nl": "Composed as arcade side art: a tall panel of screenprinted flat colour, hard black keyline, bold logo space at the top, poster style image.",
+      "tags": [
+        "poster",
+        "stencil",
+        "flat_color",
+        "limited_palette"
+      ],
+      "tags_negative": [
+        "photorealistic"
+      ],
+      "negative": "photographic depth, soft gradients",
+      "aliases": [],
+      "written": true
+    },
+    {
+      "id": "comics.avatar_bust",
+      "name": "[Format] Avatar Bust",
+      "family": "Comics & Print",
+      "axis": "format",
+      "medium": "photograph style image",
+      "nl": "Composed as an avatar bust: head and shoulders centred, tight crop, plain even backdrop, front-facing clarity, photograph style image.",
+      "tags": [
+        "portrait",
+        "upper_body",
+        "simple_background"
+      ],
+      "tags_negative": [
+        "scenery"
+      ],
+      "negative": "wide environment, cluttered background",
+      "aliases": [],
+      "written": true
+    },
+    {
+      "id": "comics.banknote_engraving",
+      "name": "[Format] Banknote Engraving",
+      "family": "Comics & Print",
+      "axis": "format",
+      "medium": "print style image",
+      "nl": "Composed as a banknote: intaglio line portrait, guilloche rosette patterns, denomination corners, pastel security tints, print style image.",
+      "tags": [
+        "lithograph",
+        "lineart",
+        "cross-hatching",
+        "pale_color"
+      ],
+      "tags_negative": [
+        "photorealistic"
+      ],
+      "negative": "photographic tone, loose brushwork",
+      "aliases": [],
+      "written": true
+    },
+    {
+      "id": "comics.boarding_pass",
+      "name": "[Format] Boarding Pass",
+      "family": "Comics & Print",
+      "axis": "format",
+      "medium": "graphic style image",
+      "nl": "Composed as a boarding pass: fielded data grid, barcode strip, perforated stub, airline colour band on thermal-white stock, graphic style image.",
+      "tags": [
+        "diagram",
+        "flat_color",
+        "white_theme",
+        "minimalism"
+      ],
+      "tags_negative": [
+        "textured"
+      ],
+      "negative": "painterly texture, photographic depth",
+      "aliases": [],
+      "written": true
+    },
+    {
+      "id": "comics.book_jacket",
+      "name": "[Format] Book Jacket",
+      "family": "Comics & Print",
+      "axis": "format",
+      "medium": "graphic style image",
+      "nl": "Composed as a book jacket: full-bleed cover art, clear band left for the title, spine-aware left margin, print colour, graphic style image.",
+      "tags": [
+        "cover",
+        "poster",
+        "flat_color"
+      ],
+      "tags_negative": [],
+      "negative": "centre-crowded composition, snapshot framing",
+      "aliases": [],
+      "written": true
+    },
+    {
+      "id": "comics.box_art_3_4",
+      "name": "[Format] Box Art 3/4",
+      "family": "Comics & Print",
+      "axis": "format",
+      "medium": "graphic style image",
+      "nl": "Composed as product box art: three-quarter hero angle, staged studio-bright light, glossy packaging surface, shelf-ready hierarchy, graphic style image.",
+      "tags": [
+        "cover",
+        "simple_background",
+        "shiny",
+        "poster"
+      ],
+      "tags_negative": [],
+      "negative": "candid framing, dim ambience",
+      "aliases": [],
+      "written": true
+    },
+    {
+      "id": "comics.cadaster_map",
+      "name": "[Format] Cadaster Map",
+      "family": "Comics & Print",
+      "axis": "format",
+      "medium": "technical drawing style image",
+      "nl": "Composed as a cadastral map: ruled parcel boundaries, numbered plots, hairline hatching, flat survey colour on paper, technical drawing style image.",
+      "tags": [
+        "map",
+        "diagram",
+        "lineart",
+        "limited_palette"
+      ],
+      "tags_negative": [
+        "photorealistic"
+      ],
+      "negative": "pictorial perspective, photographic texture",
+      "aliases": [],
+      "written": true
+    },
+    {
+      "id": "comics.campaign_portrait",
+      "name": "[Format] Campaign Portrait",
+      "family": "Comics & Print",
+      "axis": "format",
+      "medium": "photograph style image",
+      "nl": "Composed as a campaign portrait: single figure filling the frame, styled studio light, brand-clean backdrop, poster-grade retouch, photograph style image.",
+      "tags": [
+        "portrait",
+        "promotional_art",
+        "simple_background",
+        "cinematic_lighting"
+      ],
+      "tags_negative": [],
+      "negative": "busy scene, casual snapshot framing",
+      "aliases": [],
+      "written": true
+    },
+    {
+      "id": "comics.cassette_j_card",
+      "name": "[Format] Cassette J-Card",
+      "family": "Comics & Print",
+      "axis": "format",
+      "medium": "print style image",
+      "nl": "Composed as a cassette J-card: narrow folded panels, spine text strip, small cover square, cheap two-colour print on thin card, print style image.",
+      "tags": [
+        "limited_palette",
+        "textured",
+        "risograph",
+        "poster"
+      ],
+      "tags_negative": [
+        "highres"
+      ],
+      "negative": "large glossy cover, photographic detail",
+      "aliases": [],
+      "written": true
+    },
+    {
+      "id": "comics.character_select",
+      "name": "[Format] Character Select",
+      "family": "Comics & Print",
+      "axis": "format",
+      "medium": "game art style image",
+      "nl": "Composed as a character-select portrait: full costume visible, neutral upright read, plain gradient backdrop, rim light separating the silhouette, game art style image.",
+      "tags": [
+        "official_art",
+        "multiple_views",
+        "rim_lighting",
+        "simple_background"
+      ],
+      "tags_negative": [
+        "scenery"
+      ],
+      "negative": "cluttered environment, dramatic crop",
+      "aliases": [],
+      "written": true
+    },
+    {
+      "id": "comics.character_sheet",
+      "name": "[Format] Character Sheet",
+      "family": "Comics & Print",
+      "axis": "format",
+      "medium": "drawing style image",
+      "nl": "Composed as a character sheet: several aligned views of one design, flat even light, colour swatches at the margin, plain neutral ground, drawing style image.",
+      "tags": [
+        "character_sheet",
+        "reference_sheet",
+        "multiple_views",
+        "simple_background"
+      ],
+      "tags_negative": [
+        "cinematic_lighting"
+      ],
+      "negative": "dramatic lighting, painted scenery",
+      "aliases": [],
+      "written": true
+    },
+    {
+      "id": "comics.cinematic_still",
+      "name": "[Format] Cinematic Still",
+      "family": "Comics & Print",
+      "axis": "format",
+      "medium": "film still style image",
+      "nl": "Composed as a cinematic still: 2.39:1 letterbox framing, motivated key light, shallow focus, film colour grade with gentle halation, film still style image.",
+      "tags": [
+        "widescreen",
+        "cinematic_lighting",
+        "depth_of_field",
+        "film_grain"
+      ],
+      "tags_negative": [],
+      "negative": "square crop, flat snapshot light",
+      "aliases": [],
+      "written": true
+    },
+    {
+      "id": "comics.comic_panel",
+      "name": "[Format] Comic Panel",
+      "family": "Comics & Print",
+      "axis": "format",
+      "medium": "comic style image",
+      "nl": "Composed as a comic panel: ruled border and gutter, inked contour, flat colour fills, space reserved for a balloon, comic style image.",
+      "tags": [
+        "comic",
+        "comic_panel",
+        "flat_color",
+        "lineart"
+      ],
+      "tags_negative": [
+        "photorealistic"
+      ],
+      "negative": "photographic rendering, borderless bleed",
+      "aliases": [],
+      "written": true
+    },
+    {
+      "id": "comics.contact_sheet",
+      "name": "[Format] Contact Sheet",
+      "family": "Comics & Print",
+      "axis": "format",
+      "medium": "photograph style image",
+      "nl": "Composed as a contact sheet: grid of small frames with sprocket edges and frame numbers, uniform exposure, printed paper base, photograph style image.",
+      "tags": [
+        "contact_sheet",
+        "multiple_views",
+        "photo_(medium)",
+        "film_grain"
+      ],
+      "tags_negative": [],
+      "negative": "single full-frame image, glossy retouching",
+      "aliases": [],
+      "written": true
+    },
+    {
+      "id": "comics.cutaway",
+      "name": "[Format] Cutaway",
+      "family": "Comics & Print",
+      "axis": "format",
+      "medium": "technical drawing style image",
+      "nl": "Composed as a cutaway diagram: outer shell sliced away to reveal the interior, ruled section hatching, callout leaders, flat neutral ground, technical drawing style image.",
+      "tags": [
+        "diagram",
+        "lineart",
+        "limited_palette",
+        "simple_background"
+      ],
+      "tags_negative": [
+        "photorealistic"
+      ],
+      "negative": "soft painterly rendering, dramatic light",
+      "aliases": [],
+      "written": true
+    },
+    {
+      "id": "comics.detail_callout_sheet",
+      "name": "[Format] Detail Callout Sheet",
+      "family": "Comics & Print",
+      "axis": "format",
+      "medium": "drawing style image",
+      "nl": "Composed as a detail callout sheet: zoomed close-ups of small features arranged in boxes, leader lines to the main view, flat even light, drawing style image.",
+      "tags": [
+        "reference_sheet",
+        "multiple_views",
+        "diagram",
+        "simple_background"
+      ],
+      "tags_negative": [
+        "cinematic_lighting"
+      ],
+      "negative": "single hero shot, dramatic shadow",
+      "aliases": [
+        "detail callout"
+      ],
+      "written": true
+    },
+    {
+      "id": "comics.die_cut_sticker",
+      "name": "[Format] Die-Cut Sticker",
+      "family": "Comics & Print",
+      "axis": "format",
+      "medium": "vector style image",
+      "nl": "Composed as a die-cut sticker: thick white keyline around the subject, flat bold colour, no environment, glossy vinyl sheen, vector style image.",
+      "tags": [
+        "sticker",
+        "flat_color",
+        "white_theme",
+        "simple_background"
+      ],
+      "tags_negative": [
+        "scenery"
+      ],
+      "negative": "background scenery, soft photographic edges",
+      "aliases": [],
+      "written": true
+    },
+    {
+      "id": "comics.diptych_before_after",
+      "name": "[Format] Diptych Before / After",
+      "family": "Comics & Print",
+      "axis": "format",
+      "medium": "photograph style image",
+      "nl": "Composed as a before-and-after diptych: two matched frames side by side, identical framing and exposure, thin dividing gutter, photograph style image.",
+      "tags": [
+        "multiple_views",
+        "photo_(medium)",
+        "simple_background"
+      ],
+      "tags_negative": [],
+      "negative": "single frame, mismatched angles",
+      "aliases": [
+        "diptych before/after"
+      ],
+      "written": true
+    },
+    {
+      "id": "comics.editorial_double_page",
+      "name": "[Format] Editorial Double-Page",
+      "family": "Comics & Print",
+      "axis": "format",
+      "medium": "photograph style image",
+      "nl": "Composed as an editorial double-page spread: wide framing with the gutter kept clear, magazine styling, column of quiet space for text, photograph style image.",
+      "tags": [
+        "magazine_cover",
+        "widescreen",
+        "photo_(medium)",
+        "cinematic_lighting"
+      ],
+      "tags_negative": [],
+      "negative": "tight centred crop, cluttered midline",
+      "aliases": [],
+      "written": true
+    },
+    {
+      "id": "comics.exploded_view",
+      "name": "[Format] Exploded View",
+      "family": "Comics & Print",
+      "axis": "format",
+      "medium": "technical drawing style image",
+      "nl": "Composed as an exploded view: components separated along assembly axes, thin alignment leaders, uniform flat lighting, plain ground, technical drawing style image.",
+      "tags": [
+        "diagram",
+        "lineart",
+        "multiple_views",
+        "simple_background"
+      ],
+      "tags_negative": [
+        "photorealistic"
+      ],
+      "negative": "assembled hero product, dramatic light",
+      "aliases": [],
+      "written": true
+    },
+    {
+      "id": "comics.expression_sheet",
+      "name": "[Format] Expression Sheet",
+      "family": "Comics & Print",
+      "axis": "format",
+      "medium": "drawing style image",
+      "nl": "Composed as an expression sheet: a grid of the same head in different moods, consistent scale and lighting, plain ground, drawing style image.",
+      "tags": [
+        "multiple_views",
+        "reference_sheet",
+        "portrait",
+        "simple_background"
+      ],
+      "tags_negative": [
+        "scenery"
+      ],
+      "negative": "single portrait, scenic background",
+      "aliases": [],
+      "written": true
+    },
+    {
+      "id": "comics.fruit_crate_label",
+      "name": "[Format] Fruit Crate Label",
+      "family": "Comics & Print",
+      "axis": "format",
+      "medium": "print style image",
+      "nl": "Composed as a crate label: bold display lettering across a stone-litho scene, saturated flat inks, decorative border, print style image.",
+      "tags": [
+        "lithograph",
+        "poster",
+        "colorful",
+        "flat_color",
+        "retro_artstyle"
+      ],
+      "tags_negative": [
+        "muted_color"
+      ],
+      "negative": "muted minimal design, photographic capture",
+      "aliases": [],
+      "written": true
+    },
+    {
+      "id": "comics.gacha_splash",
+      "name": "[Format] Gacha Splash",
+      "family": "Comics & Print",
+      "axis": "format",
+      "medium": "game art style image",
+      "nl": "Composed as a gacha splash: dynamic hero pose, layered effect particles, bright rim light, space kept clear at the top for a title, game art style image.",
+      "tags": [
+        "official_art",
+        "sparkle",
+        "glowing",
+        "rim_lighting"
+      ],
+      "tags_negative": [
+        "simple_background"
+      ],
+      "negative": "flat documentary framing, dull lighting",
+      "aliases": [],
+      "written": true
+    },
+    {
+      "id": "comics.infographic_still",
+      "name": "[Format] Infographic Still",
+      "family": "Comics & Print",
+      "axis": "format",
+      "medium": "technical drawing style image",
+      "nl": "Composed as an infographic: diagram blocks and connectors, ruled alignment, flat limited palette, plenty of labelled white space, technical drawing style image.",
+      "tags": [
+        "diagram",
+        "chart",
+        "flat_color",
+        "white_theme"
+      ],
+      "tags_negative": [
+        "photorealistic"
+      ],
+      "negative": "painterly rendering, photographic depth",
+      "aliases": [],
+      "written": true
+    },
+    {
+      "id": "comics.key_visual",
+      "name": "[Format] Key Visual",
+      "family": "Comics & Print",
+      "axis": "format",
+      "medium": "poster style image",
+      "nl": "Composed as a campaign key visual: one hero frame, staged lighting, deliberate empty space for a logo, poster-grade colour and polish, poster style image.",
+      "tags": [
+        "key_visual",
+        "promotional_art",
+        "poster",
+        "cinematic_lighting"
+      ],
+      "tags_negative": [],
+      "negative": "casual snapshot, cluttered edges",
+      "aliases": [],
+      "written": true
+    },
+    {
+      "id": "comics.lifestyle_product",
+      "name": "[Format] Lifestyle Product",
+      "family": "Comics & Print",
+      "axis": "format",
+      "medium": "photograph style image",
+      "nl": "Composed as a lifestyle product still: the object in a lived setting, natural window light, shallow focus, warm believable colour, photograph style image.",
+      "tags": [
+        "photo_(medium)",
+        "depth_of_field",
+        "still_life",
+        "sunlight"
+      ],
+      "tags_negative": [
+        "simple_background"
+      ],
+      "negative": "seamless studio sweep, catalogue flatness",
+      "aliases": [],
+      "written": true
+    },
+    {
+      "id": "comics.loading_screen",
+      "name": "[Format] Loading Screen",
+      "family": "Comics & Print",
+      "axis": "format",
+      "medium": "game art style image",
+      "nl": "Composed as a game loading screen: wide illustrated art with a clear lower band for a progress bar, atmospheric depth, game art style image.",
+      "tags": [
+        "widescreen",
+        "official_art",
+        "scenery",
+        "cinematic_lighting"
+      ],
+      "tags_negative": [],
+      "negative": "tight portrait crop, empty flat ground",
+      "aliases": [],
+      "written": true
+    },
+    {
+      "id": "comics.lookbook_row",
+      "name": "[Format] Lookbook Row",
+      "family": "Comics & Print",
+      "axis": "format",
+      "medium": "photograph style image",
+      "nl": "Composed as a lookbook row: full-length figures repeated across the frame at even spacing, flat studio light, garment clearly readable, photograph style image.",
+      "tags": [
+        "multiple_views",
+        "full_body",
+        "photo_(medium)",
+        "simple_background"
+      ],
+      "tags_negative": [],
+      "negative": "tight crop, moody shadow",
+      "aliases": [],
+      "written": true
+    },
+    {
+      "id": "comics.magazine_cover",
+      "name": "[Format] Magazine Cover",
+      "family": "Comics & Print",
+      "axis": "format",
+      "medium": "photograph style image",
+      "nl": "Composed as a magazine cover: masthead space at the top, direct gaze, centred subject, high-key styled light, cover-print colour, photograph style image.",
+      "tags": [
+        "magazine_cover",
+        "fake_magazine_cover",
+        "portrait",
+        "cinematic_lighting"
+      ],
+      "tags_negative": [],
+      "negative": "off-centre snapshot, cluttered top edge",
+      "aliases": [],
+      "written": true
+    },
+    {
+      "id": "comics.map_as_picture",
+      "name": "[Format] Map As Picture",
+      "family": "Comics & Print",
+      "axis": "format",
+      "medium": "technical drawing style image",
+      "nl": "Composed as a map: plan-view geography, ruled graticule, legend and compass rose, flat cartographic colour on paper, technical drawing style image.",
+      "tags": [
+        "map",
+        "diagram",
+        "flat_color",
+        "limited_palette"
+      ],
+      "tags_negative": [
+        "photorealistic"
+      ],
+      "negative": "perspective landscape, photographic texture",
+      "aliases": [
+        "map"
+      ],
+      "written": true
+    },
+    {
+      "id": "comics.matchbox_label",
+      "name": "[Format] Matchbox Label",
+      "family": "Comics & Print",
+      "axis": "format",
+      "medium": "print style image",
+      "nl": "Composed as a matchbox label: tiny rectangular panel, bold naive emblem, two or three flat inks, coarse paper and rounded corners, print style image.",
+      "tags": [
+        "limited_palette",
+        "flat_color",
+        "textured",
+        "retro_artstyle"
+      ],
+      "tags_negative": [
+        "highres"
+      ],
+      "negative": "photographic detail, large-format layout",
+      "aliases": [],
+      "written": true
+    },
+    {
+      "id": "comics.museum_wall_label",
+      "name": "[Format] Museum Wall Label",
+      "family": "Comics & Print",
+      "axis": "format",
+      "medium": "graphic style image",
+      "nl": "Composed as a museum label: small white panel beside the work, title and date lines, generous margins, even gallery light, graphic style image.",
+      "tags": [
+        "minimalism",
+        "white_theme",
+        "simple_background"
+      ],
+      "tags_negative": [
+        "colorful"
+      ],
+      "negative": "busy decoration, dramatic lighting",
+      "aliases": [],
+      "written": true
+    },
+    {
+      "id": "comics.newspaper_front_page",
+      "name": "[Format] Newspaper Front Page",
+      "family": "Comics & Print",
+      "axis": "format",
+      "medium": "print style image",
+      "nl": "Composed as a newspaper front page: masthead, column rules, headline hierarchy, a halftone photo panel, grey newsprint, print style image.",
+      "tags": [
+        "halftone",
+        "monochrome",
+        "textured",
+        "limited_palette"
+      ],
+      "tags_negative": [
+        "colorful"
+      ],
+      "negative": "glossy magazine colour, single hero image",
+      "aliases": [],
+      "written": true
+    },
+    {
+      "id": "comics.packshot",
+      "name": "[Format] Packshot",
+      "family": "Comics & Print",
+      "axis": "format",
+      "medium": "photograph style image",
+      "nl": "Composed as a packshot: object centred on a seamless sweep, even soft light, true colour, crisp edge separation, no props, photograph style image.",
+      "tags": [
+        "simple_background",
+        "still_life",
+        "photo_(medium)",
+        "white_theme"
+      ],
+      "tags_negative": [
+        "scenery"
+      ],
+      "negative": "lifestyle clutter, dramatic shadow",
+      "aliases": [
+        "[Format] Product Packshot"
+      ],
+      "written": true
+    },
+    {
+      "id": "comics.phone_wallpaper",
+      "name": "[Format] Phone Wallpaper",
+      "family": "Comics & Print",
+      "axis": "format",
+      "medium": "graphic style image",
+      "nl": "Composed as a phone wallpaper: tall 9:16 framing, subject placed high or low so the middle stays calm, clean gradient ground, graphic style image.",
+      "tags": [
+        "wallpaper",
+        "gradient",
+        "simple_background"
+      ],
+      "tags_negative": [],
+      "negative": "wide horizontal framing, busy centre",
+      "aliases": [],
+      "written": true
+    },
+    {
+      "id": "comics.playbill",
+      "name": "[Format] Playbill",
+      "family": "Comics & Print",
+      "axis": "format",
+      "medium": "poster style image",
+      "nl": "Composed as a playbill: stage-graphic hierarchy, flat ink colour, ornamental border, generous type space at the base, poster style image.",
+      "tags": [
+        "poster",
+        "flat_color",
+        "limited_palette"
+      ],
+      "tags_negative": [
+        "photorealistic"
+      ],
+      "negative": "photographic depth, edge-to-edge detail",
+      "aliases": [],
+      "written": true
+    },
+    {
+      "id": "comics.playing_card_face",
+      "name": "[Format] Playing Card Face",
+      "family": "Comics & Print",
+      "axis": "format",
+      "medium": "illustration style image",
+      "nl": "Composed as a playing-card face: mirrored double-ended figure, ornate border rule, corner index marks, flat printed inks, illustration style image.",
+      "tags": [
+        "trading_card",
+        "flat_color",
+        "limited_palette",
+        "lineart"
+      ],
+      "tags_negative": [
+        "photorealistic"
+      ],
+      "negative": "photographic depth, borderless bleed",
+      "aliases": [],
+      "written": true
+    },
+    {
+      "id": "comics.polaroid_frame",
+      "name": "[Format] Polaroid Frame",
+      "family": "Comics & Print",
+      "axis": "format",
+      "medium": "instant photograph style image",
+      "nl": "Composed as an instant print: white plastic border with a fat lower margin, soft low-contrast emulsion colour, slight vignette, instant photograph style image.",
+      "tags": [
+        "instant_photo",
+        "photo_border",
+        "soft_focus",
+        "vignetting"
+      ],
+      "tags_negative": [
+        "highres"
+      ],
+      "negative": "borderless digital frame, crisp modern contrast",
+      "aliases": [],
+      "written": true
+    },
+    {
+      "id": "comics.portolan_chart",
+      "name": "[Format] Portolan Chart",
+      "family": "Comics & Print",
+      "axis": "format",
+      "medium": "technical drawing style image",
+      "nl": "Composed as a portolan chart: radiating rhumb lines, coastal place-names, iron-gall ink on vellum, hand-tinted flags, technical drawing style image.",
+      "tags": [
+        "map",
+        "sepia",
+        "lineart",
+        "traditional_media"
+      ],
+      "tags_negative": [
+        "highres"
+      ],
+      "negative": "modern print colour, photographic detail",
+      "aliases": [],
+      "written": true
+    },
+    {
+      "id": "comics.pose_sheet",
+      "name": "[Format] Pose Sheet",
+      "family": "Comics & Print",
+      "axis": "format",
+      "medium": "drawing style image",
+      "nl": "Composed as a pose sheet: the same figure in several action poses across the frame, consistent scale, flat even light, plain ground, drawing style image.",
+      "tags": [
+        "multiple_views",
+        "reference_sheet",
+        "full_body",
+        "simple_background"
+      ],
+      "tags_negative": [
+        "scenery"
+      ],
+      "negative": "single pose, painted environment",
+      "aliases": [],
+      "written": true
+    },
+    {
+      "id": "comics.postage_stamp",
+      "name": "[Format] Postage Stamp",
+      "family": "Comics & Print",
+      "axis": "format",
+      "medium": "print style image",
+      "nl": "Composed as a postage stamp: perforated edge, small framed vignette, country and value lettering, limited engraved inks, print style image.",
+      "tags": [
+        "lithograph",
+        "limited_palette",
+        "photo_border",
+        "lineart"
+      ],
+      "tags_negative": [
+        "highres"
+      ],
+      "negative": "full-bleed photograph, modern gradients",
+      "aliases": [],
+      "written": true
+    },
+    {
+      "id": "comics.poster_one_sheet",
+      "name": "[Format] Poster One-Sheet",
+      "family": "Comics & Print",
+      "axis": "format",
+      "medium": "poster style image",
+      "nl": "Composed as a theatrical one-sheet: vertical hierarchy, hero element up top, dark banded base for credits, dramatic key light, poster style image.",
+      "tags": [
+        "poster",
+        "cinematic_lighting",
+        "promotional_art"
+      ],
+      "tags_negative": [],
+      "negative": "square framing, flat snapshot light",
+      "aliases": [],
+      "written": true
+    },
+    {
+      "id": "comics.seed_packet",
+      "name": "[Format] Seed Packet",
+      "family": "Comics & Print",
+      "axis": "format",
+      "medium": "print style image",
+      "nl": "Composed as a seed packet: illustrated specimen panel, arched banner name, planting text below, faded lithograph inks on kraft, print style image.",
+      "tags": [
+        "lithograph",
+        "limited_palette",
+        "textured",
+        "retro_artstyle"
+      ],
+      "tags_negative": [
+        "highres"
+      ],
+      "negative": "glossy modern packaging, photographic imagery",
+      "aliases": [],
+      "written": true
+    },
+    {
+      "id": "comics.splash_art",
+      "name": "[Format] Splash Art",
+      "family": "Comics & Print",
+      "axis": "format",
+      "medium": "illustration style image",
+      "nl": "Composed as splash art: sweeping diagonal action, effect flourishes behind the subject, poster polish, clear title space, illustration style image.",
+      "tags": [
+        "official_art",
+        "key_visual",
+        "glowing",
+        "cinematic_lighting"
+      ],
+      "tags_negative": [
+        "simple_background"
+      ],
+      "negative": "static documentary framing, dull light",
+      "aliases": [],
+      "written": true
+    },
+    {
+      "id": "comics.sticker_sheet",
+      "name": "[Format] Sticker Sheet",
+      "family": "Comics & Print",
+      "axis": "format",
+      "medium": "vector style image",
+      "nl": "Composed as a kiss-cut sticker sheet: many small motifs on one page, white keylines, flat bold colour, even spacing, vector style image.",
+      "tags": [
+        "sticker",
+        "multiple_views",
+        "flat_color",
+        "white_theme"
+      ],
+      "tags_negative": [
+        "scenery"
+      ],
+      "negative": "single large subject, photographic background",
+      "aliases": [],
+      "written": true
+    },
+    {
+      "id": "comics.storyboard_panel",
+      "name": "[Format] Storyboard Panel",
+      "family": "Comics & Print",
+      "axis": "format",
+      "medium": "drawing style image",
+      "nl": "Composed as a storyboard panel: rough grease-pencil line inside a ruled frame, two-value blocking, camera-move arrows, drawing style image.",
+      "tags": [
+        "storyboard",
+        "sketch",
+        "monochrome",
+        "unfinished"
+      ],
+      "tags_negative": [
+        "highres"
+      ],
+      "negative": "finished colour art, polished rendering",
+      "aliases": [
+        "[Cartoon] Storyboard Frame"
+      ],
+      "written": true
+    },
+    {
+      "id": "comics.styleguide_tile",
+      "name": "[Format] Styleguide Tile",
+      "family": "Comics & Print",
+      "axis": "format",
+      "medium": "photograph style image",
+      "nl": "Composed as a styleguide tile: one garment or prop centred on a neutral ground, flat even light, catalogue-true colour, photograph style image.",
+      "tags": [
+        "reference_sheet",
+        "simple_background",
+        "still_life",
+        "photo_(medium)"
+      ],
+      "tags_negative": [
+        "cinematic_lighting"
+      ],
+      "negative": "dramatic lighting, lifestyle clutter",
+      "aliases": [],
+      "written": true
+    },
+    {
+      "id": "comics.tabloid_front_page",
+      "name": "[Format] Tabloid Front Page",
+      "family": "Comics & Print",
+      "axis": "format",
+      "medium": "print style image",
+      "nl": "Composed as a tabloid front: screaming display headline, one cropped photo, red banner strip, cheap ink on coarse newsprint, print style image.",
+      "tags": [
+        "halftone",
+        "high_contrast",
+        "red_theme",
+        "textured"
+      ],
+      "tags_negative": [
+        "minimalism"
+      ],
+      "negative": "restrained broadsheet layout, subtle palette",
+      "aliases": [],
+      "written": true
+    },
+    {
+      "id": "comics.tarot_card",
+      "name": "[Format] Tarot Card",
+      "family": "Comics & Print",
+      "axis": "format",
+      "medium": "illustration style image",
+      "nl": "Composed as a tarot card: bordered vertical panel, symmetrical emblem composition, flat symbolic colour, banner space at the base, illustration style image.",
+      "tags": [
+        "trading_card",
+        "flat_color",
+        "poster",
+        "limited_palette"
+      ],
+      "tags_negative": [
+        "photorealistic"
+      ],
+      "negative": "photographic realism, borderless bleed",
+      "aliases": [],
+      "written": true
+    },
+    {
+      "id": "comics.ticket_stub",
+      "name": "[Format] Ticket Stub",
+      "family": "Comics & Print",
+      "axis": "format",
+      "medium": "print style image",
+      "nl": "Composed as a ticket stub: perforated tear line, seat and date fields, serial numbering, thin card with worn edges, print style image.",
+      "tags": [
+        "limited_palette",
+        "textured",
+        "photo_border",
+        "retro_artstyle"
+      ],
+      "tags_negative": [
+        "highres"
+      ],
+      "negative": "large poster layout, photographic imagery",
+      "aliases": [],
+      "written": true
+    },
+    {
+      "id": "comics.trading_card",
+      "name": "[Format] Trading Card",
+      "family": "Comics & Print",
+      "axis": "format",
+      "medium": "illustration style image",
+      "nl": "Composed as a trading card: ornate frame around a bust-length subject, name plate at the base, glossy foil sheen, illustration style image.",
+      "tags": [
+        "trading_card",
+        "upper_body",
+        "shiny",
+        "poster"
+      ],
+      "tags_negative": [],
+      "negative": "borderless composition, documentary framing",
+      "aliases": [],
+      "written": true
+    },
+    {
+      "id": "comics.triptych",
+      "name": "[Format] Triptych",
+      "family": "Comics & Print",
+      "axis": "format",
+      "medium": "graphic style image",
+      "nl": "Composed as a triptych: three equal vertical panels reading as one story, matched palette and light, thin dividing gutters, graphic style image.",
+      "tags": [
+        "multiple_views",
+        "simple_background"
+      ],
+      "tags_negative": [],
+      "negative": "single frame, mismatched panels",
+      "aliases": [],
+      "written": true
+    },
+    {
+      "id": "comics.turnaround_front_side_back",
+      "name": "[Format] Turnaround Front / Side / Back",
+      "family": "Comics & Print",
+      "axis": "format",
+      "medium": "drawing style image",
+      "nl": "Composed as a turnaround: front, side and back views of one design in a row, identical scale and flat light, plain ground, drawing style image.",
+      "tags": [
+        "turnaround",
+        "multiple_views",
+        "character_sheet",
+        "simple_background"
+      ],
+      "tags_negative": [
+        "cinematic_lighting"
+      ],
+      "negative": "dynamic angles, dramatic shadow",
+      "aliases": [
+        "turnaround front"
+      ],
+      "written": true
+    },
+    {
+      "id": "comics.ui_mock",
+      "name": "[Format] UI Mock",
+      "family": "Comics & Print",
+      "axis": "format",
+      "medium": "graphic style image",
+      "nl": "Composed as an interface mock: screen-flat panels and controls, aligned grid, flat UI colour, crisp pixel-true edges, graphic style image.",
+      "tags": [
+        "fake_screenshot",
+        "flat_color",
+        "vector_trace",
+        "simple_background"
+      ],
+      "tags_negative": [
+        "textured"
+      ],
+      "negative": "painterly texture, photographic depth",
+      "aliases": [],
+      "written": true
+    },
+    {
+      "id": "comics.vhs_box_art",
+      "name": "[Format] VHS Box Art",
+      "family": "Comics & Print",
+      "axis": "format",
+      "medium": "poster style image",
+      "nl": "Composed as a VHS sleeve: tall cover panel with a spine strip, airbrushed montage, chunky title band, worn cardboard edges, poster style image.",
+      "tags": [
+        "poster",
+        "airbrush_(medium)",
+        "retro_artstyle",
+        "textured"
+      ],
+      "tags_negative": [
+        "minimalism"
+      ],
+      "negative": "minimal modern cover, crisp digital vector",
+      "aliases": [],
+      "written": true
+    },
+    {
+      "id": "comics.video_thumbnail",
+      "name": "[Format] Video Thumbnail",
+      "family": "Comics & Print",
+      "axis": "format",
+      "medium": "graphic style image",
+      "nl": "Composed as a video thumbnail: large face or hero object, punchy high contrast, saturated colour, clear space for a caption, graphic style image.",
+      "tags": [
+        "poster",
+        "high_contrast",
+        "colorful",
+        "portrait"
+      ],
+      "tags_negative": [
+        "muted_color"
+      ],
+      "negative": "muted subtle grade, tiny distant subject",
+      "aliases": [
+        "thumbnail"
+      ],
+      "written": true
+    },
+    {
+      "id": "comics.vinyl_sleeve_back",
+      "name": "[Format] Vinyl Sleeve Back",
+      "family": "Comics & Print",
+      "axis": "format",
+      "medium": "print style image",
+      "nl": "Composed as a record sleeve back: track-list column, credit block, a small photo panel, matte cardboard stock, print style image.",
+      "tags": [
+        "album_cover",
+        "poster",
+        "textured",
+        "limited_palette"
+      ],
+      "tags_negative": [
+        "photorealistic"
+      ],
+      "negative": "full-bleed hero image, glossy modern layout",
+      "aliases": [],
+      "written": true
+    },
+    {
+      "id": "comics.wallpaper_desktop",
+      "name": "[Format] Wallpaper Desktop",
+      "family": "Comics & Print",
+      "axis": "format",
+      "medium": "graphic style image",
+      "nl": "Composed as a desktop wallpaper: wide 16:9 framing, subject off-centre so icons can sit in the clear area, calm ground, graphic style image.",
+      "tags": [
+        "wallpaper",
+        "widescreen",
+        "scenery",
+        "simple_background"
+      ],
+      "tags_negative": [],
+      "negative": "tight centred crop, busy corners",
+      "aliases": [],
+      "written": true
+    },
+    {
+      "id": "comics.wanted_poster",
+      "name": "[Format] Wanted Poster",
+      "family": "Comics & Print",
+      "axis": "format",
+      "medium": "print style image",
+      "nl": "Composed as a wanted poster: heavy woodtype heading, a portrait panel in the middle, reward line below, aged torn paper, print style image.",
+      "tags": [
+        "poster",
+        "sepia",
+        "traditional_media",
+        "textured"
+      ],
+      "tags_negative": [
+        "highres"
+      ],
+      "negative": "modern clean layout, saturated colour",
+      "aliases": [],
+      "written": true
+    },
+    {
+      "id": "comics.webtoon_vertical",
+      "name": "[Format] Webtoon Vertical",
+      "family": "Comics & Print",
+      "axis": "format",
+      "medium": "webtoon style image",
+      "nl": "Composed as a vertical webtoon slice: tall continuous read, stacked beats, soft airbrushed colour, clear gutters between moments, webtoon style image.",
+      "tags": [
+        "webtoon",
+        "manhwa",
+        "multiple_views",
+        "gradient"
+      ],
+      "tags_negative": [
+        "screentones"
+      ],
+      "negative": "wide horizontal framing, print screentone",
+      "aliases": [],
+      "written": true
+    },
+    {
+      "id": "comics.widescreen_still",
+      "name": "[Format] Widescreen Still",
+      "family": "Comics & Print",
+      "axis": "format",
+      "medium": "film still style image",
+      "nl": "Composed as a widescreen still: 2.39:1 crop, wide staging with air around the subject, motivated light, film colour grade, film still style image.",
+      "tags": [
+        "widescreen",
+        "cinematic_lighting",
+        "film_grain",
+        "depth_of_field"
+      ],
+      "tags_negative": [],
+      "negative": "square framing, flat lighting",
+      "aliases": [],
+      "written": true
+    },
+    {
+      "id": "comics.zine_spread",
+      "name": "[Format] Zine Spread",
+      "family": "Comics & Print",
+      "axis": "format",
+      "medium": "collage style image",
+      "nl": "Composed as a zine spread: two photocopied pages side by side, cut-and-paste blocks, hand-scrawled captions, staple gutter, collage style image.",
+      "tags": [
+        "collage",
+        "monochrome",
+        "halftone",
+        "textured"
+      ],
+      "tags_negative": [
+        "highres"
+      ],
+      "negative": "clean magazine layout, glossy print",
+      "aliases": [],
+      "written": true
+    },
+    {
+      "id": "comics.bonelli_black_and_white",
+      "name": "[Comic] Bonelli Black-and-White",
+      "family": "Comics & Print",
+      "axis": "style",
+      "medium": "comic style image",
+      "nl": "Italian-digest rendering: clean brush ink with hatched greys, tight three-tier panel rhythm, coarse pulp paper, no colour, comic style image.",
+      "tags": [
+        "comic",
+        "monochrome",
+        "cross-hatching",
+        "textured"
+      ],
+      "tags_negative": [
+        "colorful"
+      ],
+      "negative": "full colour, glossy modern print",
+      "aliases": [],
+      "written": true
+    },
+    {
+      "id": "comics.bronze_age_grit",
+      "name": "[Comic] Bronze Age Grit",
+      "family": "Comics & Print",
+      "axis": "style",
+      "medium": "comic style image",
+      "nl": "Bronze-age comic rendering: heavier brush ink, muddy four-colour print, dense hatch shadow, newsprint dot texture, muted street palette, comic style image.",
+      "tags": [
+        "comic",
+        "halftone",
+        "muted_color",
+        "cross-hatching",
+        "textured"
+      ],
+      "tags_negative": [
+        "highres"
+      ],
+      "negative": "glossy modern digital colour, clean vector line",
+      "aliases": [],
+      "written": true
+    },
+    {
+      "id": "comics.fumetti_photo_comic",
+      "name": "[Comic] Fumetti Photo Comic",
+      "family": "Comics & Print",
+      "axis": "style",
+      "medium": "comic style image",
+      "nl": "Fumetti rendering: photographic panels with drawn balloon space, coarse halftone print, flat posterised colour, cheap paper, comic style image.",
+      "tags": [
+        "photo_(medium)",
+        "halftone",
+        "comic",
+        "textured",
+        "limited_palette"
+      ],
+      "tags_negative": [
+        "lineart"
+      ],
+      "negative": "drawn figures, painterly rendering",
+      "aliases": [],
+      "written": true
+    },
+    {
+      "id": "comics.golden_age_superhero",
+      "name": "[Comic] Golden Age Superhero",
+      "family": "Comics & Print",
+      "axis": "style",
+      "medium": "comic style image",
+      "nl": "Golden-age comic rendering: simple bold outline, flat primary four-colour inks, visible dot screens, off-register plates, yellowed pulp paper, comic style image.",
+      "tags": [
+        "comic",
+        "halftone",
+        "limited_palette",
+        "retro_artstyle",
+        "textured"
+      ],
+      "tags_negative": [
+        "highres"
+      ],
+      "negative": "digital gradients, photographic detail",
+      "aliases": [],
+      "written": true
+    },
+    {
+      "id": "comics.indie_alt",
+      "name": "[Comic] Indie Alt",
+      "family": "Comics & Print",
+      "axis": "style",
+      "medium": "comic style image",
+      "nl": "Indie-alt comic rendering: scratchy personal pen line, flat spot colour or none, uneven hand-lettered texture, cheap photocopy grain, comic style image.",
+      "tags": [
+        "comic",
+        "spot_color",
+        "monochrome",
+        "textured",
+        "sketch"
+      ],
+      "tags_negative": [
+        "highres"
+      ],
+      "negative": "slick superhero rendering, glossy colour",
+      "aliases": [],
+      "written": true
+    },
+    {
+      "id": "comics.krackle_energy",
+      "name": "[Comic] Krackle Energy",
+      "family": "Comics & Print",
+      "axis": "style",
+      "medium": "comic style image",
+      "nl": "Cosmic-comic rendering: fields of black energy dots, blocky machine detail, hot primary inks, heavy square-fingered forms, comic style image.",
+      "tags": [
+        "comic",
+        "halftone",
+        "high_contrast",
+        "colorful",
+        "limited_palette"
+      ],
+      "tags_negative": [
+        "soft_focus"
+      ],
+      "negative": "soft airbrush gradients, muted realism",
+      "aliases": [],
+      "written": true
+    },
+    {
+      "id": "comics.modern_prestige_color",
+      "name": "[Comic] Modern Prestige Color",
+      "family": "Comics & Print",
+      "axis": "style",
+      "medium": "comic style image",
+      "nl": "Modern prestige comic rendering: digital painted colour over clean ink, cinematic light modelling, muted sophisticated palette, subtle grain, comic style image.",
+      "tags": [
+        "comic",
+        "painting_(medium)",
+        "cinematic_lighting",
+        "muted_color"
+      ],
+      "tags_negative": [
+        "halftone"
+      ],
+      "negative": "benday dots, flat primary inks",
+      "aliases": [],
+      "written": true
+    },
+    {
+      "id": "comics.photocopied_mini_comic",
+      "name": "[Comic] Photocopied Mini-Comic",
+      "family": "Comics & Print",
+      "axis": "style",
+      "medium": "collage style image",
+      "nl": "Mini-comic rendering: blown-contrast photocopy, hand-lettered text, wobbling ruled panels, staple and fold creases, collage style image.",
+      "tags": [
+        "monochrome",
+        "high_contrast",
+        "textured",
+        "collage"
+      ],
+      "tags_negative": [
+        "highres"
+      ],
+      "negative": "clean print production, full colour",
+      "aliases": [],
+      "written": true
+    },
+    {
+      "id": "comics.sci_fi_digest",
+      "name": "[Comic] Sci-Fi Digest",
+      "family": "Comics & Print",
+      "axis": "style",
+      "medium": "illustration style image",
+      "nl": "Sci-fi digest rendering: two-colour interior plates, scratchy ink linework, cheap pulp stock, spot mechanical detail, illustration style image.",
+      "tags": [
+        "limited_palette",
+        "ink_(medium)",
+        "textured",
+        "spot_color"
+      ],
+      "tags_negative": [
+        "highres"
+      ],
+      "negative": "full-colour glossy printing, airbrushed polish",
+      "aliases": [],
+      "written": true
+    },
+    {
+      "id": "comics.silent_sequential",
+      "name": "[Comic] Silent Sequential",
+      "family": "Comics & Print",
+      "axis": "style",
+      "medium": "comic style image",
+      "nl": "Wordless-comic rendering: no balloons or captions, even panel rhythm, clear staging carrying the beat, restrained flat colour, comic style image.",
+      "tags": [
+        "comic",
+        "multiple_views",
+        "flat_color",
+        "minimalism"
+      ],
+      "tags_negative": [
+        "photorealistic"
+      ],
+      "negative": "speech balloons, dense caption blocks",
+      "aliases": [],
+      "written": true
+    },
+    {
+      "id": "comics.silver_age",
+      "name": "[Comic] Silver Age",
+      "family": "Comics & Print",
+      "axis": "style",
+      "medium": "comic style image",
+      "nl": "Silver-age comic rendering: clean confident outline, bright optimistic four-colour inks, benday dot shading, thought-balloon clarity, comic style image.",
+      "tags": [
+        "comic",
+        "halftone",
+        "colorful",
+        "retro_artstyle",
+        "lineart"
+      ],
+      "tags_negative": [
+        "dark"
+      ],
+      "negative": "grim dark palette, painterly rendering",
+      "aliases": [],
+      "written": true
+    },
+    {
+      "id": "comics.underground_comix",
+      "name": "[Comic] Underground Comix",
+      "family": "Comics & Print",
+      "axis": "style",
+      "medium": "comic style image",
+      "nl": "Underground comix rendering: obsessive crosshatch texture, wobbling hand line, acid limited colour, dense cluttered black, cheap print bleed, comic style image.",
+      "tags": [
+        "comic",
+        "cross-hatching",
+        "monochrome",
+        "textured",
+        "high_contrast"
+      ],
+      "tags_negative": [
+        "highres"
+      ],
+      "negative": "clean corporate line, glossy colour",
+      "aliases": [],
+      "written": true
+    },
+    {
+      "id": "comics.webcomic_flat_digital",
+      "name": "[Comic] Webcomic Flat Digital",
+      "family": "Comics & Print",
+      "axis": "style",
+      "medium": "comic style image",
+      "nl": "Webcomic rendering: crisp digital line, flat bucket-filled colour, simple gradient sky, screen-bright palette, no print texture, comic style image.",
+      "tags": [
+        "comic",
+        "flat_color",
+        "lineart",
+        "colorful"
+      ],
+      "tags_negative": [
+        "halftone",
+        "textured"
+      ],
+      "negative": "print halftone, paper grain",
+      "aliases": [],
+      "written": true
+    },
+    {
+      "id": "comics.adi_granov_v2",
+      "name": "[Comic][v2] Adi Granov",
+      "family": "Comics & Print",
+      "axis": "style",
+      "medium": "comic style image",
+      "nl": "Painted-armour comic rendering: photoreal metal reflections, airbrushed volume, cool desaturated grade, hard specular edges, comic style image.",
+      "tags": [
+        "painting_(medium)",
+        "metallic",
+        "airbrush_(medium)",
+        "muted_color",
+        "highres"
+      ],
+      "tags_negative": [
+        "halftone"
+      ],
+      "negative": "flat benday dots, sketchy line",
+      "aliases": [
+        "[Comic][Clio] Adi Granov"
+      ],
+      "written": true
+    },
+    {
+      "id": "comics.alex_ross_v2",
+      "name": "[Comic][v2] Alex Ross",
+      "family": "Comics & Print",
+      "axis": "style",
+      "medium": "comic style image",
+      "nl": "Painterly heroic-realism rendering: gouache-modelled figures, warm classical light, subdued muscular palette, brush texture, comic style image.",
+      "tags": [
+        "painting_(medium)",
+        "traditional_media",
+        "cinematic_lighting",
+        "muted_color"
+      ],
+      "tags_negative": [
+        "flat_color"
+      ],
+      "negative": "flat cel colour, dot screens",
+      "aliases": [
+        "[Comic][Clio] Alex Ross"
+      ],
+      "written": true
+    },
+    {
+      "id": "comics.alternative_comics_v2",
+      "name": "[Comic][v2] Alternative Comics",
+      "family": "Comics & Print",
+      "axis": "style",
+      "medium": "comic style image",
+      "nl": "Alternative-comics rendering: idiosyncratic pen line, flat limited spot colour, plain framing, print texture, quiet deadpan tone, comic style image.",
+      "tags": [
+        "comic",
+        "spot_color",
+        "limited_palette",
+        "lineart",
+        "textured"
+      ],
+      "tags_negative": [
+        "highres"
+      ],
+      "negative": "glossy superhero polish, dramatic rendering",
+      "aliases": [
+        "[Comic][Clio] Alternative Comics"
+      ],
+      "written": true
+    },
+    {
+      "id": "comics.amanda_conner_illustration_v2",
+      "name": "[Comic][v2] Amanda Conner Illustration",
+      "family": "Comics & Print",
+      "axis": "style",
+      "medium": "comic style image",
+      "nl": "Bright pin-up comic rendering: bouncy clean ink, glossy candy colour, crisp cel shadows, sparkle highlight accents, comic style image.",
+      "tags": [
+        "comic",
+        "colorful",
+        "flat_color",
+        "sparkle",
+        "lineart"
+      ],
+      "tags_negative": [
+        "dark"
+      ],
+      "negative": "grim muted palette, gritty hatching",
+      "aliases": [
+        "[Comic][Clio] Amanda Conner Illustration"
+      ],
+      "written": true
+    },
+    {
+      "id": "comics.american_comic_realism_v2",
+      "name": "[Comic][v2] American Comic Realism",
+      "family": "Comics & Print",
+      "axis": "style",
+      "medium": "comic style image",
+      "nl": "Realist American comic rendering: anatomically grounded figures, feathered ink shadow, restrained colour holds, print texture, comic style image.",
+      "tags": [
+        "comic",
+        "cross-hatching",
+        "realistic",
+        "muted_color"
+      ],
+      "tags_negative": [
+        "chibi"
+      ],
+      "negative": "cartoon exaggeration, flat poster colour",
+      "aliases": [
+        "[Comic][Clio] American Comic Realism"
+      ],
+      "written": true
+    },
+    {
+      "id": "comics.american_pulp_illustration_v2",
+      "name": "[Comic][v2] American Pulp Illustration",
+      "family": "Comics & Print",
+      "axis": "style",
+      "medium": "illustration style image",
+      "nl": "Pulp-magazine illustration rendering: loose oil brushwork, lurid saturated colour, hard pulp-cover lighting, paper aging, illustration style image.",
+      "tags": [
+        "oil_painting_(medium)",
+        "colorful",
+        "high_contrast",
+        "retro_artstyle",
+        "textured"
+      ],
+      "tags_negative": [
+        "minimalism"
+      ],
+      "negative": "clean vector flatness, muted restraint",
+      "aliases": [
+        "[Comic][Clio] American Pulp Illustration"
+      ],
+      "written": true
+    },
+    {
+      "id": "comics.archie_comics_v2",
+      "name": "[Comic][v2] Archie Comics",
+      "family": "Comics & Print",
+      "axis": "style",
+      "medium": "comic style image",
+      "nl": "Teen-humour comic rendering: rounded friendly outline, flat cheerful primaries, simple dot shading, clean small-panel clarity, comic style image.",
+      "tags": [
+        "comic",
+        "flat_color",
+        "colorful",
+        "lineart",
+        "halftone"
+      ],
+      "tags_negative": [
+        "dark"
+      ],
+      "negative": "gritty shadow, painterly texture",
+      "aliases": [
+        "[Comic][Clio] Archie Comics"
+      ],
+      "written": true
+    },
+    {
+      "id": "comics.bande_dessin_e_herg_goscinny_tradition_v2",
+      "name": "[Comic][v2] Bande Dessinée (Hergé/Goscinny Tradition)",
+      "family": "Comics & Print",
+      "axis": "style",
+      "medium": "comic style image",
+      "nl": "Bande-dessinée rendering: even ligne-claire contour, flat unshaded colour, precise architectural detail, calm readable staging, comic style image.",
+      "tags": [
+        "comic",
+        "lineart",
+        "flat_color",
+        "minimalism"
+      ],
+      "tags_negative": [
+        "cross-hatching"
+      ],
+      "negative": "hatched shading, painterly rendering",
+      "aliases": [
+        "[Comic][Clio] Bande Dessinée (Hergé/Goscinny Tradition)"
+      ],
+      "written": true
+    },
+    {
+      "id": "comics.bengal_illustration_v2",
+      "name": "[Comic][v2] Bengal Illustration",
+      "family": "Comics & Print",
+      "axis": "style",
+      "medium": "comic style image",
+      "nl": "Modern French comic rendering: elegant tapering ink, flat luminous colour blocking, art-deco shape rhythm, poster-clean edges, comic style image.",
+      "tags": [
+        "comic",
+        "flat_color",
+        "lineart",
+        "art_deco",
+        "colorful"
+      ],
+      "tags_negative": [
+        "textured"
+      ],
+      "negative": "gritty texture, painterly blending",
+      "aliases": [
+        "[Comic][Clio] Bengal Illustration"
+      ],
+      "written": true
+    },
+    {
+      "id": "comics.bold_contour_v2",
+      "name": "[Comic][v2] Bold Contour",
+      "family": "Comics & Print",
+      "axis": "style",
+      "medium": "comic style image",
+      "nl": "Bold-contour comic rendering: heavy uniform outline, flat colour inside the shapes, minimal interior detail, poster contrast, comic style image.",
+      "tags": [
+        "comic",
+        "outline",
+        "flat_color",
+        "high_contrast"
+      ],
+      "tags_negative": [
+        "cross-hatching"
+      ],
+      "negative": "fine hatching, soft gradients",
+      "aliases": [
+        "[Comic][Clio] Bold Contour"
+      ],
+      "written": true
+    },
+    {
+      "id": "comics.clean_line_art_v2",
+      "name": "[Comic][v2] Clean Line Art",
+      "family": "Comics & Print",
+      "axis": "style",
+      "medium": "comic style image",
+      "nl": "Clean-line comic rendering: even confident stroke weight, no hatching, flat colour fills, generous readable space, comic style image.",
+      "tags": [
+        "comic",
+        "lineart",
+        "flat_color",
+        "minimalism"
+      ],
+      "tags_negative": [
+        "textured"
+      ],
+      "negative": "scratchy texture, heavy shadow rendering",
+      "aliases": [
+        "[Comic][Clio] Clean Line Art"
+      ],
+      "written": true
+    },
+    {
+      "id": "comics.comic_europ_en_prestige_v2",
+      "name": "[Comic][v2] Comic Européen Prestige",
+      "family": "Comics & Print",
+      "axis": "style",
+      "medium": "comic style image",
+      "nl": "European prestige album rendering: fine ink detail, watercolour-tinted flats, muted sophisticated palette, heavy-stock paper tone, comic style image.",
+      "tags": [
+        "comic",
+        "watercolor_(medium)",
+        "muted_color",
+        "lineart",
+        "textured"
+      ],
+      "tags_negative": [
+        "halftone"
+      ],
+      "negative": "newsprint dots, saturated primaries",
+      "aliases": [
+        "[Comic][Clio] Comic Européen Prestige"
+      ],
+      "written": true
+    },
+    {
+      "id": "comics.comics_v2",
+      "name": "[Comic][v2] Comics",
+      "family": "Comics & Print",
+      "axis": "style",
+      "medium": "comic style image",
+      "nl": "General comic rendering: inked contour, flat colour fills with simple shadow holds, halftone shading, print texture, comic style image.",
+      "tags": [
+        "comic",
+        "flat_color",
+        "halftone",
+        "lineart"
+      ],
+      "tags_negative": [
+        "photorealistic"
+      ],
+      "negative": "photographic rendering, painterly blending",
+      "aliases": [
+        "[Comic][Clio] Comics"
+      ],
+      "written": true
+    },
+    {
+      "id": "comics.crosshatched_graphic_novel_v2",
+      "name": "[Comic][v2] Crosshatched Graphic Novel",
+      "family": "Comics & Print",
+      "axis": "style",
+      "medium": "comic style image",
+      "nl": "Crosshatched graphic-novel rendering: dense pen hatching for every tone, monochrome or duotone palette, dry paper texture, comic style image.",
+      "tags": [
+        "cross-hatching",
+        "monochrome",
+        "duotone",
+        "comic",
+        "textured"
+      ],
+      "tags_negative": [
+        "colorful"
+      ],
+      "negative": "full colour, airbrushed gradients",
+      "aliases": [
+        "[Comic][Clio] Crosshatched Graphic Novel"
+      ],
+      "written": true
+    },
+    {
+      "id": "comics.dc_comics_v2",
+      "name": "[Comic][v2] DC Comics",
+      "family": "Comics & Print",
+      "axis": "style",
+      "medium": "comic style image",
+      "nl": "Mainstream superhero rendering: clean heavy ink, saturated costume colour, hard cel shadows, digital gradient sky, print sharpness, comic style image.",
+      "tags": [
+        "comic",
+        "flat_color",
+        "colorful",
+        "lineart",
+        "high_contrast"
+      ],
+      "tags_negative": [
+        "sketch"
+      ],
+      "negative": "loose sketch, muted arthouse palette",
+      "aliases": [
+        "[Comic][Clio] DC Comics"
+      ],
+      "written": true
+    },
+    {
+      "id": "comics.enki_bilal_inspired_comic_and_digital_painting_v2",
+      "name": "[Comic][v2] Enki Bilal-Inspired Comic and Digital Painting",
+      "family": "Comics & Print",
+      "axis": "style",
+      "medium": "comic style image",
+      "nl": "Bilal-adjacent rendering: bruised violet and ochre palette, smeared painterly texture over ink, cracked surface detail, cold melancholy light, comic style image.",
+      "tags": [
+        "painting_(medium)",
+        "muted_color",
+        "textured",
+        "purple_theme",
+        "dark"
+      ],
+      "tags_negative": [
+        "colorful"
+      ],
+      "negative": "bright primary colour, clean vector line",
+      "aliases": [
+        "[Comic][Clio] Enki Bilal-Inspired Comic and Digital Painting"
+      ],
+      "written": true
+    },
+    {
+      "id": "comics.franco_belgian_ultradetailed_comics_v2",
+      "name": "[Comic][v2] Franco-Belgian Ultradetailed Comics",
+      "family": "Comics & Print",
+      "axis": "style",
+      "medium": "comic style image",
+      "nl": "Ultradetailed Franco-Belgian rendering: obsessive fine ink detail, flat precise colour, ruled perspective, dense scenery information, comic style image.",
+      "tags": [
+        "comic",
+        "lineart",
+        "flat_color",
+        "highres",
+        "scenery"
+      ],
+      "tags_negative": [
+        "sketch"
+      ],
+      "negative": "loose sketch, painterly softness",
+      "aliases": [
+        "[Comic][Clio] Franco-Belgian Ultradetailed Comics"
+      ],
+      "written": true
+    },
+    {
+      "id": "comics.frank_cho_v2",
+      "name": "[Comic][v2] Frank Cho",
+      "family": "Comics & Print",
+      "axis": "style",
+      "medium": "comic style image",
+      "nl": "Slick brush-ink comic rendering: sculpted anatomy, confident tapering brush line, clean flat colour, high-gloss finish, comic style image.",
+      "tags": [
+        "comic",
+        "ink_(medium)",
+        "lineart",
+        "flat_color",
+        "realistic"
+      ],
+      "tags_negative": [
+        "textured"
+      ],
+      "negative": "rough texture, muted grade",
+      "aliases": [
+        "[Comic][Clio] Frank Cho"
+      ],
+      "written": true
+    },
+    {
+      "id": "comics.frank_miller_v2",
+      "name": "[Comic][v2] Frank Miller",
+      "family": "Comics & Print",
+      "axis": "style",
+      "medium": "comic style image",
+      "nl": "High-contrast noir comic rendering: massive black shapes, white cut-outs, spatter texture, one hot spot colour, brutal graphic simplification, comic style image.",
+      "tags": [
+        "monochrome",
+        "high_contrast",
+        "spot_color",
+        "ink_(medium)",
+        "chiaroscuro"
+      ],
+      "tags_negative": [
+        "colorful"
+      ],
+      "negative": "full colour rendering, soft gradients",
+      "aliases": [
+        "[Comic][Clio] Frank Miller"
+      ],
+      "written": true
+    },
+    {
+      "id": "comics.glossy_comic_digital_v2",
+      "name": "[Comic][v2] Glossy Comic Digital",
+      "family": "Comics & Print",
+      "axis": "style",
+      "medium": "comic style image",
+      "nl": "Glossy digital comic rendering: airbrushed volume over clean ink, saturated highlight sheen, smooth gradient skies, polished finish, comic style image.",
+      "tags": [
+        "comic",
+        "airbrush_(medium)",
+        "gradient",
+        "colorful",
+        "highres"
+      ],
+      "tags_negative": [
+        "halftone"
+      ],
+      "negative": "benday dots, newsprint texture",
+      "aliases": [
+        "[Comic][Clio] Glossy Comic Digital"
+      ],
+      "written": true
+    },
+    {
+      "id": "comics.graphic_novel_v2",
+      "name": "[Comic][v2] Graphic Novel",
+      "family": "Comics & Print",
+      "axis": "style",
+      "medium": "comic style image",
+      "nl": "Graphic-novel rendering: restrained ink line, limited muted palette, atmospheric flat shadow, matte paper texture, comic style image.",
+      "tags": [
+        "comic",
+        "muted_color",
+        "limited_palette",
+        "lineart",
+        "textured"
+      ],
+      "tags_negative": [
+        "colorful"
+      ],
+      "negative": "saturated superhero colour, glossy polish",
+      "aliases": [
+        "[Comic][Clio] Graphic Novel"
+      ],
+      "written": true
+    },
+    {
+      "id": "comics.hellboy_v2",
+      "name": "[Comic][v2] Hellboy",
+      "family": "Comics & Print",
+      "axis": "style",
+      "medium": "comic style image",
+      "nl": "Mignola-adjacent rendering: enormous flat black shapes, angular geometric shadow, blood-red and ochre spot colour, sparse detail, comic style image.",
+      "tags": [
+        "high_contrast",
+        "spot_color",
+        "dark",
+        "ink_(medium)",
+        "limited_palette"
+      ],
+      "tags_negative": [
+        "gradient"
+      ],
+      "negative": "airbrushed gradients, photographic depth",
+      "aliases": [
+        "[Comic][Clio] Hellboy"
+      ],
+      "written": true
+    },
+    {
+      "id": "comics.jim_lee_v2",
+      "name": "[Comic][v2] Jim Lee",
+      "family": "Comics & Print",
+      "axis": "style",
+      "medium": "comic style image",
+      "nl": "90s superhero rendering: dense feathered ink hatching, hyper-defined musculature, sharp crosshatch shadow, bright saturated colour, comic style image.",
+      "tags": [
+        "comic",
+        "cross-hatching",
+        "colorful",
+        "lineart",
+        "1990s_(style)"
+      ],
+      "tags_negative": [
+        "minimalism"
+      ],
+      "negative": "minimal flat design, muted palette",
+      "aliases": [
+        "[Comic][Clio] Jim Lee"
+      ],
+      "written": true
+    },
+    {
+      "id": "comics.joe_quesada_v2",
+      "name": "[Comic][v2] Joe Quesada",
+      "family": "Comics & Print",
+      "axis": "style",
+      "medium": "comic style image",
+      "nl": "Dynamic ink-heavy comic rendering: bold spotted blacks, angular energy lines, saturated primary colour, dramatic low angles, comic style image.",
+      "tags": [
+        "comic",
+        "ink_(medium)",
+        "high_contrast",
+        "colorful",
+        "emphasis_lines"
+      ],
+      "tags_negative": [
+        "muted_color"
+      ],
+      "negative": "muted quiet palette, delicate line",
+      "aliases": [
+        "[Comic][Clio] Joe Quesada"
+      ],
+      "written": true
+    },
+    {
+      "id": "comics.mark_brooks_manapul_v2",
+      "name": "[Comic][v2] Mark Brooks / Manapul",
+      "family": "Comics & Print",
+      "axis": "style",
+      "medium": "comic style image",
+      "nl": "Modern cover-art rendering: fluid brush ink, watercolour-washed colour, luminous rim light, decorative negative space, comic style image.",
+      "tags": [
+        "comic",
+        "watercolor_(medium)",
+        "rim_lighting",
+        "colorful",
+        "lineart"
+      ],
+      "tags_negative": [
+        "halftone"
+      ],
+      "negative": "dot screens, flat corporate colour",
+      "aliases": [
+        "[Comic][Clio] Mark Brooks / Manapul"
+      ],
+      "written": true
+    },
+    {
+      "id": "comics.marvel_comics_v2",
+      "name": "[Comic][v2] Marvel Comics",
+      "family": "Comics & Print",
+      "axis": "style",
+      "medium": "comic style image",
+      "nl": "Marvel house rendering: bold ink contour, punchy saturated costume colour, hard cel shadow, dynamic foreshortened action, comic style image.",
+      "tags": [
+        "comic",
+        "flat_color",
+        "colorful",
+        "lineart",
+        "high_contrast"
+      ],
+      "tags_negative": [
+        "muted_color"
+      ],
+      "negative": "muted arthouse palette, painterly blending",
+      "aliases": [
+        "[Comic][Clio] Marvel Comics"
+      ],
+      "written": true
+    },
+    {
+      "id": "comics.marvel_cover_art_v2",
+      "name": "[Comic][v2] Marvel Cover Art",
+      "family": "Comics & Print",
+      "axis": "style",
+      "medium": "comic style image",
+      "nl": "Comic cover rendering: hero centred with clear masthead space, rim-lit silhouette, saturated poster colour, glossy print finish, comic style image.",
+      "tags": [
+        "cover",
+        "comic",
+        "rim_lighting",
+        "colorful",
+        "poster"
+      ],
+      "tags_negative": [
+        "sketch"
+      ],
+      "negative": "interior-panel gutters, sketchy line",
+      "aliases": [
+        "[Comic][Clio] Marvel Cover Art"
+      ],
+      "written": true
+    },
+    {
+      "id": "comics.milo_manara_v2",
+      "name": "[Comic][v2] Milo Manara",
+      "family": "Comics & Print",
+      "axis": "style",
+      "medium": "comic style image",
+      "nl": "Manara-adjacent rendering: fluid sensual contour line, minimal shading, warm pale watercolour flats, airy white space, comic style image.",
+      "tags": [
+        "lineart",
+        "watercolor_(medium)",
+        "pale_color",
+        "comic",
+        "minimalism"
+      ],
+      "tags_negative": [
+        "high_contrast"
+      ],
+      "negative": "heavy black rendering, harsh contrast",
+      "aliases": [
+        "[Comic][Clio] Milo Manara"
+      ],
+      "written": true
+    },
+    {
+      "id": "comics.moebius_inspired_illustration_v2",
+      "name": "[Comic][v2] Moebius-Inspired Illustration",
+      "family": "Comics & Print",
+      "axis": "style",
+      "medium": "comic style image",
+      "nl": "Moebius-adjacent rendering: fine even contour line, flat sun-bleached desert palette, stippled surface texture, weightless clarity, comic style image.",
+      "tags": [
+        "comic",
+        "lineart",
+        "flat_color",
+        "pale_color",
+        "halftone"
+      ],
+      "tags_negative": [
+        "dark"
+      ],
+      "negative": "heavy black shadow, glossy airbrush",
+      "aliases": [
+        "[Comic][Clio] Moebius-Inspired Illustration"
+      ],
+      "written": true
+    },
+    {
+      "id": "comics.photorealistic_comic_ink_and_paint_hybrid_v2",
+      "name": "[Comic][v2] Photorealistic Comic Ink-and-Paint Hybrid",
+      "family": "Comics & Print",
+      "axis": "style",
+      "medium": "comic style image",
+      "nl": "Ink-and-photo hybrid rendering: photographic tonal detail under comic ink contour, spot flat colour, halftone overlay, comic style image.",
+      "tags": [
+        "comic",
+        "photorealistic",
+        "halftone",
+        "lineart",
+        "high_contrast"
+      ],
+      "tags_negative": [
+        "flat_color"
+      ],
+      "negative": "purely flat cel colour, cartoon simplification",
+      "aliases": [
+        "[Comic][Clio] Photorealistic Comic Ink-and-Paint Hybrid"
+      ],
+      "written": true
+    },
+    {
+      "id": "comics.psychological_thriller_pulp_digital_painting_v2",
+      "name": "[Comic][v2] Psychological Thriller Pulp Digital Painting",
+      "family": "Comics & Print",
+      "axis": "style",
+      "medium": "comic style image",
+      "nl": "Pulp-thriller painted rendering: smeared digital brushwork, sickly amber-green grade, harsh single-source light, grimy texture, comic style image.",
+      "tags": [
+        "painting_(medium)",
+        "dark",
+        "high_contrast",
+        "textured",
+        "green_theme"
+      ],
+      "tags_negative": [
+        "pastel_colors"
+      ],
+      "negative": "bright pastel palette, clean vector line",
+      "aliases": [
+        "[Comic][Clio] Psychological Thriller Pulp Digital Painting"
+      ],
+      "written": true
+    },
+    {
+      "id": "comics.ryan_benjamin_v2",
+      "name": "[Comic][v2] Ryan Benjamin",
+      "family": "Comics & Print",
+      "axis": "style",
+      "medium": "comic style image",
+      "nl": "Kinetic modern comic rendering: sharp angular ink, streaked speed texture, cool saturated grade, hard graphic shadow shapes, comic style image.",
+      "tags": [
+        "comic",
+        "speed_lines",
+        "high_contrast",
+        "colorful",
+        "lineart"
+      ],
+      "tags_negative": [
+        "soft_focus"
+      ],
+      "negative": "soft painterly blending, muted calm",
+      "aliases": [
+        "[Comic][Clio] Ryan Benjamin"
+      ],
+      "written": true
+    },
+    {
+      "id": "comics.travis_charest_v2",
+      "name": "[Comic][v2] Travis Charest",
+      "family": "Comics & Print",
+      "axis": "style",
+      "medium": "comic style image",
+      "nl": "Hyper-refined comic rendering: engraving-fine line detail, sculpted metal and cloth, cool restrained palette, immaculate finish, comic style image.",
+      "tags": [
+        "comic",
+        "lineart",
+        "cross-hatching",
+        "metallic",
+        "highres"
+      ],
+      "tags_negative": [
+        "sketch"
+      ],
+      "negative": "loose sketch, flat cartoon colour",
+      "aliases": [
+        "[Comic][Clio] Travis Charest"
+      ],
+      "written": true
+    },
+    {
+      "id": "comics.vintage_comics_v2",
+      "name": "[Comic][v2] Vintage Comics",
+      "family": "Comics & Print",
+      "axis": "style",
+      "medium": "comic style image",
+      "nl": "Vintage comic rendering: faded four-colour inks, coarse dot screens, plate misregistration, yellowed pulp paper, simple bold line, comic style image.",
+      "tags": [
+        "comic",
+        "halftone",
+        "retro_artstyle",
+        "limited_palette",
+        "textured"
+      ],
+      "tags_negative": [
+        "highres"
+      ],
+      "negative": "modern digital gradients, glossy paper",
+      "aliases": [
+        "[Comic][Clio] Vintage Comics"
+      ],
+      "written": true
+    },
+    {
+      "id": "comics.zenescope_illustration_v2",
+      "name": "[Comic][v2] Zenescope Illustration",
+      "family": "Comics & Print",
+      "axis": "style",
+      "medium": "comic style image",
+      "nl": "Glossy fantasy-cover rendering: airbrushed skin sheen, jewel-saturated colour, dramatic rim light, high-polish digital finish, comic style image.",
+      "tags": [
+        "comic",
+        "airbrush_(medium)",
+        "colorful",
+        "rim_lighting",
+        "highres"
+      ],
+      "tags_negative": [
+        "sketch"
+      ],
+      "negative": "rough sketch, muted flat inks",
+      "aliases": [
+        "[Comic][Clio] Zenescope Illustration"
+      ],
+      "written": true
+    },
+    {
+      "id": "comics.16_bit_portrait",
+      "name": "[Print] 16-Bit Portrait",
+      "family": "Comics & Print",
+      "axis": "style",
+      "medium": "pixel art style image",
+      "nl": "16-bit portrait rendering: limited console palette, chunky visible pixels, dithered shading ramps, hard aliased contour, pixel art style image.",
+      "tags": [
+        "pixel_art",
+        "dithering",
+        "limited_palette",
+        "retro_artstyle",
+        "portrait"
+      ],
+      "tags_negative": [
+        "highres"
+      ],
+      "negative": "smooth antialiasing, photographic detail",
+      "aliases": [],
+      "written": true
+    },
+    {
+      "id": "comics.aquatint",
+      "name": "[Print] Aquatint",
+      "family": "Comics & Print",
+      "axis": "style",
+      "medium": "print style image",
+      "nl": "Aquatint rendering: soft granular tonal fields bitten into the plate, velvety mid greys, plate-edge impression, cream rag paper, print style image.",
+      "tags": [
+        "lithograph",
+        "monochrome",
+        "traditional_media",
+        "textured"
+      ],
+      "tags_negative": [
+        "colorful"
+      ],
+      "negative": "flat digital colour, crisp vector edges",
+      "aliases": [],
+      "written": true
+    },
+    {
+      "id": "comics.chromolithograph",
+      "name": "[Print] Chromolithograph",
+      "family": "Comics & Print",
+      "axis": "style",
+      "medium": "print style image",
+      "nl": "Chromolithograph rendering: many flat stone-printed colour layers, slight registration drift, decorative Victorian palette, paper tooth, print style image.",
+      "tags": [
+        "lithograph",
+        "limited_palette",
+        "retro_artstyle",
+        "textured",
+        "colorful"
+      ],
+      "tags_negative": [
+        "highres"
+      ],
+      "negative": "photographic gradients, glossy digital colour",
+      "aliases": [],
+      "written": true
+    },
+    {
+      "id": "comics.comic_ink",
+      "name": "[Print] Comic Ink",
+      "family": "Comics & Print",
+      "axis": "style",
+      "medium": "ink painting style image",
+      "nl": "Comic inking: brush and pen contour with spotted blacks, feathered hatching, dry-brush texture, white paper ground, ink painting style image.",
+      "tags": [
+        "ink_(medium)",
+        "monochrome",
+        "cross-hatching",
+        "comic",
+        "high_contrast"
+      ],
+      "tags_negative": [
+        "colorful"
+      ],
+      "negative": "full colour, soft airbrush shading",
+      "aliases": [],
+      "written": true
+    },
+    {
+      "id": "comics.engraving",
+      "name": "[Print] Engraving",
+      "family": "Comics & Print",
+      "axis": "style",
+      "medium": "print style image",
+      "nl": "Engraving rendering: incised parallel burin lines, tonal build from line density, crisp hard contour, ivory paper base, print style image.",
+      "tags": [
+        "lithograph",
+        "monochrome",
+        "cross-hatching",
+        "traditional_media"
+      ],
+      "tags_negative": [
+        "colorful"
+      ],
+      "negative": "colour rendering, soft blended shadow",
+      "aliases": [],
+      "written": true
+    },
+    {
+      "id": "comics.etching_drypoint",
+      "name": "[Print] Etching Drypoint",
+      "family": "Comics & Print",
+      "axis": "style",
+      "medium": "print style image",
+      "nl": "Etching and drypoint rendering: bitten line with burred velvety edges, plate tone, uneven ink wipe, rag paper impression, print style image.",
+      "tags": [
+        "lithograph",
+        "monochrome",
+        "textured",
+        "traditional_media"
+      ],
+      "tags_negative": [
+        "highres"
+      ],
+      "negative": "clean digital line, saturated colour",
+      "aliases": [],
+      "written": true
+    },
+    {
+      "id": "comics.halftone_newsprint",
+      "name": "[Print] Halftone Newsprint",
+      "family": "Comics & Print",
+      "axis": "style",
+      "medium": "comic style image",
+      "nl": "Halftone newsprint rendering: coarse dot screens, four-colour rosettes, ink bleed into absorbent paper, faded contrast, comic style image.",
+      "tags": [
+        "halftone",
+        "comic",
+        "limited_palette",
+        "textured",
+        "desaturated"
+      ],
+      "tags_negative": [
+        "highres"
+      ],
+      "negative": "crisp digital colour, glossy stock",
+      "aliases": [],
+      "written": true
+    },
+    {
+      "id": "comics.letterpress",
+      "name": "[Print] Letterpress",
+      "family": "Comics & Print",
+      "axis": "style",
+      "medium": "print style image",
+      "nl": "Letterpress rendering: impressed type and line into thick paper, ink squash at the edges, one or two flat inks, deckled stock, print style image.",
+      "tags": [
+        "traditional_media",
+        "limited_palette",
+        "textured",
+        "monochrome"
+      ],
+      "tags_negative": [
+        "gradient"
+      ],
+      "negative": "photographic gradients, glossy finish",
+      "aliases": [
+        "[Print] Letterpress Bite"
+      ],
+      "written": true
+    },
+    {
+      "id": "comics.linocut",
+      "name": "[Print] Linocut",
+      "family": "Comics & Print",
+      "axis": "style",
+      "medium": "print style image",
+      "nl": "Linocut rendering: gouged bold shapes, chattering carve marks, uneven ink coverage, high-contrast two-colour print, print style image.",
+      "tags": [
+        "woodcut",
+        "high_contrast",
+        "limited_palette",
+        "textured",
+        "traditional_media"
+      ],
+      "tags_negative": [
+        "gradient"
+      ],
+      "negative": "fine gradients, photographic detail",
+      "aliases": [],
+      "written": true
+    },
+    {
+      "id": "comics.lithograph",
+      "name": "[Print] Lithograph",
+      "family": "Comics & Print",
+      "axis": "style",
+      "medium": "print style image",
+      "nl": "Lithograph rendering: greasy crayon texture on stone, soft granular tone, muted ink palette, plate edge and paper grain, print style image.",
+      "tags": [
+        "lithograph",
+        "muted_color",
+        "textured",
+        "traditional_media"
+      ],
+      "tags_negative": [
+        "highres"
+      ],
+      "negative": "crisp vector edges, saturated digital colour",
+      "aliases": [],
+      "written": true
+    },
+    {
+      "id": "comics.mezzotint",
+      "name": "[Print] Mezzotint",
+      "family": "Comics & Print",
+      "axis": "style",
+      "medium": "print style image",
+      "nl": "Mezzotint rendering: velvety dense blacks scraped to light, smooth tonal gradation without line, rich plate depth, print style image.",
+      "tags": [
+        "lithograph",
+        "monochrome",
+        "dark",
+        "traditional_media"
+      ],
+      "tags_negative": [
+        "colorful"
+      ],
+      "negative": "colour, hard graphic line",
+      "aliases": [],
+      "written": true
+    },
+    {
+      "id": "comics.photogravure",
+      "name": "[Print] Photogravure",
+      "family": "Comics & Print",
+      "axis": "style",
+      "medium": "print style image",
+      "nl": "Photogravure rendering: ink held in etched pits, soft continuous tone, warm sepia-black, matte rag paper, delicate highlight roll-off, print style image.",
+      "tags": [
+        "sepia",
+        "monochrome",
+        "traditional_media",
+        "textured"
+      ],
+      "tags_negative": [
+        "high_contrast"
+      ],
+      "negative": "harsh contrast, glossy digital print",
+      "aliases": [],
+      "written": true
+    },
+    {
+      "id": "comics.pop_art_ben_day",
+      "name": "[Print] Pop Art Ben-Day",
+      "family": "Comics & Print",
+      "axis": "style",
+      "medium": "comic style image",
+      "nl": "Ben-Day pop rendering: enlarged printed dots, flat primary inks, thick black keyline, deliberate registration offset, comic style image.",
+      "tags": [
+        "halftone",
+        "flat_color",
+        "limited_palette",
+        "high_contrast",
+        "comic"
+      ],
+      "tags_negative": [
+        "gradient"
+      ],
+      "negative": "smooth gradients, photographic depth",
+      "aliases": [],
+      "written": true
+    },
+    {
+      "id": "comics.riso_misreg",
+      "name": "[Print] Riso Misreg",
+      "family": "Comics & Print",
+      "axis": "style",
+      "medium": "print style image",
+      "nl": "Risograph misregistration: two spot inks printed slightly off, overlap multiply colours, dotty uneven coverage, paper show-through, print style image.",
+      "tags": [
+        "risograph",
+        "spot_color",
+        "limited_palette",
+        "textured",
+        "duotone"
+      ],
+      "tags_negative": [
+        "highres"
+      ],
+      "negative": "perfect registration, photographic colour",
+      "aliases": [],
+      "written": true
+    },
+    {
+      "id": "comics.risograph",
+      "name": "[Print] Risograph",
+      "family": "Comics & Print",
+      "axis": "style",
+      "medium": "print style image",
+      "nl": "Risograph rendering: fluorescent spot inks, grainy uneven laydown, visible screen texture, limited two or three colour palette, print style image.",
+      "tags": [
+        "risograph",
+        "limited_palette",
+        "spot_color",
+        "textured",
+        "colorful"
+      ],
+      "tags_negative": [
+        "gradient"
+      ],
+      "negative": "smooth CMYK gradients, glossy stock",
+      "aliases": [],
+      "written": true
+    },
+    {
+      "id": "comics.scratchboard",
+      "name": "[Print] Scratchboard",
+      "family": "Comics & Print",
+      "axis": "style",
+      "medium": "print style image",
+      "nl": "Scratchboard rendering: white lines scratched out of solid black clay board, engraving-like hatch, stark contrast, print style image.",
+      "tags": [
+        "monochrome",
+        "high_contrast",
+        "cross-hatching",
+        "traditional_media"
+      ],
+      "tags_negative": [
+        "colorful"
+      ],
+      "negative": "colour rendering, soft gradients",
+      "aliases": [],
+      "written": true
+    },
+    {
+      "id": "comics.screenprint",
+      "name": "[Print] Screenprint",
+      "family": "Comics & Print",
+      "axis": "style",
+      "medium": "print style image",
+      "nl": "Screenprint rendering: flat opaque ink layers, hard-edged stencil shapes, slight mesh texture, limited spot palette, print style image.",
+      "tags": [
+        "stencil",
+        "flat_color",
+        "limited_palette",
+        "textured"
+      ],
+      "tags_negative": [
+        "gradient"
+      ],
+      "negative": "photographic gradients, fine detail",
+      "aliases": [],
+      "written": true
+    },
+    {
+      "id": "comics.screenprint_gig_poster",
+      "name": "[Print] Screenprint Gig Poster",
+      "family": "Comics & Print",
+      "axis": "style",
+      "medium": "poster style image",
+      "nl": "Gig-poster screenprint rendering: two or three loud spot inks, halftone shading, hand-drawn display shapes, paper show-through, poster style image.",
+      "tags": [
+        "poster",
+        "stencil",
+        "halftone",
+        "limited_palette",
+        "high_contrast"
+      ],
+      "tags_negative": [
+        "photorealistic"
+      ],
+      "negative": "photographic realism, smooth gradients",
+      "aliases": [],
+      "written": true
+    },
+    {
+      "id": "comics.shin_hanga",
+      "name": "[Print] Shin-Hanga",
+      "family": "Comics & Print",
+      "axis": "style",
+      "medium": "print style image",
+      "nl": "Shin-hanga rendering: soft woodblock gradations, muted twilight palette, delicate key-block line, bokashi sky wash, mulberry paper, print style image.",
+      "tags": [
+        "ukiyo-e",
+        "woodcut",
+        "muted_color",
+        "traditional_media",
+        "gradient"
+      ],
+      "tags_negative": [
+        "high_contrast"
+      ],
+      "negative": "harsh contrast, saturated modern ink",
+      "aliases": [],
+      "written": true
+    },
+    {
+      "id": "comics.silkscreen_factory_poster",
+      "name": "[Print] Silkscreen Factory Poster",
+      "family": "Comics & Print",
+      "axis": "style",
+      "medium": "poster style image",
+      "nl": "Factory-silkscreen rendering: bold flat colour separations, photographic halftone underneath, repeated motif blocks, misregistered edges, poster style image.",
+      "tags": [
+        "stencil",
+        "halftone",
+        "flat_color",
+        "poster",
+        "limited_palette"
+      ],
+      "tags_negative": [
+        "gradient"
+      ],
+      "negative": "smooth digital gradients, subtle palette",
+      "aliases": [],
+      "written": true
+    },
+    {
+      "id": "comics.stipple_engraving",
+      "name": "[Print] Stipple Engraving",
+      "family": "Comics & Print",
+      "axis": "style",
+      "medium": "print style image",
+      "nl": "Stipple engraving rendering: tone built entirely from fine dots, soft granular gradation, no visible hatching, ivory paper, print style image.",
+      "tags": [
+        "halftone",
+        "monochrome",
+        "traditional_media",
+        "textured"
+      ],
+      "tags_negative": [
+        "colorful"
+      ],
+      "negative": "line hatching, flat colour fills",
+      "aliases": [],
+      "written": true
+    },
+    {
+      "id": "comics.ukiyo_e_woodblock",
+      "name": "[Print] Ukiyo-e Woodblock",
+      "family": "Comics & Print",
+      "axis": "style",
+      "medium": "print style image",
+      "nl": "Ukiyo-e woodblock rendering: flat mineral colour fields, keyblock outline, bokashi gradient skies, visible wood grain and paper fibre, print style image.",
+      "tags": [
+        "ukiyo-e",
+        "woodcut",
+        "flat_color",
+        "traditional_media",
+        "textured"
+      ],
+      "tags_negative": [
+        "photorealistic"
+      ],
+      "negative": "photographic depth, airbrushed gradients",
+      "aliases": [],
+      "written": true
+    },
+    {
+      "id": "comics.woodcut",
+      "name": "[Print] Woodcut",
+      "family": "Comics & Print",
+      "axis": "style",
+      "medium": "print style image",
+      "nl": "Woodcut rendering: carved chunky black shapes, chisel-chattered edges, stark two-value contrast, wood grain showing in the ink, print style image.",
+      "tags": [
+        "woodcut",
+        "high_contrast",
+        "monochrome",
+        "textured",
+        "traditional_media"
+      ],
+      "tags_negative": [
+        "gradient"
+      ],
+      "negative": "smooth gradients, fine photographic detail",
+      "aliases": [
+        "[3D][v2] Woodcut",
+        "[3D][Clio] Woodcut"
+      ],
+      "written": true
+    },
+    {
+      "id": "comics.xerox_decay",
+      "name": "[Print] Xerox Decay",
+      "family": "Comics & Print",
+      "axis": "style",
+      "medium": "collage style image",
+      "nl": "Photocopy-decay rendering: generation-loss contrast, crushed blacks and blown whites, toner speckle, skewed paper edges, collage style image.",
+      "tags": [
+        "monochrome",
+        "high_contrast",
+        "halftone",
+        "textured",
+        "collage"
+      ],
+      "tags_negative": [
+        "colorful"
+      ],
+      "negative": "clean colour print, smooth tonality",
+      "aliases": [],
+      "written": true
+    }
+  ]
+}

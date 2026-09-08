@@ -1,0 +1,15 @@
+[project]
+name = "neons-style-explorer"
+description = "Neons Style Explorer — a hand-written style-prefix catalog for ComfyUI, in natural language or booru tags, with a preview gallery."
+version = "1.6.1"
+license = { file = "LICENSE" }
+requires-python = ">=3.9"
+
+[project.urls]
+Homepage = "https://github.com/Neon-Sparks/ComfyUI-NeonsStyleExplorer"
+Repository = "https://github.com/Neon-Sparks/ComfyUI-NeonsStyleExplorer"
+
+[tool.comfy]
+PublisherId = "Neon-Sparks"
+DisplayName = "Neons Style Explorer"
+Icon = ""

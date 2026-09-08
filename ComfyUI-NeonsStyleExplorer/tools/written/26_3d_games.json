@@ -1,0 +1,508 @@
+[
+  {
+    "name": "[3D] Nintendo 64 Filtering",
+    "family": "3D & Games",
+    "axis": "style",
+    "medium": "cgi style image",
+    "nl": "N64-era rendering: blurry bilinear-filtered textures, chunky low-poly forms, vertex-lit flat shading, distance fog, cgi style image.",
+    "tags": [
+      "low_poly",
+      "3d",
+      "soft_focus",
+      "retro_artstyle",
+      "dithering"
+    ],
+    "tags_negative": [
+      "highres"
+    ],
+    "negative": "sharp modern textures, ray-traced light"
+  },
+  {
+    "name": "[3D] Sega Saturn Flat",
+    "family": "3D & Games",
+    "axis": "style",
+    "medium": "cgi style image",
+    "nl": "Saturn-era rendering: quad-based flat-shaded geometry, dithered transparency, warped texture seams, dark palette, cgi style image.",
+    "tags": [
+      "low_poly",
+      "dithering",
+      "3d",
+      "retro_artstyle"
+    ],
+    "tags_negative": [
+      "highres"
+    ],
+    "negative": "smooth shading, high-resolution texture"
+  },
+  {
+    "name": "[3D] Dreamcast Era",
+    "family": "3D & Games",
+    "axis": "style",
+    "medium": "cgi style image",
+    "nl": "Dreamcast-era rendering: clean mid-poly models, vivid saturated vertex colour, sharp small textures, hard specular dots, cgi style image.",
+    "tags": [
+      "3d",
+      "low_poly",
+      "colorful",
+      "retro_artstyle"
+    ],
+    "tags_negative": [
+      "photorealistic"
+    ],
+    "negative": "photoreal shading, subsurface skin"
+  },
+  {
+    "name": "[3D] Amiga Copper Gradient",
+    "family": "3D & Games",
+    "axis": "style",
+    "medium": "pixel art style image",
+    "nl": "Amiga-demo rendering: banded copper gradient sky, dithered pixel shading, limited indexed palette, hard sprite edges, pixel art style image.",
+    "tags": [
+      "dithering",
+      "gradient",
+      "pixel_art",
+      "limited_palette",
+      "retro_artstyle"
+    ],
+    "tags_negative": [
+      "highres"
+    ],
+    "negative": "smooth true-colour gradients, photographic depth"
+  },
+  {
+    "name": "[3D] DOS VGA 256",
+    "family": "3D & Games",
+    "axis": "style",
+    "medium": "pixel art style image",
+    "nl": "VGA-era rendering: 320x200 chunky pixels, 256-colour palette, heavy ordered dithering, dark saturated ramps, pixel art style image.",
+    "tags": [
+      "pixel_art",
+      "dithering",
+      "limited_palette",
+      "retro_artstyle"
+    ],
+    "tags_negative": [
+      "highres"
+    ],
+    "negative": "modern resolution, smooth antialiasing"
+  },
+  {
+    "name": "[3D] Vector Arcade Wireframe",
+    "family": "3D & Games",
+    "axis": "style",
+    "medium": "cgi style image",
+    "nl": "Vector-arcade rendering: glowing coloured wireframe lines on pure black, no fills, phosphor bloom at the joints, cgi style image.",
+    "tags": [
+      "wireframe",
+      "glowing",
+      "dark",
+      "lineart",
+      "neon_palette"
+    ],
+    "tags_negative": [
+      "textured"
+    ],
+    "negative": "textured solid surfaces, ambient fill light"
+  },
+  {
+    "name": "[3D] Isometric CRPG",
+    "family": "3D & Games",
+    "axis": "style",
+    "medium": "game art style image",
+    "nl": "Isometric CRPG rendering: pre-rendered parallel-projection scene, painted texture detail, baked shadows, small sprite figures, game art style image.",
+    "tags": [
+      "3d",
+      "scenery",
+      "retro_artstyle",
+      "dithering"
+    ],
+    "tags_negative": [
+      "fisheye"
+    ],
+    "negative": "perspective camera, modern realtime lighting"
+  },
+  {
+    "name": "[3D] Demoscene Raymarch",
+    "family": "3D & Games",
+    "axis": "style",
+    "medium": "cgi style image",
+    "nl": "Raymarched rendering: procedural infinite geometry, soft ambient occlusion, glowing distance fog, mathematical repetition, cgi style image.",
+    "tags": [
+      "3d",
+      "glowing",
+      "gradient",
+      "surreal",
+      "dark"
+    ],
+    "tags_negative": [
+      "textured"
+    ],
+    "negative": "hand-modelled props, photographic texture"
+  },
+  {
+    "name": "[3D] Fractal Flame",
+    "family": "3D & Games",
+    "axis": "style",
+    "medium": "abstract style image",
+    "nl": "Fractal-flame rendering: luminous filament swirls on black, additive colour blending, infinite self-similar detail, abstract style image.",
+    "tags": [
+      "glowing",
+      "dark",
+      "gradient",
+      "psychedelic",
+      "colorful"
+    ],
+    "tags_negative": [
+      "flat_color"
+    ],
+    "negative": "flat graphic shapes, solid opaque forms"
+  },
+  {
+    "name": "[3D] LiDAR Point Cloud",
+    "family": "3D & Games",
+    "axis": "style",
+    "medium": "cgi style image",
+    "nl": "Point-cloud rendering: surfaces made of scattered coloured points, gaps where the scan missed, thinning density at distance, cgi style image.",
+    "tags": [
+      "3d",
+      "dithering",
+      "dark",
+      "glowing"
+    ],
+    "tags_negative": [
+      "highres"
+    ],
+    "negative": "solid continuous surfaces, clean geometry"
+  },
+  {
+    "name": "[3D] Photoscan Error",
+    "family": "3D & Games",
+    "axis": "style",
+    "medium": "cgi style image",
+    "nl": "Failed-photoscan rendering: melted stretched geometry, smeared projected texture, floating fragments, holes in the mesh, cgi style image.",
+    "tags": [
+      "3d",
+      "glitch",
+      "textured",
+      "surreal"
+    ],
+    "tags_negative": [
+      "highres"
+    ],
+    "negative": "clean topology, crisp materials"
+  },
+  {
+    "name": "[3D] Kitbash Greeble",
+    "family": "3D & Games",
+    "axis": "style",
+    "medium": "cgi style image",
+    "nl": "Kitbash rendering: surfaces encrusted with mechanical greeble detail, panel layers and pipes, hard edge highlights, cgi style image.",
+    "tags": [
+      "3d",
+      "metallic",
+      "highres",
+      "wireframe"
+    ],
+    "tags_negative": [
+      "minimalism"
+    ],
+    "negative": "clean minimal forms, soft organic shapes"
+  },
+  {
+    "name": "[3D] Destruction Sim",
+    "family": "3D & Games",
+    "axis": "style",
+    "medium": "cgi style image",
+    "nl": "Destruction rendering: fractured chunks mid-flight, dust plumes, trailing debris, hard rim light through the cloud, cgi style image.",
+    "tags": [
+      "3d",
+      "motion_blur",
+      "textured",
+      "cinematic_lighting"
+    ],
+    "tags_negative": [
+      "simple_background"
+    ],
+    "negative": "static intact geometry, clean studio sweep"
+  },
+  {
+    "name": "[3D] Fluid Simulation",
+    "family": "3D & Games",
+    "axis": "style",
+    "medium": "cgi style image",
+    "nl": "Fluid-sim rendering: sheeting liquid surfaces, thin-film droplets, refraction and caustics through the volume, frozen splash, cgi style image.",
+    "tags": [
+      "3d",
+      "wet",
+      "transparent",
+      "caustics",
+      "glass"
+    ],
+    "tags_negative": [
+      "flat_color"
+    ],
+    "negative": "flat opaque surfaces, dry matte materials"
+  },
+  {
+    "name": "[3D] Cloth Simulation",
+    "family": "3D & Games",
+    "axis": "style",
+    "medium": "cgi style image",
+    "nl": "Cloth-sim rendering: draped fabric with settled folds, weave texture and slight sheen, soft contact wrinkles, cgi style image.",
+    "tags": [
+      "3d",
+      "textured",
+      "knitted",
+      "soft_focus"
+    ],
+    "tags_negative": [
+      "metallic"
+    ],
+    "negative": "rigid hard-surface geometry, chrome sheen"
+  },
+  {
+    "name": "[3D] Particle Swarm",
+    "family": "3D & Games",
+    "axis": "style",
+    "medium": "cgi style image",
+    "nl": "Particle rendering: millions of glowing motes forming a shape, additive density falloff, motion trails, dark surround, cgi style image.",
+    "tags": [
+      "glowing",
+      "dark",
+      "3d",
+      "motion_blur",
+      "gradient"
+    ],
+    "tags_negative": [
+      "flat_color"
+    ],
+    "negative": "solid opaque form, flat even lighting"
+  },
+  {
+    "name": "[3D] Motion Graphics Abstract",
+    "family": "3D & Games",
+    "axis": "style",
+    "medium": "cgi style image",
+    "nl": "Motion-design rendering: looping abstract primitives, soft studio gradient light, glossy pastel materials, tidy depth of field, cgi style image.",
+    "tags": [
+      "3d",
+      "gradient",
+      "pastel_colors",
+      "depth_of_field",
+      "shiny"
+    ],
+    "tags_negative": [
+      "textured"
+    ],
+    "negative": "gritty realism, photographic scene"
+  },
+  {
+    "name": "[3D] Inflatable Shader",
+    "family": "3D & Games",
+    "axis": "style",
+    "medium": "cgi style image",
+    "nl": "Inflatable rendering: puffed balloon volumes with seam creases, taut glossy skin, soft pinch points, bright studio light, cgi style image.",
+    "tags": [
+      "plastic",
+      "shiny",
+      "3d",
+      "gradient"
+    ],
+    "tags_negative": [
+      "textured"
+    ],
+    "negative": "rigid angular geometry, rough matte surfaces"
+  },
+  {
+    "name": "[3D] Gummy Translucent",
+    "family": "3D & Games",
+    "axis": "style",
+    "medium": "cgi style image",
+    "nl": "Gummy rendering: jelly-translucent bodies with deep subsurface glow, sticky specular sheen, soft squash deformation, cgi style image.",
+    "tags": [
+      "transparent",
+      "glowing",
+      "shiny",
+      "3d",
+      "colorful"
+    ],
+    "tags_negative": [
+      "metallic"
+    ],
+    "negative": "opaque metal surfaces, matte dry texture"
+  },
+  {
+    "name": "[3D] Knitted Shader",
+    "family": "3D & Games",
+    "axis": "style",
+    "medium": "cgi style image",
+    "nl": "Knit-shader rendering: everything modelled as looped yarn stitches, fibre fuzz halo, soft wool colour, contact shadow, cgi style image.",
+    "tags": [
+      "knitted",
+      "textured",
+      "3d",
+      "fur"
+    ],
+    "tags_negative": [
+      "shiny"
+    ],
+    "negative": "hard glossy plastic, smooth surfaces"
+  },
+  {
+    "name": "[3D] Felt Shader",
+    "family": "3D & Games",
+    "axis": "style",
+    "medium": "cgi style image",
+    "nl": "Felt-shader rendering: matte fuzzy surfaces with short fibre nap, soft rounded edges, muted craft colour, gentle light, cgi style image.",
+    "tags": [
+      "textured",
+      "fur",
+      "3d",
+      "muted_color"
+    ],
+    "tags_negative": [
+      "shiny"
+    ],
+    "negative": "glossy reflections, hard mechanical edges"
+  },
+  {
+    "name": "[3D] Fur Groom",
+    "family": "3D & Games",
+    "axis": "style",
+    "medium": "cgi style image",
+    "nl": "Groom rendering: layered hair strands with clumping and flyaways, backlit rim scatter, soft depth falloff, cgi style image.",
+    "tags": [
+      "fur",
+      "3d",
+      "backlighting",
+      "highres",
+      "depth_of_field"
+    ],
+    "tags_negative": [
+      "flat_color"
+    ],
+    "negative": "flat painted texture, hard cel shading"
+  },
+  {
+    "name": "[3D] Car Turntable Studio",
+    "family": "3D & Games",
+    "axis": "style",
+    "medium": "cgi style image",
+    "nl": "Automotive-render setup: long softbox strips reflected down the bodywork, dark gradient sweep, crisp panel highlights, cgi style image.",
+    "tags": [
+      "3d",
+      "metallic",
+      "shiny",
+      "simple_background",
+      "gradient"
+    ],
+    "tags_negative": [
+      "textured"
+    ],
+    "negative": "outdoor location, rough matte surfaces"
+  },
+  {
+    "name": "[3D] Medical Visualisation",
+    "family": "3D & Games",
+    "axis": "style",
+    "medium": "cgi style image",
+    "nl": "Medical-viz rendering: translucent anatomical layers, clean subsurface reds, isolated dark ground, clinical rim light, cgi style image.",
+    "tags": [
+      "3d",
+      "transparent",
+      "glowing",
+      "dark",
+      "red_theme"
+    ],
+    "tags_negative": [
+      "textured"
+    ],
+    "negative": "gritty environmental scene, painterly texture"
+  },
+  {
+    "name": "[3D] Data Visualisation",
+    "family": "3D & Games",
+    "axis": "style",
+    "medium": "cgi style image",
+    "nl": "Data-viz rendering: extruded bars and nodes on a grid plane, emissive accent colour, clean matte materials, soft ambient light, cgi style image.",
+    "tags": [
+      "3d",
+      "diagram",
+      "glowing",
+      "minimalism",
+      "flat_color"
+    ],
+    "tags_negative": [
+      "textured"
+    ],
+    "negative": "organic clutter, photographic texture"
+  },
+  {
+    "name": "[3D] Architectural White Model",
+    "family": "3D & Games",
+    "axis": "style",
+    "medium": "cgi style image",
+    "nl": "White-model rendering: untextured matte white massing, soft ambient occlusion at the joints, thin context lines, cgi style image.",
+    "tags": [
+      "3d",
+      "white_theme",
+      "minimalism",
+      "simple_background"
+    ],
+    "tags_negative": [
+      "colorful"
+    ],
+    "negative": "textured materials, saturated colour"
+  },
+  {
+    "name": "[3D] Section Diorama",
+    "family": "3D & Games",
+    "axis": "style",
+    "medium": "cgi style image",
+    "nl": "Section-cut rendering: building sliced open to show interiors, flat cut planes in solid colour, tidy miniature scale, cgi style image.",
+    "tags": [
+      "diagram",
+      "3d",
+      "flat_color",
+      "simple_background"
+    ],
+    "tags_negative": [
+      "photorealistic"
+    ],
+    "negative": "exterior-only view, photographic realism"
+  },
+  {
+    "name": "[3D] Wargame Miniature",
+    "family": "3D & Games",
+    "axis": "style",
+    "medium": "cgi style image",
+    "nl": "Miniature rendering: 28mm-scale figure with visible mould lines, layered brush paint, wash-shaded recesses, textured base, cgi style image.",
+    "tags": [
+      "3d",
+      "plastic",
+      "textured",
+      "simple_background"
+    ],
+    "tags_negative": [
+      "photorealistic"
+    ],
+    "negative": "life-scale realism, smooth digital paint"
+  },
+  {
+    "name": "[3D] Tabletop Terrain",
+    "family": "3D & Games",
+    "axis": "style",
+    "medium": "cgi style image",
+    "nl": "Terrain rendering: foam-carved rock and flock grass, dry-brushed highlights, visible base edges, tabletop scale light, cgi style image.",
+    "tags": [
+      "textured",
+      "3d",
+      "brown_theme",
+      "green_theme"
+    ],
+    "tags_negative": [
+      "highres"
+    ],
+    "negative": "full-scale landscape, photographic depth"
+  }
+]

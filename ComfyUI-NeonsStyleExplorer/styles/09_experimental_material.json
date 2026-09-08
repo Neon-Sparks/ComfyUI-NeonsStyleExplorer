@@ -1,0 +1,1112 @@
+{
+  "schema": 1,
+  "family": "Experimental & Material",
+  "styles": [
+    {
+      "id": "experime.colour_banding",
+      "name": "[Finish] Colour Banding",
+      "family": "Experimental & Material",
+      "axis": "finish",
+      "medium": "material style image",
+      "nl": "Banding finish: stepped bands across smooth gradients, posterised skies, visible tonal quantisation, material style image.",
+      "tags": [
+        "dithering",
+        "gradient",
+        "glitch"
+      ],
+      "tags_negative": [
+        "highres"
+      ],
+      "negative": "smooth continuous gradients, deep bit depth",
+      "aliases": [],
+      "written": true
+    },
+    {
+      "id": "experime.jpeg_artefacts",
+      "name": "[Finish] JPEG Artefacts",
+      "family": "Experimental & Material",
+      "axis": "finish",
+      "medium": "material style image",
+      "nl": "Compression finish: blocky 8-pixel artefacts around edges, ringing halos, banded flat areas, muddied fine detail, material style image.",
+      "tags": [
+        "glitch",
+        "dithering",
+        "textured"
+      ],
+      "tags_negative": [
+        "highres"
+      ],
+      "negative": "lossless clarity, smooth gradients",
+      "aliases": [],
+      "written": true
+    },
+    {
+      "id": "experime.screen_door",
+      "name": "[Finish] Screen Door",
+      "family": "Experimental & Material",
+      "axis": "finish",
+      "medium": "material style image",
+      "nl": "Screen-door finish: fine dark grid between pixels, RGB subpixel fringing, slight display glow, material style image.",
+      "tags": [
+        "dithering",
+        "glitch",
+        "glowing"
+      ],
+      "tags_negative": [
+        "highres"
+      ],
+      "negative": "seamless printed surface, natural texture",
+      "aliases": [],
+      "written": true
+    },
+    {
+      "id": "experime.upscale_mush",
+      "name": "[Finish] Upscale Mush",
+      "family": "Experimental & Material",
+      "axis": "finish",
+      "medium": "material style image",
+      "nl": "Upscaled finish: over-smoothed surfaces with hallucinated micro-detail, waxy texture, halos along strong edges, material style image.",
+      "tags": [
+        "textured",
+        "soft_focus",
+        "glitch"
+      ],
+      "tags_negative": [
+        "realistic"
+      ],
+      "negative": "native sharpness, honest fine detail",
+      "aliases": [],
+      "written": true
+    },
+    {
+      "id": "experime.3d_print_layer_lines",
+      "name": "[Experimental] 3D Print Layer Lines",
+      "family": "Experimental & Material",
+      "axis": "style",
+      "medium": "material style image",
+      "nl": "FDM rendering: visible horizontal layer lines, support scars, slight stringing, matte filament sheen, stepped overhangs, material style image.",
+      "tags": [
+        "plastic",
+        "textured",
+        "3d",
+        "dithering"
+      ],
+      "tags_negative": [
+        "shiny"
+      ],
+      "negative": "injection-moulded smoothness, glossy finish",
+      "aliases": [],
+      "written": true
+    },
+    {
+      "id": "experime.anaglyph_stereo",
+      "name": "[Experimental] Anaglyph Stereo",
+      "family": "Experimental & Material",
+      "axis": "style",
+      "medium": "material style image",
+      "nl": "Anaglyph rendering: red and cyan channels offset apart, ghosted double edges, desaturated middle tones, faint print misregistration, material style image.",
+      "tags": [
+        "duotone",
+        "glitch",
+        "red_theme",
+        "high_contrast"
+      ],
+      "tags_negative": [
+        "highres"
+      ],
+      "negative": "clean single-channel colour, sharp modern rendering",
+      "aliases": [],
+      "written": true
+    },
+    {
+      "id": "experime.analog_paper_collage",
+      "name": "[Experimental] Analog Paper Collage",
+      "family": "Experimental & Material",
+      "axis": "style",
+      "medium": "collage style image",
+      "nl": "Paper-collage rendering: torn and scissor-cut edges, layered magazine stock, visible glue wrinkle and drop shadow, mixed halftone textures, collage style image.",
+      "tags": [
+        "collage",
+        "halftone",
+        "textured",
+        "papercraft"
+      ],
+      "tags_negative": [
+        "photorealistic"
+      ],
+      "negative": "seamless digital blending, glossy render",
+      "aliases": [],
+      "written": true
+    },
+    {
+      "id": "experime.ascii_text_picture",
+      "name": "[Experimental] ASCII Text Picture",
+      "family": "Experimental & Material",
+      "axis": "style",
+      "medium": "material style image",
+      "nl": "ASCII rendering: image built from monospaced characters, density-mapped tonal ramp, terminal green or grey on black, aliased character grid, material style image.",
+      "tags": [
+        "monochrome",
+        "dithering",
+        "green_theme",
+        "high_contrast"
+      ],
+      "tags_negative": [
+        "highres"
+      ],
+      "negative": "continuous tone, smooth gradients",
+      "aliases": [],
+      "written": true
+    },
+    {
+      "id": "experime.batik_wax_resist",
+      "name": "[Experimental] Batik Wax Resist",
+      "family": "Experimental & Material",
+      "axis": "style",
+      "medium": "material style image",
+      "nl": "Batik rendering: wax-resist outlines with crackle veins, layered dye baths, earthy saturated colour on cotton weave, material style image.",
+      "tags": [
+        "textured",
+        "colorful",
+        "traditional_media",
+        "knitted"
+      ],
+      "tags_negative": [
+        "gradient"
+      ],
+      "negative": "smooth airbrushed blending, photographic depth",
+      "aliases": [],
+      "written": true
+    },
+    {
+      "id": "experime.beadwork_loom",
+      "name": "[Experimental] Beadwork Loom",
+      "family": "Experimental & Material",
+      "axis": "style",
+      "medium": "material style image",
+      "nl": "Beadwork rendering: image built from strung glass beads on a grid, stepped colour blocks, tiny specular glints, material style image.",
+      "tags": [
+        "mosaic",
+        "textured",
+        "colorful",
+        "shiny"
+      ],
+      "tags_negative": [
+        "soft_focus"
+      ],
+      "negative": "smooth continuous tone, soft blending",
+      "aliases": [],
+      "written": true
+    },
+    {
+      "id": "experime.ceramic_glaze_illustration",
+      "name": "[Experimental] Ceramic Glaze Illustration",
+      "family": "Experimental & Material",
+      "axis": "style",
+      "medium": "material style image",
+      "nl": "Glazed-ceramic rendering: pooled glossy glaze over matte clay body, crackle craze lines, kiln colour shifts, soft specular sheen, material style image.",
+      "tags": [
+        "porcelain",
+        "shiny",
+        "textured",
+        "gradient"
+      ],
+      "tags_negative": [
+        "flat_color"
+      ],
+      "negative": "flat vector fill, dry paper texture",
+      "aliases": [],
+      "written": true
+    },
+    {
+      "id": "experime.chalkboard",
+      "name": "[Experimental] Chalkboard",
+      "family": "Experimental & Material",
+      "axis": "style",
+      "medium": "material style image",
+      "nl": "Chalkboard rendering: dusty white chalk on dark slate, smudged erasure ghosts, gritty granular strokes, material style image.",
+      "tags": [
+        "chalk_(medium)",
+        "dark",
+        "monochrome",
+        "textured"
+      ],
+      "tags_negative": [
+        "colorful"
+      ],
+      "negative": "clean printed colour, glossy finish",
+      "aliases": [],
+      "written": true
+    },
+    {
+      "id": "experime.cnc_toolpath",
+      "name": "[Experimental] CNC Toolpath",
+      "family": "Experimental & Material",
+      "axis": "style",
+      "medium": "material style image",
+      "nl": "CNC rendering: concentric machining passes across the surface, stepped terracing, bit chatter marks, raw material grain, material style image.",
+      "tags": [
+        "textured",
+        "wood",
+        "metallic",
+        "diagram"
+      ],
+      "tags_negative": [
+        "soft_focus"
+      ],
+      "negative": "hand-made softness, painterly blending",
+      "aliases": [],
+      "written": true
+    },
+    {
+      "id": "experime.cross_stitch_sampler",
+      "name": "[Experimental] Cross-Stitch Sampler",
+      "family": "Experimental & Material",
+      "axis": "style",
+      "medium": "material style image",
+      "nl": "Cross-stitch rendering: X-shaped floss stitches on aida grid, stepped blocky colour, visible weave holes, slight thread sheen, material style image.",
+      "tags": [
+        "embroidery",
+        "textured",
+        "dithering",
+        "limited_palette"
+      ],
+      "tags_negative": [
+        "photorealistic"
+      ],
+      "negative": "smooth continuous tone, glossy CGI",
+      "aliases": [],
+      "written": true
+    },
+    {
+      "id": "experime.crystal_growth",
+      "name": "[Experimental] Crystal Growth",
+      "family": "Experimental & Material",
+      "axis": "style",
+      "medium": "material style image",
+      "nl": "Crystal-growth rendering: faceted mineral clusters spreading over a surface, refracted internal light, sharp prismatic edges, material style image.",
+      "tags": [
+        "crystal",
+        "transparent",
+        "iridescent",
+        "glowing"
+      ],
+      "tags_negative": [
+        "flat_color"
+      ],
+      "negative": "flat opaque colour, soft organic forms",
+      "aliases": [],
+      "written": true
+    },
+    {
+      "id": "experime.dot_matrix_print",
+      "name": "[Experimental] Dot-Matrix Print",
+      "family": "Experimental & Material",
+      "axis": "style",
+      "medium": "material style image",
+      "nl": "Dot-matrix rendering: impact-printed dot rows, banded overlap, faded ribbon ink, tractor-feed paper texture, monochrome tonality, material style image.",
+      "tags": [
+        "dithering",
+        "monochrome",
+        "halftone",
+        "textured"
+      ],
+      "tags_negative": [
+        "highres"
+      ],
+      "negative": "crisp digital type, full colour",
+      "aliases": [],
+      "written": true
+    },
+    {
+      "id": "experime.e_ink_screen",
+      "name": "[Experimental] E-Ink Screen",
+      "family": "Experimental & Material",
+      "axis": "style",
+      "medium": "material style image",
+      "nl": "E-ink rendering: matte grey-white substrate, dithered greyscale, no backlight, faint ghosting from the previous frame, material style image.",
+      "tags": [
+        "dithering",
+        "greyscale",
+        "monochrome",
+        "textured"
+      ],
+      "tags_negative": [
+        "colorful"
+      ],
+      "negative": "backlit colour, glossy screen glow",
+      "aliases": [],
+      "written": true
+    },
+    {
+      "id": "experime.ebru_marbling",
+      "name": "[Experimental] Ebru Marbling",
+      "family": "Experimental & Material",
+      "axis": "style",
+      "medium": "material style image",
+      "nl": "Ebru rendering: combed pigment swirls on size, feathered tulip patterns, saturated interleaved colour veins, material style image.",
+      "tags": [
+        "colorful",
+        "gradient",
+        "textured",
+        "traditional_media"
+      ],
+      "tags_negative": [
+        "minimalism"
+      ],
+      "negative": "flat single colour, hard geometry",
+      "aliases": [],
+      "written": true
+    },
+    {
+      "id": "experime.embroidery_needlepoint",
+      "name": "[Experimental] Embroidery Needlepoint",
+      "family": "Experimental & Material",
+      "axis": "style",
+      "medium": "handmade style image",
+      "nl": "Needlepoint rendering: raised satin-stitch floss, directional thread sheen, canvas showing at the edges, soft fibre halo, handmade style image.",
+      "tags": [
+        "embroidery",
+        "textured",
+        "knitted"
+      ],
+      "tags_negative": [
+        "photorealistic"
+      ],
+      "negative": "flat print, glossy plastic surface",
+      "aliases": [],
+      "written": true
+    },
+    {
+      "id": "experime.encaustic_wax",
+      "name": "[Experimental] Encaustic Wax",
+      "family": "Experimental & Material",
+      "axis": "style",
+      "medium": "material style image",
+      "nl": "Encaustic rendering: pigmented wax fused in translucent layers, tool scrapes and drips, milky depth under a glossy skin, material style image.",
+      "tags": [
+        "textured",
+        "traditional_media",
+        "transparent",
+        "shiny"
+      ],
+      "tags_negative": [
+        "flat_color"
+      ],
+      "negative": "flat printed colour, crisp vector edges",
+      "aliases": [],
+      "written": true
+    },
+    {
+      "id": "experime.ethereal_motion_blur",
+      "name": "[Experimental] Ethereal Motion Blur",
+      "family": "Experimental & Material",
+      "axis": "style",
+      "medium": "material style image",
+      "nl": "Long-blur rendering: smeared directional streaks, dissolved edges, ghost trails through mid tones, soft luminous falloff, material style image.",
+      "tags": [
+        "motion_blur",
+        "long_exposure",
+        "soft_focus",
+        "glowing"
+      ],
+      "tags_negative": [
+        "high_contrast"
+      ],
+      "negative": "frozen crisp detail, hard edges",
+      "aliases": [],
+      "written": true
+    },
+    {
+      "id": "experime.gelli_monoprint",
+      "name": "[Experimental] Gelli Monoprint",
+      "family": "Experimental & Material",
+      "axis": "style",
+      "medium": "print style image",
+      "nl": "Gelli-plate rendering: soft mottled ink pull, ghost layers from previous prints, mask silhouettes, uneven texture, print style image.",
+      "tags": [
+        "stencil",
+        "textured",
+        "limited_palette",
+        "silhouette"
+      ],
+      "tags_negative": [
+        "highres"
+      ],
+      "negative": "crisp digital print, even ink laydown",
+      "aliases": [],
+      "written": true
+    },
+    {
+      "id": "experime.glitch_datamosh_still",
+      "name": "[Experimental] Glitch Datamosh Still",
+      "family": "Experimental & Material",
+      "axis": "style",
+      "medium": "video artefact style image",
+      "nl": "Datamosh rendering: smeared macroblocks, channel displacement, frozen compression artefacts, banded colour tearing, video artefact style image.",
+      "tags": [
+        "glitch",
+        "dithering",
+        "high_contrast",
+        "colorful"
+      ],
+      "tags_negative": [
+        "highres"
+      ],
+      "negative": "clean uncompressed detail, natural colour",
+      "aliases": [],
+      "written": true
+    },
+    {
+      "id": "experime.holographic_foil",
+      "name": "[Experimental] Holographic Foil",
+      "family": "Experimental & Material",
+      "axis": "style",
+      "medium": "material style image",
+      "nl": "Holographic-foil rendering: iridescent rainbow shift across a mirrored surface, hard specular banding, prismatic edge flare, embossed sheen, material style image.",
+      "tags": [
+        "holographic",
+        "iridescent",
+        "metallic",
+        "shiny"
+      ],
+      "tags_negative": [
+        "muted_color"
+      ],
+      "negative": "matte paper texture, muted palette",
+      "aliases": [],
+      "written": true
+    },
+    {
+      "id": "experime.ice_carving",
+      "name": "[Experimental] Ice Carving",
+      "family": "Experimental & Material",
+      "axis": "style",
+      "medium": "material style image",
+      "nl": "Ice-carving rendering: clear carved block with frosted tool marks, internal fracture planes, cold refracted light, meltwater sheen, material style image.",
+      "tags": [
+        "transparent",
+        "crystal",
+        "glass",
+        "wet",
+        "blue_theme"
+      ],
+      "tags_negative": [
+        "textured"
+      ],
+      "negative": "opaque dry material, warm matte surfaces",
+      "aliases": [],
+      "written": true
+    },
+    {
+      "id": "experime.ink_in_water",
+      "name": "[Experimental] Ink in Water",
+      "family": "Experimental & Material",
+      "axis": "style",
+      "medium": "ink painting style image",
+      "nl": "Ink-in-water rendering: diffusing pigment plumes, feathered tendrils, soft density gradients through clear fluid, dark-to-clear falloff, ink painting style image.",
+      "tags": [
+        "ink_wash_painting",
+        "gradient",
+        "transparent",
+        "monochrome"
+      ],
+      "tags_negative": [
+        "lineart"
+      ],
+      "negative": "hard outlines, flat graphic shapes",
+      "aliases": [],
+      "written": true
+    },
+    {
+      "id": "experime.kids_crayon",
+      "name": "[Experimental] Kids Crayon",
+      "family": "Experimental & Material",
+      "axis": "style",
+      "medium": "material style image",
+      "nl": "Crayon rendering: waxy scribbled strokes, uneven pressure build-up, paper tooth showing through, out-of-register colour, material style image.",
+      "tags": [
+        "crayon_(medium)",
+        "traditional_media",
+        "textured",
+        "colorful"
+      ],
+      "tags_negative": [
+        "highres"
+      ],
+      "negative": "precise line, smooth digital shading",
+      "aliases": [],
+      "written": true
+    },
+    {
+      "id": "experime.lacquer_maki_e",
+      "name": "[Experimental] Lacquer Maki-e",
+      "family": "Experimental & Material",
+      "axis": "style",
+      "medium": "material style image",
+      "nl": "Maki-e rendering: deep black urushi lacquer, sprinkled gold and silver powder motifs, mirror-polished depth, fine metallic speckle, material style image.",
+      "tags": [
+        "gold",
+        "dark",
+        "shiny",
+        "metallic",
+        "textured"
+      ],
+      "tags_negative": [
+        "pale_color"
+      ],
+      "negative": "pale matte palette, rough sketch texture",
+      "aliases": [],
+      "written": true
+    },
+    {
+      "id": "experime.latte_art",
+      "name": "[Experimental] Latte Art",
+      "family": "Experimental & Material",
+      "axis": "style",
+      "medium": "material style image",
+      "nl": "Latte-art rendering: poured milk foam on espresso crema, feathered rosetta lines, warm brown-to-cream contrast, material style image.",
+      "tags": [
+        "brown_theme",
+        "gradient",
+        "textured",
+        "wet"
+      ],
+      "tags_negative": [
+        "lineart"
+      ],
+      "negative": "drawn outlines, saturated poster colour",
+      "aliases": [],
+      "written": true
+    },
+    {
+      "id": "experime.led_matrix",
+      "name": "[Experimental] LED Matrix",
+      "family": "Experimental & Material",
+      "axis": "style",
+      "medium": "material style image",
+      "nl": "LED-matrix rendering: image resolved into a grid of glowing dots, dark gaps between them, blooming bright pixels, material style image.",
+      "tags": [
+        "dithering",
+        "glowing",
+        "pixel_art",
+        "dark"
+      ],
+      "tags_negative": [
+        "highres"
+      ],
+      "negative": "continuous printed tone, natural texture",
+      "aliases": [],
+      "written": true
+    },
+    {
+      "id": "experime.lenticular_print",
+      "name": "[Experimental] Lenticular Print",
+      "family": "Experimental & Material",
+      "axis": "style",
+      "medium": "material style image",
+      "nl": "Lenticular rendering: ribbed plastic surface splitting the image into interlaced strips, ghosted double exposure, rainbow sheen, material style image.",
+      "tags": [
+        "glitch",
+        "iridescent",
+        "plastic",
+        "dithering"
+      ],
+      "tags_negative": [
+        "highres"
+      ],
+      "negative": "flat matte print, single clean image",
+      "aliases": [],
+      "written": true
+    },
+    {
+      "id": "experime.light_leak_overlay_photo",
+      "name": "[Experimental] Light-Leak Overlay Photo",
+      "family": "Experimental & Material",
+      "axis": "style",
+      "medium": "photograph style image",
+      "nl": "Light-leak rendering: orange-red flare bleeding in from one edge, fogged shadows, lifted blacks, halated highlights, coarse film grain, photograph style image.",
+      "tags": [
+        "lens_flare",
+        "film_grain",
+        "orange_theme",
+        "soft_focus"
+      ],
+      "tags_negative": [
+        "highres"
+      ],
+      "negative": "clean modern digital, deep neutral blacks",
+      "aliases": [],
+      "written": true
+    },
+    {
+      "id": "experime.macram_knotwork",
+      "name": "[Experimental] Macramé Knotwork",
+      "family": "Experimental & Material",
+      "axis": "style",
+      "medium": "handmade style image",
+      "nl": "Macramé rendering: knotted cord lattice, fringed loose ends, natural jute colour, soft shadow between the knots, handmade style image.",
+      "tags": [
+        "knitted",
+        "textured",
+        "brown_theme"
+      ],
+      "tags_negative": [
+        "3d"
+      ],
+      "negative": "smooth CGI surfaces, printed flat pattern",
+      "aliases": [],
+      "written": true
+    },
+    {
+      "id": "experime.mosaic_tesserae",
+      "name": "[Experimental] Mosaic Tesserae",
+      "family": "Experimental & Material",
+      "axis": "style",
+      "medium": "material style image",
+      "nl": "Mosaic rendering: image broken into small irregular tiles, visible grout lines, stepped colour transitions, uneven glaze reflections, material style image.",
+      "tags": [
+        "mosaic",
+        "textured",
+        "stone",
+        "limited_palette"
+      ],
+      "tags_negative": [
+        "soft_focus"
+      ],
+      "negative": "smooth continuous tone, soft blending",
+      "aliases": [
+        "[3D][v2] Mosaic Art",
+        "[3D][Clio] Mosaic Art"
+      ],
+      "written": true
+    },
+    {
+      "id": "experime.neon_drip_abstract",
+      "name": "[Experimental] Neon Drip Abstract",
+      "family": "Experimental & Material",
+      "axis": "style",
+      "medium": "abstract style image",
+      "nl": "Neon-drip rendering: glowing fluorescent runs over dark ground, blooming edges, wet paint sheen, high-chroma trails, abstract style image.",
+      "tags": [
+        "neon_palette",
+        "glowing",
+        "dark",
+        "wet",
+        "high_saturation"
+      ],
+      "tags_negative": [
+        "muted_color"
+      ],
+      "negative": "muted matte palette, precise line work",
+      "aliases": [],
+      "written": true
+    },
+    {
+      "id": "experime.photomontage",
+      "name": "[Experimental] Photomontage",
+      "family": "Experimental & Material",
+      "axis": "style",
+      "medium": "material style image",
+      "nl": "Photomontage rendering: spliced photographic fragments at mismatched scale, hard cut seams, varied grain between pieces, flattened composite depth, material style image.",
+      "tags": [
+        "collage",
+        "photo_(medium)",
+        "surreal",
+        "high_contrast"
+      ],
+      "tags_negative": [
+        "soft_focus"
+      ],
+      "negative": "seamless single exposure, painterly blending",
+      "aliases": [],
+      "written": true
+    },
+    {
+      "id": "experime.quilt_patchwork",
+      "name": "[Experimental] Quilt Patchwork",
+      "family": "Experimental & Material",
+      "axis": "style",
+      "medium": "material style image",
+      "nl": "Patchwork-quilt rendering: pieced fabric blocks, visible stitch seams and quilted relief, cotton print texture, soft batting puff, material style image.",
+      "tags": [
+        "patchwork",
+        "embroidery",
+        "textured",
+        "knitted"
+      ],
+      "tags_negative": [
+        "photorealistic"
+      ],
+      "negative": "flat vector shapes, glossy CGI",
+      "aliases": [],
+      "written": true
+    },
+    {
+      "id": "experime.rainy_window_condensation",
+      "name": "[Experimental] Rainy Window Condensation",
+      "family": "Experimental & Material",
+      "axis": "style",
+      "medium": "material style image",
+      "nl": "Rain-window rendering: water beads and runnels on glass, fogged condensation haze, refracted bokeh behind, cold ambient light, material style image.",
+      "tags": [
+        "wet",
+        "glass",
+        "bokeh",
+        "soft_focus",
+        "transparent"
+      ],
+      "tags_negative": [
+        "high_contrast"
+      ],
+      "negative": "dry crisp clarity, hard graphic edges",
+      "aliases": [],
+      "written": true
+    },
+    {
+      "id": "experime.sand_animation_still",
+      "name": "[Experimental] Sand Animation Still",
+      "family": "Experimental & Material",
+      "axis": "style",
+      "medium": "material style image",
+      "nl": "Sand-animation rendering: backlit grains on glass, forms drawn by clearing and heaping sand, warm amber glow through the layer, soft grain edges, material style image.",
+      "tags": [
+        "backlighting",
+        "monochrome",
+        "textured",
+        "silhouette"
+      ],
+      "tags_negative": [
+        "colorful"
+      ],
+      "negative": "full colour rendering, hard vector edges",
+      "aliases": [],
+      "written": true
+    },
+    {
+      "id": "experime.scanner_drag",
+      "name": "[Experimental] Scanner Drag",
+      "family": "Experimental & Material",
+      "axis": "style",
+      "medium": "material style image",
+      "nl": "Flatbed-scan rendering: subject smeared along the scan axis, banded colour streaks, hard glass-plate contact light, black void behind, material style image.",
+      "tags": [
+        "glitch",
+        "dark",
+        "motion_blur",
+        "high_contrast"
+      ],
+      "tags_negative": [
+        "cinematic_lighting"
+      ],
+      "negative": "camera perspective, ambient room light",
+      "aliases": [],
+      "written": true
+    },
+    {
+      "id": "experime.shibori_dye",
+      "name": "[Experimental] Shibori Dye",
+      "family": "Experimental & Material",
+      "axis": "style",
+      "medium": "material style image",
+      "nl": "Shibori rendering: resist-bound cloth patterns, indigo gradients bleeding at the folds, white creases, woven texture, material style image.",
+      "tags": [
+        "blue_theme",
+        "textured",
+        "gradient",
+        "knitted"
+      ],
+      "tags_negative": [
+        "flat_color"
+      ],
+      "negative": "flat printed pattern, crisp vector shapes",
+      "aliases": [],
+      "written": true
+    },
+    {
+      "id": "experime.smoke_and_light",
+      "name": "[Experimental] Smoke and Light",
+      "family": "Experimental & Material",
+      "axis": "style",
+      "medium": "material style image",
+      "nl": "Smoke-and-light rendering: volumetric plumes catching a narrow beam, deep black surround, soft turbulent gradients, glowing edge scatter, material style image.",
+      "tags": [
+        "light_rays",
+        "dark",
+        "glowing",
+        "soft_focus",
+        "god_rays"
+      ],
+      "tags_negative": [
+        "flat_color"
+      ],
+      "negative": "flat even light, hard graphic shapes",
+      "aliases": [],
+      "written": true
+    },
+    {
+      "id": "experime.soap_carving",
+      "name": "[Experimental] Soap Carving",
+      "family": "Experimental & Material",
+      "axis": "style",
+      "medium": "material style image",
+      "nl": "Soap-carving rendering: waxy matte block with blade facets, soft rounded edges, pastel opacity, fine shaving debris, material style image.",
+      "tags": [
+        "textured",
+        "pastel_colors",
+        "porcelain"
+      ],
+      "tags_negative": [
+        "shiny"
+      ],
+      "negative": "glossy polished surface, photographic scene",
+      "aliases": [],
+      "written": true
+    },
+    {
+      "id": "experime.soft_watercolor_deco",
+      "name": "[Experimental] Soft Watercolor Deco",
+      "family": "Experimental & Material",
+      "axis": "style",
+      "medium": "watercolour painting style image",
+      "nl": "Soft deco-watercolour rendering: pale layered washes inside geometric deco framing, gold line accents, blooming pigment edges, paper grain, watercolour painting style image.",
+      "tags": [
+        "watercolor_(medium)",
+        "art_deco",
+        "gold",
+        "pastel_colors",
+        "traditional_media"
+      ],
+      "tags_negative": [
+        "high_contrast"
+      ],
+      "negative": "harsh contrast, glossy digital gradients",
+      "aliases": [],
+      "written": true
+    },
+    {
+      "id": "experime.stained_glass",
+      "name": "[Experimental] Stained Glass",
+      "family": "Experimental & Material",
+      "axis": "style",
+      "medium": "material style image",
+      "nl": "Stained-glass rendering: saturated coloured panes bounded by black lead lines, backlit luminosity, glass texture and bubbles, jewel palette, material style image.",
+      "tags": [
+        "stained_glass",
+        "glowing",
+        "outline",
+        "colorful",
+        "transparent"
+      ],
+      "tags_negative": [
+        "soft_focus"
+      ],
+      "negative": "soft photographic blending, muted palette",
+      "aliases": [
+        "[3D][v2] Stained Glass Flat Art",
+        "[3D][Clio] Stained Glass Flat Art"
+      ],
+      "written": true
+    },
+    {
+      "id": "experime.sticker_bomb",
+      "name": "[Experimental] Sticker Bomb",
+      "family": "Experimental & Material",
+      "axis": "style",
+      "medium": "collage style image",
+      "nl": "Sticker-bomb rendering: overlapping die-cut decals covering every inch, peeling corners, clashing logos and colour, collage style image.",
+      "tags": [
+        "sticker",
+        "collage",
+        "colorful",
+        "textured"
+      ],
+      "tags_negative": [
+        "minimalism"
+      ],
+      "negative": "clean empty space, single centred subject",
+      "aliases": [],
+      "written": true
+    },
+    {
+      "id": "experime.sugar_glass",
+      "name": "[Experimental] Sugar Glass",
+      "family": "Experimental & Material",
+      "axis": "style",
+      "medium": "material style image",
+      "nl": "Sugar-glass rendering: brittle translucent amber sheets, sharp fracture edges, caustic light through the shards, material style image.",
+      "tags": [
+        "transparent",
+        "caustics",
+        "glass",
+        "orange_theme"
+      ],
+      "tags_negative": [
+        "textured"
+      ],
+      "negative": "opaque matte material, dull flat light",
+      "aliases": [],
+      "written": true
+    },
+    {
+      "id": "experime.suminagashi_marbling",
+      "name": "[Experimental] Suminagashi Marbling",
+      "family": "Experimental & Material",
+      "axis": "style",
+      "medium": "material style image",
+      "nl": "Suminagashi rendering: concentric ink rings floated on water, drifting feathered lines, pale absorbent paper, material style image.",
+      "tags": [
+        "ink_wash_painting",
+        "monochrome",
+        "gradient",
+        "traditional_media"
+      ],
+      "tags_negative": [
+        "lineart"
+      ],
+      "negative": "drawn outlines, flat opaque fills",
+      "aliases": [],
+      "written": true
+    },
+    {
+      "id": "experime.tape_art",
+      "name": "[Experimental] Tape Art",
+      "family": "Experimental & Material",
+      "axis": "style",
+      "medium": "material style image",
+      "nl": "Tape-art rendering: image built from straight strips of coloured tape, overlapping edges and air bubbles, hard angular shapes, material style image.",
+      "tags": [
+        "flat_color",
+        "textured",
+        "collage",
+        "limited_palette"
+      ],
+      "tags_negative": [
+        "gradient"
+      ],
+      "negative": "soft gradients, painterly blending",
+      "aliases": [],
+      "written": true
+    },
+    {
+      "id": "experime.tapestry_weave",
+      "name": "[Experimental] Tapestry Weave",
+      "family": "Experimental & Material",
+      "axis": "style",
+      "medium": "material style image",
+      "nl": "Tapestry rendering: interlaced warp and weft threads, stepped diagonal edges, wool colour blocks, low-relief woven texture, material style image.",
+      "tags": [
+        "knitted",
+        "embroidery",
+        "textured",
+        "limited_palette"
+      ],
+      "tags_negative": [
+        "highres"
+      ],
+      "negative": "smooth photographic detail, glossy surfaces",
+      "aliases": [],
+      "written": true
+    },
+    {
+      "id": "experime.thermal_receipt",
+      "name": "[Experimental] Thermal Receipt",
+      "family": "Experimental & Material",
+      "axis": "style",
+      "medium": "material style image",
+      "nl": "Thermal-receipt rendering: dithered black on faintly grey paper, monospaced print bands, faded heat streaks, curled paper edge, material style image.",
+      "tags": [
+        "monochrome",
+        "dithering",
+        "halftone",
+        "textured"
+      ],
+      "tags_negative": [
+        "colorful"
+      ],
+      "negative": "full colour, smooth continuous tone",
+      "aliases": [],
+      "written": true
+    },
+    {
+      "id": "experime.thermochromic_shift",
+      "name": "[Experimental] Thermochromic Shift",
+      "family": "Experimental & Material",
+      "axis": "style",
+      "medium": "material style image",
+      "nl": "Thermochromic rendering: heat-reactive pigment fading between two colours, soft blooming transitions, handprint-shaped patches, material style image.",
+      "tags": [
+        "gradient",
+        "glowing",
+        "textured",
+        "duotone"
+      ],
+      "tags_negative": [
+        "high_contrast"
+      ],
+      "negative": "fixed flat colour, hard graphic edges",
+      "aliases": [],
+      "written": true
+    },
+    {
+      "id": "experime.tie_dye_spiral",
+      "name": "[Experimental] Tie-Dye Spiral",
+      "family": "Experimental & Material",
+      "axis": "style",
+      "medium": "material style image",
+      "nl": "Tie-dye rendering: radiating dye spirals, bleeding colour boundaries, white resist lines, soft cotton fibre, material style image.",
+      "tags": [
+        "colorful",
+        "gradient",
+        "textured",
+        "psychedelic"
+      ],
+      "tags_negative": [
+        "minimalism"
+      ],
+      "negative": "flat single-colour design, hard edges",
+      "aliases": [],
+      "written": true
+    },
+    {
+      "id": "experime.vhs_still",
+      "name": "[Experimental] VHS Still",
+      "family": "Experimental & Material",
+      "axis": "style",
+      "medium": "video artefact style image",
+      "nl": "VHS rendering: chroma smear and bleed, tracking noise bands, soft blown highlights, interlace comb edges, tape-worn colour, video artefact style image.",
+      "tags": [
+        "glitch",
+        "film_grain",
+        "desaturated",
+        "analog_horror"
+      ],
+      "tags_negative": [
+        "highres"
+      ],
+      "negative": "crisp digital sharpness, clean blacks",
+      "aliases": [],
+      "written": true
+    },
+    {
+      "id": "experime.wire_sculpture",
+      "name": "[Experimental] Wire Sculpture",
+      "family": "Experimental & Material",
+      "axis": "style",
+      "medium": "material style image",
+      "nl": "Wire rendering: form drawn in bent metal line, open volumes, cast shadow doing the drawing, plain ground, material style image.",
+      "tags": [
+        "metallic",
+        "lineart",
+        "simple_background",
+        "monochrome"
+      ],
+      "tags_negative": [
+        "flat_color"
+      ],
+      "negative": "solid painted surfaces, flat colour fills",
+      "aliases": [],
+      "written": true
+    }
+  ]
+}
