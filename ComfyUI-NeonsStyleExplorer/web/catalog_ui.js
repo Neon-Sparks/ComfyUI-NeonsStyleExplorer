@@ -18,6 +18,7 @@ import {
     isFavourite,
     hideStyle,
     importStyles,
+    GALLERY_EVENT,
     loadCatalog,
     loadCatalogSets,
     loadGallery,
@@ -44,6 +45,26 @@ const BODY_H = 84;
 // preview size, as a percentage of the default card width
 const ZOOMS = [25, 50, 75, 100, 125, 150, 200, 250, 300];
 const ZOOM_KEY = "ns.catalog.zoom";
+
+const VIEW_KEY = "ns.catalog.view";
+
+/** The browser's toolbar state, kept between visits. */
+function savedView() {
+    try {
+        const stored = JSON.parse(localStorage.getItem(VIEW_KEY) || "{}");
+        return stored && typeof stored === "object" ? stored : {};
+    } catch (err) {
+        return {};
+    }
+}
+
+function saveView(view) {
+    try {
+        localStorage.setItem(VIEW_KEY, JSON.stringify(view));
+    } catch (err) {
+        /* private browsing, or a full quota: the browser just will not remember */
+    }
+}
 
 function savedZoom() {
     const stored = Number(localStorage.getItem(ZOOM_KEY));
@@ -271,7 +292,10 @@ export async function openEditor(opts = {}) {
     const entry = (!creating && entryOf(name)) || {};
     const source = entry.source || (creating ? "custom" : "shipped");
     const isCustom = source === "custom" || creating;
-    const families = state.catalog.family_order || ["Other"];
+    // imported packs are not a home for your own styles, so they are not
+    // offered here — they still appear in the browser's family filter
+    const families = (state.catalog.family_order || ["Other"])
+        .filter((family) => !(state.catalog.imported_families || []).includes(family));
 
     const wrap = document.createElement("div");
     wrap.className = "ns-modal";
@@ -287,7 +311,8 @@ export async function openEditor(opts = {}) {
               ? "Custom style in user/custom.json."
               : "Saving writes a local override; Revert restores the shipped clause."
       }</p>
-      <label>Name</label><input id="ns-name" ${creating ? "" : "readonly"}>
+      <label>Name${creating ? "" : ` <span class="sub">rename freely — the old name keeps working, and previews stay attached</span>`}</label>
+      <input id="ns-name">
       <div class="cols">
         <div><label>Family</label>
           <select id="ns-family"></select>
@@ -345,7 +370,11 @@ export async function openEditor(opts = {}) {
         btns.appendChild(button);
     };
     const collect = () => ({
-        name: $("#ns-name").value,
+        // `name` identifies the entry to change; `rename` is what to call it.
+        // With an editable name field those are two different things — sending
+        // the typed value as the key would look up a style that does not exist.
+        name: creating ? $("#ns-name").value : name,
+        rename: creating ? "" : $("#ns-name").value.trim(),
         family: $("#ns-family").value === "+ add a new family…"
             ? $("#ns-newfamily").value.trim()
             : $("#ns-family").value,
@@ -424,17 +453,17 @@ export async function openCatalog(options = {}) {
         <div class="ns-tools">
           <strong>Neons Style Explorer</strong>
           <span class="n"></span>
-          <input type="search" placeholder="Search name, family or tag   ( / )">
-          <select class="axis"></select>
-          <select class="family"><option value="">All families</option></select>
-          <select class="have">
+          <input type="search" placeholder="Search name, family or tag   ( / )" title="Matches the name, the family and the booru tags. Press / from anywhere in the browser to jump here.">
+          <select class="axis" title="Which axis to browse: styles, picture formats, or finishes laid over a style"></select>
+          <select class="family" title="Narrow to one family. Choose the — my families — heading to see every style in a family you made."><option value="">All families</option></select>
+          <select class="have" title="Show everything, only your favourites, what you have used recently, or by whether a preview exists">
             <option value="all">All</option>
             <option value="fav">&#9733; Favourites</option>
             <option value="recent">Recently used</option>
             <option value="has">Has preview</option>
             <option value="missing">Missing preview</option>
           </select>
-          <select class="src">
+          <select class="src" title="Where an entry came from: shipped with the node, the v2 set, written by you, or edited by you">
             <option value="">Any source</option>
             <option value="shipped">Stock</option>
             <option value="v2">v2</option>
@@ -448,12 +477,12 @@ export async function openCatalog(options = {}) {
           <button class="catnew" title="Start a new, empty preview catalog">+ New catalog</button>
           <button class="catedit icon" title="Rename or delete this catalog">&#8943;</button>
           <span class="ns-sep"></span>
-          <button class="roll">Roll</button>
-          <button class="hidden-styles">Restore deleted</button>
-          <button class="new key">New style</button>
-          <button class="io">Import / export</button>
+          <button class="roll" title="Jump to a random card from whatever is currently filtered">Roll</button>
+          <button class="hidden-styles" title="Styles you deleted are hidden, not destroyed — bring any of them back">Restore deleted</button>
+          <button class="new key" title="Write your own style: a clause, a family, tags. Saved to user/custom.json; shipped files are never touched.">New style</button>
+          <button class="io" title="Back up or share your own styles, manage families, clear favourites and recents">Import / export</button>
           <button class="wipe">Delete family thumbs</button>
-          <button class="close">Close</button>
+          <button class="close" title="Close the browser (Escape)">Close</button>
         </div>
         <div class="ns-prompts">
           <label class="ns-zoom">Preview size
@@ -561,11 +590,37 @@ export async function openCatalog(options = {}) {
         render();
     }
 
+    /** Everything worth knowing about an entry, for the hover tooltip. */
+    function cardTooltip(name, entry, shots) {
+        const lines = [name];
+        const facts = [entry.family, entry.axis];
+        if (entry.medium) facts.push(`closes with "${entry.medium}"`);
+        lines.push(facts.filter(Boolean).join("  ·  "));
+        if (entry.nl) lines.push("", entry.nl);
+        if (entry.negative) lines.push("", `avoids: ${entry.negative}`);
+        const tags = (entry.tags || []).join(", ");
+        if (tags) lines.push("", `tags: ${tags}`);
+        if ((entry.tags_negative || []).length) {
+            lines.push(`negative tags: ${entry.tags_negative.join(", ")}`);
+        }
+        const bits = [];
+        bits.push(shots ? `${shots.count} preview${shots.count === 1 ? "" : "s"}` : "no preview yet");
+        bits.push(isFavourite(name) ? "favourite" : "not a favourite");
+        bits.push(entry.source === "shipped" ? "ships with the node"
+            : entry.source === "custom" ? "yours"
+            : entry.source === "override" ? "edited by you"
+            : String(entry.source || ""));
+        if ((entry.aliases || []).length) bits.push(`also known as ${entry.aliases.join(", ")}`);
+        lines.push("", bits.filter(Boolean).join("  ·  "));
+        lines.push("", "Click to use  ·  Edit to change  ·  ★ to favourite  ·  ✕ to delete its preview");
+        return lines.join("\n");
+    }
+
     function card(index) {
         const { name, entry, shots } = rows[index];
         const node = document.createElement("div");
         node.className = `ns-card${name === options.current ? " on" : ""}${zoom < 60 ? " compact" : ""}`;
-        node.title = name;   // the label is hidden in compact mode
+        node.title = cardTooltip(name, entry, shots);
         node.dataset.name = name;
         const source = entry.source || "shipped";
         const starred = isFavourite(name);
@@ -585,8 +640,8 @@ export async function openCatalog(options = {}) {
               <span class="pill ${source}">${source === "shipped" ? "stock" : source}</span>
               ${entry.written ? "" : `<span class="pill draft">draft</span>`}
               <span class="sp"></span>
-              <button class="use key" type="button">Use</button>
-              <button class="edit" type="button">Edit</button>
+              <button class="use key" type="button" title="Select this style on the node and close the browser">Use</button>
+              <button class="edit" type="button" title="Change the name, clause, family, medium and tags">Edit</button>
             </div>
           </div>
         `;
@@ -666,6 +721,55 @@ export async function openCatalog(options = {}) {
     scroll.addEventListener("scroll", render, { passive: true });
     const observer = new ResizeObserver(() => measure());
     observer.observe(viewport);
+
+    // Redraw as previews arrive. Saves land one at a time during a crawl, so
+    // this is coalesced rather than re-rendering the grid on every image, and
+    // the scroll position is preserved so a grid you are reading does not jump.
+    let scrollTimer = 0;
+    let galleryTimer = 0;
+    const onGallery = () => {
+        clearTimeout(galleryTimer);
+        galleryTimer = setTimeout(() => {
+            const top = scroll.scrollTop;
+            filter();
+            scroll.scrollTop = top;
+        }, 250);
+    };
+    window.addEventListener(GALLERY_EVENT, onGallery);
+
+    // A save made anywhere else — the capture node, another browser tab — never
+    // reaches this page as an event, so poll gently while the browser is open.
+    // loadGallery() fires the same event, so the redraw path stays single.
+    const poll = setInterval(() => {
+        if (document.hidden) return;
+        loadGallery();
+    }, 10000);
+
+    // restore the previous visit before wiring the change handlers
+    const view = savedView();
+    const restore = (control, value) => {
+        if (value === undefined || value === null) return;
+        if ([...control.options].some((option) => option.value === value)) control.value = value;
+    };
+    restore(axisSel, view.axis);
+    restore(famSel, view.family);
+    restore(haveSel, view.have);
+    restore(srcSel, view.src);
+    if (typeof view.search === "string") search.value = view.search;
+
+    const remember = () => saveView({
+        axis: axisSel.value, family: famSel.value, have: haveSel.value,
+        src: srcSel.value, search: search.value, scroll: scroll.scrollTop,
+    });
+    scroll.addEventListener("scroll", () => {
+        clearTimeout(scrollTimer);
+        scrollTimer = setTimeout(remember, 400);
+    });
+
+    [search, axisSel, famSel, haveSel, srcSel].forEach((control) => {
+        control.addEventListener("change", remember);
+        control.addEventListener("input", remember);
+    });
 
     [search, axisSel, famSel, haveSel, srcSel].forEach((control) => {
         control.addEventListener("input", filter);
@@ -1020,6 +1124,9 @@ export async function openCatalog(options = {}) {
             closeAll();
             window.removeEventListener("keydown", keys, true);
             observer.disconnect();
+            clearTimeout(galleryTimer);
+            clearInterval(poll);
+            window.removeEventListener(GALLERY_EVENT, onGallery);
         } else if (ev.key === "/" && document.activeElement !== search && !typingIn(ev.target)) {
             ev.preventDefault();
             search.focus();
@@ -1028,5 +1135,12 @@ export async function openCatalog(options = {}) {
     window.addEventListener("keydown", keys, true);
 
     filter();
+    // put the view back where it was: the grid has to exist and be measured
+    // before a scroll offset means anything, hence the double frame
+    if (view.scroll) {
+        requestAnimationFrame(() => requestAnimationFrame(() => {
+            scroll.scrollTop = Math.min(view.scroll, scroll.scrollHeight);
+        }));
+    }
     search.focus();
 }

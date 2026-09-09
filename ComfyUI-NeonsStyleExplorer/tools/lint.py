@@ -29,6 +29,12 @@ VOCAB_PATH = os.path.join(ROOT, "data", "tags.txt")
 MAX = 380
 AXES = {"style", "format", "finish"}
 
+# Families brought in from another project. Their structure is checked — name,
+# axis, closing medium, duplicates, clause length — but not the house writing
+# rules, which apply to clauses written for this catalog: their descriptors are
+# not booru vocabulary and their phrasing is their own.
+IMPORTED_FAMILIES = {"Extra"}
+
 INSTRUCTION = re.compile(
     r"governs the entire image|do not add|do not invent|apply it only|"
     r"not an object|whole scene|entire image|style only|edge to edge|"
@@ -74,14 +80,19 @@ def main():
     errors, warnings = [], []
     ids, names = {}, {}
     written = 0
+    imported_count = 0
 
     for filename, entry in rows:
         name = entry.get("name", "")
         where = f"{filename}: {name or '(unnamed)'}"
-        if entry.get("written"):
+        if entry.get("family") in IMPORTED_FAMILIES or entry.get("pack"):
+            imported_count += 1
+        elif entry.get("written"):
             written += 1
         else:
             warnings.append(f"{where}: placeholder clause, not hand-written yet")
+
+        imported = entry.get("family") in IMPORTED_FAMILIES or bool(entry.get("pack"))
 
         ident = entry.get("id", "")
         if ident in ids:
@@ -106,9 +117,9 @@ def main():
                 errors.append(f"{where}: clause {len(clause)} chars > {MAX}")
             if TRUNCATED.search(clause.rstrip(".")):
                 errors.append(f"{where}: clause looks truncated -> ...{clause[-40:]}")
-            if INSTRUCTION.search(clause):
+            if INSTRUCTION.search(clause) and not imported:
                 errors.append(f"{where}: instruction/scope language in the clause")
-            if CONTENT.search(clause):
+            if CONTENT.search(clause) and not imported:
                 errors.append(f"{where}: clause names picture content")
             if medium and entry.get("written") and not clause.rstrip(".").lower().endswith(medium.lower()):
                 errors.append(f"{where}: clause must close with '{medium}'")
@@ -120,17 +131,21 @@ def main():
         if len(tags) != len(set(tags)):
             errors.append(f"{where}: duplicate tags")
         for tag in tags:
-            if known and tag not in known:
+            if known and tag not in known and not imported:
                 errors.append(f"{where}: unknown tag '{tag}'")
         for tag in negs:
-            if known and tag not in known:
+            if known and tag not in known and not imported:
                 errors.append(f"{where}: unknown negative tag '{tag}'")
             if tag in tags:
                 errors.append(f"{where}: '{tag}' is both positive and negative")
 
     limit = None if show_all else 20
     print(f"entries:      {len(rows)}")
-    print(f"hand-written: {written} ({written * 100 // max(1, len(rows))}%)")
+    own = len(rows) - imported_count
+    print(f"hand-written: {written} of {own} written for this catalog "
+          f"({written * 100 // max(1, own)}%)")
+    if imported_count:
+        print(f"imported:     {imported_count} (structure checked, house rules not applied)")
     print(f"errors:       {len(errors)}")
     for line in errors[:limit]:
         print(f"  E {line}")

@@ -619,7 +619,7 @@ export function attachPanel(node) {
       <div class="ns-stage">
         <div class="ns-thumb">
           <img alt="style preview">
-          <div class="ns-none">Click to browse styles</div>
+          <div class="ns-none" title="No preview saved for this style yet — generate one and it will be filed here">Click to browse styles</div>
           <button type="button" class="ns-arrow prev" title="Previous style">&#10094;</button>
           <button type="button" class="ns-arrow next" title="Next style">&#10095;</button>
           <div class="ns-chip"></div>
@@ -630,11 +630,11 @@ export function attachPanel(node) {
       <div class="ns-shots"></div>
       <div class="ns-bar">
         <button type="button" class="roll key">Roll</button>
-        <button type="button" class="browse">Catalog</button>
-        <button type="button" class="save">Save</button>
-        <button type="button" class="edit">Edit</button>
-        <button type="button" class="fav icon" title="Favourite">&#9734;</button>
-        <button type="button" class="more icon" title="More">&#8943;</button>
+        <button type="button" class="browse" title="Open the catalog browser: search, filter by family, see previews">Catalog</button>
+        <button type="button" class="save" title="File the newest generated image under the style that produced it (not necessarily the one showing now)">Save</button>
+        <button type="button" class="edit" title="Edit this style: rename it, change its clause, family, medium or tags">Edit</button>
+        <button type="button" class="fav icon" title="Add or remove this style from favourites (roll_scope can then stay inside them)">&#9734;</button>
+        <button type="button" class="more icon" title="Catalogs, format and finish browsing, extra style slots, new style, delete previews">&#8943;</button>
       </div>
       <div class="ns-out">
         <header>

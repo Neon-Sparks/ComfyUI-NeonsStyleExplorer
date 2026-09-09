@@ -28,6 +28,8 @@ from .catalog import (
 )
 
 FIELDS = ("nl", "medium", "negative", "tags", "tags_negative", "family", "axis")
+# a rename is patched alongside the rest; see catalog.RENAME_FIELD
+RENAMEABLE = FIELDS + ("name",)
 
 
 def as_tags(value):
@@ -52,6 +54,24 @@ def custom_name(raw, family, axis="style"):
     return f"[{tag}][Custom] {raw}"
 
 
+def name_taken(wanted, keep_id=None):
+    """Is this display name already in use by another entry?
+
+    Checked against the effective catalog, not just the shipped files: a name
+    can already be claimed by another entry's rename, which is exactly the
+    collision a shipped-names-only check misses.
+    """
+    wanted = clean_name(wanted).lower()
+    if not wanted:
+        return False
+    for entry in entries():
+        if keep_id and entry.get("id") == keep_id:
+            continue
+        if entry["name"].lower() == wanted:
+            return True
+    return False
+
+
 def save_override(name, **fields):
     name = clean_name(name)
     if not name:
@@ -70,10 +90,24 @@ def save_override(name, **fields):
         patch[field] = as_tags(fields[field]) if field in ("tags", "tags_negative") else str(fields[field]).strip()
     if patch.get("axis") and patch["axis"] not in AXES:
         patch.pop("axis")
+
+    # A rename is stored on the same patch, still keyed by the original name, so
+    # the entry keeps its id — its gallery images stay attached — and the
+    # original name lives on as an alias.
+    wanted = clean_name(fields.get("rename") or "")
+    if wanted and wanted.lower() != name.lower():
+        mine = next((entry for entry in entries()
+                     if entry["name"].lower() == name.lower()
+                     or name.lower() in [alias.lower() for alias in entry.get("aliases") or []]), None)
+        if name_taken(wanted, keep_id=(mine or {}).get("id")):
+            return False, f"'{wanted}' is already taken"
+        patch["name"] = wanted
+    elif wanted:
+        patch.pop("name", None)
     overrides[name] = patch
     write_json(OVERRIDES_PATH, overrides)
     entries(force=True)
-    return True, name
+    return True, patch.get("name") or name
 
 
 def delete_override(name):
@@ -106,6 +140,12 @@ def save_custom(name, family="Other", axis="style", nl="", medium="", negative="
     )
     if existing is None and name.lower() in {e["name"].lower() for e in load_shipped()}:
         return False, "name collides with a shipped style"
+
+    wanted = clean_name(_extra.get("rename") or "")
+    if update and existing and wanted and wanted.lower() != name.lower():
+        if name_taken(wanted, keep_id=existing.get("id")):
+            return False, f"'{wanted}' is already taken"
+        name = wanted
 
     if update and existing and clean_name(existing.get("family", "")) != family:
         # the bracket tag is derived from the family, so a family change has to

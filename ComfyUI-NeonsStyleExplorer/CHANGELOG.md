@@ -1,5 +1,80 @@
 # Changelog
 
+## 1.14.0 — rename anything, richer hovers, a browser that remembers
+
+* **Styles can be renamed**, not just re-tagged. The Name field in the editor is
+  editable for every entry — shipped, imported or your own — which matters for
+  the Extra family, whose names are only as good as their first descriptor.
+  * The entry keeps its **id**, so its gallery images stay attached.
+  * The **old name becomes an alias**, so saved workflows and existing previews
+    still resolve to it.
+  * A name already in use is **refused**, checked against the effective catalog
+    rather than the shipped files — a name can be claimed by another entry's
+    rename, which a shipped-only check missed.
+* **Informative tooltips.** A card's hover now lists family, axis, closing
+  medium, the clause, avoid terms, both tag lists, preview count, favourite
+  state, provenance, aliases, and what the buttons do. Every toolbar control and
+  panel button has a tooltip explaining what it actually does.
+* **The browser remembers your view**: axis, family, filter, source, search
+  text, preview size and scroll position, restored next time you open it.
+
+## 1.13.2 — Extra sits where it belongs
+
+* **Extra was grouped under *— my families —***, because the browser treats
+  anything outside the shipped family list as user-made and Extra had not been
+  added to that list. It now sits last among the shipped families, directly
+  after Experimental & Material and above the divider, and sorts there
+  everywhere else too.
+* **The editor no longer offers imported families** when you write a style —
+  your own entries should not join someone else's pack. They remain fully
+  available in the browser's family filter.
+
+## 1.13.1 — the browser fills in while you watch
+
+* **Previews saved during a crawl now appear in the open catalog.** The browser
+  read the gallery once when it opened and never heard about later saves, so
+  images only showed up after closing and reopening it. Every gallery refresh
+  now announces itself and the open grid redraws — coalesced, so a burst of
+  saves is one redraw, and the scroll position is preserved.
+* A save made outside this page — the capture node, a second browser tab —
+  produces no event here, so the open browser also polls once every ten seconds,
+  and not at all while the tab is in the background.
+
+## 1.13.0 — the Extra family
+
+* **1,596 imported styles under `[Extra]`**, from ThetaCursed's Krea 2 style
+  collection, used under its MIT licence. The catalog goes from 1419 to **3015
+  entries** (2867 styles).
+* **`tools/import_pack.py`** does the conversion, and can be re-run against any
+  future export: it derives a name for each record (the text after `Style:` when
+  there is one, otherwise the leading descriptor), capitalises the clause and
+  closes it with a medium so stacking still emits exactly one, turns the
+  descriptors into tags for the booru output modes, and records the pack's
+  provenance on every entry.
+* **The linter now distinguishes imported families from written ones.** Imported
+  entries are checked for structure — name, axis, closing medium, duplicates,
+  length — but not against the house writing rules or the booru vocabulary,
+  which exist for clauses written here. The summary reports the two groups
+  separately, so "hand-written" keeps meaning what it says: 1419 of 1419.
+* `THIRD-PARTY-NOTICES.md` carries the upstream MIT notice. The upstream
+  repository was offline at import time, so its exact copyright line and URL
+  should be copied in when it is back.
+
+## 1.12.0 — two techniques the catalog was missing
+
+* **[Photo] Intentional Camera Movement** — the camera swept through a slow
+  exposure, forms drawn into streaks. Distinct from the existing motion blur,
+  long exposure and zoom-burst entries, which all keep the camera still.
+* **[Experimental] Pixel Sorting** — rows reordered by brightness into ribbon
+  bands. Distinct from Glitch Art and Glitch Datamosh, which corrupt rather than
+  sort.
+
+Both came out of a coverage check against a public collection of Krea prompt
+strings: of 5,849 distinct descriptors in it, these two were the only techniques
+with nothing equivalent in the catalog. Nothing was imported — that collection
+is someone else's work and holds keyword strings rather than style clauses;
+these two entries are written here like every other.
+
 ## 1.11.2 — typing in dialogs is nobody else's business
 
 * **Keystrokes were escaping the style editor.** A dialog opened over the node

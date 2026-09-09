@@ -101,9 +101,20 @@ export async function starStyle(name) {
     return Boolean(result?.favourite);
 }
 
+/** The event any open view listens to so it can redraw when previews change. */
+export const GALLERY_EVENT = "ns:gallery";
+
 export async function loadGallery() {
     const data = await call("/neons_style/gallery");
     state.previews = data?.previews || {};
+    // Announce it: the catalog browser used to read the gallery once when it
+    // opened, so previews saved during a crawl only appeared after closing and
+    // reopening it.
+    try {
+        window.dispatchEvent(new CustomEvent(GALLERY_EVENT, { detail: { previews: state.previews } }));
+    } catch (err) {
+        /* no window (or no CustomEvent): nothing is listening anyway */
+    }
     return state.previews;
 }
 

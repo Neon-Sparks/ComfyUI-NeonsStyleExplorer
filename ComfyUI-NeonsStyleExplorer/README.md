@@ -95,13 +95,13 @@ style's stable id, so renaming never orphans an image.
 
 ## The catalog
 
-**1417 entries, every clause hand-written**, across nine families: photography & film 248, traditional painting 208, anime & manga 164, design & aesthetics 150, 3D & games 148, illustration 122, comics & print 83, experimental & material 78, western animation 68. Three axes — 1269 styles, 97 formats, 51 finishes. Old `[Clio]` names are relabelled `[v2]`, and every merged duplicate keeps its old name as a search alias. `STYLES.md` lists everything.
+**3015 entries** — 1419 with every clause hand-written for this catalog, plus the 1596-entry imported **Extra** family, across nine families: photography & film 249, traditional painting 208, anime & manga 164, design & aesthetics 150, 3D & games 148, illustration 122, comics & print 83, experimental & material 79, western animation 68. Three axes — 2867 styles, 97 formats, 51 finishes. The Extra family is imported from ThetaCursed's Krea 2 style collection under its MIT licence; see `THIRD-PARTY-NOTICES.md`. Old `[Clio]` names are relabelled `[v2]`, and every merged duplicate keeps its old name as a search alias. `STYLES.md` lists everything.
 
 ```
 tools/build_all.sh               # import + lint + index + docs + examples + tests
 python3 tools/lint.py --all      # every finding
 node tools/check_web.mjs         # UI: undefined calls and bad imports
-python3 tests/test_compose.py    # 46 tests
+python3 tests/test_compose.py    # 47 tests
 ```
 
 The source of truth for the text is `tools/written/*.json`; `import_source.py`

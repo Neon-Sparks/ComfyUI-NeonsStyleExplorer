@@ -30,6 +30,9 @@ MAX_RECENTS = 24
 AXES = ["style", "format", "finish"]
 RANDOM_TOKEN = "\U0001F3B2 Random"
 
+# families brought in from other projects; see THIRD-PARTY-NOTICES.md
+IMPORTED_FAMILIES = {"Extra"}
+
 FAMILY_ORDER = [
     "Anime & Manga",
     "Western Animation",
@@ -40,6 +43,9 @@ FAMILY_ORDER = [
     "3D & Games",
     "Design & Aesthetics",
     "Experimental & Material",
+    # ships with the node, so it belongs in this list — it sits last, after the
+    # written families and before anything the user has made
+    "Extra",
     "Other",
 ]
 
@@ -53,6 +59,7 @@ FAMILY_TAG = {
     "3D & Games": "3D",
     "Design & Aesthetics": "Aesthetic",
     "Experimental & Material": "Material",
+    "Extra": "Extra",
     "Other": "Custom",
 }
 
@@ -66,6 +73,7 @@ FAMILY_MEDIUM = {
     "3D & Games": "cgi style image",
     "Design & Aesthetics": "graphic style image",
     "Experimental & Material": "material style image",
+    "Extra": "style image",
     "Other": "style image",
 }
 
@@ -252,6 +260,10 @@ def _signature():
 
 
 OVERRIDE_FIELDS = ("nl", "medium", "negative", "tags", "tags_negative", "family", "axis")
+# A rename is stored as a "name" patch. The override stays keyed by the ORIGINAL
+# name, so the entry keeps its id (previews stay attached) and the original name
+# survives as an alias — saved workflows referring to it still resolve.
+RENAME_FIELD = "name"
 
 
 def entries(force=False):
@@ -276,6 +288,13 @@ def entries(force=False):
                     if patch.get(field) is None:
                         continue
                     entry[field] = patch[field] if field in ("tags", "tags_negative") else str(patch[field]).strip()
+                renamed = str(patch.get(RENAME_FIELD) or "").strip()
+                if renamed and renamed.lower() != entry["name"].lower():
+                    aliases = list(entry.get("aliases") or [])
+                    if entry["name"] not in aliases:
+                        aliases.append(entry["name"])
+                    entry["aliases"] = aliases
+                    entry["name"] = renamed
                 entry["source"] = "override"
             merged.append(entry)
 
@@ -317,11 +336,19 @@ def resolve(name, pool=None):
             return entry
         if any(alias.lower() == lowered for alias in entry["aliases"]):
             return entry
+    # Base-name fallback: an imported family can legitimately carry the same
+    # look as an entry written here ("Pixel Art" exists in both), so a bare name
+    # resolves to this catalog's own entry first and only then to an import.
     stripped = base_name(name).lower()
+    fallback = None
     for entry in pool:
-        if base_name(entry["name"]).lower() == stripped:
+        if base_name(entry["name"]).lower() != stripped:
+            continue
+        if entry.get("family") in IMPORTED_FAMILIES:
+            fallback = fallback or entry
+        else:
             return entry
-    return None
+    return fallback
 
 
 def preview_key(text):
@@ -427,6 +454,7 @@ def payload():
         # which families ship with the node: everything else is user-made, and
         # the browser groups those together under one filter
         "shipped_families": list(FAMILY_ORDER),
+        "imported_families": sorted(IMPORTED_FAMILIES),
         "family_order": [f for f in FAMILY_ORDER if f in families]
         + [f for f in families if f not in FAMILY_ORDER],
         "axes": AXES,

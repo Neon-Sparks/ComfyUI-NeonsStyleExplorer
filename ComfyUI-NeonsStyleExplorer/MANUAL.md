@@ -1,6 +1,6 @@
 # Neons Style Explorer — manual
 
-A style catalog for ComfyUI: 1417 hand-written entries you browse visually, drop
+A style catalog for ComfyUI: 3015 entries — 1419 written here, 1596 imported you browse visually, drop
 into a prompt, and build a preview library for.
 
 > Screenshots are marked `[screenshot: …]`. Each one says what to capture.
@@ -181,7 +181,7 @@ turn that off.
 
 ### Choosing styles
 
-**style**, **style_2**, **style_3** — up to three of the 1269 style entries. Each dropdown
+**style**, **style_2**, **style_3** — up to three of the 2867 style entries. Each dropdown
 starts with `None`, then `🎲 Random`, then the whole catalog. Only the first
 style's medium closes the clause.
 
@@ -257,8 +257,9 @@ the ⋯ menu.
 * **Search** — matches name, family and booru tags. Press `/` to jump into it,
   `Escape` to close the browser.
 * **Axis** — style, format or finish.
-* **Family** — the nine shipped families, then your own under *— my families —*.
-  Selecting that heading shows every style in a family you made, whichever one.
+* **Family** — the nine written families, then **Extra** (the imported pack),
+  then your own under *— my families —*. Selecting that heading shows every
+  style in a family you made, whichever one.
 * **Filter** — All, ★ Favourites, Recently used, Has preview, Missing preview.
 * **Source** — stock, v2, custom, override. Useful for finding your own edits.
 * **Catalog** picker, **+ New catalog**, **⋯** — section 10.
@@ -294,6 +295,14 @@ months when you wonder why one catalog looks different from another.
 * Click a saved prompt to select it; **Delete prompt** removes the selected one.
 * Prompts belong to the catalog, so each one carries its own.
 
+The browser **remembers how you left it** — axis, family, filter, source,
+search text, preview size and scroll position — so returning to it puts you back
+where you were rather than at the top of everything.
+
+The grid **updates itself while you watch**: previews saved by a running crawl
+appear in place, the coverage count climbs, and your scroll position is kept. No
+need to close and reopen the browser.
+
 The footer shows preview coverage and your favourites count, so you can watch
 `312 of 1284 have previews` climb as a crawl runs.
 
@@ -306,7 +315,10 @@ The footer shows preview coverage and your favourites count, so you can watch
 * **Edit** opens the editor.
 * **★** (top-left of the image) toggles favourite.
 * **✕** (top-right) deletes that style's preview, with a confirmation.
-* Hovering a card shows its full clause along the bottom of the window.
+* Hovering a card shows its full clause along the bottom of the window, and the
+  tooltip carries everything else: family, axis, closing medium, the clause, its
+  avoid terms, both tag lists, how many previews it has, whether it is a
+  favourite, where it came from, and any old names it still answers to.
 
 ---
 
@@ -436,6 +448,12 @@ Both are per catalog. Clear either from Import / export.
 Fields: name, family, axis, closing medium, the style clause, avoid terms, and
 booru tags.
 
+**The name is editable.** Rename anything, shipped or imported or your own —
+useful for the Extra family, whose names are derived from their first
+descriptor. The entry keeps its identity: its previews stay attached, and the
+old name lives on as an alias so saved workflows still resolve. A name already
+in use is refused.
+
 **Tags are free text.** The autocomplete list is a suggestion, not a limit —
 type any tag you like, comma separated, and it is saved exactly as typed. The
 dialog keeps its keystrokes to itself, so ComfyUI's canvas shortcuts cannot
@@ -550,6 +568,26 @@ report.
 
 ---
 
+## 15a. The Extra family
+
+The 1,596 entries tagged **[Extra]** come from ThetaCursed's Krea 2 style
+collection, imported under its MIT licence (see `THIRD-PARTY-NOTICES.md`). They
+read differently from the rest on purpose: each is a flat descriptor list rather
+than a written clause, and its booru tags are those same descriptors rather than
+vocabulary tags.
+
+They behave like any other style — stack them, roll them, crawl them, give them
+previews. Two practical notes:
+
+* **Filter them out when you want only the written catalog.** Pick any other
+  family, or use the source filter. Extra sits last in the family list, after
+  Experimental & Material and above your own families.
+* **They are not offered as a home for your own styles.** The editor's family
+  list leaves imported packs out, so a style you write never joins one.
+* **Their medium is generic.** An Extra style used alone closes with `style
+  image`; stacked behind a written style, that style's medium closes the prompt
+  as usual, so the single-medium rule still holds.
+
 ## 16. Reference tables
 
 ### Widgets
@@ -559,7 +597,7 @@ report.
 | prompt | text | empty |
 | quality | text | empty |
 | negative | text | empty |
-| style / style_2 / style_3 | None, 🎲 Random, 1269 styles | None |
+| style / style_2 / style_3 | None, 🎲 Random, 2867 styles | None |
 | style_mix | blended with, mixed with, layered over, then also | blended with |
 | format | None, 🎲 Random, 97 formats | None |
 | finish | None, 🎲 Random, 51 finishes | None |
@@ -577,17 +615,18 @@ report.
 
 | Family | Entries |
 | --- | --- |
-| Photography & Film | 248 |
+| Photography & Film | 249 |
 | Traditional Painting | 208 |
 | Anime & Manga | 164 |
 | Design & Aesthetics | 150 |
 | 3D & Games | 148 |
 | Illustration | 122 |
 | Comics & Print | 83 |
-| Experimental & Material | 78 |
+| Experimental & Material | 79 |
 | Western Animation | 68 |
+| Extra (imported) | 1596 |
 
-1417 entries total: 1269 styles, 97 formats, 51 finishes. `STYLES.md` lists
+3015 entries total: 2867 styles, 97 formats, 51 finishes. Of those, 1419 are written for this catalog and 1596 come from the imported Extra family. `STYLES.md` lists
 every one.
 
 ### Keyboard

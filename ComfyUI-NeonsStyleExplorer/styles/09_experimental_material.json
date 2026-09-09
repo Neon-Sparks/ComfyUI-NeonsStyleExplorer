@@ -1024,6 +1024,26 @@
       "written": true
     },
     {
+      "id": "experime.pixel_sorting",
+      "name": "[Experimental] Pixel Sorting",
+      "family": "Experimental & Material",
+      "axis": "style",
+      "medium": "abstract style image",
+      "nl": "Pixel-sort rendering: rows of pixels reordered by brightness, forms smearing sideways into ribbon bands, hard thresholds where sorting stops and starts, untouched blocks left intact between them, abstract style image.",
+      "tags": [
+        "glitch",
+        "high_saturation",
+        "dithering",
+        "colorful"
+      ],
+      "tags_negative": [
+        "photorealistic"
+      ],
+      "negative": "undisturbed clean image, painterly texture",
+      "aliases": [],
+      "written": true
+    },
+    {
       "id": "experime.plotter_pen_generative",
       "name": "[Experimental] Plotter Pen Generative",
       "family": "Experimental & Material",

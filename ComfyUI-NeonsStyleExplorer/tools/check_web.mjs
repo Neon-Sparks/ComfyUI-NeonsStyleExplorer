@@ -30,7 +30,7 @@ const KEYWORDS = new Set([
 ]);
 
 const GLOBALS = new Set([
-    "window", "document", "console", "setTimeout", "clearTimeout", "requestAnimationFrame",
+    "window", "document", "console", "setTimeout", "clearTimeout", "setInterval", "clearInterval", "requestAnimationFrame",
     "cancelAnimationFrame", "fetch", "alert", "confirm", "prompt", "Promise", "Array",
     "Object", "String", "Number", "Boolean", "Math", "JSON", "Set", "Map", "Date", "Error",
     "Element", "HTMLElement", "Node", "URL", "URLSearchParams", "FormData", "Blob", "FileReader", "ResizeObserver", "MutationObserver", "IntersectionObserver",

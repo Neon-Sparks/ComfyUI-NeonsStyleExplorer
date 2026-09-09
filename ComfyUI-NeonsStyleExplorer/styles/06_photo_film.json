@@ -2980,6 +2980,26 @@
       "written": true
     },
     {
+      "id": "photogra.intentional_camera_movement",
+      "name": "[Photo] Intentional Camera Movement",
+      "family": "Photography & Film",
+      "axis": "style",
+      "medium": "photograph style image",
+      "nl": "ICM rendering: the camera swept deliberately through a slow exposure, forms drawn into soft vertical or arcing streaks, colour surviving as banded washes, one faint edge left half-legible, photograph style image.",
+      "tags": [
+        "motion_blur",
+        "long_exposure",
+        "blurry",
+        "muted_color"
+      ],
+      "tags_negative": [
+        "photorealistic"
+      ],
+      "negative": "static tripod sharpness, frozen detail",
+      "aliases": [],
+      "written": true
+    },
+    {
       "id": "photogra.interior_design",
       "name": "[Photo] Interior Design",
       "family": "Photography & Film",

@@ -1,7 +1,7 @@
 [project]
 name = "neons-style-explorer"
 description = "Neons Style Explorer — a hand-written style-prefix catalog for ComfyUI, in natural language or booru tags, with a preview gallery."
-version = "1.11.2"
+version = "1.14.0"
 license = { file = "LICENSE" }
 requires-python = ">=3.9"
 

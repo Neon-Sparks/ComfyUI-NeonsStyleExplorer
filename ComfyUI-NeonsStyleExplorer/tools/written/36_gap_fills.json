@@ -1,0 +1,22 @@
+[
+  {
+    "name": "[Photo] Intentional Camera Movement",
+    "family": "Photography & Film",
+    "axis": "style",
+    "medium": "photograph style image",
+    "nl": "ICM rendering: the camera swept deliberately through a slow exposure, forms drawn into soft vertical or arcing streaks, colour surviving as banded washes, one faint edge left half-legible, photograph style image.",
+    "tags": ["motion_blur", "long_exposure", "blurry", "muted_color"],
+    "tags_negative": ["photorealistic"],
+    "negative": "static tripod sharpness, frozen detail"
+  },
+  {
+    "name": "[Experimental] Pixel Sorting",
+    "family": "Experimental & Material",
+    "axis": "style",
+    "medium": "abstract style image",
+    "nl": "Pixel-sort rendering: rows of pixels reordered by brightness, forms smearing sideways into ribbon bands, hard thresholds where sorting stops and starts, untouched blocks left intact between them, abstract style image.",
+    "tags": ["glitch", "high_saturation", "dithering", "colorful"],
+    "tags_negative": ["photorealistic"],
+    "negative": "undisturbed clean image, painterly texture"
+  }
+]

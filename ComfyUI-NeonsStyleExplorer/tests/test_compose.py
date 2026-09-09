@@ -229,6 +229,14 @@ class Catalog(unittest.TestCase):
             key = catalog.base_name(entry["name"]).lower()
             seen.setdefault(key, []).append(entry["name"])
         twins = {k: v for k, v in seen.items() if len(v) > 1}
+        # An imported family may cover the same look as an entry written here —
+        # "[Anime] Pixel Art" and "[Extra] Pixel Art" are two projects' takes on
+        # one thing, and both are wanted. Only collisions inside the written
+        # catalog are faults.
+        twins = {
+            base: names for base, names in twins.items()
+            if sum(1 for full in names if catalog.resolve(full)["family"] not in catalog.IMPORTED_FAMILIES) > 1
+        }
         self.assertEqual(twins, {}, f"duplicate base names left: {twins}")
 
     def test_favourites_round_trip(self):
@@ -504,6 +512,31 @@ class Catalog(unittest.TestCase):
             full = os.path.join(ROOT, "user", "custom.json")
             if os.path.isfile(full):
                 os.remove(full)
+            catalog.entries(force=True)
+
+    def test_rename_keeps_id_aliases_and_refuses_clashes(self):
+        """A rename must not orphan previews: the id stays, the old name becomes
+        an alias, and an existing name cannot be taken."""
+        store = importlib.import_module(f"{PKG}.store")
+        gallery_mod = importlib.import_module(f"{PKG}.gallery")
+        wipe_user_files("overrides.json", "custom.json")
+        try:
+            original = catalog.by_axis("style")[0]["name"]
+            before = catalog.resolve(original)
+            key_before = gallery_mod.key_for(before)
+
+            ok, renamed = store.save_override(original, rename="Probe Renamed Style")
+            self.assertTrue(ok)
+            after = catalog.resolve("Probe Renamed Style")
+            self.assertEqual(after["id"], before["id"])                 # previews stay attached
+            self.assertEqual(gallery_mod.key_for(after), key_before)
+            self.assertIn(original, after["aliases"])                   # old name still resolves
+            self.assertEqual(catalog.resolve(original)["name"], "Probe Renamed Style")
+
+            other = catalog.by_axis("style")[1]["name"]
+            self.assertFalse(store.save_override(other, rename="Probe Renamed Style")[0])
+        finally:
+            wipe_user_files("overrides.json", "custom.json")
             catalog.entries(force=True)
 
     def test_roll_excludes(self):

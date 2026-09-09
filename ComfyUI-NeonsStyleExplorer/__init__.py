@@ -374,6 +374,7 @@ def _routes():
             tags=body.get("tags"),
             tags_negative=body.get("tags_negative"),
             update=bool(body.get("update")),
+            rename=body.get("rename") or "",
         )
         return web.json_response({"ok": ok, "name": info if ok else "", "error": "" if ok else info})
 
