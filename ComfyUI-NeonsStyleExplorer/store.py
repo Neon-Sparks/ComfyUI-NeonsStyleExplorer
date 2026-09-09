@@ -95,6 +95,7 @@ def save_custom(name, family="Other", axis="style", nl="", medium="", negative="
     name = clean_name(name) if update else custom_name(name, family, axis)
     if not name:
         return False, "bad name"
+    previous = name
     if not str(nl or "").strip():
         return False, "style clause is required"
 
@@ -106,6 +107,18 @@ def save_custom(name, family="Other", axis="style", nl="", medium="", negative="
     if existing is None and name.lower() in {e["name"].lower() for e in load_shipped()}:
         return False, "name collides with a shipped style"
 
+    if update and existing and clean_name(existing.get("family", "")) != family:
+        # the bracket tag is derived from the family, so a family change has to
+        # rebuild the name — the old one is kept as an alias so saved workflows
+        # and gallery images still resolve
+        renamed = custom_name(name, family, axis)
+        if renamed and renamed.lower() != name.lower():
+            name = renamed
+
+    aliases = list((existing or {}).get("aliases", []))
+    if previous.lower() != name.lower() and previous not in aliases:
+        aliases.append(previous)
+
     record = {
         "id": (existing or {}).get("id") or f"custom.{slug(name)}",
         "name": name,
@@ -116,7 +129,7 @@ def save_custom(name, family="Other", axis="style", nl="", medium="", negative="
         "tags": as_tags(tags),
         "tags_negative": as_tags(tags_negative),
         "negative": str(negative or "").strip(),
-        "aliases": (existing or {}).get("aliases", []),
+        "aliases": aliases,
         "written": True,
     }
     if existing is None:
@@ -126,6 +139,72 @@ def save_custom(name, family="Other", axis="style", nl="", medium="", negative="
     write_json(CUSTOM_PATH, customs)
     entries(force=True)
     return True, name
+
+
+LONELY = "Lonely"
+
+
+def families_admin():
+    """Every family in use, with counts and whether it is one of the shipped
+    ones. Only user-made families can be renamed or removed."""
+    from .catalog import FAMILY_ORDER, entries as all_entries
+
+    rows = {}
+    for entry in all_entries():
+        family = entry.get("family") or LONELY
+        row = rows.setdefault(family, {"name": family, "total": 0, "mine": 0,
+                                       "shipped": family in FAMILY_ORDER})
+        row["total"] += 1
+        if entry.get("source") == "custom":
+            row["mine"] += 1
+    order = [name for name in FAMILY_ORDER if name in rows] + \
+            sorted(name for name in rows if name not in FAMILY_ORDER)
+    return [rows[name] for name in order]
+
+
+def _move_family(old, new):
+    """Move every custom entry from one family to another, rebuilding the
+    bracket tag on each name and keeping the old name as an alias."""
+    from .catalog import FAMILY_ORDER, entries
+
+    old = clean_name(old)
+    new = clean_name(new) or LONELY
+    if not old or old in FAMILY_ORDER:
+        return False, "only your own families can be changed", 0
+
+    customs = load_custom()
+    moved = 0
+    for item in customs:
+        if clean_name(item.get("family", "")) != old:
+            continue
+        item["family"] = new
+        previous = clean_name(item.get("name", ""))
+        renamed = custom_name(previous, new, item.get("axis", "style"))
+        if renamed and renamed.lower() != previous.lower():
+            item["name"] = renamed
+            aliases = list(item.get("aliases") or [])
+            if previous not in aliases:
+                aliases.append(previous)
+            item["aliases"] = aliases
+        moved += 1
+    if not moved:
+        return False, "no styles in that family", 0
+    write_json(CUSTOM_PATH, customs)
+    entries(force=True)
+    return True, new, moved
+
+
+def rename_family(old, new):
+    new = clean_name(new)
+    if not new:
+        return False, "give the family a name", 0
+    return _move_family(old, new)
+
+
+def delete_family(name):
+    """Remove a user family. Its styles are not deleted — they move to Lonely,
+    the holding family for styles with nowhere else to be."""
+    return _move_family(name, LONELY)
 
 
 def delete_custom(name):

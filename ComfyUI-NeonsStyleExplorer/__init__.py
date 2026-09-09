@@ -41,6 +41,9 @@ def _routes():
         restore_style,
         save_custom,
         save_override,
+        delete_family,
+        families_admin,
+        rename_family,
     )
 
     HERE = os.path.dirname(os.path.abspath(__file__))
@@ -62,10 +65,6 @@ def _routes():
     async def get_tags(request):
         tags = tag_vocabulary()
         return web.json_response({"tags": tags, "count": len(tags)})
-
-    @routes.get("/neons_style/families")
-    async def get_families(request):
-        return web.json_response({"families": FAMILY_ORDER})
 
     @routes.post("/neons_style/compose")
     async def post_compose(request):
@@ -124,6 +123,7 @@ def _routes():
             scope=request.query.get("scope", "all"),
             family=request.query.get("family") or None,
             previews=gallery.manifest(),
+            missing_only=request.query.get("missing_only") in ("1", "true", "True"),
         )
         return web.json_response({"ok": True, "names": names, "count": len(names)})
 
@@ -158,6 +158,44 @@ def _routes():
         body = await data(request)
         ok = catalog_sets.remove(body.get("id") or "", delete_files=bool(body.get("delete_files")))
         return web.json_response({"ok": ok, **catalog_sets.payload()})
+
+    @routes.post("/neons_style/catalogs/prompt")
+    async def post_catalogs_prompt(request):
+        """Add or delete one of the catalog's generation prompts."""
+        body = await data(request)
+        cid = body.get("id") or ""
+        if body.get("delete"):
+            ok = catalog_sets.delete_prompt(cid, text=body.get("text"), index=body.get("index"))
+        else:
+            ok = catalog_sets.add_prompt(cid, body.get("text") or "")
+        return web.json_response({"ok": ok, **catalog_sets.payload()})
+
+    # ---------------- families ----------------
+
+    @routes.get("/neons_style/families")
+    async def get_families(request):
+        return web.json_response({"ok": True, "families": families_admin()})
+
+    @routes.post("/neons_style/families/rename")
+    async def post_families_rename(request):
+        """Rename one of the user's own families. Every style in it is renamed
+        to match, keeping its old name as an alias."""
+        body = await data(request)
+        ok, result, moved = rename_family(body.get("old") or "", body.get("new") or "")
+        return web.json_response({
+            "ok": ok, "family": result if ok else "", "moved": moved,
+            "error": "" if ok else result, "families": families_admin(),
+        })
+
+    @routes.post("/neons_style/families/delete")
+    async def post_families_delete(request):
+        """Remove a user family; its styles move to Lonely rather than dying."""
+        body = await data(request)
+        ok, result, moved = delete_family(body.get("name") or "")
+        return web.json_response({
+            "ok": ok, "family": result if ok else "", "moved": moved,
+            "error": "" if ok else result, "families": families_admin(),
+        })
 
     # ---------------- gallery ----------------
 
@@ -226,11 +264,14 @@ def _routes():
             # because the newest record is the run that just finished
             prompt_id, records = runs.latest()
         if not records:
-            return web.json_response({"ok": False, "error": "no run recorded", "saved": []})
+            return web.json_response({
+                "ok": False, "saved": [],
+                "error": "no run recorded for this prompt — the node did not report a style",
+            })
 
         images = [image for image in (body.get("images") or []) if image.get("filename")]
         if not images:
-            return web.json_response({"ok": False, "error": "no images", "saved": []})
+            return web.json_response({"ok": False, "error": "the client sent no images", "saved": []})
         image = images[0]
         directory = folder_paths.get_directory_by_type(image.get("type") or "output") \
             or folder_paths.get_output_directory()
@@ -238,24 +279,32 @@ def _routes():
         name = image["filename"]
         full = os.path.join(directory, subfolder, name) if subfolder else os.path.join(directory, name)
         if not os.path.isfile(full):
-            return web.json_response({"ok": False, "error": "image not found on disk", "saved": []})
+            return web.json_response({
+                "ok": False, "saved": [],
+                "error": f"image not found on disk: {full}",
+            })
         with open(full, "rb") as handle:
             raw = handle.read()
 
         # force = the Save button: file it whatever auto_gallery is set to
         force = bool(body.get("force"))
         node_filter = str(body.get("node") or "")
-        saved = []
+        saved, skipped = [], []
         for node_id, record in records.items():
             if node_filter and node_id != node_filter:
+                skipped.append({"node": node_id, "reason": "another node"})
                 continue
             style = record.get("style") or ""
             mode = record.get("mode") or "off"
             if not style or style == "None":
+                skipped.append({"node": node_id, "reason": "no style recorded"})
                 continue
             if not force and mode == "off":
+                skipped.append({"node": node_id, "style": style, "reason": "auto_gallery is off"})
                 continue
             if not force and mode == "first" and gallery.has_shots(style):
+                skipped.append({"node": node_id, "style": style,
+                                "reason": "auto_gallery is 'first' and this style already has a preview"})
                 continue
             stored = gallery.add_shot(
                 resolve(style) or style, raw,
@@ -264,9 +313,13 @@ def _routes():
             )
             if stored:
                 saved.append({"node": node_id, "style": style, "key": stored["key"], "file": stored["file"]})
+            else:
+                skipped.append({"node": node_id, "style": style, "reason": "the gallery refused the image"})
         if not force:
             runs.forget(prompt_id)  # keep the record so a manual Save can still use it
-        return web.json_response({"ok": True, "prompt_id": prompt_id, "saved": saved})
+        return web.json_response({
+            "ok": True, "prompt_id": prompt_id, "saved": saved, "skipped": skipped,
+        })
 
     @routes.post("/neons_style/gallery/cover")
     async def post_gallery_cover(request):

@@ -139,6 +139,26 @@
       "written": true
     },
     {
+      "id": "experime.anthotype_plant_emulsion",
+      "name": "[Experimental] Anthotype Plant Emulsion",
+      "family": "Experimental & Material",
+      "axis": "style",
+      "medium": "material style image",
+      "nl": "Anthotype rendering: crushed petal juice coated on paper and bleached by weeks of sun, pale magenta or spinach-green monochrome, soft undefined edges, uneven brush-coated border, material style image.",
+      "tags": [
+        "pale_color",
+        "pink_theme",
+        "monochrome",
+        "textured"
+      ],
+      "tags_negative": [
+        "high_contrast"
+      ],
+      "negative": "punchy contrast, sharp fine detail",
+      "aliases": [],
+      "written": true
+    },
+    {
       "id": "experime.ascii_text_picture",
       "name": "[Experimental] ASCII Text Picture",
       "family": "Experimental & Material",
@@ -195,6 +215,26 @@
         "soft_focus"
       ],
       "negative": "smooth continuous tone, soft blending",
+      "aliases": [],
+      "written": true
+    },
+    {
+      "id": "experime.cellular_automata_grid",
+      "name": "[Experimental] Cellular Automata Grid",
+      "family": "Experimental & Material",
+      "axis": "style",
+      "medium": "abstract style image",
+      "nl": "Automata rendering: a cell grid stepped through one simple rule, triangular growth fronts and repeating fractal wedges, hard black-or-white cells with no anti-aliasing, rigid pixel lattice, abstract style image.",
+      "tags": [
+        "monochrome",
+        "high_contrast",
+        "dithering",
+        "minimalism"
+      ],
+      "tags_negative": [
+        "gradient"
+      ],
+      "negative": "soft blending, painterly texture",
       "aliases": [],
       "written": true
     },
@@ -259,6 +299,26 @@
       "written": true
     },
     {
+      "id": "experime.coffee_wash",
+      "name": "[Experimental] Coffee Wash",
+      "family": "Experimental & Material",
+      "axis": "style",
+      "medium": "material style image",
+      "nl": "Coffee-wash rendering: tannin-stained tonal washes on absorbent paper, hard tide lines at every dried edge, ring marks and granular sediment, warm sepia range only, material style image.",
+      "tags": [
+        "sepia",
+        "brown_theme",
+        "textured",
+        "monochrome"
+      ],
+      "tags_negative": [
+        "colorful"
+      ],
+      "negative": "bright saturated pigment, flat digital fills",
+      "aliases": [],
+      "written": true
+    },
+    {
       "id": "experime.cross_stitch_sampler",
       "name": "[Experimental] Cross-Stitch Sampler",
       "family": "Experimental & Material",
@@ -295,6 +355,46 @@
         "flat_color"
       ],
       "negative": "flat opaque colour, soft organic forms",
+      "aliases": [],
+      "written": true
+    },
+    {
+      "id": "experime.cymatic_plate",
+      "name": "[Experimental] Cymatic Plate",
+      "family": "Experimental & Material",
+      "axis": "style",
+      "medium": "material style image",
+      "nl": "Cymatic rendering: fine sand gathered into nodal figures on a vibrating plate, symmetrical geometric lattices with soft mounded ridges, dark metal ground, raking light picking out the relief, material style image.",
+      "tags": [
+        "monochrome",
+        "textured",
+        "dark",
+        "minimalism"
+      ],
+      "tags_negative": [
+        "colorful"
+      ],
+      "negative": "drawn geometry, flat graphic pattern",
+      "aliases": [],
+      "written": true
+    },
+    {
+      "id": "experime.delftware_blue",
+      "name": "[Experimental] Delftware Blue",
+      "family": "Experimental & Material",
+      "axis": "style",
+      "medium": "material style image",
+      "nl": "Delftware rendering: cobalt brushwork on white tin glaze, every tone drawn from one pigment, fine outline over broad wash, glaze pooling darker at the edges with a faint kiln crackle, material style image.",
+      "tags": [
+        "blue_theme",
+        "porcelain",
+        "monochrome",
+        "shiny"
+      ],
+      "tags_negative": [
+        "colorful"
+      ],
+      "negative": "full colour palette, matte paper texture",
       "aliases": [],
       "written": true
     },
@@ -418,6 +518,46 @@
       "written": true
     },
     {
+      "id": "experime.ferrofluid_spikes",
+      "name": "[Experimental] Ferrofluid Spikes",
+      "family": "Experimental & Material",
+      "axis": "style",
+      "medium": "material style image",
+      "nl": "Ferrofluid rendering: oily black liquid pulled into ordered spikes by a magnetic field, mirror-wet surface, sharp specular points along every peak, sterile studio reflection behind, material style image.",
+      "tags": [
+        "shiny",
+        "dark",
+        "wet",
+        "metallic"
+      ],
+      "tags_negative": [
+        "pale_color"
+      ],
+      "negative": "matte dry surfaces, pastel palette",
+      "aliases": [],
+      "written": true
+    },
+    {
+      "id": "experime.flow_field_streamlines",
+      "name": "[Experimental] Flow-Field Streamlines",
+      "family": "Experimental & Material",
+      "axis": "style",
+      "medium": "abstract style image",
+      "nl": "Flow-field rendering: thin curves each following an invisible vector field, strands bunching into eddies and thinning over open ground, uniform stroke weight throughout, pale unmarked paper behind, abstract style image.",
+      "tags": [
+        "lineart",
+        "minimalism",
+        "monochrome",
+        "pale_color"
+      ],
+      "tags_negative": [
+        "photorealistic"
+      ],
+      "negative": "solid filled shapes, photographic shading",
+      "aliases": [],
+      "written": true
+    },
+    {
       "id": "experime.gelli_monoprint",
       "name": "[Experimental] Gelli Monoprint",
       "family": "Experimental & Material",
@@ -458,6 +598,26 @@
       "written": true
     },
     {
+      "id": "experime.harmonograph_curve",
+      "name": "[Experimental] Harmonograph Curve",
+      "family": "Experimental & Material",
+      "axis": "style",
+      "medium": "abstract style image",
+      "nl": "Harmonograph rendering: interlaced pendulum loops drawn as one unbroken line, rosette symmetry drifting slowly out of true, ink tapering as the swing decays, faint warm paper tone behind, abstract style image.",
+      "tags": [
+        "lineart",
+        "pen_(medium)",
+        "monochrome",
+        "traditional_media"
+      ],
+      "tags_negative": [
+        "flat_color"
+      ],
+      "negative": "filled shapes, digital gradients",
+      "aliases": [],
+      "written": true
+    },
+    {
       "id": "experime.holographic_foil",
       "name": "[Experimental] Holographic Foil",
       "family": "Experimental & Material",
@@ -474,6 +634,26 @@
         "muted_color"
       ],
       "negative": "matte paper texture, muted palette",
+      "aliases": [],
+      "written": true
+    },
+    {
+      "id": "experime.hydro_dip_transfer",
+      "name": "[Experimental] Hydro-Dip Transfer",
+      "family": "Experimental & Material",
+      "axis": "style",
+      "medium": "material style image",
+      "nl": "Hydro-dip rendering: a printed film floated on water and wrapped around a solid form, pattern stretching and pooling over every curve, seams meeting out of register, glossy clear coat over it, material style image.",
+      "tags": [
+        "shiny",
+        "wet",
+        "colorful",
+        "plastic"
+      ],
+      "tags_negative": [
+        "minimalism"
+      ],
+      "negative": "flat decal application, matte untreated surface",
       "aliases": [],
       "written": true
     },
@@ -519,6 +699,27 @@
       "written": true
     },
     {
+      "id": "experime.khokhloma_lacquer",
+      "name": "[Experimental] Khokhloma Lacquer",
+      "family": "Experimental & Material",
+      "axis": "style",
+      "medium": "material style image",
+      "nl": "Khokhloma rendering: gold foliage and berries over deep black lacquer, vermilion accents, fine curling stems drawn in one stroke, glassy varnish depth catching the light, material style image.",
+      "tags": [
+        "gold",
+        "dark",
+        "shiny",
+        "red_theme",
+        "traditional_media"
+      ],
+      "tags_negative": [
+        "pale_color"
+      ],
+      "negative": "pale matte palette, loose sketchiness",
+      "aliases": [],
+      "written": true
+    },
+    {
       "id": "experime.kids_crayon",
       "name": "[Experimental] Kids Crayon",
       "family": "Experimental & Material",
@@ -535,6 +736,26 @@
         "highres"
       ],
       "negative": "precise line, smooth digital shading",
+      "aliases": [],
+      "written": true
+    },
+    {
+      "id": "experime.kirigami_pop_up",
+      "name": "[Experimental] Kirigami Pop-Up",
+      "family": "Experimental & Material",
+      "axis": "style",
+      "medium": "handmade style image",
+      "nl": "Kirigami rendering: card cut and folded into upright layers, crisp scored creases and hard cast shadows between planes, white stock with one accent colour, depth built from stepped tiers, handmade style image.",
+      "tags": [
+        "papercraft",
+        "white_theme",
+        "minimalism",
+        "flat_color"
+      ],
+      "tags_negative": [
+        "textured"
+      ],
+      "negative": "modelled volumes, painterly shading",
       "aliases": [],
       "written": true
     },
@@ -682,6 +903,26 @@
       "written": true
     },
     {
+      "id": "experime.nail_and_thread_string_art",
+      "name": "[Experimental] Nail and Thread String Art",
+      "family": "Experimental & Material",
+      "axis": "style",
+      "medium": "handmade style image",
+      "nl": "String-art rendering: coloured thread strung between panel pins, straight chords massing into curved moiré envelopes, thread crossings darkening the overlaps, stained board behind, handmade style image.",
+      "tags": [
+        "textured",
+        "minimalism",
+        "colorful",
+        "wood"
+      ],
+      "tags_negative": [
+        "gradient"
+      ],
+      "negative": "painted gradients, printed flat shapes",
+      "aliases": [],
+      "written": true
+    },
+    {
       "id": "experime.neon_drip_abstract",
       "name": "[Experimental] Neon Drip Abstract",
       "family": "Experimental & Material",
@@ -703,6 +944,66 @@
       "written": true
     },
     {
+      "id": "experime.noise_contour_map",
+      "name": "[Experimental] Noise Contour Map",
+      "family": "Experimental & Material",
+      "axis": "style",
+      "medium": "abstract style image",
+      "nl": "Noise-contour rendering: smooth pseudo-random terrain sliced into nested iso-lines, bands crowding tight where the slope steepens and opening out where it flattens, one ink weight on pale ground, abstract style image.",
+      "tags": [
+        "lineart",
+        "minimalism",
+        "pale_color",
+        "monochrome"
+      ],
+      "tags_negative": [
+        "photorealistic"
+      ],
+      "negative": "painted relief shading, photographic terrain",
+      "aliases": [],
+      "written": true
+    },
+    {
+      "id": "experime.papier_m_ch_folk_figure",
+      "name": "[Experimental] Papier-Mâché Folk Figure",
+      "family": "Experimental & Material",
+      "axis": "style",
+      "medium": "handmade style image",
+      "nl": "Papier-mâché rendering: pulped paper forms with visible seams and lumps, matte poster colour in clashing bright patterns, dotted and striped decoration, uneven hand-finished edges, handmade style image.",
+      "tags": [
+        "papercraft",
+        "colorful",
+        "textured",
+        "flat_color"
+      ],
+      "tags_negative": [
+        "photorealistic"
+      ],
+      "negative": "machine-smooth surfaces, photoreal materials",
+      "aliases": [],
+      "written": true
+    },
+    {
+      "id": "experime.petri_dish_culture",
+      "name": "[Experimental] Petri Dish Culture",
+      "family": "Experimental & Material",
+      "axis": "style",
+      "medium": "material style image",
+      "nl": "Culture-plate rendering: colonies spreading across nutrient agar in concentric fringed rings, translucent gel catching light from below, velvety and glossy patches side by side, glass rim shadow, material style image.",
+      "tags": [
+        "transparent",
+        "textured",
+        "caustics",
+        "glowing"
+      ],
+      "tags_negative": [
+        "lineart"
+      ],
+      "negative": "drawn illustration, flat vector shapes",
+      "aliases": [],
+      "written": true
+    },
+    {
       "id": "experime.photomontage",
       "name": "[Experimental] Photomontage",
       "family": "Experimental & Material",
@@ -719,6 +1020,46 @@
         "soft_focus"
       ],
       "negative": "seamless single exposure, painterly blending",
+      "aliases": [],
+      "written": true
+    },
+    {
+      "id": "experime.plotter_pen_generative",
+      "name": "[Experimental] Plotter Pen Generative",
+      "family": "Experimental & Material",
+      "axis": "style",
+      "medium": "abstract style image",
+      "nl": "Pen-plotter rendering: single-weight ink strokes laid down by machine, thousands of parallel passes building tone by density, faint wobble and blob where each stroke starts, bare paper between the lines, abstract style image.",
+      "tags": [
+        "pen_(medium)",
+        "lineart",
+        "monochrome",
+        "minimalism"
+      ],
+      "tags_negative": [
+        "photorealistic"
+      ],
+      "negative": "airbrushed shading, photographic depth",
+      "aliases": [],
+      "written": true
+    },
+    {
+      "id": "experime.pyrography_wood_burn",
+      "name": "[Experimental] Pyrography Wood Burn",
+      "family": "Experimental & Material",
+      "axis": "style",
+      "medium": "material style image",
+      "nl": "Pyrography rendering: scorched line burned into pale timber, tone built by dwell time from honey to charcoal, singed halo at the edges, grain deflecting every stroke, material style image.",
+      "tags": [
+        "wood",
+        "woodgrain",
+        "brown_theme",
+        "textured"
+      ],
+      "tags_negative": [
+        "colorful"
+      ],
+      "negative": "printed ink flatness, saturated colour",
       "aliases": [],
       "written": true
     },
@@ -764,6 +1105,65 @@
       "written": true
     },
     {
+      "id": "experime.rangoli_powder",
+      "name": "[Experimental] Rangoli Powder",
+      "family": "Experimental & Material",
+      "axis": "style",
+      "medium": "material style image",
+      "nl": "Rangoli rendering: coloured powder poured into symmetrical floor patterns, radial geometry with soft grainy borders, saturated pigment mounds catching side light, swept stone beneath, material style image.",
+      "tags": [
+        "colorful",
+        "textured",
+        "high_saturation",
+        "stone"
+      ],
+      "tags_negative": [
+        "lineart"
+      ],
+      "negative": "drawn outlines, flat printed colour",
+      "aliases": [],
+      "written": true
+    },
+    {
+      "id": "experime.reaction_diffusion_pattern",
+      "name": "[Experimental] Reaction-Diffusion Pattern",
+      "family": "Experimental & Material",
+      "axis": "style",
+      "medium": "abstract style image",
+      "nl": "Reaction-diffusion rendering: spots and stripes grown by two competing chemicals, labyrinthine ridges branching and merging, soft fronts where growth meets growth, even coverage across the field, abstract style image.",
+      "tags": [
+        "textured",
+        "gradient",
+        "desaturated"
+      ],
+      "tags_negative": [
+        "lineart"
+      ],
+      "negative": "drawn outlines, hard geometry",
+      "aliases": [],
+      "written": true
+    },
+    {
+      "id": "experime.rust_transfer",
+      "name": "[Experimental] Rust Transfer",
+      "family": "Experimental & Material",
+      "axis": "style",
+      "medium": "material style image",
+      "nl": "Rust-transfer rendering: oxidised iron printed onto damp cloth, orange-brown bloom spreading along the weave, hard object silhouettes where metal lay, salt speckle and tide edges, material style image.",
+      "tags": [
+        "rust",
+        "brown_theme",
+        "textured",
+        "muted_color"
+      ],
+      "tags_negative": [
+        "flat_color"
+      ],
+      "negative": "clean printed graphics, vivid ink colour",
+      "aliases": [],
+      "written": true
+    },
+    {
       "id": "experime.sand_animation_still",
       "name": "[Experimental] Sand Animation Still",
       "family": "Experimental & Material",
@@ -800,6 +1200,46 @@
         "cinematic_lighting"
       ],
       "negative": "camera perspective, ambient room light",
+      "aliases": [],
+      "written": true
+    },
+    {
+      "id": "experime.scrimshaw",
+      "name": "[Experimental] Scrimshaw",
+      "family": "Experimental & Material",
+      "axis": "style",
+      "medium": "material style image",
+      "nl": "Scrimshaw rendering: fine incisions scratched into polished bone and rubbed with ink, tone made of hatch density alone, warm cream ground with age crazing, shallow surface sheen, material style image.",
+      "tags": [
+        "monochrome",
+        "cross-hatching",
+        "textured",
+        "pale_color"
+      ],
+      "tags_negative": [
+        "colorful"
+      ],
+      "negative": "painted colour, soft airbrushed tone",
+      "aliases": [],
+      "written": true
+    },
+    {
+      "id": "experime.sgraffito_plaster",
+      "name": "[Experimental] Sgraffito Plaster",
+      "family": "Experimental & Material",
+      "axis": "style",
+      "medium": "material style image",
+      "nl": "Sgraffito rendering: coloured plaster layers scratched back to reveal the tone beneath, incised line with a raised burr, flat fields of lime colour, chipped edges and trowel marks, material style image.",
+      "tags": [
+        "textured",
+        "traditional_media",
+        "muted_color",
+        "stone"
+      ],
+      "tags_negative": [
+        "photorealistic"
+      ],
+      "negative": "smooth printed surface, digital cleanliness",
       "aliases": [],
       "written": true
     },
@@ -925,6 +1365,46 @@
         "minimalism"
       ],
       "negative": "clean empty space, single centred subject",
+      "aliases": [],
+      "written": true
+    },
+    {
+      "id": "experime.strange_attractor",
+      "name": "[Experimental] Strange Attractor",
+      "family": "Experimental & Material",
+      "axis": "style",
+      "medium": "abstract style image",
+      "nl": "Attractor rendering: one traced trajectory looped millions of times, density building luminous wings out of darkness, hairline filaments crossing, additive glow blooming where paths pile up, abstract style image.",
+      "tags": [
+        "glowing",
+        "dark",
+        "gradient",
+        "monochrome"
+      ],
+      "tags_negative": [
+        "flat_color"
+      ],
+      "negative": "flat graphic shapes, opaque solid forms",
+      "aliases": [],
+      "written": true
+    },
+    {
+      "id": "experime.street_chalk_anamorphic",
+      "name": "[Experimental] Street Chalk Anamorphic",
+      "family": "Experimental & Material",
+      "axis": "style",
+      "medium": "material style image",
+      "nl": "Pavement-chalk rendering: soft pastel dust worked into rough paving, deliberate anamorphic stretch across the slabs, joint lines cutting through the drawing, dusty bloom over the whole surface, material style image.",
+      "tags": [
+        "chalk_(medium)",
+        "pastel_(medium)",
+        "textured",
+        "stone"
+      ],
+      "tags_negative": [
+        "highres"
+      ],
+      "negative": "crisp printed edges, glossy finish",
       "aliases": [],
       "written": true
     },
@@ -1069,6 +1549,47 @@
       "written": true
     },
     {
+      "id": "experime.truchet_tiling",
+      "name": "[Experimental] Truchet Tiling",
+      "family": "Experimental & Material",
+      "axis": "style",
+      "medium": "abstract style image",
+      "nl": "Truchet rendering: one square tile rotated at random across a strict grid, quarter-arcs joining tile to tile into wandering continuous paths, two-tone fills, tile seams left visible, abstract style image.",
+      "tags": [
+        "minimalism",
+        "monochrome",
+        "flat_color",
+        "high_contrast"
+      ],
+      "tags_negative": [
+        "gradient"
+      ],
+      "negative": "freehand curves, tonal shading",
+      "aliases": [],
+      "written": true
+    },
+    {
+      "id": "experime.verre_glomis",
+      "name": "[Experimental] Verre Églomisé",
+      "family": "Experimental & Material",
+      "axis": "style",
+      "medium": "material style image",
+      "nl": "Reverse-glass rendering: gold leaf and paint applied behind glass and read through it, mirror-bright metal with engraved detail scratched into the leaf, glassy depth, dark backing sealing the panel, material style image.",
+      "tags": [
+        "gold",
+        "glass",
+        "metallic",
+        "shiny",
+        "dark"
+      ],
+      "tags_negative": [
+        "textured"
+      ],
+      "negative": "matte paper surface, brushy impasto",
+      "aliases": [],
+      "written": true
+    },
+    {
       "id": "experime.vhs_still",
       "name": "[Experimental] VHS Still",
       "family": "Experimental & Material",
@@ -1085,6 +1606,25 @@
         "highres"
       ],
       "negative": "crisp digital sharpness, clean blacks",
+      "aliases": [],
+      "written": true
+    },
+    {
+      "id": "experime.voronoi_fracture",
+      "name": "[Experimental] Voronoi Fracture",
+      "family": "Experimental & Material",
+      "axis": "style",
+      "medium": "abstract style image",
+      "nl": "Voronoi rendering: the plane divided into cells around scattered seed points, straight shared borders meeting at sharp junctions, cells ranging from splinters to slabs, one flat fill per cell, abstract style image.",
+      "tags": [
+        "flat_color",
+        "mosaic",
+        "minimalism"
+      ],
+      "tags_negative": [
+        "blurry"
+      ],
+      "negative": "soft blended edges, organic brushwork",
       "aliases": [],
       "written": true
     },

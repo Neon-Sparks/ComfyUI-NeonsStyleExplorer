@@ -109,6 +109,27 @@
       "written": true
     },
     {
+      "id": "traditio.amate_bark_painting",
+      "name": "[Painting] Amate Bark Painting",
+      "family": "Traditional Painting",
+      "axis": "style",
+      "medium": "painting style image",
+      "nl": "Amate rendering: bright flat figures painted on mottled fig-bark paper, hard black outlines, symmetrical birds and blossoms, the fibrous uneven ground showing through everywhere, painting style image.",
+      "tags": [
+        "traditional_media",
+        "flat_color",
+        "colorful",
+        "textured",
+        "outline"
+      ],
+      "tags_negative": [
+        "photorealistic"
+      ],
+      "negative": "smooth canvas, tonal realism",
+      "aliases": [],
+      "written": true
+    },
+    {
       "id": "traditio.analytic_cubism",
       "name": "[Painting] Analytic Cubism",
       "family": "Traditional Painting",
@@ -331,6 +352,47 @@
       "written": true
     },
     {
+      "id": "traditio.bay_area_figurative",
+      "name": "[Painting] Bay Area Figurative",
+      "family": "Traditional Painting",
+      "axis": "style",
+      "medium": "oil painting style image",
+      "nl": "Bay Area figurative rendering: thick loaded strokes left deliberately unresolved, high Californian daylight flattening the palette, drawing done with the brush itself, scraped-back passages showing earlier layers, oil painting style image.",
+      "tags": [
+        "oil_painting_(medium)",
+        "textured",
+        "muted_color",
+        "unfinished"
+      ],
+      "tags_negative": [
+        "photorealistic"
+      ],
+      "negative": "polished finish, photographic detail",
+      "aliases": [],
+      "written": true
+    },
+    {
+      "id": "traditio.bodeg_n",
+      "name": "[Painting] Bodegón",
+      "family": "Traditional Painting",
+      "axis": "style",
+      "medium": "oil painting style image",
+      "nl": "Spanish bodegón rendering: a few humble objects spaced along a bare ledge, hard side light against a near-black ground, austere intervals, matte earthy palette with restrained highlights, oil painting style image.",
+      "tags": [
+        "oil_painting_(medium)",
+        "still_life",
+        "dark",
+        "muted_color",
+        "chiaroscuro"
+      ],
+      "tags_negative": [
+        "colorful"
+      ],
+      "negative": "crowded abundance, bright even light",
+      "aliases": [],
+      "written": true
+    },
+    {
       "id": "traditio.byzantine_gold",
       "name": "[Painting] Byzantine Gold",
       "family": "Traditional Painting",
@@ -388,6 +450,26 @@
         "high_contrast"
       ],
       "negative": "hard graphic edges, saturated contrast",
+      "aliases": [],
+      "written": true
+    },
+    {
+      "id": "traditio.capriccio_ruin_fantasy",
+      "name": "[Painting] Capriccio Ruin Fantasy",
+      "family": "Traditional Painting",
+      "axis": "style",
+      "medium": "oil painting style image",
+      "nl": "Capriccio rendering: invented ruins assembled beside real monuments, warm bituminous shadow, crumbling stone laid in dry scumbles, wide even daylight and a chalky distance, oil painting style image.",
+      "tags": [
+        "oil_painting_(medium)",
+        "scenery",
+        "brown_theme",
+        "textured"
+      ],
+      "tags_negative": [
+        "minimalism"
+      ],
+      "negative": "modern setting, graphic flatness",
       "aliases": [],
       "written": true
     },
@@ -559,6 +641,26 @@
       "written": true
     },
     {
+      "id": "traditio.concrete_art_geometric",
+      "name": "[Painting] Concrete Art Geometric",
+      "family": "Traditional Painting",
+      "axis": "style",
+      "medium": "abstract style image",
+      "nl": "Concrete-art rendering: exact geometry fixed by rule before the brush, hard-edged bars and squares in flat unmodulated paint, mathematical spacing, no gesture anywhere on the surface, abstract style image.",
+      "tags": [
+        "flat_color",
+        "minimalism",
+        "limited_palette",
+        "high_contrast"
+      ],
+      "tags_negative": [
+        "textured"
+      ],
+      "negative": "painterly brushwork, soft gradients",
+      "aliases": [],
+      "written": true
+    },
+    {
       "id": "traditio.contemporary_figurative",
       "name": "[Painting] Contemporary Figurative",
       "family": "Traditional Painting",
@@ -599,6 +701,26 @@
       "written": true
     },
     {
+      "id": "traditio.cuzco_school",
+      "name": "[Painting] Cuzco School",
+      "family": "Traditional Painting",
+      "axis": "style",
+      "medium": "painting style image",
+      "nl": "Cuzco-school rendering: Andean colonial devotional painting, gold brocade patterning laid flat over dark drapery, frontal hieratic poses, matte earth palette with red bole showing at the edges, painting style image.",
+      "tags": [
+        "painting_(medium)",
+        "gold",
+        "dark",
+        "muted_color"
+      ],
+      "tags_negative": [
+        "photorealistic"
+      ],
+      "negative": "modern perspective, glossy digital finish",
+      "aliases": [],
+      "written": true
+    },
+    {
       "id": "traditio.dada_collage",
       "name": "[Painting] Dada Collage",
       "family": "Traditional Painting",
@@ -619,6 +741,25 @@
       "written": true
     },
     {
+      "id": "traditio.decalcomania_blot",
+      "name": "[Painting] Decalcomania Blot",
+      "family": "Traditional Painting",
+      "axis": "style",
+      "medium": "abstract style image",
+      "nl": "Decalcomania rendering: paint pressed between two surfaces and pulled apart, veined lace and coral textures left behind, accidental near-symmetry, dark tonal pooling at the edges, abstract style image.",
+      "tags": [
+        "textured",
+        "painting_(medium)",
+        "dark"
+      ],
+      "tags_negative": [
+        "lineart"
+      ],
+      "negative": "drawn outlines, flat printed colour",
+      "aliases": [],
+      "written": true
+    },
+    {
       "id": "traditio.divisionism",
       "name": "[Painting] Divisionism",
       "family": "Traditional Painting",
@@ -635,6 +776,45 @@
         "flat_color"
       ],
       "negative": "blended flat colour, hard outlines",
+      "aliases": [],
+      "written": true
+    },
+    {
+      "id": "traditio.dutch_marine",
+      "name": "[Painting] Dutch Marine",
+      "family": "Traditional Painting",
+      "axis": "style",
+      "medium": "oil painting style image",
+      "nl": "Dutch marine rendering: grey-green swell under a towering cloud bank, rigging picked out hair-thin against pale sky, low horizon far down the frame, silvery tonal restraint overall, oil painting style image.",
+      "tags": [
+        "oil_painting_(medium)",
+        "scenery",
+        "desaturated",
+        "muted_color"
+      ],
+      "tags_negative": [
+        "high_saturation"
+      ],
+      "negative": "vivid tropical colour, flat poster shapes",
+      "aliases": [],
+      "written": true
+    },
+    {
+      "id": "traditio.d_collage_torn_poster",
+      "name": "[Painting] Décollage Torn Poster",
+      "family": "Traditional Painting",
+      "axis": "style",
+      "medium": "collage style image",
+      "nl": "Décollage rendering: layers of pasted street posters torn back into each other, fragments of type and flat colour surfacing at random, ragged wet edges, paste bloom and grime across the sheet, collage style image.",
+      "tags": [
+        "collage",
+        "textured",
+        "partially_colored"
+      ],
+      "tags_negative": [
+        "flat_color"
+      ],
+      "negative": "clean single-layer artwork, tidy borders",
       "aliases": [],
       "written": true
     },
@@ -698,6 +878,26 @@
         "photorealistic"
       ],
       "negative": "perspective depth, soft shading",
+      "aliases": [],
+      "written": true
+    },
+    {
+      "id": "traditio.ethiopian_church_painting",
+      "name": "[Painting] Ethiopian Church Painting",
+      "family": "Traditional Painting",
+      "axis": "style",
+      "medium": "painting style image",
+      "nl": "Ethiopian church rendering: wide almond eyes and frontal stares, thick black contour around every shape, flat saturated red, yellow and green, banded borders enclosing each panel, painting style image.",
+      "tags": [
+        "painting_(medium)",
+        "flat_color",
+        "colorful",
+        "outline"
+      ],
+      "tags_negative": [
+        "photorealistic"
+      ],
+      "negative": "tonal modelling, atmospheric depth",
       "aliases": [],
       "written": true
     },
@@ -780,6 +980,26 @@
         "shiny"
       ],
       "negative": "glossy varnish, saturated digital colour",
+      "aliases": [],
+      "written": true
+    },
+    {
+      "id": "traditio.frottage_rubbing",
+      "name": "[Painting] Frottage Rubbing",
+      "family": "Traditional Painting",
+      "axis": "style",
+      "medium": "drawing style image",
+      "nl": "Frottage rendering: graphite rubbed over paper laid on rough boards, grain and knots printing through as tonal fields, no drawn line at all, smudged open edges where the rubbing stops, drawing style image.",
+      "tags": [
+        "graphite_(medium)",
+        "monochrome",
+        "textured",
+        "traditional_media"
+      ],
+      "tags_negative": [
+        "lineart"
+      ],
+      "negative": "clean outlines, vector flatness",
       "aliases": [],
       "written": true
     },
@@ -1073,6 +1293,26 @@
       "written": true
     },
     {
+      "id": "traditio.hard_edge_shaped_panel",
+      "name": "[Painting] Hard-Edge Shaped Panel",
+      "family": "Traditional Painting",
+      "axis": "style",
+      "medium": "abstract style image",
+      "nl": "Hard-edge rendering: flat bands meeting on razor-taped boundaries, the panel's own irregular outline treated as part of the design, matte acrylic evenness, no tonal modelling, abstract style image.",
+      "tags": [
+        "flat_color",
+        "minimalism",
+        "acrylic_paint_(medium)",
+        "high_contrast"
+      ],
+      "tags_negative": [
+        "textured"
+      ],
+      "negative": "brushy edges, atmospheric blending",
+      "aliases": [],
+      "written": true
+    },
+    {
       "id": "traditio.hellenistic",
       "name": "[Painting] Hellenistic",
       "family": "Traditional Painting",
@@ -1300,6 +1540,26 @@
       "written": true
     },
     {
+      "id": "traditio.kerala_mural",
+      "name": "[Painting] Kerala Mural",
+      "family": "Traditional Painting",
+      "axis": "style",
+      "medium": "painting style image",
+      "nl": "Kerala mural rendering: ochre, indigo and terre-verte on lime plaster, elaborate crowns and jewellery drawn in fine line, rounded stylised anatomy, dense floral fill packing the ground, painting style image.",
+      "tags": [
+        "painting_(medium)",
+        "flat_color",
+        "muted_color",
+        "traditional_media"
+      ],
+      "tags_negative": [
+        "photorealistic"
+      ],
+      "negative": "photographic shading, empty backgrounds",
+      "aliases": [],
+      "written": true
+    },
+    {
       "id": "traditio.korean_minhwa",
       "name": "[Painting] Korean Minhwa",
       "family": "Traditional Painting",
@@ -1523,6 +1783,25 @@
       "written": true
     },
     {
+      "id": "traditio.monochrome_field",
+      "name": "[Painting] Monochrome Field",
+      "family": "Traditional Painting",
+      "axis": "style",
+      "medium": "abstract style image",
+      "nl": "Single-hue rendering: one colour carried across the whole surface, tonal life coming only from brush drag and weave grain, edges left frankly visible, no drawn incident, abstract style image.",
+      "tags": [
+        "minimalism",
+        "monochrome",
+        "textured"
+      ],
+      "tags_negative": [
+        "colorful"
+      ],
+      "negative": "multiple colour fields, drawn shapes",
+      "aliases": [],
+      "written": true
+    },
+    {
       "id": "traditio.mughal_miniature",
       "name": "[Painting] Mughal Miniature",
       "family": "Traditional Painting",
@@ -1564,6 +1843,45 @@
       "written": true
     },
     {
+      "id": "traditio.ndebele_wall_geometry",
+      "name": "[Painting] Ndebele Wall Geometry",
+      "family": "Traditional Painting",
+      "axis": "style",
+      "medium": "painting style image",
+      "nl": "Ndebele rendering: hard-edged geometric blocks in saturated colour, every field bound by a heavy black band, stepped symmetrical forms, chalky wall texture under the paint, painting style image.",
+      "tags": [
+        "flat_color",
+        "colorful",
+        "high_contrast",
+        "outline"
+      ],
+      "tags_negative": [
+        "gradient"
+      ],
+      "negative": "blended shading, organic brushwork",
+      "aliases": [],
+      "written": true
+    },
+    {
+      "id": "traditio.neo_concrete_fold",
+      "name": "[Painting] Neo-Concrete Fold",
+      "family": "Traditional Painting",
+      "axis": "style",
+      "medium": "abstract style image",
+      "nl": "Neo-concrete rendering: geometric planes folded off the flat, hinged panels and cut angles casting their own thin shadows, restrained palette on white, hand-finished matte edges, abstract style image.",
+      "tags": [
+        "minimalism",
+        "flat_color",
+        "white_theme"
+      ],
+      "tags_negative": [
+        "textured"
+      ],
+      "negative": "painterly surface, decorative ornament",
+      "aliases": [],
+      "written": true
+    },
+    {
       "id": "traditio.neo_expressionism",
       "name": "[Painting] Neo-Expressionism",
       "family": "Traditional Painting",
@@ -1600,6 +1918,25 @@
         "textured"
       ],
       "negative": "loose visible brushwork, saturated colour",
+      "aliases": [],
+      "written": true
+    },
+    {
+      "id": "traditio.nested_square_study",
+      "name": "[Painting] Nested Square Study",
+      "family": "Traditional Painting",
+      "axis": "style",
+      "medium": "abstract style image",
+      "nl": "Nested-square rendering: concentric flat rectangles stepped downward, neighbouring colours chosen so each shifts the other, matte board-like surface, no blending at the joins, abstract style image.",
+      "tags": [
+        "flat_color",
+        "minimalism",
+        "limited_palette"
+      ],
+      "tags_negative": [
+        "gradient"
+      ],
+      "negative": "blended transitions, visible brush texture",
       "aliases": [],
       "written": true
     },
@@ -1750,6 +2087,26 @@
       "written": true
     },
     {
+      "id": "traditio.orphism",
+      "name": "[Painting] Orphism",
+      "family": "Traditional Painting",
+      "axis": "style",
+      "medium": "painting style image",
+      "nl": "Orphist rendering: prismatic discs and interlocking arcs, simultaneous contrasts of pure hue doing the work of light, rhythm built from colour alone, faceted overlaps without outline, painting style image.",
+      "tags": [
+        "colorful",
+        "painting_(medium)",
+        "cubism",
+        "high_saturation"
+      ],
+      "tags_negative": [
+        "monochrome"
+      ],
+      "negative": "tonal realism, drawn contours",
+      "aliases": [],
+      "written": true
+    },
+    {
       "id": "traditio.otomi_embroidery_drawing",
       "name": "[Painting] Otomi Embroidery Drawing",
       "family": "Traditional Painting",
@@ -1767,6 +2124,26 @@
         "gradient"
       ],
       "negative": "tonal shading, photographic depth",
+      "aliases": [],
+      "written": true
+    },
+    {
+      "id": "traditio.pahari_miniature",
+      "name": "[Painting] Pahari Miniature",
+      "family": "Traditional Painting",
+      "axis": "style",
+      "medium": "painting style image",
+      "nl": "Pahari rendering: soft hill country in cool thin washes, delicate courtly line, lyrical pastel palette, sparing gold accents, a generous plain band of sky above, painting style image.",
+      "tags": [
+        "painting_(medium)",
+        "pastel_colors",
+        "traditional_media",
+        "gold"
+      ],
+      "tags_negative": [
+        "high_contrast"
+      ],
+      "negative": "heavy impasto, harsh contrast",
       "aliases": [],
       "written": true
     },
@@ -1993,6 +2370,46 @@
       "written": true
     },
     {
+      "id": "traditio.pronkstilleven",
+      "name": "[Painting] Pronkstilleven",
+      "family": "Traditional Painting",
+      "axis": "style",
+      "medium": "oil painting style image",
+      "nl": "Ostentatious still-life rendering: silver, glass and fruit piled in dark opulence, one raking light, wet reflections and dew rendered to a hair, deep varnished shadow swallowing the corners, oil painting style image.",
+      "tags": [
+        "oil_painting_(medium)",
+        "still_life",
+        "chiaroscuro",
+        "dark",
+        "shiny"
+      ],
+      "tags_negative": [
+        "minimalism"
+      ],
+      "negative": "flat even lighting, sparse composition",
+      "aliases": [],
+      "written": true
+    },
+    {
+      "id": "traditio.quadratura_ceiling",
+      "name": "[Painting] Quadratura Ceiling",
+      "family": "Traditional Painting",
+      "axis": "style",
+      "medium": "painting style image",
+      "nl": "Quadratura rendering: illusionistic architecture in steep upward perspective, painted cornices and coffers continuing the real room, foreshortened forms crowding the rim, chalky plaster tone throughout, painting style image.",
+      "tags": [
+        "painting_(medium)",
+        "scenery",
+        "muted_color"
+      ],
+      "tags_negative": [
+        "minimalism"
+      ],
+      "negative": "flat frontal framing, graphic simplification",
+      "aliases": [],
+      "written": true
+    },
+    {
       "id": "traditio.rayonism",
       "name": "[Painting] Rayonism",
       "family": "Traditional Painting",
@@ -2195,6 +2612,66 @@
       "written": true
     },
     {
+      "id": "traditio.rosemaling",
+      "name": "[Painting] Rosemaling",
+      "family": "Traditional Painting",
+      "axis": "style",
+      "medium": "painting style image",
+      "nl": "Rosemaling rendering: Norwegian scrollwork in flowing C and S strokes, two tones blended on a single brush, ox-blood or blue-grey painted ground, cream linework tying the panels together, painting style image.",
+      "tags": [
+        "painting_(medium)",
+        "traditional_media",
+        "muted_color",
+        "wood"
+      ],
+      "tags_negative": [
+        "minimalism"
+      ],
+      "negative": "geometric flat vector shapes, photographic depth",
+      "aliases": [],
+      "written": true
+    },
+    {
+      "id": "traditio.rule_system_wall_drawing",
+      "name": "[Painting] Rule-System Wall Drawing",
+      "family": "Traditional Painting",
+      "axis": "style",
+      "medium": "drawing style image",
+      "nl": "Rule-drawn rendering: pencil lines set out to a written instruction, dense hatched bands meeting at fixed angles, flat wall tone showing between passes, faint construction marks left in place, drawing style image.",
+      "tags": [
+        "graphite_(medium)",
+        "lineart",
+        "minimalism",
+        "monochrome"
+      ],
+      "tags_negative": [
+        "photorealistic"
+      ],
+      "negative": "painterly shading, expressive gesture",
+      "aliases": [],
+      "written": true
+    },
+    {
+      "id": "traditio.sfumato",
+      "name": "[Painting] Sfumato",
+      "family": "Traditional Painting",
+      "axis": "style",
+      "medium": "oil painting style image",
+      "nl": "Sfumato rendering: tone carried through imperceptible steps, no contour left anywhere, form emerging out of smoke-soft transitions, warm dark ground glowing up through thin glazes, oil painting style image.",
+      "tags": [
+        "oil_painting_(medium)",
+        "chiaroscuro",
+        "soft_focus",
+        "muted_color"
+      ],
+      "tags_negative": [
+        "lineart"
+      ],
+      "negative": "crisp outlines, flat graphic colour",
+      "aliases": [],
+      "written": true
+    },
+    {
       "id": "traditio.silverpoint",
       "name": "[Painting] Silverpoint",
       "family": "Traditional Painting",
@@ -2211,6 +2688,26 @@
         "colorful"
       ],
       "negative": "bold colour, heavy dark contrast",
+      "aliases": [],
+      "written": true
+    },
+    {
+      "id": "traditio.sinopia_underdrawing",
+      "name": "[Painting] Sinopia Underdrawing",
+      "family": "Traditional Painting",
+      "axis": "style",
+      "medium": "painting style image",
+      "nl": "Sinopia rendering: red-earth underdrawing brushed straight onto damp plaster, confident single-pass contours, thin washes blocking the masses, lime-white ground breathing through everything, painting style image.",
+      "tags": [
+        "painting_(medium)",
+        "unfinished",
+        "muted_color",
+        "brown_theme"
+      ],
+      "tags_negative": [
+        "photorealistic"
+      ],
+      "negative": "finished glazing, saturated colour",
       "aliases": [],
       "written": true
     },
@@ -2432,6 +2929,26 @@
         "photorealistic"
       ],
       "negative": "photographic depth, tonal modelling",
+      "aliases": [],
+      "written": true
+    },
+    {
+      "id": "traditio.tachisme_informel",
+      "name": "[Painting] Tachisme Informel",
+      "family": "Traditional Painting",
+      "axis": "style",
+      "medium": "abstract style image",
+      "nl": "Informel rendering: blots and stabs of loaded pigment, scraped smears dragged across each other, no composition beyond the mark itself, earthy palette on raw ground, abstract style image.",
+      "tags": [
+        "painting_(medium)",
+        "textured",
+        "muted_color",
+        "traditional_media"
+      ],
+      "tags_negative": [
+        "minimalism"
+      ],
+      "negative": "hard geometry, flat even fills",
       "aliases": [],
       "written": true
     },
@@ -2743,6 +3260,26 @@
         "lineart"
       ],
       "negative": "crisp outlines, flat opaque fills",
+      "aliases": [],
+      "written": true
+    },
+    {
+      "id": "traditio.white_relief_monochrome",
+      "name": "[Painting] White Relief Monochrome",
+      "family": "Traditional Painting",
+      "axis": "style",
+      "medium": "abstract style image",
+      "nl": "Monochrome-relief rendering: an all-white field broken only by cast shadow, folds, cuts and studs raked by low side light, chalky matte surface, tonal range built from depth rather than colour, abstract style image.",
+      "tags": [
+        "white_theme",
+        "minimalism",
+        "textured",
+        "chiaroscuro"
+      ],
+      "tags_negative": [
+        "colorful"
+      ],
+      "negative": "saturated colour, printed graphics",
       "aliases": [],
       "written": true
     },

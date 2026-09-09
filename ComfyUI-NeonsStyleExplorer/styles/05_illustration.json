@@ -1267,6 +1267,46 @@
       "written": true
     },
     {
+      "id": "illustra.chicano_fine_line",
+      "name": "[Drawing] Chicano Fine-Line",
+      "family": "Illustration",
+      "axis": "style",
+      "medium": "drawing style image",
+      "nl": "Fine-line rendering: single-needle grey wash and pencil, smooth photoreal graduation in monochrome, script lettering and ornate framing, deep blacks against bare paper, drawing style image.",
+      "tags": [
+        "graphite_(medium)",
+        "monochrome",
+        "greyscale",
+        "realistic"
+      ],
+      "tags_negative": [
+        "colorful"
+      ],
+      "negative": "flat colour fills, loose sketchy line",
+      "aliases": [],
+      "written": true
+    },
+    {
+      "id": "illustra.patent_drawing",
+      "name": "[Drawing] Patent Drawing",
+      "family": "Illustration",
+      "axis": "style",
+      "medium": "technical drawing style image",
+      "nl": "Patent-drawing rendering: uniform ink line with no tone at all, parts numbered on leader lines, section cuts filled with even ruled hatching, wide white ground and a labelled figure caption, technical drawing style image.",
+      "tags": [
+        "lineart",
+        "monochrome",
+        "diagram",
+        "white_theme"
+      ],
+      "tags_negative": [
+        "gradient"
+      ],
+      "negative": "painted shading, photographic rendering",
+      "aliases": [],
+      "written": true
+    },
+    {
       "id": "illustra.beatrix_potter_v2",
       "name": "[Drawing][v2] Beatrix Potter",
       "family": "Illustration",
@@ -2092,6 +2132,46 @@
       "written": true
     },
     {
+      "id": "illustra.airbrushed_van_mural",
+      "name": "[Illustration] Airbrushed Van Mural",
+      "family": "Illustration",
+      "axis": "style",
+      "medium": "illustration style image",
+      "nl": "Custom-van rendering: airbrushed fantasy scene on sheet metal, soft candy gradients and chrome highlight sparkle, wraparound composition following the panel curve, clear-coat gloss, illustration style image.",
+      "tags": [
+        "airbrush_(medium)",
+        "gradient",
+        "1970s_(style)",
+        "shiny"
+      ],
+      "tags_negative": [
+        "lineart"
+      ],
+      "negative": "hard inked outlines, matte flat colour",
+      "aliases": [],
+      "written": true
+    },
+    {
+      "id": "illustra.alchemical_emblem",
+      "name": "[Illustration] Alchemical Emblem",
+      "family": "Illustration",
+      "axis": "style",
+      "medium": "print style image",
+      "nl": "Emblem-book rendering: engraved symbolic diagram enclosed in a ruled roundel, celestial and mineral signs arranged in strict hierarchy, dense burin hatching, laid paper with plate tone, print style image.",
+      "tags": [
+        "monochrome",
+        "lineart",
+        "cross-hatching",
+        "traditional_media"
+      ],
+      "tags_negative": [
+        "gradient"
+      ],
+      "negative": "airbrushed shading, modern flat vector",
+      "aliases": [],
+      "written": true
+    },
+    {
       "id": "illustra.art_deco_fashion_plate",
       "name": "[Illustration] Art Deco Fashion Plate",
       "family": "Illustration",
@@ -2130,6 +2210,26 @@
         "photorealistic"
       ],
       "negative": "photographic depth, harsh contrast",
+      "aliases": [],
+      "written": true
+    },
+    {
+      "id": "illustra.blackwork_dotwork_tattoo",
+      "name": "[Illustration] Blackwork Dotwork Tattoo",
+      "family": "Illustration",
+      "axis": "style",
+      "medium": "drawing style image",
+      "nl": "Blackwork rendering: solid black masses beside dense stippled gradients, geometric ornament and sacred-geometry framing, no colour whatsoever, bare skin tone left as the highlight, drawing style image.",
+      "tags": [
+        "monochrome",
+        "high_contrast",
+        "lineart",
+        "minimalism"
+      ],
+      "tags_negative": [
+        "colorful"
+      ],
+      "negative": "watercolour bleed, coloured shading",
       "aliases": [],
       "written": true
     },
@@ -2337,6 +2437,26 @@
       "written": true
     },
     {
+      "id": "illustra.fraktur_folk_manuscript",
+      "name": "[Illustration] Fraktur Folk Manuscript",
+      "family": "Illustration",
+      "axis": "style",
+      "medium": "drawing style image",
+      "nl": "Fraktur rendering: Pennsylvania-German folk manuscript, tulips, hearts and paired birds in flat watercolour, ruled ink borders boxing each element, ornate blackletter flourishes, laid paper tone, drawing style image.",
+      "tags": [
+        "watercolor_(medium)",
+        "traditional_media",
+        "flat_color",
+        "ink_(medium)"
+      ],
+      "tags_negative": [
+        "photorealistic"
+      ],
+      "negative": "photographic rendering, digital gradients",
+      "aliases": [],
+      "written": true
+    },
+    {
       "id": "illustra.game_concept_art",
       "name": "[Illustration] Game Concept Art",
       "family": "Illustration",
@@ -2393,6 +2513,26 @@
         "minimalism"
       ],
       "negative": "flat modern vector, cold digital colour",
+      "aliases": [],
+      "written": true
+    },
+    {
+      "id": "illustra.marginalia_grotesque",
+      "name": "[Illustration] Marginalia Grotesque",
+      "family": "Illustration",
+      "axis": "style",
+      "medium": "drawing style image",
+      "nl": "Manuscript-margin rendering: spindly hybrid creatures sprouting from inked vine tendrils, gold leaf dots, tiny burnished initials, ruled text block left blank beside them, vellum tone, drawing style image.",
+      "tags": [
+        "ink_(medium)",
+        "gold",
+        "traditional_media",
+        "flat_color"
+      ],
+      "tags_negative": [
+        "photorealistic"
+      ],
+      "negative": "photographic rendering, modern typography",
       "aliases": [],
       "written": true
     },
@@ -2496,6 +2636,26 @@
         "flat_color"
       ],
       "negative": "flat vector shapes, clean cartoon colour",
+      "aliases": [],
+      "written": true
+    },
+    {
+      "id": "illustra.pinstripe_kustom",
+      "name": "[Illustration] Pinstripe Kustom",
+      "family": "Illustration",
+      "axis": "style",
+      "medium": "illustration style image",
+      "nl": "Pinstripe rendering: long tapering sword-brush lines in symmetrical pairs, gold and white scrollwork over deep gloss lacquer, hairline flourishes ending in fine points, illustration style image.",
+      "tags": [
+        "gold",
+        "shiny",
+        "dark",
+        "minimalism"
+      ],
+      "tags_negative": [
+        "textured"
+      ],
+      "negative": "painterly texture, thick opaque shapes",
       "aliases": [],
       "written": true
     },

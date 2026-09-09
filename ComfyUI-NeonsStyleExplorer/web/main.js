@@ -1,7 +1,7 @@
 import { app } from "../../scripts/app.js";
 import { api } from "../../scripts/api.js";
-import { NODE_TYPES, RANDOM, loadCatalog, loadCatalogSets, loadGallery, namesOf, saveRun, shotsOf, state } from "./api.js";
-import { advanceCrawl, attachPanel, composeNow, effectiveStyle, fitToContent, keepFitted, layout, queueCompose, refresh, rollStyle, saveImage, saveLatest, syncCrawl, value, widget } from "./panel.js";
+import { NODE_TYPES, RANDOM, entryOf, lastErrorText, loadCatalog, loadCatalogSets, loadGallery, namesOf, saveRun, shotsOf, state } from "./api.js";
+import { advanceCrawl, attachPanel, say, composeNow, effectiveStyle, fitToContent, keepFitted, layout, queueCompose, refresh, rollStyle, saveImage, saveLatest, syncCrawl, value, widget } from "./panel.js";
 
 function syncCombo(node, field, axis) {
     const w = widget(node, field);
@@ -18,6 +18,22 @@ function syncCombos(node) {
     syncCombo(node, "style_3", "style");
     syncCombo(node, "format", "format");
     syncCombo(node, "finish", "finish");
+    syncCustomSlot(node);
+}
+
+/**
+ * The custom_style slot lists only the user's own entries, and it is refreshed
+ * from the live catalog rather than from the definition: a style written in the
+ * editor should appear without restarting ComfyUI.
+ */
+function syncCustomSlot(node) {
+    const w = widget(node, "custom_style");
+    if (!w) return;
+    const mine = namesOf("style").filter((name) => (entryOf(name)?.source || "shipped") === "custom");
+    const values = ["None", RANDOM, ...mine];
+    w.options = w.options || {};
+    w.options.values = values;
+    if (!values.includes(w.value)) w.value = "None";
 }
 
 function hook(node) {
@@ -102,9 +118,20 @@ async function autoGallery(promptId) {
         state.runs.delete(String(promptId || ""));
         await loadGallery();
         for (const node of app.graph?._nodes || []) {
-            if (NODE_TYPES.has(node.comfyClass || node.type)) refresh(node);
+            if (!NODE_TYPES.has(node.comfyClass || node.type)) continue;
+            refresh(node);
+            report(node, result);
         }
         return;
+    }
+    if (result === null || result?.error) {
+        // a hard failure: say so on every Neons node rather than silently
+        // dropping the image
+        const why = result?.error || lastErrorText("auto-gallery could not reach the server");
+        console.warn(`Neons Style Explorer: auto-gallery failed — ${why}`);
+        for (const node of app.graph?._nodes || []) {
+            if (NODE_TYPES.has(node.comfyClass || node.type)) say(node, why, true);
+        }
     }
 
     // Fallback for an older backend: pair from this prompt's own report.
@@ -127,6 +154,18 @@ async function autoGallery(promptId) {
         });
     }
     if (promptId) state.runs.delete(String(promptId));
+}
+
+/** Tell the user what the server did with this prompt's image. */
+function report(node, result) {
+    const mine = String(node.id);
+    const saved = (result.saved || []).find((entry) => String(entry.node) === mine);
+    if (saved) {
+        say(node, `saved to ${saved.style}`);
+        return;
+    }
+    const skipped = (result.skipped || []).find((entry) => String(entry.node) === mine);
+    if (skipped && skipped.reason !== "another node") say(node, `not saved — ${skipped.reason}`, true);
 }
 
 let listening = false;
@@ -222,6 +261,27 @@ app.registerExtension({
             }
             layout(this);
             return result;
+        };
+
+        // A workflow saved before custom_style existed carries one value fewer,
+        // and litegraph applies widget values BY INDEX — without this every
+        // widget after the new slot would load one place out of step.
+        const configure = nodeType.prototype.configure;
+        nodeType.prototype.configure = function (info) {
+            try {
+                const list = (this.widgets || []).filter((w) => w?.options?.serialize !== false);
+                const at = list.findIndex((w) => w.name === "custom_style");
+                const values = info?.widgets_values;
+                if (at >= 0 && Array.isArray(values) && values.length === list.length - 1) {
+                    values.splice(at, 0, "None");
+                    console.log(
+                        "Neons Style Explorer: migrated a workflow saved before the custom_style slot existed"
+                    );
+                }
+            } catch (err) {
+                console.warn("Neons Style Explorer: widget migration skipped", err);
+            }
+            return configure?.apply(this, arguments);
         };
 
         const onExecuted = nodeType.prototype.onExecuted;

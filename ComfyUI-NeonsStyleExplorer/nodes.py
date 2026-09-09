@@ -2,7 +2,7 @@
 
 from . import compose as composer
 from . import runs
-from .catalog import RANDOM_TOKEN, crawl_names, entries, names_for, push_recent, resolve, roll
+from .catalog import RANDOM_TOKEN, crawl_names, custom_names, entries, names_for, push_recent, resolve, roll
 
 WEB_DIRECTORY = "./web"
 
@@ -34,6 +34,10 @@ def widgets():
         }),
         "style_2": (styles, {"default": "None", "tooltip": "Optional second style."}),
         "style_3": (styles, {"default": "None", "tooltip": "Optional third style."}),
+        "custom_style": (["None", RANDOM_TOKEN] + custom_names("style"), {
+            "default": "None",
+            "tooltip": "Your own styles only — anything you wrote in the editor. Composes as a fourth style slot. Empty until you create one; use Refresh Node Definitions after adding one.",
+        }),
         "style_mix": (list(composer.MIX_WORDS.keys()), {
             "default": "blended with",
             "tooltip": "How extra styles are joined in natural language.",
@@ -71,6 +75,10 @@ def widgets():
             "default": False, "label_on": "crawl through", "label_off": "crawl off",
             "tooltip": "Walk the main style dropdown one entry per queued run instead of rolling, so a batch fills the gallery in order. It starts from whatever style is selected, so park on the one you want to begin at. Turns the dice off on every slot while it is on; the set it walks is roll_scope (use 'missing preview' with auto_gallery to fill the gaps).",
         }),
+        "crawl_missing_only": ("BOOLEAN", {
+            "default": False, "label_on": "only missing previews", "label_off": "every entry",
+            "tooltip": "While crawling, skip styles that already have a preview. The list is re-checked at every step, so entries drop out as their previews are made. Ignored when crawl is off.",
+        }),
         "roll_scope": (ROLL_SCOPES, {
             "default": "all",
             "tooltip": "Which styles the dice may land on, and which set crawl walks: everything, the primary style's family, your favourites, recently used, or by preview state.",
@@ -87,14 +95,17 @@ def widgets():
     }
 
 
-def pick_styles(values, pool, scope, family, seed, previews, crawl=False):
+def pick_styles(values, pool, scope, family, seed, previews, crawl=False, kwargs_missing_only=False):
     picked, used = [], set()
     for value in values:
         if value == RANDOM_TOKEN and crawl:
             # crawl mode owns the sequence: the dice must not fire underneath it.
             # An unresolved dice on the main slot falls back to the first entry
             # of the crawl set, so a run is never styleless.
-            names = crawl_names(scope, family, previews) if not picked else []
+            names = crawl_names(
+                scope, family, previews,
+                missing_only=bool(kwargs_missing_only),
+            ) if not picked else []
             entry = resolve(names[0], pool) if names else None
         elif value == RANDOM_TOKEN:
             entry = roll(
@@ -128,7 +139,7 @@ def build_debug(kwargs, positive, negative, styles, fmt, finish):
         f"finish:         {finish['name'] if finish else 'None'}",
         f"medium:         {styles[0]['medium'] if styles else 'n/a'}",
         f"style_weight:   {kwargs.get('style_weight', 1.0)}",
-        f"crawl:          {'on — ' + str(kwargs.get('roll_scope', 'all')) if kwargs.get('crawl') else 'off'}",
+        f"crawl:          {'on — ' + str(kwargs.get('roll_scope', 'all')) + (', missing previews only' if kwargs.get('crawl_missing_only') else '') if kwargs.get('crawl') else 'off'}",
         f"hand-written:   {all(e['written'] for e in styles) if styles else 'n/a'}",
         "",
         "QUALITY", kwargs.get("quality") or "(empty)",
@@ -151,15 +162,17 @@ def run(**kwargs):
     # 'family' scope needs a family to work from: take it from whichever slot
     # holds a concrete style, since slot 1 may be the dice itself
     family_hint = None
-    for field in ("style", "style_2", "style_3"):
+    for field in ("style", "style_2", "style_3", "custom_style"):
         entry = resolve(kwargs.get(field, "None"), pool)
         if entry:
             family_hint = entry["family"]
             break
 
     styles = pick_styles(
-        [kwargs.get("style", "None"), kwargs.get("style_2", "None"), kwargs.get("style_3", "None")],
+        [kwargs.get("style", "None"), kwargs.get("style_2", "None"),
+         kwargs.get("style_3", "None"), kwargs.get("custom_style", "None")],
         pool, scope, family_hint, seed, previews, crawl,
+        bool(kwargs.get("crawl_missing_only", False)),
     )
     fmt = pick_axis(kwargs.get("format", "None"), "format", pool, previews, crawl)
     finish = pick_axis(kwargs.get("finish", "None"), "finish", pool, previews, crawl)
@@ -198,9 +211,10 @@ class _Base:
     CATEGORY = "Neons"
 
     @classmethod
-    def VALIDATE_INPUTS(cls, style=None, style_2=None, style_3=None, format=None, finish=None, **_kw):
+    def VALIDATE_INPUTS(cls, style=None, style_2=None, style_3=None, custom_style=None,
+                        format=None, finish=None, **_kw):
         pool = entries()
-        for value in (style, style_2, style_3, format, finish):
+        for value in (style, style_2, style_3, custom_style, format, finish):
             if value in (None, "", "None", RANDOM_TOKEN):
                 continue
             if resolve(value, pool) is None:

@@ -264,6 +264,27 @@
       "written": true
     },
     {
+      "id": "design.angelcore",
+      "name": "[Aesthetic] Angelcore",
+      "family": "Design & Aesthetics",
+      "axis": "style",
+      "medium": "photograph style image",
+      "nl": "Angelcore rendering: milky diffused light with feathers adrift in it, marble and pearl surfaces, gold leaf glints, pale cream and blush palette blown gently towards white, photograph style image.",
+      "tags": [
+        "pale_color",
+        "soft_focus",
+        "overexposure",
+        "marble",
+        "gold"
+      ],
+      "tags_negative": [
+        "dark"
+      ],
+      "negative": "hard contrast, saturated dark palette",
+      "aliases": [],
+      "written": true
+    },
+    {
       "id": "design.anti_design",
       "name": "[Aesthetic] Anti-Design",
       "family": "Design & Aesthetics",
@@ -408,6 +429,26 @@
       "written": true
     },
     {
+      "id": "design.bento_grid_ui",
+      "name": "[Aesthetic] Bento Grid UI",
+      "family": "Design & Aesthetics",
+      "axis": "style",
+      "medium": "graphic style image",
+      "nl": "Bento-grid rendering: modular rounded cards packed tight into a strict grid, generous inner padding, one accent hue against near-black, tiny mono labels and soft inner glow, graphic style image.",
+      "tags": [
+        "minimalism",
+        "dark",
+        "flat_color",
+        "gradient"
+      ],
+      "tags_negative": [
+        "textured"
+      ],
+      "negative": "cluttered ornament, paper texture",
+      "aliases": [],
+      "written": true
+    },
+    {
       "id": "design.biopunk",
       "name": "[Aesthetic] Biopunk",
       "family": "Design & Aesthetics",
@@ -527,6 +568,46 @@
         "neon_palette"
       ],
       "negative": "neon city grade, clinical white light",
+      "aliases": [],
+      "written": true
+    },
+    {
+      "id": "design.cassette_futurism",
+      "name": "[Aesthetic] Cassette Futurism",
+      "family": "Design & Aesthetics",
+      "axis": "style",
+      "medium": "photograph style image",
+      "nl": "Cassette-futurist rendering: the future imagined through 1970s hardware, beige and grey mouldings, amber CRT glow and rocker switches, chunky bezels under fluorescent office light, photograph style image.",
+      "tags": [
+        "1970s_(style)",
+        "muted_color",
+        "retro_artstyle",
+        "glowing"
+      ],
+      "tags_negative": [
+        "highres"
+      ],
+      "negative": "sleek glass minimalism, brushed aluminium modernity",
+      "aliases": [],
+      "written": true
+    },
+    {
+      "id": "design.cd_rom_clipart",
+      "name": "[Aesthetic] CD-ROM Clipart",
+      "family": "Design & Aesthetics",
+      "axis": "style",
+      "medium": "graphic style image",
+      "nl": "Mid-1990s clipart rendering: bevelled headings with hard drop shadows, rainbow gradient fills, mismatched stock vector shapes, tiled background pattern and dithered 256-colour banding, graphic style image.",
+      "tags": [
+        "1990s_(style)",
+        "gradient",
+        "dithering",
+        "vector_trace"
+      ],
+      "tags_negative": [
+        "minimalism"
+      ],
+      "negative": "restrained modern layout, subtle typography",
       "aliases": [],
       "written": true
     },
@@ -1112,6 +1193,26 @@
       "written": true
     },
     {
+      "id": "design.glitchcore",
+      "name": "[Aesthetic] Glitchcore",
+      "family": "Design & Aesthetics",
+      "axis": "style",
+      "medium": "graphic style image",
+      "nl": "Glitchcore rendering: hyper-saturated layers stacked and torn, channel-split fringing, stuttered duplicate frames, sticker fragments and noise blocks crowding every gap, graphic style image.",
+      "tags": [
+        "glitch",
+        "high_saturation",
+        "chromatic_aberration",
+        "colorful"
+      ],
+      "tags_negative": [
+        "minimalism"
+      ],
+      "negative": "calm clean layout, muted palette",
+      "aliases": [],
+      "written": true
+    },
+    {
       "id": "design.goblincore",
       "name": "[Aesthetic] Goblincore",
       "family": "Design & Aesthetics",
@@ -1129,6 +1230,26 @@
         "minimalism"
       ],
       "negative": "clean minimal styling, bright studio light",
+      "aliases": [],
+      "written": true
+    },
+    {
+      "id": "design.googie",
+      "name": "[Aesthetic] Googie",
+      "family": "Design & Aesthetics",
+      "axis": "style",
+      "medium": "photograph style image",
+      "nl": "Googie rendering: boomerang angles, starbursts and cantilevered roof planes, plate glass beside terrazzo and neon tubing, optimistic desert daylight with hard shadow, photograph style image.",
+      "tags": [
+        "1970s_(style)",
+        "colorful",
+        "high_contrast",
+        "retro_artstyle"
+      ],
+      "tags_negative": [
+        "desaturated"
+      ],
+      "negative": "sober modernist restraint, overcast flat light",
       "aliases": [],
       "written": true
     },
@@ -1191,6 +1312,26 @@
         "neon_palette"
       ],
       "negative": "neon modern gloss, hard contrast",
+      "aliases": [],
+      "written": true
+    },
+    {
+      "id": "design.grandmillennial_chintz",
+      "name": "[Aesthetic] Grandmillennial Chintz",
+      "family": "Design & Aesthetics",
+      "axis": "style",
+      "medium": "photograph style image",
+      "nl": "Grandmillennial rendering: layered florals, chintz glaze and pleated shades, scalloped trims against wallpaper pattern, warm lamp light on polished mahogany, photograph style image.",
+      "tags": [
+        "colorful",
+        "textured",
+        "patchwork",
+        "muted_color"
+      ],
+      "tags_negative": [
+        "minimalism"
+      ],
+      "negative": "bare minimal interiors, cold daylight",
       "aliases": [],
       "written": true
     },
@@ -1628,6 +1769,26 @@
       "written": true
     },
     {
+      "id": "design.metabolism_capsule",
+      "name": "[Aesthetic] Metabolism Capsule",
+      "family": "Design & Aesthetics",
+      "axis": "style",
+      "medium": "photograph style image",
+      "nl": "Metabolist rendering: stacked prefabricated capsules clipped to concrete cores, repeated round windows, raw grey precast surfaces streaked by weather, flat overcast light, photograph style image.",
+      "tags": [
+        "desaturated",
+        "stone",
+        "grey_background",
+        "realistic"
+      ],
+      "tags_negative": [
+        "colorful"
+      ],
+      "negative": "ornamented facades, warm golden light",
+      "aliases": [],
+      "written": true
+    },
+    {
       "id": "design.metalhead",
       "name": "[Aesthetic] Metalhead",
       "family": "Design & Aesthetics",
@@ -1709,6 +1870,26 @@
       "written": true
     },
     {
+      "id": "design.ms_paint_bitmap",
+      "name": "[Aesthetic] MS Paint Bitmap",
+      "family": "Design & Aesthetics",
+      "axis": "style",
+      "medium": "graphic style image",
+      "nl": "Bitmap-editor rendering: hard aliased brush strokes at one pixel weight, flood-filled areas leaking through gaps, dithered fill patterns, default sixteen-colour palette on white, graphic style image.",
+      "tags": [
+        "pixel_art",
+        "dithering",
+        "flat_color",
+        "limited_palette"
+      ],
+      "tags_negative": [
+        "gradient"
+      ],
+      "negative": "anti-aliased curves, blended airbrush shading",
+      "aliases": [],
+      "written": true
+    },
+    {
       "id": "design.neo_noir",
       "name": "[Aesthetic] Neo-Noir",
       "family": "Design & Aesthetics",
@@ -1726,6 +1907,46 @@
         "monochrome"
       ],
       "negative": "flat daylight, monochrome classicism",
+      "aliases": [],
+      "written": true
+    },
+    {
+      "id": "design.neumorphism",
+      "name": "[Aesthetic] Neumorphism",
+      "family": "Design & Aesthetics",
+      "axis": "style",
+      "medium": "graphic style image",
+      "nl": "Neumorphic rendering: forms extruded from one pale ground, soft dual shadows above and below every shape, near-invisible edges, monochrome surface with faint inner glow, graphic style image.",
+      "tags": [
+        "minimalism",
+        "pale_color",
+        "gradient",
+        "monochrome"
+      ],
+      "tags_negative": [
+        "high_contrast"
+      ],
+      "negative": "hard drop shadows, saturated colour blocks",
+      "aliases": [],
+      "written": true
+    },
+    {
+      "id": "design.new_wave_typography",
+      "name": "[Aesthetic] New Wave Typography",
+      "family": "Design & Aesthetics",
+      "axis": "style",
+      "medium": "poster style image",
+      "nl": "New-wave rendering: layered translucent planes of pastel colour, wide letterspacing and stepped baselines, dotted rules and floating fragments, early digital gradients over halftone, poster style image.",
+      "tags": [
+        "pastel_colors",
+        "gradient",
+        "halftone",
+        "1980s_(style)"
+      ],
+      "tags_negative": [
+        "monochrome"
+      ],
+      "negative": "rigid single-column layout, muted neutral palette",
       "aliases": [],
       "written": true
     },
@@ -2324,6 +2545,26 @@
         "textured"
       ],
       "negative": "rustic texture, chaotic ornament",
+      "aliases": [],
+      "written": true
+    },
+    {
+      "id": "design.swiss_punk",
+      "name": "[Aesthetic] Swiss Punk",
+      "family": "Design & Aesthetics",
+      "axis": "style",
+      "medium": "poster style image",
+      "nl": "Swiss-punk rendering: the grid broken on purpose, type stepped and letterspaced to breaking point, heavy rules and rotated blocks colliding, photocopy grain across flat spot colour, poster style image.",
+      "tags": [
+        "high_contrast",
+        "limited_palette",
+        "textured",
+        "poster_(medium)"
+      ],
+      "tags_negative": [
+        "minimalism"
+      ],
+      "negative": "orderly grid alignment, glossy corporate polish",
       "aliases": [],
       "written": true
     },

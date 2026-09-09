@@ -25,6 +25,15 @@ const CSS = `
 .ns-shots { flex:0 0 auto; display:flex; gap:6px; overflow-x:auto; overflow-y:visible; padding:5px 2px 2px;
     pointer-events:auto; }
 .ns-shots:empty { display:none; }
+.ns-arrow { position:absolute; top:50%; transform:translateY(-50%); width:26px; height:34px; padding:0;
+    display:none; align-items:center; justify-content:center; font-size:13px; line-height:1;
+    border:1px solid rgba(255,255,255,.14); background:rgba(10,12,16,.62); color:#e7ebf2;
+    border-radius:7px; cursor:pointer; opacity:.45; transition:opacity .12s, background .12s; z-index:3; }
+.ns-thumb:hover .ns-arrow { opacity:1; }
+.ns-arrow:hover { background:rgba(20,24,32,.9); }
+.ns-arrow:disabled { opacity:.18; cursor:default; }
+.ns-arrow.prev { left:6px; }
+.ns-arrow.next { right:6px; }
 .ns-shot { position:relative; flex:0 0 auto; }
 .ns-shots .pick { display:block; width:36px; height:36px; padding:0; border-radius:7px;
     border:1px solid rgba(255,255,255,.12); background:#14161c; overflow:hidden; cursor:pointer; }
@@ -37,6 +46,13 @@ const CSS = `
 .ns-shots img { width:100%; height:100%; object-fit:cover; display:block; pointer-events:none; -webkit-user-drag:none; }
 .ns-bar button.fav.on { color:#ffd66e; border-color:#6a5a2a; }
 .ns-bar button:disabled { opacity:.4; cursor:default; }
+/* overlaid on the preview, not in the flow: the panel height is measured, and a
+   line that appears and disappears must not move the buttons */
+.ns-say { position:absolute; left:0; right:0; top:0; display:none; z-index:4;
+    padding:4px 8px; font-size:10px; line-height:1.35; color:#8de39b;
+    background:rgba(6,8,12,.88); border-bottom:1px solid rgba(255,255,255,.08);
+    overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+.ns-say.bad { color:#f5b0b0; }
 .ns-bar { flex:0 0 auto; display:flex; flex-wrap:wrap; gap:5px; pointer-events:auto; }
 .ns-bar button { flex:1 1 76px; height:27px; padding:0 8px; font-size:11px; border-radius:7px;
     border:1px solid rgba(255,255,255,.12); background:#191b21; color:#e7e9ee; cursor:pointer;
@@ -78,6 +94,45 @@ const CSS = `
     background:#1b1e26; color:#e7e9ee; cursor:pointer; font-size:12px; }
 .ns-tools button:hover { background:#242833; }
 .ns-tools button.key { background:#2f5fd0; border-color:#5480ee; }
+.ns-prompts { display:flex; align-items:center; gap:8px; flex-wrap:wrap; padding:7px 12px;
+    border-bottom:1px solid rgba(255,255,255,.07); background:#15171d; }
+.ns-modal label .sub { font-weight:400; color:#6b7280; font-size:10px; margin-left:4px; }
+.ns-modal #ns-newfamily { margin-top:5px; }
+.ns-famlist { display:flex; flex-direction:column; gap:6px; max-height:46vh; overflow:auto; margin:6px 0 10px; }
+.ns-famlist .fam { display:flex; align-items:center; gap:8px; padding:6px 9px; border-radius:8px;
+    border:1px solid #2a2d36; background:#15171d; font-size:12px; color:#d7dbe2; }
+.ns-famlist .fam.locked { opacity:.6; }
+.ns-famlist .fam.none { justify-content:center; color:#6b7280; font-style:italic; }
+.ns-famlist .fam .n { font-weight:600; }
+.ns-famlist .fam .c { color:#7b8290; font-size:11px; margin-right:auto; }
+.ns-famlist .fam .tag { font-size:10px; color:#7b8290; border:1px solid #2f333d; border-radius:999px; padding:1px 7px; }
+.ns-famlist .fam button { font-size:11px; padding:3px 9px; border-radius:7px; border:1px solid #333642;
+    background:#1b1e26; color:#cfd3da; cursor:pointer; }
+.ns-famlist .fam button.bad { color:#f0a0a0; border-color:#4a2b30; }
+.ns-famlist .fam button.key { background:#2f5fd0; border-color:#5480ee; color:#fff; }
+.ns-famlist .fam input.rename { flex:1; padding:4px 8px; font-size:12px; border-radius:7px;
+    border:1px solid #3b5a8a; background:#10131a; color:#e7ebf2; }
+.ns-card.compact .body { display:none; }
+.ns-card.compact .pic .star, .ns-card.compact .pic .killshot { transform:scale(.8); }
+.ns-zoom { display:flex; align-items:center; gap:5px; font-size:11px; color:#8b93a1; white-space:nowrap; }
+.ns-zoom select { font-size:11px; }
+.ns-prompts .sep { width:1px; align-self:stretch; background:rgba(255,255,255,.09); }
+.ns-prompts .ttl { font-size:11px; font-weight:600; color:#8b93a1; letter-spacing:.2px; white-space:nowrap; }
+.ns-prompts .list { display:flex; align-items:center; gap:6px; flex:1 1 260px; flex-wrap:wrap; min-width:0; }
+.ns-prompts .none { font-size:11px; color:#5c626e; font-style:italic; }
+.ns-prompts .p { max-width:100%; padding:3px 9px; border-radius:999px; border:1px solid #333642;
+    background:#1b1e26; color:#cfd3da; font-size:11px; cursor:pointer; text-align:left;
+    overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+.ns-prompts .p:hover { background:#222630; }
+.ns-prompts .p.on { border-color:#5480ee; background:#1e2740; color:#dce6ff; }
+.ns-prompts button.addprompt, .ns-prompts button.delprompt { font-size:11px; padding:3px 10px;
+    border-radius:7px; border:1px solid #333642; background:#1b1e26; color:#cfd3da; cursor:pointer; }
+.ns-prompts button.addprompt { border-color:#3b5a8a; color:#bcd4ff; }
+.ns-prompts button.delprompt:disabled { opacity:.35; cursor:default; }
+.ns-prompts .promptbox { display:none; flex:1 1 240px; min-width:160px; padding:4px 8px; font-size:11px;
+    border-radius:7px; border:1px solid #3b5a8a; background:#10131a; color:#e7ebf2; }
+.ns-prompts .note { font-size:10px; color:#7fd08a; min-width:0; }
+.ns-prompts .note.bad { color:#f0a0a0; }
 .ns-viewport { position:relative; padding:14px 16px 24px; }
 .ns-cards { position:relative; }
 .ns-card { position:absolute; box-sizing:border-box; background:#161922; border:1px solid #262a34;
@@ -159,8 +214,8 @@ export function ensureCss() {
         el.id = "ns-style-css";
         document.head.appendChild(el);
     }
-    if (el.dataset.v !== "6") {
+    if (el.dataset.v !== "13") {
         el.textContent = CSS;
-        el.dataset.v = "6";
+        el.dataset.v = "13";
     }
 }

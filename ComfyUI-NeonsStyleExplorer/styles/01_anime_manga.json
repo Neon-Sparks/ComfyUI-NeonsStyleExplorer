@@ -1223,6 +1223,26 @@
       "written": true
     },
     {
+      "id": "anime.kanada_school_effects",
+      "name": "[Anime] Kanada School Effects",
+      "family": "Anime & Manga",
+      "axis": "style",
+      "medium": "anime style image",
+      "nl": "Kanada-school rendering: angular explosion shapes with cracked highlight rims, debris flung outward in hard cel shapes, exaggerated perspective smears, hot yellow-white cores, anime style image.",
+      "tags": [
+        "anime_coloring",
+        "high_contrast",
+        "motion_lines",
+        "glowing"
+      ],
+      "tags_negative": [
+        "photorealistic"
+      ],
+      "negative": "soft realistic smoke, photographic fire",
+      "aliases": [],
+      "written": true
+    },
+    {
       "id": "anime.kawaii_pastel_palette",
       "name": "[Anime] Kawaii Pastel Palette",
       "family": "Anime & Manga",
@@ -1515,6 +1535,26 @@
       "written": true
     },
     {
+      "id": "anime.missile_swarm_trails",
+      "name": "[Anime] Missile Swarm Trails",
+      "family": "Anime & Manga",
+      "axis": "style",
+      "medium": "anime style image",
+      "nl": "Missile-swarm rendering: dozens of thin smoke trails spiralling in dense parallel curves, hard cel-shaded plumes, steep perspective on the trail bundle, high-contrast sky behind it, anime style image.",
+      "tags": [
+        "anime_coloring",
+        "motion_lines",
+        "cel_shading",
+        "high_contrast"
+      ],
+      "tags_negative": [
+        "photorealistic"
+      ],
+      "negative": "realistic volumetric smoke, muted haze",
+      "aliases": [],
+      "written": true
+    },
+    {
       "id": "anime.modern_streaming_digital",
       "name": "[Anime] Modern Streaming Digital",
       "family": "Anime & Manga",
@@ -1640,6 +1680,26 @@
       "aliases": [
         "official art"
       ],
+      "written": true
+    },
+    {
+      "id": "anime.ova_airbrush_poster",
+      "name": "[Anime] OVA Airbrush Poster",
+      "family": "Anime & Manga",
+      "axis": "style",
+      "medium": "anime style image",
+      "nl": "OVA airbrush rendering: airbrushed gradients over hand-inked line, chrome sparkle and hard rim light on every edge, deep purple-to-magenta sky wash, faint print halftone in the flats, anime style image.",
+      "tags": [
+        "airbrush_(medium)",
+        "1980s_(style)",
+        "gradient",
+        "retro_artstyle"
+      ],
+      "tags_negative": [
+        "no_lineart"
+      ],
+      "negative": "flat modern digital colour, lineless painting",
+      "aliases": [],
       "written": true
     },
     {
@@ -1957,6 +2017,26 @@
       "aliases": [
         "shonen"
       ],
+      "written": true
+    },
+    {
+      "id": "anime.smear_frame_sakuga",
+      "name": "[Anime] Smear-Frame Sakuga",
+      "family": "Anime & Manga",
+      "axis": "style",
+      "medium": "anime style image",
+      "nl": "Smear-frame rendering: deliberately distorted in-between drawings, limbs stretched into ribbons for a single beat, several ghosted contours at once, flat cel colour kept flat through the distortion, anime style image.",
+      "tags": [
+        "anime_coloring",
+        "motion_blur",
+        "motion_lines",
+        "cel_shading"
+      ],
+      "tags_negative": [
+        "photorealistic"
+      ],
+      "negative": "clean model-accurate drawing, photographic blur",
+      "aliases": [],
       "written": true
     },
     {
@@ -3523,6 +3603,26 @@
         "colorful"
       ],
       "negative": "colour, digital gradients",
+      "aliases": [],
+      "written": true
+    },
+    {
+      "id": "anime.copy_book_toner",
+      "name": "[Manga] Copy-Book Toner",
+      "family": "Anime & Manga",
+      "axis": "style",
+      "medium": "manga style image",
+      "nl": "Copy-shop doujin rendering: toner-heavy monochrome printing, screentone crushed into flat black patches, line thickened and slightly ghosted, cheap absorbent paper stock, manga style image.",
+      "tags": [
+        "screentones",
+        "monochrome",
+        "doujinshi",
+        "high_contrast"
+      ],
+      "tags_negative": [
+        "highres"
+      ],
+      "negative": "clean offset printing, colour pages",
       "aliases": [],
       "written": true
     },

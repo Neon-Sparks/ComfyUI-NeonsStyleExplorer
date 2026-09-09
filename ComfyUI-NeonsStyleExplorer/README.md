@@ -11,6 +11,9 @@ Nodes (category **Neons**):
 * **Neons Style Explorer (Encode)** — the same plus CLIP encode
 * **Neons Gallery Capture** — headless equivalent of the Save button
 
+**[Read the manual](MANUAL.md)** — every widget, the browser, previews, the
+crawl workflow, catalogs and troubleshooting.
+
 ## Install
 
 **ComfyUI Manager** — search for *Neons Style Explorer* and install, then restart
@@ -22,6 +25,10 @@ ComfyUI.
 cd ComfyUI/custom_nodes
 git clone https://github.com/Neon-Sparks/ComfyUI-NeonsStyleExplorer
 ```
+
+Restart ComfyUI after installing or updating — a browser refresh loads the new
+interface but not the node's HTTP routes, so new features fail until the process
+restarts.
 
 No extra dependencies: it uses Pillow and numpy, both of which ComfyUI already
 ships. Python 3.9+.
@@ -88,13 +95,13 @@ style's stable id, so renaming never orphans an image.
 
 ## The catalog
 
-**1284 entries, every clause hand-written**, across nine families: photography & film 267, traditional painting 181, anime & manga 169, design & aesthetics 147, comics & print 142, 3D & games 140, illustration 123, western animation 60, experimental & material 55. Three axes — 1136 styles, 97 formats, 51 finishes. Old `[Clio]` names are relabelled `[v2]`, and every merged duplicate keeps its old name as a search alias. `STYLES.md` lists everything.
+**1417 entries, every clause hand-written**, across nine families: photography & film 248, traditional painting 208, anime & manga 164, design & aesthetics 150, 3D & games 148, illustration 122, comics & print 83, experimental & material 78, western animation 68. Three axes — 1269 styles, 97 formats, 51 finishes. Old `[Clio]` names are relabelled `[v2]`, and every merged duplicate keeps its old name as a search alias. `STYLES.md` lists everything.
 
 ```
 tools/build_all.sh               # import + lint + index + docs + examples + tests
 python3 tools/lint.py --all      # every finding
 node tools/check_web.mjs         # UI: undefined calls and bad imports
-python3 tests/test_compose.py    # 43 tests
+python3 tests/test_compose.py    # 46 tests
 ```
 
 The source of truth for the text is `tools/written/*.json`; `import_source.py`

@@ -54,18 +54,16 @@ export function value(node, name, fallback = "") {
  * Kept on the node so several nodes can crawl independently.
  */
 export function crawlState(node) {
-    if (!node._nsCrawl) node._nsCrawl = { names: [], index: 0, scope: "", family: "" };
+    if (!node._nsCrawl) node._nsCrawl = { names: [], scope: "", family: "" };
     return node._nsCrawl;
 }
 
 /**
- * Refetch the walk whenever the switch, the scope or the family changes.
- *
- * The walk always starts wherever the style dropdown already is, so you can
- * park on the entry you want to populate from and switch crawl on there. If the
- * current style is not itself in the scope (say it has a preview and the scope
- * is "missing preview"), the walk starts at the first entry of the scope that
- * comes after it in catalog order. Pass restart:true to jump to the top.
+ * Fetch the list of styles the current scope allows. It does NOT track a
+ * position: the walk's position is always the style dropdown itself (see
+ * hopStyle). A separate counter was the cause of a crawl skipping entries —
+ * anything that refreshed the list re-seeded the counter mid-batch and the walk
+ * jumped.
  */
 export async function syncCrawl(node, { restart = false } = {}) {
     const crawl = crawlState(node);
@@ -83,48 +81,78 @@ export async function syncCrawl(node, { restart = false } = {}) {
         crawl.family = family;
     }
     if (!crawl.names.length) {
-        refresh(node);
-        return crawl;
+        // an empty scope must never freeze the walk: standing still pins a whole
+        // batch to one style
+        crawl.names = namesOf("style");
+        console.warn(
+            `Neons Style Explorer: the '${scope}' scope is empty, so crawl is walking the whole catalog`
+        );
     }
-    crawl.index = restart ? 0 : startIndex(crawl.names, anchor);
-    // only move the dropdown when it is not already sitting on a real style
-    if (restart || !anchor || anchor !== crawl.names[crawl.index]) {
-        setValue(node, "style", crawl.names[crawl.index]);
-    }
+    // Only ever move the dropdown deliberately — on a restart, or when it is not
+    // yet on a real style. Moving it on a refresh would lose your place.
+    const pool = crawlPool(node);
+    if (pool.length && (restart || !anchor)) setValue(node, "style", pool[0]);
     refresh(node);
     return crawl;
 }
 
-/** Where in the walk a given style sits, or the next scope entry after it. */
-function startIndex(names, anchor) {
-    if (!anchor) return 0;
-    const at = names.indexOf(anchor);
-    if (at >= 0) return at;
-    const all = namesOf("style");
-    const position = all.indexOf(anchor);
-    if (position < 0) return 0;
-    const next = names.findIndex((name) => all.indexOf(name) >= position);
-    return next >= 0 ? next : 0;
+/**
+ * The ordered list the walk steps through right now: the scope's styles, minus
+ * the ones that already have a preview when "only missing previews" is on. It
+ * is recomputed at every step, so previews saved during the run drop out of the
+ * walk as they are made.
+ */
+function crawlPool(node) {
+    const crawl = crawlState(node);
+    const base = crawl.names.length ? crawl.names : namesOf("style");
+    if (!value(node, "crawl_missing_only", false)) return base;
+    const missing = base.filter((name) => !shotsOf(name));
+    return missing.length ? missing : base;   // all covered: keep moving
 }
 
 /**
- * Step to the next style in the crawl. Called once per QUEUED prompt (not per
- * execution), which is what makes a batch of N runs cover N styles — the same
- * moment ComfyUI advances a seed with control_after_generate.
+ * Step the style dropdown by one, in either direction.
+ *
+ * The position is derived from whatever the dropdown currently holds, never
+ * from a stored index, so nothing can drift: refreshing the pool, changing the
+ * scope, arrowing by hand or picking a style in the browser all just move the
+ * starting point of the next step. If the current style is not in the pool (it
+ * has a preview and the walk is missing-only), the step lands on the nearest
+ * pool entry in that direction.
+ */
+export function hopStyle(node, direction) {
+    const pool = crawlPool(node);
+    if (!pool.length) return;
+    const all = namesOf("style");
+    const current = effectiveStyle(node);
+    const at = pool.indexOf(current);
+    let next;
+    if (at >= 0) {
+        next = pool[(at + direction + pool.length) % pool.length];
+    } else {
+        const position = all.indexOf(current);
+        if (position < 0) {
+            next = pool[direction > 0 ? 0 : pool.length - 1];
+        } else if (direction > 0) {
+            next = pool.find((name) => all.indexOf(name) > position) ?? pool[0];
+        } else {
+            const before = pool.filter((name) => all.indexOf(name) < position);
+            next = before[before.length - 1] ?? pool[pool.length - 1];
+        }
+    }
+    if (next) setValue(node, "style", next);
+}
+
+/**
+ * Called once per QUEUED prompt — the moment ComfyUI advances a seed with
+ * control_after_generate — which is what makes a batch of N runs cover N
+ * styles rather than repeating one.
  */
 export function advanceCrawl(node) {
     if (!value(node, "crawl", false)) return;
     const crawl = crawlState(node);
-    if (!crawl.names.length) return;
-    crawl.index = (crawl.index + 1) % crawl.names.length;
-    const next = crawl.names[crawl.index];
-    const widgetRef = widget(node, "style");
-    if (!widgetRef) return;
-    widgetRef.value = next;
-    widgetRef.callback?.(next);
-    refresh(node);
-    queueCompose(node);
-    node.setDirtyCanvas?.(true, true);
+    if (!crawl.names.length) syncCrawl(node).catch(() => {});
+    hopStyle(node, 1);
 }
 
 export function effectiveStyle(node) {
@@ -337,6 +365,60 @@ function stripHtml(record, name) {
         .join("");
 }
 
+/**
+ * A short line under the buttons: what auto-gallery just did, or why it did
+ * nothing. Auto-saving used to fail in complete silence, which is indefensible
+ * during an unattended crawl — you find out hours later that the catalog is
+ * empty.
+ */
+export function say(node, text, bad = false) {
+    const panel = node?._nsPanel;
+    const note = panel?.querySelector(".ns-say");
+    if (!note) return;
+    note.textContent = text || "";
+    note.classList.toggle("bad", Boolean(bad));
+    note.style.display = text ? "block" : "none";
+    clearTimeout(node._nsSayTimer);
+    if (text) {
+        node._nsSayTimer = setTimeout(() => {
+            note.textContent = "";
+            note.style.display = "none";
+        }, 6000);
+    }
+}
+
+/**
+ * Put a freshly written style straight onto the node, ready to render.
+ *
+ * The dropdowns are built from the catalog that was loaded when the node was
+ * created, so a brand-new style is not in their option lists yet — they have to
+ * be refreshed here or the assignment is silently rejected as an unknown value.
+ */
+export async function adoptStyle(node, name) {
+    if (!name) return;
+    await loadCatalog();
+    const all = namesOf("style");
+    const mine = all.filter((entry) => (entryOf(entry)?.source || "shipped") === "custom");
+    const lists = {
+        style: ["None", RANDOM, ...all],
+        style_2: ["None", RANDOM, ...all],
+        style_3: ["None", RANDOM, ...all],
+        custom_style: ["None", RANDOM, ...mine],
+    };
+    for (const [field, values] of Object.entries(lists)) {
+        const found = widget(node, field);
+        if (!found) continue;
+        found.options = found.options || {};
+        found.options.values = values;
+    }
+    // the main slot, not custom_style: the preview, Save and auto-gallery all
+    // follow the main slot, which is what "ready to generate a preview" needs
+    setValue(node, "style", name);
+    await loadGallery();
+    refresh(node);
+    say(node, `selected ${name}`);
+}
+
 /** Redraw every Neons node that has a panel attached. */
 function refreshAll() {
     for (const other of app.graph?._nodes || []) {
@@ -374,6 +456,12 @@ function catalogMenu(node) {
     ];
 }
 
+/**
+ * Page through the catalog one style at a time, so you can flip through
+ * previews on the node and stop on the one you want. This walks the whole style
+ * list in catalog order and wraps at both ends; the shot strip below the
+ * preview is what chooses between several images of the SAME style.
+ */
 export function refresh(node) {
     const panel = node._nsPanel;
     if (!panel) return;
@@ -388,6 +476,16 @@ export function refresh(node) {
     const label = panel.querySelector(".ns-name");
     const chip = panel.querySelector(".ns-chip");
     const strip = panel.querySelector(".ns-shots");
+
+    // the arrows are a manual version of one crawl step, so they follow the same
+    // pool and stay usable while crawl is on
+    const onlyMissing = Boolean(value(node, "crawl_missing_only", false));
+    for (const arrow of panel.querySelectorAll(".ns-arrow")) {
+        arrow.style.display = "flex";
+        arrow.disabled = false;
+        arrow.title = (arrow.classList.contains("prev") ? "Previous" : "Next")
+            + (onlyMissing ? " style without a preview" : " style");
+    }
 
     const crawling = Boolean(value(node, "crawl", false));
     label.textContent = rolled && name ? `rolled: ${name}` : (name || "");
@@ -522,8 +620,11 @@ export function attachPanel(node) {
         <div class="ns-thumb">
           <img alt="style preview">
           <div class="ns-none">Click to browse styles</div>
+          <button type="button" class="ns-arrow prev" title="Previous style">&#10094;</button>
+          <button type="button" class="ns-arrow next" title="Next style">&#10095;</button>
           <div class="ns-chip"></div>
           <div class="ns-name"></div>
+          <div class="ns-say"></div>
         </div>
       </div>
       <div class="ns-shots"></div>
@@ -544,14 +645,28 @@ export function attachPanel(node) {
       </div>
     `;
 
-    panel.querySelector(".ns-thumb").onclick = () => browse(node, "style", "style");
+    panel.querySelector(".ns-thumb").onclick = (ev) => {
+        if (ev.target.closest(".ns-arrow")) return;  // arrows page the previews
+        browse(node, "style", "style");
+    };
+    panel.querySelector(".prev").onclick = (ev) => {
+        ev.stopPropagation();
+        hopStyle(node, -1);
+    };
+    panel.querySelector(".next").onclick = (ev) => {
+        ev.stopPropagation();
+        hopStyle(node, 1);
+    };
     panel.querySelector(".roll").onclick = () => rollStyle(node, "style");
     panel.querySelector(".browse").onclick = () => browse(node, "style", "style");
     panel.querySelector(".save").onclick = () => saveLatest(node);
     panel.querySelector(".edit").onclick = () => {
         const name = effectiveStyle(node);
         if (!name) return;
-        openEditor({ name, onSaved: () => refresh(node) });
+        openEditor({
+            name,
+            onSaved: (saved) => (saved && saved !== name ? adoptStyle(node, saved) : refresh(node)),
+        });
     };
     panel.querySelector(".fav").onclick = async () => {
         const name = effectiveStyle(node);
@@ -574,8 +689,16 @@ export function attachPanel(node) {
             { label: "Roll style 2", run: () => rollStyle(node, "style_2") },
             { label: "Roll style 3", run: () => rollStyle(node, "style_3") },
             "-",
-            { label: "New custom style", run: () => openEditor({ create: true, onSaved: () => refresh(node) }) },
-            { label: "Clear styles", run: () => ["style", "style_2", "style_3", "format", "finish"].forEach((f) => setValue(node, f, "None")) },
+            {
+                label: "New custom style",
+                run: () => openEditor({
+                    create: true,
+                    // straight onto the node when it saves, so the next queue
+                    // renders it without a trip through the catalog
+                    onSaved: (saved) => adoptStyle(node, saved),
+                }),
+            },
+            { label: "Clear styles", run: () => ["style", "style_2", "style_3", "custom_style", "format", "finish"].forEach((f) => setValue(node, f, "None")) },
             "-",
             {
                 label: "Delete this shot", bad: true, disabled: !shots,
@@ -636,7 +759,7 @@ export async function composeNow(node) {
         prompt: value(node, "prompt", ""),
         quality: value(node, "quality", ""),
         negative: value(node, "negative", ""),
-        styles: ["style", "style_2", "style_3"]
+        styles: ["style", "style_2", "style_3", "custom_style"]
             .map((field) => (field === "style" ? effectiveStyle(node) || value(node, field, "None") : value(node, field, "None")))
             .filter((name) => name && name !== "None"),
         format: value(node, "format", "None"),

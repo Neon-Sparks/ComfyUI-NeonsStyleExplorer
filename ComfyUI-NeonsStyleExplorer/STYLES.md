@@ -1,47 +1,50 @@
 # Style catalog
 
-1284 entries, all hand-written — 1136 styles, 97 formats, 51 finishes.
+1417 entries, all hand-written — 1269 styles, 97 formats, 51 finishes.
 
 Each entry is a style prefix: it describes only how the picture is rendered
 and closes with its medium. The node adds nothing else.
 
 | medium | entries |
 | --- | --- |
-| photograph style image | 326 |
-| anime style image | 137 |
-| illustration style image | 108 |
-| painting style image | 88 |
-| cgi style image | 82 |
-| comic style image | 58 |
-| graphic style image | 58 |
-| material style image | 54 |
-| oil painting style image | 53 |
-| print style image | 41 |
-| cartoon style image | 39 |
-| drawing style image | 33 |
-| poster style image | 28 |
-| film still style image | 28 |
-| handmade style image | 20 |
+| photograph style image | 351 |
+| anime style image | 141 |
+| illustration style image | 110 |
+| painting style image | 99 |
+| cgi style image | 86 |
+| material style image | 69 |
+| graphic style image | 63 |
+| comic style image | 61 |
+| oil painting style image | 59 |
+| print style image | 51 |
+| cartoon style image | 44 |
+| drawing style image | 39 |
+| film still style image | 33 |
+| poster style image | 30 |
+| abstract style image | 30 |
+| handmade style image | 23 |
+| game art style image | 18 |
 | vector style image | 15 |
-| technical drawing style image | 14 |
-| abstract style image | 13 |
-| game art style image | 12 |
+| technical drawing style image | 15 |
+| collage style image | 14 |
+| manga style image | 12 |
 | ink painting style image | 12 |
-| collage style image | 12 |
-| manga style image | 11 |
 | watercolour painting style image | 11 |
 | pixel art style image | 9 |
 | video artefact style image | 9 |
 | webtoon style image | 7 |
 | instant photograph style image | 6 |
 
-## 3D & Games (140)
+## 3D & Games (150)
 
 | name | axis | tags | clause |
 | --- | --- | --- | --- |
 | [3D] Amiga Copper Gradient | style | dithering, gradient, pixel_art, limited_palette | Amiga-demo rendering: banded copper gradient sky, dithered pixel shading, limited indexed palette, hard sprite edges, pixel art style image. |
 | [3D] Anime Cel-Shaded 3D | style | 3d, cel_shading, outline, anime_coloring | Cel-shaded 3D rendering: banded toon lighting on sculpted geometry, inked contour, anime-style flat colour zones, clean specular dots, cgi style image. |
 | [3D] Architectural White Model | style | 3d, white_theme, minimalism, simple_background | White-model rendering: untextured matte white massing, soft ambient occlusion at the joints, thin context lines, cgi style image. |
+| [3D] Avatar Platform Shot | style | 3d, cel_shading, glowing, shiny | Social-platform avatar rendering: mismatched shader styles in one frame, toon-shaded forms beside glossy PBR props, blown-out bloom, mirror-surface reflectio... |
+| [3D] Billboard Sprite 2.5D | style | pixel_art, retro_artstyle, dithering, dark | Billboard-sprite rendering: flat pre-drawn sprites always facing the camera inside blocky level geometry, hard pixel edges against textured walls, banded lig... |
+| [3D] Blocky Sandbox Toy | style | 3d, plastic, flat_color, colorful | Blocky sandbox rendering: chunky primitive bodies with cylinder limbs, plastic studded surfaces, flat bright palette, simple baked shadows on a wide open pla... |
 | [3D] CAD Blueprint Shaded | format | diagram, wireframe, 3d, blue_theme | Shaded CAD rendering: flat grey surfaces with crisp edge lines, ruled dimension arrows, blue technical ground, no texture, technical drawing style image. |
 | [3D] Car Turntable Studio | style | 3d, metallic, shiny, simple_background | Automotive-render setup: long softbox strips reflected down the bodywork, dark gradient sweep, crisp panel highlights, cgi style image. |
 | [3D] Cel-Shaded 3D | style | 3d, cel_shading, outline, flat_color | Toon-shaded rendering: hard two-band lighting across 3D forms, uniform outline, flat local colour, minimal specular, cgi style image. |
@@ -55,6 +58,7 @@ and closes with its medium. The node adds nothing else.
 | [3D] Data Visualisation | style | 3d, diagram, glowing, minimalism | Data-viz rendering: extruded bars and nodes on a grid plane, emissive accent colour, clean matte materials, soft ambient light, cgi style image. |
 | [3D] Demoscene Raymarch | style | 3d, glowing, gradient, surreal | Raymarched rendering: procedural infinite geometry, soft ambient occlusion, glowing distance fog, mathematical repetition, cgi style image. |
 | [3D] Destruction Sim | style | 3d, motion_blur, textured, cinematic_lighting | Destruction rendering: fractured chunks mid-flight, dust plumes, trailing debris, hard rim light through the cloud, cgi style image. |
+| [3D] Displacement Terrain | style | 3d, scenery, desaturated, landscape | Procedural terrain rendering: ridged noise displaced into endless ranges, erosion channels repeating at every scale, thin atmospheric haze stacking towards t... |
 | [3D] DOS VGA 256 | style | pixel_art, dithering, limited_palette, retro_artstyle | VGA-era rendering: 320x200 chunky pixels, 256-colour palette, heavy ordered dithering, dark saturated ramps, pixel art style image. |
 | [3D] Dreamcast Era | style | 3d, low_poly, colorful, retro_artstyle | Dreamcast-era rendering: clean mid-poly models, vivid saturated vertex colour, sharp small textures, hard specular dots, cgi style image. |
 | [3D] Edo-Dot Pixel Portrait | style | pixel_art, dithering, limited_palette, portrait | Chunky pixel-portrait rendering: large square pixels, limited arcade palette, hard aliased edges, dithered shading, pixel art style image. |
@@ -65,6 +69,7 @@ and closes with its medium. The node adds nothing else.
 | [3D] Fractal Flame | style | glowing, dark, gradient, psychedelic | Fractal-flame rendering: luminous filament swirls on black, additive colour blending, infinite self-similar detail, abstract style image. |
 | [3D] Fur Groom | style | fur, 3d, backlighting, highres | Groom rendering: layered hair strands with clumping and flyaways, backlit rim scatter, soft depth falloff, cgi style image. |
 | [3D] Game Engine Cinematic | style | 3d, cinematic_lighting, god_rays, film_grain | Engine cinematic rendering: realtime global illumination, volumetric light shafts, screen-space reflections, film grain overlay, game art style image. |
+| [3D] Gaussian Splat Artifacts | style | 3d, blurry, transparent, glitch | Splat-reconstruction rendering: surfaces built from overlapping translucent blobs, furry silhouettes and smeared thin geometry, floating stray splats in mid-... |
 | [3D] Glassmorphism UI Object | style | glass, transparent, gradient, pastel_colors | Glassmorphic rendering: frosted translucent panels, soft background blur through the glass, pastel gradients, thin bright edges, cgi style image. |
 | [3D] Glitch Art | style | glitch, high_contrast, colorful, dithering | Glitch rendering: RGB channel displacement, datamoshed blocks, scanline tearing, corrupted colour banding, video artefact style image. |
 | [3D] Grease-Pencil Hybrid | style | 3d, lineart, flat_color, textured | Grease-pencil hybrid rendering: hand-drawn strokes in 3D space, flat inked shapes over volumetric staging, paper-grain overlay, cgi style image. |
@@ -82,8 +87,11 @@ and closes with its medium. The node adds nothing else.
 | [3D] LiDAR Point Cloud | style | 3d, dithering, dark, glowing | Point-cloud rendering: surfaces made of scattered coloured points, gaps where the scan missed, thinning density at distance, cgi style image. |
 | [3D] Liquid Chrome | style | metallic, shiny, 3d, iridescent | Liquid-chrome rendering: mirror-perfect molten metal, warped environment reflections, blue-white specular blowout, cgi style image. |
 | [3D] Low-Poly | style | low_poly, 3d, flat_color, minimalism | Faceted low-poly rendering: chunky triangulated forms, flat per-face colour, crisp silhouette angles, minimal detail, cgi style image. |
+| [3D] Machinima Capture | style | 3d, low_poly, glitch, muted_color | In-engine capture rendering: game assets staged for camera with the interface switched off, stiff canned poses, aliased edges and compressed capture artefact... |
 | [3D] Medical Visualisation | style | 3d, transparent, glowing, dark | Medical-viz rendering: translucent anatomical layers, clean subsurface reds, isolated dark ground, clinical rim light, cgi style image. |
+| [3D] Metaball Blob | style | 3d, shiny, gradient, transparent | Metaball rendering: soft spheres merging into one continuous skin, necks pinching where forms separate, glossy wet-looking surface, studio gradient behind wi... |
 | [3D] Mid-1990s CGI Feature | style | 3d, plastic, retro_artstyle, shiny | Mid-90s CGI rendering: plasticky shaders, simple specular blobs, sparse texture detail, clean bright key light, cgi style image. |
+| [3D] Mode 7 Pseudo-3D | style | pixel_art, retro_artstyle, flat_color, limited_palette | Mode-7 rendering: a flat bitmap plane warped into perspective, texels stretching enormous towards the horizon, hard scanline banding, flat sprite objects pas... |
 | [3D] Motion Graphics Abstract | style | 3d, gradient, pastel_colors, depth_of_field | Motion-design rendering: looping abstract primitives, soft studio gradient light, glossy pastel materials, tidy depth of field, cgi style image. |
 | [3D] Nintendo 64 Filtering | style | low_poly, 3d, soft_focus, retro_artstyle | N64-era rendering: blurry bilinear-filtered textures, chunky low-poly forms, vertex-lit flat shading, distance fog, cgi style image. |
 | [3D] Octane Render | style | 3d, caustics, depth_of_field, highres | Octane-style rendering: filmic CG materials, crisp caustics, deep depth of field, physically accurate glass and metal, cgi style image. |
@@ -96,10 +104,12 @@ and closes with its medium. The node adds nothing else.
 | [3D] Photoscan Error | style | 3d, glitch, textured, surreal | Failed-photoscan rendering: melted stretched geometry, smeared projected texture, floating fragments, holes in the mesh, cgi style image. |
 | [3D] Product Studio Render | style | 3d, simple_background, shiny, white_theme | Product render: seamless studio sweep, large softbox reflections in glossy surfaces, crisp edge highlight, clean shadow, cgi style image. |
 | [3D] PS1 Affine | style | 3d, low_poly, dithering, pixel_art | PS1-era rendering: warped affine texture mapping, vertex jitter, low-resolution textures, no antialiasing, dark dithered fog, cgi style image. |
+| [3D] PSX Horror Lo-Fi | style | low_poly, dithering, dark, retro_artstyle | Fifth-generation horror rendering: low triangle counts with warped affine texturing, vertex jitter, dense distance fog swallowing the far plane, muddy dither... |
 | [3D] Redshift | style | 3d, highres, cinematic_lighting, shiny | Redshift-style rendering: clean commercial CGI, controlled specular highlights, tidy volumetrics, crisp look-dev finish, cgi style image. |
 | [3D] Section Diorama | style | diagram, 3d, flat_color, simple_background | Section-cut rendering: building sliced open to show interiors, flat cut planes in solid colour, tidy miniature scale, cgi style image. |
 | [3D] Sega Saturn Flat | style | low_poly, dithering, 3d, retro_artstyle | Saturn-era rendering: quad-based flat-shaded geometry, dithered transparency, warped texture seams, dark palette, cgi style image. |
 | [3D] Sixth-Gen Console | style | 3d, low_poly, retro_artstyle, dithering | Sixth-generation console rendering: simple per-vertex lighting, blurry low-res textures, hard-edged shadows, limited draw distance, cgi style image. |
+| [3D] Source-Era Shooter | style | 3d, rust, muted_color, 2000s_(style) | Mid-2000s engine rendering: bump-mapped brick and rusted metal, orange-grey palette, hard lightmapped shadows baked in place, low-poly props with sharp silho... |
 | [3D] Stylized Comedy Feature | style | 3d, colorful, plastic, cinematic_lighting | Comedy-feature CGI: exaggerated squash-and-stretch proportions, bouncy soft materials, bright key with warm bounce, cgi style image. |
 | [3D] Stylized Feature Animation | style | 3d, cinematic_lighting, colorful, rim_lighting | Stylised feature CGI: appealing simplified forms, soft subsurface skin, art-directed colour script, gentle rim light, cgi style image. |
 | [3D] Tabletop Terrain | style | textured, 3d, brown_theme, green_theme | Terrain rendering: foam-carved rock and flock grass, dry-brushed highlights, visible base edges, tabletop scale light, cgi style image. |
@@ -180,7 +190,7 @@ and closes with its medium. The node adds nothing else.
 | [Pixel] 32-bit Pre-rendered Hybrid | style | pixel_art, dithering, 3d, retro_artstyle | Pre-rendered hybrid: sprites baked from 3D onto a pixel grid, dithered gradients, richer palette, slight blur in the source, pixel art style image. |
 | [Pixel] 8-bit | style | pixel_art, limited_palette, dithering, retro_artstyle | 8-bit rendering: tiny fixed palette, chunky pixels on a coarse grid, no antialiasing, tile-repeated background, pixel art style image. |
 
-## Anime & Manga (169)
+## Anime & Manga (174)
 
 | name | axis | tags | clause |
 | --- | --- | --- | --- |
@@ -235,6 +245,7 @@ and closes with its medium. The node adds nothing else.
 | [Anime] Iyashikei Healing Soft | style | anime_coloring, pastel_colors, soft_focus, scenery | Iyashikei healing rendering: pale airy palette, low contrast, diffuse ambient light, soft-edged shading, watercolour-tinted backgrounds, anime style image. |
 | [Anime] Josei | style | josei, anime_coloring, muted_color, lineart | Josei rendering: adult proportions, restrained muted palette, fine tapering line, fabric weight and fold detail, quiet even light, anime style image. |
 | [Anime] Josei Fashion | style | josei, anime_coloring, muted_color, lineart | Josei fashion rendering: elegant elongated figures, editorial neutral palette, precise garment seam and drape lines, matte skin shading, anime style image. |
+| [Anime] Kanada School Effects | style | anime_coloring, high_contrast, motion_lines, glowing | Kanada-school rendering: angular explosion shapes with cracked highlight rims, debris flung outward in hard cel shapes, exaggerated perspective smears, hot y... |
 | [Anime] Kawaii Pastel Palette | style | pastel_colors, anime_coloring, moe, gradient | Kawaii pastel rendering: strawberry-milk, mint and lilac colour blocks, soft rounded shapes, low-contrast shading, glossy dot highlights, anime style image. |
 | [Anime] Kawaii Rounded | style | moe, chibi, outline, flat_color | Kawaii rounded rendering: every form softened to a bubble, thick friendly outline, minimal shading, cheerful saturated pastels, sticker-clean edges, anime st... |
 | [Anime] Kemono Anthropomorphic | style | kemonomimi, anime_coloring, fur, cel_shading | Kemono rendering: anime line over animal-featured design, fur tuft linework, flat cel colour with airbrushed muzzle shading, bright poster palette, anime sty... |
@@ -250,12 +261,14 @@ and closes with its medium. The node adds nothing else.
 | [Anime] Mascot / Yuru-Chara | style | chibi, flat_color, outline, simple_background | Mascot character rendering: bold readable silhouette, minimal facial marks, flat block colour, thick outline, plush-soft volumes, anime style image. |
 | [Anime] Mecha Technical Line | style | anime_coloring, lineart, cel_shading, metallic | Mecha technical rendering: panel-line precision, flat metal colour with hard shadow wedges, colour-hold detailing instead of chrome, decal and stencil marks,... |
 | [Anime] Mini SD Mascot | style | super_deformed, chibi, flat_color, outline | Mini super-deformed mascot rendering: palm-sized proportions, simplified two-dot eyes, flat bright fill, soft contact shadow, sticker outline, anime style im... |
+| [Anime] Missile Swarm Trails | style | anime_coloring, motion_lines, cel_shading, high_contrast | Missile-swarm rendering: dozens of thin smoke trails spiralling in dense parallel curves, hard cel-shaded plumes, steep perspective on the trail bundle, high... |
 | [Anime] Modern Streaming Digital | style | anime_coloring, cel_shading, depth_of_field, glowing | Modern streaming anime finish: immaculate thin line, cool grey shadow tint, layered ambient gradient, composited bloom, dust motes and shallow focus, anime s... |
 | [Anime] Moe Proportions | style | moe, anime_coloring, pastel_colors, bishoujo | Moe rendering: large glossy eyes, small nose and mouth, soft round cheeks, pale pastel shading, thin light line, anime style image. |
 | [Anime] Moe Soft Blob | style | moe, pastel_colors, soft_focus, no_lineart | Soft-blob moe rendering: marshmallow-round forms, barely-there outline, cotton pastel palette, diffuse shadowless light, anime style image. |
 | [Anime] No Lineart Painterly | style | no_lineart, painting_(medium), anime_coloring, gradient | Outline-free painterly anime: form built from colour blocks and brush edges, soft blended transitions, warm atmospheric light, visible stroke texture, anime ... |
 | [Anime] Oekaki | style | oekaki, dithering, pixel_art, limited_palette | Oekaki board rendering: jagged mouse-drawn line, low-resolution pixel edges, small default palette, dithered shading, early-web canvas feel, anime style image. |
 | [Anime] Official Art Polish | style | official_art, anime_coloring, highres, cinematic_lighting | Official-art polish: poster-grade lighting, immaculate ink, layered specular highlights, rich saturated grade, flawless edges, anime style image. |
+| [Anime] OVA Airbrush Poster | style | airbrush_(medium), 1980s_(style), gradient, retro_artstyle | OVA airbrush rendering: airbrushed gradients over hand-inked line, chrome sparkle and hard rim light on every edge, deep purple-to-magenta sky wash, faint pr... |
 | [Anime] Painterly Composite Film | style | anime_coloring, painting_(medium), depth_of_field, film_grain | Composited film anime: painted cel over photographic background plate, atmospheric haze layers, light wrap and diffusion, grain matched across layers, anime ... |
 | [Anime] Painterly Key Visual | format | key_visual, painting_(medium), anime_coloring, official_art | Artbook-grade painted key visual: visible brush texture over anime drawing, soft edge control, layered colour glazes, warm bounce light, no broadcast flatnes... |
 | [Anime] Pastoral Fantasy Film | style | anime_coloring, scenery, sunlight, painting_(medium) | Pastoral fantasy anime: sun-warmed green palette, gouache scenery detail, soft cel figures, hazy distance, gentle wind-blown grass texture, anime style image. |
@@ -272,6 +285,7 @@ and closes with its medium. The node adds nothing else.
 | [Anime] Shonen Action | style | shounen, speed_lines, anime_coloring, cel_shading | Shounen action rendering: heavy inked outline, speed lines and impact bursts, hot saturated primaries, hard cel shadows, dynamic foreshortening, anime style ... |
 | [Anime] Shōjo Line | style | shoujo, lineart, pastel_colors, screentones | Shoujo line quality: hair-thin tapering strokes, elongated slender figures, decorative screentone flowers, airy layout, pale palette, anime style image. |
 | [Anime] Shōnen Ink | style | shounen, ink_(medium), monochrome, speed_lines | Shounen brush inking: thick tapering brush strokes, blunt spotted blacks, motion hatching, splatter accents, white paper ground, ink painting style image. |
+| [Anime] Smear-Frame Sakuga | style | anime_coloring, motion_blur, motion_lines, cel_shading | Smear-frame rendering: deliberately distorted in-between drawings, limbs stretched into ribbons for a single beat, several ghosted contours at once, flat cel... |
 | [Anime] Soft Glow Character Acting | style | anime_coloring, rim_lighting, glowing, gradient | Soft glow acting rendering: gentle rim light around figures, warm ambient bounce, subtle blush gradients, feather-edged shadows, delicate bloom, anime style ... |
 | [Anime] Soft Romance Render | style | shoujo, pastel_colors, soft_focus, screentones | Soft romance-manga rendering: airy pastel palette, delicate tapering line, blush gradients, floating flower screentone, anime style image. |
 | [Anime] Soft-Shaded Illustration | style | anime_coloring, airbrush_(medium), gradient, pastel_colors | Soft-shaded anime illustration: airbrushed transitions over anime line, gentle colour temperature shifts, subtle skin gradients, low-contrast palette, anime ... |
@@ -345,6 +359,7 @@ and closes with its medium. The node adds nothing else.
 | [Format] Manga Page | format | manga, comic, screentones, monochrome | Printed manga page: black ink on newsprint white, panel gutters and varied panel shapes, screentone greys, speed lines, hand-lettered balloon space, manga st... |
 | [Manga] 4-Koma Gag | style | 4koma, manga, monochrome, flat_color | Four-panel gag manga: simple round faces, sparse flat tone, minimal props, thin even line, generous white gutters, manga style image. |
 | [Manga] Black-and-White Screentone | style | screentones, monochrome, manga, halftone | Monochrome screentone manga: dotted grey tone sheets, sharp ink contours, hatch shadow build-up, blotted spot blacks, paper white ground, manga style image. |
+| [Manga] Copy-Book Toner | style | screentones, monochrome, doujinshi, high_contrast | Copy-shop doujin rendering: toner-heavy monochrome printing, screentone crushed into flat black patches, line thickened and slightly ghosted, cheap absorbent... |
 | [Manga] Full-Color Contemporary | style | manga, anime_coloring, flat_color, colorful | Contemporary full-colour manga rendering: clean ink over flat digital colour, soft cel shading, bright modern palette, subtle texture overlay, anime style im... |
 | [Manga] Manhua Ink-Wash Fantasy | style | ink_wash_painting, manhwa, webtoon, traditional_media | Manhua ink-wash fantasy rendering: brushed ink gradients, jade-and-ink palette, flowing ribbon and mist shapes, rice-paper texture, webtoon style image. |
 | [Manga] Manhwa Glossy Color | style | manhwa, webtoon, gradient, rim_lighting | Glossy manhwa colouring: airbrushed skin sheen, thin coloured outline, cool cinematic grade, strong rim light, polished gradient backdrops, webtoon style image. |
@@ -354,15 +369,17 @@ and closes with its medium. The node adds nothing else.
 | [Manga] Shonen Jump Weekly | style | shounen, manga, speed_lines, monochrome | Weekly shounen rendering: bold rushed ink line, dense speed lines, flat spot blacks, high-energy diagonal layout, cheap print tone, anime style image. |
 | [Manga] Webtoon Vertical Color | format | webtoon, manhwa, anime_coloring, gradient | Vertical-scroll webtoon colouring: soft airbrushed gradients, thin clean outline, pastel-bright palette, glow accents, seamless tall composition, webtoon sty... |
 
-## Comics & Print (142)
+## Comics & Print (153)
 
 | name | axis | tags | clause |
 | --- | --- | --- | --- |
+| [Comic] Blue-Line Pencil Page | style | sketch, unfinished, comic, blue_theme | Blue-line comic rendering: page pencils photographed before inking, non-photo blue construction beneath grey graphite, panel borders ruled but unfilled, eras... |
 | [Comic] Bonelli Black-and-White | style | comic, monochrome, cross-hatching, textured | Italian-digest rendering: clean brush ink with hatched greys, tight three-tier panel rhythm, coarse pulp paper, no colour, comic style image. |
 | [Comic] Bronze Age Grit | style | comic, halftone, muted_color, cross-hatching | Bronze-age comic rendering: heavier brush ink, muddy four-colour print, dense hatch shadow, newsprint dot texture, muted street palette, comic style image. |
 | [Comic] Fumetti Photo Comic | style | photo_(medium), halftone, comic, textured | Fumetti rendering: photographic panels with drawn balloon space, coarse halftone print, flat posterised colour, cheap paper, comic style image. |
 | [Comic] Golden Age Superhero | style | comic, halftone, limited_palette, retro_artstyle | Golden-age comic rendering: simple bold outline, flat primary four-colour inks, visible dot screens, off-register plates, yellowed pulp paper, comic style im... |
 | [Comic] Indie Alt | style | comic, spot_color, monochrome, textured | Indie-alt comic rendering: scratchy personal pen line, flat spot colour or none, uneven hand-lettered texture, cheap photocopy grain, comic style image. |
+| [Comic] Ink Wash Tone | style | ink_wash_painting, comic, monochrome, greyscale | Wash-tone comic rendering: brush-diluted ink laid over a confident pen line, grey values doing the modelling instead of dots, wet edges pooling at the panel ... |
 | [Comic] Krackle Energy | style | comic, halftone, high_contrast, colorful | Cosmic-comic rendering: fields of black energy dots, blocky machine detail, hot primary inks, heavy square-fingered forms, comic style image. |
 | [Comic] Modern Prestige Color | style | comic, painting_(medium), cinematic_lighting, muted_color | Modern prestige comic rendering: digital painted colour over clean ink, cinematic light modelling, muted sophisticated palette, subtle grain, comic style image. |
 | [Comic] Photocopied Mini-Comic | style | monochrome, high_contrast, textured, collage | Mini-comic rendering: blown-contrast photocopy, hand-lettered text, wobbling ruled panels, staple and fold creases, collage style image. |
@@ -478,19 +495,28 @@ and closes with its medium. The node adds nothing else.
 | [Format] Zine Spread | format | collage, monochrome, halftone, textured | Composed as a zine spread: two photocopied pages side by side, cut-and-paste blocks, hand-scrawled captions, staple gutter, collage style image. |
 | [Print] 16-Bit Portrait | style | pixel_art, dithering, limited_palette, retro_artstyle | 16-bit portrait rendering: limited console palette, chunky visible pixels, dithered shading ramps, hard aliased contour, pixel art style image. |
 | [Print] Aquatint | style | lithograph, monochrome, traditional_media, textured | Aquatint rendering: soft granular tonal fields bitten into the plate, velvety mid greys, plate-edge impression, cream rag paper, print style image. |
+| [Print] Chiaroscuro Woodcut | style | woodcut, limited_palette, high_contrast, traditional_media | Chiaroscuro woodcut rendering: two or three tone blocks printed over a key line, mid-tones as flat overlapping fields, highlights cut back to bare paper, sli... |
 | [Print] Chromolithograph | style | lithograph, limited_palette, retro_artstyle, textured | Chromolithograph rendering: many flat stone-printed colour layers, slight registration drift, decorative Victorian palette, paper tooth, print style image. |
+| [Print] Collagraph | style | textured, traditional_media, monochrome | Collagraph rendering: an assembled textured plate printed under heavy pressure, fabric weave, card edges and grit all reading as tone, embossed plate mark, i... |
 | [Print] Comic Ink | style | ink_(medium), monochrome, cross-hatching, comic | Comic inking: brush and pen contour with spotted blacks, feathered hatching, dry-brush texture, white paper ground, ink painting style image. |
+| [Print] Duotone Pulp Interior | style | duotone, halftone, limited_palette, comic | Duotone pulp rendering: two inks only on cheap absorbent stock, black line beside one flat spot colour, coarse halftone dots spreading as they soak, colour c... |
+| [Print] End-Grain Wood Engraving | style | woodcut, monochrome, cross-hatching, high_contrast | End-grain engraving rendering: white line cut into polished boxwood, tone built from parallel gouge strokes, highlights carved out of solid black, crisp lett... |
 | [Print] Engraving | style | lithograph, monochrome, cross-hatching, traditional_media | Engraving rendering: incised parallel burin lines, tonal build from line density, crisp hard contour, ivory paper base, print style image. |
 | [Print] Etching Drypoint | style | lithograph, monochrome, textured, traditional_media | Etching and drypoint rendering: bitten line with burred velvety edges, plate tone, uneven ink wipe, rag paper impression, print style image. |
+| [Print] Gyotaku Fish Print | style | ink_(medium), monochrome, traditional_media, textured | Gyotaku rendering: sumi ink taken directly off the subject and pressed onto washi, scale and fin texture printed one to one, soft bleed at the margins, wide ... |
 | [Print] Halftone Newsprint | style | halftone, comic, limited_palette, textured | Halftone newsprint rendering: coarse dot screens, four-colour rosettes, ink bleed into absorbent paper, faded contrast, comic style image. |
+| [Print] Katazome Stencil Dye | style | stencil, blue_theme, traditional_media, textured | Katazome rendering: rice-paste resist brushed through a cut mulberry stencil, undyed white pattern against saturated indigo, fine paste cracks breaking the l... |
 | [Print] Letterpress | style | traditional_media, limited_palette, textured, monochrome | Letterpress rendering: impressed type and line into thick paper, ink squash at the edges, one or two flat inks, deckled stock, print style image. |
 | [Print] Linocut | style | woodcut, high_contrast, limited_palette, textured | Linocut rendering: gouged bold shapes, chattering carve marks, uneven ink coverage, high-contrast two-colour print, print style image. |
 | [Print] Lithograph | style | lithograph, muted_color, textured, traditional_media | Lithograph rendering: greasy crayon texture on stone, soft granular tone, muted ink palette, plate edge and paper grain, print style image. |
 | [Print] Mezzotint | style | lithograph, monochrome, dark, traditional_media | Mezzotint rendering: velvety dense blacks scraped to light, smooth tonal gradation without line, rich plate depth, print style image. |
+| [Print] Monotype One-Off | style | ink_(medium), textured, traditional_media, monochrome | Monotype rendering: ink painted onto a smooth plate and pulled once, brush and rag marks preserved in the transfer, softened edges, wipe streaks and a visibl... |
 | [Print] Photogravure | style | sepia, monochrome, traditional_media, textured | Photogravure rendering: ink held in etched pits, soft continuous tone, warm sepia-black, matte rag paper, delicate highlight roll-off, print style image. |
+| [Print] Pochoir Stencil | style | stencil, flat_color, gouache_(medium), colorful | Pochoir rendering: flat gouache brushed through hand-cut stencils, crisp bordered shapes with a faint raised ridge of paint, opaque unmodulated colour, a fin... |
 | [Print] Pop Art Ben-Day | style | halftone, flat_color, limited_palette, high_contrast | Ben-Day pop rendering: enlarged printed dots, flat primary inks, thick black keyline, deliberate registration offset, comic style image. |
 | [Print] Riso Misreg | style | risograph, spot_color, limited_palette, textured | Risograph misregistration: two spot inks printed slightly off, overlap multiply colours, dotty uneven coverage, paper show-through, print style image. |
 | [Print] Risograph | style | risograph, limited_palette, spot_color, textured | Risograph rendering: fluorescent spot inks, grainy uneven laydown, visible screen texture, limited two or three colour palette, print style image. |
+| [Print] Rotogravure Supplement | style | sepia, photo_(medium), monochrome, textured | Rotogravure rendering: continuous-tone photographic printing in one warm brown ink, velvety mid-greys with soft edges, screen too fine to read, newsprint abs... |
 | [Print] Scratchboard | style | monochrome, high_contrast, cross-hatching, traditional_media | Scratchboard rendering: white lines scratched out of solid black clay board, engraving-like hatch, stark contrast, print style image. |
 | [Print] Screenprint | style | stencil, flat_color, limited_palette, textured | Screenprint rendering: flat opaque ink layers, hard-edged stencil shapes, slight mesh texture, limited spot palette, print style image. |
 | [Print] Screenprint Gig Poster | style | poster, stencil, halftone, limited_palette | Gig-poster screenprint rendering: two or three loud spot inks, halftone shading, hand-drawn display shapes, paper show-through, poster style image. |
@@ -501,7 +527,7 @@ and closes with its medium. The node adds nothing else.
 | [Print] Woodcut | style | woodcut, high_contrast, monochrome, textured | Woodcut rendering: carved chunky black shapes, chisel-chattered edges, stark two-value contrast, wood grain showing in the ink, print style image. |
 | [Print] Xerox Decay | style | monochrome, high_contrast, halftone, textured | Photocopy-decay rendering: generation-loss contrast, crushed blacks and blown whites, toner speckle, skewed paper edges, collage style image. |
 
-## Design & Aesthetics (147)
+## Design & Aesthetics (159)
 
 | name | axis | tags | clause |
 | --- | --- | --- | --- |
@@ -509,6 +535,7 @@ and closes with its medium. The node adds nothing else.
 | [Aesthetic] Acid House Flyer | style | risograph, high_saturation, yellow_theme, halftone | Acid-house flyer rendering: smiley motifs, fluorescent yellow and magenta inks, photocopied blur, misregistered overprint, poster style image. |
 | [Aesthetic] Afrofuturism | style | gold, glowing, colorful, metallic | Afrofuturist rendering: deep indigo and gold palette, patterned textile motifs, polished metal and beadwork highlights, cosmic glow behind the subject, graph... |
 | [Aesthetic] Analog Horror | style | analog_horror, glitch, dark, film_grain | Analog-horror rendering: degraded VHS colour, tracking tears, scanline crawl, blown highlights, timestamp burn-in, murky underexposed shadows, video artefact... |
+| [Aesthetic] Angelcore | style | pale_color, soft_focus, overexposure, marble | Angelcore rendering: milky diffused light with feathers adrift in it, marble and pearl surfaces, gold leaf glints, pale cream and blush palette blown gently ... |
 | [Aesthetic] Anti-Design | style | colorful, high_contrast, glitch, collage | Anti-design rendering: deliberately clashing type and colour, misaligned boxes, stretched imagery, ugly-on-purpose composition, graphic style image. |
 | [Aesthetic] Arts and Crafts | style | art_nouveau, muted_color, textured, traditional_media | Arts-and-Crafts rendering: hand-worked surfaces, botanical line ornament, earth-dye palette of moss, madder and oak, matte handmade texture, graphic style im... |
 | [Aesthetic] Atompunk | style | retro_artstyle, metallic, colorful, flat_color | Atompunk rendering: 1950s Googie curves, atomic starburst motifs, turquoise-and-tangerine palette, chrome trim gleam, optimistic hard-edge poster light, grap... |
@@ -516,12 +543,15 @@ and closes with its medium. The node adds nothing else.
 | [Aesthetic] Balletcore | style | pastel_colors, soft_focus, photo_(medium), pale_color | Balletcore rendering: chalk-pink and ivory palette, satin sheen, soft studio window light, powder haze, delicate low-contrast shading, photograph style image. |
 | [Aesthetic] Barbiecore | style | pink_theme, plastic, shiny, high_saturation | Barbiecore rendering: hot fuchsia and bubblegum palette, glossy plastic surfaces, bright even flash, saturated candy contrast, photograph style image. |
 | [Aesthetic] Bauhaus | style | minimalism, flat_color, poster, limited_palette | Bauhaus rendering: primary red-yellow-blue on off-white, hard geometric shape blocking, ruled grid structure, flat unmodulated colour, poster style image. |
+| [Aesthetic] Bento Grid UI | style | minimalism, dark, flat_color, gradient | Bento-grid rendering: modular rounded cards packed tight into a strict grid, generous inner padding, one accent hue against near-black, tiny mono labels and ... |
 | [Aesthetic] Biopunk | style | green_theme, wet, transparent, glowing | Biopunk rendering: wet organic surfaces, sickly green-amber lab light, membrane translucency, condensation and fluid gloss, clinical fluorescent haze, photog... |
 | [Aesthetic] Blokecore | style | 1990s_(style), film_grain, muted_color, desaturated | Blokecore rendering: 1990s terrace colour, nylon sheen, overcast flat light, grainy tabloid print feel, photograph style image. |
 | [Aesthetic] Brat Green | style | green_theme, minimalism, glitch, flat_color | Brat-green rendering: flat acid lime field, low-resolution blur, deliberately cheap type-space, harsh compression, graphic style image. |
 | [Aesthetic] Brutalism | style | stone, grey_background, monochrome, high_contrast | Brutalist rendering: raw board-marked concrete, monolithic mass, hard overcast grey light, deep shadow slabs, near-monochrome palette, photograph style image. |
 | [Aesthetic] Brutalist Web | style | white_theme, minimalism, high_contrast, monochrome | Brutalist-web rendering: default system type, raw blue links, hard black rules, unstyled boxes on stark white, graphic style image. |
 | [Aesthetic] Cabincore | style | wood, brown_theme, sunlight, film_grain | Cabincore rendering: pine-and-wool palette, warm lamplight against cold window blue, wood grain texture, soft morning haze, gentle film grain, photograph sty... |
+| [Aesthetic] Cassette Futurism | style | 1970s_(style), muted_color, retro_artstyle, glowing | Cassette-futurist rendering: the future imagined through 1970s hardware, beige and grey mouldings, amber CRT glow and rocker switches, chunky bezels under fl... |
+| [Aesthetic] CD-ROM Clipart | style | 1990s_(style), gradient, dithering, vector_trace | Mid-1990s clipart rendering: bevelled headings with hard drop shadows, rainbow gradient fills, mismatched stock vector shapes, tiled background pattern and d... |
 | [Aesthetic] Chaotic Academia | style | brown_theme, film_grain, textured, muted_color | Chaotic-academia rendering: ink-stained paper texture, warm lamplight clutter, amber and oxblood palette, uneven layered depth, soft grain, photograph style ... |
 | [Aesthetic] Clean Girl | style | photo_(medium), pale_color, soft_focus, simple_background | Clean-girl rendering: dewy skin sheen, neutral beige-and-cream palette, soft diffused daylight, minimal shadow, crisp low-saturation finish, photograph style... |
 | [Aesthetic] Clowncore | style | colorful, high_saturation, plastic, flash_photography | Clowncore rendering: primary polka dots and stripes clashing, glossy vinyl texture, harsh flash, unsettling saturation, graphic style image. |
@@ -550,10 +580,13 @@ and closes with its medium. The node adds nothing else.
 | [Aesthetic] Flat Design | style | flat_color, vector_trace, minimalism, white_theme | Flat-design rendering: solid colour shapes, zero gradients or shadows, crisp geometric edges, generous white space, limited brand palette, vector style image. |
 | [Aesthetic] Frutiger Aero | style | glass, gradient, glowing, colorful | Frutiger Aero rendering: glossy glass and water surfaces, aqua-and-lime gradients, lens bloom, bubble specularity, clean sky-bright optimism, graphic style i... |
 | [Aesthetic] Frutiger Metro | style | flat_color, minimalism, vector_trace, colorful | Metro-flat rendering: bold colour tiles, thin geometric icons, generous grid space, zero shadow or gloss, graphic style image. |
+| [Aesthetic] Glitchcore | style | glitch, high_saturation, chromatic_aberration, colorful | Glitchcore rendering: hyper-saturated layers stacked and torn, channel-split fringing, stuttered duplicate frames, sticker fragments and noise blocks crowdin... |
 | [Aesthetic] Goblincore | style | green_theme, brown_theme, textured, depth_of_field | Goblincore rendering: damp moss and bark texture, mushroom browns and mineral greens, dim forest-floor light, cluttered close focus, photograph style image. |
+| [Aesthetic] Googie | style | 1970s_(style), colorful, high_contrast, retro_artstyle | Googie rendering: boomerang angles, starbursts and cantilevered roof planes, plate glass beside terrazzo and neon tubing, optimistic desert daylight with har... |
 | [Aesthetic] Gorpcore | style | shiny, muted_color, photo_(medium), textured | Gorpcore rendering: technical nylon sheen, reflective trims, alpine overcast light, utilitarian colour blocking, photograph style image. |
 | [Aesthetic] Gothic Academia | style | dark, chiaroscuro, stone, film_grain | Gothic-academia rendering: cloister stone and candle amber, vaulted shadow, cold blue window light against warm flame, dust motes, soft grain, photograph sty... |
 | [Aesthetic] Grandmacore | style | pastel_colors, textured, knitted, soft_focus | Grandmacore rendering: faded floral pattern, tea-rose and butter palette, soft net-curtain light, knitted and lace texture, gentle low contrast, photograph s... |
+| [Aesthetic] Grandmillennial Chintz | style | colorful, textured, patchwork, muted_color | Grandmillennial rendering: layered florals, chintz glaze and pleated shades, scalloped trims against wallpaper pattern, warm lamp light on polished mahogany,... |
 | [Aesthetic] Grunge | style | desaturated, film_grain, dark, textured | Grunge rendering: muddy flannel palette, dim basement light, dust and scratch texture, blown practical bulbs, coarse pushed film grain, photograph style image. |
 | [Aesthetic] Grunge Zine | style | collage, high_contrast, monochrome, textured | Grunge-zine rendering: photocopied high-contrast blacks, torn paper edges, tape and staple marks, hand-scrawled marker, generation-loss texture, collage styl... |
 | [Aesthetic] Gyaru | style | glowing, flash_photography, high_saturation, soft_focus | Gyaru rendering: bleached hair sheen, bronzed skin, glossy highlights, purikura-bright flash with soft bloom, photograph style image. |
@@ -575,11 +608,15 @@ and closes with its medium. The node adds nothing else.
 | [Aesthetic] Maximalism | style | colorful, high_saturation, textured, mosaic | Maximalist rendering: clashing pattern on pattern, saturated jewel palette, dense layered ornament, every surface decorated, graphic style image. |
 | [Aesthetic] McBling | style | shiny, metallic, pink_theme, flash_photography | McBling rendering: mid-2000s chrome and rhinestone glitter, hot pink and silver, on-camera flash blowout, glossy lip and lens sparkle, photograph style image. |
 | [Aesthetic] Memphis Milano | style | colorful, flat_color, pastel_colors, vector_trace | Memphis-Milano rendering: squiggle and confetti motifs, laminate pastel-plus-primary palette, flat geometric blocking, playful asymmetry, graphic style image. |
+| [Aesthetic] Metabolism Capsule | style | desaturated, stone, grey_background, realistic | Metabolist rendering: stacked prefabricated capsules clipped to concrete cores, repeated round windows, raw grey precast surfaces streaked by weather, flat o... |
 | [Aesthetic] Metalhead | style | dark, backlighting, high_contrast, film_grain | Metalhead rendering: black denim and patch texture, hot stage backlight through haze, harsh rim contrast, crushed blacks, coarse grain, photograph style image. |
 | [Aesthetic] Mid-Century Modern | style | retro_artstyle, wood, muted_color, film_grain | Mid-century-modern rendering: teak and mustard palette, clean tapered geometry, warm even daylight, matte surfaces, faded Kodachrome colour, photograph style... |
 | [Aesthetic] Minimalism Lifestyle | style | minimalism, white_theme, simple_background, soft_focus | Minimal-lifestyle rendering: near-empty composition, off-white and grey palette, single soft light source, long clean shadow, matte texture, photograph style... |
 | [Aesthetic] Mob Wife | style | fur, gold, dark, flash_photography | Mob-wife rendering: heavy fur texture, gold jewellery glint, leopard print, smoky low light with hard flash, photograph style image. |
+| [Aesthetic] MS Paint Bitmap | style | pixel_art, dithering, flat_color, limited_palette | Bitmap-editor rendering: hard aliased brush strokes at one pixel weight, flood-filled areas leaking through gaps, dithered fill patterns, default sixteen-col... |
 | [Aesthetic] Neo-Noir | style | neon_palette, chiaroscuro, wet, dark | Neo-noir rendering: colour noir with neon key against deep shadow, wet reflective streets, smoky volumetrics, teal-and-amber contrast, film still style image. |
+| [Aesthetic] Neumorphism | style | minimalism, pale_color, gradient, monochrome | Neumorphic rendering: forms extruded from one pale ground, soft dual shadows above and below every shape, near-invisible edges, monochrome surface with faint... |
+| [Aesthetic] New Wave Typography | style | pastel_colors, gradient, halftone, 1980s_(style) | New-wave rendering: layered translucent planes of pastel colour, wide letterspacing and stepped baselines, dotted rules and floating fragments, early digital... |
 | [Aesthetic] Night Luxe | style | dark, gold, shiny, flash_photography | Night-luxe rendering: black-and-gold palette, jewellery-hard specular sparkle, wet asphalt reflections, flash-lit foreground against dark depth, photograph s... |
 | [Aesthetic] Noir | style | monochrome, chiaroscuro, high_contrast, film_grain | Classic-noir rendering: silver-gelatin monochrome, hard key with slatted shadow, smoke haze, deep blacks and clipped highlights, 35mm grain, film still style... |
 | [Aesthetic] Normcore Photo | style | photo_(medium), desaturated, muted_color | Normcore rendering: plain neutral palette, unstyled available light, flat mid contrast, ordinary lens rendering, faint sensor noise, photograph style image. |
@@ -609,6 +646,7 @@ and closes with its medium. The node adds nothing else.
 | [Aesthetic] Soviet Poster | style | poster, limited_palette, stencil, red_theme | Soviet-poster rendering: red-and-black ink on newsprint cream, monumental diagonal composition, flat stencil shapes, print texture, poster style image. |
 | [Aesthetic] Steampunk | style | metallic, brown_theme, glowing, textured | Steampunk rendering: brass, copper and dark wood materials, oxidised patina, warm gaslight glow, rivet and gear surface texture, photograph style image. |
 | [Aesthetic] Streamline Moderne | style | art_deco, metallic, airbrush_(medium), gradient | Streamline-Moderne rendering: 1930s speed curves, horizontal chrome banding, cream-and-jade palette, airbrushed gradient shading, graphic style image. |
+| [Aesthetic] Swiss Punk | style | high_contrast, limited_palette, textured, poster_(medium) | Swiss-punk rendering: the grid broken on purpose, type stepped and letterspaced to breaking point, heavy rules and rotated blocks colliding, photocopy grain ... |
 | [Aesthetic] Synthwave | style | neon_palette, gradient, glowing, retro_artstyle | Synthwave rendering: magenta-to-cyan gradient sky, glowing horizon grid, chrome highlight sheen, scanline haze, saturated night palette, graphic style image. |
 | [Aesthetic] Techwear | style | dark, desaturated, textured, metallic | Techwear rendering: matte black synthetic layers, strap and buckle hardware, cold city light, desaturated grey-black palette, photograph style image. |
 | [Aesthetic] Tiki Lounge | style | wood, brown_theme, dark, glowing | Tiki-lounge rendering: carved dark wood, bamboo texture, amber lantern pools, tropical print saturation, deep shadow, photograph style image. |
@@ -653,33 +691,44 @@ and closes with its medium. The node adds nothing else.
 | [Format] Podcast Cover | format | poster, flat_color, high_contrast, album_cover | Composed as a podcast cover: square tile, oversized title lettering, one bold graphic element, high contrast for thumbnail size, graphic style image. |
 | [Format] Slide Deck Cover | format | widescreen, flat_color, minimalism, poster | Composed as a deck cover: 16:9 title slide, large heading block, a single flat graphic element, brand colour band, graphic style image. |
 
-## Experimental & Material (55)
+## Experimental & Material (82)
 
 | name | axis | tags | clause |
 | --- | --- | --- | --- |
 | [Experimental] 3D Print Layer Lines | style | plastic, textured, 3d, dithering | FDM rendering: visible horizontal layer lines, support scars, slight stringing, matte filament sheen, stepped overhangs, material style image. |
 | [Experimental] Anaglyph Stereo | style | duotone, glitch, red_theme, high_contrast | Anaglyph rendering: red and cyan channels offset apart, ghosted double edges, desaturated middle tones, faint print misregistration, material style image. |
 | [Experimental] Analog Paper Collage | style | collage, halftone, textured, papercraft | Paper-collage rendering: torn and scissor-cut edges, layered magazine stock, visible glue wrinkle and drop shadow, mixed halftone textures, collage style image. |
+| [Experimental] Anthotype Plant Emulsion | style | pale_color, pink_theme, monochrome, textured | Anthotype rendering: crushed petal juice coated on paper and bleached by weeks of sun, pale magenta or spinach-green monochrome, soft undefined edges, uneven... |
 | [Experimental] ASCII Text Picture | style | monochrome, dithering, green_theme, high_contrast | ASCII rendering: image built from monospaced characters, density-mapped tonal ramp, terminal green or grey on black, aliased character grid, material style i... |
 | [Experimental] Batik Wax Resist | style | textured, colorful, traditional_media, knitted | Batik rendering: wax-resist outlines with crackle veins, layered dye baths, earthy saturated colour on cotton weave, material style image. |
 | [Experimental] Beadwork Loom | style | mosaic, textured, colorful, shiny | Beadwork rendering: image built from strung glass beads on a grid, stepped colour blocks, tiny specular glints, material style image. |
+| [Experimental] Cellular Automata Grid | style | monochrome, high_contrast, dithering, minimalism | Automata rendering: a cell grid stepped through one simple rule, triangular growth fronts and repeating fractal wedges, hard black-or-white cells with no ant... |
 | [Experimental] Ceramic Glaze Illustration | style | porcelain, shiny, textured, gradient | Glazed-ceramic rendering: pooled glossy glaze over matte clay body, crackle craze lines, kiln colour shifts, soft specular sheen, material style image. |
 | [Experimental] Chalkboard | style | chalk_(medium), dark, monochrome, textured | Chalkboard rendering: dusty white chalk on dark slate, smudged erasure ghosts, gritty granular strokes, material style image. |
 | [Experimental] CNC Toolpath | style | textured, wood, metallic, diagram | CNC rendering: concentric machining passes across the surface, stepped terracing, bit chatter marks, raw material grain, material style image. |
+| [Experimental] Coffee Wash | style | sepia, brown_theme, textured, monochrome | Coffee-wash rendering: tannin-stained tonal washes on absorbent paper, hard tide lines at every dried edge, ring marks and granular sediment, warm sepia rang... |
 | [Experimental] Cross-Stitch Sampler | style | embroidery, textured, dithering, limited_palette | Cross-stitch rendering: X-shaped floss stitches on aida grid, stepped blocky colour, visible weave holes, slight thread sheen, material style image. |
 | [Experimental] Crystal Growth | style | crystal, transparent, iridescent, glowing | Crystal-growth rendering: faceted mineral clusters spreading over a surface, refracted internal light, sharp prismatic edges, material style image. |
+| [Experimental] Cymatic Plate | style | monochrome, textured, dark, minimalism | Cymatic rendering: fine sand gathered into nodal figures on a vibrating plate, symmetrical geometric lattices with soft mounded ridges, dark metal ground, ra... |
+| [Experimental] Delftware Blue | style | blue_theme, porcelain, monochrome, shiny | Delftware rendering: cobalt brushwork on white tin glaze, every tone drawn from one pigment, fine outline over broad wash, glaze pooling darker at the edges ... |
 | [Experimental] Dot-Matrix Print | style | dithering, monochrome, halftone, textured | Dot-matrix rendering: impact-printed dot rows, banded overlap, faded ribbon ink, tractor-feed paper texture, monochrome tonality, material style image. |
 | [Experimental] E-Ink Screen | style | dithering, greyscale, monochrome, textured | E-ink rendering: matte grey-white substrate, dithered greyscale, no backlight, faint ghosting from the previous frame, material style image. |
 | [Experimental] Ebru Marbling | style | colorful, gradient, textured, traditional_media | Ebru rendering: combed pigment swirls on size, feathered tulip patterns, saturated interleaved colour veins, material style image. |
 | [Experimental] Embroidery Needlepoint | style | embroidery, textured, knitted | Needlepoint rendering: raised satin-stitch floss, directional thread sheen, canvas showing at the edges, soft fibre halo, handmade style image. |
 | [Experimental] Encaustic Wax | style | textured, traditional_media, transparent, shiny | Encaustic rendering: pigmented wax fused in translucent layers, tool scrapes and drips, milky depth under a glossy skin, material style image. |
 | [Experimental] Ethereal Motion Blur | style | motion_blur, long_exposure, soft_focus, glowing | Long-blur rendering: smeared directional streaks, dissolved edges, ghost trails through mid tones, soft luminous falloff, material style image. |
+| [Experimental] Ferrofluid Spikes | style | shiny, dark, wet, metallic | Ferrofluid rendering: oily black liquid pulled into ordered spikes by a magnetic field, mirror-wet surface, sharp specular points along every peak, sterile s... |
+| [Experimental] Flow-Field Streamlines | style | lineart, minimalism, monochrome, pale_color | Flow-field rendering: thin curves each following an invisible vector field, strands bunching into eddies and thinning over open ground, uniform stroke weight... |
 | [Experimental] Gelli Monoprint | style | stencil, textured, limited_palette, silhouette | Gelli-plate rendering: soft mottled ink pull, ghost layers from previous prints, mask silhouettes, uneven texture, print style image. |
 | [Experimental] Glitch Datamosh Still | style | glitch, dithering, high_contrast, colorful | Datamosh rendering: smeared macroblocks, channel displacement, frozen compression artefacts, banded colour tearing, video artefact style image. |
+| [Experimental] Harmonograph Curve | style | lineart, pen_(medium), monochrome, traditional_media | Harmonograph rendering: interlaced pendulum loops drawn as one unbroken line, rosette symmetry drifting slowly out of true, ink tapering as the swing decays,... |
 | [Experimental] Holographic Foil | style | holographic, iridescent, metallic, shiny | Holographic-foil rendering: iridescent rainbow shift across a mirrored surface, hard specular banding, prismatic edge flare, embossed sheen, material style i... |
+| [Experimental] Hydro-Dip Transfer | style | shiny, wet, colorful, plastic | Hydro-dip rendering: a printed film floated on water and wrapped around a solid form, pattern stretching and pooling over every curve, seams meeting out of r... |
 | [Experimental] Ice Carving | style | transparent, crystal, glass, wet | Ice-carving rendering: clear carved block with frosted tool marks, internal fracture planes, cold refracted light, meltwater sheen, material style image. |
 | [Experimental] Ink in Water | style | ink_wash_painting, gradient, transparent, monochrome | Ink-in-water rendering: diffusing pigment plumes, feathered tendrils, soft density gradients through clear fluid, dark-to-clear falloff, ink painting style i... |
+| [Experimental] Khokhloma Lacquer | style | gold, dark, shiny, red_theme | Khokhloma rendering: gold foliage and berries over deep black lacquer, vermilion accents, fine curling stems drawn in one stroke, glassy varnish depth catchi... |
 | [Experimental] Kids Crayon | style | crayon_(medium), traditional_media, textured, colorful | Crayon rendering: waxy scribbled strokes, uneven pressure build-up, paper tooth showing through, out-of-register colour, material style image. |
+| [Experimental] Kirigami Pop-Up | style | papercraft, white_theme, minimalism, flat_color | Kirigami rendering: card cut and folded into upright layers, crisp scored creases and hard cast shadows between planes, white stock with one accent colour, d... |
 | [Experimental] Lacquer Maki-e | style | gold, dark, shiny, metallic | Maki-e rendering: deep black urushi lacquer, sprinkled gold and silver powder motifs, mirror-polished depth, fine metallic speckle, material style image. |
 | [Experimental] Latte Art | style | brown_theme, gradient, textured, wet | Latte-art rendering: poured milk foam on espresso crema, feathered rosetta lines, warm brown-to-cream contrast, material style image. |
 | [Experimental] LED Matrix | style | dithering, glowing, pixel_art, dark | LED-matrix rendering: image resolved into a grid of glowing dots, dark gaps between them, blooming bright pixels, material style image. |
@@ -687,18 +736,31 @@ and closes with its medium. The node adds nothing else.
 | [Experimental] Light-Leak Overlay Photo | style | lens_flare, film_grain, orange_theme, soft_focus | Light-leak rendering: orange-red flare bleeding in from one edge, fogged shadows, lifted blacks, halated highlights, coarse film grain, photograph style image. |
 | [Experimental] Macramé Knotwork | style | knitted, textured, brown_theme | Macramé rendering: knotted cord lattice, fringed loose ends, natural jute colour, soft shadow between the knots, handmade style image. |
 | [Experimental] Mosaic Tesserae | style | mosaic, textured, stone, limited_palette | Mosaic rendering: image broken into small irregular tiles, visible grout lines, stepped colour transitions, uneven glaze reflections, material style image. |
+| [Experimental] Nail and Thread String Art | style | textured, minimalism, colorful, wood | String-art rendering: coloured thread strung between panel pins, straight chords massing into curved moiré envelopes, thread crossings darkening the overlaps... |
 | [Experimental] Neon Drip Abstract | style | neon_palette, glowing, dark, wet | Neon-drip rendering: glowing fluorescent runs over dark ground, blooming edges, wet paint sheen, high-chroma trails, abstract style image. |
+| [Experimental] Noise Contour Map | style | lineart, minimalism, pale_color, monochrome | Noise-contour rendering: smooth pseudo-random terrain sliced into nested iso-lines, bands crowding tight where the slope steepens and opening out where it fl... |
+| [Experimental] Papier-Mâché Folk Figure | style | papercraft, colorful, textured, flat_color | Papier-mâché rendering: pulped paper forms with visible seams and lumps, matte poster colour in clashing bright patterns, dotted and striped decoration, unev... |
+| [Experimental] Petri Dish Culture | style | transparent, textured, caustics, glowing | Culture-plate rendering: colonies spreading across nutrient agar in concentric fringed rings, translucent gel catching light from below, velvety and glossy p... |
 | [Experimental] Photomontage | style | collage, photo_(medium), surreal, high_contrast | Photomontage rendering: spliced photographic fragments at mismatched scale, hard cut seams, varied grain between pieces, flattened composite depth, material ... |
+| [Experimental] Plotter Pen Generative | style | pen_(medium), lineart, monochrome, minimalism | Pen-plotter rendering: single-weight ink strokes laid down by machine, thousands of parallel passes building tone by density, faint wobble and blob where eac... |
+| [Experimental] Pyrography Wood Burn | style | wood, woodgrain, brown_theme, textured | Pyrography rendering: scorched line burned into pale timber, tone built by dwell time from honey to charcoal, singed halo at the edges, grain deflecting ever... |
 | [Experimental] Quilt Patchwork | style | patchwork, embroidery, textured, knitted | Patchwork-quilt rendering: pieced fabric blocks, visible stitch seams and quilted relief, cotton print texture, soft batting puff, material style image. |
 | [Experimental] Rainy Window Condensation | style | wet, glass, bokeh, soft_focus | Rain-window rendering: water beads and runnels on glass, fogged condensation haze, refracted bokeh behind, cold ambient light, material style image. |
+| [Experimental] Rangoli Powder | style | colorful, textured, high_saturation, stone | Rangoli rendering: coloured powder poured into symmetrical floor patterns, radial geometry with soft grainy borders, saturated pigment mounds catching side l... |
+| [Experimental] Reaction-Diffusion Pattern | style | textured, gradient, desaturated | Reaction-diffusion rendering: spots and stripes grown by two competing chemicals, labyrinthine ridges branching and merging, soft fronts where growth meets g... |
+| [Experimental] Rust Transfer | style | rust, brown_theme, textured, muted_color | Rust-transfer rendering: oxidised iron printed onto damp cloth, orange-brown bloom spreading along the weave, hard object silhouettes where metal lay, salt s... |
 | [Experimental] Sand Animation Still | style | backlighting, monochrome, textured, silhouette | Sand-animation rendering: backlit grains on glass, forms drawn by clearing and heaping sand, warm amber glow through the layer, soft grain edges, material st... |
 | [Experimental] Scanner Drag | style | glitch, dark, motion_blur, high_contrast | Flatbed-scan rendering: subject smeared along the scan axis, banded colour streaks, hard glass-plate contact light, black void behind, material style image. |
+| [Experimental] Scrimshaw | style | monochrome, cross-hatching, textured, pale_color | Scrimshaw rendering: fine incisions scratched into polished bone and rubbed with ink, tone made of hatch density alone, warm cream ground with age crazing, s... |
+| [Experimental] Sgraffito Plaster | style | textured, traditional_media, muted_color, stone | Sgraffito rendering: coloured plaster layers scratched back to reveal the tone beneath, incised line with a raised burr, flat fields of lime colour, chipped ... |
 | [Experimental] Shibori Dye | style | blue_theme, textured, gradient, knitted | Shibori rendering: resist-bound cloth patterns, indigo gradients bleeding at the folds, white creases, woven texture, material style image. |
 | [Experimental] Smoke and Light | style | light_rays, dark, glowing, soft_focus | Smoke-and-light rendering: volumetric plumes catching a narrow beam, deep black surround, soft turbulent gradients, glowing edge scatter, material style image. |
 | [Experimental] Soap Carving | style | textured, pastel_colors, porcelain | Soap-carving rendering: waxy matte block with blade facets, soft rounded edges, pastel opacity, fine shaving debris, material style image. |
 | [Experimental] Soft Watercolor Deco | style | watercolor_(medium), art_deco, gold, pastel_colors | Soft deco-watercolour rendering: pale layered washes inside geometric deco framing, gold line accents, blooming pigment edges, paper grain, watercolour paint... |
 | [Experimental] Stained Glass | style | stained_glass, glowing, outline, colorful | Stained-glass rendering: saturated coloured panes bounded by black lead lines, backlit luminosity, glass texture and bubbles, jewel palette, material style i... |
 | [Experimental] Sticker Bomb | style | sticker, collage, colorful, textured | Sticker-bomb rendering: overlapping die-cut decals covering every inch, peeling corners, clashing logos and colour, collage style image. |
+| [Experimental] Strange Attractor | style | glowing, dark, gradient, monochrome | Attractor rendering: one traced trajectory looped millions of times, density building luminous wings out of darkness, hairline filaments crossing, additive g... |
+| [Experimental] Street Chalk Anamorphic | style | chalk_(medium), pastel_(medium), textured, stone | Pavement-chalk rendering: soft pastel dust worked into rough paving, deliberate anamorphic stretch across the slabs, joint lines cutting through the drawing,... |
 | [Experimental] Sugar Glass | style | transparent, caustics, glass, orange_theme | Sugar-glass rendering: brittle translucent amber sheets, sharp fracture edges, caustic light through the shards, material style image. |
 | [Experimental] Suminagashi Marbling | style | ink_wash_painting, monochrome, gradient, traditional_media | Suminagashi rendering: concentric ink rings floated on water, drifting feathered lines, pale absorbent paper, material style image. |
 | [Experimental] Tape Art | style | flat_color, textured, collage, limited_palette | Tape-art rendering: image built from straight strips of coloured tape, overlapping edges and air bubbles, hard angular shapes, material style image. |
@@ -706,14 +768,17 @@ and closes with its medium. The node adds nothing else.
 | [Experimental] Thermal Receipt | style | monochrome, dithering, halftone, textured | Thermal-receipt rendering: dithered black on faintly grey paper, monospaced print bands, faded heat streaks, curled paper edge, material style image. |
 | [Experimental] Thermochromic Shift | style | gradient, glowing, textured, duotone | Thermochromic rendering: heat-reactive pigment fading between two colours, soft blooming transitions, handprint-shaped patches, material style image. |
 | [Experimental] Tie-Dye Spiral | style | colorful, gradient, textured, psychedelic | Tie-dye rendering: radiating dye spirals, bleeding colour boundaries, white resist lines, soft cotton fibre, material style image. |
+| [Experimental] Truchet Tiling | style | minimalism, monochrome, flat_color, high_contrast | Truchet rendering: one square tile rotated at random across a strict grid, quarter-arcs joining tile to tile into wandering continuous paths, two-tone fills,... |
+| [Experimental] Verre Églomisé | style | gold, glass, metallic, shiny | Reverse-glass rendering: gold leaf and paint applied behind glass and read through it, mirror-bright metal with engraved detail scratched into the leaf, glas... |
 | [Experimental] VHS Still | style | glitch, film_grain, desaturated, analog_horror | VHS rendering: chroma smear and bleed, tracking noise bands, soft blown highlights, interlace comb edges, tape-worn colour, video artefact style image. |
+| [Experimental] Voronoi Fracture | style | flat_color, mosaic, minimalism | Voronoi rendering: the plane divided into cells around scattered seed points, straight shared borders meeting at sharp junctions, cells ranging from splinter... |
 | [Experimental] Wire Sculpture | style | metallic, lineart, simple_background, monochrome | Wire rendering: form drawn in bent metal line, open volumes, cast shadow doing the drawing, plain ground, material style image. |
 | [Finish] Colour Banding | finish | dithering, gradient, glitch | Banding finish: stepped bands across smooth gradients, posterised skies, visible tonal quantisation, material style image. |
 | [Finish] JPEG Artefacts | finish | glitch, dithering, textured | Compression finish: blocky 8-pixel artefacts around edges, ringing halos, banded flat areas, muddied fine detail, material style image. |
 | [Finish] Screen Door | finish | dithering, glitch, glowing | Screen-door finish: fine dark grid between pixels, RGB subpixel fringing, slight display glow, material style image. |
 | [Finish] Upscale Mush | finish | textured, soft_focus, glitch | Upscaled finish: over-smoothed surfaces with hallucinated micro-detail, waxy texture, halos along strong edges, material style image. |
 
-## Illustration (123)
+## Illustration (131)
 
 | name | axis | tags | clause |
 | --- | --- | --- | --- |
@@ -765,6 +830,8 @@ and closes with its medium. The node adds nothing else.
 | [Digital][v2] Sakimichan | style | airbrush_(medium), glowing, rim_lighting, sparkle | Glossy semi-real rendering: luminous airbrushed skin, warm rim light, sparkling highlight accents, soft focus falloff, illustration style image. |
 | [Digital][v2] Scribble Fine Art | style | sketch, lineart, monochrome, textured | Scribble rendering: form emerging from tangled continuous pen loops, tonal density by overlap, raw paper ground, drawing style image. |
 | [Digital][v2] X-Ray | style | monochrome, blue_theme, transparent, glowing | X-ray rendering: inverted densities, translucent internal structure, cool blue-grey film base, glowing bright bone, material style image. |
+| [Drawing] Chicano Fine-Line | style | graphite_(medium), monochrome, greyscale, realistic | Fine-line rendering: single-needle grey wash and pencil, smooth photoreal graduation in monochrome, script lettering and ornate framing, deep blacks against ... |
+| [Drawing] Patent Drawing | style | lineart, monochrome, diagram, white_theme | Patent-drawing rendering: uniform ink line with no tone at all, parts numbered on leader lines, section cuts filled with even ruled hatching, wide white grou... |
 | [Drawing][v2] Beatrix Potter | style | watercolor_(medium), lineart, pale_color, traditional_media | Storybook watercolour rendering: delicate ink outline, pale naturalistic washes, soft vignette into white paper, gentle detail, watercolour painting style im... |
 | [Drawing][v2] Bookplate Illustration | style | lithograph, monochrome, lineart, traditional_media | Bookplate rendering: engraved fine line, ornamental border and banner, monochrome ink on cream, heraldic symmetry, print style image. |
 | [Drawing][v2] Boulet Graphic Illustration | style | ink_(medium), limited_palette, comic, lineart | Graphic-diary rendering: energetic ink line, flat washes of two or three colours, expressive caricature, comic-panel clarity, illustration style image. |
@@ -809,8 +876,11 @@ and closes with its medium. The node adds nothing else.
 | [Illustration] 1970s Airbrush Album | style | airbrush_(medium), gradient, retro_artstyle, sunset | 1970s airbrush rendering: seamless sprayed gradients, chrome and glass highlights, sunset palette, soft vignette, illustration style image. |
 | [Illustration] 1980s Fantasy Paperback | style | oil_painting_(medium), glowing, dark, retro_artstyle | 1980s paperback rendering: oil-painted hero staging, glowing magical accent, deep dark surround, glossy print finish, illustration style image. |
 | [Illustration] 1990s CD Booklet Collage | style | collage, halftone, textured, duotone | 1990s booklet rendering: photocopied photo fragments, grunge texture layers, distressed type blocks, muted duotone print, collage style image. |
+| [Illustration] Airbrushed Van Mural | style | airbrush_(medium), gradient, 1970s_(style), shiny | Custom-van rendering: airbrushed fantasy scene on sheet metal, soft candy gradients and chrome highlight sparkle, wraparound composition following the panel ... |
+| [Illustration] Alchemical Emblem | style | monochrome, lineart, cross-hatching, traditional_media | Emblem-book rendering: engraved symbolic diagram enclosed in a ruled roundel, celestial and mineral signs arranged in strict hierarchy, dense burin hatching,... |
 | [Illustration] Art Deco Fashion Plate | style | art_deco, gouache_(medium), flat_color, gold | Deco fashion-plate rendering: elongated stylised figures, flat gouache colour, gold line accents, geometric border, illustration style image. |
 | [Illustration] Art Nouveau Poster | style | art_nouveau, poster, flat_color, lineart | Art-nouveau poster rendering: whiplash contour, flat decorative colour, ornamental frame and lettering space, muted jewel palette, poster style image. |
+| [Illustration] Blackwork Dotwork Tattoo | style | monochrome, high_contrast, lineart, minimalism | Blackwork rendering: solid black masses beside dense stippled gradients, geometric ornament and sacred-geometry framing, no colour whatsoever, bare skin tone... |
 | [Illustration] Board-Game Box | style | painting_(medium), colorful, cover, cinematic_lighting | Board-game box rendering: bright painted scene with clear focal hierarchy, saturated fantasy colour, crisp shelf-ready polish, illustration style image. |
 | [Illustration] Botanical Illustration | style | watercolor_(medium), diagram, pale_color, traditional_media | Botanical-plate rendering: precise specimen drawing, delicate watercolour washes, cream paper ground, hand-lettered label space, illustration style image. |
 | [Illustration] Brand Mascot Sheet | style | multiple_views, flat_color, outline, vector_trace | Mascot-sheet rendering: bold simple character shapes in several poses, flat brand colour, thick even outline, plain ground, vector style image. |
@@ -821,14 +891,17 @@ and closes with its medium. The node adds nothing else.
 | [Illustration] Exploded Technical | style | diagram, lineart, multiple_views, simple_background | Exploded technical rendering: parts separated along assembly axes, thin leader lines, flat shading, plain ground, technical drawing style image. |
 | [Illustration] Fashion Croquis | style | sketch, marker_(medium), unfinished, lineart | Croquis rendering: nine-head elongated figure, fast confident contour, marker garment blocks, unfinished hands and face, drawing style image. |
 | [Illustration] Fashion Editorial Drawn | style | ink_(medium), watercolor_(medium), lineart, minimalism | Drawn fashion-editorial rendering: bold ink contour, washy colour blocking, exaggerated silhouette, generous white space, illustration style image. |
+| [Illustration] Fraktur Folk Manuscript | style | watercolor_(medium), traditional_media, flat_color, ink_(medium) | Fraktur rendering: Pennsylvania-German folk manuscript, tulips, hearts and paired birds in flat watercolour, ruled ink borders boxing each element, ornate bl... |
 | [Illustration] Game Concept Art | style | concept_art, painting_(medium), muted_color, multiple_views | Concept-art rendering: value-first block-in, callout detail insets, functional design clarity, muted painted palette, illustration style image. |
 | [Illustration] Game Key Art | style | key_visual, painting_(medium), cinematic_lighting, glowing | Game key-art rendering: hero silhouette against a dramatic sky, commercial poster light, painted density, glowing accents, illustration style image. |
 | [Illustration] Golden Age Magazine | style | oil_painting_(medium), retro_artstyle, textured, colorful | Golden-age magazine rendering: confident oil brushwork, warm narrative light, period print colour, textured cover stock, illustration style image. |
+| [Illustration] Marginalia Grotesque | style | ink_(medium), gold, traditional_media, flat_color | Manuscript-margin rendering: spindly hybrid creatures sprouting from inked vine tendrils, gold leaf dots, tiny burnished initials, ruled text block left blan... |
 | [Illustration] Marker Rendering | style | marker_(medium), copic_(medium), sketch, textured | Design-marker rendering: broad alcohol-marker strokes, streaky overlaps, white gouache highlights, quick perspective line, illustration style image. |
 | [Illustration] Matte Painting | style | concept_art, scenery, painting_(medium), cinematic_lighting | Matte-painting rendering: photographic texture blended into paint, layered atmospheric depth, epic scale haze, cinematic grade, illustration style image. |
 | [Illustration] Mid-Century Kids Book | style | limited_palette, retro_artstyle, flat_color, textured | Mid-century kids-book rendering: two- or three-ink separations, off-register overlap colour, textured screen fills, simple shapes, illustration style image. |
 | [Illustration] New Yorker Spot | style | lineart, minimalism, limited_palette, white_theme | Spot-illustration rendering: witty economical line, one or two flat washes, mostly white page, understated palette, illustration style image. |
 | [Illustration] Photobash Concept | style | collage, concept_art, painting_(medium), textured | Photobash rendering: photo fragments blended under paint, mismatched grain unified by grade, quick collage-real depth, illustration style image. |
+| [Illustration] Pinstripe Kustom | style | gold, shiny, dark, minimalism | Pinstripe rendering: long tapering sword-brush lines in symmetrical pairs, gold and white scrollwork over deep gloss lacquer, hairline flourishes ending in f... |
 | [Illustration] Political Caricature | style | cross-hatching, ink_(medium), spot_color, monochrome | Political-caricature rendering: exaggerated features, crosshatched ink shading, single spot colour, newsprint texture, illustration style image. |
 | [Illustration] Pulp Magazine Cover | format | oil_painting_(medium), colorful, retro_artstyle, high_contrast | Pulp-cover rendering: lurid oil brushwork, hot spot lighting on the hero, cheap saturated print inks, yellowed paper, illustration style image. |
 | [Illustration] Saturday Evening Post Cover | style | oil_painting_(medium), realistic, retro_artstyle, colorful | Narrative cover rendering: warm storytelling light, meticulous everyday detail, gently exaggerated expression, oil-painted finish, illustration style image. |
@@ -841,7 +914,7 @@ and closes with its medium. The node adds nothing else.
 | [Illustration] Travel Poster 1930s | style | poster, art_deco, flat_color, limited_palette | 1930s travel-poster rendering: simplified stylised landscape, flat airbrushed colour bands, deco geometry, screenprint texture, poster style image. |
 | [Illustration] Vintage Tarot | format | flat_color, outline, limited_palette, traditional_media | Vintage tarot rendering: flat symbolic figures, bold black outline, limited red-yellow-blue inks, worn card border, illustration style image. |
 
-## Photography & Film (267)
+## Photography & Film (292)
 
 | name | axis | tags | clause |
 | --- | --- | --- | --- |
@@ -855,8 +928,13 @@ and closes with its medium. The node adds nothing else.
 | [Cinema] 70mm Epic | style | widescreen, highres, cinematic_lighting, colorful | 70mm epic capture: enormous resolving detail, deep focus across the frame, rich saturated colour, almost invisible grain, film still style image. |
 | [Cinema] Anamorphic Still | style | lens_flare, bokeh, widescreen, cinematic_lighting | Anamorphic capture: oval bokeh, horizontal blue streak flares, edge distortion, 2.39:1 framing, gentle halation, film still style image. |
 | [Cinema] Contemporary Auteur Digital | style | cinematic_lighting, muted_color, highres, widescreen | Contemporary auteur digital: clean sensor detail, precise symmetrical framing, controlled restrained palette, soft filmic grade, film still style image. |
+| [Cinema] Day-for-Night | style | blue_theme, dark, cinematic_lighting, film_grain | Day-for-night rendering: daylight underexposed and printed cold, blue-shifted midtones under a still-bright sky, shadows keeping their daytime direction, fil... |
 | [Cinema] Found-Footage Horror Still | style | glitch, dark, film_grain, analog_horror | Found-footage capture: camcorder auto-exposure hunting, harsh on-camera light against black, interlace smear, timestamp, video artefact style image. |
+| [Cinema] Hand-Cranked Silent | style | monochrome, film_grain, vignetting, retro_artstyle | Hand-cranked rendering: an uneven frame rate quickening and dragging, orthochromatic tonality with dark skies and pale skin, iris vignette closing the corner... |
+| [Cinema] Kinescope Broadcast | style | monochrome, film_grain, blurry, retro_artstyle | Kinescope rendering: film shot off a television tube, scanline mush and blooming whites, crushed greys, a jittering frame edge and heavy grain over everythin... |
+| [Cinema] Rear-Projection Process | style | film_grain, retro_artstyle, cinematic_lighting | Process-shot rendering: a flat projected plate behind the foreground, grain and contrast mismatched between the two layers, gentle plate flicker, hard studio... |
 | [Cinema] Super 8 Home Movie | style | film_grain, retro_artstyle, muted_color, soft_focus | Super 8 capture: soft small-gauge optics, heavy warm grain, gate weave, blown highlights, faded 1970s colour, film still style image. |
+| [Cinema] Two-Strip Technicolor | style | limited_palette, film_grain, retro_artstyle, chromatic_aberration | Two-strip rendering: only red-orange and blue-green records present, yellows absent and cyans gone muddy, skin running warm brick, soft registration fringing... |
 | [Finish] Anamorphic Streak | finish | lens_flare, bokeh, widescreen | Anamorphic finish: horizontal blue streaks off every hot light, oval bokeh, slight edge stretching, photograph style image. |
 | [Finish] Beauty-Retouch Real | finish | realistic, photo_(medium), soft_focus | Beauty-retouch finish: skin cleaned but pores and fine hair kept, even tonal transitions, controlled specular sheen, no plastic smoothing, photograph style i... |
 | [Finish] Bloom Glow | finish | glowing, soft_focus, backlighting | Bloom finish: bright areas blooming softly into their surroundings, haloed highlights, gentle contrast lift, photograph style image. |
@@ -914,6 +992,7 @@ and closes with its medium. The node adds nothing else.
 | [Photo] Aerial | style | scenery, photo_(medium), soft_focus | Aerial capture: high oblique viewpoint, compressed landscape pattern, atmospheric haze, small even shadows, photograph style image. |
 | [Photo] Aerial Nadir | style | scenery, map, high_contrast, photo_(medium) | Nadir drone capture: straight-down viewpoint, flattened geometry, graphic pattern reading, hard midday shadows, photograph style image. |
 | [Photo] Albumen Print | style | sepia, traditional_media, monochrome, textured | Albumen print: warm violet-brown tonality, glossy egg-white surface, fine detail, slight fading at the edges, photograph style image. |
+| [Photo] Ambrotype | style | monochrome, photo_(medium), high_contrast, dark | Ambrotype rendering: a collodion positive on black glass, silvery cream highlights against deep tonal blacks, short tonal scale, pouring swirls at the plate ... |
 | [Photo] Analog Horror Camcorder | style | glitch, analog_horror, film_grain, dark | Camcorder capture: chroma smear, tracking noise, blown auto-exposure, low-light crush, timestamp burn, video artefact style image. |
 | [Photo] Architectural Exterior | style | scenery, photo_(medium), sunlight, high_contrast | Architectural exterior: corrected verticals, deep focus, clean sky gradient, raking daylight defining planes, photograph style image. |
 | [Photo] Architecture Photography | style | scenery, photo_(medium), highres, textured | Architecture photography: shift-lens straight verticals, geometric framing, even ambient exposure, material texture held sharp, photograph style image. |
@@ -935,10 +1014,15 @@ and closes with its medium. The node adds nothing else.
 | [Photo] Carbon Transfer | style | monochrome, textured, traditional_media, high_contrast | Carbon-transfer rendering: relief pigment layer with slight physical thickness, deep luminous blacks, matte tissue surface, photograph style image. |
 | [Photo] CCTV Surveillance | style | fake_screenshot, desaturated, glitch, dark | CCTV capture: fixed high angle, fisheye edge stretch, low frame-rate smear, IR-grey night response, timestamp overlay, photograph style image. |
 | [Photo] Chemigram | style | monochrome, textured, gradient, surreal | Chemigram rendering: developer and fixer painted onto paper, organic tide lines, abstract dark blooms, no lens image at all, material style image. |
+| [Photo] Chronophotography | style | monochrome, dark, photo_(medium), motion_lines | Chronophotographic rendering: successive instants recorded on one plate, overlapping phases fanned across a black field, even stroboscopic spacing, bright ri... |
+| [Photo] Cibachrome Gloss | style | photo_(medium), high_contrast, high_saturation, shiny | Cibachrome rendering: azo dyes on a polyester base, glassy high-gloss surface, near-black shadows against vivid clean primaries, biting micro-contrast right ... |
 | [Photo] Cinestill 800T | style | film_grain, lens_flare, neon_palette, dark | Tungsten night film: cyan-leaning shadows, red halation blooming around every light, fine grain, cool street colour, photograph style image. |
+| [Photo] Cinewhoop Drone | style | fisheye, high_contrast, motion_blur, high_saturation | Cinewhoop rendering: an ultra-wide micro-drone lens, horizon warped and rolling hard, propeller tips smearing the frame corners, punchy contrast and deep sat... |
+| [Photo] Cloud Chamber Track | style | monochrome, dark, glowing, photo_(medium) | Cloud-chamber rendering: condensation trails threading a vapour volume, thin bright forked tracks curling through a field, dark chamber ground, shallow depth... |
 | [Photo] Concert | style | backlighting, dark, neon_palette, glowing | Concert capture: coloured stage wash as the only light, hot rim on the performer, haze beams, deep unlit crowd, photograph style image. |
 | [Photo] Concert Flash | style | flash_photography, dark, high_contrast, neon_palette | Concert flash capture: hard on-camera burst freezing the foreground, dark falloff behind, coloured stage spill in the background, photograph style image. |
 | [Photo] Contemporary Digital | style | highres, photo_(medium), realistic | Modern digital capture: clean sensor detail, neutral colour science, controlled dynamic range, subtle micro-contrast, photograph style image. |
+| [Photo] Copy-Stand Reproduction | style | photo_(medium), realistic, simple_background, desaturated | Copy-stand rendering: flat frontal documentation, cross-polarised light with every specular killed, colour-target neutrality, dead-square framing and no dept... |
 | [Photo] Cross-Processed | style | high_contrast, film_grain, colorful, glitch | Cross-processed film: wrong-chemistry colour shift, cyan shadows and yellow highlights, crushed contrast, unstable cast, photograph style image. |
 | [Photo] CRT Phosphor | style | glitch, glowing, dithering, dark | CRT capture: curved glass geometry, phosphor scanlines, glowing bloom around bright areas, slight chroma bleed, video artefact style image. |
 | [Photo] Cyanotype | style | blue_theme, monochrome, traditional_media, textured | Cyanotype print: Prussian-blue monochrome, white paper highlights, brush-coated uneven edges, contact-print softness, photograph style image. |
@@ -949,11 +1033,13 @@ and closes with its medium. The node adds nothing else.
 | [Photo] Disposable Flash | style | flash_photography, film_grain, high_contrast, photo_(medium) | Disposable-camera capture: harsh frontal flash, red-eye tendency, soft plastic-lens edges, heavy grain, blown foreground, photograph style image. |
 | [Photo] Documentary Photojournalism | style | photo_(medium), film_grain, muted_color, realistic | Reportage capture: available light, event access framing, working mid contrast, grain retained, no styling, photograph style image. |
 | [Photo] Double Exposure Analog | style | film_grain, transparent, soft_focus, surreal | Double-exposure film: two frames stacked in-camera, overlapping ghost densities, blown overlap highlights, grain doubled, photograph style image. |
+| [Photo] Dye Transfer Print | style | photo_(medium), high_saturation, realistic, shiny | Dye-transfer rendering: three dye layers laid in exact register, dense saturated colour with clean neutral greys, mid-century advertising punch, smooth gloss... |
 | [Photo] E-Commerce On Model | style | simple_background, white_theme, photo_(medium), full_body | On-model rendering: flat even studio light, plain pale sweep, garment shape and colour true, minimal shadow, photograph style image. |
 | [Photo] Early Digital | style | photo_(medium), high_contrast, glitch, desaturated | Early digital capture: harsh sharpening halos, limited dynamic range, noisy shadows, slightly off white balance, photograph style image. |
 | [Photo] Early Digital Compact | style | photo_(medium), glitch, flash_photography, desaturated | Early compact-digital capture: tiny-sensor noise, aggressive JPEG artefacts, flat flash exposure, cool colour cast, photograph style image. |
 | [Photo] Ektar Saturated Landscape | style | scenery, colorful, high_saturation, film_grain | Saturated colour-negative landscape: vivid greens and blues, fine grain, deep contrast, crisp far detail, photograph style image. |
 | [Photo] Emulsion Lift | style | instant_photo, textured, muted_color, soft_focus | Emulsion-lift rendering: instant-film skin floated onto paper, wrinkled and torn edges, soft muted colour, instant photograph style image. |
+| [Photo] Endoscope Fisheye | style | fisheye, wet, vignetting, flash_photography | Endoscope rendering: a tiny wide-angle lens held close to a wet surface, strong barrel distortion, circular black vignette framing the field, hot ring-light ... |
 | [Photo] Environmental Portrait | style | portrait, scenery, photo_(medium), depth_of_field | Environmental portrait: subject placed in their own habitat, context kept legible, natural mixed light, moderate depth, photograph style image. |
 | [Photo] Expired Film | style | film_grain, muted_color, vignetting, textured | Expired film capture: drifting colour balance, low contrast, coarse grain clumps, edge fogging, photograph style image. |
 | [Photo] Family-Album Flash | style | flash_photography, film_grain, photo_(medium), retro_artstyle | Family-album capture: hard direct flash, honest ugly room behind, warm print colour, slight paper texture, photograph style image. |
@@ -974,6 +1060,7 @@ and closes with its medium. The node adds nothing else.
 | [Photo] Headshot | style | portrait, upper_body, simple_background, realistic | Professional headshot: eyes tack sharp, soft key with fill, clean neutral backdrop, natural skin rendering, photograph style image. |
 | [Photo] High-Fashion Editorial | style | cinematic_lighting, high_contrast, highres, photo_(medium) | High-fashion capture: hard sculptural key, extreme styling, graphic negative space, immaculate retouch, cool colour grade, photograph style image. |
 | [Photo] High-Key Catalog | style | white_theme, simple_background, soft_focus, photo_(medium) | High-key catalogue capture: bright shadowless wash, near-white background, gentle contrast, true product colour, photograph style image. |
+| [Photo] High-Speed Strobe | style | flash_photography, wet, dark, high_contrast | High-speed strobe rendering: a microsecond flash freezing a splash crown mid-collapse, needle-sharp droplet rims, black velvet ground, hard specular points a... |
 | [Photo] Holga Toy Camera | style | vignetting, soft_focus, film_grain, lens_flare | Toy-camera capture: heavy vignette, soft plastic-lens corners, light leaks, unpredictable colour shift, medium-format grain, photograph style image. |
 | [Photo] Hospital LED | style | blue_theme, white_theme, desaturated, scenery | Clinical rendering: cold blue-white LED wash, high ambient fill, pale surfaces, clean shadowless flatness, photograph style image. |
 | [Photo] Hotel Brochure | style | glowing, orange_theme, photo_(medium), soft_focus | Brochure rendering: warm inviting lamplight balanced with dusk windows, styled surfaces, gentle contrast, glossy finish, photograph style image. |
@@ -997,11 +1084,13 @@ and closes with its medium. The node adds nothing else.
 | [Photo] Long Exposure | style | long_exposure, motion_blur, scenery, soft_focus | Long exposure: silked water and cloud, ghosted moving figures, static detail razor sharp, smooth tonal blur, photograph style image. |
 | [Photo] Long-Exposure Night | style | long_exposure, dark, glowing, neon_palette | Night long exposure: light trails through the frame, deep clean shadows, star-point highlights, still surfaces mirror-sharp, photograph style image. |
 | [Photo] Low-Key Chiaroscuro Studio | style | chiaroscuro, dark, high_contrast, simple_background | Low-key studio capture: single hard source, most of the frame in shadow, sculpted highlight edge, black falloff, photograph style image. |
+| [Photo] Lumen Print | style | pink_theme, pale_color, photo_(medium), textured | Lumen rendering: sunlight printing directly onto silver paper over hours, pink, violet and sepia staining, soft contact edges, mottled uneven bleaching acros... |
 | [Photo] Macro | style | depth_of_field, bokeh, highres, textured | Macro capture: paper-thin depth of field, scale-shocking detail, diffused close light, soft creamy background wash, photograph style image. |
 | [Photo] Macro Nature | style | depth_of_field, bokeh, green_theme, textured | Nature macro: dew and hair detail at extreme magnification, natural diffuse light, shallow focus plane, green bokeh, photograph style image. |
 | [Photo] Maritime Work | style | desaturated, textured, rust, photo_(medium) | Working-deck capture: salt spray on the lens, overcast flat light, rust and rope texture, cold desaturated grade, photograph style image. |
 | [Photo] Medium Format | style | highres, depth_of_field, photo_(medium), bokeh | Medium-format capture: deep tonal separation, smooth focus falloff, low noise, expensive stillness in the rendering, photograph style image. |
 | [Photo] Medium-Format Portrait | style | portrait, bokeh, highres, soft_focus | Medium-format portrait: creamy shallow focus, immense skin tonal detail, soft window key, muted colour depth, photograph style image. |
+| [Photo] Microfiche Scan | style | monochrome, high_contrast, greyscale, vignetting | Microfiche rendering: a high-contrast library scan, blown-out white ground with crushed grey midtones, dust specks and scratch lines, soft optical fall-off i... |
 | [Photo] Microscope Slide | style | transparent, depth_of_field, vignetting, backlighting | Microscopy rendering: stained translucent structures, razor-thin focus, circular field vignette, clinical backlight, photograph style image. |
 | [Photo] Milky Way Panorama | style | dark, scenery, silhouette, long_exposure | Astro-panorama rendering: dense star core arching over a silhouetted horizon, deep blue-black sky, faint airglow, photograph style image. |
 | [Photo] Moonlight Long Exposure | style | blue_theme, long_exposure, dark, scenery | Moonlight rendering: cool blue ambient over a long exposure, star points, soft shadow edges, silky water and cloud, photograph style image. |
@@ -1010,6 +1099,7 @@ and closes with its medium. The node adds nothing else.
 | [Photo] Night Vision | style | green_theme, dark, film_grain, vignetting | Night-vision rendering: monochrome green phosphor image, heavy sensor noise, blown highlights, vignetted circular field, photograph style image. |
 | [Photo] Paparazzi Tele | style | depth_of_field, photo_(medium), motion_blur | Telephoto candid capture: compressed background, hunted framing, uneven street light, slight motion softness, photograph style image. |
 | [Photo] Petzval Swirl | style | bokeh, vignetting, depth_of_field, soft_focus | Petzval rendering: swirling looped bokeh at the edges, sharp centre, strong field curvature, vignette falloff, photograph style image. |
+| [Photo] Photogram | style | monochrome, silhouette, high_contrast, dark | Photogram rendering: objects laid straight onto the paper and exposed, luminous white silhouettes on dense black, soft penumbra where contact loosens, no len... |
 | [Photo] Pictorialism | style | soft_focus, sepia, traditional_media, vignetting | Pictorialist capture: soft-focus lens, brush-marked printing, warm platinum tone, painterly atmospheric haze, photograph style image. |
 | [Photo] Pinhole | style | soft_focus, vignetting, long_exposure, monochrome | Pinhole capture: infinite depth with overall softness, heavy vignette, long-exposure ghosting, gentle radial distortion, photograph style image. |
 | [Photo] Platinum Palladium | style | monochrome, greyscale, traditional_media, textured | Platinum print: matte noble greys, extremely long tonal scale, no glossy blacks, cotton paper texture, photograph style image. |
@@ -1021,23 +1111,30 @@ and closes with its medium. The node adds nothing else.
 | [Photo] Rangefinder Street | style | photo_(medium), film_grain, muted_color | Rangefinder street capture: 35mm framing, deep zone focus, quiet observational distance, natural mixed light, fine grain, photograph style image. |
 | [Photo] Real Estate Interior | style | scenery, highres, white_theme, photo_(medium) | Property rendering: wide corrected verticals, windows exposed to keep the view, bright even ambient fill, tidy neutral colour, photograph style image. |
 | [Photo] Ring Flash Fashion | style | flash_photography, high_contrast, portrait, simple_background | Ring-flash rendering: shadowless frontal light with a thin halo shadow behind, circular catchlights, punchy saturation, photograph style image. |
+| [Photo] Salted Paper Print | style | sepia, monochrome, photo_(medium), textured | Salted-paper rendering: matte fibrous print with the sheet's own fibre visible, soft violet-brown tone, low contrast and gentle highlight roll-off, a faint e... |
 | [Photo] Satellite Imagery | style | map, scenery, desaturated, highres | Satellite rendering: straight-down orbital view, flattened land patterns, thin cloud veils, faint sensor banding, photograph style image. |
 | [Photo] Schlieren Flow | style | monochrome, greyscale, gradient, transparent | Schlieren rendering: invisible air currents made visible as rippling grey streaks, knife-edge shading, laboratory flatness, photograph style image. |
 | [Photo] Seascape | style | scenery, long_exposure, blue_theme, photo_(medium) | Seascape capture: horizon-anchored composition, either frozen spray or silked water, salt haze, cool blue-grey grade, photograph style image. |
 | [Photo] Selenium Tone | style | monochrome, purple_theme, traditional_media, high_contrast | Selenium-toned print: eggplant-cooled blacks, extended shadow separation, archival gloss, silver tonality, photograph style image. |
+| [Photo] Slit-Scan Strip | style | motion_blur, photo_(medium), long_exposure | Slit-scan rendering: one narrow slit exposed continuously through time, forms smeared into long ribbons along the scan axis, motionless edges left needle-sha... |
 | [Photo] Sodium Vapour Street | style | orange_theme, dark, glowing, muted_color | Sodium-lamp rendering: monochromatic amber wash, colour reduced to orange and black, hard pools of light, deep shadow, photograph style image. |
+| [Photo] Solargraph | style | long_exposure, muted_color, vignetting, blurry | Solargraph rendering: a months-long pinhole exposure printing stacked arcs of sun tracks, reversed muted colour, immobile forms softened to ghosts, heavy vig... |
 | [Photo] Solarisation | style | monochrome, high_contrast, glowing, greyscale | Sabattier rendering: partially reversed tones with bright Mackie lines tracing every edge, silver-grey mid tones, photograph style image. |
 | [Photo] Split Tone | style | duotone, monochrome, gradient, muted_color | Split-toned print: one hue in the highlights and its opposite in the shadows, neutral mid tones, gentle contrast, photograph style image. |
 | [Photo] Sports Arena Wide | style | scenery, high_contrast, photo_(medium), colorful | Arena rendering: high wide vantage, hard overhead floodlight, saturated pitch colour, crowd falling into shadow, photograph style image. |
 | [Photo] Sports Peak | style | bokeh, depth_of_field, rim_lighting, photo_(medium) | Peak-action capture: extreme telephoto isolation, blurred crowd wash, hard rim light on the athlete, frozen detail, photograph style image. |
+| [Photo] Star-Trail Stack | style | long_exposure, dark, blue_theme, photo_(medium) | Star-trail rendering: hundreds of night frames stacked into concentric arcs about the pole, warm light pollution banding the horizon, faint gaps where frames... |
 | [Photo] Still Life | style | still_life, simple_background, soft_focus, muted_color | Still-life capture: arranged objects, single soft key, deliberate shadow shapes, matte surfaces, quiet colour, photograph style image. |
 | [Photo] Storm Chase | style | scenery, dark, high_contrast, green_theme | Storm rendering: bruised green-black cloud structure, hard sunlit ground strip, rain curtains, high dynamic contrast, photograph style image. |
 | [Photo] Street HP5 | style | monochrome, film_grain, high_contrast, greyscale | Street black and white on HP5: gritty grain, high mid contrast, deep blacks, available mixed light, snap framing, photograph style image. |
 | [Photo] Street Photography | style | photo_(medium), film_grain, muted_color | Street capture: public decisive moment, available light, layered background, unposed gesture, natural colour, photograph style image. |
+| [Photo] Strip Camera Finish | style | motion_blur, photo_(medium), long_exposure | Strip-camera rendering: a fixed slit recording against continuously moving film, forms stretched or squeezed by their own speed, repeating banded background,... |
 | [Photo] Studio Beauty | style | portrait, simple_background, soft_focus, realistic | Studio beauty capture: beauty-dish key with under-fill, clean specular skin sheen, seamless backdrop, precise retouch, photograph style image. |
+| [Photo] Swing-Lens Panorama | style | photo_(medium), widescreen, realistic | Swing-lens rendering: a rotating slit sweeping a very wide field, horizon bowing gently through the frame, faint exposure banding between sweeps, tapered str... |
 | [Photo] Thermal Imaging | style | glowing, gradient, dark, colorful | Thermal rendering: heat mapped to a false-colour ramp, glowing warm bodies against cold surroundings, no texture detail, photograph style image. |
 | [Photo] Tilt-Shift Miniature | style | depth_of_field, high_saturation, scenery, soft_focus | Tilt-shift capture: razor-thin focus band with blur above and below, saturated colour, high viewpoint, toy-scale illusion, photograph style image. |
 | [Photo] Tintype | style | monochrome, sepia, textured, vignetting | Tintype plate: dark metal base, silvery reversed tonality, shallow focus, chemical streaks and edge flaws, instant photograph style image. |
+| [Photo] Trail Camera Infrared | style | monochrome, flash_photography, dark, analog_horror | Trail-camera rendering: monochrome infrared flash at night, flat frontal light falling off hard into blackness, bright eye-shine, a burnt-in data bar and hea... |
 | [Photo] Tri-X 400 | style | monochrome, film_grain, high_contrast, greyscale | Tri-X black and white: punchy street contrast, coarse grain, deep blacks, bright separated highlights, photograph style image. |
 | [Photo] Tungsten Night Cinema Stock | style | film_grain, glowing, blue_theme, cinematic_lighting | Tungsten cinema stock at night: cool cyan shadows, warm practicals, halation around lamps, fine grain, film still style image. |
 | [Photo] Twin-Lens Rollei | style | photo_(medium), monochrome, vignetting, retro_artstyle | Twin-lens capture: square frame, waist-level viewpoint, mid-century tonality, gentle corner falloff, photograph style image. |
@@ -1052,6 +1149,7 @@ and closes with its medium. The node adds nothing else.
 | [Photo] Wildlife | style | bokeh, depth_of_field, photo_(medium), sunlight | Wildlife capture: long-lens compression, catchlight in the animal's eye, blurred habitat wash, natural early light, photograph style image. |
 | [Photo] Wildlife Telephoto | style | bokeh, depth_of_field, fur, highres | Telephoto wildlife capture: extreme compression, creamy separated background, sharp fur and feather detail, low-angle light, photograph style image. |
 | [Photo] Yearbook Studio | style | portrait, simple_background, retro_artstyle, soft_focus | Yearbook studio capture: mottled blue-grey backdrop, soft frontal key with hair light, mild retouch, dated colour, photograph style image. |
+| [Photo] Zoom-Burst | style | motion_blur, long_exposure, blurry, colorful | Zoom-burst rendering: focal length pulled during a long exposure, radial streaks flung outward from a still centre, one small core left readable, colour smea... |
 | [Photo][v2] Adobe Lightroom Masterpiece | style | high_contrast, highres, duotone, photo_(medium) | Heavily graded digital capture: lifted shadows, split-toned colour, clarity-boosted texture, glossy finished contrast, photograph style image. |
 | [Photo][v2] Analog Photography | style | film_grain, muted_color, textured, photo_(medium) | Analogue capture: emulsion grain, warm imperfect colour, soft highlight roll-off, occasional dust and scratch, photograph style image. |
 | [Photo][v2] Annie Leibovitz Portraiture | style | portrait, cinematic_lighting, colorful, depth_of_field | Staged portrait capture: theatrical key light, rich saturated grade, deliberate environmental staging, painterly depth, photograph style image. |
@@ -1113,7 +1211,7 @@ and closes with its medium. The node adds nothing else.
 | [Photo][v2] Vogue Magazine | style | magazine_cover, cinematic_lighting, muted_color, highres | Vogue-style capture: sculpted editorial key, luxurious styling, restrained cool palette, flawless retouch, generous negative space, photograph style image. |
 | [Photo][v2] Wes Anderson Photography | style | pastel_colors, simple_background, photo_(medium), widescreen | Symmetrical pastel capture: dead-centre framing, flat frontal light, pastel-and-mustard palette, planar staging, film still style image. |
 
-## Traditional Painting (181)
+## Traditional Painting (208)
 
 | name | axis | tags | clause |
 | --- | --- | --- | --- |
@@ -1122,6 +1220,7 @@ and closes with its medium. The node adds nothing else.
 | [Painting] Academic Salon | style | oil_painting_(medium), traditional_media, chiaroscuro, realistic | Academic salon oil: invisible blended brushwork, precise anatomy, warm varnished glazes, controlled studio light, dark ground, oil painting style image. |
 | [Painting] Acrylic | style | acrylic_paint_(medium), traditional_media, flat_color, textured | Acrylic rendering: brighter flatter colour than oil, fast-dried hard edges, matte plastic film, slight brush ridging, painting style image. |
 | [Painting] Afrofuturist Art | style | gold, colorful, glowing, textured | Afrofuturist painting: indigo and gold palette, patterned textile fields, cosmic glow behind the figure, metallic leaf accents, painting style image. |
+| [Painting] Amate Bark Painting | style | traditional_media, flat_color, colorful, textured | Amate rendering: bright flat figures painted on mottled fig-bark paper, hard black outlines, symmetrical birds and blossoms, the fibrous uneven ground showin... |
 | [Painting] Analytic Cubism | style | cubism, monochrome, muted_color, painting_(medium) | Analytic-cubist rendering: form shattered into overlapping facets, monochrome ochre-and-grey palette, ambiguous shallow space, painting style image. |
 | [Painting] Arabesque Illumination | style | gold, traditional_media, flat_color, blue_theme | Arabesque illumination: interlaced geometric vine ornament, lapis and gold leaf, flat jewel colour, fine white outlining, painting style image. |
 | [Painting] Art Brut | style | painting_(medium), textured, colorful, sketch | Art-brut rendering: untrained urgent mark-making, flattened space, scratched-in detail, raw unmixed colour, crowded surface, painting style image. |
@@ -1133,9 +1232,12 @@ and closes with its medium. The node adds nothing else.
 | [Painting] Baroque Chiaroscuro | style | chiaroscuro, dark, oil_painting_(medium), high_contrast | Baroque chiaroscuro: single dramatic light source, deep black surround, luminous modelled flesh, warm glaze depth, oil painting style image. |
 | [Painting] Baroque Oil | style | oil_painting_(medium), chiaroscuro, traditional_media, dark | Baroque oil rendering: dark ground with warm flesh built in glazes, velvet and satin highlights, dynamic drapery, oil painting style image. |
 | [Painting] Batik Painting | style | textured, colorful, traditional_media, knitted | Batik-painting rendering: wax-resist white lines with crackle veining, layered dye colour, cloth weave showing through, material style image. |
+| [Painting] Bay Area Figurative | style | oil_painting_(medium), textured, muted_color, unfinished | Bay Area figurative rendering: thick loaded strokes left deliberately unresolved, high Californian daylight flattening the palette, drawing done with the bru... |
+| [Painting] Bodegón | style | oil_painting_(medium), still_life, dark, muted_color | Spanish bodegón rendering: a few humble objects spaced along a bare ledge, hard side light against a near-black ground, austere intervals, matte earthy palet... |
 | [Painting] Byzantine Gold | style | gold, tempera_(medium), flat_color, traditional_media | Byzantine gold-ground rendering: flat gilded background, frontal hieratic figures, linear drapery folds, egg-tempera matte surface, painting style image. |
 | [Painting] Byzantine Icon | style | gold, tempera_(medium), textured, traditional_media | Icon rendering: gold leaf halo, olive underpaint through the flesh, stylised linear features, cracked varnish surface, painting style image. |
 | [Painting] Camera Obscura Study | style | soft_focus, bokeh, oil_painting_(medium), realistic | Camera-obscura rendering: optical circles of confusion on highlights, soft focus falloff, cool daylight interior, pointillist glints, oil painting style image. |
+| [Painting] Capriccio Ruin Fantasy | style | oil_painting_(medium), scenery, brown_theme, textured | Capriccio rendering: invented ruins assembled beside real monuments, warm bituminous shadow, crumbling stone laid in dry scumbles, wide even daylight and a c... |
 | [Painting] Caravaggesque | style | chiaroscuro, dark, oil_painting_(medium), high_contrast | Caravaggesque rendering: spotlight emerging from darkness, hard shadow edges, earthy flesh, near-black background, oil painting style image. |
 | [Painting] Cave Ochre Pictograph | style | traditional_media, brown_theme, textured, silhouette | Cave-pictograph rendering: ochre and charcoal pigment on rough rock, blown-hand outlines, flat silhouettes, mineral bleed into stone, painting style image. |
 | [Painting] Charcoal | style | charcoal_(medium), monochrome, textured, traditional_media | Charcoal rendering: velvet blacks smudged with the finger, lifted white highlights, dusty grain, toothy paper, drawing style image. |
@@ -1144,17 +1246,24 @@ and closes with its medium. The node adds nothing else.
 | [Painting] Classical Antiquity | style | marble, muted_color, traditional_media, greyscale | Classical rendering: marble-pale figures in contrapposto, carved drapery folds, restrained ochre palette, frieze-flat staging, painting style image. |
 | [Painting] Color Field | style | gradient, flat_color, painting_(medium), minimalism | Colour-field rendering: large stained planes of hovering colour, soft bleeding boundaries, matte unvarnished surface, no drawing, abstract style image. |
 | [Painting] Colored Pencil | style | colored_pencil_(medium), traditional_media, textured, cross-hatching | Coloured-pencil rendering: waxy layered strokes, visible directional hatching, paper tooth breaking the colour, gentle burnish, drawing style image. |
+| [Painting] Concrete Art Geometric | style | flat_color, minimalism, limited_palette, high_contrast | Concrete-art rendering: exact geometry fixed by rule before the brush, hard-edged bars and squares in flat unmodulated paint, mathematical spacing, no gestur... |
 | [Painting] Contemporary Figurative | style | painting_(medium), muted_color, unfinished, textured | Contemporary figurative rendering: current paint handling, unfinished passages beside resolved detail, cool muted palette, visible drips, painting style image. |
 | [Painting] Cross-Hatching | style | cross-hatching, monochrome, lineart, traditional_media | Cross-hatch rendering: form built purely from crossing pen strokes, tonal density by line spacing, white paper as light, drawing style image. |
+| [Painting] Cuzco School | style | painting_(medium), gold, dark, muted_color | Cuzco-school rendering: Andean colonial devotional painting, gold brocade patterning laid flat over dark drapery, frontal hieratic poses, matte earth palette... |
 | [Painting] Dada Collage | style | collage, halftone, monochrome, textured | Dada collage rendering: cut newsprint fragments, mismatched scales, typographic scraps, glue wrinkles, torn edges, collage style image. |
+| [Painting] Decalcomania Blot | style | textured, painting_(medium), dark | Decalcomania rendering: paint pressed between two surfaces and pulled apart, veined lace and coral textures left behind, accidental near-symmetry, dark tonal... |
 | [Painting] Divisionism | style | impressionism, halftone, colorful, textured | Divisionist rendering: separated strokes of pure complementary colour, optical mixing at distance, even mark rhythm, painting style image. |
+| [Painting] Dutch Marine | style | oil_painting_(medium), scenery, desaturated, muted_color | Dutch marine rendering: grey-green swell under a towering cloud bank, rigging picked out hair-thin against pale sky, low horizon far down the frame, silvery ... |
+| [Painting] Décollage Torn Poster | style | collage, textured, partially_colored | Décollage rendering: layers of pasted street posters torn back into each other, fragments of type and flat colour surfacing at random, ragged wet edges, past... |
 | [Painting] Early / High Renaissance | style | oil_painting_(medium), traditional_media, realistic, muted_color | Renaissance rendering: measured one-point perspective, idealised anatomy, clear even light, luminous layered glazes, oil painting style image. |
 | [Painting] Early Renaissance Tempera | style | tempera_(medium), gold, traditional_media, pale_color | Early-renaissance tempera: dry matte surface, fine hatched modelling, gold-leaf accents, pale even light, panel grain, painting style image. |
 | [Painting] Egyptian Wall Painting | style | flat_color, traditional_media, brown_theme, textured | Egyptian wall rendering: profile-and-frontal composite figures, flat mineral ochre and lapis, register bands, plaster texture, painting style image. |
+| [Painting] Ethiopian Church Painting | style | painting_(medium), flat_color, colorful, outline | Ethiopian church rendering: wide almond eyes and frontal stares, thick black contour around every shape, flat saturated red, yellow and green, banded borders... |
 | [Painting] Expressionism | style | painting_(medium), colorful, textured, high_contrast | Expressionist rendering: distorted forms, high-keyed emotional colour, slashing visible brushwork, heavy contour, painting style image. |
 | [Painting] Fauvism | style | colorful, high_saturation, painting_(medium), flat_color | Fauvist rendering: arbitrary wild colour, unmixed strokes side by side, flattened space, bold contour, painting style image. |
 | [Painting] Fayum Portrait | style | tempera_(medium), brown_theme, traditional_media, textured | Fayum rendering: encaustic wax portrait on wood, large dark eyes, warm ochre flesh, visible brush and panel grain, painting style image. |
 | [Painting] Fresco | style | painting_(medium), traditional_media, muted_color, textured | Fresco rendering: pigment sunk into wet lime plaster, chalky matte surface, muted mineral palette, hairline cracks, painting style image. |
+| [Painting] Frottage Rubbing | style | graphite_(medium), monochrome, textured, traditional_media | Frottage rendering: graphite rubbed over paper laid on rough boards, grain and knots printing through as tonal fields, no drawn line at all, smudged open edg... |
 | [Painting] Futurism | style | motion_lines, cubism, painting_(medium), muted_color | Futurist rendering: motion split into repeated overlapping forms, force lines, mechanical palette, faceted speed planes, painting style image. |
 | [Painting] German Expressionism | style | woodcut, high_contrast, colorful, painting_(medium) | German-expressionist rendering: woodcut-angular figures, acid clashing colour, jagged contour, anxious distorted space, painting style image. |
 | [Painting] Glazing | style | oil_painting_(medium), gradient, traditional_media, glowing | Glazed oil rendering: transparent colour layers over a monochrome underpainting, glowing depth, invisible brush marks, oil painting style image. |
@@ -1169,6 +1278,7 @@ and closes with its medium. The node adds nothing else.
 | [Painting] Greek Vase | style | silhouette, brown_theme, flat_color, traditional_media | Greek-vase rendering: black-figure silhouettes on terracotta, incised interior detail, meander border bands, curved surface sheen, painting style image. |
 | [Painting] Grisaille | style | greyscale, monochrome, painting_(medium), chiaroscuro | Grisaille rendering: full modelling in grey monochrome, sculptural relief illusion, subtle warm-cool grey shifts, painting style image. |
 | [Painting] Hard-Edge Painting | style | flat_color, minimalism, limited_palette | Hard-edge rendering: razor-clean boundaries between flat colour zones, matte even paint, no brush marks at all, abstract style image. |
+| [Painting] Hard-Edge Shaped Panel | style | flat_color, minimalism, acrylic_paint_(medium), high_contrast | Hard-edge rendering: flat bands meeting on razor-taped boundaries, the panel's own irregular outline treated as part of the design, matte acrylic evenness, n... |
 | [Painting] Hellenistic | style | marble, greyscale, traditional_media, chiaroscuro | Hellenistic rendering: torsioned dynamic figures, deeply carved drapery, emotive faces, marble-pale tonality, painting style image. |
 | [Painting] High Renaissance Oil | style | oil_painting_(medium), soft_focus, traditional_media, realistic | High-renaissance oil: sfumato transitions, balanced pyramid composition, warm luminous flesh, dark landscape distance, oil painting style image. |
 | [Painting] Hudson River | style | scenery, oil_painting_(medium), glowing, sunlight | Hudson-River rendering: luminous glowing sky, vast atmospheric wilderness, tiny scale figures, warm golden haze, oil painting style image. |
@@ -1180,6 +1290,7 @@ and closes with its medium. The node adds nothing else.
 | [Painting] Ink Calligraphic Brush | style | ink_wash_painting, monochrome, traditional_media, textured | Calligraphic brush rendering: one-stroke gestures with pressure variation, dry-brush split ends, ink pooling at the turns, ink painting style image. |
 | [Painting] Inuit Stonecut | style | silhouette, limited_palette, flat_color, traditional_media | Stonecut rendering: flat silhouette figures in two or three colours, hand-rubbed uneven ink, wide empty paper, print style image. |
 | [Painting] Kalighat Pat | style | watercolor_(medium), lineart, traditional_media, minimalism | Kalighat rendering: sweeping calligraphic brush contour, broad watercolour washes, minimal background, bold economical form, painting style image. |
+| [Painting] Kerala Mural | style | painting_(medium), flat_color, muted_color, traditional_media | Kerala mural rendering: ochre, indigo and terre-verte on lime plaster, elaborate crowns and jewellery drawn in fine line, rounded stylised anatomy, dense flo... |
 | [Painting] Korean Minhwa | style | flat_color, colorful, traditional_media, outline | Minhwa rendering: flat bright folk colour, symmetrical playful composition, bold black outline, mineral pigment on paper, painting style image. |
 | [Painting] Les Nabis | style | flat_color, muted_color, painting_(medium), minimalism | Nabis rendering: flattened decorative space, patterned interiors, muted matte colour, soft simplified contour, painting style image. |
 | [Painting] Lyrical Abstraction | style | gradient, painting_(medium), colorful, transparent | Lyrical-abstract rendering: fluid poured colour fields, soft blooming edges, translucent overlaps, unstructured drift, abstract style image. |
@@ -1191,10 +1302,14 @@ and closes with its medium. The node adds nothing else.
 | [Painting] Metaphysical Painting | style | surreal, muted_color, scenery, oil_painting_(medium) | Metaphysical rendering: empty arcaded squares, impossible long shadows, airless stillness, muted ochre and green, oil painting style image. |
 | [Painting] Mexican Muralism | style | painting_(medium), brown_theme, traditional_media, muted_color | Muralist rendering: monumental simplified figures, earth-red and ochre palette, fresco matte surface, public epic scale, painting style image. |
 | [Painting] Mithila Line | style | lineart, flat_color, traditional_media, textured | Mithila rendering: double contour lines packed with hatching and dots, flat natural-dye colour, symmetrical filled ground, painting style image. |
+| [Painting] Monochrome Field | style | minimalism, monochrome, textured | Single-hue rendering: one colour carried across the whole surface, tonal life coming only from brush drag and weave grain, edges left frankly visible, no dra... |
 | [Painting] Mughal Miniature | style | gold, flat_color, lineart, traditional_media | Mughal miniature: fine squirrel-hair line, jewel mineral colour, elevated garden perspective, gold-flecked border, painting style image. |
 | [Painting] Naive Folk | style | flat_color, colorful, outline, traditional_media | Naive folk rendering: flattened perspective, careful outlining, cheerful unmixed colour, decorative repeated detail, painting style image. |
+| [Painting] Ndebele Wall Geometry | style | flat_color, colorful, high_contrast, outline | Ndebele rendering: hard-edged geometric blocks in saturated colour, every field bound by a heavy black band, stepped symmetrical forms, chalky wall texture u... |
+| [Painting] Neo-Concrete Fold | style | minimalism, flat_color, white_theme | Neo-concrete rendering: geometric planes folded off the flat, hinged panels and cut angles casting their own thin shadows, restrained palette on white, hand-... |
 | [Painting] Neo-Expressionism | style | painting_(medium), textured, high_contrast, colorful | Neo-expressionist rendering: violent thick brushwork, raw scraped colour, crude figuration, mixed material grit, painting style image. |
 | [Painting] Neoclassical | style | oil_painting_(medium), muted_color, realistic, traditional_media | Neoclassical rendering: stoic clean contour, sculptural modelling, cool restrained palette, stage-lit clarity, oil painting style image. |
+| [Painting] Nested Square Study | style | flat_color, minimalism, limited_palette | Nested-square rendering: concentric flat rectangles stepped downward, neighbouring colours chosen so each shifts the other, matte board-like surface, no blen... |
 | [Painting] New Objectivity | style | realistic, muted_color, green_theme, oil_painting_(medium) | New-objectivity rendering: unflattering precise realism, hard cold light, sour green-grey palette, clinical detail, oil painting style image. |
 | [Painting] Nihonga | style | nihonga, traditional_media, flat_color, gold | Nihonga rendering: mineral pigment and shell white on paper, matte granular surface, flat decorative space, gold ground accents, painting style image. |
 | [Painting] Northern Renaissance | style | oil_painting_(medium), highres, realistic, traditional_media | Northern-renaissance rendering: micro-detailed oil surfaces, crisp fabric and metal, cool even north light, deep saturated glaze, oil painting style image. |
@@ -1202,7 +1317,9 @@ and closes with its medium. The node adds nothing else.
 | [Painting] Northwest Coast Formline | style | flat_color, outline, limited_palette, red_theme | Formline rendering: swelling and tapering black ovoid contours, red and cyan secondary fills, symmetrical interlocking design, painting style image. |
 | [Painting] Oil on Canvas | style | oil_painting_(medium), traditional_media, textured | Oil-on-canvas rendering: loaded brush marks over canvas weave, blended wet-into-wet transitions, layered depth, varnish sheen, oil painting style image. |
 | [Painting] Op Art | style | psychedelic, high_contrast, monochrome, minimalism | Op-art rendering: precise repeating geometry, vibrating black-and-white contrast, illusory bulge and movement, flat inks, abstract style image. |
+| [Painting] Orphism | style | colorful, painting_(medium), cubism, high_saturation | Orphist rendering: prismatic discs and interlocking arcs, simultaneous contrasts of pure hue doing the work of light, rhythm built from colour alone, faceted... |
 | [Painting] Otomi Embroidery Drawing | style | embroidery, flat_color, colorful, white_theme | Otomi rendering: flat animal and flora silhouettes in satin-stitch colour blocks, white cloth ground, even outline, material style image. |
+| [Painting] Pahari Miniature | style | painting_(medium), pastel_colors, traditional_media, gold | Pahari rendering: soft hill country in cool thin washes, delicate courtly line, lyrical pastel palette, sparing gold accents, a generous plain band of sky ab... |
 | [Painting] Pastel | style | pastel_(medium), traditional_media, textured, pastel_colors | Soft-pastel rendering: chalk bloom on toothy paper, blended finger-smudged transitions, dusty matte colour, painting style image. |
 | [Painting] Pastel Portrait | style | pastel_(medium), portrait, soft_focus, textured | Pastel portrait rendering: powdery skin transitions, paper tooth in the highlights, soft edges, warm chalky palette, painting style image. |
 | [Painting] Pattachitra | style | lineart, flat_color, traditional_media, textured | Pattachitra rendering: fine black contour on treated cloth, natural mineral colour, dense floral border, flat stylised figures, painting style image. |
@@ -1214,6 +1331,8 @@ and closes with its medium. The node adds nothing else.
 | [Painting] Post-Impressionism | style | oil_painting_(medium), colorful, textured, impressionism | Post-impressionist rendering: structured directional strokes, symbolic heightened colour, firm simplified form, oil painting style image. |
 | [Painting] Pre-Raphaelite | style | oil_painting_(medium), colorful, highres, traditional_media | Pre-Raphaelite rendering: jewel-bright colour on a white ground, botanical precision, literary staging, even sharp focus, oil painting style image. |
 | [Painting] Precisionism | style | flat_color, minimalism, muted_color, painting_(medium) | Precisionist rendering: industrial forms flattened into clean geometry, hard-edged planes, smooth unmodulated colour, no texture, painting style image. |
+| [Painting] Pronkstilleven | style | oil_painting_(medium), still_life, chiaroscuro, dark | Ostentatious still-life rendering: silver, glass and fruit piled in dark opulence, one raking light, wet reflections and dew rendered to a hair, deep varnish... |
+| [Painting] Quadratura Ceiling | style | painting_(medium), scenery, muted_color | Quadratura rendering: illusionistic architecture in steep upward perspective, painted cornices and coffers continuing the real room, foreshortened forms crow... |
 | [Painting] Rayonism | style | colorful, high_contrast, painting_(medium), glowing | Rayonist rendering: crossing rays of reflected light, splintered coloured beams, dissolved form, dynamic linear energy, abstract style image. |
 | [Painting] Realism Courbet-Line | style | oil_painting_(medium), muted_color, textured, realistic | Realist rendering: unidealised labour and weather, earth-heavy palette, palette-knife texture, plain daylight, oil painting style image. |
 | [Painting] Realism Naturalism | style | realistic, muted_color, oil_painting_(medium), traditional_media | Naturalist rendering: observed truthful detail, subdued daylight, restrained palette, careful tonal modelling, oil painting style image. |
@@ -1224,7 +1343,11 @@ and closes with its medium. The node adds nothing else.
 | [Painting] Rococo Pastel | style | pastel_(medium), pastel_colors, soft_focus, traditional_media | Rococo pastel rendering: powder-blue and rose chalk, powdered soft edges, silk sheen, delicate ornamental detail, painting style image. |
 | [Painting] Romantic Landscape | style | scenery, oil_painting_(medium), chiaroscuro, cinematic_lighting | Romantic landscape: sublime storm light, tiny human scale against vast nature, dramatic value contrast, warm-cold clash, oil painting style image. |
 | [Painting] Romanticism | style | oil_painting_(medium), dark, chiaroscuro, textured | Romantic rendering: emotional turbulence, sweeping brushwork, dark stormy tonality with a burst of light, oil painting style image. |
+| [Painting] Rosemaling | style | painting_(medium), traditional_media, muted_color, wood | Rosemaling rendering: Norwegian scrollwork in flowing C and S strokes, two tones blended on a single brush, ox-blood or blue-grey painted ground, cream linew... |
+| [Painting] Rule-System Wall Drawing | style | graphite_(medium), lineart, minimalism, monochrome | Rule-drawn rendering: pencil lines set out to a written instruction, dense hatched bands meeting at fixed angles, flat wall tone showing between passes, fain... |
+| [Painting] Sfumato | style | oil_painting_(medium), chiaroscuro, soft_focus, muted_color | Sfumato rendering: tone carried through imperceptible steps, no contour left anywhere, form emerging out of smoke-soft transitions, warm dark ground glowing ... |
 | [Painting] Silverpoint | style | graphite_(medium), monochrome, traditional_media, cross-hatching | Silverpoint rendering: fine grey metal line that cannot be erased, delicate hatched tone, warm prepared ground, drawing style image. |
+| [Painting] Sinopia Underdrawing | style | painting_(medium), unfinished, muted_color, brown_theme | Sinopia rendering: red-earth underdrawing brushed straight onto damp plaster, confident single-pass contours, thin washes blocking the masses, lime-white gro... |
 | [Painting] Socialist Realism | style | oil_painting_(medium), realistic, red_theme, cinematic_lighting | Socialist-realist rendering: monumental heroic figures, low viewpoint, warm optimistic light, smooth academic finish, oil painting style image. |
 | [Painting] Sosaku Hanga | style | woodcut, muted_color, textured, traditional_media | Sosaku-hanga rendering: self-carved block marks left visible, muted modern palette, uneven hand-rubbed ink, paper fibre, print style image. |
 | [Painting] Stipple | style | halftone, monochrome, traditional_media, lineart | Stipple rendering: tone built from thousands of ink dots, no lines at all, soft granular gradation, white paper, drawing style image. |
@@ -1236,6 +1359,7 @@ and closes with its medium. The node adds nothing else.
 | [Painting] Surrealism | style | surreal, painting_(medium), realistic, muted_color | Surrealist rendering: dream logic in convincing paint, uncanny scale shifts, smooth academic modelling, still airless light, painting style image. |
 | [Painting] Symbolism | style | muted_color, soft_focus, painting_(medium), surreal | Symbolist rendering: inward mystical mood, muted twilight palette, decorative flattened forms, veiled soft edges, painting style image. |
 | [Painting] Synthetic Cubism | style | cubism, collage, flat_color, painting_(medium) | Synthetic-cubist rendering: flat collaged planes, pasted paper and stencilled letters, simplified bold colour, shallow space, painting style image. |
+| [Painting] Tachisme Informel | style | painting_(medium), textured, muted_color, traditional_media | Informel rendering: blots and stabs of loaded pigment, scraped smears dragged across each other, no composition beyond the mark itself, earthy palette on raw... |
 | [Painting] Tanjore Gold | style | gold, flat_color, textured, traditional_media | Tanjore rendering: raised gesso relief under gold foil, inset glass jewels, flat vivid figures, ornate arch framing, painting style image. |
 | [Painting] Tempera | style | tempera_(medium), traditional_media, pale_color, cross-hatching | Egg-tempera rendering: dry matte finish, fine cross-hatched modelling, luminous pale colour, panel-smooth surface, painting style image. |
 | [Painting] Thangka | style | gold, flat_color, traditional_media, colorful | Thangka rendering: sacred symmetrical diagram, mineral pigment and gold line, flat jewel colour, brocade-style border, painting style image. |
@@ -1251,6 +1375,7 @@ and closes with its medium. The node adds nothing else.
 | [Painting] Watercolor Botanical | style | watercolor_(medium), diagram, pale_color, traditional_media | Botanical watercolour: precise dry-brush detail over pale washes, cream paper ground, scientific clarity, soft shadow, watercolour painting style image. |
 | [Painting] Watercolor Loose Wash | style | watercolor_(medium), traditional_media, pale_color, unfinished | Loose watercolour rendering: big wet washes, pigment pooling at the edges, unpainted paper gaps, happy accidents, watercolour painting style image. |
 | [Painting] Wet-on-Wet | style | watercolor_(medium), soft_focus, gradient, traditional_media | Wet-on-wet rendering: colour diffusing into damp paper, soft feathered boundaries, atmospheric bleed, no hard edges, watercolour painting style image. |
+| [Painting] White Relief Monochrome | style | white_theme, minimalism, textured, chiaroscuro | Monochrome-relief rendering: an all-white field broken only by cast shadow, folds, cuts and studs raked by low side light, chalky matte surface, tonal range ... |
 | [Painting] Xieyi | style | ink_wash_painting, monochrome, minimalism, traditional_media | Xieyi rendering: freehand expressive brush, few decisive strokes, splashed ink tone, wide empty paper, ink painting style image. |
 | [Painting] Yamato-e Handscroll | style | nihonga, gold, flat_color, lineart | Yamato-e rendering: raised-viewpoint interiors with roofs removed, flat mineral pigment, gold cloud bands, fine ink contour, painting style image. |
 | [Painting] Zellige Tilework | style | mosaic, textured, shiny, limited_palette | Zellige rendering: hand-cut glazed tile tessellation, interlacing star geometry, uneven glaze sheen, fine grout lines, material style image. |
@@ -1299,7 +1424,7 @@ and closes with its medium. The node adds nothing else.
 | [Painting][v2] Van Gogh | style | oil_painting_(medium), textured, colorful, impressionism | Van-Gogh-style rendering: swirling directional impasto, vibrating complementary colour, thick contour strokes, restless surface, oil painting style image. |
 | [Painting][v2] Wet-on-Wet Watercolor Ink Painting | style | watercolor_(medium), ink_(medium), soft_focus, traditional_media | Wet-on-wet ink-and-watercolour rendering: ink lines bleeding into damp washes, soft feathered boundaries, granulating pools, watercolour painting style image. |
 
-## Western Animation (60)
+## Western Animation (68)
 
 | name | axis | tags | clause |
 | --- | --- | --- | --- |
@@ -1318,6 +1443,7 @@ and closes with its medium. The node adds nothing else.
 | [Cartoon] Anime-Influenced Adventure | style | cel_shading, anime_coloring, outline, colorful | Western-anime hybrid animation: sharper cel shading than usual, dynamic camera angles, saturated adventure palette, clean bold line, cartoon style image. |
 | [Cartoon] Bouncing-Ball Sing-Along | style | monochrome, retro_artstyle, film_grain, outline | Sing-along-short rendering: black-and-white ink figures over grey wash, lyric card lettering space, projector flicker and dust, cartoon style image. |
 | [Cartoon] British Storybook Annual | style | watercolor_(medium), ink_(medium), muted_color, cross-hatching | British annual illustration: ink outline with watercolour wash, cosy muted palette, cross-hatched shadow, printed paper tooth, illustration style image. |
+| [Cartoon] Cutout Engraving Collage | style | collage, monochrome, textured, traditional_media | Cutout collage rendering: old engravings clipped out and hinged into new arrangements, hard scissor edges, line weights and greys frankly mismatched, flat co... |
 | [Cartoon] Estonian Puppet | style | stop_motion, textured, dark, wood | Puppet-animation rendering: coarse cloth and wood figures, grubby handmade texture, cold practical light, cramped set depth, handmade style image. |
 | [Cartoon] Feature Background Painting | style | scenery, painting_(medium), no_lineart, traditional_media | Feature background plate: gouache-painted architecture and foliage, no outlines, layered aerial perspective, warm keyed colour script, board texture, paintin... |
 | [Cartoon] Flash Vector Web | style | vector_trace, flat_color, outline, limited_palette | Flash-era vector animation: uniform stroke weight, flat symbol fills, tween-smooth shapes, limited web palette, hard-edged geometry, vector style image. |
@@ -1329,17 +1455,24 @@ and closes with its medium. The node adds nothing else.
 | [Cartoon] Late-Night Lo-Fi | style | flat_color, limited_palette, outline, muted_color | Lo-fi adult-animation rendering: minimal held drawings, thin uneven outline, muddy limited palette, deadpan flat staging, cartoon style image. |
 | [Cartoon] Ligne Claire | style | comic, lineart, flat_color, minimalism | Ligne-claire rendering: uniform confident contour, no hatching, flat even colour, clear readable space, precise architectural detail, comic style image. |
 | [Cartoon] Modern TV CalArts-adjacent | style | flat_color, outline, pastel_colors, minimalism | Modern TV cartoon rendering: rounded bean shapes, thin coloured outline, soft pastel-bright palette, minimal shading, clean digital finish, cartoon style image. |
+| [Cartoon] Motion Comic Limited | style | comic, halftone, flat_color, comic_panel | Motion-comic rendering: finished comic artwork separated onto sliding layers, hard panel edges kept intact, print halftone still visible inside the drawing, ... |
+| [Cartoon] Multiplane Painted Depth | style | painting_(medium), depth_of_field, scenery, muted_color | Multiplane rendering: painted layers stacked at different distances, crisp foreground detail against progressively hazier planes, atmospheric perspective mix... |
 | [Cartoon] Métal Hurlant Adult Comic | style | comic, airbrush_(medium), ink_(medium), colorful | Métal-Hurlant rendering: dense ink linework, airbrushed sci-fi gradients, acid-and-earth palette, ornate machine detail, printed grain, comic style image. |
+| [Cartoon] Paint-on-Glass | style | oil_painting_(medium), textured, glowing, gradient | Paint-on-glass rendering: wet oils smeared and reworked under the camera, brush ridges catching the light, forms half-dissolving into one another, luminous b... |
 | [Cartoon] Painted Prestige Hybrid | style | painting_(medium), muted_color, cinematic_lighting, film_grain | Painted prestige animation: brush-textured characters matched to painted environments, muted cinematic palette, soft edge control, film grain, painting style... |
+| [Cartoon] Pinscreen Shadow | style | monochrome, textured, greyscale, minimalism | Pinscreen rendering: an image formed by thousands of pins pushed to differing depths, tone made only from tiny cast shadows, soft grainy relief, an even matt... |
 | [Cartoon] Pixilation | style | stop_motion, photo_(medium), motion_blur, textured | Pixilation rendering: live subjects frozen frame by frame, slight pose jumps, hard practical light, real-world texture, photograph style image. |
 | [Cartoon] Preschool Vector | style | vector_trace, flat_color, outline, colorful | Preschool-animation rendering: simple rounded vector shapes, thick soft outline, primary-bright flat fills, no shading at all, vector style image. |
 | [Cartoon] Psychedelic 1960s Feature | style | psychedelic, colorful, collage, flat_color | 1960s psychedelic feature: flowing warped forms, clashing saturated colour fields, collage textures, pattern-filled space, hand-inked line, cartoon style image. |
 | [Cartoon] Replacement Cutout | style | papercraft, collage, flat_color, textured | Cutout animation: paper limb pieces on hinges, visible edges and drop shadows, flat printed textures, slight jitter between poses, handmade style image. |
 | [Cartoon] Rotoscope Stylized | style | flat_color, outline, high_contrast, limited_palette | Rotoscoped animation: traced live-action proportion and motion, flat posterised colour zones, wobbling hand-drawn contour, cartoon style image. |
+| [Cartoon] Scratch-on-Film Direct | style | film_grain, high_contrast, textured, lineart | Direct-on-film rendering: forms scratched and inked into the emulsion by hand, a jittering line that never repeats twice, raw flare along the sprocket side, ... |
 | [Cartoon] Silhouette Cut-Paper | style | silhouette, papercraft, backlighting, high_contrast | Silhouette cut-paper animation: black paper figures against backlit colour washes, sharp scissor contours, layered translucent grounds, handmade style image. |
 | [Cartoon] Soviet Painted Short | style | painting_(medium), muted_color, traditional_media, textured | Soviet painted animation: gouache-textured characters and grounds, muted folk palette, soft brush edges, hand-painted grain, painting style image. |
+| [Cartoon] Squigglevision | style | lineart, flat_color, sketch, colorful | Squiggle rendering: every contour vibrating with hand-redrawn wobble, flat unshaded fills inside restless outlines, cheerfully crude proportions, plain colou... |
 | [Cartoon] Sunday Fun-Page Color | style | comic, halftone, colorful, textured | Sunday funnies rendering: bright four-colour newsprint inks, visible dot rosettes, slight plate misregistration, simple pen line, paper cream, comic style im... |
 | [Cartoon] Whiteboard Marker | style | sketch, white_theme, limited_palette, lineart | Whiteboard-marker rendering: squeaky dry-erase strokes on white, uneven ink coverage, ghosted erasures, one or two accent colours, drawing style image. |
+| [Cartoon] Xerographic Cel Line | style | lineart, sketch, textured, muted_color | Xerographic cel rendering: pencil drawings photocopied straight onto cels, scratchy doubled grey-black outlines, construction lines left in place, flat paint... |
 | [Cartoon] Zagreb Modernist | style | flat_color, minimalism, limited_palette, textured | Modernist-animation rendering: spare graphic figures, flat mid-century colour, textured paper ground, huge empty space, cartoon style image. |
 | [Cartoon][v2] Adventure Time | style | flat_color, outline, pastel_colors, minimalism | Noodle-limb cartoon rendering: simple dot-eyed faces, bendy rubbery limbs, flat candy palette, thin even outline, soft pastel skies, cartoon style image. |
 | [Cartoon][v2] Arcane Animation Still | style | painting_(medium), cinematic_lighting, rim_lighting, textured | Painted 2.5D animation still: visible oil-brush texture over sculpted forms, teal-and-ember colour script, sharp rim light, cinematic grain, painting style i... |

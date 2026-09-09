@@ -1,0 +1,222 @@
+[
+  {
+    "name": "[Painting] Sfumato",
+    "family": "Traditional Painting",
+    "axis": "style",
+    "medium": "oil painting style image",
+    "nl": "Sfumato rendering: tone carried through imperceptible steps, no contour left anywhere, form emerging out of smoke-soft transitions, warm dark ground glowing up through thin glazes, oil painting style image.",
+    "tags": ["oil_painting_(medium)", "chiaroscuro", "soft_focus", "muted_color"],
+    "tags_negative": ["lineart"],
+    "negative": "crisp outlines, flat graphic colour"
+  },
+  {
+    "name": "[Painting] Orphism",
+    "family": "Traditional Painting",
+    "axis": "style",
+    "medium": "painting style image",
+    "nl": "Orphist rendering: prismatic discs and interlocking arcs, simultaneous contrasts of pure hue doing the work of light, rhythm built from colour alone, faceted overlaps without outline, painting style image.",
+    "tags": ["colorful", "painting_(medium)", "cubism", "high_saturation"],
+    "tags_negative": ["monochrome"],
+    "negative": "tonal realism, drawn contours"
+  },
+  {
+    "name": "[Painting] Bay Area Figurative",
+    "family": "Traditional Painting",
+    "axis": "style",
+    "medium": "oil painting style image",
+    "nl": "Bay Area figurative rendering: thick loaded strokes left deliberately unresolved, high Californian daylight flattening the palette, drawing done with the brush itself, scraped-back passages showing earlier layers, oil painting style image.",
+    "tags": ["oil_painting_(medium)", "textured", "muted_color", "unfinished"],
+    "tags_negative": ["photorealistic"],
+    "negative": "polished finish, photographic detail"
+  },
+  {
+    "name": "[Painting] Quadratura Ceiling",
+    "family": "Traditional Painting",
+    "axis": "style",
+    "medium": "painting style image",
+    "nl": "Quadratura rendering: illusionistic architecture in steep upward perspective, painted cornices and coffers continuing the real room, foreshortened forms crowding the rim, chalky plaster tone throughout, painting style image.",
+    "tags": ["painting_(medium)", "scenery", "muted_color"],
+    "tags_negative": ["minimalism"],
+    "negative": "flat frontal framing, graphic simplification"
+  },
+  {
+    "name": "[Painting] Sinopia Underdrawing",
+    "family": "Traditional Painting",
+    "axis": "style",
+    "medium": "painting style image",
+    "nl": "Sinopia rendering: red-earth underdrawing brushed straight onto damp plaster, confident single-pass contours, thin washes blocking the masses, lime-white ground breathing through everything, painting style image.",
+    "tags": ["painting_(medium)", "unfinished", "muted_color", "brown_theme"],
+    "tags_negative": ["photorealistic"],
+    "negative": "finished glazing, saturated colour"
+  },
+  {
+    "name": "[Painting] Pronkstilleven",
+    "family": "Traditional Painting",
+    "axis": "style",
+    "medium": "oil painting style image",
+    "nl": "Ostentatious still-life rendering: silver, glass and fruit piled in dark opulence, one raking light, wet reflections and dew rendered to a hair, deep varnished shadow swallowing the corners, oil painting style image.",
+    "tags": ["oil_painting_(medium)", "still_life", "chiaroscuro", "dark", "shiny"],
+    "tags_negative": ["minimalism"],
+    "negative": "flat even lighting, sparse composition"
+  },
+  {
+    "name": "[Painting] Bodegón",
+    "family": "Traditional Painting",
+    "axis": "style",
+    "medium": "oil painting style image",
+    "nl": "Spanish bodegón rendering: a few humble objects spaced along a bare ledge, hard side light against a near-black ground, austere intervals, matte earthy palette with restrained highlights, oil painting style image.",
+    "tags": ["oil_painting_(medium)", "still_life", "dark", "muted_color", "chiaroscuro"],
+    "tags_negative": ["colorful"],
+    "negative": "crowded abundance, bright even light"
+  },
+  {
+    "name": "[Painting] Capriccio Ruin Fantasy",
+    "family": "Traditional Painting",
+    "axis": "style",
+    "medium": "oil painting style image",
+    "nl": "Capriccio rendering: invented ruins assembled beside real monuments, warm bituminous shadow, crumbling stone laid in dry scumbles, wide even daylight and a chalky distance, oil painting style image.",
+    "tags": ["oil_painting_(medium)", "scenery", "brown_theme", "textured"],
+    "tags_negative": ["minimalism"],
+    "negative": "modern setting, graphic flatness"
+  },
+  {
+    "name": "[Painting] Dutch Marine",
+    "family": "Traditional Painting",
+    "axis": "style",
+    "medium": "oil painting style image",
+    "nl": "Dutch marine rendering: grey-green swell under a towering cloud bank, rigging picked out hair-thin against pale sky, low horizon far down the frame, silvery tonal restraint overall, oil painting style image.",
+    "tags": ["oil_painting_(medium)", "scenery", "desaturated", "muted_color"],
+    "tags_negative": ["high_saturation"],
+    "negative": "vivid tropical colour, flat poster shapes"
+  },
+  {
+    "name": "[Painting] Cuzco School",
+    "family": "Traditional Painting",
+    "axis": "style",
+    "medium": "painting style image",
+    "nl": "Cuzco-school rendering: Andean colonial devotional painting, gold brocade patterning laid flat over dark drapery, frontal hieratic poses, matte earth palette with red bole showing at the edges, painting style image.",
+    "tags": ["painting_(medium)", "gold", "dark", "muted_color"],
+    "tags_negative": ["photorealistic"],
+    "negative": "modern perspective, glossy digital finish"
+  },
+  {
+    "name": "[Painting] Ethiopian Church Painting",
+    "family": "Traditional Painting",
+    "axis": "style",
+    "medium": "painting style image",
+    "nl": "Ethiopian church rendering: wide almond eyes and frontal stares, thick black contour around every shape, flat saturated red, yellow and green, banded borders enclosing each panel, painting style image.",
+    "tags": ["painting_(medium)", "flat_color", "colorful", "outline"],
+    "tags_negative": ["photorealistic"],
+    "negative": "tonal modelling, atmospheric depth"
+  },
+  {
+    "name": "[Painting] Kerala Mural",
+    "family": "Traditional Painting",
+    "axis": "style",
+    "medium": "painting style image",
+    "nl": "Kerala mural rendering: ochre, indigo and terre-verte on lime plaster, elaborate crowns and jewellery drawn in fine line, rounded stylised anatomy, dense floral fill packing the ground, painting style image.",
+    "tags": ["painting_(medium)", "flat_color", "muted_color", "traditional_media"],
+    "tags_negative": ["photorealistic"],
+    "negative": "photographic shading, empty backgrounds"
+  },
+  {
+    "name": "[Painting] Pahari Miniature",
+    "family": "Traditional Painting",
+    "axis": "style",
+    "medium": "painting style image",
+    "nl": "Pahari rendering: soft hill country in cool thin washes, delicate courtly line, lyrical pastel palette, sparing gold accents, a generous plain band of sky above, painting style image.",
+    "tags": ["painting_(medium)", "pastel_colors", "traditional_media", "gold"],
+    "tags_negative": ["high_contrast"],
+    "negative": "heavy impasto, harsh contrast"
+  },
+  {
+    "name": "[Painting] Amate Bark Painting",
+    "family": "Traditional Painting",
+    "axis": "style",
+    "medium": "painting style image",
+    "nl": "Amate rendering: bright flat figures painted on mottled fig-bark paper, hard black outlines, symmetrical birds and blossoms, the fibrous uneven ground showing through everywhere, painting style image.",
+    "tags": ["traditional_media", "flat_color", "colorful", "textured", "outline"],
+    "tags_negative": ["photorealistic"],
+    "negative": "smooth canvas, tonal realism"
+  },
+  {
+    "name": "[Painting] Rosemaling",
+    "family": "Traditional Painting",
+    "axis": "style",
+    "medium": "painting style image",
+    "nl": "Rosemaling rendering: Norwegian scrollwork in flowing C and S strokes, two tones blended on a single brush, ox-blood or blue-grey painted ground, cream linework tying the panels together, painting style image.",
+    "tags": ["painting_(medium)", "traditional_media", "muted_color", "wood"],
+    "tags_negative": ["minimalism"],
+    "negative": "geometric flat vector shapes, photographic depth"
+  },
+  {
+    "name": "[Painting] Ndebele Wall Geometry",
+    "family": "Traditional Painting",
+    "axis": "style",
+    "medium": "painting style image",
+    "nl": "Ndebele rendering: hard-edged geometric blocks in saturated colour, every field bound by a heavy black band, stepped symmetrical forms, chalky wall texture under the paint, painting style image.",
+    "tags": ["flat_color", "colorful", "high_contrast", "outline"],
+    "tags_negative": ["gradient"],
+    "negative": "blended shading, organic brushwork"
+  },
+  {
+    "name": "[Illustration] Fraktur Folk Manuscript",
+    "family": "Illustration",
+    "axis": "style",
+    "medium": "drawing style image",
+    "nl": "Fraktur rendering: Pennsylvania-German folk manuscript, tulips, hearts and paired birds in flat watercolour, ruled ink borders boxing each element, ornate blackletter flourishes, laid paper tone, drawing style image.",
+    "tags": ["watercolor_(medium)", "traditional_media", "flat_color", "ink_(medium)"],
+    "tags_negative": ["photorealistic"],
+    "negative": "photographic rendering, digital gradients"
+  },
+  {
+    "name": "[Print] Gyotaku Fish Print",
+    "family": "Comics & Print",
+    "axis": "style",
+    "medium": "print style image",
+    "nl": "Gyotaku rendering: sumi ink taken directly off the subject and pressed onto washi, scale and fin texture printed one to one, soft bleed at the margins, wide unprinted paper around it, print style image.",
+    "tags": ["ink_(medium)", "monochrome", "traditional_media", "textured"],
+    "tags_negative": ["photorealistic"],
+    "negative": "airbrushed rendering, photographic detail"
+  },
+  {
+    "name": "[Experimental] Sgraffito Plaster",
+    "family": "Experimental & Material",
+    "axis": "style",
+    "medium": "material style image",
+    "nl": "Sgraffito rendering: coloured plaster layers scratched back to reveal the tone beneath, incised line with a raised burr, flat fields of lime colour, chipped edges and trowel marks, material style image.",
+    "tags": ["textured", "traditional_media", "muted_color", "stone"],
+    "tags_negative": ["photorealistic"],
+    "negative": "smooth printed surface, digital cleanliness"
+  },
+  {
+    "name": "[Experimental] Verre Églomisé",
+    "family": "Experimental & Material",
+    "axis": "style",
+    "medium": "material style image",
+    "nl": "Reverse-glass rendering: gold leaf and paint applied behind glass and read through it, mirror-bright metal with engraved detail scratched into the leaf, glassy depth, dark backing sealing the panel, material style image.",
+    "tags": ["gold", "glass", "metallic", "shiny", "dark"],
+    "tags_negative": ["textured"],
+    "negative": "matte paper surface, brushy impasto"
+  },
+  {
+    "name": "[Experimental] Khokhloma Lacquer",
+    "family": "Experimental & Material",
+    "axis": "style",
+    "medium": "material style image",
+    "nl": "Khokhloma rendering: gold foliage and berries over deep black lacquer, vermilion accents, fine curling stems drawn in one stroke, glassy varnish depth catching the light, material style image.",
+    "tags": ["gold", "dark", "shiny", "red_theme", "traditional_media"],
+    "tags_negative": ["pale_color"],
+    "negative": "pale matte palette, loose sketchiness"
+  },
+  {
+    "name": "[Experimental] Delftware Blue",
+    "family": "Experimental & Material",
+    "axis": "style",
+    "medium": "material style image",
+    "nl": "Delftware rendering: cobalt brushwork on white tin glaze, every tone drawn from one pigment, fine outline over broad wash, glaze pooling darker at the edges with a faint kiln crackle, material style image.",
+    "tags": ["blue_theme", "porcelain", "monochrome", "shiny"],
+    "tags_negative": ["colorful"],
+    "negative": "full colour palette, matte paper texture"
+  }
+]

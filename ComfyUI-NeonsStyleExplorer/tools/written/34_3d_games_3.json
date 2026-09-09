@@ -1,0 +1,102 @@
+[
+  {
+    "name": "[3D] Gaussian Splat Artifacts",
+    "family": "3D & Games",
+    "axis": "style",
+    "medium": "cgi style image",
+    "nl": "Splat-reconstruction rendering: surfaces built from overlapping translucent blobs, furry silhouettes and smeared thin geometry, floating stray splats in mid-air, view-dependent colour shimmer, cgi style image.",
+    "tags": ["3d", "blurry", "transparent", "glitch"],
+    "tags_negative": ["photorealistic"],
+    "negative": "clean solid geometry, crisp silhouette edges"
+  },
+  {
+    "name": "[3D] PSX Horror Lo-Fi",
+    "family": "3D & Games",
+    "axis": "style",
+    "medium": "game art style image",
+    "nl": "Fifth-generation horror rendering: low triangle counts with warped affine texturing, vertex jitter, dense distance fog swallowing the far plane, muddy dithered palette under harsh point light, game art style image.",
+    "tags": ["low_poly", "dithering", "dark", "retro_artstyle", "analog_horror"],
+    "tags_negative": ["highres"],
+    "negative": "modern lighting, high-resolution textures"
+  },
+  {
+    "name": "[3D] Mode 7 Pseudo-3D",
+    "family": "3D & Games",
+    "axis": "style",
+    "medium": "game art style image",
+    "nl": "Mode-7 rendering: a flat bitmap plane warped into perspective, texels stretching enormous towards the horizon, hard scanline banding, flat sprite objects pasted over the top, game art style image.",
+    "tags": ["pixel_art", "retro_artstyle", "flat_color", "limited_palette"],
+    "tags_negative": ["3d"],
+    "negative": "true polygonal depth, smooth filtering"
+  },
+  {
+    "name": "[3D] Billboard Sprite 2.5D",
+    "family": "3D & Games",
+    "axis": "style",
+    "medium": "game art style image",
+    "nl": "Billboard-sprite rendering: flat pre-drawn sprites always facing the camera inside blocky level geometry, hard pixel edges against textured walls, banded light sectors, no vertical look, game art style image.",
+    "tags": ["pixel_art", "retro_artstyle", "dithering", "dark"],
+    "tags_negative": ["3d"],
+    "negative": "fully modelled characters, smooth shading"
+  },
+  {
+    "name": "[3D] Machinima Capture",
+    "family": "3D & Games",
+    "axis": "style",
+    "medium": "game art style image",
+    "nl": "In-engine capture rendering: game assets staged for camera with the interface switched off, stiff canned poses, aliased edges and compressed capture artefacts, engine fog and flat ambient, game art style image.",
+    "tags": ["3d", "low_poly", "glitch", "muted_color"],
+    "tags_negative": ["photorealistic"],
+    "negative": "cinematic film rendering, ray-traced polish"
+  },
+  {
+    "name": "[3D] Avatar Platform Shot",
+    "family": "3D & Games",
+    "axis": "style",
+    "medium": "cgi style image",
+    "nl": "Social-platform avatar rendering: mismatched shader styles in one frame, toon-shaded forms beside glossy PBR props, blown-out bloom, mirror-surface reflection and floating UI-free emptiness, cgi style image.",
+    "tags": ["3d", "cel_shading", "glowing", "shiny"],
+    "tags_negative": ["photorealistic"],
+    "negative": "unified art direction, physically consistent lighting"
+  },
+  {
+    "name": "[3D] Blocky Sandbox Toy",
+    "family": "3D & Games",
+    "axis": "style",
+    "medium": "game art style image",
+    "nl": "Blocky sandbox rendering: chunky primitive bodies with cylinder limbs, plastic studded surfaces, flat bright palette, simple baked shadows on a wide open plane, game art style image.",
+    "tags": ["3d", "plastic", "flat_color", "colorful"],
+    "tags_negative": ["photorealistic"],
+    "negative": "organic anatomy, photoreal materials"
+  },
+  {
+    "name": "[3D] Source-Era Shooter",
+    "family": "3D & Games",
+    "axis": "style",
+    "medium": "game art style image",
+    "nl": "Mid-2000s engine rendering: bump-mapped brick and rusted metal, orange-grey palette, hard lightmapped shadows baked in place, low-poly props with sharp silhouette corners, game art style image.",
+    "tags": ["3d", "rust", "muted_color", "2000s_(style)"],
+    "tags_negative": ["highres"],
+    "negative": "modern global illumination, soft volumetric light"
+  },
+  {
+    "name": "[3D] Metaball Blob",
+    "family": "3D & Games",
+    "axis": "style",
+    "medium": "cgi style image",
+    "nl": "Metaball rendering: soft spheres merging into one continuous skin, necks pinching where forms separate, glossy wet-looking surface, studio gradient behind with a single soft key, cgi style image.",
+    "tags": ["3d", "shiny", "gradient", "transparent"],
+    "tags_negative": ["low_poly"],
+    "negative": "faceted hard-surface modelling, matte flat shading"
+  },
+  {
+    "name": "[3D] Displacement Terrain",
+    "family": "3D & Games",
+    "axis": "style",
+    "medium": "cgi style image",
+    "nl": "Procedural terrain rendering: ridged noise displaced into endless ranges, erosion channels repeating at every scale, thin atmospheric haze stacking towards the horizon, cold directional sun, cgi style image.",
+    "tags": ["3d", "scenery", "desaturated", "landscape"],
+    "tags_negative": ["flat_color"],
+    "negative": "hand-painted scenery, graphic flat shapes"
+  }
+]

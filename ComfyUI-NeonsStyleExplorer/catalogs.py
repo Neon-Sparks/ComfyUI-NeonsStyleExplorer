@@ -25,6 +25,9 @@ USER_DIR = os.path.join(ROOT, "user")
 CATALOGS_DIR = os.path.join(USER_DIR, "catalogs")
 INDEX_PATH = os.path.join(USER_DIR, "catalogs.json")
 
+MAX_PROMPT = 800
+MAX_PROMPTS = 12
+
 DEFAULT_ID = "default"
 DEFAULT_NAME = "Default"
 MAX_NAME = 60
@@ -68,6 +71,22 @@ def _slug(name, taken):
     return candidate
 
 
+def clean_prompt(text):
+    text = re.sub(r"[ \t]+", " ", str(text or "").strip())
+    return text[:MAX_PROMPT]
+
+
+def clean_prompts(value):
+    if not isinstance(value, list):
+        return []
+    out = []
+    for item in value:
+        text = clean_prompt(item)
+        if text and text not in out:
+            out.append(text)
+    return out[:MAX_PROMPTS]
+
+
 def clean_name(name):
     name = re.sub(r"\s+", " ", str(name or "").strip())
     return name[:MAX_NAME]
@@ -89,6 +108,9 @@ def items():
             "id": cid,
             "name": clean_name(item.get("name")) or cid,
             "created": item.get("created", 0),
+            # the prompt(s) these previews were generated with, so a catalog
+            # says how it was made and not just what is in it
+            "prompts": clean_prompts(item.get("prompts")),
         })
     if not any(item["id"] == DEFAULT_ID for item in out):
         out.insert(0, {"id": DEFAULT_ID, "name": DEFAULT_NAME, "created": 0})
@@ -166,7 +188,7 @@ def create(name):
     with _LOCK:
         data = _read()
         taken = {str(item.get("id")) for item in data["items"]} | {DEFAULT_ID}
-        record = {"id": _slug(label, taken), "name": label, "created": int(time.time())}
+        record = {"id": _slug(label, taken), "name": label, "created": int(time.time()), "prompts": []}
         data["items"].append(record)
         data["active"] = record["id"]
         _write(data)
@@ -199,6 +221,60 @@ def rename(cid, name):
                 return True
         if str(cid) == DEFAULT_ID:  # default may be missing from an old index
             data["items"].insert(0, {"id": DEFAULT_ID, "name": label, "created": 0})
+            _write(data)
+            return True
+    return False
+
+
+def prompts_of(cid=None):
+    cid = cid or active()
+    for item in items():
+        if item["id"] == cid:
+            return item["prompts"]
+    return []
+
+
+def add_prompt(cid, text):
+    """Record a generation prompt against a catalog. Duplicates are ignored."""
+    text = clean_prompt(text)
+    if not text:
+        return False
+    cid = str(cid or active())
+    with _LOCK:
+        data = _read()
+        for item in data["items"]:
+            if str(item.get("id")) == cid:
+                current = clean_prompts(item.get("prompts"))
+                if text in current:
+                    return True
+                item["prompts"] = (current + [text])[:MAX_PROMPTS]
+                _write(data)
+                return True
+        if cid == DEFAULT_ID:  # default may be missing from an old index
+            data["items"].insert(0, {"id": DEFAULT_ID, "name": DEFAULT_NAME, "created": 0, "prompts": [text]})
+            _write(data)
+            return True
+    return False
+
+
+def delete_prompt(cid, text=None, index=None):
+    """Drop one recorded prompt, by exact text or by position."""
+    cid = str(cid or active())
+    with _LOCK:
+        data = _read()
+        for item in data["items"]:
+            if str(item.get("id")) != cid:
+                continue
+            current = clean_prompts(item.get("prompts"))
+            if text is not None:
+                kept = [entry for entry in current if entry != clean_prompt(text)]
+            elif index is not None and 0 <= int(index) < len(current):
+                kept = [entry for n, entry in enumerate(current) if n != int(index)]
+            else:
+                return False
+            if len(kept) == len(current):
+                return False
+            item["prompts"] = kept
             _write(data)
             return True
     return False

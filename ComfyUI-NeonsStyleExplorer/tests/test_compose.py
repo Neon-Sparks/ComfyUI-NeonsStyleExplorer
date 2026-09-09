@@ -37,6 +37,16 @@ F = {"id": "t.f", "name": "[Format] Sheet", "family": "Comics & Print", "axis": 
      "source": "shipped"}
 
 
+def wipe_user_files(*names):
+    """Remove the user files a test created. Writing an empty list back would
+    leave litter in the package; tests should leave no trace at all."""
+    for name in names or ("favourites.json", "recents.json", "custom.json",
+                          "overrides.json", "hidden.json", "catalogs.json"):
+        path = os.path.join(ROOT, "user", name)
+        if os.path.isfile(path):
+            os.remove(path)
+
+
 class Natural(unittest.TestCase):
     def test_style_first(self):
         pos, _ = compose.compose(prompt="a fox", quality="masterpiece", styles=[A])
@@ -234,7 +244,7 @@ class Catalog(unittest.TestCase):
             self.assertFalse(catalog.toggle_favourite(first))
             self.assertEqual(catalog.load_favourites(), [second])
         finally:
-            catalog.write_json(catalog.favourites_path(), [])
+            wipe_user_files("favourites.json")
 
     def test_recents_are_capped_and_ordered(self):
         catalog.clear_recents()
@@ -249,7 +259,7 @@ class Catalog(unittest.TestCase):
             picked = catalog.roll(scope="recent", seed=7)
             self.assertIn(picked["name"], names)
         finally:
-            catalog.clear_recents()
+            wipe_user_files("recents.json")
 
     def test_parallel_writes_keep_every_update(self):
         """Several prompts finishing together must not clobber each other."""
@@ -274,8 +284,7 @@ class Catalog(unittest.TestCase):
                 thread.join()
             self.assertEqual(len(catalog.load_recents()), len(names))
         finally:
-            catalog.write_json(catalog.favourites_path(), [])
-            catalog.clear_recents()
+            wipe_user_files("favourites.json", "recents.json")
 
     def test_crawl_walks_the_scope_in_order(self):
         names = catalog.crawl_names("all")
@@ -324,7 +333,7 @@ class Catalog(unittest.TestCase):
             self.assertEqual(runs.get("prompt-0"), {})
         finally:
             runs.clear()
-            catalog.clear_recents()
+            wipe_user_files("recents.json")
 
     def test_run_records_are_capped(self):
         runs.clear()
@@ -344,6 +353,9 @@ class Catalog(unittest.TestCase):
 
         made = None
         try:
+            # never assume what a previous test (or a stray probe run) left
+            # active — start from a known catalog
+            catalog_sets.select("default")
             self.assertEqual(catalog_sets.active(), "default")
             default_previews = gallery.previews_dir()
 
@@ -380,8 +392,29 @@ class Catalog(unittest.TestCase):
                     os.remove(full)
             shutil.rmtree(os.path.join(ROOT, "user", "catalogs"), ignore_errors=True)
 
+    def test_catalog_prompts_round_trip(self):
+        """A catalog remembers the prompt(s) its previews were generated with."""
+        catalog_sets.select("default")
+        try:
+            self.assertEqual(catalog_sets.prompts_of("default"), [])
+            self.assertTrue(catalog_sets.add_prompt("default", "  a woman   in a city street  "))
+            self.assertEqual(catalog_sets.prompts_of("default"), ["a woman in a city street"])
+            catalog_sets.add_prompt("default", "a woman in a city street")  # duplicate ignored
+            catalog_sets.add_prompt("default", "a lone tree on a hill")
+            self.assertEqual(len(catalog_sets.prompts_of("default")), 2)
+            self.assertTrue(catalog_sets.delete_prompt("default", text="a lone tree on a hill"))
+            self.assertEqual(catalog_sets.prompts_of("default"), ["a woman in a city street"])
+            self.assertTrue(catalog_sets.delete_prompt("default", index=0))
+            self.assertEqual(catalog_sets.prompts_of("default"), [])
+            self.assertFalse(catalog_sets.add_prompt("default", "   "))
+        finally:
+            full = os.path.join(ROOT, "user", "catalogs.json")
+            if os.path.isfile(full):
+                os.remove(full)
+
     def test_catalog_names_get_unique_ids(self):
         made = []
+        catalog_sets.select("default")
         try:
             made = [catalog_sets.create("Krea 2"), catalog_sets.create("Krea 2")]
             self.assertNotEqual(made[0]["id"], made[1]["id"])
@@ -393,6 +426,85 @@ class Catalog(unittest.TestCase):
             full = os.path.join(ROOT, "user", "catalogs.json")
             if os.path.isfile(full):
                 os.remove(full)
+
+    def test_custom_slot_family_and_free_tags(self):
+        """A user's own style: any family they like, any tags they like, and it
+        composes from the custom_style slot alongside a catalog style."""
+        store = importlib.import_module(f"{PKG}.store")
+        name = None
+        # start clean: a stray custom style from an earlier run would change the
+        # slot's contents and the composed order
+        for path in ("user/custom.json", "user/overrides.json", "user/hidden.json"):
+            full = os.path.join(ROOT, path)
+            if os.path.isfile(full):
+                os.remove(full)
+        try:
+            ok, name = store.save_custom(
+                name="Probe Chrome Bloom", family="Probe Metal", axis="style",
+                nl="Probe rendering: mirrored liquid metal bulging into soft blobs, chrome style image.",
+                medium="chrome style image", negative="matte surfaces",
+                tags=["liquid_metal", "chrome_(medium)"],       # not in the vocabulary
+                tags_negative=["matte_finish"],
+            )
+            self.assertTrue(ok)
+            entry = catalog.resolve(name)
+            self.assertEqual(entry["family"], "Probe Metal")     # families are not a fixed list
+            self.assertEqual(entry["tags"], ["liquid_metal", "chrome_(medium)"])
+            self.assertIn(name, catalog.custom_names("style"))
+            self.assertIn("Probe Metal", catalog.payload()["families"])
+            # the custom slot composes as a fourth style
+            _p, _n, _d, styles = nodes.run(prompt="a kettle", style="[Anime] Chibi", custom_style=name)
+            self.assertEqual([e["name"] for e in styles], ["[Anime] Chibi", name])
+            # and its unlisted tags survive into booru output, escaped
+            tags, _neg, _dbg, _s = nodes.run(prompt="kettle", custom_style=name, output_format="danbooru")
+            self.assertIn("liquid_metal", tags)
+            self.assertIn("chrome_\\(medium\\)", tags)
+        finally:
+            if name:
+                store.delete_custom(name) if hasattr(store, "delete_custom") else None
+            for path in ("user/custom.json", "user/overrides.json", "user/hidden.json"):
+                full = os.path.join(ROOT, path)
+                if os.path.isfile(full):
+                    os.remove(full)
+            catalog.entries(refresh=True) if "refresh" in catalog.entries.__code__.co_varnames else None
+
+    def test_family_rename_retags_and_keeps_the_old_name(self):
+        """Editing a custom style's family rebuilds its bracket tag, and the old
+        name keeps resolving so saved workflows survive."""
+        store = importlib.import_module(f"{PKG}.store")
+        for path in ("user/custom.json",):
+            full = os.path.join(ROOT, path)
+            if os.path.isfile(full):
+                os.remove(full)
+        try:
+            ok, first = store.save_custom(
+                name="Probe Figurine", family="Material Test", axis="style",
+                nl="Probe rendering: matte resin cast, style image.", medium="style image")
+            self.assertTrue(first.startswith("[Material][Custom]"), first)
+            ok, second = store.save_custom(
+                name=first, family="Figurine", axis="style", update=True,
+                nl="Probe rendering: matte resin cast, style image.", medium="style image")
+            self.assertTrue(second.startswith("[Figurine][Custom]"), second)
+            self.assertEqual(catalog.resolve(first)["name"], second)   # old name still resolves
+
+            ok, family, moved = store.rename_family("Figurine", "Resin Figures")
+            self.assertTrue(ok)
+            self.assertEqual(moved, 1)
+            renamed = [e for e in catalog.entries() if e.get("source") == "custom"][0]
+            self.assertTrue(renamed["name"].startswith("[Resin][Custom]"))
+
+            ok, family, moved = store.delete_family("Resin Figures")
+            self.assertTrue(ok)
+            self.assertEqual(family, "Lonely")
+            orphan = [e for e in catalog.entries() if e.get("source") == "custom"][0]
+            self.assertEqual(orphan["family"], "Lonely")   # styles survive, family does not
+
+            self.assertFalse(store.rename_family("Anime & Manga", "Nope")[0])  # shipped is locked
+        finally:
+            full = os.path.join(ROOT, "user", "custom.json")
+            if os.path.isfile(full):
+                os.remove(full)
+            catalog.entries(force=True)
 
     def test_roll_excludes(self):
         first = catalog.roll(seed=5)

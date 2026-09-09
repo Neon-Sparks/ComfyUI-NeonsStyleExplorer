@@ -1,5 +1,248 @@
 # Changelog
 
+## 1.11.2 — typing in dialogs is nobody else's business
+
+* **Keystrokes were escaping the style editor.** A dialog opened over the node
+  sits inside ComfyUI's canvas, which binds its own shortcuts, so letters typed
+  into a field could be taken as canvas commands instead — worst in the tag
+  boxes, where it looked like the field would not accept free text. Both dialogs
+  now stop key events at their own edge (without touching default behaviour, so
+  typing types), and Escape closes the dialog rather than the browser behind it.
+* **The browser's `/` shortcut no longer steals focus while you are typing.** It
+  fired from any field, so a slash in a tag or a clause jumped the cursor to the
+  search box.
+* The web checker now recognises every parameter of a declared function, not
+  just the first — it was reporting a real function as undefined.
+* Added `tools/preflight.sh`, the publish check: nothing private tracked, no
+  build junk, the catalog matching its source packs, lint, web check and tests
+  passing, and the release metadata filled in.
+* Tests now delete the user files they create instead of writing empty ones
+  back, so a checkout stays spotless after a test run.
+
+## 1.11.1 — a new style lands on the node
+
+* Creating a style from the node's **⋯ → New custom style** now selects it on
+  that node the moment it saves, ready to render a preview. Renaming a custom
+  style the node is currently on follows the rename, and creating one from the
+  browser hands it back when the browser was opened from a node.
+* The style dropdowns are rebuilt as part of that: their option lists come from
+  the catalog loaded when the node was created, so without a refresh the new
+  name would have been rejected as an unknown value.
+
+## 1.11.0 — families you can actually manage
+
+* **See all your own families at once.** The browser's family filter now groups
+  shipped families first, then yours under a *— my families —* heading, and
+  selecting that heading shows every style in any family you made.
+* **Editing a family re-tags the style.** Moving a custom style to another
+  family left its old bracket tag in the name — `[Material][Custom]` on a style
+  now in Figurine. The name is rebuilt on save, and the old one is kept as an
+  alias so saved workflows and existing gallery images still resolve.
+* **Manage my families…** in the Import/export menu: every family with its
+  counts, rename and delete for the ones you added, and the shipped nine listed
+  but locked — renaming those would orphan a thousand entries.
+* **Deleting a family never deletes styles.** They move to **Lonely**, a holding
+  family for styles with nowhere else to be, and are re-tagged to match.
+* Removed a duplicate `GET /neons_style/families` route: two handlers were
+  registered on the same path and the older one silently shadowed the new one.
+  The route probe now reports duplicate method+path pairs so that cannot recur.
+
+## 1.10.0 — your own tags, your own families, your own slot
+
+* **Booru tags are free text.** The editor was refusing to save any tag outside
+  the 247-tag suggestion list, which made it impossible to write the tag you
+  actually wanted — while the backend had always accepted anything. The list is
+  now a suggestion: type what you like, it is stored verbatim, escaped properly
+  in booru output, and unlisted tags are noted in the console rather than
+  blocked.
+* **New family from the editor.** The Family dropdown gains *+ add a new
+  family…* with a name field. A custom family works everywhere the shipped nine
+  do: the browser's family filter, `roll_scope: family`, the family ordering
+  (yours sort after the shipped ones), and the bracket tag on custom names.
+* **New `custom_style` slot**, directly below `style_3`, listing only your own
+  entries. It composes as a fourth style, and its contents come from the live
+  catalog rather than the node definition, so a style written in the editor
+  shows up without restarting ComfyUI.
+  * **Workflows saved before this version still load correctly.** Litegraph
+    applies widget values by index, so inserting a slot mid-list would have
+    shifted every widget after it by one. The extension detects a workflow with
+    one value too few and splices the new slot's default in at the right place
+    before the values are applied, logging when it does.
+* New test covers the whole path: a custom family, tags outside the vocabulary,
+  the slot composing beside a catalog style, and the escaping in booru output.
+
+## 1.9.1 — preview size control
+
+* **Preview size** dropdown at the left of the prompt bar: 25%, 50%, 75%, 100%,
+  125%, 150%, 200%, 250%, 300%. The grid re-columns to suit and the choice is
+  remembered between sessions.
+* Below 60% the cards drop their text block and the grid becomes a pure
+  thumbnail wall, with the style name on hover — at those sizes the label was
+  taller than the picture.
+* Cards still fill the row, but no longer stretch far past the size asked for;
+  on a wide window 300% was landing nearer 400%.
+
+## 1.9.0 — 133 new hand-written styles
+
+The catalog goes from 1284 to **1417 entries**, every new clause written by hand
+in the house voice and linted clean. Gaps were chosen by dumping the existing
+1136 style names per family and running every candidate through a similarity
+check against names, aliases and clause text, so nothing here duplicates or
+near-duplicates what was already there.
+
+* **Abstract & generative (20)** — the widest gap in the catalog, which had
+  about ten abstract entries for a field the size of painting. Plotter pen work,
+  cellular automata, reaction-diffusion, flow fields, Voronoi, Truchet tiling,
+  noise contours, strange attractors, harmonographs, plus concrete art, nested
+  square studies, neo-concrete folds, tachisme, white relief, monochrome fields,
+  hard-edge shaped panels, rule-system wall drawings, decalcomania, frottage and
+  décollage.
+* **World painting traditions (22)** — sfumato, orphism, Bay Area figurative,
+  quadratura, sinopia, pronkstilleven, bodegón, capriccio, Dutch marine, and the
+  traditions the catalog had no representation for at all: Cuzco school,
+  Ethiopian church painting, Kerala mural, Pahari miniature, amate bark,
+  rosemaling, Ndebele wall geometry, Fraktur, gyotaku, sgraffito, verre
+  églomisé, Khokhloma and Delftware.
+* **Photographic processes and optics (25)** — ambrotype, salted paper, dye
+  transfer, Cibachrome, lumen, solargraph, photogram, chronophotography,
+  slit-scan, swing-lens panorama, zoom-burst, star trails, microfiche,
+  copy-stand, strip camera, cloud chamber, high-speed strobe, trail camera,
+  endoscope, cinewhoop, plus two-strip Technicolor, kinescope, rear projection,
+  day-for-night and hand-cranked silent film.
+* **Print processes (11)** — end-grain wood engraving, chiaroscuro woodcut,
+  pochoir, collagraph, monotype, katazome, ink-wash comic tone, duotone pulp,
+  rotogravure, blue-line pencil pages and patent drawing.
+* **Animation techniques (13)** — xerographic cel line, scratch-on-film,
+  paint-on-glass, pinscreen, squigglevision, multiplane depth, cutout engraving
+  collage, motion comic, and for anime: Kanada-school effects, smear-frame
+  sakuga, missile-swarm trails, copy-book toner and OVA airbrush.
+* **Design & aesthetics (12)** — cassette futurism, neumorphism, Swiss punk, new
+  wave typography, Googie, metabolism, CD-ROM clipart, MS Paint bitmap, bento
+  grid, grandmillennial chintz, glitchcore and angelcore.
+* **3D & games (10)** — Gaussian splat artifacts, PSX horror lo-fi, Mode 7,
+  billboard sprites, machinima capture, avatar platform shots, blocky sandbox,
+  Source-era shooter, metaballs and displacement terrain.
+* **Illustration & material (20)** — alchemical emblems, marginalia grotesques,
+  blackwork tattoo, van murals, pinstriping, Chicano fine-line, ferrofluid,
+  pyrography, papier-mâché, scrimshaw, coffee wash, pavement chalk, kirigami,
+  string art, rangoli, anthotype, rust transfer, cymatic plates, culture plates
+  and hydro-dipping.
+
+Fifteen candidates were dropped rather than written: eight already exist on the
+**format** axis (fruit crate label, matchbox label, seed packet, wanted poster,
+playbill, tarot card, storyboard panel, tattoo flash), and the rest were too
+close to existing entries to justify a second version.
+
+## 1.8.0 — the crawl stops skipping entries, and can target the gaps
+
+* **A crawl skipped many catalog entries.** The walk kept its position in a
+  counter that lived apart from the style dropdown, so anything refreshing the
+  list of styles — a scope change, or the background resync added in 1.7.3 —
+  re-seeded that counter mid-batch and the walk jumped. **The position is now
+  the dropdown itself**: every step is derived from the style currently
+  selected, so nothing can drift. A full lap from any starting entry visits
+  every style exactly once, verified over a 12-entry walk including a resync
+  landing mid-walk.
+* **New switch: `crawl_missing_only`.** Walk only the styles that have no
+  preview yet. The list is re-checked at each step, so entries drop out as their
+  previews are made, and when everything is covered the walk keeps moving
+  instead of stalling. `roll_scope` still narrows the set (a family, favourites,
+  and so on) and this filters it further.
+* **The preview arrows work during a crawl again.** 1.7.1 disabled them on the
+  grounds that crawl owned the dropdown; now that the dropdown *is* the
+  position, arrowing by hand simply moves where the next step starts. They
+  follow the same list, so with missing-only on they skip covered styles too.
+* Added `tools/harness/crawl_walk.mjs`, the regression test for all three of
+  those behaviours.
+* The catalog tests no longer assume which catalog was left active by whatever
+  ran before them — one of them failed intermittently for exactly that reason.
+
+## 1.7.4 — auto-gallery says what it did
+
+* **Auto-saving failed silently.** If the server declined to file an image, the
+  browser dropped the result on the floor: no message, no console line, nothing
+  — and during an unattended crawl you discover it hours later. Every outcome is
+  now reported in a line across the top of the node's preview, and repeated to
+  the console: *saved to <style>*, or the reason it was not — auto_gallery off,
+  `first` skipping a style that already has a preview, no style recorded for the
+  prompt, the image missing from disk, or a server that needs restarting.
+* The save route returns a `skipped` list with a reason per node alongside
+  `saved`, and its error strings now name the actual problem (including the full
+  path when an image is not where the client said it was).
+
+## 1.7.3 — a crawl can no longer stall on one style
+
+* **Only the first image of a crawl reached the catalog.** If crawl could not
+  build its list of styles to walk, `advanceCrawl` returned early and the style
+  dropdown never moved — so every queued prompt composed the same style, and the
+  whole batch piled onto that one entry (or was skipped outright under
+  `auto_gallery: first`). Two things produce an empty list: a `roll_scope` that
+  genuinely has nothing in it (`has preview` on an empty gallery, `missing
+  preview` once everything is covered) and a crawl request that does not answer.
+* Crawl now falls back to walking the **whole catalog** whenever its list comes
+  back empty, from both `syncCrawl` and `advanceCrawl`, logging why. Standing
+  still is the one behaviour it must never have.
+* Added two dev harnesses, neither shipped: `tools/harness/crawl_steps.mjs`
+  imports `web/panel.js` against stub ComfyUI modules and asserts the dropdown
+  advances per queued prompt (it reproduces this bug with `EMPTY=1`), and
+  `tools/crawl_probe.py` drives a real aiohttp app through a four-style crawl,
+  checking each image is filed under its own style and that a repeated report
+  neither double-files nor steals another prompt's record.
+
+## 1.7.2 — failures say what to do about them
+
+* Every request now records its HTTP status on failure, and the UI turns it into
+  a sentence worth reading: a 404 or 405 reports **restart ComfyUI — the running
+  server has not loaded this version**, which is the real cause when a browser
+  refresh has picked up the new interface but the server is still running the
+  old routes. Other cases report the status and point at the ComfyUI console.
+* README and manual now say plainly that installing or updating needs a full
+  ComfyUI restart, not just a browser refresh.
+
+## 1.7.1 — fixes both of 1.7.0's new bits
+
+* **Add prompt did nothing.** It was built on `window.prompt`, and a browser
+  silently suppresses dialogs once a page has opened a few of them — the call
+  returns null and the click looks dead. The bar now has an inline field: click
+  **Add prompt**, type, press Enter (Escape cancels). It also reports "saved" or
+  "could not save" instead of failing quietly, and Delete prompt does the same.
+  The server side was fine throughout — verified end to end over real HTTP,
+  including a legacy index file and a named catalog.
+* **The preview arrows never appeared.** They were gated on a style having two
+  or more saved images, and a crawl saves exactly one per style, so the
+  condition was almost never true. They now step through the **catalog** one
+  style at a time — which is what makes them useful for flipping through
+  previews and stopping on one — are always visible, wrap at both ends, and grey
+  out while crawl is on since crawl is driving the dropdown. Choosing between
+  several images of the same style stays with the shot strip underneath.
+* Added `route_probe.py` (dev only, not shipped): stands up a real aiohttp app
+  with the node's routes and a stub PromptServer, so an HTTP-level bug can be
+  reproduced without running ComfyUI.
+
+## 1.7.0 — catalogs record the prompt they were generated with
+
+* **Prompt bar in the browser**, directly under the search and filter row:
+  *Prompt used for generating catalog*, the saved prompts, **Add prompt** and
+  **Delete prompt**. Click a prompt to select it, then delete removes that one.
+  Whitespace is tidied, duplicates are ignored, up to 12 per catalog and 800
+  characters each.
+* Prompts are stored **per catalog** alongside its name, so "my Krea 2" and an
+  SDXL catalog each say how they were made. Saved in `user/catalogs.json`.
+* New route: `POST /neons_style/catalogs/prompt` (add, or `delete: true`).
+* The web checker gained a documented limitation and a workaround: its string
+  stripping is not a lexer, so a literal quote inside a regex character class
+  desynchronises it — write those as `\u0022` / `\u0027`. It found the problem
+  by flagging two functions that plainly did exist.
+
+## 1.6.2 — page through previews from the node
+
+* **Arrows on the panel preview.** A style with more than one saved image now
+  shows ‹ › arrows over the preview (on hover) and a `2 / 5` counter. They page
+  through that style's images and the one you land on becomes the cover, so
+  choosing takes one click and no confirmation. The arrows stay hidden when
+  there is only one image, and clicking the image itself still opens the
+  browser.
+
 ## 1.6.1 — menus open where you clicked
 
 * **Popup menus appeared in the top-left corner.** The helper read `clientX`

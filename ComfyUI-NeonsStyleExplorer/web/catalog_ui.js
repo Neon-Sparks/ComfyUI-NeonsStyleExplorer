@@ -1,7 +1,14 @@
 import { ensureCss } from "./css.js";
 import {
+    addCatalogPrompt,
+    deleteFamily,
+    isCustomFamily,
+    loadFamilies,
+    renameFamily,
+    lastErrorText,
     clearRecents,
     createCatalogSet,
+    deleteCatalogPrompt,
     deleteCatalogSet,
     deleteAllShots,
     deleteFamilyShots,
@@ -34,6 +41,14 @@ const AXES = ["style", "format", "finish"];
 const CARD_MIN = 190;
 const CARD_GAP = 12;
 const BODY_H = 84;
+// preview size, as a percentage of the default card width
+const ZOOMS = [25, 50, 75, 100, 125, 150, 200, 250, 300];
+const ZOOM_KEY = "ns.catalog.zoom";
+
+function savedZoom() {
+    const stored = Number(localStorage.getItem(ZOOM_KEY));
+    return ZOOMS.includes(stored) ? stored : 100;
+}
 
 export function closeAll() {
     document.getElementById("ns-overlay")?.remove();
@@ -57,6 +72,48 @@ function anchorRect(source) {
     const x = Number(source?.clientX) || 0;
     const y = Number(source?.clientY) || 0;
     return { left: x, right: x, top: y, bottom: y, width: 0, height: 0 };
+}
+
+// A user-typed prompt goes into markup, so escape it. The apostrophe is written
+// as \u0027 rather than a literal quote: a bare quote inside a character class
+// confuses simple source scanners (ours included).
+const HTML_ESCAPES = {
+    "&": "&amp;",
+    "<": "&lt;",
+    ">": "&gt;",
+    "\"": "&quot;",
+    "\u0027": "&#39;",
+};
+
+function escapeHtml(text) {
+    return String(text ?? "").replace(/[&<>\u0022\u0027]/g, (ch) => HTML_ESCAPES[ch]);
+}
+
+/** True when a key event came from somewhere the user is typing. */
+function typingIn(target) {
+    const element = target instanceof Element ? target : null;
+    if (!element) return false;
+    return Boolean(element.closest("input, textarea, select, [contenteditable=\u0022true\u0022]"));
+}
+
+/**
+ * Keep our own dialogs' keystrokes to ourselves.
+ *
+ * ComfyUI binds shortcuts on the canvas and on document level; a modal opened
+ * over the node sits inside that, so single letters could reach the canvas
+ * instead of the field being typed into. Propagation stops here — default
+ * behaviour is untouched, so typing still types.
+ */
+function keepKeysLocal(element, onEscape) {
+    for (const type of ["keydown", "keyup", "keypress"]) {
+        element.addEventListener(type, (ev) => {
+            if (ev.key === "Escape" && type === "keydown" && onEscape) {
+                ev.preventDefault();
+                onEscape();
+            }
+            ev.stopPropagation();
+        }, true);
+    }
 }
 
 export function menu(event, items) {
@@ -103,6 +160,104 @@ export function menu(event, items) {
     setTimeout(() => window.addEventListener("mousedown", away, true), 0);
 }
 
+/**
+ * Manage the families the user added. Shipped families are listed but locked:
+ * renaming one would orphan a thousand entries the node ships with.
+ *
+ * Deleting a family never deletes styles — they move to Lonely, the holding
+ * family for styles with nowhere else to be.
+ */
+export async function openFamilies(opts = {}) {
+    ensureCss();
+    document.getElementById("ns-modal")?.remove();
+    const data = await loadFamilies();
+    const rows = data?.families || [];
+
+    const wrap = document.createElement("div");
+    wrap.className = "ns-modal";
+    wrap.id = "ns-modal";
+    const card = document.createElement("div");
+    card.className = "card";
+    card.innerHTML = `
+      <h3>Families</h3>
+      <p class="hint">Rename or remove the families you added. Deleting one moves its
+      styles to <b>Lonely</b> rather than deleting them. The nine shipped families cannot be changed.</p>
+      <div class="ns-famlist"></div>
+      <div class="err" id="ns-err"></div>
+      <div class="btns"></div>
+    `;
+    wrap.appendChild(card);
+    document.body.appendChild(wrap);
+    keepKeysLocal(card, () => wrap.remove());
+
+    const list = card.querySelector(".ns-famlist");
+    function paint(current) {
+        list.innerHTML = current
+            .map((row) => `
+              <div class="fam${row.shipped ? " locked" : ""}" data-name="${escapeHtml(row.name)}">
+                <span class="n">${escapeHtml(row.name)}</span>
+                <span class="c">${row.total} entr${row.total === 1 ? "y" : "ies"}${
+                    row.mine ? `, ${row.mine} yours` : ""}</span>
+                ${row.shipped
+                    ? `<span class="tag">shipped</span>`
+                    : `<button class="ren">Rename</button><button class="del bad">Delete</button>`}
+              </div>`)
+            .join("");
+        list.querySelectorAll(".fam").forEach((element) => {
+            const name = element.dataset.name;
+            element.querySelector(".ren")?.addEventListener("click", () => {
+                element.innerHTML = `
+                  <input class="rename" value="${escapeHtml(name)}" maxlength="40">
+                  <button class="save key">Save</button><button class="cancel">Cancel</button>`;
+                const field = element.querySelector(".rename");
+                field.focus();
+                const commit = async () => {
+                    const next = field.value.trim();
+                    if (!next || next === name) return paint(current);
+                    const result = await renameFamily(name, next);
+                    if (!result?.ok) {
+                        card.querySelector("#ns-err").textContent = result?.error || "could not rename";
+                        return paint(current);
+                    }
+                    current = result.families || current;
+                    paint(current);
+                    opts.onChanged?.();
+                };
+                element.querySelector(".save").onclick = commit;
+                element.querySelector(".cancel").onclick = () => paint(current);
+                field.onkeydown = (ev) => {
+                    if (ev.key === "Enter") commit();
+                    if (ev.key === "Escape") paint(current);
+                };
+            });
+            element.querySelector(".del")?.addEventListener("click", async () => {
+                if (!confirm(`Delete the family "${name}"? Its styles move to Lonely.`)) return;
+                const result = await deleteFamily(name);
+                if (!result?.ok) {
+                    card.querySelector("#ns-err").textContent = result?.error || "could not delete";
+                    return;
+                }
+                current = result.families || current;
+                paint(current);
+                opts.onChanged?.();
+            });
+        });
+        if (!current.some((row) => !row.shipped)) {
+            list.insertAdjacentHTML("beforeend",
+                `<div class="fam none">You have not added any families yet.</div>`);
+        }
+    }
+    paint(rows);
+
+    const close = document.createElement("button");
+    close.textContent = "Close";
+    close.onclick = () => wrap.remove();
+    card.querySelector(".btns").appendChild(close);
+    wrap.addEventListener("mousedown", (ev) => {
+        if (ev.target === wrap) wrap.remove();
+    });
+}
+
 /* ------------------------------------------------------------- editor */
 
 export async function openEditor(opts = {}) {
@@ -134,7 +289,10 @@ export async function openEditor(opts = {}) {
       }</p>
       <label>Name</label><input id="ns-name" ${creating ? "" : "readonly"}>
       <div class="cols">
-        <div><label>Family</label><select id="ns-family"></select></div>
+        <div><label>Family</label>
+          <select id="ns-family"></select>
+          <input id="ns-newfamily" placeholder="new family name" maxlength="40" style="display:none">
+        </div>
         <div><label>Axis</label><select id="ns-axis"></select></div>
         <div><label>Closing medium</label><input id="ns-medium" placeholder="anime style image"></div>
       </div>
@@ -143,8 +301,10 @@ export async function openEditor(opts = {}) {
       <label>Avoid terms (natural language)</label>
       <textarea id="ns-neg" rows="2"></textarea>
       <div class="cols">
-        <div><label>Booru tags</label><input id="ns-tags" list="ns-vocab"></div>
-        <div><label>Booru negative tags</label><input id="ns-ntags" list="ns-vocab"></div>
+        <div><label>Booru tags <span class="sub">comma separated, any tag you like</span></label>
+          <input id="ns-tags" list="ns-vocab" autocomplete="off"></div>
+        <div><label>Booru negative tags <span class="sub">comma separated</span></label>
+          <input id="ns-ntags" list="ns-vocab" autocomplete="off"></div>
       </div>
       <datalist id="ns-vocab"></datalist>
       <div class="err" id="ns-err"></div>
@@ -152,9 +312,18 @@ export async function openEditor(opts = {}) {
     `;
     wrap.appendChild(card);
     document.body.appendChild(wrap);
+    keepKeysLocal(card, () => wrap.remove());
     const $ = (sel) => card.querySelector(sel);
 
+    const NEW_FAMILY = "+ add a new family…";
     families.forEach((family) => $("#ns-family").add(new Option(family, family)));
+    $("#ns-family").add(new Option(NEW_FAMILY, NEW_FAMILY));
+    const newFamily = $("#ns-newfamily");
+    $("#ns-family").addEventListener("change", () => {
+        const adding = $("#ns-family").value === NEW_FAMILY;
+        newFamily.style.display = adding ? "block" : "none";
+        if (adding) newFamily.focus();
+    });
     AXES.forEach((axis) => $("#ns-axis").add(new Option(axis, axis)));
     vocab.slice(0, 4000).forEach((tag) => $("#ns-vocab").appendChild(new Option(tag)));
 
@@ -177,7 +346,9 @@ export async function openEditor(opts = {}) {
     };
     const collect = () => ({
         name: $("#ns-name").value,
-        family: $("#ns-family").value,
+        family: $("#ns-family").value === "+ add a new family…"
+            ? $("#ns-newfamily").value.trim()
+            : $("#ns-family").value,
         axis: $("#ns-axis").value,
         medium: $("#ns-medium").value,
         nl: $("#ns-nl").value,
@@ -189,9 +360,16 @@ export async function openEditor(opts = {}) {
     add("Save", "key", async () => {
         $("#ns-err").textContent = "";
         const body = collect();
-        const bad = [...body.tags, ...body.tags_negative].filter((t) => vocab.length && !vocab.includes(t));
-        if (bad.length) {
-            $("#ns-err").textContent = `Not real booru tags: ${bad.join(", ")}`;
+        // The vocabulary is a suggestion list, not a gate: models understand
+        // plenty of tags that are not in it, and refusing to save was stopping
+        // people writing the tags they actually wanted.
+        const unlisted = [...body.tags, ...body.tags_negative]
+            .filter((tag) => vocab.length && !vocab.includes(tag));
+        if (unlisted.length) {
+            console.log(`Neons Style Explorer: saving ${unlisted.length} tag(s) not in the suggestion list`);
+        }
+        if (!body.family) {
+            $("#ns-err").textContent = "Name the new family, or pick an existing one.";
             return;
         }
         const result = creating || isCustom
@@ -277,6 +455,18 @@ export async function openCatalog(options = {}) {
           <button class="wipe">Delete family thumbs</button>
           <button class="close">Close</button>
         </div>
+        <div class="ns-prompts">
+          <label class="ns-zoom">Preview size
+            <select class="zoom" title="Size of the preview images in this grid"></select>
+          </label>
+          <span class="sep"></span>
+          <span class="ttl">Prompt used for generating catalog</span>
+          <span class="list"></span>
+          <input class="promptbox" type="text" placeholder="type the prompt, then Enter" maxlength="800">
+          <button class="addprompt">Add prompt</button>
+          <button class="delprompt">Delete prompt</button>
+          <span class="note"></span>
+        </div>
         <div class="ns-viewport"><div class="ns-cards"></div></div>
       </div>
       <div class="ns-foot"><span class="clause"></span><span class="cov"></span></div>
@@ -297,12 +487,29 @@ export async function openCatalog(options = {}) {
 
     AXES.forEach((axis) => axisSel.add(new Option(`${axis}s`, axis)));
     axisSel.value = options.axis || "style";
-    (state.catalog.family_order || []).forEach((family) => famSel.add(new Option(family, family)));
+    // shipped families first, then the user's own under one heading — with a
+    // single option that gathers every custom family together
+    const ALL_CUSTOM = "\u0000custom";
+    function paintFamilies() {
+        const current = famSel.value;
+        const order = state.catalog.family_order || [];
+        const shipped = order.filter((family) => !isCustomFamily(family));
+        const mine = order.filter((family) => isCustomFamily(family));
+        famSel.innerHTML = `<option value="">All families</option>`;
+        for (const family of shipped) famSel.add(new Option(family, family));
+        if (mine.length) {
+            famSel.add(new Option("— my families —", ALL_CUSTOM));
+            for (const family of mine) famSel.add(new Option(`  ${family}`, family));
+        }
+        famSel.value = [...famSel.options].some((option) => option.value === current) ? current : "";
+    }
+    paintFamilies();
 
     const coverage = state.catalog.coverage || { total: 0, written: 0 };
     cov.textContent = `${coverage.written} / ${coverage.total} hand-written`;
 
     let rows = [];
+    let zoom = savedZoom();
     let layout = { columns: 1, cardW: CARD_MIN, cardH: CARD_MIN + BODY_H, rows: 0 };
     const mounted = new Map();
 
@@ -311,7 +518,11 @@ export async function openCatalog(options = {}) {
         rows = namesOf(axisSel.value)
             .map((name) => ({ name, entry: entryOf(name) || {}, shots: shotsOf(name) }))
             .filter(({ name, entry, shots }) => {
-                if (famSel.value && entry.family !== famSel.value) return false;
+                if (famSel.value === ALL_CUSTOM) {
+                    if (!isCustomFamily(entry.family)) return false;
+                } else if (famSel.value && entry.family !== famSel.value) {
+                    return false;
+                }
                 if (srcSel.value && (entry.source || "shipped") !== srcSel.value) return false;
                 if (haveSel.value === "has" && !shots) return false;
                 if (haveSel.value === "missing" && shots) return false;
@@ -327,9 +538,22 @@ export async function openCatalog(options = {}) {
 
     function measure() {
         const width = viewport.clientWidth - 32;
-        const columns = Math.max(1, Math.floor((width + CARD_GAP) / (CARD_MIN + CARD_GAP)));
-        const cardW = Math.floor((width - CARD_GAP * (columns - 1)) / columns);
-        const cardH = cardW + BODY_H;
+        const target = Math.max(60, Math.round(CARD_MIN * (zoom / 100)));
+        // at 300% a card can be wider than the window; never ask for more
+        // columns than fit, and never fewer than one
+        const columns = Math.max(1, Math.min(
+            Math.floor((width + CARD_GAP) / (target + CARD_GAP)) || 1,
+            rows.length || 1
+        ));
+        // cards fill the row, but never stretch far past the size asked for —
+        // otherwise 300% on a wide window lands nearer 400%
+        const cardW = Math.min(
+            Math.floor((width - CARD_GAP * (columns - 1)) / columns),
+            Math.round(target * 1.25)
+        );
+        // the body keeps its type size, so it must not scale with the picture —
+        // below 60% it would dwarf the thumbnail, so the grid goes picture-only
+        const cardH = cardW + (zoom < 60 ? 0 : BODY_H);
         layout = { columns, cardW, cardH, rows: Math.ceil(rows.length / columns) };
         cards.style.height = `${layout.rows * (cardH + CARD_GAP)}px`;
         for (const node of mounted.values()) node.remove();
@@ -340,7 +564,8 @@ export async function openCatalog(options = {}) {
     function card(index) {
         const { name, entry, shots } = rows[index];
         const node = document.createElement("div");
-        node.className = `ns-card${name === options.current ? " on" : ""}`;
+        node.className = `ns-card${name === options.current ? " on" : ""}${zoom < 60 ? " compact" : ""}`;
+        node.title = name;   // the label is hidden in compact mode
         node.dataset.name = name;
         const source = entry.source || "shipped";
         const starred = isFavourite(name);
@@ -495,7 +720,17 @@ export async function openCatalog(options = {}) {
     refreshHiddenCount();
 
     overlay.querySelector(".close").onclick = closeAll;
-    overlay.querySelector(".new").onclick = () => openEditor({ create: true, onSaved: () => filter() });
+    overlay.querySelector(".new").onclick = () => openEditor({
+        create: true,
+        onSaved: (saved) => {
+            filter();
+            // opened from a node: hand the new style straight back to it
+            if (saved && options.onPick) {
+                options.onPick(saved, "style");
+                closeAll();
+            }
+        },
+    });
     overlay.querySelector(".roll").onclick = () => {
         if (!rows.length) return;
         const pick = rows[Math.floor(Math.random() * rows.length)];
@@ -503,7 +738,114 @@ export async function openCatalog(options = {}) {
         closeAll();
     };
     /* ------------------------------------------------ catalog picker */
+    const zoomSel = overlay.querySelector(".zoom");
+    zoomSel.innerHTML = ZOOMS
+        .map((value) => `<option value="${value}"${value === zoom ? " selected" : ""}>${value}%</option>`)
+        .join("");
+    zoomSel.onchange = () => {
+        zoom = Number(zoomSel.value) || 100;
+        localStorage.setItem(ZOOM_KEY, String(zoom));
+        for (const node of mounted.values()) node.remove();
+        mounted.clear();
+        measure();
+        render();
+        scroll.scrollTop = 0;   // the row a position pointed at no longer exists
+    };
+
     const catSel = overlay.querySelector(".catset");
+
+    /* ------------------------------------ the catalog's generation prompts */
+    const promptList = overlay.querySelector(".ns-prompts .list");
+    const delPromptButton = overlay.querySelector(".delprompt");
+    let activePrompt = "";
+
+    function currentSet() {
+        return state.catalogs.items.find((item) => item.id === state.catalogs.active);
+    }
+
+    function paintPrompts() {
+        const prompts = currentSet()?.prompts || [];
+        if (!prompts.includes(activePrompt)) activePrompt = prompts[0] || "";
+        promptList.innerHTML = prompts.length
+            ? prompts
+                  .map((text, index) =>
+                      `<button class="p${text === activePrompt ? " on" : ""}" data-i="${index}"
+                               title="Click to select, then Delete prompt">${escapeHtml(text)}</button>`)
+                  .join("")
+            : `<span class="none">none saved yet — add the prompt these previews were generated with</span>`;
+        promptList.querySelectorAll(".p").forEach((button, index) => {
+            button.onclick = () => {
+                activePrompt = prompts[index];
+                paintPrompts();
+            };
+        });
+        delPromptButton.disabled = !prompts.length;
+    }
+
+    // An inline field rather than window.prompt(): the browser silently
+    // suppresses dialogs once a page has opened a few of them, and a swallowed
+    // prompt() looks exactly like "saving is broken".
+    const promptBox = overlay.querySelector(".promptbox");
+    const addPromptButton = overlay.querySelector(".addprompt");
+    const promptNote = overlay.querySelector(".note");
+
+    function note(text, bad = false) {
+        promptNote.textContent = text || "";
+        promptNote.classList.toggle("bad", Boolean(bad));
+        if (text) setTimeout(() => { promptNote.textContent = ""; }, 2600);
+    }
+
+    function editing(on) {
+        promptBox.style.display = on ? "block" : "none";
+        addPromptButton.textContent = on ? "Save prompt" : "Add prompt";
+        if (on) promptBox.focus();
+        else promptBox.value = "";
+    }
+    editing(false);
+
+    async function commitPrompt() {
+        const text = promptBox.value.trim();
+        if (!text) {
+            editing(false);
+            return;
+        }
+        const result = await addCatalogPrompt(state.catalogs.active, text);
+        if (result?.ok) {
+            activePrompt = text;
+            editing(false);
+            paintPrompts();
+            note("saved");
+        } else {
+            note(lastErrorText("could not save that prompt"), true);
+        }
+    }
+
+    addPromptButton.onclick = () => {
+        if (promptBox.style.display === "none") editing(true);
+        else commitPrompt();
+    };
+    promptBox.onkeydown = (ev) => {
+        if (ev.key === "Enter") {
+            ev.preventDefault();
+            commitPrompt();
+        } else if (ev.key === "Escape") {
+            ev.preventDefault();
+            ev.stopPropagation();   // keep Escape from closing the browser
+            editing(false);
+        }
+    };
+
+    delPromptButton.onclick = async () => {
+        if (!activePrompt) return;
+        const result = await deleteCatalogPrompt(state.catalogs.active, activePrompt);
+        if (result?.ok) {
+            activePrompt = "";
+            paintPrompts();
+            note("removed");
+        } else {
+            note(lastErrorText("could not remove that prompt"), true);
+        }
+    };
 
     function paintCatalogs() {
         const { active, items } = state.catalogs;
@@ -513,10 +855,12 @@ export async function openCatalog(options = {}) {
             .join("");
     }
     paintCatalogs();
+    paintPrompts();
 
     async function switchTo(id) {
         await useCatalogSet(id);
         paintCatalogs();
+        paintPrompts();
         refreshAfterCatalogChange();
     }
 
@@ -536,6 +880,7 @@ export async function openCatalog(options = {}) {
         await loadCatalog();
         await loadGallery();
         paintCatalogs();
+        paintPrompts();
         refreshAfterCatalogChange();
     };
 
@@ -561,6 +906,7 @@ export async function openCatalog(options = {}) {
                     await loadCatalog();
                     await loadGallery();
                     paintCatalogs();
+                    paintPrompts();
                     refreshAfterCatalogChange();
                 },
             },
@@ -573,6 +919,7 @@ export async function openCatalog(options = {}) {
                     await loadCatalog();
                     await loadGallery();
                     paintCatalogs();
+                    paintPrompts();
                     refreshAfterCatalogChange();
                 },
             },
@@ -581,13 +928,14 @@ export async function openCatalog(options = {}) {
 
     const wipeButton = overlay.querySelector(".wipe");
     const syncWipeLabel = () => {
-        wipeButton.textContent = famSel.value ? `Delete ${famSel.value} previews` : "Delete all previews";
+        const label = famSel.value === ALL_CUSTOM ? "my families" : famSel.value;
+        wipeButton.textContent = label ? `Delete ${label} previews` : "Delete all previews";
     };
     famSel.addEventListener("change", syncWipeLabel);
     syncWipeLabel();
     wipeButton.onclick = async () => {
         const stored = Object.keys(state.previews || {}).length;
-        if (famSel.value) {
+        if (famSel.value && famSel.value !== ALL_CUSTOM) {
             if (!confirm(`Delete every gallery image for ${famSel.value}?`)) return;
             await deleteFamilyShots(famSel.value);
         } else {
@@ -609,6 +957,14 @@ export async function openCatalog(options = {}) {
                     link.download = "neons_styles.json";
                     link.click();
                 },
+            },
+            {
+                label: "Manage my families…",
+                run: () => openFamilies({ onChanged: async () => {
+                    await loadCatalog();
+                    paintFamilies();
+                    filter();
+                } }),
             },
             {
                 label: `Clear all favourites (${(state.favourites || []).length})`,
@@ -664,7 +1020,7 @@ export async function openCatalog(options = {}) {
             closeAll();
             window.removeEventListener("keydown", keys, true);
             observer.disconnect();
-        } else if (ev.key === "/" && document.activeElement !== search) {
+        } else if (ev.key === "/" && document.activeElement !== search && !typingIn(ev.target)) {
             ev.preventDefault();
             search.focus();
         }

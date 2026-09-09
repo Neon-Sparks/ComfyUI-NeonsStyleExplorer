@@ -12,6 +12,7 @@ export const state = {
     tags: [],
     lastImages: [],
     lastPromptId: "",
+    lastError: null,
     // named preview catalogs: one per model or project
     catalogs: { active: "default", name: "Default", items: [] },
     // prompt_id -> { images: [], nodes: Map(nodeId -> {style, mode, prompt}) }
@@ -40,16 +41,42 @@ async function parse(res) {
     }
 }
 
+/**
+ * Every request goes through here. On failure it records the status in
+ * state.lastError so the UI can say something useful: a 404 means the running
+ * ComfyUI has not loaded this version's routes (the browser picked up the new
+ * front-end files, but routes only register when the server restarts), which is
+ * a very different problem from a write error.
+ */
 async function call(path, body) {
+    state.lastError = null;
     try {
         const init = body
             ? { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(body) }
             : undefined;
-        return (await parse(await api.fetchApi(path, init))) || null;
+        const response = await api.fetchApi(path, init);
+        if (response && response.ok === false) {
+            state.lastError = { path, status: response.status };
+            console.warn(`Neons Style Explorer: ${path} → HTTP ${response.status}`);
+            return null;
+        }
+        return (await parse(response)) || null;
     } catch (err) {
+        state.lastError = { path, status: 0, message: String(err?.message || err) };
         console.warn(`Neons Style Explorer: ${path} failed`, err);
         return null;
     }
+}
+
+/** A sentence for the last failure, aimed at the person who has to fix it. */
+export function lastErrorText(fallback = "that did not work") {
+    const error = state.lastError;
+    if (!error) return fallback;
+    if (error.status === 404 || error.status === 405) {
+        return "restart ComfyUI — the running server has not loaded this version";
+    }
+    if (error.status === 0) return `no reply from the server (${error.message})`;
+    return `server error ${error.status} — see the ComfyUI console`;
 }
 
 export async function loadCatalog() {
@@ -90,6 +117,19 @@ export async function loadTags() {
 export const composeRemote = (body) => call("/neons_style/compose", body);
 export const rollRemote = (body) => call("/neons_style/roll", body);
 
+/* ------------------------------------------------------------- families */
+
+export const loadFamilies = () => call("/neons_style/families");
+export const renameFamily = (old, next) =>
+    call("/neons_style/families/rename", { old, new: next });
+export const deleteFamily = (name) => call("/neons_style/families/delete", { name });
+
+/** True when a family was made by the user rather than shipped with the node. */
+export function isCustomFamily(name) {
+    const shipped = state.catalog.shipped_families || [];
+    return Boolean(name) && !shipped.includes(name);
+}
+
 /* ---------------------------------------------- catalogs (named preview sets) */
 
 export async function loadCatalogSets() {
@@ -107,6 +147,11 @@ async function catalogSetCall(path, body) {
 export const createCatalogSet = (name) => catalogSetCall("/neons_style/catalogs/create", { name });
 export const selectCatalogSet = (id) => catalogSetCall("/neons_style/catalogs/select", { id });
 export const renameCatalogSet = (id, name) => catalogSetCall("/neons_style/catalogs/rename", { id, name });
+export const addCatalogPrompt = (id, text) =>
+    catalogSetCall("/neons_style/catalogs/prompt", { id, text });
+export const deleteCatalogPrompt = (id, text) =>
+    catalogSetCall("/neons_style/catalogs/prompt", { id, text, delete: true });
+
 export const deleteCatalogSet = (id, deleteFiles = false) =>
     catalogSetCall("/neons_style/catalogs/delete", { id, delete_files: deleteFiles });
 

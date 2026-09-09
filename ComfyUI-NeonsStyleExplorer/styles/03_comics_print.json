@@ -1371,6 +1371,26 @@
       "written": true
     },
     {
+      "id": "comics.blue_line_pencil_page",
+      "name": "[Comic] Blue-Line Pencil Page",
+      "family": "Comics & Print",
+      "axis": "style",
+      "medium": "comic style image",
+      "nl": "Blue-line comic rendering: page pencils photographed before inking, non-photo blue construction beneath grey graphite, panel borders ruled but unfilled, eraser haze and hand smudging across the board, comic style image.",
+      "tags": [
+        "sketch",
+        "unfinished",
+        "comic",
+        "blue_theme"
+      ],
+      "tags_negative": [
+        "flat_color"
+      ],
+      "negative": "finished inks, flat printed colour",
+      "aliases": [],
+      "written": true
+    },
+    {
       "id": "comics.bonelli_black_and_white",
       "name": "[Comic] Bonelli Black-and-White",
       "family": "Comics & Print",
@@ -1471,6 +1491,26 @@
         "highres"
       ],
       "negative": "slick superhero rendering, glossy colour",
+      "aliases": [],
+      "written": true
+    },
+    {
+      "id": "comics.ink_wash_tone",
+      "name": "[Comic] Ink Wash Tone",
+      "family": "Comics & Print",
+      "axis": "style",
+      "medium": "comic style image",
+      "nl": "Wash-tone comic rendering: brush-diluted ink laid over a confident pen line, grey values doing the modelling instead of dots, wet edges pooling at the panel borders, bare paper kept for highlights, comic style image.",
+      "tags": [
+        "ink_wash_painting",
+        "comic",
+        "monochrome",
+        "greyscale"
+      ],
+      "tags_negative": [
+        "halftone"
+      ],
+      "negative": "mechanical dot tone, flat digital greys",
       "aliases": [],
       "written": true
     },
@@ -2479,6 +2519,26 @@
       "written": true
     },
     {
+      "id": "comics.chiaroscuro_woodcut",
+      "name": "[Print] Chiaroscuro Woodcut",
+      "family": "Comics & Print",
+      "axis": "style",
+      "medium": "print style image",
+      "nl": "Chiaroscuro woodcut rendering: two or three tone blocks printed over a key line, mid-tones as flat overlapping fields, highlights cut back to bare paper, slight registration drift between blocks, print style image.",
+      "tags": [
+        "woodcut",
+        "limited_palette",
+        "high_contrast",
+        "traditional_media"
+      ],
+      "tags_negative": [
+        "photorealistic"
+      ],
+      "negative": "smooth blended shading, full colour range",
+      "aliases": [],
+      "written": true
+    },
+    {
       "id": "comics.chromolithograph",
       "name": "[Print] Chromolithograph",
       "family": "Comics & Print",
@@ -2500,6 +2560,25 @@
       "written": true
     },
     {
+      "id": "comics.collagraph",
+      "name": "[Print] Collagraph",
+      "family": "Comics & Print",
+      "axis": "style",
+      "medium": "print style image",
+      "nl": "Collagraph rendering: an assembled textured plate printed under heavy pressure, fabric weave, card edges and grit all reading as tone, embossed plate mark, ink pooling in the low ground, print style image.",
+      "tags": [
+        "textured",
+        "traditional_media",
+        "monochrome"
+      ],
+      "tags_negative": [
+        "flat_color"
+      ],
+      "negative": "flat digital fills, clean vector edges",
+      "aliases": [],
+      "written": true
+    },
+    {
       "id": "comics.comic_ink",
       "name": "[Print] Comic Ink",
       "family": "Comics & Print",
@@ -2517,6 +2596,46 @@
         "colorful"
       ],
       "negative": "full colour, soft airbrush shading",
+      "aliases": [],
+      "written": true
+    },
+    {
+      "id": "comics.duotone_pulp_interior",
+      "name": "[Print] Duotone Pulp Interior",
+      "family": "Comics & Print",
+      "axis": "style",
+      "medium": "print style image",
+      "nl": "Duotone pulp rendering: two inks only on cheap absorbent stock, black line beside one flat spot colour, coarse halftone dots spreading as they soak, colour creeping past its own edges, print style image.",
+      "tags": [
+        "duotone",
+        "halftone",
+        "limited_palette",
+        "comic"
+      ],
+      "tags_negative": [
+        "highres"
+      ],
+      "negative": "full colour separation, glossy coated paper",
+      "aliases": [],
+      "written": true
+    },
+    {
+      "id": "comics.end_grain_wood_engraving",
+      "name": "[Print] End-Grain Wood Engraving",
+      "family": "Comics & Print",
+      "axis": "style",
+      "medium": "print style image",
+      "nl": "End-grain engraving rendering: white line cut into polished boxwood, tone built from parallel gouge strokes, highlights carved out of solid black, crisp letterpress bite into the sheet, print style image.",
+      "tags": [
+        "woodcut",
+        "monochrome",
+        "cross-hatching",
+        "high_contrast"
+      ],
+      "tags_negative": [
+        "gradient"
+      ],
+      "negative": "airbrushed tone, photographic greys",
       "aliases": [],
       "written": true
     },
@@ -2561,6 +2680,26 @@
       "written": true
     },
     {
+      "id": "comics.gyotaku_fish_print",
+      "name": "[Print] Gyotaku Fish Print",
+      "family": "Comics & Print",
+      "axis": "style",
+      "medium": "print style image",
+      "nl": "Gyotaku rendering: sumi ink taken directly off the subject and pressed onto washi, scale and fin texture printed one to one, soft bleed at the margins, wide unprinted paper around it, print style image.",
+      "tags": [
+        "ink_(medium)",
+        "monochrome",
+        "traditional_media",
+        "textured"
+      ],
+      "tags_negative": [
+        "photorealistic"
+      ],
+      "negative": "airbrushed rendering, photographic detail",
+      "aliases": [],
+      "written": true
+    },
+    {
       "id": "comics.halftone_newsprint",
       "name": "[Print] Halftone Newsprint",
       "family": "Comics & Print",
@@ -2578,6 +2717,26 @@
         "highres"
       ],
       "negative": "crisp digital colour, glossy stock",
+      "aliases": [],
+      "written": true
+    },
+    {
+      "id": "comics.katazome_stencil_dye",
+      "name": "[Print] Katazome Stencil Dye",
+      "family": "Comics & Print",
+      "axis": "style",
+      "medium": "print style image",
+      "nl": "Katazome rendering: rice-paste resist brushed through a cut mulberry stencil, undyed white pattern against saturated indigo, fine paste cracks breaking the line, cloth weave showing through, print style image.",
+      "tags": [
+        "stencil",
+        "blue_theme",
+        "traditional_media",
+        "textured"
+      ],
+      "tags_negative": [
+        "photorealistic"
+      ],
+      "negative": "photographic imagery, glossy print surface",
       "aliases": [],
       "written": true
     },
@@ -2665,6 +2824,26 @@
       "written": true
     },
     {
+      "id": "comics.monotype_one_off",
+      "name": "[Print] Monotype One-Off",
+      "family": "Comics & Print",
+      "axis": "style",
+      "medium": "print style image",
+      "nl": "Monotype rendering: ink painted onto a smooth plate and pulled once, brush and rag marks preserved in the transfer, softened edges, wipe streaks and a visible plate border, print style image.",
+      "tags": [
+        "ink_(medium)",
+        "textured",
+        "traditional_media",
+        "monochrome"
+      ],
+      "tags_negative": [
+        "lineart"
+      ],
+      "negative": "repeatable flat printing, hard outlines",
+      "aliases": [],
+      "written": true
+    },
+    {
       "id": "comics.photogravure",
       "name": "[Print] Photogravure",
       "family": "Comics & Print",
@@ -2681,6 +2860,26 @@
         "high_contrast"
       ],
       "negative": "harsh contrast, glossy digital print",
+      "aliases": [],
+      "written": true
+    },
+    {
+      "id": "comics.pochoir_stencil",
+      "name": "[Print] Pochoir Stencil",
+      "family": "Comics & Print",
+      "axis": "style",
+      "medium": "print style image",
+      "nl": "Pochoir rendering: flat gouache brushed through hand-cut stencils, crisp bordered shapes with a faint raised ridge of paint, opaque unmodulated colour, a fine ink keyline dropped over the top, print style image.",
+      "tags": [
+        "stencil",
+        "flat_color",
+        "gouache_(medium)",
+        "colorful"
+      ],
+      "tags_negative": [
+        "gradient"
+      ],
+      "negative": "soft airbrushed blends, photographic depth",
       "aliases": [],
       "written": true
     },
@@ -2744,6 +2943,26 @@
         "gradient"
       ],
       "negative": "smooth CMYK gradients, glossy stock",
+      "aliases": [],
+      "written": true
+    },
+    {
+      "id": "comics.rotogravure_supplement",
+      "name": "[Print] Rotogravure Supplement",
+      "family": "Comics & Print",
+      "axis": "style",
+      "medium": "print style image",
+      "nl": "Rotogravure rendering: continuous-tone photographic printing in one warm brown ink, velvety mid-greys with soft edges, screen too fine to read, newsprint absorbency dulling the blacks, print style image.",
+      "tags": [
+        "sepia",
+        "photo_(medium)",
+        "monochrome",
+        "textured"
+      ],
+      "tags_negative": [
+        "high_contrast"
+      ],
+      "negative": "crisp modern offset, saturated colour",
       "aliases": [],
       "written": true
     },

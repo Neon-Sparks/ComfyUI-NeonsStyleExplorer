@@ -1,0 +1,21 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+
+# Atomic-write scratch files
+*.tmp
+
+# Everything the user generates locally: their catalogs, favourites, recents,
+# custom styles, overrides and the gallery log. Never committed.
+user/
+
+# Preview images are generated per install and are not shipped with the node.
+previews/*
+!previews/README.md
+
+# Editors / OS
+.DS_Store
+.idea/
+.vscode/

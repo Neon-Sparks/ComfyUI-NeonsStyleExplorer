@@ -363,9 +363,26 @@ def roll(axis="style", scope="all", family=None, seed=None, previews=None, exclu
     return rng.choice(pool)
 
 
-def crawl_names(scope="all", family=None, previews=None):
-    """The ordered style names crawl mode steps through for a scope."""
-    return [entry["name"] for entry in scope_pool("style", scope, family, previews)]
+def custom_names(axis="style"):
+    """Names of the user's own entries on an axis.
+
+    Feeds the node's custom_style slot, so your own styles are one dropdown
+    away instead of buried among a thousand shipped ones.
+    """
+    return [entry["name"] for entry in by_axis(axis) if entry.get("source") == "custom"]
+
+
+def crawl_names(scope="all", family=None, previews=None, missing_only=False):
+    """The ordered style names crawl mode steps through for a scope.
+
+    With *missing_only*, entries that already have a preview are dropped — the
+    same filter the UI applies, so the node's fallback agrees with the walk.
+    """
+    pool = scope_pool("style", scope, family, previews)
+    if missing_only and previews is not None:
+        have = {preview_key(key) for key in previews}
+        pool = [entry for entry in pool if preview_key(entry["id"]) not in have]
+    return [entry["name"] for entry in pool]
 
 
 def coverage():
@@ -407,6 +424,9 @@ def payload():
         "formats": names_for("format", pool),
         "finishes": names_for("finish", pool),
         "families": families,
+        # which families ship with the node: everything else is user-made, and
+        # the browser groups those together under one filter
+        "shipped_families": list(FAMILY_ORDER),
         "family_order": [f for f in FAMILY_ORDER if f in families]
         + [f for f in families if f not in FAMILY_ORDER],
         "axes": AXES,

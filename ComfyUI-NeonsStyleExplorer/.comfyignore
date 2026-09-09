@@ -1,0 +1,9 @@
+# Kept in git, left out of the archive published to the Comfy Registry:
+# none of it is needed to run the node.
+tests/
+tools/
+examples/
+.github/
+CHANGELOG.md
+STYLES.md
+MANUAL.md

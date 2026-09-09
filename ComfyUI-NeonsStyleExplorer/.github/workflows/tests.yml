@@ -1,0 +1,25 @@
+name: Tests
+
+# The whole build chain on every push and pull request: the catalog is rebuilt
+# from tools/written/*.json, linted, indexed, the web layer is checked for
+# undefined calls and bad imports, and the test suite runs.
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - name: Build, lint and test
+        run: bash tools/build_all.sh
+      - name: Fail if the build changed a tracked file
+        run: git diff --exit-code
