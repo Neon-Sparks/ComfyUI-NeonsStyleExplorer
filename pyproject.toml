@@ -10,6 +10,6 @@ Homepage = "https://github.com/Neon-Sparks/ComfyUI-NeonsStyleExplorer"
 Repository = "https://github.com/Neon-Sparks/ComfyUI-NeonsStyleExplorer"
 
 [tool.comfy]
-PublisherId = "Neon-Sparks"
+PublisherId = "Neon Sparks"
 DisplayName = "Neons Style Explorer"
 Icon = ""
