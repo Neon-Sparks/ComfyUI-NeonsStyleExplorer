@@ -101,7 +101,7 @@ style's stable id, so renaming never orphans an image.
 tools/build_all.sh               # import + lint + index + docs + examples + tests
 python3 tools/lint.py --all      # every finding
 node tools/check_web.mjs         # UI: undefined calls and bad imports
-python3 tests/test_compose.py    # 47 tests
+python3 tests/test_compose.py    # 49 tests
 ```
 
 The source of truth for the text is `tools/written/*.json`; `import_source.py`

@@ -13,6 +13,7 @@ export const state = {
     lastImages: [],
     lastPromptId: "",
     lastError: null,
+    gallerySig: "",
     // named preview catalogs: one per model or project
     catalogs: { active: "default", name: "Default", items: [] },
     // prompt_id -> { images: [], nodes: Map(nodeId -> {style, mode, prompt}) }
@@ -104,9 +105,49 @@ export async function starStyle(name) {
 /** The event any open view listens to so it can redraw when previews change. */
 export const GALLERY_EVENT = "ns:gallery";
 
+/* --------------------------------------------- one entry, in full, on demand */
+
+const detailCache = new Map();
+
+/**
+ * The clause and avoid terms for one entry.
+ *
+ * The catalog payload carries a light index — names, families, tags — because
+ * shipping every clause with it meant moving nearly two megabytes on each of
+ * the eighteen paths that reload the catalog. The long text is wanted one entry
+ * at a time, so it is fetched and cached here.
+ */
+export async function entryDetail(name) {
+    if (!name || name === "None" || name === RANDOM) return null;
+    if (detailCache.has(name)) return detailCache.get(name);
+    const data = await call(`/neons_style/entry?name=${encodeURIComponent(name)}`);
+    const entry = data?.entry || null;
+    if (entry) detailCache.set(name, entry);
+    return entry;
+}
+
+/** Drop cached detail after an edit, so the next read sees the new text. */
+export function forgetDetail(name) {
+    if (name) detailCache.delete(name);
+    else detailCache.clear();
+}
+
+/** Cheap "has the gallery changed?" check, for polling. */
+export async function gallerySignature() {
+    const data = await call("/neons_style/gallery/signature");
+    return data?.signature || "";
+}
+
 export async function loadGallery() {
     const data = await call("/neons_style/gallery");
-    state.previews = data?.previews || {};
+    const previews = data?.previews || {};
+    // Only announce a real change: the browser rebuilds its grid on this event,
+    // and an unchanged manifest used to trigger that rebuild anyway — six times
+    // a minute while the poller ran.
+    const before = state.gallerySig;
+    state.gallerySig = `${Object.keys(previews).length}:${JSON.stringify(previews).length}`;
+    state.previews = previews;
+    if (before === state.gallerySig) return state.previews;
     // Announce it: the catalog browser used to read the gallery once when it
     // opened, so previews saved during a crawl only appeared after closing and
     // reopening it.

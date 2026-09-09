@@ -436,13 +436,20 @@ def tag_vocabulary():
     return tags
 
 
+LIGHT_FIELDS = ("name", "id", "family", "axis", "medium", "source", "written",
+                "aliases", "tags", "tags_negative")
+
+
 def payload():
     pool = entries()
     families = {}
     by_name = {}
     for entry in pool:
         families.setdefault(entry["family"], []).append(entry["name"])
-        by_name[entry["name"]] = entry
+        # a light copy: the clause ('nl') and 'negative' account for most of the
+        # catalog's weight and are only ever wanted for one entry at a time, so
+        # they come from /neons_style/entry instead of every catalog load
+        by_name[entry["name"]] = {field: entry[field] for field in LIGHT_FIELDS}
     return {
         "schema": 1,
         "favourites": load_favourites(),

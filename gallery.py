@@ -160,6 +160,21 @@ def adopt_existing():
         _save(manifest)
 
 
+def signature(cid=None):
+    """A cheap fingerprint of a catalog's gallery.
+
+    Stat of the manifest file rather than a walk of it: the point is to let a
+    poller ask "has anything changed?" without moving the whole manifest or
+    touching every image on disk.
+    """
+    path = manifest_path(cid)
+    try:
+        stat = os.stat(path)
+        return f"{int(stat.st_mtime_ns)}:{stat.st_size}"
+    except OSError:
+        return "0:0"
+
+
 def manifest():
     adopt_existing()
     raw = _load()

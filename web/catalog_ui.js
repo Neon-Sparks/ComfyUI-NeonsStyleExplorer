@@ -1,6 +1,9 @@
 import { ensureCss } from "./css.js";
 import {
     addCatalogPrompt,
+    entryDetail,
+    forgetDetail,
+    gallerySignature,
     deleteFamily,
     isCustomFamily,
     loadFamilies,
@@ -289,7 +292,7 @@ export async function openEditor(opts = {}) {
 
     const creating = Boolean(opts.create);
     const name = opts.name || "";
-    const entry = (!creating && entryOf(name)) || {};
+    const entry = (!creating && (await entryDetail(name)) ) || (!creating && entryOf(name)) || {};
     const source = entry.source || (creating ? "custom" : "shipped");
     const isCustom = source === "custom" || creating;
     // imported packs are not a home for your own styles, so they are not
@@ -410,6 +413,8 @@ export async function openEditor(opts = {}) {
         }
         await loadCatalog();
         wrap.remove();
+        forgetDetail(name);
+        forgetDetail(result.name || name);
         opts.onSaved?.(result.name || name);
     });
     if (!creating && source === "override") {
@@ -621,6 +626,14 @@ export async function openCatalog(options = {}) {
         const node = document.createElement("div");
         node.className = `ns-card${name === options.current ? " on" : ""}${zoom < 60 ? " compact" : ""}`;
         node.title = cardTooltip(name, entry, shots);
+        // the clause arrives with the first hover, then the tooltip is complete
+        node.addEventListener("mouseenter", async () => {
+            if (node.dataset.full) return;
+            const full = await entryDetail(name);
+            if (!full) return;
+            node.dataset.full = "1";
+            node.title = cardTooltip(name, { ...entry, ...full }, shots);
+        }, { once: false });
         node.dataset.name = name;
         const source = entry.source || "shipped";
         const starred = isFavourite(name);
@@ -648,7 +661,12 @@ export async function openCatalog(options = {}) {
         node.querySelector(".ttl").textContent = name;
         node.querySelector(".pic").style.height = `${layout.cardW}px`;
         node.addEventListener("mouseenter", () => {
-            foot.textContent = entry.nl || "";
+            // the clause is not in the light index; fetch it, and only paint if
+            // the pointer is still on this card when it arrives
+            foot.textContent = "";
+            entryDetail(name).then((full) => {
+                if (full && node.matches(":hover")) foot.textContent = full.nl || "";
+            });
         });
         const pick = () => {
             options.onPick?.(name, axisSel.value);
@@ -740,8 +758,12 @@ export async function openCatalog(options = {}) {
     // A save made anywhere else — the capture node, another browser tab — never
     // reaches this page as an event, so poll gently while the browser is open.
     // loadGallery() fires the same event, so the redraw path stays single.
-    const poll = setInterval(() => {
+    let lastSig = "";
+    const poll = setInterval(async () => {
         if (document.hidden) return;
+        const sig = await gallerySignature();
+        if (!sig || sig === lastSig) return;   // nothing has changed: no redraw
+        lastSig = sig;
         loadGallery();
     }, 10000);
 

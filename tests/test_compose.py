@@ -539,6 +539,40 @@ class Catalog(unittest.TestCase):
             wipe_user_files("overrides.json", "custom.json")
             catalog.entries(force=True)
 
+    def test_payload_is_light_and_detail_is_complete(self):
+        """The catalog payload carries an index, not the whole text: it is
+        fetched on eighteen paths and the clauses dominate its size."""
+        import json as json_mod
+
+        pay = catalog.payload()
+        entry = pay["by_name"][catalog.by_axis("style")[0]["name"]]
+        self.assertNotIn("nl", entry)            # the clause is not in the index
+        self.assertNotIn("negative", entry)
+        for field in ("name", "family", "axis", "medium", "source", "tags", "aliases"):
+            self.assertIn(field, entry)          # everything filtering needs
+        size = len(json_mod.dumps(pay))
+        self.assertLess(size, 1_600_000, f"payload grew back to {size} bytes")
+        # and the full text is still one lookup away
+        full = catalog.resolve(entry["name"])
+        self.assertTrue(full["nl"])
+
+    def test_gallery_signature_moves_only_on_change(self):
+        gallery_mod = importlib.import_module(f"{PKG}.gallery")
+        manifest_existed = os.path.isfile(gallery_mod.manifest_path())
+        first = gallery_mod.signature()
+        self.assertEqual(first, gallery_mod.signature())   # stable while idle
+        data = gallery_mod._load()
+        try:
+            data["_probe"] = {"shots": [], "cover": "", "count": 0}
+            gallery_mod._save(data)
+            self.assertNotEqual(first, gallery_mod.signature())
+        finally:
+            data.pop("_probe", None)
+            gallery_mod._save(data)
+            # leave no manifest behind if the test created one
+            if not manifest_existed and os.path.isfile(gallery_mod.manifest_path()):
+                os.remove(gallery_mod.manifest_path())
+
     def test_roll_excludes(self):
         first = catalog.roll(seed=5)
         second = catalog.roll(seed=5, exclude=(first["name"],))

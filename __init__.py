@@ -199,6 +199,21 @@ def _routes():
 
     # ---------------- gallery ----------------
 
+    @routes.get("/neons_style/entry")
+    async def get_entry(request):
+        """One entry in full, clause and avoid terms included.
+
+        The catalog payload carries a light index; this is where the long text
+        comes from when something actually needs it.
+        """
+        entry = resolve(request.query.get("name") or "")
+        return web.json_response({"ok": bool(entry), "entry": entry})
+
+    @routes.get("/neons_style/gallery/signature")
+    async def get_gallery_signature(request):
+        """Fingerprint of the current catalog's gallery, for cheap polling."""
+        return web.json_response({"ok": True, "signature": gallery.signature()})
+
     @routes.get("/neons_style/gallery")
     async def get_gallery(request):
         return web.json_response({"previews": gallery.manifest()})

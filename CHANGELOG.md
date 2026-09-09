@@ -1,5 +1,28 @@
 # Changelog
 
+## 1.14.1 — the interface stops carrying the whole catalog around
+
+Two measured fixes for the lag that arrived with the Extra import.
+
+* **The catalog payload is an index again, not the whole text.** Every catalog
+  load moved 1.94 MB, of which 1.79 MB was `by_name` — all 3015 entries with
+  their full clauses — and eighteen code paths reload it (opening the browser or
+  the editor, saving a style, switching catalogs, renaming a family, adopting a
+  new style). The payload now carries what filtering and labelling need and is
+  **1.34 MB**; the clause and avoid terms come from a new
+  `GET /neons_style/entry` one entry at a time, cached client-side and
+  invalidated on edit. The three places that read the long text — the editor,
+  the footer clause on hover, the card tooltip — fetch it when they need it.
+* **An unchanged gallery no longer rebuilds the grid.** The ten-second poll
+  fetched the manifest and fired the redraw event regardless, so an idle open
+  browser rebuilt its cards six times a minute. There is now a cheap
+  `GET /neons_style/gallery/signature` (a stat of the manifest, not a walk of
+  it); the poll compares it and does nothing when it matches, and `loadGallery`
+  only announces a change when the manifest really differs.
+* Two new tests: the payload stays under 1.6 MB and keeps the clause out of the
+  index while the full text stays one lookup away, and the signature is stable
+  while idle but moves when the manifest changes.
+
 ## 1.14.0 — rename anything, richer hovers, a browser that remembers
 
 * **Styles can be renamed**, not just re-tagged. The Name field in the editor is
