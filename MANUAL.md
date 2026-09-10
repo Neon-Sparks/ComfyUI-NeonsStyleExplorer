@@ -96,8 +96,9 @@ Add **Neons Style Explorer** (right-click → Add Node → **Neons**), then:
 [screenshot: the node with a style selected, the panel showing a preview,
 and the composed prompt readout at the bottom — the whole node in one shot]
 
-The readout under the panel updates as you type, so you can see the finished
-prompt before you queue anything.
+To see the finished prompt, wire the node's **positive** output into a Preview
+Text node — that shows it live and costs the node no height. The ⋯ menu also has
+**Copy the composed prompt** when you just want it on the clipboard.
 
 If you would rather not wire two text encoders, use **Neons Style Explorer
 (Encode)** instead: it takes a `CLIP` input and outputs conditioning directly.
@@ -140,13 +141,14 @@ shot strip, and the button row]
   they honour *only missing previews* too) and working whether crawl is on or
   off, so you can flip through previews and stop on the
   one you want. They wrap at both ends, and they are disabled while crawl is on
-  Clicking the image itself still opens the browser. To choose between several
+  They step whichever style slot is active, so they always walk the list you
+  are looking at. With `roll_scope` set to *has preview* they visit only
+  entries that have one — useful early on, when most styles are still empty. Clicking the image itself still opens the browser. To choose between several
   images of the *same* style, use the shot strip underneath.
 * **Name** and **family chip** — the chip reads `random` when the dropdown is on
   the dice.
 * **Shot strip** — one thumbnail per saved image for this style. Click one to
   make it the cover; the small **✕** on a thumbnail deletes that image.
-* **Composed prompt readout** — the finished positive prompt, live.
 
 Buttons:
 
@@ -181,17 +183,21 @@ turn that off.
 
 ### Choosing styles
 
-**style**, **style_2**, **style_3** — up to three of the 2867 style entries. Each dropdown
+**style** — the **written catalog**. Only one style slot is active at a time:
+choosing here switches the other two off, so there is never any doubt about
+which list the arrows step or which entry the preview shows. Set it to *None* to
+switch this slot off. Each dropdown
 starts with `None`, then `🎲 Random`, then the whole catalog. Only the first
 style's medium closes the clause.
 
-**custom_style** — a fourth style slot listing **only your own entries**, so a
+**extra_style** — a slot carrying **only the imported [Extra] pack**, kept out
+of the main dropdowns so those stay quick to open. Composes as another style
+slot.
+
+**custom_style** — a slot listing **only your own entries**, so a
 style you wrote is one dropdown away instead of buried among a thousand shipped
 ones. Empty until you create one. It refreshes from the live catalog, so a style
 written in the editor appears without restarting ComfyUI.
-
-**style_mix** — how extra styles are joined in natural language:
-`blended with` (default), `mixed with`, `layered over`, `then also`.
 
 **format** — an optional picture format: a character sheet, a magazine cover, a
 contact sheet, a widescreen still. 97 of them.
@@ -211,7 +217,7 @@ when a style is leading, so the prompt stays coherent.
 `end` puts it after. Some models weight the front of the prompt heavily; this is
 the switch for that.
 
-**style_weight** — a 1.0–5.0 slider, default 1.5. In natural mode it wraps the
+**style_weight** — a 1.0–5.0 slider, default 1.0 (no emphasis). In natural mode it wraps the
 clause as `(clause:weight)`; in booru modes it wraps every style tag as
 `(tag:weight)`. 1.0 means no emphasis at all.
 
@@ -229,10 +235,16 @@ rolling. Section 9.
 `all`, `family` (the primary style's family), `favourites`, `recent`,
 `has preview`, `missing preview`.
 
-**roll_seed** — seeds the dice, with a control under it. Set that control to
+**roll_seed** — seeds the dice, default 54321, with a control under it. It and
+`roll_scope` sit at the bottom of the widget list, directly above the preview
+panel. Set that control to
 *randomize* so every run rolls afresh; `0` also rolls freshly each run.
 
 ### Saving previews
+
+**crawl_source** — which dropdown crawl walks: `main` (the written catalog),
+`extra` (the imported pack) or `custom` (your own styles). The walk drives that
+slot and leaves the others alone.
 
 **crawl_missing_only** — while crawling, skip styles that already have a
 preview. The list is re-checked at every step, so entries drop out as their
@@ -360,6 +372,7 @@ style in the catalog, unattended.
    works well. A fixed sampler seed makes the comparison cleaner still.
 2. On the node, set:
    * **crawl** → on
+   * **crawl_source** → which list to walk (`main`, `extra` or `custom`)
    * **crawl_missing_only** → on (skips anything already covered, re-checked at
      every step)
    * **auto_gallery** → `every`
@@ -597,18 +610,19 @@ previews. Two practical notes:
 | prompt | text | empty |
 | quality | text | empty |
 | negative | text | empty |
-| style / style_2 / style_3 | None, 🎲 Random, 2867 styles | None |
-| style_mix | blended with, mixed with, layered over, then also | blended with |
+| style | None, 🎲 Random, the written catalog | None |
+| extra_style | None, 🎲 Random, the imported pack | None |
+| custom_style | None, 🎲 Random, your own styles | None |
 | format | None, 🎲 Random, 97 formats | None |
 | finish | None, 🎲 Random, 51 finishes | None |
 | output_format | natural, danbooru, natural + danbooru | natural |
 | style_position | start, end | start |
 | include_style_negative | on / off | on |
-| style_weight | 1.0 – 5.0 | 1.5 |
+| style_weight | 1.0 – 5.0 | 1.0 |
 | tag_separator | comma+space, comma, space | comma+space |
 | crawl | on / off | off |
 | roll_scope | all, family, favourites, recent, has preview, missing preview | all |
-| roll_seed | 0 – 4294967295 | 0 |
+| roll_seed | 0 – 4294967295 | 54321 |
 | auto_gallery | off, first, every | off |
 
 ### Families

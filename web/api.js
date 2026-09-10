@@ -1,19 +1,28 @@
 import { api } from "../../scripts/api.js";
-import { NEONS_STYLE_INDEX } from "./style_index.js";
 
 export const NODE_TYPES = new Set(["NeonsStyleExplorer", "NeonsStyleExplorerEncode"]);
 export const RANDOM = "\u{1F3B2} Random";
 
+/** An empty catalog: the shape everything reads, with nothing in it yet. */
+const EMPTY_CATALOG = {
+    schema: 1, styles: [], formats: [], finishes: [], families: {},
+    family_order: [], shipped_families: [], imported_families: [],
+    by_name: {}, favourites: [], recents: [], coverage: {}, count: 0,
+};
+
 export const state = {
-    // bundled snapshot so the combos are populated on first paint; the live
-    // catalog replaces it as soon as /neons_style/catalog answers
-    catalog: NEONS_STYLE_INDEX,
+    // The bundled snapshot is 1.6 MB of JavaScript and used to be parsed on
+    // every page load just to have something before the server answered. It is
+    // now only imported if /neons_style/catalog cannot be reached.
+    catalog: EMPTY_CATALOG,
     previews: {},
     tags: [],
     lastImages: [],
     lastPromptId: "",
     lastError: null,
     gallerySig: "",
+    ready: false,
+    snapshotTried: false,
     // named preview catalogs: one per model or project
     catalogs: { active: "default", name: "Default", items: [] },
     // prompt_id -> { images: [], nodes: Map(nodeId -> {style, mode, prompt}) }
@@ -87,6 +96,23 @@ export async function loadCatalog() {
         state.favourites = data.favourites || [];
         state.recents = data.recents || [];
         state.ready = true;
+        return state.catalog;
+    }
+    // The server did not answer — an old backend behind a refreshed front end,
+    // or a restart in progress. Fall back to the snapshot bundled with the
+    // extension, imported only now so its weight costs nothing in the normal
+    // case.
+    if (!state.ready && !state.snapshotTried) {
+        state.snapshotTried = true;
+        try {
+            const module = await import("./style_index.js");
+            if (module?.NEONS_STYLE_INDEX?.styles) {
+                state.catalog = module.NEONS_STYLE_INDEX;
+                console.warn("Neons Style Explorer: using the bundled catalog snapshot — restart ComfyUI");
+            }
+        } catch (err) {
+            console.warn("Neons Style Explorer: no catalog available", err);
+        }
     }
     return state.catalog;
 }
@@ -130,6 +156,24 @@ export async function entryDetail(name) {
 export function forgetDetail(name) {
     if (name) detailCache.delete(name);
     else detailCache.clear();
+}
+
+/**
+ * Splice one saved preview into the local gallery state.
+ *
+ * The alternative is refetching the whole manifest after every save, which
+ * grows with coverage — a crawl a thousand previews in was re-downloading a
+ * quarter of a megabyte per image, then redrawing on it.
+ */
+export function patchPreview(key, record) {
+    if (!key || !record) return;
+    state.previews = { ...state.previews, [key]: record };
+    state.gallerySig = `${Object.keys(state.previews).length}:${JSON.stringify(state.previews).length}`;
+    try {
+        window.dispatchEvent(new CustomEvent(GALLERY_EVENT, { detail: { key, record } }));
+    } catch (err) {
+        /* nothing listening */
+    }
 }
 
 /** Cheap "has the gallery changed?" check, for polling. */
@@ -226,8 +270,8 @@ export const saveRun = (promptId, images, extra = {}) =>
 
 /** The ordered style names crawl mode walks, straight from the server so the
  *  sequence matches the node's own fallback exactly. */
-export async function loadCrawl(scope = "all", family = "") {
-    const query = new URLSearchParams({ scope, family: family || "" });
+export async function loadCrawl(scope = "all", family = "", source = "main") {
+    const query = new URLSearchParams({ scope, family: family || "", source });
     const data = await call(`/neons_style/crawl?${query}`);
     return Array.isArray(data?.names) ? data.names : [];
 }
@@ -245,9 +289,7 @@ export const restoreStyle = (name) => call("/neons_style/style/restore", { name 
 // a bodyless call() is a GET, and these routes are POST-only — send {} so the
 // method is right (this is why "Restore all" silently did nothing)
 export const restoreAllStyles = () => call("/neons_style/style/restore_all", {});
-export const loadFavourites = () => call("/neons_style/favourites");
 export const toggleFavourite = (name) => call("/neons_style/favourite", { name, toggle: true });
-export const pushRecent = (name) => call("/neons_style/recent", { name });
 export const clearRecents = () => call("/neons_style/recent", { clear: true });
 export const deleteAllShots = () => call("/neons_style/gallery/delete_family", { family: "" });
 export const exportStyles = () => call("/neons_style/export");
@@ -273,6 +315,37 @@ export function shotsOf(name) {
 export function shotUrl(name, file) {
     const suffix = file ? `&file=${encodeURIComponent(file)}` : "";
     return `/neons_style/shot?key=${encodeURIComponent(keyOf(name))}${suffix}`;
+}
+
+/**
+ * Which style slot can hold this entry.
+ *
+ * Each dropdown carries one source, so a name put in the wrong slot is not in
+ * that slot's option list — it displays until the next sync and is then reset
+ * to None, which looks exactly like the preview vanishing on its own.
+ */
+export function slotFor(name) {
+    const entry = entryOf(name);
+    if (!entry) return "style";
+    if ((state.catalog.imported_families || []).includes(entry.family)) return "extra_style";
+    if ((entry.source || "shipped") === "custom") return "custom_style";
+    return "style";
+}
+
+/** The names one of the node's style dropdowns carries. */
+export function sourceNames(source) {
+    const imported = state.catalog.imported_families || [];
+    const all = state.catalog.styles || [];
+    if (source === "extra") {
+        return all.filter((name) => imported.includes(entryOf(name)?.family));
+    }
+    if (source === "custom") {
+        return all.filter((name) => (entryOf(name)?.source || "shipped") === "custom");
+    }
+    return all.filter((name) => {
+        const entry = entryOf(name);
+        return !imported.includes(entry?.family) && (entry?.source || "shipped") !== "custom";
+    });
 }
 
 export function namesOf(axis) {

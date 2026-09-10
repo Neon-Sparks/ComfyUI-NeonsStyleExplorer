@@ -2,7 +2,9 @@
 
 from . import compose as composer
 from . import runs
-from .catalog import RANDOM_TOKEN, crawl_names, custom_names, entries, names_for, push_recent, resolve, roll
+from .catalog import (RANDOM_TOKEN, SOURCES, crawl_names, custom_names, entries,
+                      imported_style_names, names_for, push_recent, resolve, roll,
+                      written_names)
 
 WEB_DIRECTORY = "./web"
 
@@ -14,7 +16,9 @@ def _combo(axis):
 
 
 def widgets():
-    styles = _combo("style")
+    # the main slots carry the written catalog only; imported and custom entries
+    # have their own dropdowns, which keeps every menu short enough to open
+    styles = ["None", RANDOM_TOKEN] + written_names("style")
     return {
         "prompt": ("STRING", {
             "multiline": True, "dynamicPrompts": True, "default": "",
@@ -30,17 +34,15 @@ def widgets():
         }),
         "style": (styles, {
             "default": "None",
-            "tooltip": "Main style. Pick the dice entry to roll a random style each run.",
+            "tooltip": "The written catalog. Only one style slot is active at a time — choosing here switches the others off.",
         }),
-        "style_2": (styles, {"default": "None", "tooltip": "Optional second style."}),
-        "style_3": (styles, {"default": "None", "tooltip": "Optional third style."}),
+        "extra_style": (["None", RANDOM_TOKEN] + imported_style_names(), {
+            "default": "None",
+            "tooltip": "The imported [Extra] pack, kept out of the main dropdowns so those stay quick to open. Composes as another style slot.",
+        }),
         "custom_style": (["None", RANDOM_TOKEN] + custom_names("style"), {
             "default": "None",
             "tooltip": "Your own styles only — anything you wrote in the editor. Composes as a fourth style slot. Empty until you create one; use Refresh Node Definitions after adding one.",
-        }),
-        "style_mix": (list(composer.MIX_WORDS.keys()), {
-            "default": "blended with",
-            "tooltip": "How extra styles are joined in natural language.",
         }),
         "format": (_combo("format"), {
             "default": "None",
@@ -63,7 +65,7 @@ def widgets():
             "tooltip": "Merge the style's own avoid terms into the negative output.",
         }),
         "style_weight": ("FLOAT", {
-            "default": 1.5, "min": 1.0, "max": 5.0, "step": 0.05, "round": 0.01,
+            "default": 1.0, "min": 1.0, "max": 5.0, "step": 0.05, "round": 0.01,
             "display": "slider",
             "tooltip": "How hard the style pushes. 1.0 = no emphasis. Wraps the style clause as (clause:weight) in natural mode and every style tag as (tag:weight) in booru modes.",
         }),
@@ -75,22 +77,26 @@ def widgets():
             "default": False, "label_on": "crawl through", "label_off": "crawl off",
             "tooltip": "Walk the main style dropdown one entry per queued run instead of rolling, so a batch fills the gallery in order. It starts from whatever style is selected, so park on the one you want to begin at. Turns the dice off on every slot while it is on; the set it walks is roll_scope (use 'missing preview' with auto_gallery to fill the gaps).",
         }),
+        "crawl_source": (list(SOURCES), {
+            "default": "main",
+            "tooltip": "Which dropdown crawl walks: main (the written catalog), extra (the imported pack), or custom (your own styles).",
+        }),
         "crawl_missing_only": ("BOOLEAN", {
             "default": False, "label_on": "only missing previews", "label_off": "every entry",
             "tooltip": "While crawling, skip styles that already have a preview. The list is re-checked at every step, so entries drop out as their previews are made. Ignored when crawl is off.",
+        }),
+        "auto_gallery": (["off", "first", "every"], {
+            "default": "off",
+            "tooltip": "Save generated images to the style gallery automatically.",
         }),
         "roll_scope": (ROLL_SCOPES, {
             "default": "all",
             "tooltip": "Which styles the dice may land on, and which set crawl walks: everything, the primary style's family, your favourites, recently used, or by preview state.",
         }),
         "roll_seed": ("INT", {
-            "default": 0, "min": 0, "max": 0xFFFFFFFF,
+            "default": 54321, "min": 0, "max": 0xFFFFFFFF,
             "control_after_generate": True,
             "tooltip": "Seeds the dice. Use the control under it (randomize / increment) so every run rolls a different style; 0 also rolls freshly each run.",
-        }),
-        "auto_gallery": (["off", "first", "every"], {
-            "default": "off",
-            "tooltip": "Save generated images to the style gallery automatically.",
         }),
     }
 
@@ -162,15 +168,17 @@ def run(**kwargs):
     # 'family' scope needs a family to work from: take it from whichever slot
     # holds a concrete style, since slot 1 may be the dice itself
     family_hint = None
-    for field in ("style", "style_2", "style_3", "custom_style"):
+    for field in ("style", "custom_style", "extra_style"):
         entry = resolve(kwargs.get(field, "None"), pool)
         if entry:
             family_hint = entry["family"]
             break
 
     styles = pick_styles(
-        [kwargs.get("style", "None"), kwargs.get("style_2", "None"),
-         kwargs.get("style_3", "None"), kwargs.get("custom_style", "None")],
+        # one active slot, but all three are read so an older workflow that set
+        # several still composes rather than losing a style silently
+        [kwargs.get("style", "None"), kwargs.get("custom_style", "None"),
+         kwargs.get("extra_style", "None")],
         pool, scope, family_hint, seed, previews, crawl,
         bool(kwargs.get("crawl_missing_only", False)),
     )
@@ -211,10 +219,10 @@ class _Base:
     CATEGORY = "Neons"
 
     @classmethod
-    def VALIDATE_INPUTS(cls, style=None, style_2=None, style_3=None, custom_style=None,
+    def VALIDATE_INPUTS(cls, style=None, custom_style=None, extra_style=None,
                         format=None, finish=None, **_kw):
         pool = entries()
-        for value in (style, style_2, style_3, custom_style, format, finish):
+        for value in (style, custom_style, extra_style, format, finish):
             if value in (None, "", "None", RANDOM_TOKEN):
                 continue
             if resolve(value, pool) is None:

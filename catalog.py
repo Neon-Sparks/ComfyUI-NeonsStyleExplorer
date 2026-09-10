@@ -390,6 +390,21 @@ def roll(axis="style", scope="all", family=None, seed=None, previews=None, exclu
     return rng.choice(pool)
 
 
+def written_names(axis="style"):
+    """Names on an axis excluding imported packs and the user's own entries.
+
+    This is what the main style dropdowns carry: keeping three thousand options
+    in each of them made every menu heavy to open.
+    """
+    return [entry["name"] for entry in by_axis(axis)
+            if entry["family"] not in IMPORTED_FAMILIES and entry.get("source") != "custom"]
+
+
+def imported_style_names():
+    """Names belonging to an imported pack, for the dedicated slot."""
+    return [entry["name"] for entry in by_axis("style") if entry["family"] in IMPORTED_FAMILIES]
+
+
 def custom_names(axis="style"):
     """Names of the user's own entries on an axis.
 
@@ -399,13 +414,27 @@ def custom_names(axis="style"):
     return [entry["name"] for entry in by_axis(axis) if entry.get("source") == "custom"]
 
 
-def crawl_names(scope="all", family=None, previews=None, missing_only=False):
+SOURCES = ("main", "extra", "custom")
+
+
+def source_pool(source):
+    """The style names one dropdown carries."""
+    if source == "extra":
+        return imported_style_names()
+    if source == "custom":
+        return custom_names("style")
+    return written_names("style")
+
+
+def crawl_names(scope="all", family=None, previews=None, missing_only=False, source="main"):
     """The ordered style names crawl mode steps through for a scope.
 
     With *missing_only*, entries that already have a preview are dropped — the
     same filter the UI applies, so the node's fallback agrees with the walk.
     """
-    pool = scope_pool("style", scope, family, previews)
+    allowed = set(source_pool(source))
+    pool = [entry for entry in scope_pool("style", scope, family, previews)
+            if entry["name"] in allowed]
     if missing_only and previews is not None:
         have = {preview_key(key) for key in previews}
         pool = [entry for entry in pool if preview_key(entry["id"]) not in have]

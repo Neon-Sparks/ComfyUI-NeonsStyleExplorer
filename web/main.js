@@ -1,12 +1,17 @@
 import { app } from "../../scripts/app.js";
 import { api } from "../../scripts/api.js";
-import { NODE_TYPES, RANDOM, entryOf, lastErrorText, loadCatalog, loadCatalogSets, loadGallery, namesOf, saveRun, shotsOf, state } from "./api.js";
-import { advanceCrawl, attachPanel, say, composeNow, effectiveStyle, fitToContent, keepFitted, layout, queueCompose, refresh, rollStyle, saveImage, saveLatest, syncCrawl, value, widget } from "./panel.js";
+import { NODE_TYPES, RANDOM, entryOf, lastErrorText, loadCatalog, loadCatalogSets, loadGallery, namesOf, patchPreview, saveRun, shotsOf, sourceNames, state } from "./api.js";
+import { STYLE_SLOTS, activeSlot, advanceCrawl, attachPanel, claimSlot, say, composeNow, effectiveStyle, fitToContent, keepFitted, layout, refresh, rollStyle, saveImage, saveLatest, syncCrawl, value, widget } from "./panel.js";
 
 function syncCombo(node, field, axis) {
     const w = widget(node, field);
     if (!w) return;
-    const values = ["None", RANDOM, ...namesOf(axis)];
+    // the main style slots carry the written catalog only; imported and custom
+    // entries live in their own dropdowns
+    const known = axis === "style" ? sourceNames("main") : namesOf(axis);
+    // nothing loaded yet: leave the list the node definition supplied
+    if (!known.length) return;
+    const values = ["None", RANDOM, ...known];
     w.options = w.options || {};
     w.options.values = values;
     if (!values.includes(w.value)) w.value = "None";
@@ -18,19 +23,15 @@ function syncCombos(node) {
     syncCombo(node, "style_3", "style");
     syncCombo(node, "format", "format");
     syncCombo(node, "finish", "finish");
-    syncCustomSlot(node);
+    syncSlot(node, "extra_style", "extra");
+    syncSlot(node, "custom_style", "custom");
 }
 
-/**
- * The custom_style slot lists only the user's own entries, and it is refreshed
- * from the live catalog rather than from the definition: a style written in the
- * editor should appear without restarting ComfyUI.
- */
-function syncCustomSlot(node) {
-    const w = widget(node, "custom_style");
-    if (!w) return;
-    const mine = namesOf("style").filter((name) => (entryOf(name)?.source || "shipped") === "custom");
-    const values = ["None", RANDOM, ...mine];
+/** A dropdown that carries one source's names, refreshed from the live catalog. */
+function syncSlot(node, field, source) {
+    const w = widget(node, field);
+    if (!w || !(state.catalog.styles || []).length) return;
+    const values = ["None", RANDOM, ...sourceNames(source)];
     w.options = w.options || {};
     w.options.values = values;
     if (!values.includes(w.value)) w.value = "None";
@@ -43,12 +44,15 @@ function hook(node) {
         const original = w.callback;
         w.callback = function (...args) {
             const result = original?.apply(this, args);
-            if (w.name === "style") refresh(node);
+            // one active slot: choosing here switches the others off
+            if (STYLE_SLOTS.includes(w.name) && args[0] && args[0] !== "None") {
+                claimSlot(node, w.name);
+            }
+            if (STYLE_SLOTS.includes(w.name)) refresh(node);
             // the crawl set depends on the switch and on the scope
             if (w.name === "crawl" || w.name === "roll_scope") {
                 syncCrawl(node);
             }
-            queueCompose(node);
             return result;
         };
         if (w.name === "crawl") {
@@ -64,10 +68,7 @@ function hook(node) {
             };
         }
         const el = w.inputEl;
-        if (el && !el._nsInput) {
-            el._nsInput = true;
-            el.addEventListener("input", () => queueCompose(node));
-        }
+
     }
 }
 
@@ -78,7 +79,6 @@ function setup(node) {
     if (value(node, "crawl", false)) syncCrawl(node);
     refresh(node);
     layout(node);
-    queueCompose(node);
     // widget positions only exist after a draw pass; snap the node then
     requestAnimationFrame(() => requestAnimationFrame(() => fitToContent(node)));
 }
@@ -116,7 +116,15 @@ async function autoGallery(promptId) {
     const result = await saveRun(promptId, images);
     if (result?.ok) {
         state.runs.delete(String(promptId || ""));
-        await loadGallery();
+        // patch the saved previews in rather than refetching the manifest
+        let patched = 0;
+        for (const entry of result.saved || []) {
+            if (entry.key && entry.record) {
+                patchPreview(entry.key, entry.record);
+                patched += 1;
+            }
+        }
+        if (!patched) await loadGallery();
         for (const node of app.graph?._nodes || []) {
             if (!NODE_TYPES.has(node.comfyClass || node.type)) continue;
             refresh(node);
@@ -263,20 +271,142 @@ app.registerExtension({
             return result;
         };
 
-        // A workflow saved before custom_style existed carries one value fewer,
-        // and litegraph applies widget values BY INDEX — without this every
-        // widget after the new slot would load one place out of step.
+        // Litegraph applies widget values BY INDEX, so any release that adds,
+        // removes or moves a widget would load an older workflow one place out
+        // of step — style_mix landing in the format field, and so on down.
+        //
+        // Rather than patch positions, the known past layouts are listed by
+        // name. A saved array whose length matches one of them is read with
+        // that layout's names and rebuilt in the current order; anything the
+        // old file did not have keeps the widget's own default.
+        // Widget orders of past releases, taken from this repository's history
+        // rather than memory — an invented layout is worse than none, because a
+        // wrong match loads every value one place out of step. Each includes
+        // the control widget litegraph adds after roll_seed.
+        const LAYOUTS = [
+            // 1.15.0 — style_2/3 and the imported slot, roll controls mid-list
+            ["prompt", "quality", "negative", "style", "style_2", "style_3", "extra_style",
+             "custom_style", "style_mix", "format", "finish", "output_format", "style_position",
+             "include_style_negative", "style_weight", "tag_separator", "crawl", "crawl_source",
+             "crawl_missing_only", "roll_scope", "roll_seed", "control_after_generate",
+             "auto_gallery"],
+            // 1.10.0 - 1.14.2 — custom_style added, no imported slot
+            ["prompt", "quality", "negative", "style", "style_2", "style_3", "custom_style",
+             "style_mix", "format", "finish", "output_format", "style_position",
+             "include_style_negative", "style_weight", "tag_separator", "crawl",
+             "crawl_missing_only", "roll_scope", "roll_seed", "control_after_generate",
+             "auto_gallery"],
+            // 1.8.0 - 1.9.x — before custom_style
+            ["prompt", "quality", "negative", "style", "style_2", "style_3", "style_mix",
+             "format", "finish", "output_format", "style_position", "include_style_negative",
+             "style_weight", "tag_separator", "crawl", "crawl_missing_only", "roll_scope",
+             "roll_seed", "control_after_generate", "auto_gallery"],
+        ];
+
+        /**
+         * Is this value usable by this widget?
+         *
+         * The last line of defence: whatever the layout matching decides, a
+         * combo must end up holding one of its own options and a number must
+         * land inside its range. Without this a bad match leaves impossible
+         * state on the node — a style_weight of 0.00 when its minimum is 1.
+         */
+        function valueFits(widget, value) {
+            const options = widget?.options?.values;
+            if (Array.isArray(options) && options.length) return options.includes(value);
+            if (widget?.type === "number" && typeof value === "number") {
+                const min = widget.options?.min;
+                const max = widget.options?.max;
+                if (typeof min === "number" && value < min) return false;
+                if (typeof max === "number" && value > max) return false;
+                return true;
+            }
+            if (typeof value === "object" && value !== null) return false;
+            return true;
+        }
+
+        /**
+         * How well does a set of names explain a saved value array?
+         *
+         * Length alone cannot identify a layout — the current one and the
+         * 1.9-1.12 one both hold twenty values — so each candidate is scored on
+         * how many of its combo widgets receive a value that is actually one of
+         * their options. The right layout scores near-perfectly; a wrong one
+         * puts "blended with" where an output format belongs and scores badly.
+         */
+        function scoreLayout(live, names, values) {
+            let score = 0;
+            names.forEach((name, index) => {
+                const widget = live.find((w) => w.name === name);
+                const options = widget?.options?.values;
+                if (!Array.isArray(options) || !options.length) return;
+                if (options.includes(values[index])) score += 1;
+            });
+            return score;
+        }
+
         const configure = nodeType.prototype.configure;
         nodeType.prototype.configure = function (info) {
             try {
-                const list = (this.widgets || []).filter((w) => w?.options?.serialize !== false);
-                const at = list.findIndex((w) => w.name === "custom_style");
+                const live = (this.widgets || []).filter((w) => w?.options?.serialize !== false);
                 const values = info?.widgets_values;
-                if (at >= 0 && Array.isArray(values) && values.length === list.length - 1) {
-                    values.splice(at, 0, "None");
-                    console.log(
-                        "Neons Style Explorer: migrated a workflow saved before the custom_style slot existed"
-                    );
+                if (Array.isArray(values) && values.length) {
+                    const current = live.map((w) => w.name);
+                    const candidates = [current, ...LAYOUTS]
+                        .filter((names) => names.length === values.length);
+                    let best = candidates[0] || current;
+                    let bestScore = candidates.length ? scoreLayout(live, best, values) : -1;
+                    for (const names of candidates.slice(1)) {
+                        const score = scoreLayout(live, names, values);
+                        if (score > bestScore) {
+                            best = names;
+                            bestScore = score;
+                        }
+                    }
+                    const sameOrder = best.length === current.length
+                        && best.every((name, index) => name === current[index]);
+                    if (!sameOrder || values.length !== live.length) {
+                        const layout = candidates.length ? best : null;
+                        const held = new Map((layout || []).map((name, index) => [name, values[index]]));
+                        // style_2 and style_3 are gone: if an old file used one
+                        // while the main slot was empty, keep that style rather
+                        // than drop it
+                        for (const spare of ["style_2", "style_3"]) {
+                            const kept = held.get(spare);
+                            const main = held.get("style");
+                            if (kept && kept !== "None" && (!main || main === "None")) {
+                                held.set("style", kept);
+                            }
+                        }
+                        if (held.size) {
+                            info.widgets_values = live.map((w, index) =>
+                                held.has(w.name) ? held.get(w.name) : values[index]);
+                            console.log(
+                                "Neons Style Explorer: remapped a workflow saved with an older layout "
+                                + `(${values.length} values -> ${live.length})`
+                            );
+                        } else {
+                            console.warn(
+                                "Neons Style Explorer: a saved workflow has an unfamiliar widget layout "
+                                + `(${values.length} values, expected ${live.length}) — check its style slots`
+                            );
+                        }
+                    }
+                }
+                // whatever happened above, nothing impossible may reach a widget
+                const finalValues = info?.widgets_values;
+                if (Array.isArray(finalValues)) {
+                    live.forEach((w, index) => {
+                        if (index >= finalValues.length) return;
+                        if (valueFits(w, finalValues[index])) return;
+                        console.warn(
+                            `Neons Style Explorer: '${finalValues[index]}' is not valid for `
+                            + `${w.name}; using its default instead`
+                        );
+                        finalValues[index] = w.options?.values?.[0] !== undefined && Array.isArray(w.options.values)
+                            ? (w.options.values.includes(w.value) ? w.value : w.options.values[0])
+                            : w.value;
+                    });
                 }
             } catch (err) {
                 console.warn("Neons Style Explorer: widget migration skipped", err);

@@ -539,8 +539,17 @@ export async function openCatalog(options = {}) {
     }
     paintFamilies();
 
-    const coverage = state.catalog.coverage || { total: 0, written: 0 };
-    cov.textContent = `${coverage.written} / ${coverage.total} hand-written`;
+    /** Footer readout: how much of the catalog has a preview in this catalog. */
+    function updateCoverage() {
+        const total = (state.catalog.styles || []).length
+            + (state.catalog.formats || []).length
+            + (state.catalog.finishes || []).length;
+        const withShots = Object.keys(state.previews || {}).length;
+        const favourites = (state.favourites || []).length;
+        cov.textContent = `${withShots} of ${total} have previews`
+            + (favourites ? ` · ${favourites} favourite${favourites === 1 ? "" : "s"}` : "");
+    }
+    updateCoverage();
 
     let rows = [];
     let zoom = savedZoom();
@@ -567,6 +576,7 @@ export async function openCatalog(options = {}) {
                 return hay.toLowerCase().includes(query);
             });
         counter.textContent = `${rows.length} of ${namesOf(axisSel.value).length}`;
+        updateCoverage();
         measure();
     }
 
@@ -672,20 +682,7 @@ export async function openCatalog(options = {}) {
             options.onPick?.(name, axisSel.value);
             closeAll();
         };
-        node.querySelector(".star")?.addEventListener("click", async (ev) => {
-            ev.preventDefault();
-            ev.stopPropagation();
-            await starStyle(name);
-            filter();
-        });
-        node.querySelector(".killshot")?.addEventListener("click", async (ev) => {
-            ev.preventDefault();
-            ev.stopPropagation();
-            if (!confirm(`Delete the preview for ${name}?`)) return;
-            await deleteStyleShots(name);
-            await loadGallery();
-            filter();
-        });
+        wirePic(node, name);
         node.querySelector(".edit")?.addEventListener("click", (ev) => {
             ev.preventDefault();
             ev.stopPropagation();
@@ -745,14 +742,76 @@ export async function openCatalog(options = {}) {
     // the scroll position is preserved so a grid you are reading does not jump.
     let scrollTimer = 0;
     let galleryTimer = 0;
+
+    /**
+     * Fold new previews into the grid without rebuilding it.
+     *
+     * A full filter() drops every mounted card and remakes it, which is heavy
+     * with a few thousand entries and needless when three previews arrived. The
+     * cheap path repaints only the cards whose preview actually changed; the
+     * full path runs only when the filter itself depends on preview state, so
+     * an entry that has just gained one can leave the grid.
+     */
     const onGallery = () => {
         clearTimeout(galleryTimer);
         galleryTimer = setTimeout(() => {
-            const top = scroll.scrollTop;
-            filter();
-            scroll.scrollTop = top;
+            if (haveSel.value === "has" || haveSel.value === "missing") {
+                const top = scroll.scrollTop;
+                filter();
+                scroll.scrollTop = top;
+                return;
+            }
+            let touched = 0;
+            for (const [index, element] of mounted) {
+                const row = rows[index];
+                if (!row) continue;
+                const now = shotsOf(row.name);
+                const before = row.shots;
+                const same = (now?.cover || "") === (before?.cover || "")
+                    && (now?.count || 0) === (before?.count || 0);
+                if (same) continue;
+                row.shots = now;
+                repaintPic(element, row.name, now);
+                touched += 1;
+            }
+            if (touched) updateCoverage();
         }, 250);
     };
+
+    /** Star and delete-preview handlers for a card's picture area. */
+    function wirePic(element, name) {
+        element.querySelector(".star")?.addEventListener("click", async (ev) => {
+            ev.preventDefault();
+            ev.stopPropagation();
+            await starStyle(name);
+            filter();
+        });
+        element.querySelector(".killshot")?.addEventListener("click", async (ev) => {
+            ev.preventDefault();
+            ev.stopPropagation();
+            if (!confirm(`Delete the preview for ${name}?`)) return;
+            await deleteStyleShots(name);
+            await loadGallery();
+            filter();
+        });
+    }
+
+    /** Redraw one card's picture area in place, handlers included. */
+    function repaintPic(element, name, shots) {
+        const pic = element.querySelector(".pic");
+        if (!pic) return;
+        const starred = isFavourite(name);
+        pic.innerHTML = `
+            ${shots
+                ? `<img loading="lazy" decoding="async" draggable="false" src="${shotUrl(name, shots.cover)}" alt="">
+                   ${shots.count > 1 ? `<span class="cnt">${shots.count}</span>` : ""}
+                   <button class="killshot" type="button" title="Delete this preview">&#10005;</button>`
+                : `<div class="empty">no preview</div>`}
+            <button class="star${starred ? " on" : ""}" type="button"
+                    title="${starred ? "Remove from favourites" : "Add to favourites"}">${starred ? "&#9733;" : "&#9734;"}</button>`;
+        pic.style.height = `${layout.cardW}px`;
+        wirePic(element, name);
+    }
     window.addEventListener(GALLERY_EVENT, onGallery);
 
     // A save made anywhere else — the capture node, another browser tab — never
@@ -975,10 +1034,14 @@ export async function openCatalog(options = {}) {
 
     function paintCatalogs() {
         const { active, items } = state.catalogs;
-        catSel.innerHTML = items
-            .map((item) => `<option value="${item.id}"${item.id === active ? " selected" : ""}>`
-                + `${item.name}${item.shots ? ` (${item.shots})` : ""}</option>`)
-            .join("");
+        // a catalog name is text the user typed: escape it rather than
+        // letting it reach the DOM as markup
+        catSel.innerHTML = "";
+        for (const item of items) {
+            const label = `${item.name}${item.shots ? ` (${item.shots})` : ""}`;
+            const option = new Option(label, item.id, false, item.id === active);
+            catSel.add(option);
+        }
     }
     paintCatalogs();
     paintPrompts();

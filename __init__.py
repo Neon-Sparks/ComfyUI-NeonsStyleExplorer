@@ -49,6 +49,61 @@ def _routes():
     HERE = os.path.dirname(os.path.abspath(__file__))
     routes = PromptServer.instance.routes
 
+    def same_origin(request):
+        """Is this request coming from the ComfyUI page itself?
+
+        ComfyUI listens on localhost, and every other page in the same browser
+        can reach that server too. A browser always attaches Origin to a
+        cross-site POST, so a request whose Origin names a different host did
+        not come from the interface and is refused. Requests with no Origin —
+        the extension's own fetches, curl, a script — are left alone.
+        """
+        origin = request.headers.get("Origin")
+        if not origin:
+            return True
+        try:
+            from urllib.parse import urlparse
+
+            sent = urlparse(origin).netloc.lower()
+        except Exception:
+            return False
+        host = (request.headers.get("Host") or "").lower()
+        if not sent or not host:
+            return False
+        return sent == host or sent.split(":")[0] == host.split(":")[0]
+
+    def post(path):
+        """Register a POST route that only answers its own page.
+
+        Every route below that changes something goes through here; the GET
+        routes are read-only and a cross-site page cannot read their replies.
+        """
+        def wrap(handler):
+            async def guarded(request):
+                if not same_origin(request):
+                    return web.json_response(
+                        {"ok": False, "error": "cross-site request refused"}, status=403
+                    )
+                return await handler(request)
+
+            guarded.__name__ = getattr(handler, "__name__", "guarded")
+            return routes.post(path)(guarded)
+
+        return wrap
+
+    def inside(directory, *parts):
+        """Resolve a client-supplied path and refuse anything outside *directory*.
+
+        The image to file comes from the browser as a folder and a filename.
+        Joined naively, "../.." walks straight out of ComfyUI's output folder
+        and any file on the machine could be read and stored as a preview.
+        """
+        base = os.path.realpath(directory)
+        target = os.path.realpath(os.path.join(base, *[str(part or "") for part in parts]))
+        if target != base and not target.startswith(base + os.sep):
+            return None
+        return target
+
     async def data(request):
         try:
             return await request.json() or {}
@@ -66,7 +121,7 @@ def _routes():
         tags = tag_vocabulary()
         return web.json_response({"tags": tags, "count": len(tags)})
 
-    @routes.post("/neons_style/compose")
+    @post("/neons_style/compose")
     async def post_compose(request):
         body = await data(request)
         pool = entries()
@@ -101,7 +156,7 @@ def _routes():
             "styles": [entry["name"] for entry in styles],
         })
 
-    @routes.post("/neons_style/roll")
+    @post("/neons_style/roll")
     async def post_roll(request):
         body = await data(request)
         entry = roll(
@@ -124,6 +179,7 @@ def _routes():
             family=request.query.get("family") or None,
             previews=gallery.manifest(),
             missing_only=request.query.get("missing_only") in ("1", "true", "True"),
+            source=request.query.get("source") or "main",
         )
         return web.json_response({"ok": True, "names": names, "count": len(names)})
 
@@ -133,33 +189,33 @@ def _routes():
     async def get_catalogs(request):
         return web.json_response({"ok": True, **catalog_sets.payload()})
 
-    @routes.post("/neons_style/catalogs/create")
+    @post("/neons_style/catalogs/create")
     async def post_catalogs_create(request):
         """Add a catalog and switch to it."""
         body = await data(request)
         record = catalog_sets.create(body.get("name") or "")
         return web.json_response({"ok": True, "created": record, **catalog_sets.payload()})
 
-    @routes.post("/neons_style/catalogs/select")
+    @post("/neons_style/catalogs/select")
     async def post_catalogs_select(request):
         body = await data(request)
         catalog_sets.select(body.get("id") or "")
         return web.json_response({"ok": True, **catalog_sets.payload()})
 
-    @routes.post("/neons_style/catalogs/rename")
+    @post("/neons_style/catalogs/rename")
     async def post_catalogs_rename(request):
         body = await data(request)
         ok = catalog_sets.rename(body.get("id") or "", body.get("name") or "")
         return web.json_response({"ok": ok, **catalog_sets.payload()})
 
-    @routes.post("/neons_style/catalogs/delete")
+    @post("/neons_style/catalogs/delete")
     async def post_catalogs_delete(request):
         """Remove a catalog. Its image files stay on disk unless asked."""
         body = await data(request)
         ok = catalog_sets.remove(body.get("id") or "", delete_files=bool(body.get("delete_files")))
         return web.json_response({"ok": ok, **catalog_sets.payload()})
 
-    @routes.post("/neons_style/catalogs/prompt")
+    @post("/neons_style/catalogs/prompt")
     async def post_catalogs_prompt(request):
         """Add or delete one of the catalog's generation prompts."""
         body = await data(request)
@@ -176,7 +232,7 @@ def _routes():
     async def get_families(request):
         return web.json_response({"ok": True, "families": families_admin()})
 
-    @routes.post("/neons_style/families/rename")
+    @post("/neons_style/families/rename")
     async def post_families_rename(request):
         """Rename one of the user's own families. Every style in it is renamed
         to match, keeping its old name as an alias."""
@@ -187,7 +243,7 @@ def _routes():
             "error": "" if ok else result, "families": families_admin(),
         })
 
-    @routes.post("/neons_style/families/delete")
+    @post("/neons_style/families/delete")
     async def post_families_delete(request):
         """Remove a user family; its styles move to Lonely rather than dying."""
         body = await data(request)
@@ -233,7 +289,7 @@ def _routes():
             raise web.HTTPNotFound()
         return web.FileResponse(path, headers={"Cache-Control": "public, max-age=86400"})
 
-    @routes.post("/neons_style/gallery/save")
+    @post("/neons_style/gallery/save")
     async def post_gallery_save(request):
         import folder_paths
 
@@ -244,8 +300,9 @@ def _routes():
             return web.json_response({"ok": False, "error": "missing style or image"})
         directory = folder_paths.get_directory_by_type(body.get("type") or "output") \
             or folder_paths.get_output_directory()
-        subfolder = body.get("subfolder") or ""
-        full = os.path.join(directory, subfolder, filename) if subfolder else os.path.join(directory, filename)
+        full = inside(directory, body.get("subfolder") or "", filename)
+        if not full:
+            return web.json_response({"ok": False, "error": "that path is outside the output folder"})
         if not os.path.isfile(full):
             return web.json_response({"ok": False, "error": "image not found on disk"})
         with open(full, "rb") as handle:
@@ -257,9 +314,15 @@ def _routes():
         )
         if not saved:
             return web.json_response({"ok": False, "error": "could not save"})
-        return web.json_response({"ok": True, "key": saved["key"], "file": saved["file"]})
+        record = saved.get("record") or {}
+        shots = record.get("shots") or []
+        return web.json_response({
+            "ok": True, "key": saved["key"], "file": saved["file"],
+            "record": {"shots": shots, "cover": record.get("cover") or saved["file"],
+                       "count": len(shots), "style": record.get("name") or style},
+        })
 
-    @routes.post("/neons_style/gallery/save_run")
+    @post("/neons_style/gallery/save_run")
     async def post_gallery_save_run(request):
         """Auto-gallery for one finished prompt.
 
@@ -290,13 +353,16 @@ def _routes():
         image = images[0]
         directory = folder_paths.get_directory_by_type(image.get("type") or "output") \
             or folder_paths.get_output_directory()
-        subfolder = image.get("subfolder") or ""
-        name = image["filename"]
-        full = os.path.join(directory, subfolder, name) if subfolder else os.path.join(directory, name)
+        full = inside(directory, image.get("subfolder") or "", image["filename"])
+        if not full:
+            return web.json_response({
+                "ok": False, "saved": [],
+                "error": "that path is outside the output folder",
+            })
         if not os.path.isfile(full):
             return web.json_response({
                 "ok": False, "saved": [],
-                "error": f"image not found on disk: {full}",
+                "error": f"image not found on disk: {os.path.basename(full)}",
             })
         with open(full, "rb") as handle:
             raw = handle.read()
@@ -327,7 +393,19 @@ def _routes():
                 make_cover=True,
             )
             if stored:
-                saved.append({"node": node_id, "style": style, "key": stored["key"], "file": stored["file"]})
+                record = stored.get("record") or {}
+                shots = record.get("shots") or []
+                saved.append({
+                    "node": node_id, "style": style,
+                    "key": stored["key"], "file": stored["file"],
+                    # the updated record travels with the response: refetching
+                    # the whole manifest after every save cost hundreds of
+                    # kilobytes once a crawl was a few hundred previews in
+                    "record": {
+                        "shots": shots, "cover": record.get("cover") or stored["file"],
+                        "count": len(shots), "style": record.get("name") or style,
+                    },
+                })
             else:
                 skipped.append({"node": node_id, "style": style, "reason": "the gallery refused the image"})
         if not force:
@@ -336,13 +414,13 @@ def _routes():
             "ok": True, "prompt_id": prompt_id, "saved": saved, "skipped": skipped,
         })
 
-    @routes.post("/neons_style/gallery/cover")
+    @post("/neons_style/gallery/cover")
     async def post_gallery_cover(request):
         body = await data(request)
         key = body.get("key") or gallery.key_for(body.get("style", ""))
         return web.json_response({"ok": gallery.set_cover(key, body.get("file", ""))})
 
-    @routes.post("/neons_style/gallery/delete")
+    @post("/neons_style/gallery/delete")
     async def post_gallery_delete(request):
         body = await data(request)
         key = body.get("key") or gallery.key_for(body.get("style", ""))
@@ -350,7 +428,7 @@ def _routes():
             return web.json_response({"ok": gallery.delete_shot(key, body["file"])})
         return web.json_response({"ok": gallery.delete_style(body.get("style") or key)})
 
-    @routes.post("/neons_style/gallery/delete_family")
+    @post("/neons_style/gallery/delete_family")
     async def post_gallery_delete_family(request):
         body = await data(request)
         family = (body.get("family") or "").strip()
@@ -365,18 +443,18 @@ def _routes():
 
     # ---------------- editing ----------------
 
-    @routes.post("/neons_style/override")
+    @post("/neons_style/override")
     async def post_override(request):
         body = await data(request)
         ok, info = save_override(body.get("name") or "", **{k: v for k, v in body.items() if k != "name"})
         return web.json_response({"ok": ok, "name": info if ok else "", "error": "" if ok else info})
 
-    @routes.post("/neons_style/override/delete")
+    @post("/neons_style/override/delete")
     async def post_override_delete(request):
         body = await data(request)
         return web.json_response({"ok": delete_override(body.get("name") or "")})
 
-    @routes.post("/neons_style/custom")
+    @post("/neons_style/custom")
     async def post_custom(request):
         body = await data(request)
         ok, info = save_custom(
@@ -393,12 +471,12 @@ def _routes():
         )
         return web.json_response({"ok": ok, "name": info if ok else "", "error": "" if ok else info})
 
-    @routes.post("/neons_style/custom/delete")
+    @post("/neons_style/custom/delete")
     async def post_custom_delete(request):
         body = await data(request)
         return web.json_response({"ok": delete_custom(body.get("name") or "")})
 
-    @routes.post("/neons_style/style/hide")
+    @post("/neons_style/style/hide")
     async def post_style_hide(request):
         body = await data(request)
         return web.json_response({"ok": hide_style(body.get("name") or "")})
@@ -407,7 +485,7 @@ def _routes():
     async def get_favourites(request):
         return web.json_response({"favourites": load_favourites(), "recents": load_recents()})
 
-    @routes.post("/neons_style/favourite")
+    @post("/neons_style/favourite")
     async def post_favourite(request):
         body = await data(request)
         name = body.get("name") or ""
@@ -415,7 +493,7 @@ def _routes():
         return web.json_response({"ok": True, "name": name, "favourite": state,
                                   "favourites": load_favourites()})
 
-    @routes.post("/neons_style/recent")
+    @post("/neons_style/recent")
     async def post_recent(request):
         body = await data(request)
         if body.get("clear"):
@@ -428,12 +506,12 @@ def _routes():
         names = hidden_styles()
         return web.json_response({"hidden": names, "count": len(names)})
 
-    @routes.post("/neons_style/style/restore")
+    @post("/neons_style/style/restore")
     async def post_style_restore(request):
         body = await data(request)
         return web.json_response({"ok": restore_style(body.get("name") or "")})
 
-    @routes.post("/neons_style/style/restore_all")
+    @post("/neons_style/style/restore_all")
     async def post_style_restore_all(request):
         restored = restore_all()
         return web.json_response({"ok": True, "restored": restored})
@@ -445,7 +523,7 @@ def _routes():
         rows = [entry for entry in entries() if entry["source"] in ("custom", "override")]
         return web.json_response({"schema": 1, "styles": rows})
 
-    @routes.post("/neons_style/import")
+    @post("/neons_style/import")
     async def post_import(request):
         body = await data(request)
         rows = body.get("styles") if isinstance(body, dict) else body

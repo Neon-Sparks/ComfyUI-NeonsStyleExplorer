@@ -17,6 +17,9 @@ import {
     loadCatalog,
     loadCrawl,
     namesOf,
+    slotFor,
+    sourceNames,
+    patchPreview,
     saveRun,
     useCatalogSet,
     shotUrl,
@@ -25,11 +28,10 @@ import {
     state,
 } from "./api.js";
 
-const PANEL_MIN = 300;
+const PANEL_MIN = 210;   // preview + shot strip + buttons; no readout any more
 const TEXT_MIN = 52;
 const GAP = 6;
-const OUT_MIN = 96;
-const OUT_MAX = 200;
+const STRIP_H = 36;   // one row of shot thumbnails, always reserved
 const THUMB_MIN = 130;
 const THUMB_MAX = 620;
 
@@ -53,6 +55,48 @@ export function value(node, name, fallback = "") {
  * Crawl mode state for a node: the ordered pool it walks and where it is.
  * Kept on the node so several nodes can crawl independently.
  */
+export const STYLE_SLOTS = ["style", "extra_style", "custom_style"];
+
+/**
+ * The slot currently in use.
+ *
+ * Only one style dropdown is active at a time: choosing in one switches the
+ * others off, so there is never any doubt about which list the arrows step,
+ * which entry the preview shows, or what a run will compose.
+ */
+export function activeSlot(node) {
+    for (const field of STYLE_SLOTS) {
+        const held = value(node, field, "None");
+        if (held && held !== "None") return field;
+    }
+    return "style";
+}
+
+/** Switch the other style slots off when one is chosen. */
+export function claimSlot(node, field) {
+    for (const other of STYLE_SLOTS) {
+        if (other === field) continue;
+        const found = widget(node, other);
+        if (found && found.value && found.value !== "None") found.value = "None";
+    }
+}
+
+/** Which source the active slot draws from. */
+export function sourceOf(node) {
+    const field = activeSlot(node);
+    if (field === "extra_style") return "extra";
+    if (field === "custom_style") return "custom";
+    return "main";
+}
+
+/** The dropdown crawl is walking: main, extra or custom. */
+export function crawlField(node) {
+    const source = String(value(node, "crawl_source", "main"));
+    if (source === "extra") return { source, field: "extra_style" };
+    if (source === "custom") return { source, field: "custom_style" };
+    return { source, field: "style" };
+}
+
 export function crawlState(node) {
     if (!node._nsCrawl) node._nsCrawl = { names: [], scope: "", family: "" };
     return node._nsCrawl;
@@ -72,13 +116,15 @@ export async function syncCrawl(node, { restart = false } = {}) {
         return crawl;
     }
     const scope = String(value(node, "roll_scope", "all"));
-    const current = value(node, "style", "None");
+    const current = value(node, crawlField(node).field, "None");
     const anchor = current === RANDOM || current === "None" ? node._nsLastStyle || "" : current;
     const family = entryOf(anchor)?.family || "";
-    if (!crawl.names.length || crawl.scope !== scope || crawl.family !== family) {
-        crawl.names = await loadCrawl(scope, scope === "family" ? family : "");
+    const { source } = crawlField(node);
+    if (!crawl.names.length || crawl.scope !== scope || crawl.family !== family || crawl.source !== source) {
+        crawl.names = await loadCrawl(scope, scope === "family" ? family : "", source);
         crawl.scope = scope;
         crawl.family = family;
+        crawl.source = source;
     }
     if (!crawl.names.length) {
         // an empty scope must never freeze the walk: standing still pins a whole
@@ -91,7 +137,7 @@ export async function syncCrawl(node, { restart = false } = {}) {
     // Only ever move the dropdown deliberately — on a restart, or when it is not
     // yet on a real style. Moving it on a refresh would lose your place.
     const pool = crawlPool(node);
-    if (pool.length && (restart || !anchor)) setValue(node, "style", pool[0]);
+    if (pool.length && (restart || !anchor)) setValue(node, crawlField(node).field, pool[0]);
     refresh(node);
     return crawl;
 }
@@ -104,7 +150,22 @@ export async function syncCrawl(node, { restart = false } = {}) {
  */
 function crawlPool(node) {
     const crawl = crawlState(node);
-    const base = crawl.names.length ? crawl.names : namesOf("style");
+    // While crawling, the source is whatever crawl_source says — never the
+    // active slot. Deriving it from the slot meant that if the fetched list was
+    // not ready, the fallback came from the wrong source and a main-catalog
+    // name was written into the extra slot, which cannot hold it.
+    const source = value(node, "crawl", false) ? crawlField(node).source : sourceOf(node);
+    const base = crawl.names.length && crawl.source === source
+        ? crawl.names
+        : sourceNames(source);
+    const scope = String(value(node, "roll_scope", "all"));
+    // stepping by hand honours the scope too: set roll_scope to "has preview"
+    // and the arrows walk only the entries that have one
+    if (!value(node, "crawl", false) && (scope === "has preview" || scope === "missing preview")) {
+        const want = scope === "has preview";
+        const filtered = base.filter((name) => Boolean(shotsOf(name)) === want);
+        if (filtered.length) return filtered;
+    }
     if (!value(node, "crawl_missing_only", false)) return base;
     const missing = base.filter((name) => !shotsOf(name));
     return missing.length ? missing : base;   // all covered: keep moving
@@ -124,7 +185,12 @@ export function hopStyle(node, direction) {
     const pool = crawlPool(node);
     if (!pool.length) return;
     const all = namesOf("style");
-    const current = effectiveStyle(node);
+    // crawling: the slot crawl_source names. Otherwise: whichever slot is in
+    // use, so the arrows always step the list you are actually looking at.
+    const field = value(node, "crawl", false) ? crawlField(node).field : activeSlot(node);
+    const currentValue = value(node, field, "None");
+    const current = currentValue === RANDOM || currentValue === "None"
+        ? effectiveStyle(node) : currentValue;
     const at = pool.indexOf(current);
     let next;
     if (at >= 0) {
@@ -140,7 +206,9 @@ export function hopStyle(node, direction) {
             next = before[before.length - 1] ?? pool[pool.length - 1];
         }
     }
-    if (next) setValue(node, "style", next);
+    // Route by the entry itself: a name can only live in the slot that carries
+    // its source, so this cannot put a value where it will be reset to None.
+    if (next) setValue(node, slotFor(next), next);
 }
 
 /**
@@ -148,26 +216,35 @@ export function hopStyle(node, direction) {
  * control_after_generate — which is what makes a batch of N runs cover N
  * styles rather than repeating one.
  */
-export function advanceCrawl(node) {
+export async function advanceCrawl(node) {
     if (!value(node, "crawl", false)) return;
     const crawl = crawlState(node);
-    if (!crawl.names.length) syncCrawl(node).catch(() => {});
+    const source = crawlField(node).source;
+    // Wait for the right list before stepping. Firing the fetch and hopping
+    // immediately meant the first step of a run could walk the wrong source.
+    if (!crawl.names.length || crawl.source !== source) {
+        try {
+            await syncCrawl(node);
+        } catch (err) {
+            console.warn("Neons Style Explorer: could not load the crawl list", err);
+        }
+    }
     hopStyle(node, 1);
 }
 
 export function effectiveStyle(node) {
-    const picked = value(node, "style", "None");
+    const picked = value(node, activeSlot(node), "None");
     if (picked === RANDOM) return node._nsLastStyle || "";
-    return picked && picked !== "None" ? picked : "";
+    return picked && picked !== "None" ? picked : (node._nsLastStyle || "");
 }
 
 export function setValue(node, name, next) {
     const found = widget(node, name);
     if (!found) return;
     found.value = next;
+    if (STYLE_SLOTS.includes(name) && next && next !== "None") claimSlot(node, name);
     found.callback?.(next);
     refresh(node);
-    queueCompose(node);
     node.setDirtyCanvas?.(true, true);
 }
 
@@ -229,9 +306,12 @@ export function layout(node) {
 
         const barH = rowHeight(panel?.querySelector(".ns-bar"), 30);
         const strip = panel?.querySelector(".ns-shots");
-        const stripH = strip && strip.children.length ? rowHeight(strip, 36) + GAP : 0;
+        // The strip's row is reserved whether or not it holds thumbnails. It
+        // used to take no space until the first preview arrived, and then the
+        // panel grew mid-session and pushed the buttons out of the node.
+        const stripH = STRIP_H + GAP;
         const shell = barH + stripH + GAP * 3;
-        const minPanel = THUMB_MIN + OUT_MIN + shell;
+        const minPanel = THUMB_MIN + shell;
 
         const promptH = BASE_TEXT.prompt;
         const qualityH = BASE_TEXT.quality;
@@ -254,7 +334,7 @@ export function layout(node) {
             top = chrome + slots + fixed + promptH + qualityH + negativeH;
         }
         node._nsPanelTop = top;
-        node._nsIdealHeight = top + Math.max(THUMB_MIN, Math.min(width - 26, 400)) + OUT_MIN + shell + 6;
+        node._nsIdealHeight = top + Math.max(THUMB_MIN, Math.min(width - 26, 400)) + shell + 6;
 
         let panelH = height - top - 6;
         if (panelH < minPanel) {
@@ -266,14 +346,12 @@ export function layout(node) {
             }
         }
 
-        // split the panel: the preview takes what it can (it is square, so its
-        // ceiling is the node width), the prompt box gets a bounded share, and
-        // any height beyond that is handed back by shrinking the node — that is
-        // what stopped the prompt box growing forever on a vertical drag.
-        const inner = Math.max(THUMB_MIN + OUT_MIN, panelH - shell);
-        const side = Math.min(THUMB_MAX, Math.max(THUMB_MIN, Math.min(width - 26, inner - OUT_MIN)));
-        const outH = Math.min(OUT_MAX, Math.max(OUT_MIN, inner - side));
-        const used = side + outH + shell;
+        // The panel is now just the preview, the shot strip and the buttons:
+        // the square preview takes what it can (its ceiling is the node width)
+        // and anything left over is handed back by shrinking the node.
+        const inner = Math.max(THUMB_MIN, panelH - shell);
+        const side = Math.min(THUMB_MAX, Math.max(THUMB_MIN, Math.min(width - 26, inner)));
+        const used = side + shell;
         if (used + 4 < panelH && !node._nsGrowing) {
             panelH = used;
             node._nsGrowing = true;
@@ -287,13 +365,11 @@ export function layout(node) {
             panel.style.height = `${panelH}px`;
             const stage = panel.querySelector(".ns-stage");
             const thumb = panel.querySelector(".ns-thumb");
-            const out = panel.querySelector(".ns-out");
             if (stage) stage.style.height = `${side}px`;
             if (thumb) {
                 thumb.style.width = `${side}px`;
                 thumb.style.height = `${side}px`;
             }
-            if (out) out.style.height = `${outH}px`;
         }
         node.setDirtyCanvas?.(true, true);
     } finally {
@@ -411,9 +487,8 @@ export async function adoptStyle(node, name) {
         found.options = found.options || {};
         found.options.values = values;
     }
-    // the main slot, not custom_style: the preview, Save and auto-gallery all
-    // follow the main slot, which is what "ready to generate a preview" needs
-    setValue(node, "style", name);
+    // into whichever slot carries this style's source
+    setValue(node, slotFor(name), name);
     await loadGallery();
     refresh(node);
     say(node, `selected ${name}`);
@@ -555,7 +630,8 @@ export async function saveImage({ node, style, image, prompt = "", silent = fals
         prompt,
         make_cover: true,
     });
-    await loadGallery();
+    if (result?.ok && result.key && result.record) patchPreview(result.key, result.record);
+    else await loadGallery();
     if (node) refresh(node);
     if (!result?.ok && !silent) alert(result?.error || "Could not save that image.");
     return Boolean(result?.ok);
@@ -606,7 +682,9 @@ function browse(node, axis, field) {
     openCatalog({
         axis,
         current: value(node, field, "None"),
-        onPick: (name) => setValue(node, field, name),
+        // a style goes to the slot that carries its source, not to whichever
+        // slot opened the browser
+        onPick: (name) => setValue(node, axis === "style" ? slotFor(name) : field, name),
     });
 }
 
@@ -635,13 +713,6 @@ export function attachPanel(node) {
         <button type="button" class="edit" title="Edit this style: rename it, change its clause, family, medium or tags">Edit</button>
         <button type="button" class="fav icon" title="Add or remove this style from favourites (roll_scope can then stay inside them)">&#9734;</button>
         <button type="button" class="more icon" title="Catalogs, format and finish browsing, extra style slots, new style, delete previews">&#8943;</button>
-      </div>
-      <div class="ns-out">
-        <header>
-          <span class="mode"></span><span class="len"></span><span class="sp"></span>
-          <button type="button" class="copy">Copy</button>
-        </header>
-        <pre></pre>
       </div>
     `;
 
@@ -674,20 +745,28 @@ export function attachPanel(node) {
         await starStyle(name);
         refresh(node);
     };
-    panel.querySelector(".copy").onclick = async () => {
-        const text = node._nsComposed?.positive || "";
-        if (text) await navigator.clipboard?.writeText(text);
-    };
+
     panel.querySelector(".more").onclick = (ev) => {
         const name = effectiveStyle(node);
         const shots = name ? shotsOf(name) : null;
         menu(ev, [
             ...catalogMenu(node),
+            {
+                label: "Copy the composed prompt",
+                run: async () => {
+                    const composed = await composeNow(node);
+                    const text = composed?.positive || "";
+                    if (!text) return say(node, "nothing to copy yet", true);
+                    try {
+                        await navigator.clipboard.writeText(text);
+                        say(node, `copied ${text.length} characters`);
+                    } catch (err) {
+                        say(node, "the browser refused clipboard access", true);
+                    }
+                },
+            },
             { label: "Browse formats", run: () => browse(node, "format", "format") },
             { label: "Browse finishes", run: () => browse(node, "finish", "finish") },
-            "-",
-            { label: "Roll style 2", run: () => rollStyle(node, "style_2") },
-            { label: "Roll style 3", run: () => rollStyle(node, "style_3") },
             "-",
             {
                 label: "New custom style",
@@ -698,7 +777,7 @@ export function attachPanel(node) {
                     onSaved: (saved) => adoptStyle(node, saved),
                 }),
             },
-            { label: "Clear styles", run: () => ["style", "style_2", "style_3", "custom_style", "format", "finish"].forEach((f) => setValue(node, f, "None")) },
+            { label: "Clear styles", run: () => ["style", "custom_style", "extra_style", "format", "finish"].forEach((f) => setValue(node, f, "None")) },
             "-",
             {
                 label: "Delete this shot", bad: true, disabled: !shots,
@@ -727,52 +806,28 @@ export function attachPanel(node) {
 
 /* --------------------------------------------------------- live compose */
 
-function paint(node, data) {
-    node._nsComposed = data;
-    const panel = node._nsPanel;
-    if (!panel) return;
-    const pre = panel.querySelector(".ns-out pre");
-    const mode = panel.querySelector(".mode");
-    const len = panel.querySelector(".len");
-    const positive = data?.positive || "";
-    const negative = data?.negative || "";
-    pre.textContent = positive || "(add a prompt or pick a style)";
-    if (negative) {
-        const span = document.createElement("span");
-        span.className = "neg";
-        span.textContent = `negative: ${negative}`;
-        pre.appendChild(span);
-    }
-    const rolled = value(node, "style", "None") === RANDOM && node._nsLastStyle;
-    mode.textContent = `${value(node, "output_format", "natural")} · style ${value(node, "style_position", "start")}`
-        + (rolled ? " · last roll" : "");
-    len.textContent = positive ? `${positive.length} chars` : "";
-}
-
-export function queueCompose(node) {
-    clearTimeout(node._nsTimer);
-    node._nsTimer = setTimeout(() => composeNow(node), 170);
-}
-
 export async function composeNow(node) {
     const data = await composeRemote({
         prompt: value(node, "prompt", ""),
         quality: value(node, "quality", ""),
         negative: value(node, "negative", ""),
-        styles: ["style", "style_2", "style_3", "custom_style"]
+        styles: ["style", "custom_style", "extra_style"]
             .map((field) => (field === "style" ? effectiveStyle(node) || value(node, field, "None") : value(node, field, "None")))
             .filter((name) => name && name !== "None"),
         format: value(node, "format", "None"),
         finish: value(node, "finish", "None"),
         output_format: value(node, "output_format", "natural"),
         style_position: value(node, "style_position", "start"),
-        style_mix: value(node, "style_mix", "blended with"),
         tag_separator: value(node, "tag_separator", "comma+space"),
-        style_weight: Number(value(node, "style_weight", 1.5)) || 1,
+        style_weight: Number(value(node, "style_weight", 1.0)) || 1,
         include_style_negative: Boolean(value(node, "include_style_negative", true)),
         roll_scope: value(node, "roll_scope", "all"),
     });
-    if (data) paint(node, data);
+    // Nothing to paint any more — the readout is gone, since the node's
+    // `positive` output can go straight into a Preview Text node. The composed
+    // text is kept for the menu's copy action.
+    if (data) node._nsComposed = data;
+    return data;
 }
 
 export { saveLatest, rollStyle };

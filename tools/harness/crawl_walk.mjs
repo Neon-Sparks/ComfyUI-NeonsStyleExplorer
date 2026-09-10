@@ -19,6 +19,9 @@ function makeNode(extra = {}) {
             { name: "style", value: extra.style ?? "None", callback() {} },
             { name: "crawl", value: true, callback() {} },
             { name: "crawl_missing_only", value: extra.missingOnly ?? false, callback() {} },
+        { name: "crawl_source", value: extra.source ?? "main", callback() {} },
+        { name: "extra_style", value: "None", callback() {} },
+        { name: "custom_style", value: "None", callback() {} },
             { name: "roll_scope", value: "all", callback() {} },
         ],
         setDirtyCanvas() {},
@@ -60,4 +63,11 @@ const node3 = makeNode({ style: "[A] s01", missingOnly: true });
 await panel.syncCrawl(node3);
 const walk = [panel.value(node3, "style", "None")];
 for (let i = 0; i < 3; i++) { panel.advanceCrawl(node3); walk.push(panel.value(node3, "style", "None")); }
+// a crawl over the extra source must drive the extra_style slot
+const node4 = makeNode({ style: "None", source: "extra" });
+await panel.syncCrawl(node4);
+const walked = [panel.value(node4, "extra_style", "None")];
+for (let i = 0; i < 2; i++) { panel.advanceCrawl(node4); walked.push(panel.value(node4, "extra_style", "None")); }
+console.log("extra-source walk drives extra_style:", walked.join(" -> "), "| main slot stays:", panel.value(node4, "style", "None"));
+
 console.log("missing-only walk:", walk.join(" -> "), "(s02 and s03 have previews)");

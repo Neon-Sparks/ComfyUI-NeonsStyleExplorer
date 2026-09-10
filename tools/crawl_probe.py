@@ -85,6 +85,10 @@ async def main():
                                  json={"prompt_id": prompt_id, "images": [image]})
         body = json.loads(await resp.text())
         saved = [entry["style"] for entry in body.get("saved", [])]
+        first = (body.get("saved") or [{}])[0]
+        rec = first.get("record") or {}
+        print(f"       response carries record: cover={rec.get('cover')!r} count={rec.get('count')} "
+              f"(no manifest refetch needed)")
         print(f"  {index + 1}. queued {style!r:52} -> saved {saved or 'NOTHING'}"
               + ("" if body.get("ok") else f"  [{body.get('error')}]"))
         # the same prompt reported twice must not double-file or steal another

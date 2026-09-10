@@ -38,6 +38,7 @@ const GLOBALS = new Set([
     "parseFloat", "isNaN", "encodeURIComponent", "decodeURIComponent", "structuredClone",
     "if", "for", "while", "switch", "catch", "return", "typeof", "function", "await",
     "super", "this", "new", "else", "do", "try", "of", "in", "async", "get", "set",
+    "import",   // dynamic import() is syntax, not a function to resolve
     "beforeRegisterNodeDef", "setup", "nodeCreated",
 ]);
 

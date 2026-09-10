@@ -61,20 +61,19 @@
     "None",
     "None",
     "None",
-    "blended with",
-    "None",
     "None",
     "natural",
     "start",
     true,
-    1.5,
+    1.0,
     "comma+space",
     false,
+    "main",
     false,
+    "off",
     "all",
-    0,
-    "randomize",
-    "off"
+    54321,
+    "randomize"
    ]
   },
   {

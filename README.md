@@ -11,7 +11,7 @@ Nodes (category **Neons**):
 * **Neons Style Explorer (Encode)** — the same plus CLIP encode
 * **Neons Gallery Capture** — headless equivalent of the Save button
 
-**[Read the manual](MANUAL.md)** — every widget, the browser, previews, the
+**[Read the manual](MANUAL.md)** · [pre-release audit](AUDIT.md) — every widget, the browser, previews, the
 crawl workflow, catalogs and troubleshooting.
 
 ## Install
@@ -101,7 +101,7 @@ style's stable id, so renaming never orphans an image.
 tools/build_all.sh               # import + lint + index + docs + examples + tests
 python3 tools/lint.py --all      # every finding
 node tools/check_web.mjs         # UI: undefined calls and bad imports
-python3 tests/test_compose.py    # 49 tests
+python3 tests/test_compose.py    # 50 tests
 ```
 
 The source of truth for the text is `tools/written/*.json`; `import_source.py`

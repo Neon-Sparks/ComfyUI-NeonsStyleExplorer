@@ -45,8 +45,6 @@
     "None",
     "None",
     "None",
-    "blended with",
-    "None",
     "None",
     "danbooru",
     "start",
@@ -54,11 +52,12 @@
     1.2,
     "comma+space",
     false,
+    "main",
     false,
+    "off",
     "all",
-    0,
-    "randomize",
-    "off"
+    54321,
+    "randomize"
    ]
   },
   {

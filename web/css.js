@@ -24,7 +24,9 @@ const CSS = `
     border:1px solid rgba(255,255,255,.14); }
 .ns-shots { flex:0 0 auto; display:flex; gap:6px; overflow-x:auto; overflow-y:visible; padding:5px 2px 2px;
     pointer-events:auto; }
-.ns-shots:empty { display:none; }
+/* keeps its row even with nothing in it, so the node never resizes when the
+   first preview is saved */
+.ns-shots { min-height:36px; }
 .ns-arrow { position:absolute; top:50%; transform:translateY(-50%); width:26px; height:34px; padding:0;
     display:none; align-items:center; justify-content:center; font-size:13px; line-height:1;
     border:1px solid rgba(255,255,255,.14); background:rgba(10,12,16,.62); color:#e7ebf2;
@@ -61,16 +63,6 @@ const CSS = `
 .ns-bar button.key { background:#2f5fd0; border-color:#5480ee; color:#fff; font-weight:600; }
 .ns-bar button.key:hover { background:#3a6ce0; }
 .ns-bar button.icon { flex:0 0 32px; padding:0; }
-.ns-out { flex:0 0 auto; display:grid; grid-template-rows:auto minmax(0,1fr); gap:3px; pointer-events:auto; overflow:hidden; }
-.ns-out header { display:flex; align-items:center; gap:8px; font-size:10px; letter-spacing:.06em;
-    text-transform:uppercase; color:#8f959f; }
-.ns-out header .sp { flex:1; }
-.ns-out header button { height:20px; padding:0 7px; font-size:10px; border-radius:5px;
-    border:1px solid rgba(255,255,255,.12); background:#191b21; color:#dcdfe5; cursor:pointer; }
-.ns-out pre { margin:0; overflow:auto; white-space:pre-wrap; word-break:break-word;
-    background:#0d0e12; border:1px solid rgba(255,255,255,.08); border-radius:9px; padding:7px 9px;
-    font:11px/1.45 ui-monospace,SFMono-Regular,Menlo,monospace; color:#ccd1d9; }
-.ns-out pre .neg { display:block; margin-top:6px; color:#e09a9a; }
 
 /* ========================== catalog overlay ======================= */
 .ns-overlay { position:fixed; inset:0; z-index:2147483646; background:#0e0f13; color:#e7e9ee;
@@ -214,8 +206,8 @@ export function ensureCss() {
         el.id = "ns-style-css";
         document.head.appendChild(el);
     }
-    if (el.dataset.v !== "13") {
+    if (el.dataset.v !== "15") {
         el.textContent = CSS;
-        el.dataset.v = "13";
+        el.dataset.v = "15";
     }
 }

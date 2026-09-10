@@ -1,5 +1,192 @@
 # Changelog
 
+## 1.17.4 — the node stops resizing when the first preview arrives
+
+* **The shot strip now reserves its row from the start.** It took no space
+  until a style had a saved image, so the moment the first preview landed the
+  panel grew by a row and pushed the button bar out of the node until something
+  forced a resize. The row is there whether or not it holds thumbnails, so the
+  panel's height is the same before and after a save.
+
+## 1.17.3 — the write routes only answer their own page
+
+* Every POST route now refuses a request whose `Origin` header names a
+  different host. ComfyUI listens on localhost and every other page in the same
+  browser can reach it, so before this a page you had open could have called
+  these routes — deleting previews, renaming styles, wiping a catalog. A
+  browser always attaches `Origin` to a cross-site POST, so that is the signal
+  used; requests with no `Origin` (the extension itself, curl, a script) are
+  unaffected, and the read-only GET routes are untouched since a cross-site
+  page cannot read their replies.
+* Verified in `tools/route_probe.py`: a POST claiming `evil.example` is refused
+  with 403, the same POST from the interface succeeds, and one with no Origin
+  succeeds.
+
+## 1.17.2 — pre-release audit
+
+Full pass over the code before publishing; findings and method are in
+`AUDIT.md`.
+
+* **Fixed an arbitrary file read.** The two save routes joined a folder and a
+  filename from the browser onto ComfyUI's output directory without checking
+  the result stayed inside it, so a crafted request could have read any
+  readable file on the machine and stored it as a preview. Both routes now
+  resolve the path and refuse anything outside that folder.
+* **Fixed markup injection through a catalog name.** The catalog picker built
+  its options as an HTML string with the name interpolated raw; it now builds
+  them through the DOM API.
+* **Fixed a path built from a hand-editable id.** Catalog ids become directory
+  names and are read back from an editable file, so they are slugged again
+  wherever they are turned into a path.
+* **Removed dead code**: `loadFavourites`, `pushRecent` and `queueCompose`.
+* Added `tools/audit_web.mjs` (unused exports, unescaped user data in markup)
+  and shipped the probes as `tools/route_probe.py` and `tools/crawl_probe.py`.
+* Clean: no bare excepts, no mutable default arguments, no `eval`/`exec`/
+  subprocesses, no network calls, no duplicate routes, 0 lint errors over 3015
+  entries, 50 tests passing.
+
+## 1.17.1 — the roll controls go back above the panel
+
+* `roll_scope`, `roll_seed` and its control sit directly above the preview panel
+  again, at the bottom of the widget list. Litegraph places a DOM widget by the
+  height it is told in advance, and anything drawn after one inherits every
+  error in that figure — three separate attempts to measure it correctly all
+  left the controls hanging below the node. Keeping them above the panel avoids
+  the problem rather than fighting it.
+* Removed the widget reordering and the trailing-height measurement that existed
+  only to support it.
+
+## 1.17.0 — the prompt readout is gone
+
+* **Removed the composed-prompt box from the panel.** Wire the node's
+  `positive` output into a Preview Text node instead: it shows the same thing,
+  updates the same way, and costs the node no height. The one thing worth
+  keeping moved to the ⋯ menu as **Copy the composed prompt**, which composes on
+  demand and reports how many characters it copied.
+* **This is what kept the roll controls hanging below the node.** The readout
+  was a variable-height block inside a DOM widget, and litegraph has to be told
+  how tall that widget is before it can place anything after it. With it gone
+  the panel is a preview, a shot strip and a button row: its minimum drops from
+  316px to 220px, and the controls beneath it have room.
+* **No more composing on every keystroke.** The readout was the only thing that
+  needed it, so what used to be a server round trip per typed character now
+  happens only when the composed text is actually wanted.
+
+## 1.16.2 — crawling the imported pack stays in the imported pack
+
+* **A crawl with `crawl_source: extra` reverted to the main catalog after the
+  first step.** Two faults behind it. `advanceCrawl` fired the request for the
+  style list and stepped immediately without waiting, so an early step ran
+  before the list arrived; and the fallback used while waiting was chosen by
+  whichever slot was active rather than by `crawl_source`, so it handed back
+  main-catalog names. Those names were then written into `extra_style`, which
+  cannot hold them, and the slot blanked — looking like the crawl had jumped
+  back to main.
+  * The step now waits for the right list before moving.
+  * The fallback follows `crawl_source`, not the active slot.
+  * Every hop routes by the entry itself, so a name can only ever land in the
+    slot that carries its source.
+* **The roll controls still hung below the node.** The height now measures the
+  true bottom of the widgets drawn after the panel — using litegraph's own
+  positions once it has drawn, and an estimate before that — rather than
+  assuming the panel is last.
+* The slot harness covers the crawl case: four steps over the imported source
+  with the list not preloaded, all staying in `extra_style`.
+
+## 1.16.1 — three fixes to 1.16.0
+
+* **Picking a style from the browser could make the preview vanish.** Each
+  dropdown now carries one source, but the browser still put every choice into
+  the main slot — so an `[Extra]` entry landed in a list that does not contain
+  it, showed until the next refresh, and was then reset to *None*. A pick now
+  goes to the slot that carries its source, which is also why the preview
+  seemed to disappear when stepping with the arrows afterwards.
+* **The roll controls hung out of the bottom of the node.** They sit below the
+  panel now, and the node's measured height stopped at the panel. Their height
+  is included.
+* **Saved values could load misaligned** — a `style_weight` of 0.00 against a
+  minimum of 1. Two causes, both fixed: one of the historical layouts I listed
+  never existed (it mixed `custom_style` into a release that predates it), so
+  the matcher could pick it; the layouts now come from this repository's own
+  history. And whatever the match decides, every value is checked against its
+  widget before it is applied — a combo must hold one of its options, a number
+  must be inside its range — and anything impossible falls back to the default
+  with a note in the console.
+* The arrows honour `roll_scope`: with *has preview* selected they step only
+  entries that have one, instead of walking through hundreds of empty styles.
+* Added `tools/harness/slot_routing.mjs`, which checks a pick lands in the right
+  slot, survives an option-list sync, and switches the other slots off.
+
+## 1.16.0 — one style slot at a time
+
+* **Only one style dropdown is active.** Choosing an entry in any of the three
+  switches the others to *None*, and *None* is how you switch a slot off. The
+  preview window, the Save button, auto-gallery and the composed prompt all
+  follow whichever slot is in use — the whole catalog still shows in the
+  browser regardless.
+* **The arrows know which list to walk.** They step the active slot, or the slot
+  `crawl_source` names while a crawl is running. Previously they always assumed
+  the main one.
+* **`style_2` and `style_3` are gone**, along with `style_mix` which only
+  existed to join them.
+* **`roll_scope`, `roll_seed` and its control moved to the bottom** of the node,
+  below the prompt readout.
+* **Defaults changed**: `style_weight` is 1.0 (no emphasis) and `roll_seed` is
+  54321.
+* **Saved workflows are remapped by name, not position.** This release removes
+  two widgets and moves three, so position-based loading would have shifted
+  every value after them. Past layouts are listed by name, and because two of
+  them hold the same number of values as the current one, each candidate is
+  scored on how many of its combo widgets receive a value that is actually one
+  of their options — the right layout scores 11-12 against 2-4 for a wrong one.
+  A workflow that used `style_2` while the main slot was empty keeps that style.
+  An unrecognised layout says so in the console rather than loading crooked.
+* Added `tools/harness/layout_migration.mjs`, which exercises the scorer against
+  value arrays shaped like real saves.
+* **The test suite no longer reads or writes a real installation's data.** Any
+  `user/*.json` present is moved aside for the run and restored afterwards, and
+  files the run creates are removed. One test's leftovers had been deciding
+  another test's result, which showed up as an intermittent failure.
+
+## 1.15.0 — split dropdowns, and populate runs stop getting slower
+
+* **The manifest is no longer refetched after every saved preview.** This is the
+  real cost of a long populate run: each save re-downloaded the record of every
+  preview already made — 24 KB at a hundred, 243 KB at a thousand, 739 KB at
+  three thousand — and redrew on it, so the run got heavier the further it went.
+  A save now returns its own updated record and the browser splices that in. The
+  full manifest is fetched only when a response cannot say what changed.
+* **One source per dropdown.** The main `style`, `style_2` and `style_3` slots
+  carry the written catalog (1,273 options instead of 2,869); the imported pack
+  has its own **extra_style** slot; your own entries keep **custom_style**.
+* **New `crawl_source`** — `main`, `extra` or `custom` — chooses which of those
+  lists a crawl walks, and the walk drives that slot, leaving the others alone.
+  The preview arrows follow the same list.
+* The panel falls through to the dedicated slots when the main one is empty, so
+  a crawl over the imported pack still drives the preview, Save and auto-gallery.
+* **Workflows saved before any of these slots existed still load.** The
+  migration is generalised: a file short by N values gets the N newest slots
+  spliced back in at their own positions before litegraph applies them by index.
+* New test asserts the three sources are disjoint, cover the whole axis between
+  them, and that a crawl over one never wanders into another.
+
+## 1.14.2 — startup and redraw
+
+* **1.6 MB is no longer parsed on every page load.** `web/style_index.js` is a
+  bundled catalog snapshot, imported eagerly so the dropdowns had something
+  before the server answered. It is now loaded only if `/neons_style/catalog`
+  cannot be reached — an old backend behind a refreshed front end, or a restart
+  in progress — and says so in the console when it happens. A node created
+  before the catalog arrives keeps the option list its definition supplied
+  rather than being emptied.
+* **New previews patch the grid instead of rebuilding it.** A gallery change
+  used to drop every mounted card and remake it; now only the cards whose
+  preview actually changed are repainted. The full rebuild is kept for the one
+  case that needs it — filtering by *has preview* or *missing preview*, where a
+  style that just gained one has to leave the grid.
+* Restored the footer's preview-coverage readout, which a later edit had
+  reverted to the old hand-written count, and it now updates as previews arrive.
+
 ## 1.14.1 — the interface stops carrying the whole catalog around
 
 Two measured fixes for the lag that arrived with the Extra import.

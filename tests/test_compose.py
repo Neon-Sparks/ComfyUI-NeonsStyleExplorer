@@ -37,6 +37,41 @@ F = {"id": "t.f", "name": "[Format] Sheet", "family": "Comics & Print", "axis": 
      "source": "shipped"}
 
 
+# The suite must not read — or destroy — a real installation's data. Any user
+# files present are moved aside for the run and put back afterwards, which also
+# stops one test's leftovers from deciding another test's result.
+_STASH = []
+
+
+def setUpModule():
+    user_dir = os.path.join(ROOT, "user")
+    if not os.path.isdir(user_dir):
+        return
+    for name in os.listdir(user_dir):
+        if not name.endswith(".json"):
+            continue
+        live = os.path.join(user_dir, name)
+        aside = f"{live}.testbak"
+        os.replace(live, aside)
+        _STASH.append((live, aside))
+    catalog.entries(force=True)
+
+
+def tearDownModule():
+    # anything the run itself created goes; only what was there before returns
+    user_dir = os.path.join(ROOT, "user")
+    if os.path.isdir(user_dir):
+        for name in os.listdir(user_dir):
+            if name.endswith(".json"):
+                os.remove(os.path.join(user_dir, name))
+    for live, aside in _STASH:
+        if os.path.isfile(live):
+            os.remove(live)
+        os.replace(aside, live)
+    _STASH.clear()
+    catalog.entries(force=True)
+
+
 def wipe_user_files(*names):
     """Remove the user files a test created. Writing an empty list back would
     leave litter in the package; tests should leave no trace at all."""
@@ -295,9 +330,13 @@ class Catalog(unittest.TestCase):
             wipe_user_files("favourites.json", "recents.json")
 
     def test_crawl_walks_the_scope_in_order(self):
+        # crawl walks one dropdown's source at a time; "main" is the written
+        # catalog, without the imported pack or the user's own entries
         names = catalog.crawl_names("all")
-        self.assertEqual(len(names), len(catalog.by_axis("style")))
-        self.assertEqual(names, [entry["name"] for entry in catalog.by_axis("style")])
+        main = catalog.written_names("style")
+        self.assertEqual(len(names), len(main))
+        self.assertEqual(names, [entry["name"] for entry in catalog.by_axis("style")
+                                 if entry["name"] in set(main)])
         self.assertEqual(len(set(names)), len(names))
 
     def test_crawl_scope_narrows_the_walk(self):
@@ -306,6 +345,8 @@ class Catalog(unittest.TestCase):
         self.assertTrue(walk)
         self.assertTrue(all(catalog.resolve(name)["family"] == family for name in walk))
         self.assertLess(len(walk), len(catalog.crawl_names("all")))
+        # the imported pack has its own source and never leaks into "main"
+        self.assertTrue(set(catalog.crawl_names("all")).isdisjoint(catalog.imported_style_names()))
 
     def test_crawl_disables_every_dice(self):
         """With crawl on, no slot may roll: extra dice slots resolve to nothing
@@ -572,6 +613,22 @@ class Catalog(unittest.TestCase):
             # leave no manifest behind if the test created one
             if not manifest_existed and os.path.isfile(gallery_mod.manifest_path()):
                 os.remove(gallery_mod.manifest_path())
+
+    def test_style_slots_are_split_by_source(self):
+        """Each dropdown carries one source, so no menu holds the whole catalog."""
+        main = catalog.written_names("style")
+        extra = catalog.imported_style_names()
+        self.assertTrue(main and extra)
+        self.assertEqual(set(main) & set(extra), set())          # no overlap
+        self.assertEqual(len(main) + len(extra) + len(catalog.custom_names("style")),
+                         len(catalog.by_axis("style")))          # and none missing
+        self.assertLess(len(main), 1600, "the main dropdown is heavy again")
+        # a crawl over one source only ever walks that source
+        walk = catalog.crawl_names(source="extra")
+        self.assertTrue(set(walk).issubset(set(extra)))
+        # and both slots compose together, leading style first
+        _p, _n, _d, styles = nodes.run(prompt="x", style=main[0], extra_style=extra[0])
+        self.assertEqual([entry["name"] for entry in styles], [main[0], extra[0]])
 
     def test_roll_excludes(self):
         first = catalog.roll(seed=5)
