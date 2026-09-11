@@ -46,6 +46,18 @@ def family_tag(family):
     return token[:12] or "Custom"
 
 
+def unique_id(candidate):
+    """An id nothing else is using, suffixed if need be."""
+    taken = {str(entry.get("id", "")).lower() for entry in entries()}
+    taken |= {str(item.get("id", "")).lower() for item in load_custom()}
+    if candidate.lower() not in taken:
+        return candidate
+    n = 2
+    while f"{candidate}_{n}".lower() in taken:
+        n += 1
+    return f"{candidate}_{n}"
+
+
 def custom_name(raw, family, axis="style"):
     raw = re.sub(r"^(\[[^\]]+\]\s*)+", "", clean_name(raw)).strip()
     if not raw:
@@ -160,7 +172,12 @@ def save_custom(name, family="Other", axis="style", nl="", medium="", negative="
         aliases.append(previous)
 
     record = {
-        "id": (existing or {}).get("id") or f"custom.{slug(name)}",
+        # An id is permanent: gallery images are filed under it, so it must not
+        # change when an entry is renamed. That makes the name free again, and a
+        # later style taking that name used to generate the same id — inheriting
+        # the first one's previews. New ids are therefore made unique against
+        # every id already in use.
+        "id": (existing or {}).get("id") or unique_id(f"custom.{slug(name)}"),
         "name": name,
         "family": family,
         "axis": axis,

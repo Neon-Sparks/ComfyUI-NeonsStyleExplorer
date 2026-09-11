@@ -24,7 +24,9 @@ into a prompt, and build a preview library for.
 13. [Import and export](#13-import-and-export)
 14. [Where your files live](#14-where-your-files-live)
 15. [Troubleshooting](#15-troubleshooting)
-16. [Reference tables](#16-reference-tables)
+16. [The Extra family](#16-the-extra-family)
+17. [The LoRA node](#17-the-lora-node)
+18. [Reference tables](#18-reference-tables)
 
 ---
 
@@ -115,6 +117,9 @@ Outputs: `positive`, `negative`, `debug`.
 **Neons Style Explorer (Encode)** — the same, plus a `CLIP` input.
 Outputs: `positive_conditioning`, `negative_conditioning`, `positive`,
 `negative`, `debug`.
+
+**Neons LoRA Explorer** — a LoRA loader with its own gallery. Model and clip in,
+model and clip out, plus the LoRA's name as a string. See section 17.
 
 **Neons Gallery Capture** — the Save button as a node, for headless or batch
 workflows. Inputs: `image`, `style_name`, `mode` (`first` / `always` / `off`)
@@ -269,7 +274,8 @@ the ⋯ menu.
 * **Search** — matches name, family and booru tags. Press `/` to jump into it,
   `Escape` to close the browser.
 * **Axis** — style, format or finish.
-* **Family** — the nine written families, then **Extra** (the imported pack),
+* **Family** — **★ My styles** (everything you wrote or edited, wherever you
+  filed it), then the nine written families, then **Extra** (the imported pack),
   then your own under *— my families —*. Selecting that heading shows every
   style in a family you made, whichever one.
 * **Filter** — All, ★ Favourites, Recently used, Has preview, Missing preview.
@@ -512,8 +518,18 @@ deleted** in the toolbar brings any of them back.
 
 **Import / export** in the toolbar:
 
+* **Export this catalog (previews + names)…** — packs the active catalog into a
+  zip. Chrome and Edge ask where to save it; other browsers put it in the
+  download folder. Progress is reported on the node's status line as it packs,
+  and the finished size and filename when it lands. Packs the: every preview image, the style each belongs to, the prompts recorded
+  against the catalog, and any custom or edited styles the previews depend on.
+  Hand that file to someone else and they get your gallery.
+* **Import a shared catalog…** — unpacks someone's bundle into a **new**
+  catalog and switches to it. Nothing you already have is touched: your own
+  catalogs, previews and styles stay exactly as they were.
+
 * **Export custom styles + overrides** — a JSON file of your own work, for
-  backup or for sharing.
+  backup or for sharing (styles only, no images).
 * **Import a style pack…** — merge someone else's pack in.
 * **Clear recently-used list**, **Clear all favourites**.
 * **Delete gallery images for the current style**.
@@ -581,7 +597,7 @@ report.
 
 ---
 
-## 15a. The Extra family
+## 16. The Extra family
 
 The 1,596 entries tagged **[Extra]** come from ThetaCursed's Krea 2 style
 collection, imported under its MIT licence (see `THIRD-PARTY-NOTICES.md`). They
@@ -601,7 +617,62 @@ previews. Two practical notes:
   image`; stacked behind a written style, that style's medium closes the prompt
   as usual, so the single-medium rule still holds.
 
-## 16. Reference tables
+## 17. The LoRA node
+
+**Neons LoRA Explorer** loads a LoRA and keeps a preview gallery beside it. The
+list comes from ComfyUI's own `loras` folder, so whatever you have installed is
+what appears.
+
+### Folders are the grouping
+
+```
+loras/krea 2/film_grain.safetensors            gallery "krea 2"
+loras/krea 2/portraits/soft_light.safetensors  gallery "krea 2", family "portraits"
+loras/loose_one.safetensors                    gallery "Unsorted"
+```
+
+The top-level folder is a **gallery** and a folder inside it is a **family**.
+Put your Krea 2 LoRAs in a folder called `krea 2` and that is the gallery's
+name — no configuration anywhere.
+
+**Each gallery keeps its own previews.** The same LoRA filed under two
+checkpoint folders has two separate sets of images, which is the point: you can
+see how it behaves on each model rather than one pile of mixed results.
+
+### Using it
+
+* **Gallery** opens the browser: search, filter by gallery, family, favourites
+  or preview state, then click a card to load that LoRA. Its banner fades away
+  as you scroll into the grid and returns at the top.
+* Each card carries a **✕** at the top right to delete that LoRA's previews, and
+  a **★** at the top left to favourite it — the same corners as the style
+  browser.
+* **Trigger words** sit under the preview. Press **Edit**, type the words that
+  LoRA wants in the prompt, press Enter. They show on every card in the browser
+  and come out of the node's **triggers** output, so they can go straight into
+  your prompt.
+* **Save** files the newest generated image against the current LoRA, in that
+  LoRA's gallery. Saving is manual here — there is no crawl and no
+  auto-populate.
+* **★** favourites a LoRA, and the browser can filter to just those.
+* Each thumbnail in the strip has a **✕** to delete that image, and clicking one
+  makes it the cover. **⋯** deletes every image for the current LoRA.
+* **Rescan** in the browser re-reads the folder after you add LoRAs, without
+  restarting ComfyUI.
+* **The browser remembers how you left it** — search text, gallery, family, the
+  previews/favourites filter and your place in the grid all come back next time
+  you open it, and survive a Rescan. A gallery that no longer exists on disk
+  falls back to *All galleries*. Kept in your browser, per browser profile.
+
+The preview follows the node's **width**: drag the node wider and the square
+preview grows with it, up to 420px. The node holds itself at the size its
+content needs — there is nothing below the buttons, so it cannot be stretched
+into empty space, and it cannot creep longer on repeated drags.
+
+Previews live in `user/loras/<gallery>/` and trigger words in
+`user/loras/triggers.json`. Nothing is ever written to your loras folder.
+
+## 18. Reference tables
 
 ### Widgets
 

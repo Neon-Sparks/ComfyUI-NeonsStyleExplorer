@@ -1,5 +1,185 @@
 # Changelog
 
+## 2.0.0 — the LoRA node
+
+The second node arrives properly, and the style browser gains a filter for your
+own work. Everything from 1.19.1 onwards is collected here.
+
+**Neons LoRA Explorer**
+
+* Loads a LoRA and keeps a **preview gallery** beside it, grouped by your own
+  folders: a top-level folder is a gallery, a folder inside it a family, loose
+  files land in Unsorted. Each gallery keeps its own images, so the same LoRA
+  under two checkpoint folders has two separate sets.
+* **Trigger words** per LoRA, edited under the preview, shown on every card in
+  the browser, and available as the node's fourth output — `model`, `clip`,
+  `lora_name`, `triggers` — so the words travel with the LoRA into your prompt.
+  Stored in `user/loras/triggers.json`.
+* **The browser remembers how you left it.** Search text, gallery, family, the
+  previews/favourites filter and your place in the grid are restored when you
+  reopen it, and survive a Rescan rebuilding the dropdowns; a gallery that has
+  since left the disk falls back to all galleries. Checked by
+  `tools/harness/lora_view.mjs`.
+* **Browser**: search, filter by gallery, family, favourites or preview state,
+  ✕ on a card to delete its previews, ★ to favourite, Rescan to re-read the
+  folder without restarting. A banner at the top fades out as you scroll into
+  the grid.
+* **The panel sizes itself.** It had borrowed the style node's markup, whose
+  heights are set in pixels by that node's layout code — which this node does
+  not run, so the preview collapsed to nothing. It now reports its height
+  through both `computeSize` and `computeLayoutSize`, sizes the square preview
+  from the node's width, and holds the node at its content size on every draw
+  pass so it can be neither stretched into empty space nor crept longer.
+* Saving is manual: no crawl, no auto-populate. Nothing is ever written to your
+  loras folder.
+
+**Style catalog**
+
+* **★ My styles** in the family filter — everything you wrote or edited,
+  wherever you filed it, in one place.
+
+**Docs and checks**
+
+* Manual sections renumbered and the LoRA node documented in both the README and
+  the manual (section 17).
+* New harnesses: `tools/harness/lora_resize.mjs`, `lora_clamp.mjs`,
+  `lora_hold.mjs` — layout maths checked without a browser.
+* 57 tests, 49 routes, 0 lint errors.
+
+## 1.21.4 — the clamp now actually holds
+
+* **The node could still be dragged longer.** Two reasons, both mine. The clamp
+  lived in `onResize`, which the current ComfyUI frontend does not always route
+  a corner drag through; and the panel reported its height through
+  `computeSize`, which that frontend ignores for DOM widgets in favour of
+  `computeLayoutSize`. The panel now reports its height both ways, and the size
+  is held on **every draw pass** rather than only at resize — a stretch snaps
+  back on the next frame.
+* Saved workflows carrying a size from an earlier version are re-fitted on load.
+* `tools/harness/lora_hold.mjs` stretches a node behind the clamp's back and
+  checks the draw pass pulls it in and then leaves it alone.
+
+## 1.21.3 — the LoRA node holds its size
+
+* **It could still be dragged into dead space.** 1.21.2 stopped the node
+  growing on its own but left a manual drag free to stretch it, which only
+  added emptiness below the buttons — the panel is a square preview and three
+  rows, so there is nothing for extra height to show. Both dimensions are now
+  clamped while you drag: the width to the range the preview can use (300 to
+  466), the height to exactly what that width needs.
+* `tools/harness/lora_clamp.mjs` checks the clamp against oversized, undersized
+  and repeated drags, including that re-applying the node's own size changes
+  nothing.
+
+## 1.21.2 — the LoRA node stops growing
+
+* **Resizing made the node longer every time.** The panel took its height from
+  the node's height, but litegraph sizes a node from its widgets — so each
+  layout pass handed the slack back and the node crept about six pixels longer
+  on every drag. The panel is now sized from the node's **width**: the square
+  preview grows as you widen the node, up to 420px, and the height follows once
+  and settles. `tools/harness/lora_resize.mjs` runs twelve layout passes of both
+  the old and the new maths, showing the creep and its absence.
+* **The buttons no longer sit below the frame.** The node's height now includes
+  the margin under the button row.
+
+## 1.21.1 — card corners the right way round
+
+* The LoRA cards now carry **✕ at the top right and ★ at the top left**, the
+  same arrangement as the style browser, so the two galleries read alike.
+
+## 1.21.0 — LoRA gallery polish
+
+* **Delete a preview from inside the gallery.** Every card has a ✕ and a ★ in
+  its top corners, with a confirmation that says how many images will go.
+* **A banner at the top of the LoRA gallery**, which fades out as you scroll
+  into the grid and returns when you scroll back — the list matters more than
+  the picture once you are reading it.
+* **The node's preview resizes with the node.** A DOM widget is told its height
+  in advance, so dragging the corner now feeds the new figure back: the panel
+  fills from where it sits down to the node's bottom edge and the square preview
+  grows with it.
+
+## 1.20.0 — trigger words, a working LoRA preview, My styles
+
+* **The LoRA node had no preview.** Its panel borrowed the style node's markup,
+  whose heights are set in pixels by that node's layout code — which the LoRA
+  node does not run, so the preview collapsed to nothing. The LoRA panel now
+  sizes itself.
+* **Trigger words per LoRA.** Edit them under the preview, see them on every
+  card in the browser and in each card's tooltip, and take them out of the
+  node's new **triggers** output straight into a prompt. Stored in
+  `user/loras/triggers.json`; whitespace is tidied and an empty value clears
+  them.
+* **★ My styles** in the style browser's family filter: everything you wrote or
+  edited, wherever you filed it, in one place.
+
+## 1.19.1 — two bugs
+
+* **A new style could inherit a renamed one's images.** Gallery images are filed
+  under an entry's id, and an id is derived from the name when the entry is
+  created and then kept for life — which is right, because a rename must not
+  orphan the previews. But renaming frees the name, and the next style given
+  that name generated the same id, so the two entries shared a gallery. New ids
+  are now checked against every id in use and suffixed when they collide.
+  Existing entries keep their ids, so nothing already saved moves.
+* **The LoRA browser stacked every card in one place.** Its grid reused the
+  style browser's, which positions cards absolutely because it virtualises a
+  list of thousands. The LoRA browser draws every card, so it now uses a flowing
+  grid of its own.
+* **Saving a LoRA preview now repaints an open browser**, and the confirmation
+  says which gallery it went to and how many images that LoRA has.
+
+## 1.19.0 — the LoRA node
+
+* **New node: Neons LoRA Explorer.** Model and clip in, model and clip out,
+  plus the LoRA's name as a string — a LoRA loader with a gallery attached.
+* **Your folders are the grouping.** The list comes from ComfyUI's `loras`
+  folder: the top-level folder is a gallery and a folder inside it is a family,
+  so `loras/krea 2/portraits/soft.safetensors` is the *portraits* family of the
+  *krea 2* gallery. Loose files sit in *Unsorted*. Windows separators are
+  handled.
+* **A gallery per model folder.** The same LoRA filed under two checkpoints
+  keeps two separate sets of previews, so you can see how it behaves on each.
+* **Browser** with search and filters for gallery, family, favourites and
+  preview state; click a card to load that LoRA.
+* **Save** files the newest generated image against the current LoRA, in its own
+  gallery. Manual only — no crawl, no auto-populate, as asked.
+* **Favourite** a LoRA, promote any thumbnail to cover, delete a single image or
+  every image for a LoRA, and rescan the folder without restarting ComfyUI.
+* Previews live under `user/loras/<gallery>/`; nothing is written to your loras
+  folder. The save route has the same containment check as the style node's, so
+  a crafted path cannot read outside ComfyUI's output folder.
+
+## 1.18.1 — the export actually saves, and says so
+
+* **Export did nothing visible and could fail silently.** It was a plain
+  download link, which bypasses the helper that knows the server's base path
+  and reports nothing when the request 404s — the browser just says the file
+  was not available. The bundle is now fetched properly, so a failure is
+  reported on the node's status line, including *restart ComfyUI* when the
+  server has not loaded the route yet.
+* **Choose where it goes.** Chrome and Edge open a save dialog; other browsers
+  fall back to the download folder as before. Cancelling the dialog is reported
+  as cancelled rather than looking like a failure.
+* **Progress while it packs**, then the filename and size when it finishes.
+
+## 1.18.0 — share a whole catalog
+
+* **Export this catalog (previews + names)…** in the Import/export menu packs
+  the active catalog into a zip: every preview image, the style each one
+  belongs to, the prompts recorded against the catalog, and any custom or
+  edited styles those previews depend on, so they resolve on the other
+  machine.
+* **Import a shared catalog…** unpacks a bundle into a **new** catalog and
+  switches to it. Nothing already on your machine is touched.
+* Reading someone else's archive is the risky direction, so nothing in one is
+  used as a path: entries must sit directly under `previews/`, every name is
+  reduced to a slug with an image suffix, the resolved destination is checked
+  against the catalog's own folder, and an archive is refused if it holds more
+  than 20,000 files, expands past 512 MB, or expands more than 200 times its
+  stored size. Two tests cover the round trip and a hostile archive.
+
 ## 1.17.4 — the node stops resizing when the first preview arrives
 
 * **The shot strip now reserves its row from the start.** It took no space

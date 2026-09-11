@@ -630,6 +630,213 @@ class Catalog(unittest.TestCase):
         _p, _n, _d, styles = nodes.run(prompt="x", style=main[0], extra_style=extra[0])
         self.assertEqual([entry["name"] for entry in styles], [main[0], extra[0]])
 
+    def test_catalog_bundle_round_trip(self):
+        """A catalog exports to a zip and comes back as a new catalog."""
+        import io, json as json_mod, shutil, zipfile
+
+        bundle = importlib.import_module(f"{PKG}.bundle")
+        gallery_mod = importlib.import_module(f"{PKG}.gallery")
+        made = []
+        image = os.path.join(gallery_mod.previews_dir(), "probe_bundle--1.jpg")
+        manifest_path = gallery_mod.manifest_path()
+        had_manifest = os.path.isfile(manifest_path)
+        try:
+            os.makedirs(gallery_mod.previews_dir(), exist_ok=True)
+            with open(image, "wb") as handle:
+                handle.write(b"\xff\xd8\xff\xdb" + b"0" * 200)
+            with open(manifest_path, "w", encoding="utf-8") as handle:
+                json_mod.dump({"probe_bundle": {
+                    "shots": [{"file": "probe_bundle--1.jpg", "prompt": "a pier", "ts": 1}],
+                    "cover": "probe_bundle--1.jpg", "count": 1, "style": "[Anime] Chibi"}}, handle)
+
+            name, blob = bundle.export_catalog("default")
+            self.assertTrue(name.endswith(".zip"))
+            self.assertEqual(sorted(zipfile.ZipFile(io.BytesIO(blob)).namelist()),
+                             ["bundle.json", "previews/probe_bundle--1.jpg"])
+
+            ok, problem, info = bundle.import_bundle(blob, name="Probe Shared")
+            made.append(info["catalog"])
+            self.assertTrue(ok, problem)
+            self.assertEqual((info["images"], info["styles"]), (1, 1))
+            self.assertEqual(info["name"], "Probe Shared")
+        finally:
+            for cid in made:
+                catalog_sets.remove(cid, delete_files=True)
+            catalog_sets.select("default")
+            for path in (image, manifest_path):
+                if os.path.isfile(path) and not (path == manifest_path and had_manifest):
+                    os.remove(path)
+            shutil.rmtree(os.path.join(ROOT, "user", "catalogs"), ignore_errors=True)
+            wipe_user_files("catalogs.json", "custom.json")
+
+    def test_hostile_bundle_writes_nothing_outside_the_catalog(self):
+        """Zip entries are names, not paths: nothing in an archive may steer a
+        write, and an over-large or over-expanding archive is refused."""
+        import io, json as json_mod, shutil, zipfile
+
+        bundle = importlib.import_module(f"{PKG}.bundle")
+        made = []
+        probe_a = "/tmp/ns_escape_probe_a.jpg"
+        probe_b = "/tmp/ns_escape_probe_b.jpg"
+        try:
+            evil = io.BytesIO()
+            with zipfile.ZipFile(evil, "w") as archive:
+                archive.writestr("bundle.json", json_mod.dumps({
+                    "kind": "neons-style-catalog", "schema": 1, "name": "Evil",
+                    "entries": [], "prompts": []}))
+                archive.writestr("previews/../../../../tmp/ns_escape_probe_a.jpg", b"x" * 10)
+                archive.writestr("../../../tmp/ns_escape_probe_b.jpg", b"x" * 10)
+                archive.writestr("previews/notanimage.exe", b"x" * 10)
+            ok, problem, info = bundle.import_bundle(evil.getvalue(), name="Evil Probe")
+            made.append(info.get("catalog"))
+            self.assertTrue(ok, problem)
+            self.assertEqual(info["images"], 0)          # nothing was written
+            self.assertFalse(os.path.exists(probe_a))
+            self.assertFalse(os.path.exists(probe_b))
+
+            # a zip that is not one of ours
+            plain = io.BytesIO()
+            with zipfile.ZipFile(plain, "w") as archive:
+                archive.writestr("readme.txt", "hello")
+            ok, problem, _info = bundle.import_bundle(plain.getvalue())
+            self.assertFalse(ok)
+            self.assertIn("bundle.json", problem)
+
+            self.assertFalse(bundle.import_bundle(b"not a zip at all")[0])
+            # and names that are paths are reduced to names
+            self.assertEqual(bundle.safe_file("../../etc/passwd.jpg"), "passwd.jpg")
+            self.assertEqual(bundle.safe_file("shell.exe"), "")
+        finally:
+            for cid in [c for c in made if c]:
+                catalog_sets.remove(cid, delete_files=True)
+            catalog_sets.select("default")
+            for path in (probe_a, probe_b):
+                if os.path.exists(path):
+                    os.remove(path)
+            shutil.rmtree(os.path.join(ROOT, "user", "catalogs"), ignore_errors=True)
+            wipe_user_files("catalogs.json", "custom.json")
+
+    def test_lora_folders_become_galleries_and_families(self):
+        """The loras folder structure is the grouping: top folder is a gallery,
+        a folder inside it is a family."""
+        loras = importlib.import_module(f"{PKG}.loras")
+        self.assertEqual(loras.split("krea 2/portraits/soft.safetensors"),
+                         ("krea 2", "portraits", "soft"))
+        self.assertEqual(loras.split("krea 2/film_grain.safetensors"), ("krea 2", "", "film_grain"))
+        self.assertEqual(loras.split("loose.safetensors"), (loras.UNSORTED, "", "loose"))
+        self.assertEqual(loras.split("krea 2\\portraits\\soft.safetensors"),
+                         ("krea 2", "portraits", "soft"))   # windows separators
+
+    def test_lora_previews_are_per_gallery(self):
+        """The same LoRA filed under two checkpoints keeps two sets of images —
+        the reason galleries exist at all."""
+        import shutil
+
+        loras = importlib.import_module(f"{PKG}.loras")
+        from io import BytesIO
+
+        from PIL import Image
+
+        one = "krea 2/portraits/soft.safetensors"
+        two = "sdxl/portraits/soft.safetensors"
+        buffer = BytesIO()
+        Image.new("RGB", (8, 8), (40, 90, 160)).save(buffer, "JPEG")
+        pixel = buffer.getvalue()
+        try:
+            first = loras.add_shot(one, pixel, prompt="a pier")
+            second = loras.add_shot(two, pixel, prompt="a pier")
+            self.assertEqual(first["gallery"], "krea 2")
+            self.assertEqual(second["gallery"], "sdxl")
+            self.assertEqual(len(loras.manifest("krea 2")), 1)
+            self.assertEqual(len(loras.manifest("sdxl")), 1)
+            # deleting one leaves the other alone
+            self.assertEqual(loras.delete_lora_shots(one), 1)
+            self.assertEqual(len(loras.manifest("krea 2")), 0)
+            self.assertEqual(len(loras.manifest("sdxl")), 1)
+            # favourites round-trip
+            self.assertTrue(loras.set_favourite(two, True))
+            self.assertIn(two, loras.load_favourites())
+            self.assertFalse(loras.toggle_favourite(two))
+        finally:
+            shutil.rmtree(os.path.join(ROOT, "user", "loras"), ignore_errors=True)
+
+    def test_a_freed_name_does_not_inherit_the_old_gallery(self):
+        """Rename a custom style, then make a new one with the freed name: the
+        new entry must not pick up the first one's images. Ids are permanent —
+        previews are filed under them — so a new id has to be unique."""
+        store = importlib.import_module(f"{PKG}.store")
+        gallery_mod = importlib.import_module(f"{PKG}.gallery")
+        wipe_user_files("custom.json", "overrides.json")
+        try:
+            clause = "Probe rendering: flat test clause, illustration style image."
+            ok, first = store.save_custom(name="rename probe", family="Illustration", axis="style",
+                                          nl=clause, medium="illustration style image")
+            original = catalog.resolve(first)
+            ok, renamed = store.save_custom(name=first, update=True, family="Illustration",
+                                            axis="style", nl=clause,
+                                            medium="illustration style image",
+                                            rename="[Illustration][Custom] Moved On")
+            moved = catalog.resolve(renamed)
+            self.assertEqual(moved["id"], original["id"])          # its images stay attached
+
+            ok, second = store.save_custom(name="rename probe", family="Illustration", axis="style",
+                                           nl=clause, medium="illustration style image")
+            fresh = catalog.resolve(second)
+            self.assertNotEqual(fresh["id"], moved["id"])          # and the new one is its own
+            self.assertNotEqual(gallery_mod.key_for(fresh), gallery_mod.key_for(moved))
+        finally:
+            wipe_user_files("custom.json", "overrides.json")
+            catalog.entries(force=True)
+
+    def test_lora_save_round_trip(self):
+        """A saved image lands in the LoRA's gallery and comes back in the
+        manifest the browser reads."""
+        import shutil
+        from io import BytesIO
+
+        from PIL import Image
+
+        loras = importlib.import_module(f"{PKG}.loras")
+        name = "krea 2/portraits/probe.safetensors"
+        buffer = BytesIO()
+        Image.new("RGB", (8, 8), (10, 120, 200)).save(buffer, "JPEG")
+        try:
+            saved = loras.add_shot(name, buffer.getvalue(), prompt="a pier")
+            self.assertEqual(saved["gallery"], "krea 2")
+            record = loras.manifest("krea 2")[loras.slug(name)]
+            self.assertEqual(record["count"], 1)
+            self.assertEqual(record["cover"], saved["file"])
+            self.assertTrue(os.path.isfile(loras.shot_path("krea 2", loras.slug(name))))
+            # a second image joins it and can become the cover
+            again = loras.add_shot(name, buffer.getvalue(), make_cover=False)
+            self.assertEqual(loras.manifest("krea 2")[loras.slug(name)]["count"], 2)
+            self.assertTrue(loras.set_cover("krea 2", loras.slug(name), again["file"]))
+            self.assertEqual(loras.manifest("krea 2")[loras.slug(name)]["cover"], again["file"])
+            self.assertTrue(loras.delete_shot("krea 2", loras.slug(name), again["file"]))
+            self.assertEqual(loras.manifest("krea 2")[loras.slug(name)]["count"], 1)
+        finally:
+            shutil.rmtree(os.path.join(ROOT, "user", "loras"), ignore_errors=True)
+
+    def test_lora_trigger_words(self):
+        """A LoRA remembers the words it wants in the prompt, and the node
+        hands them out as an output."""
+        import shutil
+
+        loras = importlib.import_module(f"{PKG}.loras")
+        name = "krea 2/portraits/probe.safetensors"
+        try:
+            self.assertEqual(loras.triggers_for(name), "")
+            self.assertEqual(loras.set_triggers(name, "  soft   light,  glow "), "soft light, glow")
+            self.assertEqual(loras.triggers_for(name), "soft light, glow")
+            self.assertEqual(loras.entry(name)["triggers"], "soft light, glow")
+            self.assertIn(name, loras.load_triggers())
+            self.assertEqual(loras.set_triggers(name, "   "), "")      # cleared
+            self.assertNotIn(name, loras.load_triggers())
+            self.assertEqual(nodes.NeonsLoraExplorer.RETURN_NAMES,
+                             ("model", "clip", "lora_name", "triggers"))
+        finally:
+            shutil.rmtree(os.path.join(ROOT, "user", "loras"), ignore_errors=True)
+
     def test_roll_excludes(self):
         first = catalog.roll(seed=5)
         second = catalog.roll(seed=5, exclude=(first["name"],))

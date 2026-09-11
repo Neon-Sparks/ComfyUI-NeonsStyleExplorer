@@ -16,6 +16,7 @@ import types
 ROOT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "ComfyUI-NeonsStyleExplorer")
 sys.path.insert(0, os.path.dirname(ROOT))
 
+import aiohttp  # noqa: E402
 from aiohttp import web  # noqa: E402
 from aiohttp.test_utils import TestClient, TestServer  # noqa: E402
 
@@ -34,6 +35,14 @@ sys.modules["server"] = server_stub
 
 folder_paths = types.ModuleType("folder_paths")
 folder_paths.get_directory_by_type = lambda kind: "/tmp"
+folder_paths.get_filename_list = lambda kind: [
+    "krea 2/portraits/soft_light.safetensors",
+    "krea 2/portraits/hard_key.safetensors",
+    "krea 2/film_grain.safetensors",
+    "sdxl/anime/line_boost.safetensors",
+    "loose_one.safetensors",
+] if kind == "loras" else []
+folder_paths.get_full_path = lambda kind, name: None
 folder_paths.get_output_directory = lambda: "/tmp"
 sys.modules["folder_paths"] = folder_paths
 
@@ -93,6 +102,67 @@ async def main():
     # and the no-id case the UI hits before any catalog is chosen
     status, payload = await post("/neons_style/catalogs/prompt", {"text": "no id given"})
     print("POST /prompt (no id)     ", status, payload)
+
+    print("\n-- loras")
+    status, payload = await get("/neons_lora/catalog")
+    print(f"   GET /neons_lora/catalog {status} {payload['count']} loras")
+    for bucket in payload["galleries"]:
+        print(f"      gallery {bucket['name']!r:12} {bucket['count']} lora(s), families {bucket['families']}")
+    open("/tmp/ns_probe_lora.png", "wb").write(
+        __import__("base64").b64decode(
+            b"iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP8z8BQDwAEhQGAhKmMIQAAAABJRU5ErkJggg=="))
+    status, payload = await post("/neons_lora/save", {
+        "lora": "krea 2/portraits/soft_light.safetensors",
+        "filename": "ns_probe_lora.png", "subfolder": "", "type": "output", "prompt": "a pier",
+    })
+    print(f"   POST /neons_lora/save   {status} ok={payload.get('ok')} gallery={payload.get('gallery')!r} "
+          f"file={str(payload.get('file'))[:28]}...")
+    status, payload = await post("/neons_lora/favourite",
+                                 {"lora": "krea 2/film_grain.safetensors", "toggle": True})
+    print(f"   POST /neons_lora/favourite {status} favourite={payload.get('favourite')} "
+          f"list={payload.get('favourites')}")
+    status, payload = await post("/neons_lora/save", {
+        "lora": "krea 2/portraits/soft_light.safetensors", "filename": "passwd",
+        "subfolder": "../../../etc", "type": "output",
+    })
+    print(f"   POST save traversal     {status} ok={payload.get('ok')} {payload.get('error')}")
+    status, payload = await get("/neons_lora/catalog")
+    covered = {k: len(v) for k, v in payload["previews"].items() if v}
+    print(f"   previews now: {covered}")
+    import shutil as _sh
+    _sh.rmtree(os.path.join(ROOT, "user", "loras"), ignore_errors=True)
+    os.path.exists("/tmp/ns_probe_lora.png") and os.remove("/tmp/ns_probe_lora.png")
+
+    print("\n-- catalog bundle")
+    import importlib as _il3, io as _io, zipfile as _zip, json as _json2
+    _cs = _il3.import_module(f"{PKG}.catalogs")
+    _g = _il3.import_module(f"{PKG}.gallery")
+    os.makedirs(_g.previews_dir(), exist_ok=True)
+    _img = os.path.join(_g.previews_dir(), "probe_bundle--1.jpg")
+    open(_img, "wb").write(b"\xff\xd8\xff\xdb" + b"0" * 300)
+    with open(_g.manifest_path(), "w") as handle:
+        _json2.dump({"probe_bundle": {"shots": [{"file": "probe_bundle--1.jpg", "prompt": "a pier", "ts": 1}],
+                                      "cover": "probe_bundle--1.jpg", "count": 1,
+                                      "style": "[Anime] Chibi"}}, handle)
+    resp = await client.get("/neons_style/catalogs/export")
+    blob = await resp.read()
+    print(f"   GET /catalogs/export  {resp.status} {len(blob)} bytes "
+          f"disposition={resp.headers.get('Content-Disposition')}")
+    print(f"      contents: {_zip.ZipFile(_io.BytesIO(blob)).namelist()}")
+
+    form = aiohttp.FormData()
+    form.add_field("bundle", blob, filename="shared.zip", content_type="application/zip")
+    form.add_field("name", "From A Friend")
+    resp = await client.post("/neons_style/catalogs/import", data=form)
+    payload = _json2.loads(await resp.text())
+    print(f"   POST /catalogs/import {resp.status} ok={payload.get('ok')} "
+          f"name={payload.get('name')!r} images={payload.get('images')} styles={payload.get('styles')}")
+
+    for item in [row for row in _cs.items() if row["id"] != "default"]:
+        _cs.remove(item["id"], delete_files=True)
+    _cs.select("default")
+    os.path.isfile(_img) and os.remove(_img)
+    os.path.isfile(_g.manifest_path()) and os.remove(_g.manifest_path())
 
     print("\n-- security: cross-site POST")
     async def post_with_origin(path, body, origin):

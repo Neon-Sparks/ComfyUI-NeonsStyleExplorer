@@ -62,6 +62,17 @@ one with no Origin succeeds.
 The GET routes are read-only and a cross-site page cannot read their replies, so
 they are left open.
 
+### Reviewed: the catalog bundle (added after the first audit pass)
+
+Importing a zip means reading names that came from someone else's machine, so
+nothing in an archive is trusted as a path: entries must sit directly under
+`previews/`, each name is reduced to a slug with an image suffix, the resolved
+destination is compared against the catalog's own folder, and the archive is
+refused if it holds more than 20,000 files, expands past 512 MB, or expands
+more than 200 times its stored size. Tested with an archive carrying
+`previews/../../../../tmp/...` and `../../../tmp/...` entries plus an `.exe`:
+nothing was written and no file appeared outside the catalog.
+
 ### Fixed: dead code
 
 Three exports nothing used: `loadFavourites`, `pushRecent` (both superseded by

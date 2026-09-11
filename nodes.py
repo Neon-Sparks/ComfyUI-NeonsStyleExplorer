@@ -1,6 +1,7 @@
 """Neons Style Explorer — nodes."""
 
 from . import compose as composer
+from . import loras
 from . import runs
 from .catalog import (RANDOM_TOKEN, SOURCES, crawl_names, custom_names, entries,
                       imported_style_names, names_for, push_recent, resolve, roll,
@@ -321,14 +322,86 @@ class NeonsGalleryCapture:
         return (image, saved["file"] if saved else "")
 
 
+class NeonsLoraExplorer:
+    """A LoRA loader with the gallery beside it.
+
+    The picker is grouped by the folders in ComfyUI's loras directory: the
+    top-level folder is a gallery and a folder inside it is a family, so
+    `loras/krea 2/portraits/soft.safetensors` is the "portraits" family of the
+    "krea 2" gallery. Each gallery keeps its own previews, which is the whole
+    point — the same LoRA behaves differently on different checkpoints.
+    """
+
+    @classmethod
+    def INPUT_TYPES(cls):
+        available = loras.names(refresh=True)
+        return {
+            "required": {
+                "model": ("MODEL",),
+                "clip": ("CLIP",),
+                "lora": (["None"] + available, {
+                    "default": "None",
+                    "tooltip": "Which LoRA to load. Grouped by the folders in your loras directory: the top folder is its gallery, a folder inside that is its family.",
+                }),
+                "strength_model": ("FLOAT", {
+                    "default": 1.0, "min": -20.0, "max": 20.0, "step": 0.01,
+                    "tooltip": "How strongly the LoRA is applied to the model.",
+                }),
+                "strength_clip": ("FLOAT", {
+                    "default": 1.0, "min": -20.0, "max": 20.0, "step": 0.01,
+                    "tooltip": "How strongly the LoRA is applied to the text encoder.",
+                }),
+            },
+            "hidden": {"unique_id": "UNIQUE_ID"},
+        }
+
+    RETURN_TYPES = ("MODEL", "CLIP", "STRING", "STRING")
+    RETURN_NAMES = ("model", "clip", "lora_name", "triggers")
+    FUNCTION = "apply"
+    CATEGORY = "Neons"
+    DESCRIPTION = "Neons LoRA Explorer — load a LoRA, with a preview gallery per model folder."
+
+    def apply(self, model, clip, lora="None", strength_model=1.0, strength_clip=1.0, unique_id=None):
+        name = str(lora or "None")
+        triggers = loras.triggers_for(name) if name != "None" else ""
+        if name in ("", "None") or (not strength_model and not strength_clip):
+            return {"ui": self._ui(name),
+                    "result": (model, clip, "" if name == "None" else name, triggers)}
+
+        import comfy.sd
+        import comfy.utils
+        import folder_paths
+
+        path = folder_paths.get_full_path("loras", name)
+        if not path:
+            return {"ui": self._ui(name), "result": (model, clip, name, triggers)}
+        weights = comfy.utils.load_torch_file(path, safe_load=True)
+        patched_model, patched_clip = comfy.sd.load_lora_for_models(
+            model, clip, weights, strength_model, strength_clip
+        )
+        return {"ui": self._ui(name), "result": (patched_model, patched_clip, name, triggers)}
+
+    def _ui(self, name):
+        gallery, family, label = loras.split(name) if name not in ("", "None") else ("", "", "")
+        return {
+            "ns_lora": [name if name != "None" else ""],
+            "ns_lora_gallery": [gallery],
+            "ns_lora_family": [family],
+            "ns_lora_label": [label],
+            "ns_lora_triggers": [loras.triggers_for(name) if name not in ("", "None") else ""],
+        }
+
+
 NODE_CLASS_MAPPINGS = {
     "NeonsStyleExplorer": NeonsStyleExplorer,
     "NeonsStyleExplorerEncode": NeonsStyleExplorerEncode,
     "NeonsGalleryCapture": NeonsGalleryCapture,
+    "NeonsLoraExplorer": NeonsLoraExplorer,
 }
 
 NODE_DISPLAY_NAME_MAPPINGS = {
     "NeonsStyleExplorer": "Neons Style Explorer",
     "NeonsStyleExplorerEncode": "Neons Style Explorer (Encode)",
     "NeonsGalleryCapture": "Neons Gallery Capture",
+    "NeonsLoraExplorer": "Neons LoRA Explorer",
 }

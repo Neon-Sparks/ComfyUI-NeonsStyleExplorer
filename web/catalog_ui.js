@@ -1,6 +1,8 @@
 import { ensureCss } from "./css.js";
 import {
     addCatalogPrompt,
+    exportCatalogBundle,
+    importCatalogBundle,
     entryDetail,
     forgetDetail,
     gallerySignature,
@@ -524,12 +526,15 @@ export async function openCatalog(options = {}) {
     // shipped families first, then the user's own under one heading — with a
     // single option that gathers every custom family together
     const ALL_CUSTOM = "\u0000custom";
+    const MY_STYLES = "\u0000mine";
     function paintFamilies() {
         const current = famSel.value;
         const order = state.catalog.family_order || [];
         const shipped = order.filter((family) => !isCustomFamily(family));
         const mine = order.filter((family) => isCustomFamily(family));
         famSel.innerHTML = `<option value="">All families</option>`;
+        // your own work, wherever you filed it
+        famSel.add(new Option("★ My styles (custom + edited)", MY_STYLES));
         for (const family of shipped) famSel.add(new Option(family, family));
         if (mine.length) {
             famSel.add(new Option("— my families —", ALL_CUSTOM));
@@ -561,7 +566,9 @@ export async function openCatalog(options = {}) {
         rows = namesOf(axisSel.value)
             .map((name) => ({ name, entry: entryOf(name) || {}, shots: shotsOf(name) }))
             .filter(({ name, entry, shots }) => {
-                if (famSel.value === ALL_CUSTOM) {
+                if (famSel.value === MY_STYLES) {
+                    if (!["custom", "override"].includes(entry.source || "shipped")) return false;
+                } else if (famSel.value === ALL_CUSTOM) {
                     if (!isCustomFamily(entry.family)) return false;
                 } else if (famSel.value && entry.family !== famSel.value) {
                     return false;
@@ -1117,14 +1124,15 @@ export async function openCatalog(options = {}) {
 
     const wipeButton = overlay.querySelector(".wipe");
     const syncWipeLabel = () => {
-        const label = famSel.value === ALL_CUSTOM ? "my families" : famSel.value;
+        const label = famSel.value === ALL_CUSTOM ? "my families"
+            : famSel.value === MY_STYLES ? "my styles" : famSel.value;
         wipeButton.textContent = label ? `Delete ${label} previews` : "Delete all previews";
     };
     famSel.addEventListener("change", syncWipeLabel);
     syncWipeLabel();
     wipeButton.onclick = async () => {
         const stored = Object.keys(state.previews || {}).length;
-        if (famSel.value && famSel.value !== ALL_CUSTOM) {
+        if (famSel.value && famSel.value !== ALL_CUSTOM && famSel.value !== MY_STYLES) {
             if (!confirm(`Delete every gallery image for ${famSel.value}?`)) return;
             await deleteFamilyShots(famSel.value);
         } else {
@@ -1145,6 +1153,60 @@ export async function openCatalog(options = {}) {
                     link.href = URL.createObjectURL(blob);
                     link.download = "neons_styles.json";
                     link.click();
+                },
+            },
+            {
+                label: "Export this catalog (previews + names)…",
+                run: async () => {
+                    const count = Object.keys(state.previews || {}).length;
+                    if (!count && !confirm("This catalog has no previews yet. Export it anyway?")) return;
+                    const readable = (bytes) => bytes > 1048576
+                        ? `${(bytes / 1048576).toFixed(1)} MB`
+                        : `${Math.max(1, Math.round(bytes / 1024))} KB`;
+                    note(`packing ${count} preview${count === 1 ? "" : "s"}…`);
+                    const result = await exportCatalogBundle(state.catalogs.active, (done, total) => {
+                        note(total
+                            ? `exporting ${readable(done)} of ${readable(total)}…`
+                            : `exporting ${readable(done)}…`);
+                    });
+                    if (!result) {
+                        note(lastErrorText("the export failed"), true);
+                        return;
+                    }
+                    if (result.cancelled) {
+                        note("export cancelled");
+                        return;
+                    }
+                    note(result.chosen
+                        ? `saved ${result.filename} (${readable(result.bytes)})`
+                        : `downloaded ${result.filename} (${readable(result.bytes)}) — check your downloads folder`);
+                },
+            },
+            {
+                label: "Import a shared catalog…",
+                run: () => {
+                    const picker = document.createElement("input");
+                    picker.type = "file";
+                    picker.accept = ".zip,application/zip";
+                    picker.onchange = async () => {
+                        const file = picker.files?.[0];
+                        if (!file) return;
+                        const result = await importCatalogBundle(file);
+                        if (!result?.ok) {
+                            alert(result?.error || lastErrorText("that bundle could not be imported"));
+                            return;
+                        }
+                        await loadCatalog();
+                        await loadGallery();
+                        paintCatalogs();
+                        paintPrompts();
+                        filter();
+                        alert(`Imported "${result.name}": ${result.images} image(s) across `
+                            + `${result.styles} style(s)`
+                            + (result.styles_added ? `, plus ${result.styles_added} style definition(s)` : "")
+                            + ". It is now the active catalog.");
+                    };
+                    picker.click();
                 },
             },
             {

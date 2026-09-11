@@ -9,6 +9,7 @@ Nodes (category **Neons**):
 
 * **Neons Style Explorer** — text in, text out
 * **Neons Style Explorer (Encode)** — the same plus CLIP encode
+* **Neons LoRA Explorer** — a LoRA loader with a preview gallery per model folder
 * **Neons Gallery Capture** — headless equivalent of the Save button
 
 **[Read the manual](MANUAL.md)** · [pre-release audit](AUDIT.md) — every widget, the browser, previews, the
@@ -93,6 +94,38 @@ Up to eight shots per style, click a thumbnail in the strip to make it the
 cover, `auto_gallery` can fill them automatically. Previews are keyed on the
 style's stable id, so renaming never orphans an image.
 
+## LoRA node
+
+**Neons LoRA Explorer** loads a LoRA and keeps a preview gallery beside it. The
+list is ComfyUI's own `loras` folder, and the folders do the filing: a
+top-level folder is a **gallery**, a folder inside it is a **family**, and loose
+files land in **Unsorted**. No configuration.
+
+```
+loras/krea 2/film_grain.safetensors            gallery "krea 2"
+loras/krea 2/portraits/soft_light.safetensors  gallery "krea 2", family "portraits"
+loras/loose_one.safetensors                    gallery "Unsorted"
+```
+
+Each gallery keeps its own previews, so the same LoRA filed under two checkpoint
+folders has two separate sets of images — you can see how it behaves on each
+model instead of one mixed pile.
+
+* **Gallery** opens the browser: search, filter by gallery, family, favourites
+  or preview state, click a card to load that LoRA. **✕** on a card deletes its
+  previews, **★** favourites it, **Rescan** re-reads the folder after you add
+  LoRAs without restarting. The browser reopens on the search, filters and
+  scroll position you left it on.
+* **Trigger words** are edited under the preview and shown on every card. They
+  come out of the node's **triggers** output, so the words travel with the LoRA
+  straight into your prompt.
+* **Save** files the newest generated image against the current LoRA. Saving is
+  manual — no crawl, no auto-populate.
+* Outputs: `model`, `clip`, `lora_name`, `triggers`.
+
+Previews live in `user/loras/<gallery>/` and trigger words in
+`user/loras/triggers.json`. Nothing is ever written to your loras folder.
+
 ## The catalog
 
 **3015 entries** — 1419 with every clause hand-written for this catalog, plus the 1596-entry imported **Extra** family, across nine families: photography & film 249, traditional painting 208, anime & manga 164, design & aesthetics 150, 3D & games 148, illustration 122, comics & print 83, experimental & material 79, western animation 68. Three axes — 2867 styles, 97 formats, 51 finishes. The Extra family is imported from ThetaCursed's Krea 2 style collection under its MIT licence; see `THIRD-PARTY-NOTICES.md`. Old `[Clio]` names are relabelled `[v2]`, and every merged duplicate keeps its old name as a search alias. `STYLES.md` lists everything.
@@ -101,7 +134,7 @@ style's stable id, so renaming never orphans an image.
 tools/build_all.sh               # import + lint + index + docs + examples + tests
 python3 tools/lint.py --all      # every finding
 node tools/check_web.mjs         # UI: undefined calls and bad imports
-python3 tests/test_compose.py    # 50 tests
+python3 tests/test_compose.py    # 57 tests
 ```
 
 The source of truth for the text is `tools/written/*.json`; `import_source.py`
@@ -113,15 +146,19 @@ name picture content, ≤380 characters, and every tag must exist in
 ## Layout
 
 ```
-catalog.py   loading, merging, caching, lookup, roll
-compose.py   the one composer (the UI calls it over HTTP)
-nodes.py     the nodes
-gallery.py   preview gallery on disk
-store.py     overrides / custom / hidden styles
-styles/      the catalog, one file per family
-data/tags.txt   validated booru tag vocabulary
-web/         api, css, panel, catalog_ui, main
-tools/       import, lint, and the hand-written source in tools/written/
+catalog.py    loading, merging, caching, lookup, roll
+catalogs.py   named catalogs, each with its own previews and favourites
+compose.py    the one composer (the UI calls it over HTTP)
+nodes.py      the nodes
+gallery.py    preview gallery on disk
+runs.py       per-prompt records, so a saved image gets the right style
+loras.py      LoRA folders, previews, favourites, trigger words
+bundle.py     catalog export / import as a zip
+store.py      overrides / custom / hidden styles
+styles/       the catalog, one file per family
+data/tags.txt validated booru tag vocabulary
+web/          api, css, panel, catalog_ui, lora, main
+tools/        import, lint, harnesses, and the source in tools/written/
 ```
 
 MIT licensed.

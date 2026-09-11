@@ -14,6 +14,7 @@ def _routes():
 
     from . import compose as composer
     from . import gallery
+    from . import bundle as bundles
     from . import catalogs as catalog_sets
     from . import runs
     from .catalog import (
@@ -225,6 +226,138 @@ def _routes():
         else:
             ok = catalog_sets.add_prompt(cid, body.get("text") or "")
         return web.json_response({"ok": ok, **catalog_sets.payload()})
+
+    @routes.get("/neons_style/catalogs/export")
+    async def get_catalog_export(request):
+        """Download the active catalog as a shareable bundle."""
+        cid = request.query.get("id") or ""
+        mine = [entry for entry in entries() if entry["source"] in ("custom", "override")]
+        filename, blob = bundles.export_catalog(cid or None, styles=mine)
+        return web.Response(
+            body=blob,
+            headers={
+                "Content-Type": "application/zip",
+                "Content-Disposition": f'attachment; filename="{filename}"',
+                "Content-Length": str(len(blob)),
+            },
+        )
+
+    @post("/neons_style/catalogs/import")
+    async def post_catalog_import(request):
+        """Unpack a shared bundle into a new catalog."""
+        reader = await request.multipart()
+        raw, name = b"", ""
+        while True:
+            part = await reader.next()
+            if part is None:
+                break
+            if part.name == "name":
+                name = (await part.text()).strip()
+            elif part.name == "bundle":
+                chunks = []
+                size = 0
+                while True:
+                    chunk = await part.read_chunk()
+                    if not chunk:
+                        break
+                    size += len(chunk)
+                    if size > bundles.MAX_BYTES:
+                        return web.json_response(
+                            {"ok": False, "error": "that bundle is larger than this will accept"}
+                        )
+                    chunks.append(chunk)
+                raw = b"".join(chunks)
+        if not raw:
+            return web.json_response({"ok": False, "error": "no bundle was uploaded"})
+        ok, problem, info = bundles.import_bundle(raw, name=name or None)
+        return web.json_response({"ok": ok, "error": problem, **info, **catalog_sets.payload()})
+
+    # ---------------- loras ----------------
+
+    @routes.get("/neons_lora/catalog")
+    async def get_lora_catalog(request):
+        """Every LoRA ComfyUI can see, grouped by its folders, with previews."""
+        refresh = request.query.get("refresh") in ("1", "true", "True")
+        data = loras.catalog(refresh=refresh)
+        data["previews"] = loras.all_manifests()
+        return web.json_response({"ok": True, **data})
+
+    @routes.get("/neons_lora/banner")
+    async def get_lora_banner(request):
+        path = os.path.join(HERE, "web", "lora_banner.jpg")
+        if not os.path.isfile(path):
+            raise web.HTTPNotFound()
+        return web.FileResponse(path, headers={"Cache-Control": "public, max-age=86400"})
+
+    @routes.get("/neons_lora/shot")
+    async def get_lora_shot(request):
+        path = loras.shot_path(
+            request.query.get("gallery") or "",
+            request.query.get("key") or "",
+            request.query.get("file"),
+        )
+        if not path or not os.path.isfile(path):
+            raise web.HTTPNotFound()
+        return web.FileResponse(path, headers={"Cache-Control": "public, max-age=604800"})
+
+    @post("/neons_lora/save")
+    async def post_lora_save(request):
+        """File a generated image against a LoRA, in that LoRA's own gallery."""
+        import folder_paths
+
+        body = await data(request)
+        name = body.get("lora") or ""
+        filename = body.get("filename") or ""
+        if not name or not filename:
+            return web.json_response({"ok": False, "error": "missing lora or image"})
+        directory = folder_paths.get_directory_by_type(body.get("type") or "output") \
+            or folder_paths.get_output_directory()
+        full = inside(directory, body.get("subfolder") or "", filename)
+        if not full:
+            return web.json_response({"ok": False, "error": "that path is outside the output folder"})
+        if not os.path.isfile(full):
+            return web.json_response({"ok": False, "error": "image not found on disk"})
+        with open(full, "rb") as handle:
+            raw = handle.read()
+        saved = loras.add_shot(name, raw, prompt=body.get("prompt") or "")
+        if not saved:
+            return web.json_response({"ok": False, "error": "could not save that image"})
+        return web.json_response({"ok": True, **saved})
+
+    @post("/neons_lora/cover")
+    async def post_lora_cover(request):
+        body = await data(request)
+        return web.json_response({"ok": loras.set_cover(
+            body.get("gallery") or "", body.get("key") or "", body.get("file") or "")})
+
+    @post("/neons_lora/shot/delete")
+    async def post_lora_shot_delete(request):
+        body = await data(request)
+        return web.json_response({"ok": loras.delete_shot(
+            body.get("gallery") or "", body.get("key") or "", body.get("file") or "")})
+
+    @post("/neons_lora/delete")
+    async def post_lora_delete(request):
+        """Every image for one LoRA."""
+        body = await data(request)
+        return web.json_response({"ok": True, "removed": loras.delete_lora_shots(body.get("lora") or "")})
+
+    @post("/neons_lora/triggers")
+    async def post_lora_triggers(request):
+        """Save (or clear) the words a LoRA wants in the prompt."""
+        body = await data(request)
+        name = body.get("lora") or ""
+        text = loras.set_triggers(name, body.get("text") or "")
+        return web.json_response({"ok": bool(name), "lora": name, "triggers": text})
+
+    @post("/neons_lora/favourite")
+    async def post_lora_favourite(request):
+        body = await data(request)
+        name = body.get("lora") or ""
+        state = loras.toggle_favourite(name) if body.get("toggle") else \
+            loras.set_favourite(name, bool(body.get("on", True)))
+        return web.json_response({"ok": True, "lora": name, "favourite": state,
+                                  "favourites": loras.load_favourites()})
 
     # ---------------- families ----------------
 

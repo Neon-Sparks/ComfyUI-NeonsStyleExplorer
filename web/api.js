@@ -243,6 +243,105 @@ async function catalogSetCall(path, body) {
 export const createCatalogSet = (name) => catalogSetCall("/neons_style/catalogs/create", { name });
 export const selectCatalogSet = (id) => catalogSetCall("/neons_style/catalogs/select", { id });
 export const renameCatalogSet = (id, name) => catalogSetCall("/neons_style/catalogs/rename", { id, name });
+/**
+ * Download the catalog as a shareable bundle.
+ *
+ * Fetched rather than linked: a plain <a download> gave no feedback and no way
+ * to tell whether it had worked, and it bypasses api.fetchApi, which is what
+ * knows the server's base path. Streaming also means progress can be reported,
+ * and where the browser supports it the user picks the folder.
+ */
+export async function exportCatalogBundle(id, onProgress) {
+    const query = new URLSearchParams({ id: id || "" });
+    state.lastError = null;
+    let response;
+    try {
+        response = await api.fetchApi(`/neons_style/catalogs/export?${query}`);
+    } catch (err) {
+        state.lastError = { path: "/neons_style/catalogs/export", status: 0, message: String(err) };
+        return null;
+    }
+    if (!response || response.ok === false) {
+        state.lastError = { path: "/neons_style/catalogs/export", status: response?.status || 0 };
+        return null;
+    }
+
+    const disposition = response.headers.get("Content-Disposition") || "";
+    // no regex here: a quote inside one trips the source checker, and this is
+    // clearer anyway
+    const QUOTE = String.fromCharCode(34);
+    const after = disposition.split("filename=")[1] || "";
+    const filename = after.split(";")[0].split(QUOTE).join("").trim() || "neons-catalog.zip";
+    const total = Number(response.headers.get("Content-Length")) || 0;
+
+    let blob;
+    const reader = response.body?.getReader?.();
+    if (reader) {
+        const chunks = [];
+        let received = 0;
+        for (;;) {
+            const { done, value } = await reader.read();
+            if (done) break;
+            chunks.push(value);
+            received += value.length;
+            onProgress?.(received, total);
+        }
+        blob = new Blob(chunks, { type: "application/zip" });
+    } else {
+        blob = await response.blob();
+        onProgress?.(blob.size, blob.size);
+    }
+
+    // Chrome and Edge can ask where to put it; everything else goes to the
+    // browser's download folder
+    if (typeof window.showSaveFilePicker === "function") {
+        try {
+            const handle = await window.showSaveFilePicker({
+                suggestedName: filename,
+                types: [{ description: "Neons catalog bundle", accept: { "application/zip": [".zip"] } }],
+            });
+            const writable = await handle.createWritable();
+            await writable.write(blob);
+            await writable.close();
+            return { filename: handle.name || filename, bytes: blob.size, chosen: true };
+        } catch (err) {
+            if (err?.name === "AbortError") return { cancelled: true };
+            // fall through to a normal download
+        }
+    }
+
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement("a");
+    link.href = url;
+    link.download = filename;
+    document.body.appendChild(link);
+    link.click();
+    link.remove();
+    setTimeout(() => URL.revokeObjectURL(url), 10000);
+    return { filename, bytes: blob.size, chosen: false };
+}
+
+/** Unpack someone else's bundle into a new catalog. */
+export async function importCatalogBundle(file, name = "") {
+    const form = new FormData();
+    form.append("bundle", file, file.name || "bundle.zip");
+    if (name) form.append("name", name);
+    state.lastError = null;
+    try {
+        const response = await api.fetchApi("/neons_style/catalogs/import", { method: "POST", body: form });
+        if (response && response.ok === false) {
+            state.lastError = { path: "/neons_style/catalogs/import", status: response.status };
+            return null;
+        }
+        const data = await response.json();
+        if (data?.ok) state.catalogs = { active: data.active, name: data.name, items: data.items || [] };
+        return data;
+    } catch (err) {
+        state.lastError = { path: "/neons_style/catalogs/import", status: 0, message: String(err?.message || err) };
+        return null;
+    }
+}
+
 export const addCatalogPrompt = (id, text) =>
     catalogSetCall("/neons_style/catalogs/prompt", { id, text });
 export const deleteCatalogPrompt = (id, text) =>

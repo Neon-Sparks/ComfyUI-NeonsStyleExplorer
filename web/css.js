@@ -127,6 +127,33 @@ const CSS = `
 .ns-prompts .note.bad { color:#f0a0a0; }
 .ns-viewport { position:relative; padding:14px 16px 24px; }
 .ns-cards { position:relative; }
+/* The style browser positions its cards absolutely (it virtualises a grid of
+   thousands). The LoRA browser draws every card, so its grid flows instead —
+   without this the cards all sit at the same coordinates, stacked. */
+.ns-cards.flow { display:flex; flex-wrap:wrap; gap:12px; align-content:flex-start;
+    padding:2px; height:auto !important; }
+.ns-cards.flow .ns-card { position:relative; flex:0 0 auto; }
+
+/* The LoRA panel sizes itself: the style node's layout code sets its panel's
+   heights in pixels, and without that the preview collapsed to nothing. */
+.ns-panel.lora { height:100%; }
+.ns-panel.lora .ns-stage { flex:1 1 auto; min-height:0; }
+.ns-panel.lora .ns-thumb { height:100%; aspect-ratio:1 / 1; max-width:100%; }
+.ns-panel.lora .ns-shots { flex:0 0 auto; }
+.ns-lora-trigger { flex:0 0 auto; display:flex; align-items:center; gap:6px; padding:0 1px;
+    font-size:11px; color:#9aa2b1; pointer-events:auto; min-height:18px; }
+.ns-lora-trigger .words { flex:1 1 auto; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;
+    color:#cfd6e2; }
+.ns-lora-trigger .words.none { color:#5c626e; font-style:italic; }
+.ns-lora-trigger input { flex:1 1 auto; min-width:0; padding:3px 7px; font-size:11px; border-radius:6px;
+    border:1px solid #3b5a8a; background:#10131a; color:#e7ebf2; }
+.ns-lora-trigger button { font-size:10px; padding:2px 8px; border-radius:6px; border:1px solid #333642;
+    background:#1b1e26; color:#cfd3da; cursor:pointer; }
+.ns-banner.lora { transition:opacity .18s linear; }
+/* delete top right, favourite top left — the same way round as the style
+   browser, so the two read alike */
+.ns-card .trig { display:block; margin-top:2px; font-size:10px; color:#8b93a1;
+    overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
 .ns-card { position:absolute; box-sizing:border-box; background:#161922; border:1px solid #262a34;
     border-radius:12px; overflow:hidden; cursor:pointer; display:flex; flex-direction:column; }
 .ns-card:hover { border-color:#5480ee; }
@@ -206,8 +233,8 @@ export function ensureCss() {
         el.id = "ns-style-css";
         document.head.appendChild(el);
     }
-    if (el.dataset.v !== "15") {
+    if (el.dataset.v !== "19") {
         el.textContent = CSS;
-        el.dataset.v = "15";
+        el.dataset.v = "19";
     }
 }
