@@ -37,7 +37,7 @@ picture is rendered and closes with its medium. It never says what is in the
 picture, never instructs the model, and never contradicts your prompt.
 
 ```
-Anime broadcast still: flat cel colouring in hard shadow bands, simplified
+Anime broadcast still, flat cel colouring in hard shadow bands, simplified
 on-model faces, painted matte background, mild compression softness and grain,
 TV-frame colour, anime style image.
 ```
@@ -46,7 +46,7 @@ That clause is joined to your prompt, and the result is one sentence about
 rendering followed by your subject:
 
 ```
-masterpiece, best quality, Anime broadcast still: flat cel colouring in hard
+masterpiece, best quality, Anime broadcast still, flat cel colouring in hard
 shadow bands, simplified on-model faces, painted matte background, mild
 compression softness and grain, TV-frame colour, anime style image. a woman on
 a fire escape at night
@@ -496,6 +496,21 @@ Two rules keep the catalog consistent:
 * **Close with the medium**, and use the family's convention — everything in the
   anime family ends `anime style image`, photography ends `photograph style
   image`, and so on.
+
+The written clauses open by naming the process and then carry on in commas —
+`Plein-air rendering, fast wet-into-wet strokes, ... oil painting style image.`
+There is no colon after the opening phrase; the whole clause is one comma list,
+which is how prompt parsers read it and how the imported entries already read.
+The linter rejects a colon followed by a space.
+
+A clause also never names the **frame's shape or size** — no ratios, no
+*widescreen*, no *tall framing*, no *square frame*. Your workflow's latent or
+image node decides the canvas, and a style that argues with it only makes the
+result worse. The format entries name the artefact and describe the rendering:
+*Composed as a phone wallpaper, subject placed off the middle so the centre
+stays calm…* — you set the shape, the style handles the look. The linter
+rejects ratio and framing language, narrowly enough that a proportion
+(*two-head-tall bodies*) or a texture (*vertical scanlines*) still passes.
 
 Changing a custom style's family rebuilds its bracket tag — move one to
 "Figurine" and `[Material][Custom] Tiny Thing` becomes `[Figurine][Custom] Tiny

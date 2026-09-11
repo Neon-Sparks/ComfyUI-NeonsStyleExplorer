@@ -4,7 +4,7 @@
   "family": "Photography & Film",
   "axis": "finish",
   "medium": "photograph style image",
-  "nl": "Bloom finish: bright areas blooming softly into their surroundings, haloed highlights, gentle contrast lift, photograph style image.",
+  "nl": "Bloom finish, bright areas blooming softly into their surroundings, haloed highlights, gentle contrast lift, photograph style image.",
   "tags": [
    "glowing",
    "soft_focus",
@@ -20,7 +20,7 @@
   "family": "Photography & Film",
   "axis": "finish",
   "medium": "photograph style image",
-  "nl": "Chromatic-aberration finish: red and cyan fringing along high-contrast edges, colour separation growing toward the corners, photograph style image.",
+  "nl": "Chromatic-aberration finish, red and cyan fringing along high-contrast edges, colour separation growing toward the corners, photograph style image.",
   "tags": [
    "chromatic_aberration",
    "glitch",
@@ -36,7 +36,7 @@
   "family": "Photography & Film",
   "axis": "finish",
   "medium": "photograph style image",
-  "nl": "Dirty-lens finish: dust specks and smears on the front element, veiling haze around light sources, lowered micro-contrast, photograph style image.",
+  "nl": "Dirty-lens finish, dust specks and smears on the front element, veiling haze around light sources, lowered micro-contrast, photograph style image.",
   "tags": [
    "lens_flare",
    "textured",
@@ -52,7 +52,7 @@
   "family": "Photography & Film",
   "axis": "finish",
   "medium": "photograph style image",
-  "nl": "Veiling-flare finish: milky wash across the shadows from a light just off frame, lifted blacks, reduced saturation, photograph style image.",
+  "nl": "Veiling-flare finish, milky wash across the shadows from a light just off frame, lifted blacks, reduced saturation, photograph style image.",
   "tags": [
    "lens_flare",
    "soft_focus",
@@ -68,7 +68,7 @@
   "family": "Photography & Film",
   "axis": "finish",
   "medium": "photograph style image",
-  "nl": "Vignette finish: corners falling into shadow, brightness concentrated at the centre, slight edge softening, photograph style image.",
+  "nl": "Vignette finish, corners falling into shadow, brightness concentrated at the centre, slight edge softening, photograph style image.",
   "tags": [
    "vignetting",
    "dark",
@@ -84,11 +84,10 @@
   "family": "Photography & Film",
   "axis": "finish",
   "medium": "photograph style image",
-  "nl": "Anamorphic finish: horizontal blue streaks off every hot light, oval bokeh, slight edge stretching, photograph style image.",
+  "nl": "Anamorphic finish, horizontal blue streaks off every hot light, oval bokeh, slight edge stretching, photograph style image.",
   "tags": [
    "lens_flare",
-   "bokeh",
-   "widescreen"
+   "bokeh"
   ],
   "tags_negative": [
    "simple_background"
@@ -100,7 +99,7 @@
   "family": "Photography & Film",
   "axis": "finish",
   "medium": "photograph style image",
-  "nl": "Shallow-focus finish: paper-thin plane of focus, creamy blurred surroundings, rounded specular highlights, photograph style image.",
+  "nl": "Shallow-focus finish, paper-thin plane of focus, creamy blurred surroundings, rounded specular highlights, photograph style image.",
   "tags": [
    "depth_of_field",
    "bokeh",
@@ -116,7 +115,7 @@
   "family": "Photography & Film",
   "axis": "finish",
   "medium": "photograph style image",
-  "nl": "Deep-focus finish: foreground and distance equally sharp, small aperture clarity, crisp edge detail throughout, photograph style image.",
+  "nl": "Deep-focus finish, foreground and distance equally sharp, small aperture clarity, crisp edge detail throughout, photograph style image.",
   "tags": [
    "highres",
    "realistic"
@@ -132,7 +131,7 @@
   "family": "Photography & Film",
   "axis": "finish",
   "medium": "photograph style image",
-  "nl": "Frozen-motion finish: fast-shutter crispness, suspended droplets and debris, no trailing blur anywhere, photograph style image.",
+  "nl": "Frozen-motion finish, fast-shutter crispness, suspended droplets and debris, no trailing blur anywhere, photograph style image.",
   "tags": [
    "highres",
    "flash_photography",
@@ -148,7 +147,7 @@
   "family": "Photography & Film",
   "axis": "finish",
   "medium": "photograph style image",
-  "nl": "Slow-shutter finish: trailing motion smears behind moving edges, ghosted overlaps, static parts still sharp, photograph style image.",
+  "nl": "Slow-shutter finish, trailing motion smears behind moving edges, ghosted overlaps, static parts still sharp, photograph style image.",
   "tags": [
    "motion_blur",
    "long_exposure"
@@ -163,7 +162,7 @@
   "family": "Photography & Film",
   "axis": "finish",
   "medium": "photograph style image",
-  "nl": "Heavy-grain finish: coarse clumped silver structure through the mid tones, softened fine detail, gritty texture, photograph style image.",
+  "nl": "Heavy-grain finish, coarse clumped silver structure through the mid tones, softened fine detail, gritty texture, photograph style image.",
   "tags": [
    "film_grain",
    "textured",
@@ -179,7 +178,7 @@
   "family": "Photography & Film",
   "axis": "finish",
   "medium": "photograph style image",
-  "nl": "Clean-digital finish: noise-free shadows, neutral colour science, controlled micro-contrast, no grain or halation, photograph style image.",
+  "nl": "Clean-digital finish, noise-free shadows, neutral colour science, controlled micro-contrast, no grain or halation, photograph style image.",
   "tags": [
    "highres",
    "realistic"
@@ -195,7 +194,7 @@
   "family": "Photography & Film",
   "axis": "finish",
   "medium": "photograph style image",
-  "nl": "Crushed-black finish: shadows clipped to pure black, punchy separation, no detail in the darks, photograph style image.",
+  "nl": "Crushed-black finish, shadows clipped to pure black, punchy separation, no detail in the darks, photograph style image.",
   "tags": [
    "high_contrast",
    "dark",
@@ -211,7 +210,7 @@
   "family": "Photography & Film",
   "axis": "finish",
   "medium": "photograph style image",
-  "nl": "Matte-grade finish: blacks lifted to charcoal, compressed highlights, low saturation, faded print feel, photograph style image.",
+  "nl": "Matte-grade finish, blacks lifted to charcoal, compressed highlights, low saturation, faded print feel, photograph style image.",
   "tags": [
    "muted_color",
    "desaturated",
@@ -227,7 +226,7 @@
   "family": "Photography & Film",
   "axis": "finish",
   "medium": "photograph style image",
-  "nl": "High-key finish: bright shadowless wash, tones pushed toward white, minimal contrast, airy openness, photograph style image.",
+  "nl": "High-key finish, bright shadowless wash, tones pushed toward white, minimal contrast, airy openness, photograph style image.",
   "tags": [
    "white_theme",
    "pale_color",
@@ -243,7 +242,7 @@
   "family": "Photography & Film",
   "axis": "finish",
   "medium": "photograph style image",
-  "nl": "Low-key finish: most of the frame in shadow, a single sculpted highlight, dense black surround, photograph style image.",
+  "nl": "Low-key finish, most of the frame in shadow, a single sculpted highlight, dense black surround, photograph style image.",
   "tags": [
    "dark",
    "chiaroscuro",
@@ -259,7 +258,7 @@
   "family": "Comics & Print",
   "axis": "finish",
   "medium": "comic style image",
-  "nl": "Moiré finish: overlapping halftone screens beating against each other, interference rosettes, slight colour shimmer, comic style image.",
+  "nl": "Moiré finish, overlapping halftone screens beating against each other, interference rosettes, slight colour shimmer, comic style image.",
   "tags": [
    "halftone",
    "glitch",
@@ -275,7 +274,7 @@
   "family": "Comics & Print",
   "axis": "finish",
   "medium": "comic style image",
-  "nl": "Dot-gain finish: halftone dots spreading into each other, darkened mid tones, ink bleeding into absorbent stock, comic style image.",
+  "nl": "Dot-gain finish, halftone dots spreading into each other, darkened mid tones, ink bleeding into absorbent stock, comic style image.",
   "tags": [
    "halftone",
    "textured",
@@ -291,7 +290,7 @@
   "family": "Comics & Print",
   "axis": "finish",
   "medium": "comic style image",
-  "nl": "Uncoated-stock finish: matte fibrous surface, ink sinking slightly, softened edges, muted colour absorption, comic style image.",
+  "nl": "Uncoated-stock finish, matte fibrous surface, ink sinking slightly, softened edges, muted colour absorption, comic style image.",
   "tags": [
    "textured",
    "muted_color",
@@ -307,7 +306,7 @@
   "family": "Comics & Print",
   "axis": "finish",
   "medium": "graphic style image",
-  "nl": "Foil-stamp finish: mirrored metallic areas catching the light, crisp stamped edges, slight debossed depth, graphic style image.",
+  "nl": "Foil-stamp finish, mirrored metallic areas catching the light, crisp stamped edges, slight debossed depth, graphic style image.",
   "tags": [
    "metallic",
    "shiny",
@@ -323,7 +322,7 @@
   "family": "Comics & Print",
   "axis": "finish",
   "medium": "graphic style image",
-  "nl": "Emboss finish: raised and recessed areas catching raking light, soft shadow in the depressions, thick paper relief, graphic style image.",
+  "nl": "Emboss finish, raised and recessed areas catching raking light, soft shadow in the depressions, thick paper relief, graphic style image.",
   "tags": [
    "textured",
    "traditional_media",
@@ -339,7 +338,7 @@
   "family": "Photography & Film",
   "axis": "finish",
   "medium": "photograph style image",
-  "nl": "Damaged-print finish: hairline scratches, dust specks, small emulsion nicks, uneven fading at the edges, photograph style image.",
+  "nl": "Damaged-print finish, hairline scratches, dust specks, small emulsion nicks, uneven fading at the edges, photograph style image.",
   "tags": [
    "textured",
    "film_grain",
@@ -355,7 +354,7 @@
   "family": "Experimental & Material",
   "axis": "finish",
   "medium": "material style image",
-  "nl": "Compression finish: blocky 8-pixel artefacts around edges, ringing halos, banded flat areas, muddied fine detail, material style image.",
+  "nl": "Compression finish, blocky 8-pixel artefacts around edges, ringing halos, banded flat areas, muddied fine detail, material style image.",
   "tags": [
    "glitch",
    "dithering",
@@ -371,7 +370,7 @@
   "family": "Experimental & Material",
   "axis": "finish",
   "medium": "material style image",
-  "nl": "Upscaled finish: over-smoothed surfaces with hallucinated micro-detail, waxy texture, halos along strong edges, material style image.",
+  "nl": "Upscaled finish, over-smoothed surfaces with hallucinated micro-detail, waxy texture, halos along strong edges, material style image.",
   "tags": [
    "textured",
    "soft_focus",
@@ -387,7 +386,7 @@
   "family": "Experimental & Material",
   "axis": "finish",
   "medium": "material style image",
-  "nl": "Banding finish: stepped bands across smooth gradients, posterised skies, visible tonal quantisation, material style image.",
+  "nl": "Banding finish, stepped bands across smooth gradients, posterised skies, visible tonal quantisation, material style image.",
   "tags": [
    "dithering",
    "gradient",
@@ -403,7 +402,7 @@
   "family": "Experimental & Material",
   "axis": "finish",
   "medium": "material style image",
-  "nl": "Screen-door finish: fine dark grid between pixels, RGB subpixel fringing, slight display glow, material style image.",
+  "nl": "Screen-door finish, fine dark grid between pixels, RGB subpixel fringing, slight display glow, material style image.",
   "tags": [
    "dithering",
    "glitch",
@@ -419,7 +418,7 @@
   "family": "Photography & Film",
   "axis": "finish",
   "medium": "photograph style image",
-  "nl": "Ultra-detail finish: every fibre, pore and grain resolved, high micro-contrast, crisp edge definition throughout, photograph style image.",
+  "nl": "Ultra-detail finish, every fibre, pore and grain resolved, high micro-contrast, crisp edge definition throughout, photograph style image.",
   "tags": [
    "highres",
    "textured",
@@ -436,7 +435,7 @@
   "family": "Design & Aesthetics",
   "axis": "finish",
   "medium": "graphic style image",
-  "nl": "Reduced-detail finish: forms simplified to their essential shapes, texture removed, only the largest value steps kept, graphic style image.",
+  "nl": "Reduced-detail finish, forms simplified to their essential shapes, texture removed, only the largest value steps kept, graphic style image.",
   "tags": [
    "minimalism",
    "flat_color",
@@ -453,7 +452,7 @@
   "family": "Illustration",
   "axis": "finish",
   "medium": "illustration style image",
-  "nl": "Unfinished finish: resolved focal area fading into blocked-in shapes, raw ground showing at the borders, visible construction, illustration style image.",
+  "nl": "Unfinished finish, resolved focal area fading into blocked-in shapes, raw ground showing at the borders, visible construction, illustration style image.",
   "tags": [
    "unfinished",
    "sketch",
@@ -469,7 +468,7 @@
   "family": "Photography & Film",
   "axis": "finish",
   "medium": "photograph style image",
-  "nl": "Wet finish: water beading over every surface, hard specular glints, mirrored reflections in the flats, darkened saturated colour, photograph style image.",
+  "nl": "Wet finish, water beading over every surface, hard specular glints, mirrored reflections in the flats, darkened saturated colour, photograph style image.",
   "tags": [
    "wet",
    "shiny",

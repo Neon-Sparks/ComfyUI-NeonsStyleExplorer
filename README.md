@@ -37,7 +37,7 @@ ships. Python 3.9+.
 ## Output
 
 ```
-masterpiece, best quality, Anime broadcast still: flat cel colouring in hard
+masterpiece, best quality, Anime broadcast still, flat cel colouring in hard
 shadow bands, simplified on-model faces, painted matte background, mild
 compression softness and grain, TV-frame colour, anime style image. a woman on
 a fire escape at night

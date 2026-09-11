@@ -1,5 +1,54 @@
 # Changelog
 
+## 2.1.2 — no frame shape in a clause either
+
+* **Framing language is gone, not just ratios.** 2.1.1 swapped `16:9` for
+  *wide horizontal framing*, which asserts the same thing in words. Twenty-three
+  clauses across the format, cinema and photography entries now name the
+  artefact and describe the rendering, leaving the canvas entirely to your
+  workflow: *square album sleeve* → *album sleeve*, *tall cover panel* → *cover
+  panel*, *widescreen composition* → gone, *letterbox framing* → gone, *tall
+  aspect* → gone.
+* The linter rejects ratio and framing language, written narrowly so a
+  proportion (*two-head-tall bodies*), a texture (*vertical scanlines*) or a
+  landscape *painting* still pass — checked against both lists.
+* **The `widescreen` booru tag went with them** — 18 entries carried it, and a
+  tag asks for the same thing the words did. It is out of the 247-tag
+  vocabulary too (now 246), so it cannot be typed back into an edit.
+* Four more entries were caught by the new rule after the first pass, which is
+  the rule earning its place: *Wanted Poster* said *portrait panel* meaning a
+  likeness (now *mugshot panel*), *Copy-Stand Reproduction* said *dead-square
+  framing* meaning perpendicular (now *perpendicular alignment*), MTG framed its
+  art in a *landscape crop* (now *illustrated border*), and *Widescreen Still*
+  had become a duplicate of *Cinematic Still* once its framing was removed — it
+  is now a *wide-angle film still*, since a lens is an optical choice rather
+  than a canvas.
+* Entry names are unchanged, so *Widescreen Still*, *Webtoon Vertical* and
+  *Album Cover* are still where you left them.
+
+## 2.1.1 — no aspect ratios in a clause
+
+* **Six clauses named a frame size** (`2.39:1`, `16:9`, `9:16`) which your
+  workflow already decides, so the style could only argue with it. They now
+  describe the framing instead — *wide letterboxed staging*, *tall vertical
+  framing*, *broad horizontal crop*, *landscape title slide* — and the linter
+  rejects a ratio in a written clause.
+* `low-resolution` and similar stay: those describe a look, not an output size.
+
+## 2.1.0 — commas, not colons
+
+* **The clause no longer breaks after the opening phrase with a colon.** All
+  1,419 written clauses now read as one comma list —
+  `Plein-air rendering, fast wet-into-wet strokes, ... oil painting style image.`
+  — which is how prompt parsers read a prompt and how the imported entries
+  already read. Aspect ratios are untouched: `2.39:1` and `16:9` have no space
+  after the colon, so the rewrite could not reach them, and the six entries
+  carrying one were checked by hand.
+* The linter now rejects a colon followed by a space in a written clause, so the
+  old form cannot come back through an edit or a new pack.
+* Documented examples in the README and manual updated, and the clause shape is
+  written down in the manual's style-writing section.
+
 ## 2.0.1 — green CI
 
 * **The test workflow failed on a clean runner.** Two preview tests write a real

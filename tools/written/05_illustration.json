@@ -1,1859 +1,1859 @@
 [
-  {
-    "name": "[Drawing][v2] Mad Magazine Cover Art",
-    "medium": "illustration style image",
-    "nl": "Satirical magazine rendering: rubbery caricature drawing, dense gag detail, flat four-colour print inks, halftone shading, illustration style image.",
-    "tags": [
-      "halftone",
-      "comic",
-      "colorful",
-      "lineart",
-      "retro_artstyle"
-    ],
-    "tags_negative": [
-      "photorealistic"
-    ],
-    "negative": "photographic realism, muted restraint"
-  },
-  {
-    "name": "[Format] Bestiary Page",
-    "medium": "illustration style image",
-    "nl": "Composed as a bestiary page: a single specimen centred on ruled vellum, hand-lettered caption space, gold-touched border, illustration style image.",
-    "tags": [
-      "diagram",
-      "gold",
-      "traditional_media",
-      "sepia"
-    ],
-    "tags_negative": [
-      "photorealistic"
-    ],
-    "negative": "photographic capture, modern layout"
-  },
-  {
-    "name": "[Format] Tattoo Flash",
-    "medium": "illustration style image",
-    "nl": "Composed as a tattoo-flash sheet: several bold motifs spaced on cream paper, heavy black contour, limited spot colour, illustration style image.",
-    "tags": [
-      "multiple_views",
-      "lineart",
-      "limited_palette",
-      "traditional_media",
-      "spot_color"
-    ],
-    "tags_negative": [
-      "photorealistic"
-    ],
-    "negative": "photographic rendering, soft gradients"
-  },
-  {
-    "name": "[Illustration] Pulp Magazine Cover",
-    "medium": "illustration style image",
-    "nl": "Pulp-cover rendering: lurid oil brushwork, hot spot lighting on the hero, cheap saturated print inks, yellowed paper, illustration style image.",
-    "tags": [
-      "oil_painting_(medium)",
-      "colorful",
-      "retro_artstyle",
-      "high_contrast",
-      "textured"
-    ],
-    "tags_negative": [
-      "minimalism"
-    ],
-    "negative": "restrained modern design, muted palette"
-  },
-  {
-    "name": "[Illustration] Vintage Tarot",
-    "medium": "illustration style image",
-    "nl": "Vintage tarot rendering: flat symbolic figures, bold black outline, limited red-yellow-blue inks, worn card border, illustration style image.",
-    "tags": [
-      "flat_color",
-      "outline",
-      "limited_palette",
-      "traditional_media",
-      "trading_card"
-    ],
-    "tags_negative": [
-      "photorealistic"
-    ],
-    "negative": "photographic depth, airbrushed gradients"
-  },
-  {
-    "name": "[Cover][v2] Action Movie Poster with Diagonal Speed Strokes",
-    "medium": "poster style image",
-    "nl": "Action-poster rendering: slashing diagonal speed strokes, hot rim light on the figure, smoke and ember particles, saturated grade, poster style image.",
-    "tags": [
-      "poster",
-      "speed_lines",
-      "rim_lighting",
-      "high_contrast",
-      "glowing"
-    ],
-    "tags_negative": [
-      "muted_color"
-    ],
-    "negative": "calm static framing, muted palette"
-  },
-  {
-    "name": "[Cover][v2] Aleksi Briclot and Sparth-Inspired Art",
-    "medium": "illustration style image",
-    "nl": "Concept-cover rendering: massive scale staging, atmospheric depth haze, textured brush blocking, cool desaturated palette with one hot accent, illustration style image.",
-    "tags": [
-      "concept_art",
-      "painting_(medium)",
-      "muted_color",
-      "cinematic_lighting",
-      "textured"
-    ],
-    "tags_negative": [
-      "flat_color"
-    ],
-    "negative": "flat cartoon colour, clean vector shapes"
-  },
-  {
-    "name": "[Cover][v2] Cover Art",
-    "medium": "illustration style image",
-    "nl": "Cover-art rendering: hero-centred staging, dramatic key light, rich painted colour, clear space kept for a title, illustration style image.",
-    "tags": [
-      "cover",
-      "painting_(medium)",
-      "cinematic_lighting",
-      "poster"
-    ],
-    "tags_negative": [
-      "sketch"
-    ],
-    "negative": "rough sketch, documentary flatness"
-  },
-  {
-    "name": "[Cover][v2] Crisp Semi-Realistic Anime Illustration",
-    "medium": "illustration style image",
-    "nl": "Semi-real anime rendering: clean sharp line over painted volume, glossy eye and hair highlights, soft skin gradients, illustration style image.",
-    "tags": [
-      "anime_coloring",
-      "gradient",
-      "highres",
-      "lineart"
-    ],
-    "tags_negative": [
-      "film_grain"
-    ],
-    "negative": "grainy photo texture, flat TV cel"
-  },
-  {
-    "name": "[Cover][v2] Dark Fantasy Illustration",
-    "medium": "illustration style image",
-    "nl": "Dark-fantasy rendering: oil-thick shadow masses, ember key against cold ambient, ornate armour detail, dry-brush texture, illustration style image.",
-    "tags": [
-      "dark",
-      "chiaroscuro",
-      "painting_(medium)",
-      "glowing",
-      "textured"
-    ],
-    "tags_negative": [
-      "pastel_colors"
-    ],
-    "negative": "pastel brightness, flat cartoon colour",
-    "aliases": [
-      "[Cover][Clio] Dark Fantasy Illustration",
-      "[Aesthetic] Dark Fantasy Illustration"
-    ]
-  },
-  {
-    "name": "[Cover][v2] Expressive Character Illustration",
-    "medium": "illustration style image",
-    "nl": "Expressive character rendering: confident economical strokes, exaggerated silhouette, bold colour blocking, loose edges, illustration style image.",
-    "tags": [
-      "painting_(medium)",
-      "colorful",
-      "sketch",
-      "high_contrast"
-    ],
-    "tags_negative": [
-      "photorealistic"
-    ],
-    "negative": "photoreal detail, timid pastel palette"
-  },
-  {
-    "name": "[Cover][v2] Faceted Painterly Digital painting",
-    "medium": "illustration style image",
-    "nl": "Faceted painterly rendering: form built from angular brush planes, visible stroke edges, temperature shifts between facets, illustration style image.",
-    "tags": [
-      "painting_(medium)",
-      "textured",
-      "cubism",
-      "muted_color"
-    ],
-    "tags_negative": [
-      "soft_focus"
-    ],
-    "negative": "airbrushed blending, photographic smoothness"
-  },
-  {
-    "name": "[Cover][v2] Glossy Semi-Realistic",
-    "medium": "illustration style image",
-    "nl": "Glossy semi-real rendering: airbrushed skin sheen over sharp line, saturated highlight bloom, polished surface finish, illustration style image.",
-    "tags": [
-      "airbrush_(medium)",
-      "gradient",
-      "highres",
-      "shiny"
-    ],
-    "tags_negative": [
-      "textured"
-    ],
-    "negative": "gritty brush texture, muted flat colour"
-  },
-  {
-    "name": "[Cover][v2] GTA V Polished Cover Art",
-    "medium": "illustration style image",
-    "nl": "Vector-realist cover rendering: crisp outlined figures, flat gradient fills, sun-bleached palette, poster panel layout, illustration style image.",
-    "tags": [
-      "vector_trace",
-      "flat_color",
-      "outline",
-      "gradient",
-      "poster"
-    ],
-    "tags_negative": [
-      "textured"
-    ],
-    "negative": "painterly texture, photographic depth"
-  },
-  {
-    "name": "[Cover][v2] Hyper-Stylized Digital Painting",
-    "medium": "illustration style image",
-    "nl": "Hyper-stylised digital rendering: exaggerated shape language, sculpted rim light, saturated selective colour, minimal detail elsewhere, illustration style image.",
-    "tags": [
-      "painting_(medium)",
-      "rim_lighting",
-      "high_contrast",
-      "colorful"
-    ],
-    "tags_negative": [
-      "photorealistic"
-    ],
-    "negative": "photoreal rendering, muted evenness",
-    "aliases": [
-      "[Cover][Clio] Hyper-Stylized Digital Painting",
-      "[Design][v2] Hyper-Stylized Illustration",
-      "[Design][Clio] Hyper-Stylized Illustration"
-    ]
-  },
-  {
-    "name": "[Cover][v2] Ilya Kuvshinov",
-    "medium": "illustration style image",
-    "nl": "Modern portrait-illustration rendering: clean thin line, soft cheek gradients, cool pastel palette with warm accents, glossy eyes, illustration style image.",
-    "tags": [
-      "anime_coloring",
-      "pastel_colors",
-      "gradient",
-      "portrait"
-    ],
-    "tags_negative": [
-      "textured"
-    ],
-    "negative": "heavy brush texture, gritty realism"
-  },
-  {
-    "name": "[Cover][v2] Interplay of Shadow and Light",
-    "medium": "illustration style image",
-    "nl": "Light-and-shadow rendering: subject cut by hard shafts and cast patterns, deep unlit masses, luminous edges, illustration style image.",
-    "tags": [
-      "chiaroscuro",
-      "high_contrast",
-      "dark",
-      "glowing"
-    ],
-    "tags_negative": [
-      "soft_focus"
-    ],
-    "negative": "flat even fill, low-contrast haze"
-  },
-  {
-    "name": "[Cover][v2] Ismail Inceoglu",
-    "medium": "illustration style image",
-    "nl": "Atmospheric concept rendering: monumental scale against tiny figures, layered fog depth, gritty texture overlays, muted palette, illustration style image.",
-    "tags": [
-      "concept_art",
-      "scenery",
-      "muted_color",
-      "textured",
-      "cinematic_lighting"
-    ],
-    "tags_negative": [
-      "flat_color"
-    ],
-    "negative": "flat graphic shapes, saturated cartoon colour"
-  },
-  {
-    "name": "[Cover][v2] J.C. Leyendecker",
-    "medium": "oil painting style image",
-    "nl": "Leyendecker-style rendering: crisp cross-hatched brushstrokes, sculpted highlight planes, warm-cool contrast, poster-clean shapes, oil painting style image.",
-    "tags": [
-      "oil_painting_(medium)",
-      "textured",
-      "cross-hatching",
-      "retro_artstyle"
-    ],
-    "tags_negative": [
-      "airbrush_(medium)"
-    ],
-    "negative": "airbrushed smoothness, photographic finish"
-  },
-  {
-    "name": "[Cover][v2] James Jean",
-    "medium": "illustration style image",
-    "nl": "Ornamental surreal rendering: flowing linear detail, pearlescent pastel washes, layered symbolic motifs, delicate ink accents, illustration style image.",
-    "tags": [
-      "watercolor_(medium)",
-      "lineart",
-      "pastel_colors",
-      "surreal",
-      "traditional_media"
-    ],
-    "tags_negative": [
-      "high_contrast"
-    ],
-    "negative": "harsh contrast, blunt graphic shapes"
-  },
-  {
-    "name": "[Cover][v2] Kay Nielsen",
-    "medium": "illustration style image",
-    "nl": "Golden-age fairy-tale rendering: elongated decorative figures, flat jewel colour, gold-line ornament, patterned negative space, illustration style image.",
-    "tags": [
-      "art_nouveau",
-      "gold",
-      "flat_color",
-      "lineart",
-      "traditional_media"
-    ],
-    "tags_negative": [
-      "photorealistic"
-    ],
-    "negative": "photographic modelling, muddy palette"
-  },
-  {
-    "name": "[Cover][v2] Kekai Kotaki",
-    "medium": "illustration style image",
-    "nl": "Dark-fantasy concept rendering: charcoal-grey value blocking, ink-splatter texture, one glowing accent, brutal silhouette shapes, illustration style image.",
-    "tags": [
-      "dark",
-      "monochrome",
-      "textured",
-      "concept_art",
-      "glowing"
-    ],
-    "tags_negative": [
-      "colorful"
-    ],
-    "negative": "bright saturated palette, clean vector line"
-  },
-  {
-    "name": "[Cover][v2] Loish Ultrarealism",
-    "medium": "illustration style image",
-    "nl": "Soft-realist illustration rendering: fluid painted skin, warm-cool light mixing, loose brush edges, glowing hair rim, illustration style image.",
-    "tags": [
-      "painting_(medium)",
-      "gradient",
-      "rim_lighting",
-      "portrait"
-    ],
-    "tags_negative": [
-      "flat_color"
-    ],
-    "negative": "flat cel colour, hard outline"
-  },
-  {
-    "name": "[Cover][v2] Luminous Pastel",
-    "medium": "illustration style image",
-    "nl": "Luminous pastel rendering: glowing pale palette, soft bloom around lights, gentle gradient transitions, low contrast, illustration style image.",
-    "tags": [
-      "pastel_colors",
-      "glowing",
-      "gradient",
-      "soft_focus"
-    ],
-    "tags_negative": [
-      "dark"
-    ],
-    "negative": "dark heavy grade, harsh contrast"
-  },
-  {
-    "name": "[Cover][v2] Marvel Rivals Character Design (Painterly Comic Illustration)",
-    "medium": "illustration style image",
-    "nl": "Painterly comic-cover rendering: brushy modelled costume detail, bold graphic shadow shapes, saturated hero palette, illustration style image.",
-    "tags": [
-      "painting_(medium)",
-      "comic",
-      "colorful",
-      "rim_lighting"
-    ],
-    "tags_negative": [
-      "halftone"
-    ],
-    "negative": "benday dots, flat print inks"
-  },
-  {
-    "name": "[Cover][v2] Melancholic Hyperrealism",
-    "medium": "illustration style image",
-    "nl": "Melancholic hyperreal rendering: photographic skin detail, desaturated cool palette, soft window light, still quiet mood, illustration style image.",
-    "tags": [
-      "photorealistic",
-      "muted_color",
-      "soft_focus",
-      "portrait"
-    ],
-    "tags_negative": [
-      "colorful"
-    ],
-    "negative": "saturated poster colour, cartoon simplification"
-  },
-  {
-    "name": "[Cover][v2] Movie Digital Art",
-    "medium": "poster style image",
-    "nl": "Film-poster rendering: montage composition, teal-and-orange grade, glowing edge light, painted-photo hybrid texture, poster style image.",
-    "tags": [
-      "poster",
-      "cinematic_lighting",
-      "glowing",
-      "painting_(medium)"
-    ],
-    "tags_negative": [
-      "sketch"
-    ],
-    "negative": "loose sketch, flat documentary framing"
-  },
-  {
-    "name": "[Cover][v2] MTG (Magic: The Gathering)",
-    "medium": "illustration style image",
-    "nl": "Card-art rendering: painted fantasy staging inside a landscape crop, dramatic magical glow, rich layered brushwork, illustration style image.",
-    "tags": [
-      "painting_(medium)",
-      "glowing",
-      "cinematic_lighting",
-      "colorful"
-    ],
-    "tags_negative": [
-      "flat_color"
-    ],
-    "negative": "flat vector shapes, photographic capture"
-  },
-  {
-    "name": "[Cover][v2] Robin Eley",
-    "medium": "illustration style image",
-    "nl": "Hyperreal figure rendering: translucent plastic wrap over skin, forensic pore detail, cool studio light, glassy highlights, illustration style image.",
-    "tags": [
-      "photorealistic",
-      "transparent",
-      "highres",
-      "realistic"
-    ],
-    "tags_negative": [
-      "sketch"
-    ],
-    "negative": "loose brushwork, cartoon flatness"
-  },
-  {
-    "name": "[Cover][v2] RossDraws",
-    "medium": "illustration style image",
-    "nl": "Vibrant fantasy rendering: glowing saturated colour, soft airbrushed skin, sparkling particle atmosphere, bold rim light, illustration style image.",
-    "tags": [
-      "glowing",
-      "colorful",
-      "airbrush_(medium)",
-      "sparkle",
-      "rim_lighting"
-    ],
-    "tags_negative": [
-      "muted_color"
-    ],
-    "negative": "muted realism, gritty texture"
-  },
-  {
-    "name": "[Cover][v2] Sharp-Lined Glossy Semi-Realistic Portrait",
-    "medium": "illustration style image",
-    "nl": "Sharp-line portrait rendering: crisp ink contour over glossy painted volume, high-shine highlights, saturated palette, illustration style image.",
-    "tags": [
-      "lineart",
-      "gradient",
-      "highres",
-      "portrait",
-      "shiny"
-    ],
-    "tags_negative": [
-      "sketch"
-    ],
-    "negative": "loose sketch, matte muted colour"
-  },
-  {
-    "name": "[Cover][v2] Splatterpunk Horror Illustration",
-    "medium": "illustration style image",
-    "nl": "Splatterpunk rendering: violent ink spatter, high-contrast blacks, sickly green-red palette, torn texture overlays, illustration style image.",
-    "tags": [
-      "ink_(medium)",
-      "high_contrast",
-      "dark",
-      "red_theme",
-      "textured"
-    ],
-    "tags_negative": [
-      "pastel_colors"
-    ],
-    "negative": "pastel calm, clean vector design"
-  },
-  {
-    "name": "[Cover][v2] Tom Bagshaw-Inspired Digital Painting",
-    "medium": "illustration style image",
-    "nl": "Dark-romantic rendering: photoreal skin under painted ornament, deep shadow surround, warm gold accents, glossy detail, illustration style image.",
-    "tags": [
-      "photorealistic",
-      "dark",
-      "gold",
-      "painting_(medium)",
-      "chiaroscuro"
-    ],
-    "tags_negative": [
-      "flat_color"
-    ],
-    "negative": "flat graphic shapes, bright even light"
-  },
-  {
-    "name": "[Cover][v2] Victo Ngai",
-    "medium": "illustration style image",
-    "nl": "Editorial-decorative rendering: flowing pattern fields, layered flat colour with fine linework, warm-cool jewel palette, illustration style image.",
-    "tags": [
-      "flat_color",
-      "lineart",
-      "colorful",
-      "art_nouveau"
-    ],
-    "tags_negative": [
-      "photorealistic"
-    ],
-    "negative": "photographic depth, muted realism"
-  },
-  {
-    "name": "[Digital][v2] Absolute Painterly",
-    "medium": "illustration style image",
-    "nl": "Fully painterly rendering: every edge made of brushwork, no line art, thick colour transitions, textured canvas feel, illustration style image.",
-    "tags": [
-      "painting_(medium)",
-      "no_lineart",
-      "textured",
-      "gradient"
-    ],
-    "tags_negative": [
-      "lineart"
-    ],
-    "negative": "clean outlines, vector flatness"
-  },
-  {
-    "name": "[Digital][v2] Artgerm",
-    "medium": "illustration style image",
-    "nl": "Glamour digital-portrait rendering: porcelain airbrushed skin, crisp specular highlights, strand-by-strand hair, glossy pin-up polish, illustration style image.",
-    "tags": [
-      "airbrush_(medium)",
-      "gradient",
-      "highres",
-      "portrait",
-      "shiny"
-    ],
-    "tags_negative": [
-      "textured"
-    ],
-    "negative": "rough texture, muted documentary grade"
-  },
-  {
-    "name": "[Digital][v2] ArtStation Masterpiece",
-    "medium": "illustration style image",
-    "nl": "Polished concept-portfolio rendering: dramatic cinematic key, layered atmospheric depth, immaculate rendering, saturated accent glow, illustration style image.",
-    "tags": [
-      "concept_art",
-      "cinematic_lighting",
-      "highres",
-      "glowing"
-    ],
-    "tags_negative": [
-      "sketch"
-    ],
-    "negative": "rough sketch, flat cartoon shading"
-  },
-  {
-    "name": "[Digital][v2] Bastien Lecouffe-Deharme Fantasy",
-    "medium": "illustration style image",
-    "nl": "Dark-fantasy rendering: smoky textured overlays, near-black surroundings, sculpted warm key on the figure, gritty spatter, illustration style image.",
-    "tags": [
-      "dark",
-      "textured",
-      "chiaroscuro",
-      "painting_(medium)"
-    ],
-    "tags_negative": [
-      "pastel_colors"
-    ],
-    "negative": "pastel palette, clean vector edges"
-  },
-  {
-    "name": "[Digital][v2] Bernie Wrightson Gothic",
-    "medium": "illustration style image",
-    "nl": "Gothic pen rendering: obsessive crosshatch texture, gnarled organic detail, deep black masses, engraving-fine line, illustration style image.",
-    "tags": [
-      "cross-hatching",
-      "monochrome",
-      "ink_(medium)",
-      "dark",
-      "high_contrast"
-    ],
-    "tags_negative": [
-      "colorful"
-    ],
-    "negative": "colour rendering, smooth airbrush"
-  },
-  {
-    "name": "[Digital][v2] Blacklight",
-    "medium": "illustration style image",
-    "nl": "Blacklight rendering: fluorescent pigments glowing against near-black, violet ambient wash, hot magenta and green accents, illustration style image.",
-    "tags": [
-      "neon_palette",
-      "glowing",
-      "dark",
-      "purple_theme",
-      "high_saturation"
-    ],
-    "tags_negative": [
-      "muted_color"
-    ],
-    "negative": "daylight palette, matte muted colour"
-  },
-  {
-    "name": "[Digital][v2] Brassaï Night Photography",
-    "medium": "photograph style image",
-    "nl": "Night-photography rendering: wet cobble reflections, halated street lamps, deep grainy blacks, silver monochrome, photograph style image.",
-    "tags": [
-      "monochrome",
-      "dark",
-      "film_grain",
-      "wet",
-      "glowing"
-    ],
-    "tags_negative": [
-      "colorful"
-    ],
-    "negative": "colour grade, bright even light"
-  },
-  {
-    "name": "[Digital][v2] Castlevania Concept Art",
-    "medium": "illustration style image",
-    "nl": "Gothic game-concept rendering: sharp angular design, blood-red and slate palette, hard shadow blocking, ink-textured brush, illustration style image.",
-    "tags": [
-      "concept_art",
-      "dark",
-      "red_theme",
-      "high_contrast",
-      "textured"
-    ],
-    "tags_negative": [
-      "pastel_colors"
-    ],
-    "negative": "pastel softness, clean flat vector"
-  },
-  {
-    "name": "[Digital][v2] Character Design Illustration",
-    "medium": "illustration style image",
-    "nl": "Character-design rendering: clear silhouette read, flat even light, tidy costume detail, neutral ground, callout swatches, illustration style image.",
-    "tags": [
-      "character_sheet",
-      "flat_color",
-      "simple_background",
-      "lineart"
-    ],
-    "tags_negative": [
-      "cinematic_lighting"
-    ],
-    "negative": "dramatic lighting, painted environment"
-  },
-  {
-    "name": "[Digital][v2] Charlie Bowater",
-    "medium": "illustration style image",
-    "nl": "Soft-glow portrait rendering: luminous skin gradients, cool teal shadow with warm key, delicate hair strands, dreamy bloom, illustration style image.",
-    "tags": [
-      "gradient",
-      "glowing",
-      "portrait",
-      "soft_focus",
-      "painting_(medium)"
-    ],
-    "tags_negative": [
-      "high_contrast"
-    ],
-    "negative": "harsh contrast, flat cel bands"
-  },
-  {
-    "name": "[Digital][v2] Contemporary Commercial Illustration",
-    "medium": "illustration style image",
-    "nl": "Commercial rendering: clean shape language, restrained brand palette, subtle grain overlay, tidy flat-plus-gradient shading, illustration style image.",
-    "tags": [
-      "flat_color",
-      "gradient",
-      "limited_palette",
-      "minimalism"
-    ],
-    "tags_negative": [
-      "textured"
-    ],
-    "negative": "gritty texture, photographic depth"
-  },
-  {
-    "name": "[Digital][v2] Contemporary Fantasy Art",
-    "medium": "illustration style image",
-    "nl": "Modern fantasy rendering: painted volumes with crisp focal detail, magical rim glow, layered depth haze, rich saturated palette, illustration style image.",
-    "tags": [
-      "painting_(medium)",
-      "glowing",
-      "rim_lighting",
-      "colorful"
-    ],
-    "tags_negative": [
-      "monochrome"
-    ],
-    "negative": "monochrome grit, flat poster shapes"
-  },
-  {
-    "name": "[Digital][v2] Cosmic Horror Illustration",
-    "medium": "illustration style image",
-    "nl": "Cosmic-horror rendering: impossible geometry in the dark, sickly bioluminescent glow, tentacular texture detail, ink-black voids, illustration style image.",
-    "tags": [
-      "dark",
-      "glowing",
-      "surreal",
-      "textured",
-      "green_theme"
-    ],
-    "tags_negative": [
-      "pastel_colors"
-    ],
-    "negative": "cheerful pastel palette, clean minimal design"
-  },
-  {
-    "name": "[Digital][v2] Digital Painting",
-    "medium": "illustration style image",
-    "nl": "Digital painting rendering: layered brush strokes, blended colour transitions, controlled edge hierarchy, subtle canvas texture, illustration style image.",
-    "tags": [
-      "painting_(medium)",
-      "gradient",
-      "textured"
-    ],
-    "tags_negative": [
-      "photorealistic"
-    ],
-    "negative": "photographic capture, hard vector edges"
-  },
-  {
-    "name": "[Digital][v2] Editorial Illustration",
-    "medium": "illustration style image",
-    "nl": "Editorial rendering: conceptual metaphor staging, limited print palette, textured flat shapes, generous white space, illustration style image.",
-    "tags": [
-      "flat_color",
-      "limited_palette",
-      "textured",
-      "minimalism"
-    ],
-    "tags_negative": [
-      "photorealistic"
-    ],
-    "negative": "photographic realism, dense rendering"
-  },
-  {
-    "name": "[Digital][v2] Gris Grimly-Inspired Hyperrealism",
-    "medium": "illustration style image",
-    "nl": "Macabre-whimsy rendering: spindly distorted forms, ink line over sepia washes, stained paper texture, muted decay palette, illustration style image.",
-    "tags": [
-      "ink_(medium)",
-      "sepia",
-      "textured",
-      "muted_color",
-      "traditional_media"
-    ],
-    "tags_negative": [
-      "colorful"
-    ],
-    "negative": "bright saturated colour, clean vector shapes"
-  },
-  {
-    "name": "[Digital][v2] Sakimichan",
-    "medium": "illustration style image",
-    "nl": "Glossy semi-real rendering: luminous airbrushed skin, warm rim light, sparkling highlight accents, soft focus falloff, illustration style image.",
-    "tags": [
-      "airbrush_(medium)",
-      "glowing",
-      "rim_lighting",
-      "sparkle",
-      "portrait"
-    ],
-    "tags_negative": [
-      "textured"
-    ],
-    "negative": "gritty texture, flat cel shading"
-  },
-  {
-    "name": "[Digital][v2] Scribble Fine Art",
-    "medium": "drawing style image",
-    "nl": "Scribble rendering: form emerging from tangled continuous pen loops, tonal density by overlap, raw paper ground, drawing style image.",
-    "tags": [
-      "sketch",
-      "lineart",
-      "monochrome",
-      "textured"
-    ],
-    "tags_negative": [
-      "flat_color"
-    ],
-    "negative": "clean flat colour, smooth shading"
-  },
-  {
-    "name": "[Digital][v2] X-Ray",
-    "medium": "material style image",
-    "nl": "X-ray rendering: inverted densities, translucent internal structure, cool blue-grey film base, glowing bright bone, material style image.",
-    "tags": [
-      "monochrome",
-      "blue_theme",
-      "transparent",
-      "glowing",
-      "greyscale"
-    ],
-    "tags_negative": [
-      "colorful"
-    ],
-    "negative": "natural surface colour, opaque materials",
-    "aliases": [
-      "[Digital][Clio] X-Ray",
-      "[Experimental] X-Ray Film"
-    ]
-  },
-  {
-    "name": "[Drawing][v2] Beatrix Potter",
-    "medium": "watercolour painting style image",
-    "nl": "Storybook watercolour rendering: delicate ink outline, pale naturalistic washes, soft vignette into white paper, gentle detail, watercolour painting style image.",
-    "tags": [
-      "watercolor_(medium)",
-      "lineart",
-      "pale_color",
-      "traditional_media",
-      "vignetting"
-    ],
-    "tags_negative": [
-      "high_contrast"
-    ],
-    "negative": "harsh contrast, saturated digital colour",
-    "aliases": [
-      "[Drawing][Clio] Beatrix Potter",
-      "[Drawing][v2] Beatrix Potter Style (2)",
-      "[Drawing][Clio] Beatrix Potter Style (2)"
-    ]
-  },
-  {
-    "name": "[Drawing][v2] Bookplate Illustration",
-    "medium": "print style image",
-    "nl": "Bookplate rendering: engraved fine line, ornamental border and banner, monochrome ink on cream, heraldic symmetry, print style image.",
-    "tags": [
-      "lithograph",
-      "monochrome",
-      "lineart",
-      "traditional_media"
-    ],
-    "tags_negative": [
-      "colorful"
-    ],
-    "negative": "full colour, painterly texture"
-  },
-  {
-    "name": "[Drawing][v2] Boulet Graphic Illustration",
-    "medium": "illustration style image",
-    "nl": "Graphic-diary rendering: energetic ink line, flat washes of two or three colours, expressive caricature, comic-panel clarity, illustration style image.",
-    "tags": [
-      "ink_(medium)",
-      "limited_palette",
-      "comic",
-      "lineart"
-    ],
-    "tags_negative": [
-      "photorealistic"
-    ],
-    "negative": "photographic realism, airbrushed polish"
-  },
-  {
-    "name": "[Drawing][v2] Caricature",
-    "medium": "illustration style image",
-    "nl": "Caricature rendering: exaggerated features on a shrunken body, confident ink contour, flat marker colour, playful distortion, illustration style image.",
-    "tags": [
-      "lineart",
-      "flat_color",
-      "marker_(medium)",
-      "colorful"
-    ],
-    "tags_negative": [
-      "realistic"
-    ],
-    "negative": "accurate proportion, photographic realism"
-  },
-  {
-    "name": "[Drawing][v2] Children's Book Drawing",
-    "medium": "illustration style image",
-    "nl": "Children's-book rendering: friendly rounded shapes, soft crayon and watercolour texture, warm limited palette, generous white space, illustration style image.",
-    "tags": [
-      "watercolor_(medium)",
-      "crayon_(medium)",
-      "pastel_colors",
-      "textured",
-      "traditional_media"
-    ],
-    "tags_negative": [
-      "dark"
-    ],
-    "negative": "dark grim palette, photographic detail"
-  },
-  {
-    "name": "[Drawing][v2] Chinese Ink Drawing",
-    "medium": "ink painting style image",
-    "nl": "Chinese ink rendering: graded brush washes, dry-brush texture strokes, sparse composition, wide empty paper, ink painting style image.",
-    "tags": [
-      "ink_wash_painting",
-      "monochrome",
-      "traditional_media",
-      "minimalism"
-    ],
-    "tags_negative": [
-      "colorful"
-    ],
-    "negative": "saturated colour, dense filled background"
-  },
-  {
-    "name": "[Drawing][v2] Collector Storybook Illustration",
-    "medium": "illustration style image",
-    "nl": "Collector-edition storybook rendering: fine ink detail over rich gouache colour, gold-line ornament, decorative border, illustration style image.",
-    "tags": [
-      "gouache_(medium)",
-      "gold",
-      "lineart",
-      "traditional_media",
-      "colorful"
-    ],
-    "tags_negative": [
-      "photorealistic"
-    ],
-    "negative": "photographic depth, loose sketchiness"
-  },
-  {
-    "name": "[Drawing][v2] Conté Pastel",
-    "medium": "drawing style image",
-    "nl": "Conté rendering: sanguine and black chalk on toned paper, hatched tonal build, white chalk highlights, grainy tooth, drawing style image.",
-    "tags": [
-      "pastel_(medium)",
-      "charcoal_(medium)",
-      "sepia",
-      "textured",
-      "traditional_media"
-    ],
-    "tags_negative": [
-      "colorful"
-    ],
-    "negative": "full colour, smooth digital gradients"
-  },
-  {
-    "name": "[Drawing][v2] Crayola Colored-Book",
-    "medium": "material style image",
-    "nl": "Crayon colouring-book rendering: thick black printed outline, waxy scribbled fill overshooting the lines, paper tooth, material style image.",
-    "tags": [
-      "crayon_(medium)",
-      "outline",
-      "textured",
-      "colorful",
-      "traditional_media"
-    ],
-    "tags_negative": [
-      "highres"
-    ],
-    "negative": "precise digital fill, smooth shading"
-  },
-  {
-    "name": "[Drawing][v2] Doodle",
-    "medium": "drawing style image",
-    "nl": "Doodle rendering: casual biro line, repeated absent-minded motifs, uneven pressure, margin-of-the-page informality, drawing style image.",
-    "tags": [
-      "sketch",
-      "ballpoint_pen_(medium)",
-      "monochrome",
-      "lineart"
-    ],
-    "tags_negative": [
-      "highres"
-    ],
-    "negative": "polished rendering, careful shading"
-  },
-  {
-    "name": "[Drawing][v2] Drawing",
-    "medium": "drawing style image",
-    "nl": "General drawing rendering: pencil or pen line with hatched tone, visible construction marks, paper grain, drawing style image.",
-    "tags": [
-      "sketch",
-      "graphite_(medium)",
-      "monochrome",
-      "lineart"
-    ],
-    "tags_negative": [
-      "photorealistic"
-    ],
-    "negative": "photographic capture, painted colour"
-  },
-  {
-    "name": "[Drawing][v2] Etching",
-    "medium": "print style image",
-    "nl": "Etching rendering: bitten line of even weight, tonal build by hatch density, plate tone and paper impression, print style image.",
-    "tags": [
-      "lithograph",
-      "monochrome",
-      "cross-hatching",
-      "traditional_media"
-    ],
-    "tags_negative": [
-      "colorful"
-    ],
-    "negative": "colour, soft airbrushed shading"
-  },
-  {
-    "name": "[Drawing][v2] Fashion Sketch",
-    "medium": "drawing style image",
-    "nl": "Fashion-sketch rendering: elongated nine-head croquis, quick marker garment blocking, unfinished limbs, fabric swatch notes, drawing style image.",
-    "tags": [
-      "marker_(medium)",
-      "sketch",
-      "unfinished",
-      "lineart"
-    ],
-    "tags_negative": [
-      "photorealistic"
-    ],
-    "negative": "photographic proportion, dense rendering"
-  },
-  {
-    "name": "[Drawing][v2] Glen Keane",
-    "medium": "drawing style image",
-    "nl": "Animation-drawing rendering: searching multi-pass pencil line, energetic construction, soft graphite shading, rough edges, drawing style image.",
-    "tags": [
-      "graphite_(medium)",
-      "sketch",
-      "unfinished",
-      "monochrome"
-    ],
-    "tags_negative": [
-      "flat_color"
-    ],
-    "negative": "clean flat colour, vector precision"
-  },
-  {
-    "name": "[Drawing][v2] Gris Grimly",
-    "medium": "illustration style image",
-    "nl": "Macabre-whimsy rendering: scratchy nervous ink, spindly distorted anatomy, stained sepia washes, torn paper texture, illustration style image.",
-    "tags": [
-      "ink_(medium)",
-      "sepia",
-      "textured",
-      "muted_color",
-      "sketch"
-    ],
-    "tags_negative": [
-      "colorful"
-    ],
-    "negative": "bright clean colour, polished digital finish"
-  },
-  {
-    "name": "[Drawing][v2] Hyperrealistic Colored-Pen Sketch",
-    "medium": "drawing style image",
-    "nl": "Coloured-pen rendering: dense layered ballpoint hatching, glossy ink build-up, photoreal tonal accuracy, paper grain, drawing style image.",
-    "tags": [
-      "ballpoint_pen_(medium)",
-      "cross-hatching",
-      "realistic",
-      "textured"
-    ],
-    "tags_negative": [
-      "flat_color"
-    ],
-    "negative": "flat colour fill, loose gestural marks"
-  },
-  {
-    "name": "[Drawing][v2] Ink Pen Drawing",
-    "medium": "ink painting style image",
-    "nl": "Pen-and-ink rendering: fine technical line, cross-hatched tone, blotted starts, pure white paper as light, ink painting style image.",
-    "tags": [
-      "ink_(medium)",
-      "cross-hatching",
-      "monochrome",
-      "lineart"
-    ],
-    "tags_negative": [
-      "colorful"
-    ],
-    "negative": "colour washes, soft airbrush"
-  },
-  {
-    "name": "[Drawing][v2] Jarek Kubicki",
-    "medium": "illustration style image",
-    "nl": "Melancholic mixed rendering: pale skin against dark scratched texture, spatter and stain overlays, desaturated cool palette, illustration style image.",
-    "tags": [
-      "textured",
-      "desaturated",
-      "dark",
-      "painting_(medium)"
-    ],
-    "tags_negative": [
-      "colorful"
-    ],
-    "negative": "bright saturated colour, clean flat design"
-  },
-  {
-    "name": "[Drawing][v2] Lo-Fi Art",
-    "medium": "illustration style image",
-    "nl": "Lo-fi rendering: soft muted palette, grainy paper texture, simple flat shapes, warm nostalgic haze, illustration style image.",
-    "tags": [
-      "muted_color",
-      "textured",
-      "flat_color",
-      "soft_focus"
-    ],
-    "tags_negative": [
-      "highres"
-    ],
-    "negative": "crisp digital sharpness, saturated contrast"
-  },
-  {
-    "name": "[Drawing][v2] Loose Crosshatched Character Sketch",
-    "medium": "drawing style image",
-    "nl": "Loose hatched sketch: rapid contour searching, open crosshatch shading, unresolved edges, visible construction, drawing style image.",
-    "tags": [
-      "sketch",
-      "cross-hatching",
-      "monochrome",
-      "unfinished"
-    ],
-    "tags_negative": [
-      "highres"
-    ],
-    "negative": "polished finish, flat colour fill"
-  },
-  {
-    "name": "[Drawing][v2] Pastel-Toned Cute Illustration (Western-Korean Hybrid)",
-    "medium": "illustration style image",
-    "nl": "Cute hybrid rendering: rounded soft shapes, milky pastel palette, thin coloured outline, gentle airbrushed cheeks, illustration style image.",
-    "tags": [
-      "pastel_colors",
-      "outline",
-      "soft_focus",
-      "gradient"
-    ],
-    "tags_negative": [
-      "dark"
-    ],
-    "negative": "dark contrast, gritty texture"
-  },
-  {
-    "name": "[Drawing][v2] Playful Hand-Drawn Illustration",
-    "medium": "illustration style image",
-    "nl": "Hand-drawn rendering: wobbly confident line, off-register flat colour, crayon and pencil texture, cheerful palette, illustration style image.",
-    "tags": [
-      "crayon_(medium)",
-      "flat_color",
-      "textured",
-      "colorful",
-      "lineart"
-    ],
-    "tags_negative": [
-      "highres"
-    ],
-    "negative": "vector precision, photographic depth"
-  },
-  {
-    "name": "[Drawing][v2] Poe-Inspired Illustration",
-    "medium": "illustration style image",
-    "nl": "Gothic-literary rendering: dense pen hatching, deep black shadow, sepia paper stain, brittle spidery line, illustration style image.",
-    "tags": [
-      "ink_(medium)",
-      "cross-hatching",
-      "sepia",
-      "dark",
-      "monochrome"
-    ],
-    "tags_negative": [
-      "colorful"
-    ],
-    "negative": "bright colour, soft airbrush"
-  },
-  {
-    "name": "[Drawing][v2] Saul Steinbeck Art",
-    "medium": "drawing style image",
-    "nl": "Wry line-drawing rendering: spare economical contour, witty distortion, mostly empty page, one spot of flat colour, drawing style image.",
-    "tags": [
-      "lineart",
-      "minimalism",
-      "monochrome",
-      "spot_color"
-    ],
-    "tags_negative": [
-      "textured"
-    ],
-    "negative": "dense rendering, photographic shading"
-  },
-  {
-    "name": "[Drawing][v2] Sketch",
-    "medium": "drawing style image",
-    "nl": "Sketch rendering: quick searching pencil line, unfinished passages, light construction guides, open paper ground, drawing style image.",
-    "tags": [
-      "sketch",
-      "graphite_(medium)",
-      "unfinished",
-      "monochrome"
-    ],
-    "tags_negative": [
-      "highres"
-    ],
-    "negative": "finished colour, polished detail"
-  },
-  {
-    "name": "[Drawing][v2] Stick-Figure Child Drawing",
-    "medium": "drawing style image",
-    "nl": "Child-drawing rendering: stick limbs and circle heads, wobbling crayon line, colour outside the shapes, flat sky band, drawing style image.",
-    "tags": [
-      "crayon_(medium)",
-      "sketch",
-      "flat_color",
-      "limited_palette"
-    ],
-    "tags_negative": [
-      "realistic"
-    ],
-    "negative": "accurate anatomy, careful shading"
-  },
-  {
-    "name": "[Drawing][v2] Technical Drawing",
-    "medium": "technical drawing style image",
-    "nl": "Technical rendering: ruled uniform line weights, orthographic views, dimension arrows and leaders, plain white ground, technical drawing style image.",
-    "tags": [
-      "diagram",
-      "lineart",
-      "white_theme",
-      "monochrome"
-    ],
-    "tags_negative": [
-      "photorealistic"
-    ],
-    "negative": "painterly shading, photographic texture"
-  },
-  {
-    "name": "[Drawing][v2] Tim Burton",
-    "medium": "illustration style image",
-    "nl": "Spindly gothic rendering: elongated curling forms, big hollow eyes, scratchy ink line, monochrome with one sickly accent, illustration style image.",
-    "tags": [
-      "ink_(medium)",
-      "monochrome",
-      "dark",
-      "sketch",
-      "spot_color"
-    ],
-    "tags_negative": [
-      "colorful"
-    ],
-    "negative": "bright cheerful colour, realistic proportion"
-  },
-  {
-    "name": "[Drawing][v2] Traditional Marker Illustration",
-    "medium": "illustration style image",
-    "nl": "Marker rendering: overlapping alcohol-marker strokes, visible stroke banding, blended mid tones, bleed at the edges, illustration style image.",
-    "tags": [
-      "marker_(medium)",
-      "copic_(medium)",
-      "traditional_media",
-      "textured"
-    ],
-    "tags_negative": [
-      "gradient"
-    ],
-    "negative": "seamless digital gradients, photographic depth"
-  },
-  {
-    "name": "[Drawing][v2] Very Simplistic Doodle",
-    "medium": "drawing style image",
-    "nl": "Minimal doodle rendering: a few uneven strokes, no shading, single ink colour, huge empty paper, drawing style image.",
-    "tags": [
-      "sketch",
-      "minimalism",
-      "monochrome",
-      "lineart"
-    ],
-    "tags_negative": [
-      "highres"
-    ],
-    "negative": "detailed rendering, colour shading"
-  },
-  {
-    "name": "[Drawing][v2] Vintage Children's Book Drawing",
-    "medium": "illustration style image",
-    "nl": "Vintage kids-book rendering: two- or three-colour print separations, off-register overlaps, textured paper, simple bold line, illustration style image.",
-    "tags": [
-      "limited_palette",
-      "retro_artstyle",
-      "textured",
-      "flat_color",
-      "lineart"
-    ],
-    "tags_negative": [
-      "highres"
-    ],
-    "negative": "full-colour digital gradients, glossy stock"
-  },
-  {
-    "name": "[Drawing][v2] Western Cel-Shaded Illustration",
-    "medium": "illustration style image",
-    "nl": "Western cel-shaded rendering: thick discontinuous outline, flat colour with soft contact shadow, sparkling highlight accents, illustration style image.",
-    "tags": [
-      "cel_shading",
-      "outline",
-      "flat_color",
-      "colorful",
-      "sparkle"
-    ],
-    "tags_negative": [
-      "photorealistic"
-    ],
-    "negative": "photoreal shading, oil-paint texture"
-  },
-  {
-    "name": "[Drawing][v2] Whimsical Illustration",
-    "medium": "illustration style image",
-    "nl": "Whimsical rendering: bouncing organic shapes, decorative pattern fills, warm storybook palette, gentle texture overlay, illustration style image.",
-    "tags": [
-      "flat_color",
-      "colorful",
-      "textured",
-      "pastel_colors"
-    ],
-    "tags_negative": [
-      "dark"
-    ],
-    "negative": "grim palette, photographic realism"
-  },
-  {
-    "name": "[Drawing][v2] Wojak/Meme-Sketch",
-    "medium": "drawing style image",
-    "nl": "Meme-sketch rendering: crude mouse-drawn line, uneven wobbling contour, flat greyscale fill, plain white ground, drawing style image.",
-    "tags": [
-      "oekaki",
-      "sketch",
-      "monochrome",
-      "white_theme",
-      "lineart"
-    ],
-    "tags_negative": [
-      "highres"
-    ],
-    "negative": "polished rendering, careful anatomy"
-  },
-  {
-    "name": "[Illustration] 1970s Airbrush Album",
-    "medium": "illustration style image",
-    "nl": "1970s airbrush rendering: seamless sprayed gradients, chrome and glass highlights, sunset palette, soft vignette, illustration style image.",
-    "tags": [
-      "airbrush_(medium)",
-      "gradient",
-      "retro_artstyle",
-      "sunset",
-      "metallic"
-    ],
-    "tags_negative": [
-      "textured"
-    ],
-    "negative": "visible brush texture, harsh line work"
-  },
-  {
-    "name": "[Illustration] 1980s Fantasy Paperback",
-    "medium": "illustration style image",
-    "nl": "1980s paperback rendering: oil-painted hero staging, glowing magical accent, deep dark surround, glossy print finish, illustration style image.",
-    "tags": [
-      "oil_painting_(medium)",
-      "glowing",
-      "dark",
-      "retro_artstyle",
-      "colorful"
-    ],
-    "tags_negative": [
-      "minimalism"
-    ],
-    "negative": "flat modern vector, muted restraint"
-  },
-  {
-    "name": "[Illustration] 1990s CD Booklet Collage",
-    "medium": "collage style image",
-    "nl": "1990s booklet rendering: photocopied photo fragments, grunge texture layers, distressed type blocks, muted duotone print, collage style image.",
-    "tags": [
-      "collage",
-      "halftone",
-      "textured",
-      "duotone",
-      "desaturated"
-    ],
-    "tags_negative": [
-      "highres"
-    ],
-    "negative": "clean modern layout, saturated gloss"
-  },
-  {
-    "name": "[Illustration] Art Deco Fashion Plate",
-    "medium": "illustration style image",
-    "nl": "Deco fashion-plate rendering: elongated stylised figures, flat gouache colour, gold line accents, geometric border, illustration style image.",
-    "tags": [
-      "art_deco",
-      "gouache_(medium)",
-      "flat_color",
-      "gold",
-      "lineart"
-    ],
-    "tags_negative": [
-      "photorealistic"
-    ],
-    "negative": "photographic modelling, muted realism"
-  },
-  {
-    "name": "[Illustration] Art Nouveau Poster",
-    "medium": "poster style image",
-    "nl": "Art-nouveau poster rendering: whiplash contour, flat decorative colour, ornamental frame and lettering space, muted jewel palette, poster style image.",
-    "tags": [
-      "art_nouveau",
-      "poster",
-      "flat_color",
-      "lineart",
-      "muted_color"
-    ],
-    "tags_negative": [
-      "photorealistic"
-    ],
-    "negative": "photographic depth, harsh contrast"
-  },
-  {
-    "name": "[Illustration] Board-Game Box",
-    "medium": "illustration style image",
-    "nl": "Board-game box rendering: bright painted scene with clear focal hierarchy, saturated fantasy colour, crisp shelf-ready polish, illustration style image.",
-    "tags": [
-      "painting_(medium)",
-      "colorful",
-      "cover",
-      "cinematic_lighting"
-    ],
-    "tags_negative": [
-      "sketch"
-    ],
-    "negative": "rough sketch, muted documentary grade"
-  },
-  {
-    "name": "[Illustration] Botanical Illustration",
-    "medium": "illustration style image",
-    "nl": "Botanical-plate rendering: precise specimen drawing, delicate watercolour washes, cream paper ground, hand-lettered label space, illustration style image.",
-    "tags": [
-      "watercolor_(medium)",
-      "diagram",
-      "pale_color",
-      "traditional_media",
-      "lineart"
-    ],
-    "tags_negative": [
-      "high_contrast"
-    ],
-    "negative": "loose abstraction, dramatic lighting"
-  },
-  {
-    "name": "[Illustration] Brand Mascot Sheet",
-    "medium": "vector style image",
-    "nl": "Mascot-sheet rendering: bold simple character shapes in several poses, flat brand colour, thick even outline, plain ground, vector style image.",
-    "tags": [
-      "multiple_views",
-      "flat_color",
-      "outline",
-      "vector_trace",
-      "simple_background"
-    ],
-    "tags_negative": [
-      "textured"
-    ],
-    "negative": "painterly texture, photographic depth"
-  },
-  {
-    "name": "[Illustration] Cartographic Map",
-    "medium": "technical drawing style image",
-    "nl": "Cartographic rendering: hand-drawn coastlines and hatched relief, compass rose, aged paper tone, decorative cartouche, technical drawing style image.",
-    "tags": [
-      "map",
-      "sepia",
-      "lineart",
-      "traditional_media"
-    ],
-    "tags_negative": [
-      "photorealistic"
-    ],
-    "negative": "satellite photography, modern flat UI"
-  },
-  {
-    "name": "[Illustration] Children's Picture Book",
-    "medium": "illustration style image",
-    "nl": "Picture-book rendering: soft crayon and watercolour texture, friendly rounded shapes, warm limited palette, airy white margin, illustration style image.",
-    "tags": [
-      "watercolor_(medium)",
-      "crayon_(medium)",
-      "pastel_colors",
-      "textured"
-    ],
-    "tags_negative": [
-      "dark"
-    ],
-    "negative": "dark grim palette, photographic detail"
-  },
-  {
-    "name": "[Illustration] Constructivist Poster",
-    "medium": "poster style image",
-    "nl": "Constructivist rendering: red-black-cream inks, aggressive diagonals, photomontage fragments, heavy geometric blocking, poster style image.",
-    "tags": [
-      "poster",
-      "limited_palette",
-      "collage",
-      "red_theme",
-      "high_contrast"
-    ],
-    "tags_negative": [
-      "pastel_colors"
-    ],
-    "negative": "pastel softness, ornamental detail"
-  },
-  {
-    "name": "[Illustration] Editorial Magazine",
-    "medium": "illustration style image",
-    "nl": "Editorial rendering: conceptual metaphor, limited print palette, textured flat shapes, deliberate empty space for type, illustration style image.",
-    "tags": [
-      "flat_color",
-      "limited_palette",
-      "textured",
-      "minimalism"
-    ],
-    "tags_negative": [
-      "photorealistic"
-    ],
-    "negative": "photographic realism, busy rendering"
-  },
-  {
-    "name": "[Illustration] Exploded Technical",
-    "medium": "technical drawing style image",
-    "nl": "Exploded technical rendering: parts separated along assembly axes, thin leader lines, flat shading, plain ground, technical drawing style image.",
-    "tags": [
-      "diagram",
-      "lineart",
-      "multiple_views",
-      "simple_background"
-    ],
-    "tags_negative": [
-      "photorealistic"
-    ],
-    "negative": "assembled hero product, dramatic lighting"
-  },
-  {
-    "name": "[Illustration] Fashion Croquis",
-    "medium": "drawing style image",
-    "nl": "Croquis rendering: nine-head elongated figure, fast confident contour, marker garment blocks, unfinished hands and face, drawing style image.",
-    "tags": [
-      "sketch",
-      "marker_(medium)",
-      "unfinished",
-      "lineart"
-    ],
-    "tags_negative": [
-      "photorealistic"
-    ],
-    "negative": "realistic proportion, dense rendering"
-  },
-  {
-    "name": "[Illustration] Fashion Editorial Drawn",
-    "medium": "illustration style image",
-    "nl": "Drawn fashion-editorial rendering: bold ink contour, washy colour blocking, exaggerated silhouette, generous white space, illustration style image.",
-    "tags": [
-      "ink_(medium)",
-      "watercolor_(medium)",
-      "lineart",
-      "minimalism"
-    ],
-    "tags_negative": [
-      "photorealistic"
-    ],
-    "negative": "photographic capture, dense background detail"
-  },
-  {
-    "name": "[Illustration] Game Concept Art",
-    "medium": "illustration style image",
-    "nl": "Concept-art rendering: value-first block-in, callout detail insets, functional design clarity, muted painted palette, illustration style image.",
-    "tags": [
-      "concept_art",
-      "painting_(medium)",
-      "muted_color",
-      "multiple_views"
-    ],
-    "tags_negative": [
-      "highres"
-    ],
-    "negative": "finished poster polish, photographic finish"
-  },
-  {
-    "name": "[Illustration] Game Key Art",
-    "medium": "illustration style image",
-    "nl": "Game key-art rendering: hero silhouette against a dramatic sky, commercial poster light, painted density, glowing accents, illustration style image.",
-    "tags": [
-      "key_visual",
-      "painting_(medium)",
-      "cinematic_lighting",
-      "glowing"
-    ],
-    "tags_negative": [
-      "sketch"
-    ],
-    "negative": "rough sketch, flat documentary framing"
-  },
-  {
-    "name": "[Illustration] Golden Age Magazine",
-    "medium": "illustration style image",
-    "nl": "Golden-age magazine rendering: confident oil brushwork, warm narrative light, period print colour, textured cover stock, illustration style image.",
-    "tags": [
-      "oil_painting_(medium)",
-      "retro_artstyle",
-      "textured",
-      "colorful"
-    ],
-    "tags_negative": [
-      "minimalism"
-    ],
-    "negative": "flat modern vector, cold digital colour"
-  },
-  {
-    "name": "[Illustration] Marker Rendering",
-    "medium": "illustration style image",
-    "nl": "Design-marker rendering: broad alcohol-marker strokes, streaky overlaps, white gouache highlights, quick perspective line, illustration style image.",
-    "tags": [
-      "marker_(medium)",
-      "copic_(medium)",
-      "sketch",
-      "textured"
-    ],
-    "tags_negative": [
-      "gradient"
-    ],
-    "negative": "smooth digital gradients, photographic finish"
-  },
-  {
-    "name": "[Illustration] Matte Painting",
-    "medium": "illustration style image",
-    "nl": "Matte-painting rendering: photographic texture blended into paint, layered atmospheric depth, epic scale haze, cinematic grade, illustration style image.",
-    "tags": [
-      "concept_art",
-      "scenery",
-      "painting_(medium)",
-      "cinematic_lighting"
-    ],
-    "tags_negative": [
-      "simple_background"
-    ],
-    "negative": "studio product framing, flat cartoon colour",
-    "aliases": [
-      "[Photo][v2] Atmospheric Matte Painting",
-      "[Photo][Clio] Atmospheric Matte Painting"
-    ]
-  },
-  {
-    "name": "[Illustration] Mid-Century Kids Book",
-    "medium": "illustration style image",
-    "nl": "Mid-century kids-book rendering: two- or three-ink separations, off-register overlap colour, textured screen fills, simple shapes, illustration style image.",
-    "tags": [
-      "limited_palette",
-      "retro_artstyle",
-      "flat_color",
-      "textured"
-    ],
-    "tags_negative": [
-      "gradient"
-    ],
-    "negative": "smooth digital gradients, photographic depth"
-  },
-  {
-    "name": "[Illustration] New Yorker Spot",
-    "medium": "illustration style image",
-    "nl": "Spot-illustration rendering: witty economical line, one or two flat washes, mostly white page, understated palette, illustration style image.",
-    "tags": [
-      "lineart",
-      "minimalism",
-      "limited_palette",
-      "white_theme"
-    ],
-    "tags_negative": [
-      "textured"
-    ],
-    "negative": "dense rendering, saturated colour"
-  },
-  {
-    "name": "[Illustration] Photobash Concept",
-    "medium": "illustration style image",
-    "nl": "Photobash rendering: photo fragments blended under paint, mismatched grain unified by grade, quick collage-real depth, illustration style image.",
-    "tags": [
-      "collage",
-      "concept_art",
-      "painting_(medium)",
-      "textured"
-    ],
-    "tags_negative": [
-      "flat_color"
-    ],
-    "negative": "flat vector shapes, clean cartoon colour"
-  },
-  {
-    "name": "[Illustration] Political Caricature",
-    "medium": "illustration style image",
-    "nl": "Political-caricature rendering: exaggerated features, crosshatched ink shading, single spot colour, newsprint texture, illustration style image.",
-    "tags": [
-      "cross-hatching",
-      "ink_(medium)",
-      "spot_color",
-      "monochrome",
-      "textured"
-    ],
-    "tags_negative": [
-      "photorealistic"
-    ],
-    "negative": "photographic likeness, soft airbrush"
-  },
-  {
-    "name": "[Illustration] Saturday Evening Post Cover",
-    "medium": "illustration style image",
-    "nl": "Narrative cover rendering: warm storytelling light, meticulous everyday detail, gently exaggerated expression, oil-painted finish, illustration style image.",
-    "tags": [
-      "oil_painting_(medium)",
-      "realistic",
-      "retro_artstyle",
-      "colorful"
-    ],
-    "tags_negative": [
-      "dark"
-    ],
-    "negative": "grim palette, abstract distortion"
-  },
-  {
-    "name": "[Illustration] Scientific Illustration",
-    "medium": "technical drawing style image",
-    "nl": "Scientific-plate rendering: didactic clarity, stippled tonal shading, labelled leader lines, neutral paper ground, technical drawing style image.",
-    "tags": [
-      "diagram",
-      "halftone",
-      "lineart",
-      "traditional_media"
-    ],
-    "tags_negative": [
-      "cinematic_lighting"
-    ],
-    "negative": "dramatic lighting, painterly abstraction"
-  },
-  {
-    "name": "[Illustration] Scientific Plate",
-    "medium": "technical drawing style image",
-    "nl": "Engraved plate rendering: fine hatched specimen detail, numbered figures across the sheet, cream paper, thin rule border, technical drawing style image.",
-    "tags": [
-      "lithograph",
-      "cross-hatching",
-      "diagram",
-      "sepia",
-      "traditional_media"
-    ],
-    "tags_negative": [
-      "colorful"
-    ],
-    "negative": "saturated colour, photographic capture"
-  },
-  {
-    "name": "[Illustration] Speedpaint",
-    "medium": "illustration style image",
-    "nl": "Speedpaint rendering: broad blocked strokes, unresolved edges, value read before detail, deliberately unfinished passages, illustration style image.",
-    "tags": [
-      "painting_(medium)",
-      "unfinished",
-      "sketch",
-      "muted_color"
-    ],
-    "tags_negative": [
-      "highres"
-    ],
-    "negative": "tight finished rendering, glossy polish"
-  },
-  {
-    "name": "[Illustration] Sticker Cute",
-    "medium": "vector style image",
-    "nl": "Cute-sticker rendering: thick white keyline, chibi-round shapes, flat candy colour, glossy dot highlights, no background, vector style image.",
-    "tags": [
-      "sticker",
-      "chibi",
-      "flat_color",
-      "white_theme",
-      "simple_background"
-    ],
-    "tags_negative": [
-      "scenery"
-    ],
-    "negative": "detailed background, photographic depth"
-  },
-  {
-    "name": "[Illustration] Superflat Pop",
-    "medium": "illustration style image",
-    "nl": "Superflat rendering: zero depth, glossy flat colour planes, repeated motif fields, hard vector contours, illustration style image.",
-    "tags": [
-      "flat_color",
-      "vector_trace",
-      "colorful",
-      "outline"
-    ],
-    "tags_negative": [
-      "depth_of_field"
-    ],
-    "negative": "atmospheric depth, soft painterly shading"
-  },
-  {
-    "name": "[Illustration] Swiss International",
-    "medium": "poster style image",
-    "nl": "Swiss-style rendering: strict grid alignment, flat two-colour fields, enormous empty space, objective photographic insert, poster style image.",
-    "tags": [
-      "minimalism",
-      "poster",
-      "limited_palette",
-      "flat_color",
-      "white_theme"
-    ],
-    "tags_negative": [
-      "textured"
-    ],
-    "negative": "ornament, painterly texture"
-  },
-  {
-    "name": "[Illustration] Travel Poster 1930s",
-    "medium": "poster style image",
-    "nl": "1930s travel-poster rendering: simplified stylised landscape, flat airbrushed colour bands, deco geometry, screenprint texture, poster style image.",
-    "tags": [
-      "poster",
-      "art_deco",
-      "flat_color",
-      "limited_palette",
-      "airbrush_(medium)"
-    ],
-    "tags_negative": [
-      "photorealistic"
-    ],
-    "negative": "photographic detail, modern gradients"
-  }
+ {
+  "name": "[Drawing][v2] Mad Magazine Cover Art",
+  "medium": "illustration style image",
+  "nl": "Satirical magazine rendering, rubbery caricature drawing, dense gag detail, flat four-colour print inks, halftone shading, illustration style image.",
+  "tags": [
+   "halftone",
+   "comic",
+   "colorful",
+   "lineart",
+   "retro_artstyle"
+  ],
+  "tags_negative": [
+   "photorealistic"
+  ],
+  "negative": "photographic realism, muted restraint"
+ },
+ {
+  "name": "[Format] Bestiary Page",
+  "medium": "illustration style image",
+  "nl": "Composed as a bestiary page, a single specimen centred on ruled vellum, hand-lettered caption space, gold-touched border, illustration style image.",
+  "tags": [
+   "diagram",
+   "gold",
+   "traditional_media",
+   "sepia"
+  ],
+  "tags_negative": [
+   "photorealistic"
+  ],
+  "negative": "photographic capture, modern layout"
+ },
+ {
+  "name": "[Format] Tattoo Flash",
+  "medium": "illustration style image",
+  "nl": "Composed as a tattoo-flash sheet, several bold motifs spaced on cream paper, heavy black contour, limited spot colour, illustration style image.",
+  "tags": [
+   "multiple_views",
+   "lineart",
+   "limited_palette",
+   "traditional_media",
+   "spot_color"
+  ],
+  "tags_negative": [
+   "photorealistic"
+  ],
+  "negative": "photographic rendering, soft gradients"
+ },
+ {
+  "name": "[Illustration] Pulp Magazine Cover",
+  "medium": "illustration style image",
+  "nl": "Pulp-cover rendering, lurid oil brushwork, hot spot lighting on the hero, cheap saturated print inks, yellowed paper, illustration style image.",
+  "tags": [
+   "oil_painting_(medium)",
+   "colorful",
+   "retro_artstyle",
+   "high_contrast",
+   "textured"
+  ],
+  "tags_negative": [
+   "minimalism"
+  ],
+  "negative": "restrained modern design, muted palette"
+ },
+ {
+  "name": "[Illustration] Vintage Tarot",
+  "medium": "illustration style image",
+  "nl": "Vintage tarot rendering, flat symbolic figures, bold black outline, limited red-yellow-blue inks, worn card border, illustration style image.",
+  "tags": [
+   "flat_color",
+   "outline",
+   "limited_palette",
+   "traditional_media",
+   "trading_card"
+  ],
+  "tags_negative": [
+   "photorealistic"
+  ],
+  "negative": "photographic depth, airbrushed gradients"
+ },
+ {
+  "name": "[Cover][v2] Action Movie Poster with Diagonal Speed Strokes",
+  "medium": "poster style image",
+  "nl": "Action-poster rendering, slashing diagonal speed strokes, hot rim light on the figure, smoke and ember particles, saturated grade, poster style image.",
+  "tags": [
+   "poster",
+   "speed_lines",
+   "rim_lighting",
+   "high_contrast",
+   "glowing"
+  ],
+  "tags_negative": [
+   "muted_color"
+  ],
+  "negative": "calm static framing, muted palette"
+ },
+ {
+  "name": "[Cover][v2] Aleksi Briclot and Sparth-Inspired Art",
+  "medium": "illustration style image",
+  "nl": "Concept-cover rendering, massive scale staging, atmospheric depth haze, textured brush blocking, cool desaturated palette with one hot accent, illustration style image.",
+  "tags": [
+   "concept_art",
+   "painting_(medium)",
+   "muted_color",
+   "cinematic_lighting",
+   "textured"
+  ],
+  "tags_negative": [
+   "flat_color"
+  ],
+  "negative": "flat cartoon colour, clean vector shapes"
+ },
+ {
+  "name": "[Cover][v2] Cover Art",
+  "medium": "illustration style image",
+  "nl": "Cover-art rendering, hero-centred staging, dramatic key light, rich painted colour, clear space kept for a title, illustration style image.",
+  "tags": [
+   "cover",
+   "painting_(medium)",
+   "cinematic_lighting",
+   "poster"
+  ],
+  "tags_negative": [
+   "sketch"
+  ],
+  "negative": "rough sketch, documentary flatness"
+ },
+ {
+  "name": "[Cover][v2] Crisp Semi-Realistic Anime Illustration",
+  "medium": "illustration style image",
+  "nl": "Semi-real anime rendering, clean sharp line over painted volume, glossy eye and hair highlights, soft skin gradients, illustration style image.",
+  "tags": [
+   "anime_coloring",
+   "gradient",
+   "highres",
+   "lineart"
+  ],
+  "tags_negative": [
+   "film_grain"
+  ],
+  "negative": "grainy photo texture, flat TV cel"
+ },
+ {
+  "name": "[Cover][v2] Dark Fantasy Illustration",
+  "medium": "illustration style image",
+  "nl": "Dark-fantasy rendering, oil-thick shadow masses, ember key against cold ambient, ornate armour detail, dry-brush texture, illustration style image.",
+  "tags": [
+   "dark",
+   "chiaroscuro",
+   "painting_(medium)",
+   "glowing",
+   "textured"
+  ],
+  "tags_negative": [
+   "pastel_colors"
+  ],
+  "negative": "pastel brightness, flat cartoon colour",
+  "aliases": [
+   "[Cover][Clio] Dark Fantasy Illustration",
+   "[Aesthetic] Dark Fantasy Illustration"
+  ]
+ },
+ {
+  "name": "[Cover][v2] Expressive Character Illustration",
+  "medium": "illustration style image",
+  "nl": "Expressive character rendering, confident economical strokes, exaggerated silhouette, bold colour blocking, loose edges, illustration style image.",
+  "tags": [
+   "painting_(medium)",
+   "colorful",
+   "sketch",
+   "high_contrast"
+  ],
+  "tags_negative": [
+   "photorealistic"
+  ],
+  "negative": "photoreal detail, timid pastel palette"
+ },
+ {
+  "name": "[Cover][v2] Faceted Painterly Digital painting",
+  "medium": "illustration style image",
+  "nl": "Faceted painterly rendering, form built from angular brush planes, visible stroke edges, temperature shifts between facets, illustration style image.",
+  "tags": [
+   "painting_(medium)",
+   "textured",
+   "cubism",
+   "muted_color"
+  ],
+  "tags_negative": [
+   "soft_focus"
+  ],
+  "negative": "airbrushed blending, photographic smoothness"
+ },
+ {
+  "name": "[Cover][v2] Glossy Semi-Realistic",
+  "medium": "illustration style image",
+  "nl": "Glossy semi-real rendering, airbrushed skin sheen over sharp line, saturated highlight bloom, polished surface finish, illustration style image.",
+  "tags": [
+   "airbrush_(medium)",
+   "gradient",
+   "highres",
+   "shiny"
+  ],
+  "tags_negative": [
+   "textured"
+  ],
+  "negative": "gritty brush texture, muted flat colour"
+ },
+ {
+  "name": "[Cover][v2] GTA V Polished Cover Art",
+  "medium": "illustration style image",
+  "nl": "Vector-realist cover rendering, crisp outlined figures, flat gradient fills, sun-bleached palette, poster panel layout, illustration style image.",
+  "tags": [
+   "vector_trace",
+   "flat_color",
+   "outline",
+   "gradient",
+   "poster"
+  ],
+  "tags_negative": [
+   "textured"
+  ],
+  "negative": "painterly texture, photographic depth"
+ },
+ {
+  "name": "[Cover][v2] Hyper-Stylized Digital Painting",
+  "medium": "illustration style image",
+  "nl": "Hyper-stylised digital rendering, exaggerated shape language, sculpted rim light, saturated selective colour, minimal detail elsewhere, illustration style image.",
+  "tags": [
+   "painting_(medium)",
+   "rim_lighting",
+   "high_contrast",
+   "colorful"
+  ],
+  "tags_negative": [
+   "photorealistic"
+  ],
+  "negative": "photoreal rendering, muted evenness",
+  "aliases": [
+   "[Cover][Clio] Hyper-Stylized Digital Painting",
+   "[Design][v2] Hyper-Stylized Illustration",
+   "[Design][Clio] Hyper-Stylized Illustration"
+  ]
+ },
+ {
+  "name": "[Cover][v2] Ilya Kuvshinov",
+  "medium": "illustration style image",
+  "nl": "Modern portrait-illustration rendering, clean thin line, soft cheek gradients, cool pastel palette with warm accents, glossy eyes, illustration style image.",
+  "tags": [
+   "anime_coloring",
+   "pastel_colors",
+   "gradient",
+   "portrait"
+  ],
+  "tags_negative": [
+   "textured"
+  ],
+  "negative": "heavy brush texture, gritty realism"
+ },
+ {
+  "name": "[Cover][v2] Interplay of Shadow and Light",
+  "medium": "illustration style image",
+  "nl": "Light-and-shadow rendering, subject cut by hard shafts and cast patterns, deep unlit masses, luminous edges, illustration style image.",
+  "tags": [
+   "chiaroscuro",
+   "high_contrast",
+   "dark",
+   "glowing"
+  ],
+  "tags_negative": [
+   "soft_focus"
+  ],
+  "negative": "flat even fill, low-contrast haze"
+ },
+ {
+  "name": "[Cover][v2] Ismail Inceoglu",
+  "medium": "illustration style image",
+  "nl": "Atmospheric concept rendering, monumental scale against tiny figures, layered fog depth, gritty texture overlays, muted palette, illustration style image.",
+  "tags": [
+   "concept_art",
+   "scenery",
+   "muted_color",
+   "textured",
+   "cinematic_lighting"
+  ],
+  "tags_negative": [
+   "flat_color"
+  ],
+  "negative": "flat graphic shapes, saturated cartoon colour"
+ },
+ {
+  "name": "[Cover][v2] J.C. Leyendecker",
+  "medium": "oil painting style image",
+  "nl": "Leyendecker-style rendering, crisp cross-hatched brushstrokes, sculpted highlight planes, warm-cool contrast, poster-clean shapes, oil painting style image.",
+  "tags": [
+   "oil_painting_(medium)",
+   "textured",
+   "cross-hatching",
+   "retro_artstyle"
+  ],
+  "tags_negative": [
+   "airbrush_(medium)"
+  ],
+  "negative": "airbrushed smoothness, photographic finish"
+ },
+ {
+  "name": "[Cover][v2] James Jean",
+  "medium": "illustration style image",
+  "nl": "Ornamental surreal rendering, flowing linear detail, pearlescent pastel washes, layered symbolic motifs, delicate ink accents, illustration style image.",
+  "tags": [
+   "watercolor_(medium)",
+   "lineart",
+   "pastel_colors",
+   "surreal",
+   "traditional_media"
+  ],
+  "tags_negative": [
+   "high_contrast"
+  ],
+  "negative": "harsh contrast, blunt graphic shapes"
+ },
+ {
+  "name": "[Cover][v2] Kay Nielsen",
+  "medium": "illustration style image",
+  "nl": "Golden-age fairy-tale rendering, elongated decorative figures, flat jewel colour, gold-line ornament, patterned negative space, illustration style image.",
+  "tags": [
+   "art_nouveau",
+   "gold",
+   "flat_color",
+   "lineart",
+   "traditional_media"
+  ],
+  "tags_negative": [
+   "photorealistic"
+  ],
+  "negative": "photographic modelling, muddy palette"
+ },
+ {
+  "name": "[Cover][v2] Kekai Kotaki",
+  "medium": "illustration style image",
+  "nl": "Dark-fantasy concept rendering, charcoal-grey value blocking, ink-splatter texture, one glowing accent, brutal silhouette shapes, illustration style image.",
+  "tags": [
+   "dark",
+   "monochrome",
+   "textured",
+   "concept_art",
+   "glowing"
+  ],
+  "tags_negative": [
+   "colorful"
+  ],
+  "negative": "bright saturated palette, clean vector line"
+ },
+ {
+  "name": "[Cover][v2] Loish Ultrarealism",
+  "medium": "illustration style image",
+  "nl": "Soft-realist illustration rendering, fluid painted skin, warm-cool light mixing, loose brush edges, glowing hair rim, illustration style image.",
+  "tags": [
+   "painting_(medium)",
+   "gradient",
+   "rim_lighting",
+   "portrait"
+  ],
+  "tags_negative": [
+   "flat_color"
+  ],
+  "negative": "flat cel colour, hard outline"
+ },
+ {
+  "name": "[Cover][v2] Luminous Pastel",
+  "medium": "illustration style image",
+  "nl": "Luminous pastel rendering, glowing pale palette, soft bloom around lights, gentle gradient transitions, low contrast, illustration style image.",
+  "tags": [
+   "pastel_colors",
+   "glowing",
+   "gradient",
+   "soft_focus"
+  ],
+  "tags_negative": [
+   "dark"
+  ],
+  "negative": "dark heavy grade, harsh contrast"
+ },
+ {
+  "name": "[Cover][v2] Marvel Rivals Character Design (Painterly Comic Illustration)",
+  "medium": "illustration style image",
+  "nl": "Painterly comic-cover rendering, brushy modelled costume detail, bold graphic shadow shapes, saturated hero palette, illustration style image.",
+  "tags": [
+   "painting_(medium)",
+   "comic",
+   "colorful",
+   "rim_lighting"
+  ],
+  "tags_negative": [
+   "halftone"
+  ],
+  "negative": "benday dots, flat print inks"
+ },
+ {
+  "name": "[Cover][v2] Melancholic Hyperrealism",
+  "medium": "illustration style image",
+  "nl": "Melancholic hyperreal rendering, photographic skin detail, desaturated cool palette, soft window light, still quiet mood, illustration style image.",
+  "tags": [
+   "photorealistic",
+   "muted_color",
+   "soft_focus",
+   "portrait"
+  ],
+  "tags_negative": [
+   "colorful"
+  ],
+  "negative": "saturated poster colour, cartoon simplification"
+ },
+ {
+  "name": "[Cover][v2] Movie Digital Art",
+  "medium": "poster style image",
+  "nl": "Film-poster rendering, montage composition, teal-and-orange grade, glowing edge light, painted-photo hybrid texture, poster style image.",
+  "tags": [
+   "poster",
+   "cinematic_lighting",
+   "glowing",
+   "painting_(medium)"
+  ],
+  "tags_negative": [
+   "sketch"
+  ],
+  "negative": "loose sketch, flat documentary framing"
+ },
+ {
+  "name": "[Cover][v2] MTG (Magic: The Gathering)",
+  "medium": "illustration style image",
+  "nl": "Card-art rendering, painted fantasy staging inside an illustrated border, dramatic magical glow, rich layered brushwork, illustration style image.",
+  "tags": [
+   "painting_(medium)",
+   "glowing",
+   "cinematic_lighting",
+   "colorful"
+  ],
+  "tags_negative": [
+   "flat_color"
+  ],
+  "negative": "flat vector shapes, photographic capture"
+ },
+ {
+  "name": "[Cover][v2] Robin Eley",
+  "medium": "illustration style image",
+  "nl": "Hyperreal figure rendering, translucent plastic wrap over skin, forensic pore detail, cool studio light, glassy highlights, illustration style image.",
+  "tags": [
+   "photorealistic",
+   "transparent",
+   "highres",
+   "realistic"
+  ],
+  "tags_negative": [
+   "sketch"
+  ],
+  "negative": "loose brushwork, cartoon flatness"
+ },
+ {
+  "name": "[Cover][v2] RossDraws",
+  "medium": "illustration style image",
+  "nl": "Vibrant fantasy rendering, glowing saturated colour, soft airbrushed skin, sparkling particle atmosphere, bold rim light, illustration style image.",
+  "tags": [
+   "glowing",
+   "colorful",
+   "airbrush_(medium)",
+   "sparkle",
+   "rim_lighting"
+  ],
+  "tags_negative": [
+   "muted_color"
+  ],
+  "negative": "muted realism, gritty texture"
+ },
+ {
+  "name": "[Cover][v2] Sharp-Lined Glossy Semi-Realistic Portrait",
+  "medium": "illustration style image",
+  "nl": "Sharp-line portrait rendering, crisp ink contour over glossy painted volume, high-shine highlights, saturated palette, illustration style image.",
+  "tags": [
+   "lineart",
+   "gradient",
+   "highres",
+   "portrait",
+   "shiny"
+  ],
+  "tags_negative": [
+   "sketch"
+  ],
+  "negative": "loose sketch, matte muted colour"
+ },
+ {
+  "name": "[Cover][v2] Splatterpunk Horror Illustration",
+  "medium": "illustration style image",
+  "nl": "Splatterpunk rendering, violent ink spatter, high-contrast blacks, sickly green-red palette, torn texture overlays, illustration style image.",
+  "tags": [
+   "ink_(medium)",
+   "high_contrast",
+   "dark",
+   "red_theme",
+   "textured"
+  ],
+  "tags_negative": [
+   "pastel_colors"
+  ],
+  "negative": "pastel calm, clean vector design"
+ },
+ {
+  "name": "[Cover][v2] Tom Bagshaw-Inspired Digital Painting",
+  "medium": "illustration style image",
+  "nl": "Dark-romantic rendering, photoreal skin under painted ornament, deep shadow surround, warm gold accents, glossy detail, illustration style image.",
+  "tags": [
+   "photorealistic",
+   "dark",
+   "gold",
+   "painting_(medium)",
+   "chiaroscuro"
+  ],
+  "tags_negative": [
+   "flat_color"
+  ],
+  "negative": "flat graphic shapes, bright even light"
+ },
+ {
+  "name": "[Cover][v2] Victo Ngai",
+  "medium": "illustration style image",
+  "nl": "Editorial-decorative rendering, flowing pattern fields, layered flat colour with fine linework, warm-cool jewel palette, illustration style image.",
+  "tags": [
+   "flat_color",
+   "lineart",
+   "colorful",
+   "art_nouveau"
+  ],
+  "tags_negative": [
+   "photorealistic"
+  ],
+  "negative": "photographic depth, muted realism"
+ },
+ {
+  "name": "[Digital][v2] Absolute Painterly",
+  "medium": "illustration style image",
+  "nl": "Fully painterly rendering, every edge made of brushwork, no line art, thick colour transitions, textured canvas feel, illustration style image.",
+  "tags": [
+   "painting_(medium)",
+   "no_lineart",
+   "textured",
+   "gradient"
+  ],
+  "tags_negative": [
+   "lineart"
+  ],
+  "negative": "clean outlines, vector flatness"
+ },
+ {
+  "name": "[Digital][v2] Artgerm",
+  "medium": "illustration style image",
+  "nl": "Glamour digital-portrait rendering, porcelain airbrushed skin, crisp specular highlights, strand-by-strand hair, glossy pin-up polish, illustration style image.",
+  "tags": [
+   "airbrush_(medium)",
+   "gradient",
+   "highres",
+   "portrait",
+   "shiny"
+  ],
+  "tags_negative": [
+   "textured"
+  ],
+  "negative": "rough texture, muted documentary grade"
+ },
+ {
+  "name": "[Digital][v2] ArtStation Masterpiece",
+  "medium": "illustration style image",
+  "nl": "Polished concept-portfolio rendering, dramatic cinematic key, layered atmospheric depth, immaculate rendering, saturated accent glow, illustration style image.",
+  "tags": [
+   "concept_art",
+   "cinematic_lighting",
+   "highres",
+   "glowing"
+  ],
+  "tags_negative": [
+   "sketch"
+  ],
+  "negative": "rough sketch, flat cartoon shading"
+ },
+ {
+  "name": "[Digital][v2] Bastien Lecouffe-Deharme Fantasy",
+  "medium": "illustration style image",
+  "nl": "Dark-fantasy rendering, smoky textured overlays, near-black surroundings, sculpted warm key on the figure, gritty spatter, illustration style image.",
+  "tags": [
+   "dark",
+   "textured",
+   "chiaroscuro",
+   "painting_(medium)"
+  ],
+  "tags_negative": [
+   "pastel_colors"
+  ],
+  "negative": "pastel palette, clean vector edges"
+ },
+ {
+  "name": "[Digital][v2] Bernie Wrightson Gothic",
+  "medium": "illustration style image",
+  "nl": "Gothic pen rendering, obsessive crosshatch texture, gnarled organic detail, deep black masses, engraving-fine line, illustration style image.",
+  "tags": [
+   "cross-hatching",
+   "monochrome",
+   "ink_(medium)",
+   "dark",
+   "high_contrast"
+  ],
+  "tags_negative": [
+   "colorful"
+  ],
+  "negative": "colour rendering, smooth airbrush"
+ },
+ {
+  "name": "[Digital][v2] Blacklight",
+  "medium": "illustration style image",
+  "nl": "Blacklight rendering, fluorescent pigments glowing against near-black, violet ambient wash, hot magenta and green accents, illustration style image.",
+  "tags": [
+   "neon_palette",
+   "glowing",
+   "dark",
+   "purple_theme",
+   "high_saturation"
+  ],
+  "tags_negative": [
+   "muted_color"
+  ],
+  "negative": "daylight palette, matte muted colour"
+ },
+ {
+  "name": "[Digital][v2] Brassaï Night Photography",
+  "medium": "photograph style image",
+  "nl": "Night-photography rendering, wet cobble reflections, halated street lamps, deep grainy blacks, silver monochrome, photograph style image.",
+  "tags": [
+   "monochrome",
+   "dark",
+   "film_grain",
+   "wet",
+   "glowing"
+  ],
+  "tags_negative": [
+   "colorful"
+  ],
+  "negative": "colour grade, bright even light"
+ },
+ {
+  "name": "[Digital][v2] Castlevania Concept Art",
+  "medium": "illustration style image",
+  "nl": "Gothic game-concept rendering, sharp angular design, blood-red and slate palette, hard shadow blocking, ink-textured brush, illustration style image.",
+  "tags": [
+   "concept_art",
+   "dark",
+   "red_theme",
+   "high_contrast",
+   "textured"
+  ],
+  "tags_negative": [
+   "pastel_colors"
+  ],
+  "negative": "pastel softness, clean flat vector"
+ },
+ {
+  "name": "[Digital][v2] Character Design Illustration",
+  "medium": "illustration style image",
+  "nl": "Character-design rendering, clear silhouette read, flat even light, tidy costume detail, neutral ground, callout swatches, illustration style image.",
+  "tags": [
+   "character_sheet",
+   "flat_color",
+   "simple_background",
+   "lineart"
+  ],
+  "tags_negative": [
+   "cinematic_lighting"
+  ],
+  "negative": "dramatic lighting, painted environment"
+ },
+ {
+  "name": "[Digital][v2] Charlie Bowater",
+  "medium": "illustration style image",
+  "nl": "Soft-glow portrait rendering, luminous skin gradients, cool teal shadow with warm key, delicate hair strands, dreamy bloom, illustration style image.",
+  "tags": [
+   "gradient",
+   "glowing",
+   "portrait",
+   "soft_focus",
+   "painting_(medium)"
+  ],
+  "tags_negative": [
+   "high_contrast"
+  ],
+  "negative": "harsh contrast, flat cel bands"
+ },
+ {
+  "name": "[Digital][v2] Contemporary Commercial Illustration",
+  "medium": "illustration style image",
+  "nl": "Commercial rendering, clean shape language, restrained brand palette, subtle grain overlay, tidy flat-plus-gradient shading, illustration style image.",
+  "tags": [
+   "flat_color",
+   "gradient",
+   "limited_palette",
+   "minimalism"
+  ],
+  "tags_negative": [
+   "textured"
+  ],
+  "negative": "gritty texture, photographic depth"
+ },
+ {
+  "name": "[Digital][v2] Contemporary Fantasy Art",
+  "medium": "illustration style image",
+  "nl": "Modern fantasy rendering, painted volumes with crisp focal detail, magical rim glow, layered depth haze, rich saturated palette, illustration style image.",
+  "tags": [
+   "painting_(medium)",
+   "glowing",
+   "rim_lighting",
+   "colorful"
+  ],
+  "tags_negative": [
+   "monochrome"
+  ],
+  "negative": "monochrome grit, flat poster shapes"
+ },
+ {
+  "name": "[Digital][v2] Cosmic Horror Illustration",
+  "medium": "illustration style image",
+  "nl": "Cosmic-horror rendering, impossible geometry in the dark, sickly bioluminescent glow, tentacular texture detail, ink-black voids, illustration style image.",
+  "tags": [
+   "dark",
+   "glowing",
+   "surreal",
+   "textured",
+   "green_theme"
+  ],
+  "tags_negative": [
+   "pastel_colors"
+  ],
+  "negative": "cheerful pastel palette, clean minimal design"
+ },
+ {
+  "name": "[Digital][v2] Digital Painting",
+  "medium": "illustration style image",
+  "nl": "Digital painting rendering, layered brush strokes, blended colour transitions, controlled edge hierarchy, subtle canvas texture, illustration style image.",
+  "tags": [
+   "painting_(medium)",
+   "gradient",
+   "textured"
+  ],
+  "tags_negative": [
+   "photorealistic"
+  ],
+  "negative": "photographic capture, hard vector edges"
+ },
+ {
+  "name": "[Digital][v2] Editorial Illustration",
+  "medium": "illustration style image",
+  "nl": "Editorial rendering, conceptual metaphor staging, limited print palette, textured flat shapes, generous white space, illustration style image.",
+  "tags": [
+   "flat_color",
+   "limited_palette",
+   "textured",
+   "minimalism"
+  ],
+  "tags_negative": [
+   "photorealistic"
+  ],
+  "negative": "photographic realism, dense rendering"
+ },
+ {
+  "name": "[Digital][v2] Gris Grimly-Inspired Hyperrealism",
+  "medium": "illustration style image",
+  "nl": "Macabre-whimsy rendering, spindly distorted forms, ink line over sepia washes, stained paper texture, muted decay palette, illustration style image.",
+  "tags": [
+   "ink_(medium)",
+   "sepia",
+   "textured",
+   "muted_color",
+   "traditional_media"
+  ],
+  "tags_negative": [
+   "colorful"
+  ],
+  "negative": "bright saturated colour, clean vector shapes"
+ },
+ {
+  "name": "[Digital][v2] Sakimichan",
+  "medium": "illustration style image",
+  "nl": "Glossy semi-real rendering, luminous airbrushed skin, warm rim light, sparkling highlight accents, soft focus falloff, illustration style image.",
+  "tags": [
+   "airbrush_(medium)",
+   "glowing",
+   "rim_lighting",
+   "sparkle",
+   "portrait"
+  ],
+  "tags_negative": [
+   "textured"
+  ],
+  "negative": "gritty texture, flat cel shading"
+ },
+ {
+  "name": "[Digital][v2] Scribble Fine Art",
+  "medium": "drawing style image",
+  "nl": "Scribble rendering, form emerging from tangled continuous pen loops, tonal density by overlap, raw paper ground, drawing style image.",
+  "tags": [
+   "sketch",
+   "lineart",
+   "monochrome",
+   "textured"
+  ],
+  "tags_negative": [
+   "flat_color"
+  ],
+  "negative": "clean flat colour, smooth shading"
+ },
+ {
+  "name": "[Digital][v2] X-Ray",
+  "medium": "material style image",
+  "nl": "X-ray rendering, inverted densities, translucent internal structure, cool blue-grey film base, glowing bright bone, material style image.",
+  "tags": [
+   "monochrome",
+   "blue_theme",
+   "transparent",
+   "glowing",
+   "greyscale"
+  ],
+  "tags_negative": [
+   "colorful"
+  ],
+  "negative": "natural surface colour, opaque materials",
+  "aliases": [
+   "[Digital][Clio] X-Ray",
+   "[Experimental] X-Ray Film"
+  ]
+ },
+ {
+  "name": "[Drawing][v2] Beatrix Potter",
+  "medium": "watercolour painting style image",
+  "nl": "Storybook watercolour rendering, delicate ink outline, pale naturalistic washes, soft vignette into white paper, gentle detail, watercolour painting style image.",
+  "tags": [
+   "watercolor_(medium)",
+   "lineart",
+   "pale_color",
+   "traditional_media",
+   "vignetting"
+  ],
+  "tags_negative": [
+   "high_contrast"
+  ],
+  "negative": "harsh contrast, saturated digital colour",
+  "aliases": [
+   "[Drawing][Clio] Beatrix Potter",
+   "[Drawing][v2] Beatrix Potter Style (2)",
+   "[Drawing][Clio] Beatrix Potter Style (2)"
+  ]
+ },
+ {
+  "name": "[Drawing][v2] Bookplate Illustration",
+  "medium": "print style image",
+  "nl": "Bookplate rendering, engraved fine line, ornamental border and banner, monochrome ink on cream, heraldic symmetry, print style image.",
+  "tags": [
+   "lithograph",
+   "monochrome",
+   "lineart",
+   "traditional_media"
+  ],
+  "tags_negative": [
+   "colorful"
+  ],
+  "negative": "full colour, painterly texture"
+ },
+ {
+  "name": "[Drawing][v2] Boulet Graphic Illustration",
+  "medium": "illustration style image",
+  "nl": "Graphic-diary rendering, energetic ink line, flat washes of two or three colours, expressive caricature, comic-panel clarity, illustration style image.",
+  "tags": [
+   "ink_(medium)",
+   "limited_palette",
+   "comic",
+   "lineart"
+  ],
+  "tags_negative": [
+   "photorealistic"
+  ],
+  "negative": "photographic realism, airbrushed polish"
+ },
+ {
+  "name": "[Drawing][v2] Caricature",
+  "medium": "illustration style image",
+  "nl": "Caricature rendering, exaggerated features on a shrunken body, confident ink contour, flat marker colour, playful distortion, illustration style image.",
+  "tags": [
+   "lineart",
+   "flat_color",
+   "marker_(medium)",
+   "colorful"
+  ],
+  "tags_negative": [
+   "realistic"
+  ],
+  "negative": "accurate proportion, photographic realism"
+ },
+ {
+  "name": "[Drawing][v2] Children's Book Drawing",
+  "medium": "illustration style image",
+  "nl": "Children's-book rendering, friendly rounded shapes, soft crayon and watercolour texture, warm limited palette, generous white space, illustration style image.",
+  "tags": [
+   "watercolor_(medium)",
+   "crayon_(medium)",
+   "pastel_colors",
+   "textured",
+   "traditional_media"
+  ],
+  "tags_negative": [
+   "dark"
+  ],
+  "negative": "dark grim palette, photographic detail"
+ },
+ {
+  "name": "[Drawing][v2] Chinese Ink Drawing",
+  "medium": "ink painting style image",
+  "nl": "Chinese ink rendering, graded brush washes, dry-brush texture strokes, sparse composition, wide empty paper, ink painting style image.",
+  "tags": [
+   "ink_wash_painting",
+   "monochrome",
+   "traditional_media",
+   "minimalism"
+  ],
+  "tags_negative": [
+   "colorful"
+  ],
+  "negative": "saturated colour, dense filled background"
+ },
+ {
+  "name": "[Drawing][v2] Collector Storybook Illustration",
+  "medium": "illustration style image",
+  "nl": "Collector-edition storybook rendering, fine ink detail over rich gouache colour, gold-line ornament, decorative border, illustration style image.",
+  "tags": [
+   "gouache_(medium)",
+   "gold",
+   "lineart",
+   "traditional_media",
+   "colorful"
+  ],
+  "tags_negative": [
+   "photorealistic"
+  ],
+  "negative": "photographic depth, loose sketchiness"
+ },
+ {
+  "name": "[Drawing][v2] Conté Pastel",
+  "medium": "drawing style image",
+  "nl": "Conté rendering, sanguine and black chalk on toned paper, hatched tonal build, white chalk highlights, grainy tooth, drawing style image.",
+  "tags": [
+   "pastel_(medium)",
+   "charcoal_(medium)",
+   "sepia",
+   "textured",
+   "traditional_media"
+  ],
+  "tags_negative": [
+   "colorful"
+  ],
+  "negative": "full colour, smooth digital gradients"
+ },
+ {
+  "name": "[Drawing][v2] Crayola Colored-Book",
+  "medium": "material style image",
+  "nl": "Crayon colouring-book rendering, thick black printed outline, waxy scribbled fill overshooting the lines, paper tooth, material style image.",
+  "tags": [
+   "crayon_(medium)",
+   "outline",
+   "textured",
+   "colorful",
+   "traditional_media"
+  ],
+  "tags_negative": [
+   "highres"
+  ],
+  "negative": "precise digital fill, smooth shading"
+ },
+ {
+  "name": "[Drawing][v2] Doodle",
+  "medium": "drawing style image",
+  "nl": "Doodle rendering, casual biro line, repeated absent-minded motifs, uneven pressure, margin-of-the-page informality, drawing style image.",
+  "tags": [
+   "sketch",
+   "ballpoint_pen_(medium)",
+   "monochrome",
+   "lineart"
+  ],
+  "tags_negative": [
+   "highres"
+  ],
+  "negative": "polished rendering, careful shading"
+ },
+ {
+  "name": "[Drawing][v2] Drawing",
+  "medium": "drawing style image",
+  "nl": "General drawing rendering, pencil or pen line with hatched tone, visible construction marks, paper grain, drawing style image.",
+  "tags": [
+   "sketch",
+   "graphite_(medium)",
+   "monochrome",
+   "lineart"
+  ],
+  "tags_negative": [
+   "photorealistic"
+  ],
+  "negative": "photographic capture, painted colour"
+ },
+ {
+  "name": "[Drawing][v2] Etching",
+  "medium": "print style image",
+  "nl": "Etching rendering, bitten line of even weight, tonal build by hatch density, plate tone and paper impression, print style image.",
+  "tags": [
+   "lithograph",
+   "monochrome",
+   "cross-hatching",
+   "traditional_media"
+  ],
+  "tags_negative": [
+   "colorful"
+  ],
+  "negative": "colour, soft airbrushed shading"
+ },
+ {
+  "name": "[Drawing][v2] Fashion Sketch",
+  "medium": "drawing style image",
+  "nl": "Fashion-sketch rendering, elongated nine-head croquis, quick marker garment blocking, unfinished limbs, fabric swatch notes, drawing style image.",
+  "tags": [
+   "marker_(medium)",
+   "sketch",
+   "unfinished",
+   "lineart"
+  ],
+  "tags_negative": [
+   "photorealistic"
+  ],
+  "negative": "photographic proportion, dense rendering"
+ },
+ {
+  "name": "[Drawing][v2] Glen Keane",
+  "medium": "drawing style image",
+  "nl": "Animation-drawing rendering, searching multi-pass pencil line, energetic construction, soft graphite shading, rough edges, drawing style image.",
+  "tags": [
+   "graphite_(medium)",
+   "sketch",
+   "unfinished",
+   "monochrome"
+  ],
+  "tags_negative": [
+   "flat_color"
+  ],
+  "negative": "clean flat colour, vector precision"
+ },
+ {
+  "name": "[Drawing][v2] Gris Grimly",
+  "medium": "illustration style image",
+  "nl": "Macabre-whimsy rendering, scratchy nervous ink, spindly distorted anatomy, stained sepia washes, torn paper texture, illustration style image.",
+  "tags": [
+   "ink_(medium)",
+   "sepia",
+   "textured",
+   "muted_color",
+   "sketch"
+  ],
+  "tags_negative": [
+   "colorful"
+  ],
+  "negative": "bright clean colour, polished digital finish"
+ },
+ {
+  "name": "[Drawing][v2] Hyperrealistic Colored-Pen Sketch",
+  "medium": "drawing style image",
+  "nl": "Coloured-pen rendering, dense layered ballpoint hatching, glossy ink build-up, photoreal tonal accuracy, paper grain, drawing style image.",
+  "tags": [
+   "ballpoint_pen_(medium)",
+   "cross-hatching",
+   "realistic",
+   "textured"
+  ],
+  "tags_negative": [
+   "flat_color"
+  ],
+  "negative": "flat colour fill, loose gestural marks"
+ },
+ {
+  "name": "[Drawing][v2] Ink Pen Drawing",
+  "medium": "ink painting style image",
+  "nl": "Pen-and-ink rendering, fine technical line, cross-hatched tone, blotted starts, pure white paper as light, ink painting style image.",
+  "tags": [
+   "ink_(medium)",
+   "cross-hatching",
+   "monochrome",
+   "lineart"
+  ],
+  "tags_negative": [
+   "colorful"
+  ],
+  "negative": "colour washes, soft airbrush"
+ },
+ {
+  "name": "[Drawing][v2] Jarek Kubicki",
+  "medium": "illustration style image",
+  "nl": "Melancholic mixed rendering, pale skin against dark scratched texture, spatter and stain overlays, desaturated cool palette, illustration style image.",
+  "tags": [
+   "textured",
+   "desaturated",
+   "dark",
+   "painting_(medium)"
+  ],
+  "tags_negative": [
+   "colorful"
+  ],
+  "negative": "bright saturated colour, clean flat design"
+ },
+ {
+  "name": "[Drawing][v2] Lo-Fi Art",
+  "medium": "illustration style image",
+  "nl": "Lo-fi rendering, soft muted palette, grainy paper texture, simple flat shapes, warm nostalgic haze, illustration style image.",
+  "tags": [
+   "muted_color",
+   "textured",
+   "flat_color",
+   "soft_focus"
+  ],
+  "tags_negative": [
+   "highres"
+  ],
+  "negative": "crisp digital sharpness, saturated contrast"
+ },
+ {
+  "name": "[Drawing][v2] Loose Crosshatched Character Sketch",
+  "medium": "drawing style image",
+  "nl": "Loose hatched sketch, rapid contour searching, open crosshatch shading, unresolved edges, visible construction, drawing style image.",
+  "tags": [
+   "sketch",
+   "cross-hatching",
+   "monochrome",
+   "unfinished"
+  ],
+  "tags_negative": [
+   "highres"
+  ],
+  "negative": "polished finish, flat colour fill"
+ },
+ {
+  "name": "[Drawing][v2] Pastel-Toned Cute Illustration (Western-Korean Hybrid)",
+  "medium": "illustration style image",
+  "nl": "Cute hybrid rendering, rounded soft shapes, milky pastel palette, thin coloured outline, gentle airbrushed cheeks, illustration style image.",
+  "tags": [
+   "pastel_colors",
+   "outline",
+   "soft_focus",
+   "gradient"
+  ],
+  "tags_negative": [
+   "dark"
+  ],
+  "negative": "dark contrast, gritty texture"
+ },
+ {
+  "name": "[Drawing][v2] Playful Hand-Drawn Illustration",
+  "medium": "illustration style image",
+  "nl": "Hand-drawn rendering, wobbly confident line, off-register flat colour, crayon and pencil texture, cheerful palette, illustration style image.",
+  "tags": [
+   "crayon_(medium)",
+   "flat_color",
+   "textured",
+   "colorful",
+   "lineart"
+  ],
+  "tags_negative": [
+   "highres"
+  ],
+  "negative": "vector precision, photographic depth"
+ },
+ {
+  "name": "[Drawing][v2] Poe-Inspired Illustration",
+  "medium": "illustration style image",
+  "nl": "Gothic-literary rendering, dense pen hatching, deep black shadow, sepia paper stain, brittle spidery line, illustration style image.",
+  "tags": [
+   "ink_(medium)",
+   "cross-hatching",
+   "sepia",
+   "dark",
+   "monochrome"
+  ],
+  "tags_negative": [
+   "colorful"
+  ],
+  "negative": "bright colour, soft airbrush"
+ },
+ {
+  "name": "[Drawing][v2] Saul Steinbeck Art",
+  "medium": "drawing style image",
+  "nl": "Wry line-drawing rendering, spare economical contour, witty distortion, mostly empty page, one spot of flat colour, drawing style image.",
+  "tags": [
+   "lineart",
+   "minimalism",
+   "monochrome",
+   "spot_color"
+  ],
+  "tags_negative": [
+   "textured"
+  ],
+  "negative": "dense rendering, photographic shading"
+ },
+ {
+  "name": "[Drawing][v2] Sketch",
+  "medium": "drawing style image",
+  "nl": "Sketch rendering, quick searching pencil line, unfinished passages, light construction guides, open paper ground, drawing style image.",
+  "tags": [
+   "sketch",
+   "graphite_(medium)",
+   "unfinished",
+   "monochrome"
+  ],
+  "tags_negative": [
+   "highres"
+  ],
+  "negative": "finished colour, polished detail"
+ },
+ {
+  "name": "[Drawing][v2] Stick-Figure Child Drawing",
+  "medium": "drawing style image",
+  "nl": "Child-drawing rendering, stick limbs and circle heads, wobbling crayon line, colour outside the shapes, flat sky band, drawing style image.",
+  "tags": [
+   "crayon_(medium)",
+   "sketch",
+   "flat_color",
+   "limited_palette"
+  ],
+  "tags_negative": [
+   "realistic"
+  ],
+  "negative": "accurate anatomy, careful shading"
+ },
+ {
+  "name": "[Drawing][v2] Technical Drawing",
+  "medium": "technical drawing style image",
+  "nl": "Technical rendering, ruled uniform line weights, orthographic views, dimension arrows and leaders, plain white ground, technical drawing style image.",
+  "tags": [
+   "diagram",
+   "lineart",
+   "white_theme",
+   "monochrome"
+  ],
+  "tags_negative": [
+   "photorealistic"
+  ],
+  "negative": "painterly shading, photographic texture"
+ },
+ {
+  "name": "[Drawing][v2] Tim Burton",
+  "medium": "illustration style image",
+  "nl": "Spindly gothic rendering, elongated curling forms, big hollow eyes, scratchy ink line, monochrome with one sickly accent, illustration style image.",
+  "tags": [
+   "ink_(medium)",
+   "monochrome",
+   "dark",
+   "sketch",
+   "spot_color"
+  ],
+  "tags_negative": [
+   "colorful"
+  ],
+  "negative": "bright cheerful colour, realistic proportion"
+ },
+ {
+  "name": "[Drawing][v2] Traditional Marker Illustration",
+  "medium": "illustration style image",
+  "nl": "Marker rendering, overlapping alcohol-marker strokes, visible stroke banding, blended mid tones, bleed at the edges, illustration style image.",
+  "tags": [
+   "marker_(medium)",
+   "copic_(medium)",
+   "traditional_media",
+   "textured"
+  ],
+  "tags_negative": [
+   "gradient"
+  ],
+  "negative": "seamless digital gradients, photographic depth"
+ },
+ {
+  "name": "[Drawing][v2] Very Simplistic Doodle",
+  "medium": "drawing style image",
+  "nl": "Minimal doodle rendering, a few uneven strokes, no shading, single ink colour, huge empty paper, drawing style image.",
+  "tags": [
+   "sketch",
+   "minimalism",
+   "monochrome",
+   "lineart"
+  ],
+  "tags_negative": [
+   "highres"
+  ],
+  "negative": "detailed rendering, colour shading"
+ },
+ {
+  "name": "[Drawing][v2] Vintage Children's Book Drawing",
+  "medium": "illustration style image",
+  "nl": "Vintage kids-book rendering, two- or three-colour print separations, off-register overlaps, textured paper, simple bold line, illustration style image.",
+  "tags": [
+   "limited_palette",
+   "retro_artstyle",
+   "textured",
+   "flat_color",
+   "lineart"
+  ],
+  "tags_negative": [
+   "highres"
+  ],
+  "negative": "full-colour digital gradients, glossy stock"
+ },
+ {
+  "name": "[Drawing][v2] Western Cel-Shaded Illustration",
+  "medium": "illustration style image",
+  "nl": "Western cel-shaded rendering, thick discontinuous outline, flat colour with soft contact shadow, sparkling highlight accents, illustration style image.",
+  "tags": [
+   "cel_shading",
+   "outline",
+   "flat_color",
+   "colorful",
+   "sparkle"
+  ],
+  "tags_negative": [
+   "photorealistic"
+  ],
+  "negative": "photoreal shading, oil-paint texture"
+ },
+ {
+  "name": "[Drawing][v2] Whimsical Illustration",
+  "medium": "illustration style image",
+  "nl": "Whimsical rendering, bouncing organic shapes, decorative pattern fills, warm storybook palette, gentle texture overlay, illustration style image.",
+  "tags": [
+   "flat_color",
+   "colorful",
+   "textured",
+   "pastel_colors"
+  ],
+  "tags_negative": [
+   "dark"
+  ],
+  "negative": "grim palette, photographic realism"
+ },
+ {
+  "name": "[Drawing][v2] Wojak/Meme-Sketch",
+  "medium": "drawing style image",
+  "nl": "Meme-sketch rendering, crude mouse-drawn line, uneven wobbling contour, flat greyscale fill, plain white ground, drawing style image.",
+  "tags": [
+   "oekaki",
+   "sketch",
+   "monochrome",
+   "white_theme",
+   "lineart"
+  ],
+  "tags_negative": [
+   "highres"
+  ],
+  "negative": "polished rendering, careful anatomy"
+ },
+ {
+  "name": "[Illustration] 1970s Airbrush Album",
+  "medium": "illustration style image",
+  "nl": "1970s airbrush rendering, seamless sprayed gradients, chrome and glass highlights, sunset palette, soft vignette, illustration style image.",
+  "tags": [
+   "airbrush_(medium)",
+   "gradient",
+   "retro_artstyle",
+   "sunset",
+   "metallic"
+  ],
+  "tags_negative": [
+   "textured"
+  ],
+  "negative": "visible brush texture, harsh line work"
+ },
+ {
+  "name": "[Illustration] 1980s Fantasy Paperback",
+  "medium": "illustration style image",
+  "nl": "1980s paperback rendering, oil-painted hero staging, glowing magical accent, deep dark surround, glossy print finish, illustration style image.",
+  "tags": [
+   "oil_painting_(medium)",
+   "glowing",
+   "dark",
+   "retro_artstyle",
+   "colorful"
+  ],
+  "tags_negative": [
+   "minimalism"
+  ],
+  "negative": "flat modern vector, muted restraint"
+ },
+ {
+  "name": "[Illustration] 1990s CD Booklet Collage",
+  "medium": "collage style image",
+  "nl": "1990s booklet rendering, photocopied photo fragments, grunge texture layers, distressed type blocks, muted duotone print, collage style image.",
+  "tags": [
+   "collage",
+   "halftone",
+   "textured",
+   "duotone",
+   "desaturated"
+  ],
+  "tags_negative": [
+   "highres"
+  ],
+  "negative": "clean modern layout, saturated gloss"
+ },
+ {
+  "name": "[Illustration] Art Deco Fashion Plate",
+  "medium": "illustration style image",
+  "nl": "Deco fashion-plate rendering, elongated stylised figures, flat gouache colour, gold line accents, geometric border, illustration style image.",
+  "tags": [
+   "art_deco",
+   "gouache_(medium)",
+   "flat_color",
+   "gold",
+   "lineart"
+  ],
+  "tags_negative": [
+   "photorealistic"
+  ],
+  "negative": "photographic modelling, muted realism"
+ },
+ {
+  "name": "[Illustration] Art Nouveau Poster",
+  "medium": "poster style image",
+  "nl": "Art-nouveau poster rendering, whiplash contour, flat decorative colour, ornamental frame and lettering space, muted jewel palette, poster style image.",
+  "tags": [
+   "art_nouveau",
+   "poster",
+   "flat_color",
+   "lineart",
+   "muted_color"
+  ],
+  "tags_negative": [
+   "photorealistic"
+  ],
+  "negative": "photographic depth, harsh contrast"
+ },
+ {
+  "name": "[Illustration] Board-Game Box",
+  "medium": "illustration style image",
+  "nl": "Board-game box rendering, bright painted scene with clear focal hierarchy, saturated fantasy colour, crisp shelf-ready polish, illustration style image.",
+  "tags": [
+   "painting_(medium)",
+   "colorful",
+   "cover",
+   "cinematic_lighting"
+  ],
+  "tags_negative": [
+   "sketch"
+  ],
+  "negative": "rough sketch, muted documentary grade"
+ },
+ {
+  "name": "[Illustration] Botanical Illustration",
+  "medium": "illustration style image",
+  "nl": "Botanical-plate rendering, precise specimen drawing, delicate watercolour washes, cream paper ground, hand-lettered label space, illustration style image.",
+  "tags": [
+   "watercolor_(medium)",
+   "diagram",
+   "pale_color",
+   "traditional_media",
+   "lineart"
+  ],
+  "tags_negative": [
+   "high_contrast"
+  ],
+  "negative": "loose abstraction, dramatic lighting"
+ },
+ {
+  "name": "[Illustration] Brand Mascot Sheet",
+  "medium": "vector style image",
+  "nl": "Mascot-sheet rendering, bold simple character shapes in several poses, flat brand colour, thick even outline, plain ground, vector style image.",
+  "tags": [
+   "multiple_views",
+   "flat_color",
+   "outline",
+   "vector_trace",
+   "simple_background"
+  ],
+  "tags_negative": [
+   "textured"
+  ],
+  "negative": "painterly texture, photographic depth"
+ },
+ {
+  "name": "[Illustration] Cartographic Map",
+  "medium": "technical drawing style image",
+  "nl": "Cartographic rendering, hand-drawn coastlines and hatched relief, compass rose, aged paper tone, decorative cartouche, technical drawing style image.",
+  "tags": [
+   "map",
+   "sepia",
+   "lineart",
+   "traditional_media"
+  ],
+  "tags_negative": [
+   "photorealistic"
+  ],
+  "negative": "satellite photography, modern flat UI"
+ },
+ {
+  "name": "[Illustration] Children's Picture Book",
+  "medium": "illustration style image",
+  "nl": "Picture-book rendering, soft crayon and watercolour texture, friendly rounded shapes, warm limited palette, airy white margin, illustration style image.",
+  "tags": [
+   "watercolor_(medium)",
+   "crayon_(medium)",
+   "pastel_colors",
+   "textured"
+  ],
+  "tags_negative": [
+   "dark"
+  ],
+  "negative": "dark grim palette, photographic detail"
+ },
+ {
+  "name": "[Illustration] Constructivist Poster",
+  "medium": "poster style image",
+  "nl": "Constructivist rendering, red-black-cream inks, aggressive diagonals, photomontage fragments, heavy geometric blocking, poster style image.",
+  "tags": [
+   "poster",
+   "limited_palette",
+   "collage",
+   "red_theme",
+   "high_contrast"
+  ],
+  "tags_negative": [
+   "pastel_colors"
+  ],
+  "negative": "pastel softness, ornamental detail"
+ },
+ {
+  "name": "[Illustration] Editorial Magazine",
+  "medium": "illustration style image",
+  "nl": "Editorial rendering, conceptual metaphor, limited print palette, textured flat shapes, deliberate empty space for type, illustration style image.",
+  "tags": [
+   "flat_color",
+   "limited_palette",
+   "textured",
+   "minimalism"
+  ],
+  "tags_negative": [
+   "photorealistic"
+  ],
+  "negative": "photographic realism, busy rendering"
+ },
+ {
+  "name": "[Illustration] Exploded Technical",
+  "medium": "technical drawing style image",
+  "nl": "Exploded technical rendering, parts separated along assembly axes, thin leader lines, flat shading, plain ground, technical drawing style image.",
+  "tags": [
+   "diagram",
+   "lineart",
+   "multiple_views",
+   "simple_background"
+  ],
+  "tags_negative": [
+   "photorealistic"
+  ],
+  "negative": "assembled hero product, dramatic lighting"
+ },
+ {
+  "name": "[Illustration] Fashion Croquis",
+  "medium": "drawing style image",
+  "nl": "Croquis rendering, nine-head elongated figure, fast confident contour, marker garment blocks, unfinished hands and face, drawing style image.",
+  "tags": [
+   "sketch",
+   "marker_(medium)",
+   "unfinished",
+   "lineart"
+  ],
+  "tags_negative": [
+   "photorealistic"
+  ],
+  "negative": "realistic proportion, dense rendering"
+ },
+ {
+  "name": "[Illustration] Fashion Editorial Drawn",
+  "medium": "illustration style image",
+  "nl": "Drawn fashion-editorial rendering, bold ink contour, washy colour blocking, exaggerated silhouette, generous white space, illustration style image.",
+  "tags": [
+   "ink_(medium)",
+   "watercolor_(medium)",
+   "lineart",
+   "minimalism"
+  ],
+  "tags_negative": [
+   "photorealistic"
+  ],
+  "negative": "photographic capture, dense background detail"
+ },
+ {
+  "name": "[Illustration] Game Concept Art",
+  "medium": "illustration style image",
+  "nl": "Concept-art rendering, value-first block-in, callout detail insets, functional design clarity, muted painted palette, illustration style image.",
+  "tags": [
+   "concept_art",
+   "painting_(medium)",
+   "muted_color",
+   "multiple_views"
+  ],
+  "tags_negative": [
+   "highres"
+  ],
+  "negative": "finished poster polish, photographic finish"
+ },
+ {
+  "name": "[Illustration] Game Key Art",
+  "medium": "illustration style image",
+  "nl": "Game key-art rendering, hero silhouette against a dramatic sky, commercial poster light, painted density, glowing accents, illustration style image.",
+  "tags": [
+   "key_visual",
+   "painting_(medium)",
+   "cinematic_lighting",
+   "glowing"
+  ],
+  "tags_negative": [
+   "sketch"
+  ],
+  "negative": "rough sketch, flat documentary framing"
+ },
+ {
+  "name": "[Illustration] Golden Age Magazine",
+  "medium": "illustration style image",
+  "nl": "Golden-age magazine rendering, confident oil brushwork, warm narrative light, period print colour, textured cover stock, illustration style image.",
+  "tags": [
+   "oil_painting_(medium)",
+   "retro_artstyle",
+   "textured",
+   "colorful"
+  ],
+  "tags_negative": [
+   "minimalism"
+  ],
+  "negative": "flat modern vector, cold digital colour"
+ },
+ {
+  "name": "[Illustration] Marker Rendering",
+  "medium": "illustration style image",
+  "nl": "Design-marker rendering, broad alcohol-marker strokes, streaky overlaps, white gouache highlights, quick perspective line, illustration style image.",
+  "tags": [
+   "marker_(medium)",
+   "copic_(medium)",
+   "sketch",
+   "textured"
+  ],
+  "tags_negative": [
+   "gradient"
+  ],
+  "negative": "smooth digital gradients, photographic finish"
+ },
+ {
+  "name": "[Illustration] Matte Painting",
+  "medium": "illustration style image",
+  "nl": "Matte-painting rendering, photographic texture blended into paint, layered atmospheric depth, epic scale haze, cinematic grade, illustration style image.",
+  "tags": [
+   "concept_art",
+   "scenery",
+   "painting_(medium)",
+   "cinematic_lighting"
+  ],
+  "tags_negative": [
+   "simple_background"
+  ],
+  "negative": "studio product framing, flat cartoon colour",
+  "aliases": [
+   "[Photo][v2] Atmospheric Matte Painting",
+   "[Photo][Clio] Atmospheric Matte Painting"
+  ]
+ },
+ {
+  "name": "[Illustration] Mid-Century Kids Book",
+  "medium": "illustration style image",
+  "nl": "Mid-century kids-book rendering, two- or three-ink separations, off-register overlap colour, textured screen fills, simple shapes, illustration style image.",
+  "tags": [
+   "limited_palette",
+   "retro_artstyle",
+   "flat_color",
+   "textured"
+  ],
+  "tags_negative": [
+   "gradient"
+  ],
+  "negative": "smooth digital gradients, photographic depth"
+ },
+ {
+  "name": "[Illustration] New Yorker Spot",
+  "medium": "illustration style image",
+  "nl": "Spot-illustration rendering, witty economical line, one or two flat washes, mostly white page, understated palette, illustration style image.",
+  "tags": [
+   "lineart",
+   "minimalism",
+   "limited_palette",
+   "white_theme"
+  ],
+  "tags_negative": [
+   "textured"
+  ],
+  "negative": "dense rendering, saturated colour"
+ },
+ {
+  "name": "[Illustration] Photobash Concept",
+  "medium": "illustration style image",
+  "nl": "Photobash rendering, photo fragments blended under paint, mismatched grain unified by grade, quick collage-real depth, illustration style image.",
+  "tags": [
+   "collage",
+   "concept_art",
+   "painting_(medium)",
+   "textured"
+  ],
+  "tags_negative": [
+   "flat_color"
+  ],
+  "negative": "flat vector shapes, clean cartoon colour"
+ },
+ {
+  "name": "[Illustration] Political Caricature",
+  "medium": "illustration style image",
+  "nl": "Political-caricature rendering, exaggerated features, crosshatched ink shading, single spot colour, newsprint texture, illustration style image.",
+  "tags": [
+   "cross-hatching",
+   "ink_(medium)",
+   "spot_color",
+   "monochrome",
+   "textured"
+  ],
+  "tags_negative": [
+   "photorealistic"
+  ],
+  "negative": "photographic likeness, soft airbrush"
+ },
+ {
+  "name": "[Illustration] Saturday Evening Post Cover",
+  "medium": "illustration style image",
+  "nl": "Narrative cover rendering, warm storytelling light, meticulous everyday detail, gently exaggerated expression, oil-painted finish, illustration style image.",
+  "tags": [
+   "oil_painting_(medium)",
+   "realistic",
+   "retro_artstyle",
+   "colorful"
+  ],
+  "tags_negative": [
+   "dark"
+  ],
+  "negative": "grim palette, abstract distortion"
+ },
+ {
+  "name": "[Illustration] Scientific Illustration",
+  "medium": "technical drawing style image",
+  "nl": "Scientific-plate rendering, didactic clarity, stippled tonal shading, labelled leader lines, neutral paper ground, technical drawing style image.",
+  "tags": [
+   "diagram",
+   "halftone",
+   "lineart",
+   "traditional_media"
+  ],
+  "tags_negative": [
+   "cinematic_lighting"
+  ],
+  "negative": "dramatic lighting, painterly abstraction"
+ },
+ {
+  "name": "[Illustration] Scientific Plate",
+  "medium": "technical drawing style image",
+  "nl": "Engraved plate rendering, fine hatched specimen detail, numbered figures across the sheet, cream paper, thin rule border, technical drawing style image.",
+  "tags": [
+   "lithograph",
+   "cross-hatching",
+   "diagram",
+   "sepia",
+   "traditional_media"
+  ],
+  "tags_negative": [
+   "colorful"
+  ],
+  "negative": "saturated colour, photographic capture"
+ },
+ {
+  "name": "[Illustration] Speedpaint",
+  "medium": "illustration style image",
+  "nl": "Speedpaint rendering, broad blocked strokes, unresolved edges, value read before detail, deliberately unfinished passages, illustration style image.",
+  "tags": [
+   "painting_(medium)",
+   "unfinished",
+   "sketch",
+   "muted_color"
+  ],
+  "tags_negative": [
+   "highres"
+  ],
+  "negative": "tight finished rendering, glossy polish"
+ },
+ {
+  "name": "[Illustration] Sticker Cute",
+  "medium": "vector style image",
+  "nl": "Cute-sticker rendering, thick white keyline, chibi-round shapes, flat candy colour, glossy dot highlights, no background, vector style image.",
+  "tags": [
+   "sticker",
+   "chibi",
+   "flat_color",
+   "white_theme",
+   "simple_background"
+  ],
+  "tags_negative": [
+   "scenery"
+  ],
+  "negative": "detailed background, photographic depth"
+ },
+ {
+  "name": "[Illustration] Superflat Pop",
+  "medium": "illustration style image",
+  "nl": "Superflat rendering, zero depth, glossy flat colour planes, repeated motif fields, hard vector contours, illustration style image.",
+  "tags": [
+   "flat_color",
+   "vector_trace",
+   "colorful",
+   "outline"
+  ],
+  "tags_negative": [
+   "depth_of_field"
+  ],
+  "negative": "atmospheric depth, soft painterly shading"
+ },
+ {
+  "name": "[Illustration] Swiss International",
+  "medium": "poster style image",
+  "nl": "Swiss-style rendering, strict grid alignment, flat two-colour fields, enormous empty space, objective photographic insert, poster style image.",
+  "tags": [
+   "minimalism",
+   "poster",
+   "limited_palette",
+   "flat_color",
+   "white_theme"
+  ],
+  "tags_negative": [
+   "textured"
+  ],
+  "negative": "ornament, painterly texture"
+ },
+ {
+  "name": "[Illustration] Travel Poster 1930s",
+  "medium": "poster style image",
+  "nl": "1930s travel-poster rendering, simplified stylised landscape, flat airbrushed colour bands, deco geometry, screenprint texture, poster style image.",
+  "tags": [
+   "poster",
+   "art_deco",
+   "flat_color",
+   "limited_palette",
+   "airbrush_(medium)"
+  ],
+  "tags_negative": [
+   "photorealistic"
+  ],
+  "negative": "photographic detail, modern gradients"
+ }
 ]

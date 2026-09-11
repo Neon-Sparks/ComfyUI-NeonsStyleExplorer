@@ -12,13 +12,20 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      # v5/v6 of these actions run on the Node 24 runtime; the v4/v5 pair
+      # declared Node 20, which GitHub has deprecated and now force-upgrades.
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
         with:
           python-version: "3.11"
-      - uses: actions/setup-node@v4
+      # this one is the Node that runs tools/check_web.mjs, not the runtime
+      - uses: actions/setup-node@v5
         with:
-          node-version: "20"
+          node-version: "22"
+      # Pillow is what the preview-saving tests need to write an image.
+      # ComfyUI ships it, so the node does not declare it; CI has to add it.
+      - name: Install test dependencies
+        run: python -m pip install --quiet Pillow numpy
       - name: Build, lint and test
         run: bash tools/build_all.sh
       - name: Fail if the build changed a tracked file

@@ -1,1730 +1,1730 @@
 [
-  {
-    "name": "[3D] CAD Blueprint Shaded",
-    "medium": "technical drawing style image",
-    "nl": "Shaded CAD rendering: flat grey surfaces with crisp edge lines, ruled dimension arrows, blue technical ground, no texture, technical drawing style image.",
-    "tags": [
-      "diagram",
-      "wireframe",
-      "3d",
-      "blue_theme",
-      "lineart"
-    ],
-    "tags_negative": [
-      "photorealistic"
-    ],
-    "negative": "photographic materials, dramatic lighting"
-  },
-  {
-    "name": "[3D][v2] Blueprint",
-    "medium": "technical drawing style image",
-    "nl": "Blueprint rendering: white line drawing on cyanotype blue, orthographic projection, dimension callouts, faint grid, technical drawing style image.",
-    "tags": [
-      "diagram",
-      "blue_theme",
-      "lineart",
-      "limited_palette"
-    ],
-    "tags_negative": [
-      "photorealistic"
-    ],
-    "negative": "rendered materials, perspective photography"
-  },
-  {
-    "name": "[3D] Anime Cel-Shaded 3D",
-    "medium": "cgi style image",
-    "nl": "Cel-shaded 3D rendering: banded toon lighting on sculpted geometry, inked contour, anime-style flat colour zones, clean specular dots, cgi style image.",
-    "tags": [
-      "3d",
-      "cel_shading",
-      "outline",
-      "anime_coloring",
-      "flat_color"
-    ],
-    "tags_negative": [
-      "photorealistic"
-    ],
-    "negative": "photoreal shading, painterly texture"
-  },
-  {
-    "name": "[3D] Cel-Shaded 3D",
-    "medium": "cgi style image",
-    "nl": "Toon-shaded rendering: hard two-band lighting across 3D forms, uniform outline, flat local colour, minimal specular, cgi style image.",
-    "tags": [
-      "3d",
-      "cel_shading",
-      "outline",
-      "flat_color"
-    ],
-    "tags_negative": [
-      "photorealistic"
-    ],
-    "negative": "physically based reflections, soft gradients"
-  },
-  {
-    "name": "[3D] Character SSS",
-    "medium": "cgi style image",
-    "nl": "Hero character rendering: subsurface skin scatter, groomed hair cards, micro pore displacement, soft key with bounce, cgi style image.",
-    "tags": [
-      "3d",
-      "realistic",
-      "glowing",
-      "highres"
-    ],
-    "tags_negative": [
-      "flat_color"
-    ],
-    "negative": "flat toon shading, plastic skin"
-  },
-  {
-    "name": "[3D] Clay Render",
-    "medium": "cgi style image",
-    "nl": "Clay render: untextured matte grey material on every surface, soft ambient occlusion, form read only from light, cgi style image.",
-    "tags": [
-      "3d",
-      "claymation",
-      "greyscale",
-      "simple_background"
-    ],
-    "tags_negative": [
-      "colorful"
-    ],
-    "negative": "colour textures, reflective materials",
-    "aliases": [
-      "[3D] Clay Shader"
-    ]
-  },
-  {
-    "name": "[3D] Clay Render AO",
-    "medium": "cgi style image",
-    "nl": "Ambient-occlusion clay pass: uniform grey shading with contact darkening in crevices, no colour, no specular, cgi style image.",
-    "tags": [
-      "3d",
-      "greyscale",
-      "monochrome",
-      "claymation"
-    ],
-    "tags_negative": [
-      "colorful"
-    ],
-    "negative": "textured colour, glossy highlights"
-  },
-  {
-    "name": "[3D] CRT Screenshot",
-    "medium": "video artefact style image",
-    "nl": "CRT-screen capture: phosphor scanlines, curved glass distortion, glow bloom around bright pixels, chroma bleed, video artefact style image.",
-    "tags": [
-      "glitch",
-      "glowing",
-      "dithering",
-      "dark"
-    ],
-    "tags_negative": [
-      "highres"
-    ],
-    "negative": "flat-panel sharpness, clean pixel grid"
-  },
-  {
-    "name": "[3D] Cut-Paper Stop Motion",
-    "medium": "handmade style image",
-    "nl": "Cut-paper stop-motion rendering: layered paper shapes with visible edges and drop shadows, matte stock texture, slight jitter, handmade style image.",
-    "tags": [
-      "papercraft",
-      "stop_motion",
-      "flat_color",
-      "textured"
-    ],
-    "tags_negative": [
-      "3d"
-    ],
-    "negative": "smooth CGI surfaces, digital gradients"
-  },
-  {
-    "name": "[3D] Cycles Render",
-    "medium": "cgi style image",
-    "nl": "Cycles path-traced rendering: physically accurate light bounce, soft shadow falloff, believable roughness response, cgi style image.",
-    "tags": [
-      "3d",
-      "realistic",
-      "cinematic_lighting",
-      "highres"
-    ],
-    "tags_negative": [
-      "cel_shading"
-    ],
-    "negative": "toon banding, flat vector colour",
-    "aliases": [
-      "[3D] Blender Cycles"
-    ]
-  },
-  {
-    "name": "[3D] Edo-Dot Pixel Portrait",
-    "medium": "pixel art style image",
-    "nl": "Chunky pixel-portrait rendering: large square pixels, limited arcade palette, hard aliased edges, dithered shading, pixel art style image.",
-    "tags": [
-      "pixel_art",
-      "dithering",
-      "limited_palette",
-      "portrait"
-    ],
-    "tags_negative": [
-      "highres"
-    ],
-    "negative": "smooth antialiasing, photographic detail"
-  },
-  {
-    "name": "[3D] Eevee Realtime",
-    "medium": "cgi style image",
-    "nl": "Realtime rendering: screen-space reflections, approximate shadows, slightly plastic fill light, fast clean surfaces, cgi style image.",
-    "tags": [
-      "3d",
-      "plastic",
-      "glowing"
-    ],
-    "tags_negative": [
-      "film_grain"
-    ],
-    "negative": "path-traced softness, heavy grain"
-  },
-  {
-    "name": "[3D] Fighting-Game 2.5D",
-    "medium": "game art style image",
-    "nl": "Fighting-game rendering: cel-shaded characters on a flat plane, ink outlines, saturated stage lighting, impact glow, game art style image.",
-    "tags": [
-      "3d",
-      "cel_shading",
-      "outline",
-      "colorful",
-      "glowing"
-    ],
-    "tags_negative": [
-      "photorealistic"
-    ],
-    "negative": "photoreal shading, muted grade"
-  },
-  {
-    "name": "[3D] Game Engine Cinematic",
-    "medium": "game art style image",
-    "nl": "Engine cinematic rendering: realtime global illumination, volumetric light shafts, screen-space reflections, film grain overlay, game art style image.",
-    "tags": [
-      "3d",
-      "cinematic_lighting",
-      "god_rays",
-      "film_grain",
-      "highres"
-    ],
-    "tags_negative": [
-      "flat_color"
-    ],
-    "negative": "flat toon shading, cartoon outline"
-  },
-  {
-    "name": "[3D] Glassmorphism UI Object",
-    "medium": "cgi style image",
-    "nl": "Glassmorphic rendering: frosted translucent panels, soft background blur through the glass, pastel gradients, thin bright edges, cgi style image.",
-    "tags": [
-      "glass",
-      "transparent",
-      "gradient",
-      "pastel_colors",
-      "3d"
-    ],
-    "tags_negative": [
-      "textured"
-    ],
-    "negative": "matte rough materials, gritty texture"
-  },
-  {
-    "name": "[3D] Glitch Art",
-    "medium": "video artefact style image",
-    "nl": "Glitch rendering: RGB channel displacement, datamoshed blocks, scanline tearing, corrupted colour banding, video artefact style image.",
-    "tags": [
-      "glitch",
-      "high_contrast",
-      "colorful",
-      "dithering"
-    ],
-    "tags_negative": [
-      "highres"
-    ],
-    "negative": "clean undistorted image, natural colour"
-  },
-  {
-    "name": "[3D] Grease-Pencil Hybrid",
-    "medium": "cgi style image",
-    "nl": "Grease-pencil hybrid rendering: hand-drawn strokes in 3D space, flat inked shapes over volumetric staging, paper-grain overlay, cgi style image.",
-    "tags": [
-      "3d",
-      "lineart",
-      "flat_color",
-      "textured",
-      "sketch"
-    ],
-    "tags_negative": [
-      "photorealistic"
-    ],
-    "negative": "photoreal materials, smooth gradients"
-  },
-  {
-    "name": "[3D] Hard-Surface Modeling",
-    "medium": "cgi style image",
-    "nl": "Hard-surface rendering: precise panel gaps and bevels, machined edge highlights, brushed metal and anodised finishes, cgi style image.",
-    "tags": [
-      "3d",
-      "metallic",
-      "highres",
-      "wireframe"
-    ],
-    "tags_negative": [
-      "soft_focus"
-    ],
-    "negative": "organic soft forms, painterly texture"
-  },
-  {
-    "name": "[3D] Hologram",
-    "medium": "cgi style image",
-    "nl": "Holographic rendering: scanline-striped translucent light body, cyan emissive glow, flicker artefacts, dark surround, cgi style image.",
-    "tags": [
-      "holographic",
-      "glowing",
-      "transparent",
-      "blue_theme",
-      "dark"
-    ],
-    "tags_negative": [
-      "photorealistic"
-    ],
-    "negative": "solid opaque materials, daylight"
-  },
-  {
-    "name": "[3D] Iridescent Thin-Film",
-    "medium": "cgi style image",
-    "nl": "Thin-film iridescent rendering: oil-slick rainbow shift across the surface, sharp specular bands, dark reflective ground, cgi style image.",
-    "tags": [
-      "iridescent",
-      "holographic",
-      "shiny",
-      "metallic",
-      "3d"
-    ],
-    "tags_negative": [
-      "muted_color"
-    ],
-    "negative": "matte muted surfaces, flat colour"
-  },
-  {
-    "name": "[3D] Isometric 3D",
-    "medium": "cgi style image",
-    "nl": "Isometric rendering: parallel projection with no perspective convergence, 30-degree axes, even ambient light, tidy geometry, cgi style image.",
-    "tags": [
-      "3d",
-      "simple_background",
-      "flat_color"
-    ],
-    "tags_negative": [
-      "fisheye"
-    ],
-    "negative": "perspective distortion, dramatic camera angle",
-    "aliases": [
-      "[3D][v2] Isometric 3D Graphic",
-      "[3D][Clio] Isometric 3D Graphic"
-    ]
-  },
-  {
-    "name": "[3D] Isometric Diorama",
-    "medium": "cgi style image",
-    "nl": "Isometric diorama rendering: small self-contained scene on a floating base, soft ambient occlusion, toy-clean materials, cgi style image.",
-    "tags": [
-      "3d",
-      "simple_background",
-      "plastic",
-      "colorful"
-    ],
-    "tags_negative": [
-      "photorealistic"
-    ],
-    "negative": "full-scale realism, wide perspective"
-  },
-  {
-    "name": "[3D] Isometric Game Icon",
-    "medium": "game art style image",
-    "nl": "Isometric icon rendering: single object in parallel projection, bold readable silhouette, soft gradient shading, plain tile ground, game art style image.",
-    "tags": [
-      "icon_(computing)",
-      "3d",
-      "gradient",
-      "simple_background"
-    ],
-    "tags_negative": [
-      "scenery"
-    ],
-    "negative": "complex environment, photographic depth"
-  },
-  {
-    "name": "[3D] Liquid Chrome",
-    "medium": "cgi style image",
-    "nl": "Liquid-chrome rendering: mirror-perfect molten metal, warped environment reflections, blue-white specular blowout, cgi style image.",
-    "tags": [
-      "metallic",
-      "shiny",
-      "3d",
-      "iridescent",
-      "high_contrast"
-    ],
-    "tags_negative": [
-      "textured"
-    ],
-    "negative": "matte rough surfaces, painterly texture"
-  },
-  {
-    "name": "[3D] Low-Poly",
-    "medium": "cgi style image",
-    "nl": "Faceted low-poly rendering: chunky triangulated forms, flat per-face colour, crisp silhouette angles, minimal detail, cgi style image.",
-    "tags": [
-      "low_poly",
-      "3d",
-      "flat_color",
-      "minimalism"
-    ],
-    "tags_negative": [
-      "photorealistic"
-    ],
-    "negative": "subdivided smooth surfaces, realistic materials",
-    "aliases": [
-      "[3D] Low Poly (2)",
-      "[3D][v2] Low Poly",
-      "[3D][Clio] Low Poly"
-    ]
-  },
-  {
-    "name": "[3D] Mid-1990s CGI Feature",
-    "medium": "cgi style image",
-    "nl": "Mid-90s CGI rendering: plasticky shaders, simple specular blobs, sparse texture detail, clean bright key light, cgi style image.",
-    "tags": [
-      "3d",
-      "plastic",
-      "retro_artstyle",
-      "shiny"
-    ],
-    "tags_negative": [
-      "highres"
-    ],
-    "negative": "modern path-traced realism, subsurface skin"
-  },
-  {
-    "name": "[3D] Octane Render",
-    "medium": "cgi style image",
-    "nl": "Octane-style rendering: filmic CG materials, crisp caustics, deep depth of field, physically accurate glass and metal, cgi style image.",
-    "tags": [
-      "3d",
-      "caustics",
-      "depth_of_field",
-      "highres",
-      "glass"
-    ],
-    "tags_negative": [
-      "flat_color"
-    ],
-    "negative": "flat toon shading, low-detail geometry"
-  },
-  {
-    "name": "[3D] Painterly 3D",
-    "medium": "cgi style image",
-    "nl": "Painterly 3D rendering: brush-textured maps over sculpted volumes, hand-painted colour breakup, soft stylised light, cgi style image.",
-    "tags": [
-      "3d",
-      "painting_(medium)",
-      "textured",
-      "cinematic_lighting"
-    ],
-    "tags_negative": [
-      "photorealistic"
-    ],
-    "negative": "photoreal material scans, hard vector edges"
-  },
-  {
-    "name": "[3D] Path Traced",
-    "medium": "cgi style image",
-    "nl": "Path-traced rendering: quiet physically based light, accurate soft shadows and bounce, subtle sampling noise, cgi style image.",
-    "tags": [
-      "3d",
-      "realistic",
-      "cinematic_lighting",
-      "highres"
-    ],
-    "tags_negative": [
-      "cel_shading"
-    ],
-    "negative": "toon banding, flat ambient fill"
-  },
-  {
-    "name": "[3D] PBR Materials",
-    "medium": "cgi style image",
-    "nl": "PBR material rendering: correct metalness and roughness response, energy-conserving highlights, believable surface wear, cgi style image.",
-    "tags": [
-      "3d",
-      "metallic",
-      "realistic",
-      "textured"
-    ],
-    "tags_negative": [
-      "flat_color"
-    ],
-    "negative": "flat unlit colour, painted fake highlights"
-  },
-  {
-    "name": "[3D] Photogrammetry Look",
-    "medium": "cgi style image",
-    "nl": "Photogrammetry rendering: scanned surface detail with baked lighting, slightly melted geometry at the edges, capture noise, cgi style image.",
-    "tags": [
-      "3d",
-      "realistic",
-      "textured",
-      "highres"
-    ],
-    "tags_negative": [
-      "flat_color"
-    ],
-    "negative": "clean hand-modelled geometry, toon shading"
-  },
-  {
-    "name": "[3D] Photoreal CGI",
-    "medium": "cgi style image",
-    "nl": "Photoreal CGI rendering: physically based materials, ray-traced shadows and reflections, camera-accurate lens response, cgi style image.",
-    "tags": [
-      "3d",
-      "photorealistic",
-      "realistic",
-      "depth_of_field",
-      "highres"
-    ],
-    "tags_negative": [
-      "cel_shading"
-    ],
-    "negative": "toon outline, plastic uniform shading"
-  },
-  {
-    "name": "[3D] Product Studio Render",
-    "medium": "cgi style image",
-    "nl": "Product render: seamless studio sweep, large softbox reflections in glossy surfaces, crisp edge highlight, clean shadow, cgi style image.",
-    "tags": [
-      "3d",
-      "simple_background",
-      "shiny",
-      "white_theme",
-      "highres"
-    ],
-    "tags_negative": [
-      "film_grain"
-    ],
-    "negative": "gritty environment, heavy grain"
-  },
-  {
-    "name": "[3D] PS1 Affine",
-    "medium": "cgi style image",
-    "nl": "PS1-era rendering: warped affine texture mapping, vertex jitter, low-resolution textures, no antialiasing, dark dithered fog, cgi style image.",
-    "tags": [
-      "3d",
-      "low_poly",
-      "dithering",
-      "pixel_art",
-      "retro_artstyle"
-    ],
-    "tags_negative": [
-      "highres"
-    ],
-    "negative": "modern smooth shading, high-resolution textures",
-    "aliases": [
-      "[3D][v2] PS1 Graphics",
-      "[3D][Clio] PS1 Graphics",
-      "[3D][v2] PS1 Screenshot",
-      "[3D][Clio] PS1 Screenshot"
-    ]
-  },
-  {
-    "name": "[3D] Redshift",
-    "medium": "cgi style image",
-    "nl": "Redshift-style rendering: clean commercial CGI, controlled specular highlights, tidy volumetrics, crisp look-dev finish, cgi style image.",
-    "tags": [
-      "3d",
-      "highres",
-      "cinematic_lighting",
-      "shiny"
-    ],
-    "tags_negative": [
-      "film_grain"
-    ],
-    "negative": "noisy grain, hand-painted texture"
-  },
-  {
-    "name": "[3D] Sixth-Gen Console",
-    "medium": "cgi style image",
-    "nl": "Sixth-generation console rendering: simple per-vertex lighting, blurry low-res textures, hard-edged shadows, limited draw distance, cgi style image.",
-    "tags": [
-      "3d",
-      "low_poly",
-      "retro_artstyle",
-      "dithering"
-    ],
-    "tags_negative": [
-      "highres"
-    ],
-    "negative": "modern global illumination, 4K textures"
-  },
-  {
-    "name": "[3D] Stylized Comedy Feature",
-    "medium": "cgi style image",
-    "nl": "Comedy-feature CGI: exaggerated squash-and-stretch proportions, bouncy soft materials, bright key with warm bounce, cgi style image.",
-    "tags": [
-      "3d",
-      "colorful",
-      "plastic",
-      "cinematic_lighting"
-    ],
-    "tags_negative": [
-      "photorealistic"
-    ],
-    "negative": "gritty realism, muted grade"
-  },
-  {
-    "name": "[3D] Stylized Feature Animation",
-    "medium": "cgi style image",
-    "nl": "Stylised feature CGI: appealing simplified forms, soft subsurface skin, art-directed colour script, gentle rim light, cgi style image.",
-    "tags": [
-      "3d",
-      "cinematic_lighting",
-      "colorful",
-      "rim_lighting"
-    ],
-    "tags_negative": [
-      "photorealistic"
-    ],
-    "negative": "photoreal human detail, harsh contrast"
-  },
-  {
-    "name": "[3D] Toy-Plastic Shader",
-    "medium": "cgi style image",
-    "nl": "Toy-plastic rendering: injection-moulded surfaces, candy specular highlights, visible seam lines and sprue marks, cgi style image.",
-    "tags": [
-      "plastic",
-      "shiny",
-      "3d",
-      "colorful"
-    ],
-    "tags_negative": [
-      "textured"
-    ],
-    "negative": "organic skin detail, rough natural materials"
-  },
-  {
-    "name": "[3D] V-Ray",
-    "medium": "cgi style image",
-    "nl": "V-Ray archviz rendering: hard sun through glass, accurate interior bounce, crisp material separation, clean neutral grade, cgi style image.",
-    "tags": [
-      "3d",
-      "realistic",
-      "sunlight",
-      "glass",
-      "highres"
-    ],
-    "tags_negative": [
-      "cel_shading"
-    ],
-    "negative": "toon shading, painterly texture"
-  },
-  {
-    "name": "[3D] Voxel",
-    "medium": "cgi style image",
-    "nl": "Voxel rendering: everything built from uniform cubes, blocky stepped edges, flat per-voxel colour, simple ambient shading, cgi style image.",
-    "tags": [
-      "3d",
-      "pixel_art",
-      "low_poly",
-      "flat_color"
-    ],
-    "tags_negative": [
-      "photorealistic"
-    ],
-    "negative": "smooth curved geometry, photographic texture"
-  },
-  {
-    "name": "[3D] Wireframe Overlay",
-    "medium": "cgi style image",
-    "nl": "Wireframe-overlay rendering: shaded surfaces with the topology drawn over them, glowing edge lines, dark viewport ground, cgi style image.",
-    "tags": [
-      "wireframe",
-      "3d",
-      "lineart",
-      "dark",
-      "glowing"
-    ],
-    "tags_negative": [
-      "textured"
-    ],
-    "negative": "finished textured render, painterly surface"
-  },
-  {
-    "name": "[3D] ZBrush Sculpt Clay",
-    "medium": "cgi style image",
-    "nl": "Digital sculpt rendering: matte grey clay material, high-frequency chisel detail, raking studio light, no colour maps, cgi style image.",
-    "tags": [
-      "3d",
-      "claymation",
-      "greyscale",
-      "highres",
-      "textured"
-    ],
-    "tags_negative": [
-      "colorful"
-    ],
-    "negative": "colour texture maps, toon shading"
-  },
-  {
-    "name": "[3D][v2] 1960s Psychedelic Poster Art",
-    "medium": "poster style image",
-    "nl": "1960s psychedelic poster: melting interlocked letterforms, vibrating complementary flat colour, dense curvilinear pattern, poster style image.",
-    "tags": [
-      "psychedelic",
-      "poster",
-      "colorful",
-      "flat_color",
-      "high_saturation"
-    ],
-    "tags_negative": [
-      "muted_color"
-    ],
-    "negative": "muted palette, photographic depth"
-  },
-  {
-    "name": "[3D][v2] 3D Render",
-    "medium": "cgi style image",
-    "nl": "General 3D render: shaded geometry with computed shadows, believable material response, studio key and fill, cgi style image.",
-    "tags": [
-      "3d",
-      "cinematic_lighting",
-      "realistic"
-    ],
-    "tags_negative": [
-      "flat_color"
-    ],
-    "negative": "hand-drawn line, flat illustration colour"
-  },
-  {
-    "name": "[3D][v2] Alex Grey",
-    "medium": "illustration style image",
-    "nl": "Visionary rendering: anatomical transparency layered with glowing energy lattices, symmetrical mandala framing, electric palette, illustration style image.",
-    "tags": [
-      "psychedelic",
-      "glowing",
-      "transparent",
-      "colorful",
-      "surreal"
-    ],
-    "tags_negative": [
-      "muted_color"
-    ],
-    "negative": "muted naturalism, plain studio light"
-  },
-  {
-    "name": "[3D][v2] Animal Crossing",
-    "medium": "cgi style image",
-    "nl": "Cosy game rendering: rounded low-poly forms, flat pastel textures, soft ambient shading, tiny simple facial marks, cgi style image.",
-    "tags": [
-      "3d",
-      "low_poly",
-      "pastel_colors",
-      "flat_color"
-    ],
-    "tags_negative": [
-      "photorealistic"
-    ],
-    "negative": "realistic materials, dramatic shadow"
-  },
-  {
-    "name": "[3D][v2] Bold Painterly Impasto",
-    "medium": "oil painting style image",
-    "nl": "Bold impasto rendering: thick swirling strokes catching directional light, sculptural ridges, warm layered luminosity, oil painting style image.",
-    "tags": [
-      "oil_painting_(medium)",
-      "textured",
-      "colorful",
-      "traditional_media"
-    ],
-    "tags_negative": [
-      "soft_focus"
-    ],
-    "negative": "smooth digital blending, flat vector shapes"
-  },
-  {
-    "name": "[3D][v2] C.F.A. Voysey illustration",
-    "medium": "illustration style image",
-    "nl": "Arts-and-crafts pattern rendering: flat stylised birds and foliage, even outline, muted heritage palette, repeating rhythm, illustration style image.",
-    "tags": [
-      "art_nouveau",
-      "flat_color",
-      "muted_color",
-      "lineart"
-    ],
-    "tags_negative": [
-      "photorealistic"
-    ],
-    "negative": "photographic depth, saturated neon"
-  },
-  {
-    "name": "[3D][v2] Camille Walala",
-    "medium": "graphic style image",
-    "nl": "Bold pattern-block rendering: clashing primary geometry, thick black stripes, flat poster colour, playful repetition, graphic style image.",
-    "tags": [
-      "flat_color",
-      "colorful",
-      "high_contrast",
-      "minimalism"
-    ],
-    "tags_negative": [
-      "textured"
-    ],
-    "negative": "gradient shading, photographic texture"
-  },
-  {
-    "name": "[3D][v2] Cinematic Final Fantasy 3D Render",
-    "medium": "cgi style image",
-    "nl": "JRPG cinematic rendering: glossy stylised characters, elaborate costume detail, rim-lit hair strands, cool cinematic grade, cgi style image.",
-    "tags": [
-      "3d",
-      "rim_lighting",
-      "highres",
-      "cinematic_lighting"
-    ],
-    "tags_negative": [
-      "flat_color"
-    ],
-    "negative": "flat toon colour, low-detail geometry"
-  },
-  {
-    "name": "[3D][v2] Collage",
-    "medium": "collage style image",
-    "nl": "Collage rendering: layered cut fragments with visible edges, mismatched scale and grain, tape and shadow between pieces, collage style image.",
-    "tags": [
-      "collage",
-      "textured",
-      "halftone",
-      "papercraft"
-    ],
-    "tags_negative": [
-      "photorealistic"
-    ],
-    "negative": "seamless single image, smooth blending"
-  },
-  {
-    "name": "[3D][v2] Collectible Figure",
-    "medium": "cgi style image",
-    "nl": "Collectible-figure rendering: matte cast resin with satin varnish, crisp sculpted detail, base plinth, product studio light, cgi style image.",
-    "tags": [
-      "3d",
-      "plastic",
-      "simple_background",
-      "shiny"
-    ],
-    "tags_negative": [
-      "photorealistic"
-    ],
-    "negative": "living skin detail, environmental scene"
-  },
-  {
-    "name": "[3D][v2] Contemporary Lithography",
-    "medium": "print style image",
-    "nl": "Contemporary litho rendering: grainy crayon tone on stone, limited ink palette, soft edge bleed, heavy rag paper, print style image.",
-    "tags": [
-      "lithograph",
-      "limited_palette",
-      "textured",
-      "traditional_media"
-    ],
-    "tags_negative": [
-      "highres"
-    ],
-    "negative": "crisp digital vector, saturated gradients"
-  },
-  {
-    "name": "[3D][v2] Contemporary Ukiyo-E",
-    "medium": "print style image",
-    "nl": "Modern ukiyo-e rendering: flat woodblock colour fields, keyblock outline, bokashi gradients, contemporary palette, paper grain, print style image.",
-    "tags": [
-      "ukiyo-e",
-      "woodcut",
-      "flat_color",
-      "gradient",
-      "textured"
-    ],
-    "tags_negative": [
-      "photorealistic"
-    ],
-    "negative": "photographic modelling, glossy digital finish"
-  },
-  {
-    "name": "[3D][v2] Coraline Stop-Motion",
-    "medium": "handmade style image",
-    "nl": "Stop-motion puppet rendering: fabric and resin materials, visible stitch and seam detail, macro depth of field, moody practical light, handmade style image.",
-    "tags": [
-      "stop_motion",
-      "textured",
-      "depth_of_field",
-      "dark",
-      "claymation"
-    ],
-    "tags_negative": [
-      "flat_color"
-    ],
-    "negative": "flat 2D shapes, clean CGI perfection"
-  },
-  {
-    "name": "[3D][v2] Fortnite",
-    "medium": "game art style image",
-    "nl": "Stylised shooter rendering: chunky exaggerated proportions, saturated flat-ish textures, crisp cartoon shading, bright key, game art style image.",
-    "tags": [
-      "3d",
-      "colorful",
-      "cel_shading",
-      "plastic"
-    ],
-    "tags_negative": [
-      "photorealistic"
-    ],
-    "negative": "gritty realism, muted grade"
-  },
-  {
-    "name": "[3D][v2] Icon/Emoticon Vignette",
-    "medium": "vector style image",
-    "nl": "Icon-vignette rendering: single glossy symbol centred in a rounded frame, soft inner gradient, thick clean edge, vector style image.",
-    "tags": [
-      "icon_(computing)",
-      "gradient",
-      "flat_color",
-      "simple_background"
-    ],
-    "tags_negative": [
-      "textured"
-    ],
-    "negative": "detailed scenery, photographic texture"
-  },
-  {
-    "name": "[3D][v2] Jean-Gabriel Domergue",
-    "medium": "painting style image",
-    "nl": "Deco-portrait rendering: elongated elegant features, soft airbrushed skin, pastel-and-black palette, sketchy loose background, painting style image.",
-    "tags": [
-      "pastel_colors",
-      "airbrush_(medium)",
-      "art_deco",
-      "portrait"
-    ],
-    "tags_negative": [
-      "photorealistic"
-    ],
-    "negative": "photographic detail, harsh contrast"
-  },
-  {
-    "name": "[3D][v2] Kurzgesagt",
-    "medium": "vector style image",
-    "nl": "Flat explainer rendering: geometric vector shapes, glowing neon accents on deep space blue, no outlines, tidy iconography, vector style image.",
-    "tags": [
-      "vector_trace",
-      "flat_color",
-      "glowing",
-      "blue_theme",
-      "minimalism"
-    ],
-    "tags_negative": [
-      "textured"
-    ],
-    "negative": "photographic texture, painterly shading"
-  },
-  {
-    "name": "[3D][v2] LEGO Minifigure",
-    "medium": "cgi style image",
-    "nl": "Minifigure rendering: glossy ABS plastic, cylindrical hands and stud connections, printed flat face detail, product light, cgi style image.",
-    "tags": [
-      "plastic",
-      "shiny",
-      "3d",
-      "simple_background"
-    ],
-    "tags_negative": [
-      "photorealistic"
-    ],
-    "negative": "organic anatomy, matte natural materials"
-  },
-  {
-    "name": "[3D][v2] LEGO Set",
-    "medium": "cgi style image",
-    "nl": "Brick-built rendering: everything assembled from studded plastic bricks, stepped geometry, glossy moulded surfaces, cgi style image.",
-    "tags": [
-      "plastic",
-      "shiny",
-      "3d",
-      "colorful"
-    ],
-    "tags_negative": [
-      "photorealistic"
-    ],
-    "negative": "smooth organic modelling, natural texture"
-  },
-  {
-    "name": "[3D][v2] Low Relief Sculpture",
-    "medium": "material style image",
-    "nl": "Bas-relief rendering: shallow carved depth, raking light picking out edges, uniform stone or plaster material, material style image.",
-    "tags": [
-      "stone",
-      "monochrome",
-      "textured",
-      "chiaroscuro"
-    ],
-    "tags_negative": [
-      "colorful"
-    ],
-    "negative": "full colour painting, deep perspective"
-  },
-  {
-    "name": "[3D][v2] Lowbrow",
-    "medium": "illustration style image",
-    "nl": "Lowbrow rendering: cartoon-grotesque characters painted with slick airbrush polish, candy palette, glossy highlights, illustration style image.",
-    "tags": [
-      "airbrush_(medium)",
-      "colorful",
-      "surreal",
-      "shiny"
-    ],
-    "tags_negative": [
-      "muted_color"
-    ],
-    "negative": "muted realism, sketchy line"
-  },
-  {
-    "name": "[3D][v2] M.C. Escher",
-    "medium": "print style image",
-    "nl": "Impossible-geometry rendering: tessellated interlocking forms, contradictory perspective, meticulous hatched monochrome, print style image.",
-    "tags": [
-      "lithograph",
-      "monochrome",
-      "cross-hatching",
-      "surreal",
-      "high_contrast"
-    ],
-    "tags_negative": [
-      "colorful"
-    ],
-    "negative": "colour rendering, loose brushwork"
-  },
-  {
-    "name": "[3D][v2] Marble Sculpture",
-    "medium": "material style image",
-    "nl": "Marble rendering: translucent white stone with grey veining, polished subsurface glow, carved chisel planes, museum light, material style image.",
-    "tags": [
-      "marble",
-      "stone",
-      "greyscale",
-      "glowing",
-      "textured"
-    ],
-    "tags_negative": [
-      "colorful"
-    ],
-    "negative": "painted colour, plastic sheen"
-  },
-  {
-    "name": "[3D][v2] Mixed Media",
-    "medium": "collage style image",
-    "nl": "Mixed-media rendering: paint over collaged paper and photo fragments, stitched and taped joins, layered surface texture, collage style image.",
-    "tags": [
-      "collage",
-      "textured",
-      "painting_(medium)",
-      "papercraft"
-    ],
-    "tags_negative": [
-      "highres"
-    ],
-    "negative": "clean single-medium finish, vector flatness"
-  },
-  {
-    "name": "[3D][v2] Modern Lithography",
-    "medium": "print style image",
-    "nl": "Modern litho rendering: flat layered spot inks, subtle grain, hand-drawn crayon texture, deckled paper edge, print style image.",
-    "tags": [
-      "lithograph",
-      "limited_palette",
-      "textured",
-      "spot_color"
-    ],
-    "tags_negative": [
-      "gradient"
-    ],
-    "negative": "photographic gradients, glossy stock"
-  },
-  {
-    "name": "[3D][v2] Modern Super Mario (Nintendo)",
-    "medium": "cgi style image",
-    "nl": "Nintendo-bright rendering: clean rounded geometry, saturated primary materials, soft even key, glossy cartoon highlights, cgi style image.",
-    "tags": [
-      "3d",
-      "colorful",
-      "plastic",
-      "cel_shading"
-    ],
-    "tags_negative": [
-      "dark"
-    ],
-    "negative": "gritty realism, dark palette"
-  },
-  {
-    "name": "[3D][v2] Muppets",
-    "medium": "handmade style image",
-    "nl": "Puppet rendering: felted fabric skin and fur, oversized soft features, hand-operated posing, warm even stage light, handmade style image.",
-    "tags": [
-      "textured",
-      "fur",
-      "stop_motion",
-      "3d"
-    ],
-    "tags_negative": [
-      "photorealistic"
-    ],
-    "negative": "realistic human anatomy, hard plastic surfaces"
-  },
-  {
-    "name": "[3D][v2] Negative Space Focused Illustration",
-    "medium": "illustration style image",
-    "nl": "Negative-space rendering: subject implied by the empty ground, few bold shapes, high contrast, generous emptiness, illustration style image.",
-    "tags": [
-      "minimalism",
-      "silhouette",
-      "high_contrast",
-      "flat_color"
-    ],
-    "tags_negative": [
-      "textured"
-    ],
-    "negative": "dense detail, busy texture"
-  },
-  {
-    "name": "[3D][v2] Neon Halftone Retro-Thriller Illustration",
-    "medium": "illustration style image",
-    "nl": "Retro-thriller rendering: neon magenta and cyan halftone screens, hard shadow blocking, print misregistration, grain, illustration style image.",
-    "tags": [
-      "halftone",
-      "neon_palette",
-      "high_contrast",
-      "textured",
-      "retro_artstyle"
-    ],
-    "tags_negative": [
-      "muted_color"
-    ],
-    "negative": "muted realism, smooth gradients"
-  },
-  {
-    "name": "[3D][v2] Neon Sign Design",
-    "medium": "graphic style image",
-    "nl": "Neon-sign rendering: glowing glass tubing against a dark wall, halo bloom and reflected spill, warm transformer flicker, graphic style image.",
-    "tags": [
-      "neon_palette",
-      "glowing",
-      "dark",
-      "glass"
-    ],
-    "tags_negative": [
-      "sunlight"
-    ],
-    "negative": "daylight, matte flat colour"
-  },
-  {
-    "name": "[3D][v2] Neon-Based Drawing",
-    "medium": "graphic style image",
-    "nl": "Neon-line rendering: luminous drawn strokes on black, additive glow at crossings, saturated hue shifts, soft bloom, graphic style image.",
-    "tags": [
-      "neon_palette",
-      "glowing",
-      "dark",
-      "lineart"
-    ],
-    "tags_negative": [
-      "textured"
-    ],
-    "negative": "matte paper texture, daylight palette"
-  },
-  {
-    "name": "[3D][v2] Overwatch Concept Art",
-    "medium": "illustration style image",
-    "nl": "Hero-shooter concept rendering: clean shape language, saturated team colour, painted material blocking, crisp rim light, illustration style image.",
-    "tags": [
-      "concept_art",
-      "colorful",
-      "rim_lighting",
-      "painting_(medium)"
-    ],
-    "tags_negative": [
-      "muted_color"
-    ],
-    "negative": "muted realism, gritty grain"
-  },
-  {
-    "name": "[3D][v2] Paper Cutout",
-    "medium": "handmade style image",
-    "nl": "Paper-cutout rendering: layered card shapes with soft drop shadows, matte stock texture, hand-cut edge wobble, handmade style image.",
-    "tags": [
-      "papercraft",
-      "flat_color",
-      "textured",
-      "collage"
-    ],
-    "tags_negative": [
-      "3d"
-    ],
-    "negative": "smooth CGI surfaces, photographic depth"
-  },
-  {
-    "name": "[3D][v2] Partial Wireframe 3D",
-    "medium": "cgi style image",
-    "nl": "Partial-wireframe rendering: shaded geometry dissolving into glowing topology lines, dark technical ground, cyan edge light, cgi style image.",
-    "tags": [
-      "wireframe",
-      "3d",
-      "glowing",
-      "dark",
-      "lineart"
-    ],
-    "tags_negative": [
-      "textured"
-    ],
-    "negative": "fully textured surfaces, painterly finish"
-  },
-  {
-    "name": "[3D][v2] Pixar Animation",
-    "medium": "cgi style image",
-    "nl": "Feature-CGI rendering: appealing rounded designs, subsurface skin warmth, art-directed key with soft bounce, rich clean colour, cgi style image.",
-    "tags": [
-      "3d",
-      "cinematic_lighting",
-      "colorful",
-      "rim_lighting"
-    ],
-    "tags_negative": [
-      "photorealistic"
-    ],
-    "negative": "photoreal human detail, gritty grade"
-  },
-  {
-    "name": "[3D][v2] Plastic Arts Sculpture",
-    "medium": "material style image",
-    "nl": "Sculptural rendering: modelled volume in a single material, raking gallery light, honest tool marks, neutral plinth ground, material style image.",
-    "tags": [
-      "stone",
-      "greyscale",
-      "textured",
-      "chiaroscuro"
-    ],
-    "tags_negative": [
-      "colorful"
-    ],
-    "negative": "painted surface colour, flat graphic design"
-  },
-  {
-    "name": "[3D][v2] Playful Retro Pop",
-    "medium": "graphic style image",
-    "nl": "Retro-pop rendering: mid-century flat shapes, halftone texture, cheerful limited palette, chunky rounded forms, graphic style image.",
-    "tags": [
-      "retro_artstyle",
-      "halftone",
-      "flat_color",
-      "colorful",
-      "limited_palette"
-    ],
-    "tags_negative": [
-      "photorealistic"
-    ],
-    "negative": "photographic realism, subtle gradients"
-  },
-  {
-    "name": "[3D][v2] Playmobil",
-    "medium": "cgi style image",
-    "nl": "Toy-figure rendering: simplified moulded plastic bodies, printed flat faces, glossy primary colour, visible joint seams, cgi style image.",
-    "tags": [
-      "plastic",
-      "shiny",
-      "3d",
-      "colorful"
-    ],
-    "tags_negative": [
-      "photorealistic"
-    ],
-    "negative": "realistic anatomy, natural fabric texture"
-  },
-  {
-    "name": "[3D][v2] Psychedelia",
-    "medium": "graphic style image",
-    "nl": "Psychedelic rendering: kaleidoscopic symmetry, melting saturated colour, vibrating complementary edges, dense ornament, graphic style image.",
-    "tags": [
-      "psychedelic",
-      "colorful",
-      "high_saturation",
-      "surreal"
-    ],
-    "tags_negative": [
-      "muted_color"
-    ],
-    "negative": "muted palette, minimal empty design"
-  },
-  {
-    "name": "[3D][v2] Quilling",
-    "medium": "handmade style image",
-    "nl": "Paper-quilling rendering: coiled paper strips set on edge, layered spiral shapes, soft shadow between coils, matte stock, handmade style image.",
-    "tags": [
-      "papercraft",
-      "textured",
-      "colorful",
-      "mosaic"
-    ],
-    "tags_negative": [
-      "photorealistic"
-    ],
-    "negative": "flat printed colour, smooth CGI"
-  },
-  {
-    "name": "[3D][v2] Spider-Verse",
-    "medium": "cgi style image",
-    "nl": "Comic-CGI hybrid rendering: halftone dot shading over 3D forms, chromatic offset edges, ben-day texture, bold graphic colour, cgi style image.",
-    "tags": [
-      "halftone",
-      "3d",
-      "comic",
-      "glitch",
-      "colorful"
-    ],
-    "tags_negative": [
-      "photorealistic"
-    ],
-    "negative": "photoreal shading, muted grade"
-  },
-  {
-    "name": "[3D][v2] Star Wars: The Clone Wars",
-    "medium": "cgi style image",
-    "nl": "Stylised CGI rendering: angular faceted character forms, flat-ish painted textures, hard directional key, sparse detail, cgi style image.",
-    "tags": [
-      "3d",
-      "cel_shading",
-      "flat_color",
-      "cinematic_lighting"
-    ],
-    "tags_negative": [
-      "photorealistic"
-    ],
-    "negative": "photoreal skin, dense surface detail"
-  },
-  {
-    "name": "[3D][v2] Tessellation-Based Illustration",
-    "medium": "graphic style image",
-    "nl": "Tessellated rendering: interlocking repeated shapes filling the plane, no gaps, flat alternating colour, precise geometry, graphic style image.",
-    "tags": [
-      "mosaic",
-      "flat_color",
-      "minimalism",
-      "limited_palette"
-    ],
-    "tags_negative": [
-      "textured"
-    ],
-    "negative": "organic brushwork, photographic depth"
-  },
-  {
-    "name": "[3D][v2] The Mitchells vs. The Machines animation",
-    "medium": "cgi style image",
-    "nl": "Hybrid CGI rendering: 3D forms with hand-drawn 2D effects layered on top, halftone texture, saturated graphic colour, cgi style image.",
-    "tags": [
-      "3d",
-      "halftone",
-      "colorful",
-      "textured",
-      "comic"
-    ],
-    "tags_negative": [
-      "photorealistic"
-    ],
-    "negative": "photoreal materials, muted realism"
-  },
-  {
-    "name": "[3D][v2] The Sims Game Screenshot",
-    "medium": "game art style image",
-    "nl": "Life-sim rendering: mid-poly interiors, simple UI-clean materials, even ambient light, saturated furnishing colour, game art style image.",
-    "tags": [
-      "3d",
-      "fake_screenshot",
-      "colorful",
-      "simple_background"
-    ],
-    "tags_negative": [
-      "photorealistic"
-    ],
-    "negative": "photoreal architecture, cinematic grade"
-  },
-  {
-    "name": "[3D][v2] Topographic Linework Illustration",
-    "medium": "technical drawing style image",
-    "nl": "Topographic rendering: nested contour lines describing elevation, even stroke weight, limited two-tone palette, technical drawing style image.",
-    "tags": [
-      "diagram",
-      "lineart",
-      "limited_palette",
-      "map"
-    ],
-    "tags_negative": [
-      "photorealistic"
-    ],
-    "negative": "painterly shading, photographic texture"
-  },
-  {
-    "name": "[3D][v2] Unreal Engine",
-    "medium": "game art style image",
-    "nl": "Unreal cinematic rendering: realtime global illumination, volumetric fog beams, screen-space reflections, filmic tonemap, game art style image.",
-    "tags": [
-      "3d",
-      "cinematic_lighting",
-      "god_rays",
-      "highres",
-      "film_grain"
-    ],
-    "tags_negative": [
-      "flat_color"
-    ],
-    "negative": "flat toon colour, hand-drawn line"
-  },
-  {
-    "name": "[3D][v2] Variable-Size Ben-Day Dots Illustration",
-    "medium": "print style image",
-    "nl": "Ben-day rendering: tone built from dots that grow and shrink, hard black keyline, flat spot inks, visible registration, print style image.",
-    "tags": [
-      "halftone",
-      "flat_color",
-      "limited_palette",
-      "high_contrast",
-      "comic"
-    ],
-    "tags_negative": [
-      "gradient"
-    ],
-    "negative": "smooth gradients, photographic detail"
-  },
-  {
-    "name": "[3D][v2] Vignette Sticker",
-    "medium": "vector style image",
-    "nl": "Sticker-vignette rendering: subject inside a thick white die-cut border, flat bold colour, glossy vinyl sheen, no background, vector style image.",
-    "tags": [
-      "sticker",
-      "flat_color",
-      "white_theme",
-      "simple_background"
-    ],
-    "tags_negative": [
-      "scenery"
-    ],
-    "negative": "environmental background, photographic depth"
-  },
-  {
-    "name": "[3D][v2] Vignette Tattoo Design (Flat Print Format)",
-    "medium": "illustration style image",
-    "nl": "Tattoo-flash rendering: bold black contour, limited spot colour, tight shading hatch, flat print layout on cream paper, illustration style image.",
-    "tags": [
-      "lineart",
-      "limited_palette",
-      "flat_color",
-      "traditional_media",
-      "spot_color"
-    ],
-    "tags_negative": [
-      "photorealistic"
-    ],
-    "negative": "photographic rendering, soft gradients"
-  },
-  {
-    "name": "[3D][v2] Vignette-Framed Central Composition",
-    "medium": "illustration style image",
-    "nl": "Vignette-framed rendering: subject centred in a soft-edged oval of light, surroundings fading to the paper, illustration style image.",
-    "tags": [
-      "vignetting",
-      "simple_background",
-      "soft_focus",
-      "portrait"
-    ],
-    "tags_negative": [
-      "scenery"
-    ],
-    "negative": "edge-to-edge detail, hard rectangular crop"
-  },
-  {
-    "name": "[3D][v2] Wallace and Gromit",
-    "medium": "handmade style image",
-    "nl": "Plasticine stop-motion rendering: fingerprint-dented clay, wide toothy grins, warm even set light, visible armature bulk, handmade style image.",
-    "tags": [
-      "claymation",
-      "stop_motion",
-      "textured",
-      "3d"
-    ],
-    "tags_negative": [
-      "highres"
-    ],
-    "negative": "smooth CGI perfection, photoreal detail"
-  },
-  {
-    "name": "[3D][v2] Zelda Wind Waker",
-    "medium": "cgi style image",
-    "nl": "Toon-sea rendering: thick cel bands, bright flat sky colour, stylised swirl effects, black ink contour, soft glow, cgi style image.",
-    "tags": [
-      "cel_shading",
-      "3d",
-      "flat_color",
-      "outline",
-      "colorful"
-    ],
-    "tags_negative": [
-      "photorealistic"
-    ],
-    "negative": "photoreal water, muted grade"
-  },
-  {
-    "name": "[Object] Brick-Built",
-    "medium": "cgi style image",
-    "nl": "Brick-built rendering: stepped geometry from studded plastic bricks, glossy moulded surfaces, visible stud tops, cgi style image.",
-    "tags": [
-      "plastic",
-      "shiny",
-      "3d",
-      "colorful"
-    ],
-    "tags_negative": [
-      "photorealistic"
-    ],
-    "negative": "smooth organic modelling, natural texture"
-  },
-  {
-    "name": "[Object] Claymation",
-    "medium": "handmade style image",
-    "nl": "Plasticine object rendering: soft dented clay surfaces, thumbprint texture, slightly uneven volumes, warm set light, handmade style image.",
-    "tags": [
-      "claymation",
-      "stop_motion",
-      "textured"
-    ],
-    "tags_negative": [
-      "shiny"
-    ],
-    "negative": "glossy CGI plastic, precise geometry",
-    "aliases": [
-      "[3D][v2] Claymation",
-      "[3D][Clio] Claymation"
-    ]
-  },
-  {
-    "name": "[Object] Die-Cast Model",
-    "medium": "cgi style image",
-    "nl": "Die-cast rendering: painted metal body with slight orange-peel finish, chrome trim, rubber tyres, tiny moulded panel lines, cgi style image.",
-    "tags": [
-      "metallic",
-      "plastic",
-      "shiny",
-      "3d",
-      "simple_background"
-    ],
-    "tags_negative": [
-      "textured"
-    ],
-    "negative": "full-scale realism, rough natural texture"
-  },
-  {
-    "name": "[Object] Needle Felt",
-    "medium": "handmade style image",
-    "nl": "Needle-felt rendering: fuzzy wool fibre surface, compressed soft volumes, needle pocks, heathered colour, handmade style image.",
-    "tags": [
-      "knitted",
-      "textured",
-      "fur"
-    ],
-    "tags_negative": [
-      "3d"
-    ],
-    "negative": "smooth CGI, glossy plastic"
-  },
-  {
-    "name": "[Object] Origami",
-    "medium": "handmade style image",
-    "nl": "Origami rendering: crisp folded planes, sharp crease lines, matte paper colour, soft shadow in the valleys, handmade style image.",
-    "tags": [
-      "papercraft",
-      "textured",
-      "simple_background"
-    ],
-    "tags_negative": [
-      "photorealistic"
-    ],
-    "negative": "organic curved forms, glossy plastic",
-    "aliases": [
-      "[Design][v2] Origami",
-      "[Design][Clio] Origami"
-    ]
-  },
-  {
-    "name": "[Object] Papercraft",
-    "medium": "handmade style image",
-    "nl": "Papercraft rendering: faceted card panels with glue tabs, visible fold seams, matte stock, soft studio shadow, handmade style image.",
-    "tags": [
-      "papercraft",
-      "low_poly",
-      "textured",
-      "flat_color"
-    ],
-    "tags_negative": [
-      "photorealistic"
-    ],
-    "negative": "smooth organic surfaces, photographic materials",
-    "aliases": [
-      "[3D] Papercraft Lowpoly Toy"
-    ]
-  },
-  {
-    "name": "[Object] Plastic Designer Toy",
-    "medium": "cgi style image",
-    "nl": "Designer-toy rendering: smooth vinyl body, satin paint with crisp masking edges, subtle seam line, product studio light, cgi style image.",
-    "tags": [
-      "plastic",
-      "shiny",
-      "3d",
-      "simple_background"
-    ],
-    "tags_negative": [
-      "textured"
-    ],
-    "negative": "organic skin detail, rough handmade texture"
-  },
-  {
-    "name": "[Object] Plush Fabric Toy",
-    "medium": "handmade style image",
-    "nl": "Plush rendering: soft pile fabric, visible seam stitching, embroidered features, stuffed rounded volumes, handmade style image.",
-    "tags": [
-      "textured",
-      "embroidery",
-      "fur",
-      "knitted"
-    ],
-    "tags_negative": [
-      "3d"
-    ],
-    "negative": "hard plastic surfaces, CGI perfection"
-  },
-  {
-    "name": "[Object] Resin Garage Kit",
-    "medium": "cgi style image",
-    "nl": "Garage-kit rendering: hand-cast resin with fine sculpted detail, airbrushed paint gradients, satin varnish, base plinth, cgi style image.",
-    "tags": [
-      "3d",
-      "plastic",
-      "airbrush_(medium)",
-      "simple_background"
-    ],
-    "tags_negative": [
-      "photorealistic"
-    ],
-    "negative": "living subject, environmental scene"
-  },
-  {
-    "name": "[Object] Stop-Motion Puppet",
-    "medium": "handmade style image",
-    "nl": "Stop-motion puppet rendering: fabric and silicone materials over an armature, macro depth of field, practical set light, handmade style image.",
-    "tags": [
-      "stop_motion",
-      "textured",
-      "depth_of_field",
-      "claymation"
-    ],
-    "tags_negative": [
-      "flat_color"
-    ],
-    "negative": "flat 2D shapes, digital gradients"
-  },
-  {
-    "name": "[Object] Vinyl Art Figure",
-    "medium": "cgi style image",
-    "nl": "Vinyl-figure rendering: glossy rotocast surface, simplified stylised forms, flat sprayed colour blocks, seam at the waist, cgi style image.",
-    "tags": [
-      "plastic",
-      "shiny",
-      "3d",
-      "flat_color"
-    ],
-    "tags_negative": [
-      "textured"
-    ],
-    "negative": "organic detail, matte natural material"
-  },
-  {
-    "name": "[Pixel] 1-bit Dither",
-    "medium": "pixel art style image",
-    "nl": "One-bit rendering: pure black and white pixels only, checker and Bayer dithering for tone, hard aliased edges, pixel art style image.",
-    "tags": [
-      "pixel_art",
-      "dithering",
-      "monochrome",
-      "high_contrast"
-    ],
-    "tags_negative": [
-      "colorful"
-    ],
-    "negative": "colour, smooth antialiasing"
-  },
-  {
-    "name": "[Pixel] 16-bit Console",
-    "medium": "pixel art style image",
-    "nl": "16-bit rendering: console palette limits, dithered shading ramps, crisp sprite outlines, parallax-flat backgrounds, pixel art style image.",
-    "tags": [
-      "pixel_art",
-      "dithering",
-      "limited_palette",
-      "retro_artstyle"
-    ],
-    "tags_negative": [
-      "highres"
-    ],
-    "negative": "HD smoothness, photographic depth"
-  },
-  {
-    "name": "[Pixel] 32-bit Pre-rendered Hybrid",
-    "medium": "pixel art style image",
-    "nl": "Pre-rendered hybrid: sprites baked from 3D onto a pixel grid, dithered gradients, richer palette, slight blur in the source, pixel art style image.",
-    "tags": [
-      "pixel_art",
-      "dithering",
-      "3d",
-      "retro_artstyle"
-    ],
-    "tags_negative": [
-      "highres"
-    ],
-    "negative": "clean vector art, modern HD shading"
-  },
-  {
-    "name": "[Pixel] 8-bit",
-    "medium": "pixel art style image",
-    "nl": "8-bit rendering: tiny fixed palette, chunky pixels on a coarse grid, no antialiasing, tile-repeated background, pixel art style image.",
-    "tags": [
-      "pixel_art",
-      "limited_palette",
-      "dithering",
-      "retro_artstyle"
-    ],
-    "tags_negative": [
-      "highres"
-    ],
-    "negative": "smooth shading, high-resolution detail",
-    "aliases": [
-      "[Design][v2] 8-Bit",
-      "[Design][Clio] 8-Bit"
-    ]
-  }
+ {
+  "name": "[3D] CAD Blueprint Shaded",
+  "medium": "technical drawing style image",
+  "nl": "Shaded CAD rendering, flat grey surfaces with crisp edge lines, ruled dimension arrows, blue technical ground, no texture, technical drawing style image.",
+  "tags": [
+   "diagram",
+   "wireframe",
+   "3d",
+   "blue_theme",
+   "lineart"
+  ],
+  "tags_negative": [
+   "photorealistic"
+  ],
+  "negative": "photographic materials, dramatic lighting"
+ },
+ {
+  "name": "[3D][v2] Blueprint",
+  "medium": "technical drawing style image",
+  "nl": "Blueprint rendering, white line drawing on cyanotype blue, orthographic projection, dimension callouts, faint grid, technical drawing style image.",
+  "tags": [
+   "diagram",
+   "blue_theme",
+   "lineart",
+   "limited_palette"
+  ],
+  "tags_negative": [
+   "photorealistic"
+  ],
+  "negative": "rendered materials, perspective photography"
+ },
+ {
+  "name": "[3D] Anime Cel-Shaded 3D",
+  "medium": "cgi style image",
+  "nl": "Cel-shaded 3D rendering, banded toon lighting on sculpted geometry, inked contour, anime-style flat colour zones, clean specular dots, cgi style image.",
+  "tags": [
+   "3d",
+   "cel_shading",
+   "outline",
+   "anime_coloring",
+   "flat_color"
+  ],
+  "tags_negative": [
+   "photorealistic"
+  ],
+  "negative": "photoreal shading, painterly texture"
+ },
+ {
+  "name": "[3D] Cel-Shaded 3D",
+  "medium": "cgi style image",
+  "nl": "Toon-shaded rendering, hard two-band lighting across 3D forms, uniform outline, flat local colour, minimal specular, cgi style image.",
+  "tags": [
+   "3d",
+   "cel_shading",
+   "outline",
+   "flat_color"
+  ],
+  "tags_negative": [
+   "photorealistic"
+  ],
+  "negative": "physically based reflections, soft gradients"
+ },
+ {
+  "name": "[3D] Character SSS",
+  "medium": "cgi style image",
+  "nl": "Hero character rendering, subsurface skin scatter, groomed hair cards, micro pore displacement, soft key with bounce, cgi style image.",
+  "tags": [
+   "3d",
+   "realistic",
+   "glowing",
+   "highres"
+  ],
+  "tags_negative": [
+   "flat_color"
+  ],
+  "negative": "flat toon shading, plastic skin"
+ },
+ {
+  "name": "[3D] Clay Render",
+  "medium": "cgi style image",
+  "nl": "Clay render, untextured matte grey material on every surface, soft ambient occlusion, form read only from light, cgi style image.",
+  "tags": [
+   "3d",
+   "claymation",
+   "greyscale",
+   "simple_background"
+  ],
+  "tags_negative": [
+   "colorful"
+  ],
+  "negative": "colour textures, reflective materials",
+  "aliases": [
+   "[3D] Clay Shader"
+  ]
+ },
+ {
+  "name": "[3D] Clay Render AO",
+  "medium": "cgi style image",
+  "nl": "Ambient-occlusion clay pass, uniform grey shading with contact darkening in crevices, no colour, no specular, cgi style image.",
+  "tags": [
+   "3d",
+   "greyscale",
+   "monochrome",
+   "claymation"
+  ],
+  "tags_negative": [
+   "colorful"
+  ],
+  "negative": "textured colour, glossy highlights"
+ },
+ {
+  "name": "[3D] CRT Screenshot",
+  "medium": "video artefact style image",
+  "nl": "CRT-screen capture, phosphor scanlines, curved glass distortion, glow bloom around bright pixels, chroma bleed, video artefact style image.",
+  "tags": [
+   "glitch",
+   "glowing",
+   "dithering",
+   "dark"
+  ],
+  "tags_negative": [
+   "highres"
+  ],
+  "negative": "flat-panel sharpness, clean pixel grid"
+ },
+ {
+  "name": "[3D] Cut-Paper Stop Motion",
+  "medium": "handmade style image",
+  "nl": "Cut-paper stop-motion rendering, layered paper shapes with visible edges and drop shadows, matte stock texture, slight jitter, handmade style image.",
+  "tags": [
+   "papercraft",
+   "stop_motion",
+   "flat_color",
+   "textured"
+  ],
+  "tags_negative": [
+   "3d"
+  ],
+  "negative": "smooth CGI surfaces, digital gradients"
+ },
+ {
+  "name": "[3D] Cycles Render",
+  "medium": "cgi style image",
+  "nl": "Cycles path-traced rendering, physically accurate light bounce, soft shadow falloff, believable roughness response, cgi style image.",
+  "tags": [
+   "3d",
+   "realistic",
+   "cinematic_lighting",
+   "highres"
+  ],
+  "tags_negative": [
+   "cel_shading"
+  ],
+  "negative": "toon banding, flat vector colour",
+  "aliases": [
+   "[3D] Blender Cycles"
+  ]
+ },
+ {
+  "name": "[3D] Edo-Dot Pixel Portrait",
+  "medium": "pixel art style image",
+  "nl": "Chunky pixel-portrait rendering, large square pixels, limited arcade palette, hard aliased edges, dithered shading, pixel art style image.",
+  "tags": [
+   "pixel_art",
+   "dithering",
+   "limited_palette",
+   "portrait"
+  ],
+  "tags_negative": [
+   "highres"
+  ],
+  "negative": "smooth antialiasing, photographic detail"
+ },
+ {
+  "name": "[3D] Eevee Realtime",
+  "medium": "cgi style image",
+  "nl": "Realtime rendering, screen-space reflections, approximate shadows, slightly plastic fill light, fast clean surfaces, cgi style image.",
+  "tags": [
+   "3d",
+   "plastic",
+   "glowing"
+  ],
+  "tags_negative": [
+   "film_grain"
+  ],
+  "negative": "path-traced softness, heavy grain"
+ },
+ {
+  "name": "[3D] Fighting-Game 2.5D",
+  "medium": "game art style image",
+  "nl": "Fighting-game rendering, cel-shaded characters on a flat plane, ink outlines, saturated stage lighting, impact glow, game art style image.",
+  "tags": [
+   "3d",
+   "cel_shading",
+   "outline",
+   "colorful",
+   "glowing"
+  ],
+  "tags_negative": [
+   "photorealistic"
+  ],
+  "negative": "photoreal shading, muted grade"
+ },
+ {
+  "name": "[3D] Game Engine Cinematic",
+  "medium": "game art style image",
+  "nl": "Engine cinematic rendering, realtime global illumination, volumetric light shafts, screen-space reflections, film grain overlay, game art style image.",
+  "tags": [
+   "3d",
+   "cinematic_lighting",
+   "god_rays",
+   "film_grain",
+   "highres"
+  ],
+  "tags_negative": [
+   "flat_color"
+  ],
+  "negative": "flat toon shading, cartoon outline"
+ },
+ {
+  "name": "[3D] Glassmorphism UI Object",
+  "medium": "cgi style image",
+  "nl": "Glassmorphic rendering, frosted translucent panels, soft background blur through the glass, pastel gradients, thin bright edges, cgi style image.",
+  "tags": [
+   "glass",
+   "transparent",
+   "gradient",
+   "pastel_colors",
+   "3d"
+  ],
+  "tags_negative": [
+   "textured"
+  ],
+  "negative": "matte rough materials, gritty texture"
+ },
+ {
+  "name": "[3D] Glitch Art",
+  "medium": "video artefact style image",
+  "nl": "Glitch rendering, RGB channel displacement, datamoshed blocks, scanline tearing, corrupted colour banding, video artefact style image.",
+  "tags": [
+   "glitch",
+   "high_contrast",
+   "colorful",
+   "dithering"
+  ],
+  "tags_negative": [
+   "highres"
+  ],
+  "negative": "clean undistorted image, natural colour"
+ },
+ {
+  "name": "[3D] Grease-Pencil Hybrid",
+  "medium": "cgi style image",
+  "nl": "Grease-pencil hybrid rendering, hand-drawn strokes in 3D space, flat inked shapes over volumetric staging, paper-grain overlay, cgi style image.",
+  "tags": [
+   "3d",
+   "lineart",
+   "flat_color",
+   "textured",
+   "sketch"
+  ],
+  "tags_negative": [
+   "photorealistic"
+  ],
+  "negative": "photoreal materials, smooth gradients"
+ },
+ {
+  "name": "[3D] Hard-Surface Modeling",
+  "medium": "cgi style image",
+  "nl": "Hard-surface rendering, precise panel gaps and bevels, machined edge highlights, brushed metal and anodised finishes, cgi style image.",
+  "tags": [
+   "3d",
+   "metallic",
+   "highres",
+   "wireframe"
+  ],
+  "tags_negative": [
+   "soft_focus"
+  ],
+  "negative": "organic soft forms, painterly texture"
+ },
+ {
+  "name": "[3D] Hologram",
+  "medium": "cgi style image",
+  "nl": "Holographic rendering, scanline-striped translucent light body, cyan emissive glow, flicker artefacts, dark surround, cgi style image.",
+  "tags": [
+   "holographic",
+   "glowing",
+   "transparent",
+   "blue_theme",
+   "dark"
+  ],
+  "tags_negative": [
+   "photorealistic"
+  ],
+  "negative": "solid opaque materials, daylight"
+ },
+ {
+  "name": "[3D] Iridescent Thin-Film",
+  "medium": "cgi style image",
+  "nl": "Thin-film iridescent rendering, oil-slick rainbow shift across the surface, sharp specular bands, dark reflective ground, cgi style image.",
+  "tags": [
+   "iridescent",
+   "holographic",
+   "shiny",
+   "metallic",
+   "3d"
+  ],
+  "tags_negative": [
+   "muted_color"
+  ],
+  "negative": "matte muted surfaces, flat colour"
+ },
+ {
+  "name": "[3D] Isometric 3D",
+  "medium": "cgi style image",
+  "nl": "Isometric rendering, parallel projection with no perspective convergence, 30-degree axes, even ambient light, tidy geometry, cgi style image.",
+  "tags": [
+   "3d",
+   "simple_background",
+   "flat_color"
+  ],
+  "tags_negative": [
+   "fisheye"
+  ],
+  "negative": "perspective distortion, dramatic camera angle",
+  "aliases": [
+   "[3D][v2] Isometric 3D Graphic",
+   "[3D][Clio] Isometric 3D Graphic"
+  ]
+ },
+ {
+  "name": "[3D] Isometric Diorama",
+  "medium": "cgi style image",
+  "nl": "Isometric diorama rendering, small self-contained scene on a floating base, soft ambient occlusion, toy-clean materials, cgi style image.",
+  "tags": [
+   "3d",
+   "simple_background",
+   "plastic",
+   "colorful"
+  ],
+  "tags_negative": [
+   "photorealistic"
+  ],
+  "negative": "full-scale realism, wide perspective"
+ },
+ {
+  "name": "[3D] Isometric Game Icon",
+  "medium": "game art style image",
+  "nl": "Isometric icon rendering, single object in parallel projection, bold readable silhouette, soft gradient shading, plain tile ground, game art style image.",
+  "tags": [
+   "icon_(computing)",
+   "3d",
+   "gradient",
+   "simple_background"
+  ],
+  "tags_negative": [
+   "scenery"
+  ],
+  "negative": "complex environment, photographic depth"
+ },
+ {
+  "name": "[3D] Liquid Chrome",
+  "medium": "cgi style image",
+  "nl": "Liquid-chrome rendering, mirror-perfect molten metal, warped environment reflections, blue-white specular blowout, cgi style image.",
+  "tags": [
+   "metallic",
+   "shiny",
+   "3d",
+   "iridescent",
+   "high_contrast"
+  ],
+  "tags_negative": [
+   "textured"
+  ],
+  "negative": "matte rough surfaces, painterly texture"
+ },
+ {
+  "name": "[3D] Low-Poly",
+  "medium": "cgi style image",
+  "nl": "Faceted low-poly rendering, chunky triangulated forms, flat per-face colour, crisp silhouette angles, minimal detail, cgi style image.",
+  "tags": [
+   "low_poly",
+   "3d",
+   "flat_color",
+   "minimalism"
+  ],
+  "tags_negative": [
+   "photorealistic"
+  ],
+  "negative": "subdivided smooth surfaces, realistic materials",
+  "aliases": [
+   "[3D] Low Poly (2)",
+   "[3D][v2] Low Poly",
+   "[3D][Clio] Low Poly"
+  ]
+ },
+ {
+  "name": "[3D] Mid-1990s CGI Feature",
+  "medium": "cgi style image",
+  "nl": "Mid-90s CGI rendering, plasticky shaders, simple specular blobs, sparse texture detail, clean bright key light, cgi style image.",
+  "tags": [
+   "3d",
+   "plastic",
+   "retro_artstyle",
+   "shiny"
+  ],
+  "tags_negative": [
+   "highres"
+  ],
+  "negative": "modern path-traced realism, subsurface skin"
+ },
+ {
+  "name": "[3D] Octane Render",
+  "medium": "cgi style image",
+  "nl": "Octane-style rendering, filmic CG materials, crisp caustics, deep depth of field, physically accurate glass and metal, cgi style image.",
+  "tags": [
+   "3d",
+   "caustics",
+   "depth_of_field",
+   "highres",
+   "glass"
+  ],
+  "tags_negative": [
+   "flat_color"
+  ],
+  "negative": "flat toon shading, low-detail geometry"
+ },
+ {
+  "name": "[3D] Painterly 3D",
+  "medium": "cgi style image",
+  "nl": "Painterly 3D rendering, brush-textured maps over sculpted volumes, hand-painted colour breakup, soft stylised light, cgi style image.",
+  "tags": [
+   "3d",
+   "painting_(medium)",
+   "textured",
+   "cinematic_lighting"
+  ],
+  "tags_negative": [
+   "photorealistic"
+  ],
+  "negative": "photoreal material scans, hard vector edges"
+ },
+ {
+  "name": "[3D] Path Traced",
+  "medium": "cgi style image",
+  "nl": "Path-traced rendering, quiet physically based light, accurate soft shadows and bounce, subtle sampling noise, cgi style image.",
+  "tags": [
+   "3d",
+   "realistic",
+   "cinematic_lighting",
+   "highres"
+  ],
+  "tags_negative": [
+   "cel_shading"
+  ],
+  "negative": "toon banding, flat ambient fill"
+ },
+ {
+  "name": "[3D] PBR Materials",
+  "medium": "cgi style image",
+  "nl": "PBR material rendering, correct metalness and roughness response, energy-conserving highlights, believable surface wear, cgi style image.",
+  "tags": [
+   "3d",
+   "metallic",
+   "realistic",
+   "textured"
+  ],
+  "tags_negative": [
+   "flat_color"
+  ],
+  "negative": "flat unlit colour, painted fake highlights"
+ },
+ {
+  "name": "[3D] Photogrammetry Look",
+  "medium": "cgi style image",
+  "nl": "Photogrammetry rendering, scanned surface detail with baked lighting, slightly melted geometry at the edges, capture noise, cgi style image.",
+  "tags": [
+   "3d",
+   "realistic",
+   "textured",
+   "highres"
+  ],
+  "tags_negative": [
+   "flat_color"
+  ],
+  "negative": "clean hand-modelled geometry, toon shading"
+ },
+ {
+  "name": "[3D] Photoreal CGI",
+  "medium": "cgi style image",
+  "nl": "Photoreal CGI rendering, physically based materials, ray-traced shadows and reflections, camera-accurate lens response, cgi style image.",
+  "tags": [
+   "3d",
+   "photorealistic",
+   "realistic",
+   "depth_of_field",
+   "highres"
+  ],
+  "tags_negative": [
+   "cel_shading"
+  ],
+  "negative": "toon outline, plastic uniform shading"
+ },
+ {
+  "name": "[3D] Product Studio Render",
+  "medium": "cgi style image",
+  "nl": "Product render, seamless studio sweep, large softbox reflections in glossy surfaces, crisp edge highlight, clean shadow, cgi style image.",
+  "tags": [
+   "3d",
+   "simple_background",
+   "shiny",
+   "white_theme",
+   "highres"
+  ],
+  "tags_negative": [
+   "film_grain"
+  ],
+  "negative": "gritty environment, heavy grain"
+ },
+ {
+  "name": "[3D] PS1 Affine",
+  "medium": "cgi style image",
+  "nl": "PS1-era rendering, warped affine texture mapping, vertex jitter, low-resolution textures, no antialiasing, dark dithered fog, cgi style image.",
+  "tags": [
+   "3d",
+   "low_poly",
+   "dithering",
+   "pixel_art",
+   "retro_artstyle"
+  ],
+  "tags_negative": [
+   "highres"
+  ],
+  "negative": "modern smooth shading, high-resolution textures",
+  "aliases": [
+   "[3D][v2] PS1 Graphics",
+   "[3D][Clio] PS1 Graphics",
+   "[3D][v2] PS1 Screenshot",
+   "[3D][Clio] PS1 Screenshot"
+  ]
+ },
+ {
+  "name": "[3D] Redshift",
+  "medium": "cgi style image",
+  "nl": "Redshift-style rendering, clean commercial CGI, controlled specular highlights, tidy volumetrics, crisp look-dev finish, cgi style image.",
+  "tags": [
+   "3d",
+   "highres",
+   "cinematic_lighting",
+   "shiny"
+  ],
+  "tags_negative": [
+   "film_grain"
+  ],
+  "negative": "noisy grain, hand-painted texture"
+ },
+ {
+  "name": "[3D] Sixth-Gen Console",
+  "medium": "cgi style image",
+  "nl": "Sixth-generation console rendering, simple per-vertex lighting, blurry low-res textures, hard-edged shadows, limited draw distance, cgi style image.",
+  "tags": [
+   "3d",
+   "low_poly",
+   "retro_artstyle",
+   "dithering"
+  ],
+  "tags_negative": [
+   "highres"
+  ],
+  "negative": "modern global illumination, 4K textures"
+ },
+ {
+  "name": "[3D] Stylized Comedy Feature",
+  "medium": "cgi style image",
+  "nl": "Comedy-feature CGI, exaggerated squash-and-stretch proportions, bouncy soft materials, bright key with warm bounce, cgi style image.",
+  "tags": [
+   "3d",
+   "colorful",
+   "plastic",
+   "cinematic_lighting"
+  ],
+  "tags_negative": [
+   "photorealistic"
+  ],
+  "negative": "gritty realism, muted grade"
+ },
+ {
+  "name": "[3D] Stylized Feature Animation",
+  "medium": "cgi style image",
+  "nl": "Stylised feature CGI, appealing simplified forms, soft subsurface skin, art-directed colour script, gentle rim light, cgi style image.",
+  "tags": [
+   "3d",
+   "cinematic_lighting",
+   "colorful",
+   "rim_lighting"
+  ],
+  "tags_negative": [
+   "photorealistic"
+  ],
+  "negative": "photoreal human detail, harsh contrast"
+ },
+ {
+  "name": "[3D] Toy-Plastic Shader",
+  "medium": "cgi style image",
+  "nl": "Toy-plastic rendering, injection-moulded surfaces, candy specular highlights, visible seam lines and sprue marks, cgi style image.",
+  "tags": [
+   "plastic",
+   "shiny",
+   "3d",
+   "colorful"
+  ],
+  "tags_negative": [
+   "textured"
+  ],
+  "negative": "organic skin detail, rough natural materials"
+ },
+ {
+  "name": "[3D] V-Ray",
+  "medium": "cgi style image",
+  "nl": "V-Ray archviz rendering, hard sun through glass, accurate interior bounce, crisp material separation, clean neutral grade, cgi style image.",
+  "tags": [
+   "3d",
+   "realistic",
+   "sunlight",
+   "glass",
+   "highres"
+  ],
+  "tags_negative": [
+   "cel_shading"
+  ],
+  "negative": "toon shading, painterly texture"
+ },
+ {
+  "name": "[3D] Voxel",
+  "medium": "cgi style image",
+  "nl": "Voxel rendering, everything built from uniform cubes, blocky stepped edges, flat per-voxel colour, simple ambient shading, cgi style image.",
+  "tags": [
+   "3d",
+   "pixel_art",
+   "low_poly",
+   "flat_color"
+  ],
+  "tags_negative": [
+   "photorealistic"
+  ],
+  "negative": "smooth curved geometry, photographic texture"
+ },
+ {
+  "name": "[3D] Wireframe Overlay",
+  "medium": "cgi style image",
+  "nl": "Wireframe-overlay rendering, shaded surfaces with the topology drawn over them, glowing edge lines, dark viewport ground, cgi style image.",
+  "tags": [
+   "wireframe",
+   "3d",
+   "lineart",
+   "dark",
+   "glowing"
+  ],
+  "tags_negative": [
+   "textured"
+  ],
+  "negative": "finished textured render, painterly surface"
+ },
+ {
+  "name": "[3D] ZBrush Sculpt Clay",
+  "medium": "cgi style image",
+  "nl": "Digital sculpt rendering, matte grey clay material, high-frequency chisel detail, raking studio light, no colour maps, cgi style image.",
+  "tags": [
+   "3d",
+   "claymation",
+   "greyscale",
+   "highres",
+   "textured"
+  ],
+  "tags_negative": [
+   "colorful"
+  ],
+  "negative": "colour texture maps, toon shading"
+ },
+ {
+  "name": "[3D][v2] 1960s Psychedelic Poster Art",
+  "medium": "poster style image",
+  "nl": "1960s psychedelic poster, melting interlocked letterforms, vibrating complementary flat colour, dense curvilinear pattern, poster style image.",
+  "tags": [
+   "psychedelic",
+   "poster",
+   "colorful",
+   "flat_color",
+   "high_saturation"
+  ],
+  "tags_negative": [
+   "muted_color"
+  ],
+  "negative": "muted palette, photographic depth"
+ },
+ {
+  "name": "[3D][v2] 3D Render",
+  "medium": "cgi style image",
+  "nl": "General 3D render, shaded geometry with computed shadows, believable material response, studio key and fill, cgi style image.",
+  "tags": [
+   "3d",
+   "cinematic_lighting",
+   "realistic"
+  ],
+  "tags_negative": [
+   "flat_color"
+  ],
+  "negative": "hand-drawn line, flat illustration colour"
+ },
+ {
+  "name": "[3D][v2] Alex Grey",
+  "medium": "illustration style image",
+  "nl": "Visionary rendering, anatomical transparency layered with glowing energy lattices, symmetrical mandala framing, electric palette, illustration style image.",
+  "tags": [
+   "psychedelic",
+   "glowing",
+   "transparent",
+   "colorful",
+   "surreal"
+  ],
+  "tags_negative": [
+   "muted_color"
+  ],
+  "negative": "muted naturalism, plain studio light"
+ },
+ {
+  "name": "[3D][v2] Animal Crossing",
+  "medium": "cgi style image",
+  "nl": "Cosy game rendering, rounded low-poly forms, flat pastel textures, soft ambient shading, tiny simple facial marks, cgi style image.",
+  "tags": [
+   "3d",
+   "low_poly",
+   "pastel_colors",
+   "flat_color"
+  ],
+  "tags_negative": [
+   "photorealistic"
+  ],
+  "negative": "realistic materials, dramatic shadow"
+ },
+ {
+  "name": "[3D][v2] Bold Painterly Impasto",
+  "medium": "oil painting style image",
+  "nl": "Bold impasto rendering, thick swirling strokes catching directional light, sculptural ridges, warm layered luminosity, oil painting style image.",
+  "tags": [
+   "oil_painting_(medium)",
+   "textured",
+   "colorful",
+   "traditional_media"
+  ],
+  "tags_negative": [
+   "soft_focus"
+  ],
+  "negative": "smooth digital blending, flat vector shapes"
+ },
+ {
+  "name": "[3D][v2] C.F.A. Voysey illustration",
+  "medium": "illustration style image",
+  "nl": "Arts-and-crafts pattern rendering, flat stylised birds and foliage, even outline, muted heritage palette, repeating rhythm, illustration style image.",
+  "tags": [
+   "art_nouveau",
+   "flat_color",
+   "muted_color",
+   "lineart"
+  ],
+  "tags_negative": [
+   "photorealistic"
+  ],
+  "negative": "photographic depth, saturated neon"
+ },
+ {
+  "name": "[3D][v2] Camille Walala",
+  "medium": "graphic style image",
+  "nl": "Bold pattern-block rendering, clashing primary geometry, thick black stripes, flat poster colour, playful repetition, graphic style image.",
+  "tags": [
+   "flat_color",
+   "colorful",
+   "high_contrast",
+   "minimalism"
+  ],
+  "tags_negative": [
+   "textured"
+  ],
+  "negative": "gradient shading, photographic texture"
+ },
+ {
+  "name": "[3D][v2] Cinematic Final Fantasy 3D Render",
+  "medium": "cgi style image",
+  "nl": "JRPG cinematic rendering, glossy stylised characters, elaborate costume detail, rim-lit hair strands, cool cinematic grade, cgi style image.",
+  "tags": [
+   "3d",
+   "rim_lighting",
+   "highres",
+   "cinematic_lighting"
+  ],
+  "tags_negative": [
+   "flat_color"
+  ],
+  "negative": "flat toon colour, low-detail geometry"
+ },
+ {
+  "name": "[3D][v2] Collage",
+  "medium": "collage style image",
+  "nl": "Collage rendering, layered cut fragments with visible edges, mismatched scale and grain, tape and shadow between pieces, collage style image.",
+  "tags": [
+   "collage",
+   "textured",
+   "halftone",
+   "papercraft"
+  ],
+  "tags_negative": [
+   "photorealistic"
+  ],
+  "negative": "seamless single image, smooth blending"
+ },
+ {
+  "name": "[3D][v2] Collectible Figure",
+  "medium": "cgi style image",
+  "nl": "Collectible-figure rendering, matte cast resin with satin varnish, crisp sculpted detail, base plinth, product studio light, cgi style image.",
+  "tags": [
+   "3d",
+   "plastic",
+   "simple_background",
+   "shiny"
+  ],
+  "tags_negative": [
+   "photorealistic"
+  ],
+  "negative": "living skin detail, environmental scene"
+ },
+ {
+  "name": "[3D][v2] Contemporary Lithography",
+  "medium": "print style image",
+  "nl": "Contemporary litho rendering, grainy crayon tone on stone, limited ink palette, soft edge bleed, heavy rag paper, print style image.",
+  "tags": [
+   "lithograph",
+   "limited_palette",
+   "textured",
+   "traditional_media"
+  ],
+  "tags_negative": [
+   "highres"
+  ],
+  "negative": "crisp digital vector, saturated gradients"
+ },
+ {
+  "name": "[3D][v2] Contemporary Ukiyo-E",
+  "medium": "print style image",
+  "nl": "Modern ukiyo-e rendering, flat woodblock colour fields, keyblock outline, bokashi gradients, contemporary palette, paper grain, print style image.",
+  "tags": [
+   "ukiyo-e",
+   "woodcut",
+   "flat_color",
+   "gradient",
+   "textured"
+  ],
+  "tags_negative": [
+   "photorealistic"
+  ],
+  "negative": "photographic modelling, glossy digital finish"
+ },
+ {
+  "name": "[3D][v2] Coraline Stop-Motion",
+  "medium": "handmade style image",
+  "nl": "Stop-motion puppet rendering, fabric and resin materials, visible stitch and seam detail, macro depth of field, moody practical light, handmade style image.",
+  "tags": [
+   "stop_motion",
+   "textured",
+   "depth_of_field",
+   "dark",
+   "claymation"
+  ],
+  "tags_negative": [
+   "flat_color"
+  ],
+  "negative": "flat 2D shapes, clean CGI perfection"
+ },
+ {
+  "name": "[3D][v2] Fortnite",
+  "medium": "game art style image",
+  "nl": "Stylised shooter rendering, chunky exaggerated proportions, saturated flat-ish textures, crisp cartoon shading, bright key, game art style image.",
+  "tags": [
+   "3d",
+   "colorful",
+   "cel_shading",
+   "plastic"
+  ],
+  "tags_negative": [
+   "photorealistic"
+  ],
+  "negative": "gritty realism, muted grade"
+ },
+ {
+  "name": "[3D][v2] Icon/Emoticon Vignette",
+  "medium": "vector style image",
+  "nl": "Icon-vignette rendering, single glossy symbol centred in a rounded frame, soft inner gradient, thick clean edge, vector style image.",
+  "tags": [
+   "icon_(computing)",
+   "gradient",
+   "flat_color",
+   "simple_background"
+  ],
+  "tags_negative": [
+   "textured"
+  ],
+  "negative": "detailed scenery, photographic texture"
+ },
+ {
+  "name": "[3D][v2] Jean-Gabriel Domergue",
+  "medium": "painting style image",
+  "nl": "Deco-portrait rendering, elongated elegant features, soft airbrushed skin, pastel-and-black palette, sketchy loose background, painting style image.",
+  "tags": [
+   "pastel_colors",
+   "airbrush_(medium)",
+   "art_deco",
+   "portrait"
+  ],
+  "tags_negative": [
+   "photorealistic"
+  ],
+  "negative": "photographic detail, harsh contrast"
+ },
+ {
+  "name": "[3D][v2] Kurzgesagt",
+  "medium": "vector style image",
+  "nl": "Flat explainer rendering, geometric vector shapes, glowing neon accents on deep space blue, no outlines, tidy iconography, vector style image.",
+  "tags": [
+   "vector_trace",
+   "flat_color",
+   "glowing",
+   "blue_theme",
+   "minimalism"
+  ],
+  "tags_negative": [
+   "textured"
+  ],
+  "negative": "photographic texture, painterly shading"
+ },
+ {
+  "name": "[3D][v2] LEGO Minifigure",
+  "medium": "cgi style image",
+  "nl": "Minifigure rendering, glossy ABS plastic, cylindrical hands and stud connections, printed flat face detail, product light, cgi style image.",
+  "tags": [
+   "plastic",
+   "shiny",
+   "3d",
+   "simple_background"
+  ],
+  "tags_negative": [
+   "photorealistic"
+  ],
+  "negative": "organic anatomy, matte natural materials"
+ },
+ {
+  "name": "[3D][v2] LEGO Set",
+  "medium": "cgi style image",
+  "nl": "Brick-built rendering, everything assembled from studded plastic bricks, stepped geometry, glossy moulded surfaces, cgi style image.",
+  "tags": [
+   "plastic",
+   "shiny",
+   "3d",
+   "colorful"
+  ],
+  "tags_negative": [
+   "photorealistic"
+  ],
+  "negative": "smooth organic modelling, natural texture"
+ },
+ {
+  "name": "[3D][v2] Low Relief Sculpture",
+  "medium": "material style image",
+  "nl": "Bas-relief rendering, shallow carved depth, raking light picking out edges, uniform stone or plaster material, material style image.",
+  "tags": [
+   "stone",
+   "monochrome",
+   "textured",
+   "chiaroscuro"
+  ],
+  "tags_negative": [
+   "colorful"
+  ],
+  "negative": "full colour painting, deep perspective"
+ },
+ {
+  "name": "[3D][v2] Lowbrow",
+  "medium": "illustration style image",
+  "nl": "Lowbrow rendering, cartoon-grotesque characters painted with slick airbrush polish, candy palette, glossy highlights, illustration style image.",
+  "tags": [
+   "airbrush_(medium)",
+   "colorful",
+   "surreal",
+   "shiny"
+  ],
+  "tags_negative": [
+   "muted_color"
+  ],
+  "negative": "muted realism, sketchy line"
+ },
+ {
+  "name": "[3D][v2] M.C. Escher",
+  "medium": "print style image",
+  "nl": "Impossible-geometry rendering, tessellated interlocking forms, contradictory perspective, meticulous hatched monochrome, print style image.",
+  "tags": [
+   "lithograph",
+   "monochrome",
+   "cross-hatching",
+   "surreal",
+   "high_contrast"
+  ],
+  "tags_negative": [
+   "colorful"
+  ],
+  "negative": "colour rendering, loose brushwork"
+ },
+ {
+  "name": "[3D][v2] Marble Sculpture",
+  "medium": "material style image",
+  "nl": "Marble rendering, translucent white stone with grey veining, polished subsurface glow, carved chisel planes, museum light, material style image.",
+  "tags": [
+   "marble",
+   "stone",
+   "greyscale",
+   "glowing",
+   "textured"
+  ],
+  "tags_negative": [
+   "colorful"
+  ],
+  "negative": "painted colour, plastic sheen"
+ },
+ {
+  "name": "[3D][v2] Mixed Media",
+  "medium": "collage style image",
+  "nl": "Mixed-media rendering, paint over collaged paper and photo fragments, stitched and taped joins, layered surface texture, collage style image.",
+  "tags": [
+   "collage",
+   "textured",
+   "painting_(medium)",
+   "papercraft"
+  ],
+  "tags_negative": [
+   "highres"
+  ],
+  "negative": "clean single-medium finish, vector flatness"
+ },
+ {
+  "name": "[3D][v2] Modern Lithography",
+  "medium": "print style image",
+  "nl": "Modern litho rendering, flat layered spot inks, subtle grain, hand-drawn crayon texture, deckled paper edge, print style image.",
+  "tags": [
+   "lithograph",
+   "limited_palette",
+   "textured",
+   "spot_color"
+  ],
+  "tags_negative": [
+   "gradient"
+  ],
+  "negative": "photographic gradients, glossy stock"
+ },
+ {
+  "name": "[3D][v2] Modern Super Mario (Nintendo)",
+  "medium": "cgi style image",
+  "nl": "Nintendo-bright rendering, clean rounded geometry, saturated primary materials, soft even key, glossy cartoon highlights, cgi style image.",
+  "tags": [
+   "3d",
+   "colorful",
+   "plastic",
+   "cel_shading"
+  ],
+  "tags_negative": [
+   "dark"
+  ],
+  "negative": "gritty realism, dark palette"
+ },
+ {
+  "name": "[3D][v2] Muppets",
+  "medium": "handmade style image",
+  "nl": "Puppet rendering, felted fabric skin and fur, oversized soft features, hand-operated posing, warm even stage light, handmade style image.",
+  "tags": [
+   "textured",
+   "fur",
+   "stop_motion",
+   "3d"
+  ],
+  "tags_negative": [
+   "photorealistic"
+  ],
+  "negative": "realistic human anatomy, hard plastic surfaces"
+ },
+ {
+  "name": "[3D][v2] Negative Space Focused Illustration",
+  "medium": "illustration style image",
+  "nl": "Negative-space rendering, subject implied by the empty ground, few bold shapes, high contrast, generous emptiness, illustration style image.",
+  "tags": [
+   "minimalism",
+   "silhouette",
+   "high_contrast",
+   "flat_color"
+  ],
+  "tags_negative": [
+   "textured"
+  ],
+  "negative": "dense detail, busy texture"
+ },
+ {
+  "name": "[3D][v2] Neon Halftone Retro-Thriller Illustration",
+  "medium": "illustration style image",
+  "nl": "Retro-thriller rendering, neon magenta and cyan halftone screens, hard shadow blocking, print misregistration, grain, illustration style image.",
+  "tags": [
+   "halftone",
+   "neon_palette",
+   "high_contrast",
+   "textured",
+   "retro_artstyle"
+  ],
+  "tags_negative": [
+   "muted_color"
+  ],
+  "negative": "muted realism, smooth gradients"
+ },
+ {
+  "name": "[3D][v2] Neon Sign Design",
+  "medium": "graphic style image",
+  "nl": "Neon-sign rendering, glowing glass tubing against a dark wall, halo bloom and reflected spill, warm transformer flicker, graphic style image.",
+  "tags": [
+   "neon_palette",
+   "glowing",
+   "dark",
+   "glass"
+  ],
+  "tags_negative": [
+   "sunlight"
+  ],
+  "negative": "daylight, matte flat colour"
+ },
+ {
+  "name": "[3D][v2] Neon-Based Drawing",
+  "medium": "graphic style image",
+  "nl": "Neon-line rendering, luminous drawn strokes on black, additive glow at crossings, saturated hue shifts, soft bloom, graphic style image.",
+  "tags": [
+   "neon_palette",
+   "glowing",
+   "dark",
+   "lineart"
+  ],
+  "tags_negative": [
+   "textured"
+  ],
+  "negative": "matte paper texture, daylight palette"
+ },
+ {
+  "name": "[3D][v2] Overwatch Concept Art",
+  "medium": "illustration style image",
+  "nl": "Hero-shooter concept rendering, clean shape language, saturated team colour, painted material blocking, crisp rim light, illustration style image.",
+  "tags": [
+   "concept_art",
+   "colorful",
+   "rim_lighting",
+   "painting_(medium)"
+  ],
+  "tags_negative": [
+   "muted_color"
+  ],
+  "negative": "muted realism, gritty grain"
+ },
+ {
+  "name": "[3D][v2] Paper Cutout",
+  "medium": "handmade style image",
+  "nl": "Paper-cutout rendering, layered card shapes with soft drop shadows, matte stock texture, hand-cut edge wobble, handmade style image.",
+  "tags": [
+   "papercraft",
+   "flat_color",
+   "textured",
+   "collage"
+  ],
+  "tags_negative": [
+   "3d"
+  ],
+  "negative": "smooth CGI surfaces, photographic depth"
+ },
+ {
+  "name": "[3D][v2] Partial Wireframe 3D",
+  "medium": "cgi style image",
+  "nl": "Partial-wireframe rendering, shaded geometry dissolving into glowing topology lines, dark technical ground, cyan edge light, cgi style image.",
+  "tags": [
+   "wireframe",
+   "3d",
+   "glowing",
+   "dark",
+   "lineart"
+  ],
+  "tags_negative": [
+   "textured"
+  ],
+  "negative": "fully textured surfaces, painterly finish"
+ },
+ {
+  "name": "[3D][v2] Pixar Animation",
+  "medium": "cgi style image",
+  "nl": "Feature-CGI rendering, appealing rounded designs, subsurface skin warmth, art-directed key with soft bounce, rich clean colour, cgi style image.",
+  "tags": [
+   "3d",
+   "cinematic_lighting",
+   "colorful",
+   "rim_lighting"
+  ],
+  "tags_negative": [
+   "photorealistic"
+  ],
+  "negative": "photoreal human detail, gritty grade"
+ },
+ {
+  "name": "[3D][v2] Plastic Arts Sculpture",
+  "medium": "material style image",
+  "nl": "Sculptural rendering, modelled volume in a single material, raking gallery light, honest tool marks, neutral plinth ground, material style image.",
+  "tags": [
+   "stone",
+   "greyscale",
+   "textured",
+   "chiaroscuro"
+  ],
+  "tags_negative": [
+   "colorful"
+  ],
+  "negative": "painted surface colour, flat graphic design"
+ },
+ {
+  "name": "[3D][v2] Playful Retro Pop",
+  "medium": "graphic style image",
+  "nl": "Retro-pop rendering, mid-century flat shapes, halftone texture, cheerful limited palette, chunky rounded forms, graphic style image.",
+  "tags": [
+   "retro_artstyle",
+   "halftone",
+   "flat_color",
+   "colorful",
+   "limited_palette"
+  ],
+  "tags_negative": [
+   "photorealistic"
+  ],
+  "negative": "photographic realism, subtle gradients"
+ },
+ {
+  "name": "[3D][v2] Playmobil",
+  "medium": "cgi style image",
+  "nl": "Toy-figure rendering, simplified moulded plastic bodies, printed flat faces, glossy primary colour, visible joint seams, cgi style image.",
+  "tags": [
+   "plastic",
+   "shiny",
+   "3d",
+   "colorful"
+  ],
+  "tags_negative": [
+   "photorealistic"
+  ],
+  "negative": "realistic anatomy, natural fabric texture"
+ },
+ {
+  "name": "[3D][v2] Psychedelia",
+  "medium": "graphic style image",
+  "nl": "Psychedelic rendering, kaleidoscopic symmetry, melting saturated colour, vibrating complementary edges, dense ornament, graphic style image.",
+  "tags": [
+   "psychedelic",
+   "colorful",
+   "high_saturation",
+   "surreal"
+  ],
+  "tags_negative": [
+   "muted_color"
+  ],
+  "negative": "muted palette, minimal empty design"
+ },
+ {
+  "name": "[3D][v2] Quilling",
+  "medium": "handmade style image",
+  "nl": "Paper-quilling rendering, coiled paper strips set on edge, layered spiral shapes, soft shadow between coils, matte stock, handmade style image.",
+  "tags": [
+   "papercraft",
+   "textured",
+   "colorful",
+   "mosaic"
+  ],
+  "tags_negative": [
+   "photorealistic"
+  ],
+  "negative": "flat printed colour, smooth CGI"
+ },
+ {
+  "name": "[3D][v2] Spider-Verse",
+  "medium": "cgi style image",
+  "nl": "Comic-CGI hybrid rendering, halftone dot shading over 3D forms, chromatic offset edges, ben-day texture, bold graphic colour, cgi style image.",
+  "tags": [
+   "halftone",
+   "3d",
+   "comic",
+   "glitch",
+   "colorful"
+  ],
+  "tags_negative": [
+   "photorealistic"
+  ],
+  "negative": "photoreal shading, muted grade"
+ },
+ {
+  "name": "[3D][v2] Star Wars: The Clone Wars",
+  "medium": "cgi style image",
+  "nl": "Stylised CGI rendering, angular faceted character forms, flat-ish painted textures, hard directional key, sparse detail, cgi style image.",
+  "tags": [
+   "3d",
+   "cel_shading",
+   "flat_color",
+   "cinematic_lighting"
+  ],
+  "tags_negative": [
+   "photorealistic"
+  ],
+  "negative": "photoreal skin, dense surface detail"
+ },
+ {
+  "name": "[3D][v2] Tessellation-Based Illustration",
+  "medium": "graphic style image",
+  "nl": "Tessellated rendering, interlocking repeated shapes filling the plane, no gaps, flat alternating colour, precise geometry, graphic style image.",
+  "tags": [
+   "mosaic",
+   "flat_color",
+   "minimalism",
+   "limited_palette"
+  ],
+  "tags_negative": [
+   "textured"
+  ],
+  "negative": "organic brushwork, photographic depth"
+ },
+ {
+  "name": "[3D][v2] The Mitchells vs. The Machines animation",
+  "medium": "cgi style image",
+  "nl": "Hybrid CGI rendering, 3D forms with hand-drawn 2D effects layered on top, halftone texture, saturated graphic colour, cgi style image.",
+  "tags": [
+   "3d",
+   "halftone",
+   "colorful",
+   "textured",
+   "comic"
+  ],
+  "tags_negative": [
+   "photorealistic"
+  ],
+  "negative": "photoreal materials, muted realism"
+ },
+ {
+  "name": "[3D][v2] The Sims Game Screenshot",
+  "medium": "game art style image",
+  "nl": "Life-sim rendering, mid-poly interiors, simple UI-clean materials, even ambient light, saturated furnishing colour, game art style image.",
+  "tags": [
+   "3d",
+   "fake_screenshot",
+   "colorful",
+   "simple_background"
+  ],
+  "tags_negative": [
+   "photorealistic"
+  ],
+  "negative": "photoreal architecture, cinematic grade"
+ },
+ {
+  "name": "[3D][v2] Topographic Linework Illustration",
+  "medium": "technical drawing style image",
+  "nl": "Topographic rendering, nested contour lines describing elevation, even stroke weight, limited two-tone palette, technical drawing style image.",
+  "tags": [
+   "diagram",
+   "lineart",
+   "limited_palette",
+   "map"
+  ],
+  "tags_negative": [
+   "photorealistic"
+  ],
+  "negative": "painterly shading, photographic texture"
+ },
+ {
+  "name": "[3D][v2] Unreal Engine",
+  "medium": "game art style image",
+  "nl": "Unreal cinematic rendering, realtime global illumination, volumetric fog beams, screen-space reflections, filmic tonemap, game art style image.",
+  "tags": [
+   "3d",
+   "cinematic_lighting",
+   "god_rays",
+   "highres",
+   "film_grain"
+  ],
+  "tags_negative": [
+   "flat_color"
+  ],
+  "negative": "flat toon colour, hand-drawn line"
+ },
+ {
+  "name": "[3D][v2] Variable-Size Ben-Day Dots Illustration",
+  "medium": "print style image",
+  "nl": "Ben-day rendering, tone built from dots that grow and shrink, hard black keyline, flat spot inks, visible registration, print style image.",
+  "tags": [
+   "halftone",
+   "flat_color",
+   "limited_palette",
+   "high_contrast",
+   "comic"
+  ],
+  "tags_negative": [
+   "gradient"
+  ],
+  "negative": "smooth gradients, photographic detail"
+ },
+ {
+  "name": "[3D][v2] Vignette Sticker",
+  "medium": "vector style image",
+  "nl": "Sticker-vignette rendering, subject inside a thick white die-cut border, flat bold colour, glossy vinyl sheen, no background, vector style image.",
+  "tags": [
+   "sticker",
+   "flat_color",
+   "white_theme",
+   "simple_background"
+  ],
+  "tags_negative": [
+   "scenery"
+  ],
+  "negative": "environmental background, photographic depth"
+ },
+ {
+  "name": "[3D][v2] Vignette Tattoo Design (Flat Print Format)",
+  "medium": "illustration style image",
+  "nl": "Tattoo-flash rendering, bold black contour, limited spot colour, tight shading hatch, flat print layout on cream paper, illustration style image.",
+  "tags": [
+   "lineart",
+   "limited_palette",
+   "flat_color",
+   "traditional_media",
+   "spot_color"
+  ],
+  "tags_negative": [
+   "photorealistic"
+  ],
+  "negative": "photographic rendering, soft gradients"
+ },
+ {
+  "name": "[3D][v2] Vignette-Framed Central Composition",
+  "medium": "illustration style image",
+  "nl": "Vignette-framed rendering, subject centred in a soft-edged oval of light, surroundings fading to the paper, illustration style image.",
+  "tags": [
+   "vignetting",
+   "simple_background",
+   "soft_focus",
+   "portrait"
+  ],
+  "tags_negative": [
+   "scenery"
+  ],
+  "negative": "edge-to-edge detail, hard rectangular crop"
+ },
+ {
+  "name": "[3D][v2] Wallace and Gromit",
+  "medium": "handmade style image",
+  "nl": "Plasticine stop-motion rendering, fingerprint-dented clay, wide toothy grins, warm even set light, visible armature bulk, handmade style image.",
+  "tags": [
+   "claymation",
+   "stop_motion",
+   "textured",
+   "3d"
+  ],
+  "tags_negative": [
+   "highres"
+  ],
+  "negative": "smooth CGI perfection, photoreal detail"
+ },
+ {
+  "name": "[3D][v2] Zelda Wind Waker",
+  "medium": "cgi style image",
+  "nl": "Toon-sea rendering, thick cel bands, bright flat sky colour, stylised swirl effects, black ink contour, soft glow, cgi style image.",
+  "tags": [
+   "cel_shading",
+   "3d",
+   "flat_color",
+   "outline",
+   "colorful"
+  ],
+  "tags_negative": [
+   "photorealistic"
+  ],
+  "negative": "photoreal water, muted grade"
+ },
+ {
+  "name": "[Object] Brick-Built",
+  "medium": "cgi style image",
+  "nl": "Brick-built rendering, stepped geometry from studded plastic bricks, glossy moulded surfaces, visible stud tops, cgi style image.",
+  "tags": [
+   "plastic",
+   "shiny",
+   "3d",
+   "colorful"
+  ],
+  "tags_negative": [
+   "photorealistic"
+  ],
+  "negative": "smooth organic modelling, natural texture"
+ },
+ {
+  "name": "[Object] Claymation",
+  "medium": "handmade style image",
+  "nl": "Plasticine object rendering, soft dented clay surfaces, thumbprint texture, slightly uneven volumes, warm set light, handmade style image.",
+  "tags": [
+   "claymation",
+   "stop_motion",
+   "textured"
+  ],
+  "tags_negative": [
+   "shiny"
+  ],
+  "negative": "glossy CGI plastic, precise geometry",
+  "aliases": [
+   "[3D][v2] Claymation",
+   "[3D][Clio] Claymation"
+  ]
+ },
+ {
+  "name": "[Object] Die-Cast Model",
+  "medium": "cgi style image",
+  "nl": "Die-cast rendering, painted metal body with slight orange-peel finish, chrome trim, rubber tyres, tiny moulded panel lines, cgi style image.",
+  "tags": [
+   "metallic",
+   "plastic",
+   "shiny",
+   "3d",
+   "simple_background"
+  ],
+  "tags_negative": [
+   "textured"
+  ],
+  "negative": "full-scale realism, rough natural texture"
+ },
+ {
+  "name": "[Object] Needle Felt",
+  "medium": "handmade style image",
+  "nl": "Needle-felt rendering, fuzzy wool fibre surface, compressed soft volumes, needle pocks, heathered colour, handmade style image.",
+  "tags": [
+   "knitted",
+   "textured",
+   "fur"
+  ],
+  "tags_negative": [
+   "3d"
+  ],
+  "negative": "smooth CGI, glossy plastic"
+ },
+ {
+  "name": "[Object] Origami",
+  "medium": "handmade style image",
+  "nl": "Origami rendering, crisp folded planes, sharp crease lines, matte paper colour, soft shadow in the valleys, handmade style image.",
+  "tags": [
+   "papercraft",
+   "textured",
+   "simple_background"
+  ],
+  "tags_negative": [
+   "photorealistic"
+  ],
+  "negative": "organic curved forms, glossy plastic",
+  "aliases": [
+   "[Design][v2] Origami",
+   "[Design][Clio] Origami"
+  ]
+ },
+ {
+  "name": "[Object] Papercraft",
+  "medium": "handmade style image",
+  "nl": "Papercraft rendering, faceted card panels with glue tabs, visible fold seams, matte stock, soft studio shadow, handmade style image.",
+  "tags": [
+   "papercraft",
+   "low_poly",
+   "textured",
+   "flat_color"
+  ],
+  "tags_negative": [
+   "photorealistic"
+  ],
+  "negative": "smooth organic surfaces, photographic materials",
+  "aliases": [
+   "[3D] Papercraft Lowpoly Toy"
+  ]
+ },
+ {
+  "name": "[Object] Plastic Designer Toy",
+  "medium": "cgi style image",
+  "nl": "Designer-toy rendering, smooth vinyl body, satin paint with crisp masking edges, subtle seam line, product studio light, cgi style image.",
+  "tags": [
+   "plastic",
+   "shiny",
+   "3d",
+   "simple_background"
+  ],
+  "tags_negative": [
+   "textured"
+  ],
+  "negative": "organic skin detail, rough handmade texture"
+ },
+ {
+  "name": "[Object] Plush Fabric Toy",
+  "medium": "handmade style image",
+  "nl": "Plush rendering, soft pile fabric, visible seam stitching, embroidered features, stuffed rounded volumes, handmade style image.",
+  "tags": [
+   "textured",
+   "embroidery",
+   "fur",
+   "knitted"
+  ],
+  "tags_negative": [
+   "3d"
+  ],
+  "negative": "hard plastic surfaces, CGI perfection"
+ },
+ {
+  "name": "[Object] Resin Garage Kit",
+  "medium": "cgi style image",
+  "nl": "Garage-kit rendering, hand-cast resin with fine sculpted detail, airbrushed paint gradients, satin varnish, base plinth, cgi style image.",
+  "tags": [
+   "3d",
+   "plastic",
+   "airbrush_(medium)",
+   "simple_background"
+  ],
+  "tags_negative": [
+   "photorealistic"
+  ],
+  "negative": "living subject, environmental scene"
+ },
+ {
+  "name": "[Object] Stop-Motion Puppet",
+  "medium": "handmade style image",
+  "nl": "Stop-motion puppet rendering, fabric and silicone materials over an armature, macro depth of field, practical set light, handmade style image.",
+  "tags": [
+   "stop_motion",
+   "textured",
+   "depth_of_field",
+   "claymation"
+  ],
+  "tags_negative": [
+   "flat_color"
+  ],
+  "negative": "flat 2D shapes, digital gradients"
+ },
+ {
+  "name": "[Object] Vinyl Art Figure",
+  "medium": "cgi style image",
+  "nl": "Vinyl-figure rendering, glossy rotocast surface, simplified stylised forms, flat sprayed colour blocks, seam at the waist, cgi style image.",
+  "tags": [
+   "plastic",
+   "shiny",
+   "3d",
+   "flat_color"
+  ],
+  "tags_negative": [
+   "textured"
+  ],
+  "negative": "organic detail, matte natural material"
+ },
+ {
+  "name": "[Pixel] 1-bit Dither",
+  "medium": "pixel art style image",
+  "nl": "One-bit rendering, pure black and white pixels only, checker and Bayer dithering for tone, hard aliased edges, pixel art style image.",
+  "tags": [
+   "pixel_art",
+   "dithering",
+   "monochrome",
+   "high_contrast"
+  ],
+  "tags_negative": [
+   "colorful"
+  ],
+  "negative": "colour, smooth antialiasing"
+ },
+ {
+  "name": "[Pixel] 16-bit Console",
+  "medium": "pixel art style image",
+  "nl": "16-bit rendering, console palette limits, dithered shading ramps, crisp sprite outlines, parallax-flat backgrounds, pixel art style image.",
+  "tags": [
+   "pixel_art",
+   "dithering",
+   "limited_palette",
+   "retro_artstyle"
+  ],
+  "tags_negative": [
+   "highres"
+  ],
+  "negative": "HD smoothness, photographic depth"
+ },
+ {
+  "name": "[Pixel] 32-bit Pre-rendered Hybrid",
+  "medium": "pixel art style image",
+  "nl": "Pre-rendered hybrid, sprites baked from 3D onto a pixel grid, dithered gradients, richer palette, slight blur in the source, pixel art style image.",
+  "tags": [
+   "pixel_art",
+   "dithering",
+   "3d",
+   "retro_artstyle"
+  ],
+  "tags_negative": [
+   "highres"
+  ],
+  "negative": "clean vector art, modern HD shading"
+ },
+ {
+  "name": "[Pixel] 8-bit",
+  "medium": "pixel art style image",
+  "nl": "8-bit rendering, tiny fixed palette, chunky pixels on a coarse grid, no antialiasing, tile-repeated background, pixel art style image.",
+  "tags": [
+   "pixel_art",
+   "limited_palette",
+   "dithering",
+   "retro_artstyle"
+  ],
+  "tags_negative": [
+   "highres"
+  ],
+  "negative": "smooth shading, high-resolution detail",
+  "aliases": [
+   "[Design][v2] 8-Bit",
+   "[Design][Clio] 8-Bit"
+  ]
+ }
 ]

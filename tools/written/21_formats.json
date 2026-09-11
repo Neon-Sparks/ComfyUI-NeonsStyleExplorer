@@ -1,32 +1,505 @@
 [
-  {"name":"[Format] Mood Board","family":"Illustration","axis":"format","medium":"collage style image","nl":"Composed as a mood board: a grid of pinned reference tiles at mixed scales, torn edges and tape, swatch strip along one side, collage style image.","tags":["collage","multiple_views","textured"],"tags_negative":["photorealistic"],"negative":"single hero image, seamless composition"},
-  {"name":"[Format] Colour Script","family":"Illustration","axis":"format","medium":"illustration style image","nl":"Composed as a colour script: a row of small painted beats in sequence, each a different lighting key, uniform frame size, illustration style image.","tags":["multiple_views","painting_(medium)","cinematic_lighting"],"tags_negative":["highres"],"negative":"single full-detail illustration, tight crop"},
-  {"name":"[Format] Animatic Frame","family":"Illustration","axis":"format","medium":"drawing style image","nl":"Composed as an animatic frame: rough drawing inside a safe-area rectangle, timing and camera notes at the edge, flat grey values, drawing style image.","tags":["storyboard","sketch","unfinished","monochrome"],"tags_negative":["highres"],"negative":"finished colour art, cinematic polish"},
-  {"name":"[Format] Film Strip","family":"Photography & Film","axis":"format","medium":"photograph style image","nl":"Composed as a film strip: consecutive frames in a row with sprocket holes, frame numbers and edge markings, orange base, photograph style image.","tags":["contact_sheet","multiple_views","film_grain","photo_border"],"tags_negative":["simple_background"],"negative":"single borderless frame, digital cleanliness"},
-  {"name":"[Format] Zine Spread","family":"Comics & Print","axis":"format","medium":"collage style image","nl":"Composed as a zine spread: two photocopied pages side by side, cut-and-paste blocks, hand-scrawled captions, staple gutter, collage style image.","tags":["collage","monochrome","halftone","textured"],"tags_negative":["highres"],"negative":"clean magazine layout, glossy print"},
-  {"name":"[Format] Wanted Poster","family":"Comics & Print","axis":"format","medium":"print style image","nl":"Composed as a wanted poster: heavy woodtype heading, a portrait panel in the middle, reward line below, aged torn paper, print style image.","tags":["poster","sepia","traditional_media","textured"],"tags_negative":["highres"],"negative":"modern clean layout, saturated colour"},
-  {"name":"[Format] Lobby Card","family":"Photography & Film","axis":"format","medium":"photograph style image","nl":"Composed as a lobby card: a landscape film still inside a printed border with title lettering space at the base, faded ink, photograph style image.","tags":["photo_border","poster","retro_artstyle","muted_color"],"tags_negative":["highres"],"negative":"borderless modern still, saturated digital colour"},
-  {"name":"[Format] VHS Box Art","family":"Comics & Print","axis":"format","medium":"poster style image","nl":"Composed as a VHS sleeve: tall cover panel with a spine strip, airbrushed montage, chunky title band, worn cardboard edges, poster style image.","tags":["poster","airbrush_(medium)","retro_artstyle","textured"],"tags_negative":["minimalism"],"negative":"minimal modern cover, crisp digital vector"},
-  {"name":"[Format] Arcade Cabinet Art","family":"Comics & Print","axis":"format","medium":"poster style image","nl":"Composed as arcade side art: a tall panel of screenprinted flat colour, hard black keyline, bold logo space at the top, poster style image.","tags":["poster","stencil","flat_color","limited_palette"],"tags_negative":["photorealistic"],"negative":"photographic depth, soft gradients"},
-  {"name":"[Format] Cassette J-Card","family":"Comics & Print","axis":"format","medium":"print style image","nl":"Composed as a cassette J-card: narrow folded panels, spine text strip, small cover square, cheap two-colour print on thin card, print style image.","tags":["limited_palette","textured","risograph","poster"],"tags_negative":["highres"],"negative":"large glossy cover, photographic detail"},
-  {"name":"[Format] Vinyl Sleeve Back","family":"Comics & Print","axis":"format","medium":"print style image","nl":"Composed as a record sleeve back: track-list column, credit block, a small photo panel, matte cardboard stock, print style image.","tags":["album_cover","poster","textured","limited_palette"],"tags_negative":["photorealistic"],"negative":"full-bleed hero image, glossy modern layout"},
-  {"name":"[Format] Playing Card Face","family":"Comics & Print","axis":"format","medium":"illustration style image","nl":"Composed as a playing-card face: mirrored double-ended figure, ornate border rule, corner index marks, flat printed inks, illustration style image.","tags":["trading_card","flat_color","limited_palette","lineart"],"tags_negative":["photorealistic"],"negative":"photographic depth, borderless bleed"},
-  {"name":"[Format] Banknote Engraving","family":"Comics & Print","axis":"format","medium":"print style image","nl":"Composed as a banknote: intaglio line portrait, guilloche rosette patterns, denomination corners, pastel security tints, print style image.","tags":["lithograph","lineart","cross-hatching","pale_color"],"tags_negative":["photorealistic"],"negative":"photographic tone, loose brushwork"},
-  {"name":"[Format] Postage Stamp","family":"Comics & Print","axis":"format","medium":"print style image","nl":"Composed as a postage stamp: perforated edge, small framed vignette, country and value lettering, limited engraved inks, print style image.","tags":["lithograph","limited_palette","photo_border","lineart"],"tags_negative":["highres"],"negative":"full-bleed photograph, modern gradients"},
-  {"name":"[Format] Matchbox Label","family":"Comics & Print","axis":"format","medium":"print style image","nl":"Composed as a matchbox label: tiny rectangular panel, bold naive emblem, two or three flat inks, coarse paper and rounded corners, print style image.","tags":["limited_palette","flat_color","textured","retro_artstyle"],"tags_negative":["highres"],"negative":"photographic detail, large-format layout"},
-  {"name":"[Format] Seed Packet","family":"Comics & Print","axis":"format","medium":"print style image","nl":"Composed as a seed packet: illustrated specimen panel, arched banner name, planting text below, faded lithograph inks on kraft, print style image.","tags":["lithograph","limited_palette","textured","retro_artstyle"],"tags_negative":["highres"],"negative":"glossy modern packaging, photographic imagery"},
-  {"name":"[Format] Fruit Crate Label","family":"Comics & Print","axis":"format","medium":"print style image","nl":"Composed as a crate label: bold display lettering across a stone-litho scene, saturated flat inks, decorative border, print style image.","tags":["lithograph","poster","colorful","flat_color","retro_artstyle"],"tags_negative":["muted_color"],"negative":"muted minimal design, photographic capture"},
-  {"name":"[Format] Museum Wall Label","family":"Comics & Print","axis":"format","medium":"graphic style image","nl":"Composed as a museum label: small white panel beside the work, title and date lines, generous margins, even gallery light, graphic style image.","tags":["minimalism","white_theme","simple_background"],"tags_negative":["colorful"],"negative":"busy decoration, dramatic lighting"},
-  {"name":"[Format] Ticket Stub","family":"Comics & Print","axis":"format","medium":"print style image","nl":"Composed as a ticket stub: perforated tear line, seat and date fields, serial numbering, thin card with worn edges, print style image.","tags":["limited_palette","textured","photo_border","retro_artstyle"],"tags_negative":["highres"],"negative":"large poster layout, photographic imagery"},
-  {"name":"[Format] Boarding Pass","family":"Comics & Print","axis":"format","medium":"graphic style image","nl":"Composed as a boarding pass: fielded data grid, barcode strip, perforated stub, airline colour band on thermal-white stock, graphic style image.","tags":["diagram","flat_color","white_theme","minimalism"],"tags_negative":["textured"],"negative":"painterly texture, photographic depth"},
-  {"name":"[Format] Business Card","family":"Design & Aesthetics","axis":"format","medium":"graphic style image","nl":"Composed as a business card: small landscape rectangle, mark at one side, name and contact lines, wide margins on heavy stock, graphic style image.","tags":["minimalism","simple_background","flat_color"],"tags_negative":["colorful"],"negative":"busy full-bleed imagery, photographic clutter"},
-  {"name":"[Format] Letterhead","family":"Design & Aesthetics","axis":"format","medium":"graphic style image","nl":"Composed as a letterhead: mark and rule at the top, deep white body area, footer address line, uncoated paper tone, graphic style image.","tags":["minimalism","white_theme","simple_background"],"tags_negative":["colorful"],"negative":"full-page imagery, saturated decoration"},
-  {"name":"[Format] Menu Card","family":"Design & Aesthetics","axis":"format","medium":"graphic style image","nl":"Composed as a menu: sectioned lists with leader dots, a rule between courses, restrained display heading, warm paper stock, graphic style image.","tags":["minimalism","textured","limited_palette"],"tags_negative":["photorealistic"],"negative":"photographic hero image, dense decoration"},
-  {"name":"[Format] Slide Deck Cover","family":"Design & Aesthetics","axis":"format","medium":"graphic style image","nl":"Composed as a deck cover: 16:9 title slide, large heading block, a single flat graphic element, brand colour band, graphic style image.","tags":["widescreen","flat_color","minimalism","poster"],"tags_negative":["textured"],"negative":"dense illustration, photographic texture"},
-  {"name":"[Format] App Store Screenshot","family":"Design & Aesthetics","axis":"format","medium":"graphic style image","nl":"Composed as a store screenshot: a phone frame on a flat colour field, caption line above, device shadow, tall aspect, graphic style image.","tags":["fake_screenshot","flat_color","gradient","simple_background"],"tags_negative":["textured"],"negative":"photographic scene, gritty texture"},
-  {"name":"[Format] Podcast Cover","family":"Design & Aesthetics","axis":"format","medium":"graphic style image","nl":"Composed as a podcast cover: square tile, oversized title lettering, one bold graphic element, high contrast for thumbnail size, graphic style image.","tags":["poster","flat_color","high_contrast","album_cover"],"tags_negative":["muted_color"],"negative":"fine detail, muted subtle palette"},
-  {"name":"[Format] Email Hero","family":"Design & Aesthetics","axis":"format","medium":"graphic style image","nl":"Composed as an email hero banner: wide shallow strip, subject at one side, clear space for a headline and button, flat ground, graphic style image.","tags":["widescreen","flat_color","gradient","simple_background"],"tags_negative":["textured"],"negative":"tall composition, busy background"},
-  {"name":"[Format] Banner Ad Set","family":"Design & Aesthetics","axis":"format","medium":"graphic style image","nl":"Composed as a banner-ad set: the same layout repeated at leaderboard, square and skyscraper proportions, consistent flat colour, graphic style image.","tags":["multiple_views","flat_color","poster","minimalism"],"tags_negative":["photorealistic"],"negative":"single composition, painterly rendering"},
-  {"name":"[Format] Newspaper Front Page","family":"Comics & Print","axis":"format","medium":"print style image","nl":"Composed as a newspaper front page: masthead, column rules, headline hierarchy, a halftone photo panel, grey newsprint, print style image.","tags":["halftone","monochrome","textured","limited_palette"],"tags_negative":["colorful"],"negative":"glossy magazine colour, single hero image"},
-  {"name":"[Format] Tabloid Front Page","family":"Comics & Print","axis":"format","medium":"print style image","nl":"Composed as a tabloid front: screaming display headline, one cropped photo, red banner strip, cheap ink on coarse newsprint, print style image.","tags":["halftone","high_contrast","red_theme","textured"],"tags_negative":["minimalism"],"negative":"restrained broadsheet layout, subtle palette"}
+ {
+  "name": "[Format] Mood Board",
+  "family": "Illustration",
+  "axis": "format",
+  "medium": "collage style image",
+  "nl": "Composed as a mood board, a grid of pinned reference tiles at mixed scales, torn edges and tape, swatch strip along one side, collage style image.",
+  "tags": [
+   "collage",
+   "multiple_views",
+   "textured"
+  ],
+  "tags_negative": [
+   "photorealistic"
+  ],
+  "negative": "single hero image, seamless composition"
+ },
+ {
+  "name": "[Format] Colour Script",
+  "family": "Illustration",
+  "axis": "format",
+  "medium": "illustration style image",
+  "nl": "Composed as a colour script, a row of small painted beats in sequence, each a different lighting key, uniform frame size, illustration style image.",
+  "tags": [
+   "multiple_views",
+   "painting_(medium)",
+   "cinematic_lighting"
+  ],
+  "tags_negative": [
+   "highres"
+  ],
+  "negative": "single full-detail illustration, tight crop"
+ },
+ {
+  "name": "[Format] Animatic Frame",
+  "family": "Illustration",
+  "axis": "format",
+  "medium": "drawing style image",
+  "nl": "Composed as an animatic frame, rough drawing inside a safe-area rectangle, timing and camera notes at the edge, flat grey values, drawing style image.",
+  "tags": [
+   "storyboard",
+   "sketch",
+   "unfinished",
+   "monochrome"
+  ],
+  "tags_negative": [
+   "highres"
+  ],
+  "negative": "finished colour art, cinematic polish"
+ },
+ {
+  "name": "[Format] Film Strip",
+  "family": "Photography & Film",
+  "axis": "format",
+  "medium": "photograph style image",
+  "nl": "Composed as a film strip, consecutive frames in a row with sprocket holes, frame numbers and edge markings, orange base, photograph style image.",
+  "tags": [
+   "contact_sheet",
+   "multiple_views",
+   "film_grain",
+   "photo_border"
+  ],
+  "tags_negative": [
+   "simple_background"
+  ],
+  "negative": "single borderless frame, digital cleanliness"
+ },
+ {
+  "name": "[Format] Zine Spread",
+  "family": "Comics & Print",
+  "axis": "format",
+  "medium": "collage style image",
+  "nl": "Composed as a zine spread, two photocopied pages side by side, cut-and-paste blocks, hand-scrawled captions, staple gutter, collage style image.",
+  "tags": [
+   "collage",
+   "monochrome",
+   "halftone",
+   "textured"
+  ],
+  "tags_negative": [
+   "highres"
+  ],
+  "negative": "clean magazine layout, glossy print"
+ },
+ {
+  "name": "[Format] Wanted Poster",
+  "family": "Comics & Print",
+  "axis": "format",
+  "medium": "print style image",
+  "nl": "Composed as a wanted poster, heavy woodtype heading, a mugshot panel in the middle, reward line below, aged torn paper, print style image.",
+  "tags": [
+   "poster",
+   "sepia",
+   "traditional_media",
+   "textured"
+  ],
+  "tags_negative": [
+   "highres"
+  ],
+  "negative": "modern clean layout, saturated colour"
+ },
+ {
+  "name": "[Format] Lobby Card",
+  "family": "Photography & Film",
+  "axis": "format",
+  "medium": "photograph style image",
+  "nl": "Composed as a lobby card, a landscape film still inside a printed border with title lettering space at the base, faded ink, photograph style image.",
+  "tags": [
+   "photo_border",
+   "poster",
+   "retro_artstyle",
+   "muted_color"
+  ],
+  "tags_negative": [
+   "highres"
+  ],
+  "negative": "borderless modern still, saturated digital colour"
+ },
+ {
+  "name": "[Format] VHS Box Art",
+  "family": "Comics & Print",
+  "axis": "format",
+  "medium": "poster style image",
+  "nl": "Composed as a VHS sleeve, cover panel with a spine strip, airbrushed montage, chunky title band, worn cardboard edges, poster style image.",
+  "tags": [
+   "poster",
+   "airbrush_(medium)",
+   "retro_artstyle",
+   "textured"
+  ],
+  "tags_negative": [
+   "minimalism"
+  ],
+  "negative": "minimal modern cover, crisp digital vector"
+ },
+ {
+  "name": "[Format] Arcade Cabinet Art",
+  "family": "Comics & Print",
+  "axis": "format",
+  "medium": "poster style image",
+  "nl": "Composed as arcade side art, screenprinted flat colour, hard black keyline, bold logo space at the top, poster style image.",
+  "tags": [
+   "poster",
+   "stencil",
+   "flat_color",
+   "limited_palette"
+  ],
+  "tags_negative": [
+   "photorealistic"
+  ],
+  "negative": "photographic depth, soft gradients"
+ },
+ {
+  "name": "[Format] Cassette J-Card",
+  "family": "Comics & Print",
+  "axis": "format",
+  "medium": "print style image",
+  "nl": "Composed as a cassette J-card, narrow folded panels, spine text strip, small cover square, cheap two-colour print on thin card, print style image.",
+  "tags": [
+   "limited_palette",
+   "textured",
+   "risograph",
+   "poster"
+  ],
+  "tags_negative": [
+   "highres"
+  ],
+  "negative": "large glossy cover, photographic detail"
+ },
+ {
+  "name": "[Format] Vinyl Sleeve Back",
+  "family": "Comics & Print",
+  "axis": "format",
+  "medium": "print style image",
+  "nl": "Composed as a record sleeve back, track-list column, credit block, a small photo panel, matte cardboard stock, print style image.",
+  "tags": [
+   "album_cover",
+   "poster",
+   "textured",
+   "limited_palette"
+  ],
+  "tags_negative": [
+   "photorealistic"
+  ],
+  "negative": "full-bleed hero image, glossy modern layout"
+ },
+ {
+  "name": "[Format] Playing Card Face",
+  "family": "Comics & Print",
+  "axis": "format",
+  "medium": "illustration style image",
+  "nl": "Composed as a playing-card face, mirrored double-ended figure, ornate border rule, corner index marks, flat printed inks, illustration style image.",
+  "tags": [
+   "trading_card",
+   "flat_color",
+   "limited_palette",
+   "lineart"
+  ],
+  "tags_negative": [
+   "photorealistic"
+  ],
+  "negative": "photographic depth, borderless bleed"
+ },
+ {
+  "name": "[Format] Banknote Engraving",
+  "family": "Comics & Print",
+  "axis": "format",
+  "medium": "print style image",
+  "nl": "Composed as a banknote, intaglio line portrait, guilloche rosette patterns, denomination corners, pastel security tints, print style image.",
+  "tags": [
+   "lithograph",
+   "lineart",
+   "cross-hatching",
+   "pale_color"
+  ],
+  "tags_negative": [
+   "photorealistic"
+  ],
+  "negative": "photographic tone, loose brushwork"
+ },
+ {
+  "name": "[Format] Postage Stamp",
+  "family": "Comics & Print",
+  "axis": "format",
+  "medium": "print style image",
+  "nl": "Composed as a postage stamp, perforated edge, small framed vignette, country and value lettering, limited engraved inks, print style image.",
+  "tags": [
+   "lithograph",
+   "limited_palette",
+   "photo_border",
+   "lineart"
+  ],
+  "tags_negative": [
+   "highres"
+  ],
+  "negative": "full-bleed photograph, modern gradients"
+ },
+ {
+  "name": "[Format] Matchbox Label",
+  "family": "Comics & Print",
+  "axis": "format",
+  "medium": "print style image",
+  "nl": "Composed as a matchbox label, tiny rectangular panel, bold naive emblem, two or three flat inks, coarse paper and rounded corners, print style image.",
+  "tags": [
+   "limited_palette",
+   "flat_color",
+   "textured",
+   "retro_artstyle"
+  ],
+  "tags_negative": [
+   "highres"
+  ],
+  "negative": "photographic detail, large-format layout"
+ },
+ {
+  "name": "[Format] Seed Packet",
+  "family": "Comics & Print",
+  "axis": "format",
+  "medium": "print style image",
+  "nl": "Composed as a seed packet, illustrated specimen panel, arched banner name, planting text below, faded lithograph inks on kraft, print style image.",
+  "tags": [
+   "lithograph",
+   "limited_palette",
+   "textured",
+   "retro_artstyle"
+  ],
+  "tags_negative": [
+   "highres"
+  ],
+  "negative": "glossy modern packaging, photographic imagery"
+ },
+ {
+  "name": "[Format] Fruit Crate Label",
+  "family": "Comics & Print",
+  "axis": "format",
+  "medium": "print style image",
+  "nl": "Composed as a crate label, bold display lettering across a stone-litho scene, saturated flat inks, decorative border, print style image.",
+  "tags": [
+   "lithograph",
+   "poster",
+   "colorful",
+   "flat_color",
+   "retro_artstyle"
+  ],
+  "tags_negative": [
+   "muted_color"
+  ],
+  "negative": "muted minimal design, photographic capture"
+ },
+ {
+  "name": "[Format] Museum Wall Label",
+  "family": "Comics & Print",
+  "axis": "format",
+  "medium": "graphic style image",
+  "nl": "Composed as a museum label, small white panel beside the work, title and date lines, generous margins, even gallery light, graphic style image.",
+  "tags": [
+   "minimalism",
+   "white_theme",
+   "simple_background"
+  ],
+  "tags_negative": [
+   "colorful"
+  ],
+  "negative": "busy decoration, dramatic lighting"
+ },
+ {
+  "name": "[Format] Ticket Stub",
+  "family": "Comics & Print",
+  "axis": "format",
+  "medium": "print style image",
+  "nl": "Composed as a ticket stub, perforated tear line, seat and date fields, serial numbering, thin card with worn edges, print style image.",
+  "tags": [
+   "limited_palette",
+   "textured",
+   "photo_border",
+   "retro_artstyle"
+  ],
+  "tags_negative": [
+   "highres"
+  ],
+  "negative": "large poster layout, photographic imagery"
+ },
+ {
+  "name": "[Format] Boarding Pass",
+  "family": "Comics & Print",
+  "axis": "format",
+  "medium": "graphic style image",
+  "nl": "Composed as a boarding pass, fielded data grid, barcode strip, perforated stub, airline colour band on thermal-white stock, graphic style image.",
+  "tags": [
+   "diagram",
+   "flat_color",
+   "white_theme",
+   "minimalism"
+  ],
+  "tags_negative": [
+   "textured"
+  ],
+  "negative": "painterly texture, photographic depth"
+ },
+ {
+  "name": "[Format] Business Card",
+  "family": "Design & Aesthetics",
+  "axis": "format",
+  "medium": "graphic style image",
+  "nl": "Composed as a business card, small landscape rectangle, mark at one side, name and contact lines, wide margins on heavy stock, graphic style image.",
+  "tags": [
+   "minimalism",
+   "simple_background",
+   "flat_color"
+  ],
+  "tags_negative": [
+   "colorful"
+  ],
+  "negative": "busy full-bleed imagery, photographic clutter"
+ },
+ {
+  "name": "[Format] Letterhead",
+  "family": "Design & Aesthetics",
+  "axis": "format",
+  "medium": "graphic style image",
+  "nl": "Composed as a letterhead, mark and rule at the top, deep white body area, footer address line, uncoated paper tone, graphic style image.",
+  "tags": [
+   "minimalism",
+   "white_theme",
+   "simple_background"
+  ],
+  "tags_negative": [
+   "colorful"
+  ],
+  "negative": "full-page imagery, saturated decoration"
+ },
+ {
+  "name": "[Format] Menu Card",
+  "family": "Design & Aesthetics",
+  "axis": "format",
+  "medium": "graphic style image",
+  "nl": "Composed as a menu, sectioned lists with leader dots, a rule between courses, restrained display heading, warm paper stock, graphic style image.",
+  "tags": [
+   "minimalism",
+   "textured",
+   "limited_palette"
+  ],
+  "tags_negative": [
+   "photorealistic"
+  ],
+  "negative": "photographic hero image, dense decoration"
+ },
+ {
+  "name": "[Format] Slide Deck Cover",
+  "family": "Design & Aesthetics",
+  "axis": "format",
+  "medium": "graphic style image",
+  "nl": "Composed as a deck cover, title slide with a large heading block, a single flat graphic element, brand colour band, generous quiet ground, graphic style image.",
+  "tags": [
+   "flat_color",
+   "minimalism",
+   "poster"
+  ],
+  "tags_negative": [
+   "textured"
+  ],
+  "negative": "dense illustration, photographic texture"
+ },
+ {
+  "name": "[Format] App Store Screenshot",
+  "family": "Design & Aesthetics",
+  "axis": "format",
+  "medium": "graphic style image",
+  "nl": "Composed as a store screenshot, a phone frame on a flat colour field, caption line above, device shadow, graphic style image.",
+  "tags": [
+   "fake_screenshot",
+   "flat_color",
+   "gradient",
+   "simple_background"
+  ],
+  "tags_negative": [
+   "textured"
+  ],
+  "negative": "photographic scene, gritty texture"
+ },
+ {
+  "name": "[Format] Podcast Cover",
+  "family": "Design & Aesthetics",
+  "axis": "format",
+  "medium": "graphic style image",
+  "nl": "Composed as a podcast cover, square tile, oversized title lettering, one bold graphic element, high contrast for thumbnail size, graphic style image.",
+  "tags": [
+   "poster",
+   "flat_color",
+   "high_contrast",
+   "album_cover"
+  ],
+  "tags_negative": [
+   "muted_color"
+  ],
+  "negative": "fine detail, muted subtle palette"
+ },
+ {
+  "name": "[Format] Email Hero",
+  "family": "Design & Aesthetics",
+  "axis": "format",
+  "medium": "graphic style image",
+  "nl": "Composed as an email hero banner, wide shallow strip, subject at one side, clear space for a headline and button, flat ground, graphic style image.",
+  "tags": [
+   "flat_color",
+   "gradient",
+   "simple_background"
+  ],
+  "tags_negative": [
+   "textured"
+  ],
+  "negative": "tall composition, busy background"
+ },
+ {
+  "name": "[Format] Banner Ad Set",
+  "family": "Design & Aesthetics",
+  "axis": "format",
+  "medium": "graphic style image",
+  "nl": "Composed as a banner-ad set, the same layout repeated at leaderboard, square and skyscraper proportions, consistent flat colour, graphic style image.",
+  "tags": [
+   "multiple_views",
+   "flat_color",
+   "poster",
+   "minimalism"
+  ],
+  "tags_negative": [
+   "photorealistic"
+  ],
+  "negative": "single composition, painterly rendering"
+ },
+ {
+  "name": "[Format] Newspaper Front Page",
+  "family": "Comics & Print",
+  "axis": "format",
+  "medium": "print style image",
+  "nl": "Composed as a newspaper front page, masthead, column rules, headline hierarchy, a halftone photo panel, grey newsprint, print style image.",
+  "tags": [
+   "halftone",
+   "monochrome",
+   "textured",
+   "limited_palette"
+  ],
+  "tags_negative": [
+   "colorful"
+  ],
+  "negative": "glossy magazine colour, single hero image"
+ },
+ {
+  "name": "[Format] Tabloid Front Page",
+  "family": "Comics & Print",
+  "axis": "format",
+  "medium": "print style image",
+  "nl": "Composed as a tabloid front, screaming display headline, one cropped photo, red banner strip, cheap ink on coarse newsprint, print style image.",
+  "tags": [
+   "halftone",
+   "high_contrast",
+   "red_theme",
+   "textured"
+  ],
+  "tags_negative": [
+   "minimalism"
+  ],
+  "negative": "restrained broadsheet layout, subtle palette"
+ }
 ]

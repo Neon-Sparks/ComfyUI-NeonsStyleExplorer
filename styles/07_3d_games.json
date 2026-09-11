@@ -8,7 +8,7 @@
       "family": "3D & Games",
       "axis": "format",
       "medium": "technical drawing style image",
-      "nl": "Shaded CAD rendering: flat grey surfaces with crisp edge lines, ruled dimension arrows, blue technical ground, no texture, technical drawing style image.",
+      "nl": "Shaded CAD rendering, flat grey surfaces with crisp edge lines, ruled dimension arrows, blue technical ground, no texture, technical drawing style image.",
       "tags": [
         "diagram",
         "wireframe",
@@ -29,7 +29,7 @@
       "family": "3D & Games",
       "axis": "format",
       "medium": "technical drawing style image",
-      "nl": "Blueprint rendering: white line drawing on cyanotype blue, orthographic projection, dimension callouts, faint grid, technical drawing style image.",
+      "nl": "Blueprint rendering, white line drawing on cyanotype blue, orthographic projection, dimension callouts, faint grid, technical drawing style image.",
       "tags": [
         "diagram",
         "blue_theme",
@@ -51,7 +51,7 @@
       "family": "3D & Games",
       "axis": "style",
       "medium": "pixel art style image",
-      "nl": "Amiga-demo rendering: banded copper gradient sky, dithered pixel shading, limited indexed palette, hard sprite edges, pixel art style image.",
+      "nl": "Amiga-demo rendering, banded copper gradient sky, dithered pixel shading, limited indexed palette, hard sprite edges, pixel art style image.",
       "tags": [
         "dithering",
         "gradient",
@@ -72,7 +72,7 @@
       "family": "3D & Games",
       "axis": "style",
       "medium": "cgi style image",
-      "nl": "Cel-shaded 3D rendering: banded toon lighting on sculpted geometry, inked contour, anime-style flat colour zones, clean specular dots, cgi style image.",
+      "nl": "Cel-shaded 3D rendering, banded toon lighting on sculpted geometry, inked contour, anime-style flat colour zones, clean specular dots, cgi style image.",
       "tags": [
         "3d",
         "cel_shading",
@@ -93,7 +93,7 @@
       "family": "3D & Games",
       "axis": "style",
       "medium": "cgi style image",
-      "nl": "White-model rendering: untextured matte white massing, soft ambient occlusion at the joints, thin context lines, cgi style image.",
+      "nl": "White-model rendering, untextured matte white massing, soft ambient occlusion at the joints, thin context lines, cgi style image.",
       "tags": [
         "3d",
         "white_theme",
@@ -113,7 +113,7 @@
       "family": "3D & Games",
       "axis": "style",
       "medium": "cgi style image",
-      "nl": "Social-platform avatar rendering: mismatched shader styles in one frame, toon-shaded forms beside glossy PBR props, blown-out bloom, mirror-surface reflection and floating UI-free emptiness, cgi style image.",
+      "nl": "Social-platform avatar rendering, mismatched shader styles in one frame, toon-shaded forms beside glossy PBR props, blown-out bloom, mirror-surface reflection and floating UI-free emptiness, cgi style image.",
       "tags": [
         "3d",
         "cel_shading",
@@ -133,7 +133,7 @@
       "family": "3D & Games",
       "axis": "style",
       "medium": "game art style image",
-      "nl": "Billboard-sprite rendering: flat pre-drawn sprites always facing the camera inside blocky level geometry, hard pixel edges against textured walls, banded light sectors, no vertical look, game art style image.",
+      "nl": "Billboard-sprite rendering, flat pre-drawn sprites always facing the camera inside blocky level geometry, hard pixel edges against textured walls, banded light sectors, no vertical look, game art style image.",
       "tags": [
         "pixel_art",
         "retro_artstyle",
@@ -153,7 +153,7 @@
       "family": "3D & Games",
       "axis": "style",
       "medium": "game art style image",
-      "nl": "Blocky sandbox rendering: chunky primitive bodies with cylinder limbs, plastic studded surfaces, flat bright palette, simple baked shadows on a wide open plane, game art style image.",
+      "nl": "Blocky sandbox rendering, chunky primitive bodies with cylinder limbs, plastic studded surfaces, flat bright palette, simple baked shadows on a wide open plane, game art style image.",
       "tags": [
         "3d",
         "plastic",
@@ -173,7 +173,7 @@
       "family": "3D & Games",
       "axis": "style",
       "medium": "cgi style image",
-      "nl": "Automotive-render setup: long softbox strips reflected down the bodywork, dark gradient sweep, crisp panel highlights, cgi style image.",
+      "nl": "Automotive-render setup, long softbox strips reflected down the bodywork, dark gradient sweep, crisp panel highlights, cgi style image.",
       "tags": [
         "3d",
         "metallic",
@@ -194,7 +194,7 @@
       "family": "3D & Games",
       "axis": "style",
       "medium": "cgi style image",
-      "nl": "Toon-shaded rendering: hard two-band lighting across 3D forms, uniform outline, flat local colour, minimal specular, cgi style image.",
+      "nl": "Toon-shaded rendering, hard two-band lighting across 3D forms, uniform outline, flat local colour, minimal specular, cgi style image.",
       "tags": [
         "3d",
         "cel_shading",
@@ -214,7 +214,7 @@
       "family": "3D & Games",
       "axis": "style",
       "medium": "cgi style image",
-      "nl": "Hero character rendering: subsurface skin scatter, groomed hair cards, micro pore displacement, soft key with bounce, cgi style image.",
+      "nl": "Hero character rendering, subsurface skin scatter, groomed hair cards, micro pore displacement, soft key with bounce, cgi style image.",
       "tags": [
         "3d",
         "realistic",
@@ -234,7 +234,7 @@
       "family": "3D & Games",
       "axis": "style",
       "medium": "cgi style image",
-      "nl": "Clay render: untextured matte grey material on every surface, soft ambient occlusion, form read only from light, cgi style image.",
+      "nl": "Clay render, untextured matte grey material on every surface, soft ambient occlusion, form read only from light, cgi style image.",
       "tags": [
         "3d",
         "claymation",
@@ -256,7 +256,7 @@
       "family": "3D & Games",
       "axis": "style",
       "medium": "cgi style image",
-      "nl": "Ambient-occlusion clay pass: uniform grey shading with contact darkening in crevices, no colour, no specular, cgi style image.",
+      "nl": "Ambient-occlusion clay pass, uniform grey shading with contact darkening in crevices, no colour, no specular, cgi style image.",
       "tags": [
         "3d",
         "greyscale",
@@ -276,7 +276,7 @@
       "family": "3D & Games",
       "axis": "style",
       "medium": "cgi style image",
-      "nl": "Cloth-sim rendering: draped fabric with settled folds, weave texture and slight sheen, soft contact wrinkles, cgi style image.",
+      "nl": "Cloth-sim rendering, draped fabric with settled folds, weave texture and slight sheen, soft contact wrinkles, cgi style image.",
       "tags": [
         "3d",
         "textured",
@@ -296,7 +296,7 @@
       "family": "3D & Games",
       "axis": "style",
       "medium": "video artefact style image",
-      "nl": "CRT-screen capture: phosphor scanlines, curved glass distortion, glow bloom around bright pixels, chroma bleed, video artefact style image.",
+      "nl": "CRT-screen capture, phosphor scanlines, curved glass distortion, glow bloom around bright pixels, chroma bleed, video artefact style image.",
       "tags": [
         "glitch",
         "glowing",
@@ -316,7 +316,7 @@
       "family": "3D & Games",
       "axis": "style",
       "medium": "handmade style image",
-      "nl": "Cut-paper stop-motion rendering: layered paper shapes with visible edges and drop shadows, matte stock texture, slight jitter, handmade style image.",
+      "nl": "Cut-paper stop-motion rendering, layered paper shapes with visible edges and drop shadows, matte stock texture, slight jitter, handmade style image.",
       "tags": [
         "papercraft",
         "stop_motion",
@@ -336,7 +336,7 @@
       "family": "3D & Games",
       "axis": "style",
       "medium": "cgi style image",
-      "nl": "Cycles path-traced rendering: physically accurate light bounce, soft shadow falloff, believable roughness response, cgi style image.",
+      "nl": "Cycles path-traced rendering, physically accurate light bounce, soft shadow falloff, believable roughness response, cgi style image.",
       "tags": [
         "3d",
         "realistic",
@@ -358,7 +358,7 @@
       "family": "3D & Games",
       "axis": "style",
       "medium": "cgi style image",
-      "nl": "Data-viz rendering: extruded bars and nodes on a grid plane, emissive accent colour, clean matte materials, soft ambient light, cgi style image.",
+      "nl": "Data-viz rendering, extruded bars and nodes on a grid plane, emissive accent colour, clean matte materials, soft ambient light, cgi style image.",
       "tags": [
         "3d",
         "diagram",
@@ -379,7 +379,7 @@
       "family": "3D & Games",
       "axis": "style",
       "medium": "cgi style image",
-      "nl": "Raymarched rendering: procedural infinite geometry, soft ambient occlusion, glowing distance fog, mathematical repetition, cgi style image.",
+      "nl": "Raymarched rendering, procedural infinite geometry, soft ambient occlusion, glowing distance fog, mathematical repetition, cgi style image.",
       "tags": [
         "3d",
         "glowing",
@@ -400,7 +400,7 @@
       "family": "3D & Games",
       "axis": "style",
       "medium": "cgi style image",
-      "nl": "Destruction rendering: fractured chunks mid-flight, dust plumes, trailing debris, hard rim light through the cloud, cgi style image.",
+      "nl": "Destruction rendering, fractured chunks mid-flight, dust plumes, trailing debris, hard rim light through the cloud, cgi style image.",
       "tags": [
         "3d",
         "motion_blur",
@@ -420,7 +420,7 @@
       "family": "3D & Games",
       "axis": "style",
       "medium": "cgi style image",
-      "nl": "Procedural terrain rendering: ridged noise displaced into endless ranges, erosion channels repeating at every scale, thin atmospheric haze stacking towards the horizon, cold directional sun, cgi style image.",
+      "nl": "Procedural terrain rendering, ridged noise displaced into endless ranges, erosion channels repeating at every scale, thin atmospheric haze stacking towards the horizon, cold directional sun, cgi style image.",
       "tags": [
         "3d",
         "scenery",
@@ -440,7 +440,7 @@
       "family": "3D & Games",
       "axis": "style",
       "medium": "pixel art style image",
-      "nl": "VGA-era rendering: 320x200 chunky pixels, 256-colour palette, heavy ordered dithering, dark saturated ramps, pixel art style image.",
+      "nl": "VGA-era rendering, 320x200 chunky pixels, 256-colour palette, heavy ordered dithering, dark saturated ramps, pixel art style image.",
       "tags": [
         "pixel_art",
         "dithering",
@@ -460,7 +460,7 @@
       "family": "3D & Games",
       "axis": "style",
       "medium": "cgi style image",
-      "nl": "Dreamcast-era rendering: clean mid-poly models, vivid saturated vertex colour, sharp small textures, hard specular dots, cgi style image.",
+      "nl": "Dreamcast-era rendering, clean mid-poly models, vivid saturated vertex colour, sharp small textures, hard specular dots, cgi style image.",
       "tags": [
         "3d",
         "low_poly",
@@ -480,7 +480,7 @@
       "family": "3D & Games",
       "axis": "style",
       "medium": "pixel art style image",
-      "nl": "Chunky pixel-portrait rendering: large square pixels, limited arcade palette, hard aliased edges, dithered shading, pixel art style image.",
+      "nl": "Chunky pixel-portrait rendering, large square pixels, limited arcade palette, hard aliased edges, dithered shading, pixel art style image.",
       "tags": [
         "pixel_art",
         "dithering",
@@ -502,7 +502,7 @@
       "family": "3D & Games",
       "axis": "style",
       "medium": "cgi style image",
-      "nl": "Realtime rendering: screen-space reflections, approximate shadows, slightly plastic fill light, fast clean surfaces, cgi style image.",
+      "nl": "Realtime rendering, screen-space reflections, approximate shadows, slightly plastic fill light, fast clean surfaces, cgi style image.",
       "tags": [
         "3d",
         "plastic",
@@ -521,7 +521,7 @@
       "family": "3D & Games",
       "axis": "style",
       "medium": "cgi style image",
-      "nl": "Felt-shader rendering: matte fuzzy surfaces with short fibre nap, soft rounded edges, muted craft colour, gentle light, cgi style image.",
+      "nl": "Felt-shader rendering, matte fuzzy surfaces with short fibre nap, soft rounded edges, muted craft colour, gentle light, cgi style image.",
       "tags": [
         "textured",
         "fur",
@@ -541,7 +541,7 @@
       "family": "3D & Games",
       "axis": "style",
       "medium": "game art style image",
-      "nl": "Fighting-game rendering: cel-shaded characters on a flat plane, ink outlines, saturated stage lighting, impact glow, game art style image.",
+      "nl": "Fighting-game rendering, cel-shaded characters on a flat plane, ink outlines, saturated stage lighting, impact glow, game art style image.",
       "tags": [
         "3d",
         "cel_shading",
@@ -562,7 +562,7 @@
       "family": "3D & Games",
       "axis": "style",
       "medium": "cgi style image",
-      "nl": "Fluid-sim rendering: sheeting liquid surfaces, thin-film droplets, refraction and caustics through the volume, frozen splash, cgi style image.",
+      "nl": "Fluid-sim rendering, sheeting liquid surfaces, thin-film droplets, refraction and caustics through the volume, frozen splash, cgi style image.",
       "tags": [
         "3d",
         "wet",
@@ -583,7 +583,7 @@
       "family": "3D & Games",
       "axis": "style",
       "medium": "abstract style image",
-      "nl": "Fractal-flame rendering: luminous filament swirls on black, additive colour blending, infinite self-similar detail, abstract style image.",
+      "nl": "Fractal-flame rendering, luminous filament swirls on black, additive colour blending, infinite self-similar detail, abstract style image.",
       "tags": [
         "glowing",
         "dark",
@@ -604,7 +604,7 @@
       "family": "3D & Games",
       "axis": "style",
       "medium": "cgi style image",
-      "nl": "Groom rendering: layered hair strands with clumping and flyaways, backlit rim scatter, soft depth falloff, cgi style image.",
+      "nl": "Groom rendering, layered hair strands with clumping and flyaways, backlit rim scatter, soft depth falloff, cgi style image.",
       "tags": [
         "fur",
         "3d",
@@ -625,7 +625,7 @@
       "family": "3D & Games",
       "axis": "style",
       "medium": "game art style image",
-      "nl": "Engine cinematic rendering: realtime global illumination, volumetric light shafts, screen-space reflections, film grain overlay, game art style image.",
+      "nl": "Engine cinematic rendering, realtime global illumination, volumetric light shafts, screen-space reflections, film grain overlay, game art style image.",
       "tags": [
         "3d",
         "cinematic_lighting",
@@ -646,7 +646,7 @@
       "family": "3D & Games",
       "axis": "style",
       "medium": "cgi style image",
-      "nl": "Splat-reconstruction rendering: surfaces built from overlapping translucent blobs, furry silhouettes and smeared thin geometry, floating stray splats in mid-air, view-dependent colour shimmer, cgi style image.",
+      "nl": "Splat-reconstruction rendering, surfaces built from overlapping translucent blobs, furry silhouettes and smeared thin geometry, floating stray splats in mid-air, view-dependent colour shimmer, cgi style image.",
       "tags": [
         "3d",
         "blurry",
@@ -666,7 +666,7 @@
       "family": "3D & Games",
       "axis": "style",
       "medium": "cgi style image",
-      "nl": "Glassmorphic rendering: frosted translucent panels, soft background blur through the glass, pastel gradients, thin bright edges, cgi style image.",
+      "nl": "Glassmorphic rendering, frosted translucent panels, soft background blur through the glass, pastel gradients, thin bright edges, cgi style image.",
       "tags": [
         "glass",
         "transparent",
@@ -687,7 +687,7 @@
       "family": "3D & Games",
       "axis": "style",
       "medium": "video artefact style image",
-      "nl": "Glitch rendering: RGB channel displacement, datamoshed blocks, scanline tearing, corrupted colour banding, video artefact style image.",
+      "nl": "Glitch rendering, RGB channel displacement, datamoshed blocks, scanline tearing, corrupted colour banding, video artefact style image.",
       "tags": [
         "glitch",
         "high_contrast",
@@ -707,7 +707,7 @@
       "family": "3D & Games",
       "axis": "style",
       "medium": "cgi style image",
-      "nl": "Grease-pencil hybrid rendering: hand-drawn strokes in 3D space, flat inked shapes over volumetric staging, paper-grain overlay, cgi style image.",
+      "nl": "Grease-pencil hybrid rendering, hand-drawn strokes in 3D space, flat inked shapes over volumetric staging, paper-grain overlay, cgi style image.",
       "tags": [
         "3d",
         "lineart",
@@ -728,7 +728,7 @@
       "family": "3D & Games",
       "axis": "style",
       "medium": "cgi style image",
-      "nl": "Gummy rendering: jelly-translucent bodies with deep subsurface glow, sticky specular sheen, soft squash deformation, cgi style image.",
+      "nl": "Gummy rendering, jelly-translucent bodies with deep subsurface glow, sticky specular sheen, soft squash deformation, cgi style image.",
       "tags": [
         "transparent",
         "glowing",
@@ -749,7 +749,7 @@
       "family": "3D & Games",
       "axis": "style",
       "medium": "cgi style image",
-      "nl": "Hard-surface rendering: precise panel gaps and bevels, machined edge highlights, brushed metal and anodised finishes, cgi style image.",
+      "nl": "Hard-surface rendering, precise panel gaps and bevels, machined edge highlights, brushed metal and anodised finishes, cgi style image.",
       "tags": [
         "3d",
         "metallic",
@@ -769,7 +769,7 @@
       "family": "3D & Games",
       "axis": "style",
       "medium": "cgi style image",
-      "nl": "Holographic rendering: scanline-striped translucent light body, cyan emissive glow, flicker artefacts, dark surround, cgi style image.",
+      "nl": "Holographic rendering, scanline-striped translucent light body, cyan emissive glow, flicker artefacts, dark surround, cgi style image.",
       "tags": [
         "holographic",
         "glowing",
@@ -790,7 +790,7 @@
       "family": "3D & Games",
       "axis": "style",
       "medium": "cgi style image",
-      "nl": "Inflatable rendering: puffed balloon volumes with seam creases, taut glossy skin, soft pinch points, bright studio light, cgi style image.",
+      "nl": "Inflatable rendering, puffed balloon volumes with seam creases, taut glossy skin, soft pinch points, bright studio light, cgi style image.",
       "tags": [
         "plastic",
         "shiny",
@@ -810,7 +810,7 @@
       "family": "3D & Games",
       "axis": "style",
       "medium": "cgi style image",
-      "nl": "Thin-film iridescent rendering: oil-slick rainbow shift across the surface, sharp specular bands, dark reflective ground, cgi style image.",
+      "nl": "Thin-film iridescent rendering, oil-slick rainbow shift across the surface, sharp specular bands, dark reflective ground, cgi style image.",
       "tags": [
         "iridescent",
         "holographic",
@@ -831,7 +831,7 @@
       "family": "3D & Games",
       "axis": "style",
       "medium": "cgi style image",
-      "nl": "Isometric rendering: parallel projection with no perspective convergence, 30-degree axes, even ambient light, tidy geometry, cgi style image.",
+      "nl": "Isometric rendering, parallel projection with no perspective convergence, 30-degree axes, even ambient light, tidy geometry, cgi style image.",
       "tags": [
         "3d",
         "simple_background",
@@ -853,7 +853,7 @@
       "family": "3D & Games",
       "axis": "style",
       "medium": "game art style image",
-      "nl": "Isometric CRPG rendering: pre-rendered parallel-projection scene, painted texture detail, baked shadows, small sprite figures, game art style image.",
+      "nl": "Isometric CRPG rendering, pre-rendered parallel-projection scene, painted texture detail, baked shadows, small sprite figures, game art style image.",
       "tags": [
         "3d",
         "scenery",
@@ -873,7 +873,7 @@
       "family": "3D & Games",
       "axis": "style",
       "medium": "cgi style image",
-      "nl": "Isometric diorama rendering: small self-contained scene on a floating base, soft ambient occlusion, toy-clean materials, cgi style image.",
+      "nl": "Isometric diorama rendering, small self-contained scene on a floating base, soft ambient occlusion, toy-clean materials, cgi style image.",
       "tags": [
         "3d",
         "simple_background",
@@ -893,7 +893,7 @@
       "family": "3D & Games",
       "axis": "style",
       "medium": "game art style image",
-      "nl": "Isometric icon rendering: single object in parallel projection, bold readable silhouette, soft gradient shading, plain tile ground, game art style image.",
+      "nl": "Isometric icon rendering, single object in parallel projection, bold readable silhouette, soft gradient shading, plain tile ground, game art style image.",
       "tags": [
         "icon_(computing)",
         "3d",
@@ -913,7 +913,7 @@
       "family": "3D & Games",
       "axis": "style",
       "medium": "cgi style image",
-      "nl": "Kitbash rendering: surfaces encrusted with mechanical greeble detail, panel layers and pipes, hard edge highlights, cgi style image.",
+      "nl": "Kitbash rendering, surfaces encrusted with mechanical greeble detail, panel layers and pipes, hard edge highlights, cgi style image.",
       "tags": [
         "3d",
         "metallic",
@@ -933,7 +933,7 @@
       "family": "3D & Games",
       "axis": "style",
       "medium": "cgi style image",
-      "nl": "Knit-shader rendering: everything modelled as looped yarn stitches, fibre fuzz halo, soft wool colour, contact shadow, cgi style image.",
+      "nl": "Knit-shader rendering, everything modelled as looped yarn stitches, fibre fuzz halo, soft wool colour, contact shadow, cgi style image.",
       "tags": [
         "knitted",
         "textured",
@@ -953,7 +953,7 @@
       "family": "3D & Games",
       "axis": "style",
       "medium": "cgi style image",
-      "nl": "Point-cloud rendering: surfaces made of scattered coloured points, gaps where the scan missed, thinning density at distance, cgi style image.",
+      "nl": "Point-cloud rendering, surfaces made of scattered coloured points, gaps where the scan missed, thinning density at distance, cgi style image.",
       "tags": [
         "3d",
         "dithering",
@@ -973,7 +973,7 @@
       "family": "3D & Games",
       "axis": "style",
       "medium": "cgi style image",
-      "nl": "Liquid-chrome rendering: mirror-perfect molten metal, warped environment reflections, blue-white specular blowout, cgi style image.",
+      "nl": "Liquid-chrome rendering, mirror-perfect molten metal, warped environment reflections, blue-white specular blowout, cgi style image.",
       "tags": [
         "metallic",
         "shiny",
@@ -994,7 +994,7 @@
       "family": "3D & Games",
       "axis": "style",
       "medium": "cgi style image",
-      "nl": "Faceted low-poly rendering: chunky triangulated forms, flat per-face colour, crisp silhouette angles, minimal detail, cgi style image.",
+      "nl": "Faceted low-poly rendering, chunky triangulated forms, flat per-face colour, crisp silhouette angles, minimal detail, cgi style image.",
       "tags": [
         "low_poly",
         "3d",
@@ -1018,7 +1018,7 @@
       "family": "3D & Games",
       "axis": "style",
       "medium": "game art style image",
-      "nl": "In-engine capture rendering: game assets staged for camera with the interface switched off, stiff canned poses, aliased edges and compressed capture artefacts, engine fog and flat ambient, game art style image.",
+      "nl": "In-engine capture rendering, game assets staged for camera with the interface switched off, stiff canned poses, aliased edges and compressed capture artefacts, engine fog and flat ambient, game art style image.",
       "tags": [
         "3d",
         "low_poly",
@@ -1038,7 +1038,7 @@
       "family": "3D & Games",
       "axis": "style",
       "medium": "cgi style image",
-      "nl": "Medical-viz rendering: translucent anatomical layers, clean subsurface reds, isolated dark ground, clinical rim light, cgi style image.",
+      "nl": "Medical-viz rendering, translucent anatomical layers, clean subsurface reds, isolated dark ground, clinical rim light, cgi style image.",
       "tags": [
         "3d",
         "transparent",
@@ -1059,7 +1059,7 @@
       "family": "3D & Games",
       "axis": "style",
       "medium": "cgi style image",
-      "nl": "Metaball rendering: soft spheres merging into one continuous skin, necks pinching where forms separate, glossy wet-looking surface, studio gradient behind with a single soft key, cgi style image.",
+      "nl": "Metaball rendering, soft spheres merging into one continuous skin, necks pinching where forms separate, glossy wet-looking surface, studio gradient behind with a single soft key, cgi style image.",
       "tags": [
         "3d",
         "shiny",
@@ -1079,7 +1079,7 @@
       "family": "3D & Games",
       "axis": "style",
       "medium": "cgi style image",
-      "nl": "Mid-90s CGI rendering: plasticky shaders, simple specular blobs, sparse texture detail, clean bright key light, cgi style image.",
+      "nl": "Mid-90s CGI rendering, plasticky shaders, simple specular blobs, sparse texture detail, clean bright key light, cgi style image.",
       "tags": [
         "3d",
         "plastic",
@@ -1099,7 +1099,7 @@
       "family": "3D & Games",
       "axis": "style",
       "medium": "game art style image",
-      "nl": "Mode-7 rendering: a flat bitmap plane warped into perspective, texels stretching enormous towards the horizon, hard scanline banding, flat sprite objects pasted over the top, game art style image.",
+      "nl": "Mode-7 rendering, a flat bitmap plane warped into perspective, texels stretching enormous towards the horizon, hard scanline banding, flat sprite objects pasted over the top, game art style image.",
       "tags": [
         "pixel_art",
         "retro_artstyle",
@@ -1119,7 +1119,7 @@
       "family": "3D & Games",
       "axis": "style",
       "medium": "cgi style image",
-      "nl": "Motion-design rendering: looping abstract primitives, soft studio gradient light, glossy pastel materials, tidy depth of field, cgi style image.",
+      "nl": "Motion-design rendering, looping abstract primitives, soft studio gradient light, glossy pastel materials, tidy depth of field, cgi style image.",
       "tags": [
         "3d",
         "gradient",
@@ -1140,7 +1140,7 @@
       "family": "3D & Games",
       "axis": "style",
       "medium": "cgi style image",
-      "nl": "N64-era rendering: blurry bilinear-filtered textures, chunky low-poly forms, vertex-lit flat shading, distance fog, cgi style image.",
+      "nl": "N64-era rendering, blurry bilinear-filtered textures, chunky low-poly forms, vertex-lit flat shading, distance fog, cgi style image.",
       "tags": [
         "low_poly",
         "3d",
@@ -1161,7 +1161,7 @@
       "family": "3D & Games",
       "axis": "style",
       "medium": "cgi style image",
-      "nl": "Octane-style rendering: filmic CG materials, crisp caustics, deep depth of field, physically accurate glass and metal, cgi style image.",
+      "nl": "Octane-style rendering, filmic CG materials, crisp caustics, deep depth of field, physically accurate glass and metal, cgi style image.",
       "tags": [
         "3d",
         "caustics",
@@ -1182,7 +1182,7 @@
       "family": "3D & Games",
       "axis": "style",
       "medium": "cgi style image",
-      "nl": "Painterly 3D rendering: brush-textured maps over sculpted volumes, hand-painted colour breakup, soft stylised light, cgi style image.",
+      "nl": "Painterly 3D rendering, brush-textured maps over sculpted volumes, hand-painted colour breakup, soft stylised light, cgi style image.",
       "tags": [
         "3d",
         "painting_(medium)",
@@ -1202,7 +1202,7 @@
       "family": "3D & Games",
       "axis": "style",
       "medium": "cgi style image",
-      "nl": "Particle rendering: millions of glowing motes forming a shape, additive density falloff, motion trails, dark surround, cgi style image.",
+      "nl": "Particle rendering, millions of glowing motes forming a shape, additive density falloff, motion trails, dark surround, cgi style image.",
       "tags": [
         "glowing",
         "dark",
@@ -1223,7 +1223,7 @@
       "family": "3D & Games",
       "axis": "style",
       "medium": "cgi style image",
-      "nl": "Path-traced rendering: quiet physically based light, accurate soft shadows and bounce, subtle sampling noise, cgi style image.",
+      "nl": "Path-traced rendering, quiet physically based light, accurate soft shadows and bounce, subtle sampling noise, cgi style image.",
       "tags": [
         "3d",
         "realistic",
@@ -1243,7 +1243,7 @@
       "family": "3D & Games",
       "axis": "style",
       "medium": "cgi style image",
-      "nl": "PBR material rendering: correct metalness and roughness response, energy-conserving highlights, believable surface wear, cgi style image.",
+      "nl": "PBR material rendering, correct metalness and roughness response, energy-conserving highlights, believable surface wear, cgi style image.",
       "tags": [
         "3d",
         "metallic",
@@ -1263,7 +1263,7 @@
       "family": "3D & Games",
       "axis": "style",
       "medium": "cgi style image",
-      "nl": "Photogrammetry rendering: scanned surface detail with baked lighting, slightly melted geometry at the edges, capture noise, cgi style image.",
+      "nl": "Photogrammetry rendering, scanned surface detail with baked lighting, slightly melted geometry at the edges, capture noise, cgi style image.",
       "tags": [
         "3d",
         "realistic",
@@ -1283,7 +1283,7 @@
       "family": "3D & Games",
       "axis": "style",
       "medium": "cgi style image",
-      "nl": "Photoreal CGI rendering: physically based materials, ray-traced shadows and reflections, camera-accurate lens response, cgi style image.",
+      "nl": "Photoreal CGI rendering, physically based materials, ray-traced shadows and reflections, camera-accurate lens response, cgi style image.",
       "tags": [
         "3d",
         "photorealistic",
@@ -1304,7 +1304,7 @@
       "family": "3D & Games",
       "axis": "style",
       "medium": "cgi style image",
-      "nl": "Failed-photoscan rendering: melted stretched geometry, smeared projected texture, floating fragments, holes in the mesh, cgi style image.",
+      "nl": "Failed-photoscan rendering, melted stretched geometry, smeared projected texture, floating fragments, holes in the mesh, cgi style image.",
       "tags": [
         "3d",
         "glitch",
@@ -1324,7 +1324,7 @@
       "family": "3D & Games",
       "axis": "style",
       "medium": "cgi style image",
-      "nl": "Product render: seamless studio sweep, large softbox reflections in glossy surfaces, crisp edge highlight, clean shadow, cgi style image.",
+      "nl": "Product render, seamless studio sweep, large softbox reflections in glossy surfaces, crisp edge highlight, clean shadow, cgi style image.",
       "tags": [
         "3d",
         "simple_background",
@@ -1345,7 +1345,7 @@
       "family": "3D & Games",
       "axis": "style",
       "medium": "cgi style image",
-      "nl": "PS1-era rendering: warped affine texture mapping, vertex jitter, low-resolution textures, no antialiasing, dark dithered fog, cgi style image.",
+      "nl": "PS1-era rendering, warped affine texture mapping, vertex jitter, low-resolution textures, no antialiasing, dark dithered fog, cgi style image.",
       "tags": [
         "3d",
         "low_poly",
@@ -1371,7 +1371,7 @@
       "family": "3D & Games",
       "axis": "style",
       "medium": "game art style image",
-      "nl": "Fifth-generation horror rendering: low triangle counts with warped affine texturing, vertex jitter, dense distance fog swallowing the far plane, muddy dithered palette under harsh point light, game art style image.",
+      "nl": "Fifth-generation horror rendering, low triangle counts with warped affine texturing, vertex jitter, dense distance fog swallowing the far plane, muddy dithered palette under harsh point light, game art style image.",
       "tags": [
         "low_poly",
         "dithering",
@@ -1392,7 +1392,7 @@
       "family": "3D & Games",
       "axis": "style",
       "medium": "cgi style image",
-      "nl": "Redshift-style rendering: clean commercial CGI, controlled specular highlights, tidy volumetrics, crisp look-dev finish, cgi style image.",
+      "nl": "Redshift-style rendering, clean commercial CGI, controlled specular highlights, tidy volumetrics, crisp look-dev finish, cgi style image.",
       "tags": [
         "3d",
         "highres",
@@ -1412,7 +1412,7 @@
       "family": "3D & Games",
       "axis": "style",
       "medium": "cgi style image",
-      "nl": "Section-cut rendering: building sliced open to show interiors, flat cut planes in solid colour, tidy miniature scale, cgi style image.",
+      "nl": "Section-cut rendering, building sliced open to show interiors, flat cut planes in solid colour, tidy miniature scale, cgi style image.",
       "tags": [
         "diagram",
         "3d",
@@ -1432,7 +1432,7 @@
       "family": "3D & Games",
       "axis": "style",
       "medium": "cgi style image",
-      "nl": "Saturn-era rendering: quad-based flat-shaded geometry, dithered transparency, warped texture seams, dark palette, cgi style image.",
+      "nl": "Saturn-era rendering, quad-based flat-shaded geometry, dithered transparency, warped texture seams, dark palette, cgi style image.",
       "tags": [
         "low_poly",
         "dithering",
@@ -1452,7 +1452,7 @@
       "family": "3D & Games",
       "axis": "style",
       "medium": "cgi style image",
-      "nl": "Sixth-generation console rendering: simple per-vertex lighting, blurry low-res textures, hard-edged shadows, limited draw distance, cgi style image.",
+      "nl": "Sixth-generation console rendering, simple per-vertex lighting, blurry low-res textures, hard-edged shadows, limited draw distance, cgi style image.",
       "tags": [
         "3d",
         "low_poly",
@@ -1472,7 +1472,7 @@
       "family": "3D & Games",
       "axis": "style",
       "medium": "game art style image",
-      "nl": "Mid-2000s engine rendering: bump-mapped brick and rusted metal, orange-grey palette, hard lightmapped shadows baked in place, low-poly props with sharp silhouette corners, game art style image.",
+      "nl": "Mid-2000s engine rendering, bump-mapped brick and rusted metal, orange-grey palette, hard lightmapped shadows baked in place, low-poly props with sharp silhouette corners, game art style image.",
       "tags": [
         "3d",
         "rust",
@@ -1492,7 +1492,7 @@
       "family": "3D & Games",
       "axis": "style",
       "medium": "cgi style image",
-      "nl": "Comedy-feature CGI: exaggerated squash-and-stretch proportions, bouncy soft materials, bright key with warm bounce, cgi style image.",
+      "nl": "Comedy-feature CGI, exaggerated squash-and-stretch proportions, bouncy soft materials, bright key with warm bounce, cgi style image.",
       "tags": [
         "3d",
         "colorful",
@@ -1512,7 +1512,7 @@
       "family": "3D & Games",
       "axis": "style",
       "medium": "cgi style image",
-      "nl": "Stylised feature CGI: appealing simplified forms, soft subsurface skin, art-directed colour script, gentle rim light, cgi style image.",
+      "nl": "Stylised feature CGI, appealing simplified forms, soft subsurface skin, art-directed colour script, gentle rim light, cgi style image.",
       "tags": [
         "3d",
         "cinematic_lighting",
@@ -1532,7 +1532,7 @@
       "family": "3D & Games",
       "axis": "style",
       "medium": "cgi style image",
-      "nl": "Terrain rendering: foam-carved rock and flock grass, dry-brushed highlights, visible base edges, tabletop scale light, cgi style image.",
+      "nl": "Terrain rendering, foam-carved rock and flock grass, dry-brushed highlights, visible base edges, tabletop scale light, cgi style image.",
       "tags": [
         "textured",
         "3d",
@@ -1552,7 +1552,7 @@
       "family": "3D & Games",
       "axis": "style",
       "medium": "cgi style image",
-      "nl": "Toy-plastic rendering: injection-moulded surfaces, candy specular highlights, visible seam lines and sprue marks, cgi style image.",
+      "nl": "Toy-plastic rendering, injection-moulded surfaces, candy specular highlights, visible seam lines and sprue marks, cgi style image.",
       "tags": [
         "plastic",
         "shiny",
@@ -1572,7 +1572,7 @@
       "family": "3D & Games",
       "axis": "style",
       "medium": "cgi style image",
-      "nl": "V-Ray archviz rendering: hard sun through glass, accurate interior bounce, crisp material separation, clean neutral grade, cgi style image.",
+      "nl": "V-Ray archviz rendering, hard sun through glass, accurate interior bounce, crisp material separation, clean neutral grade, cgi style image.",
       "tags": [
         "3d",
         "realistic",
@@ -1593,7 +1593,7 @@
       "family": "3D & Games",
       "axis": "style",
       "medium": "cgi style image",
-      "nl": "Vector-arcade rendering: glowing coloured wireframe lines on pure black, no fills, phosphor bloom at the joints, cgi style image.",
+      "nl": "Vector-arcade rendering, glowing coloured wireframe lines on pure black, no fills, phosphor bloom at the joints, cgi style image.",
       "tags": [
         "wireframe",
         "glowing",
@@ -1614,7 +1614,7 @@
       "family": "3D & Games",
       "axis": "style",
       "medium": "cgi style image",
-      "nl": "Voxel rendering: everything built from uniform cubes, blocky stepped edges, flat per-voxel colour, simple ambient shading, cgi style image.",
+      "nl": "Voxel rendering, everything built from uniform cubes, blocky stepped edges, flat per-voxel colour, simple ambient shading, cgi style image.",
       "tags": [
         "3d",
         "pixel_art",
@@ -1634,7 +1634,7 @@
       "family": "3D & Games",
       "axis": "style",
       "medium": "cgi style image",
-      "nl": "Miniature rendering: 28mm-scale figure with visible mould lines, layered brush paint, wash-shaded recesses, textured base, cgi style image.",
+      "nl": "Miniature rendering, 28mm-scale figure with visible mould lines, layered brush paint, wash-shaded recesses, textured base, cgi style image.",
       "tags": [
         "3d",
         "plastic",
@@ -1654,7 +1654,7 @@
       "family": "3D & Games",
       "axis": "style",
       "medium": "cgi style image",
-      "nl": "Wireframe-overlay rendering: shaded surfaces with the topology drawn over them, glowing edge lines, dark viewport ground, cgi style image.",
+      "nl": "Wireframe-overlay rendering, shaded surfaces with the topology drawn over them, glowing edge lines, dark viewport ground, cgi style image.",
       "tags": [
         "wireframe",
         "3d",
@@ -1675,7 +1675,7 @@
       "family": "3D & Games",
       "axis": "style",
       "medium": "cgi style image",
-      "nl": "Digital sculpt rendering: matte grey clay material, high-frequency chisel detail, raking studio light, no colour maps, cgi style image.",
+      "nl": "Digital sculpt rendering, matte grey clay material, high-frequency chisel detail, raking studio light, no colour maps, cgi style image.",
       "tags": [
         "3d",
         "claymation",
@@ -1696,7 +1696,7 @@
       "family": "3D & Games",
       "axis": "style",
       "medium": "poster style image",
-      "nl": "1960s psychedelic poster: melting interlocked letterforms, vibrating complementary flat colour, dense curvilinear pattern, poster style image.",
+      "nl": "1960s psychedelic poster, melting interlocked letterforms, vibrating complementary flat colour, dense curvilinear pattern, poster style image.",
       "tags": [
         "psychedelic",
         "poster",
@@ -1719,7 +1719,7 @@
       "family": "3D & Games",
       "axis": "style",
       "medium": "cgi style image",
-      "nl": "General 3D render: shaded geometry with computed shadows, believable material response, studio key and fill, cgi style image.",
+      "nl": "General 3D render, shaded geometry with computed shadows, believable material response, studio key and fill, cgi style image.",
       "tags": [
         "3d",
         "cinematic_lighting",
@@ -1740,7 +1740,7 @@
       "family": "3D & Games",
       "axis": "style",
       "medium": "illustration style image",
-      "nl": "Visionary rendering: anatomical transparency layered with glowing energy lattices, symmetrical mandala framing, electric palette, illustration style image.",
+      "nl": "Visionary rendering, anatomical transparency layered with glowing energy lattices, symmetrical mandala framing, electric palette, illustration style image.",
       "tags": [
         "psychedelic",
         "glowing",
@@ -1763,7 +1763,7 @@
       "family": "3D & Games",
       "axis": "style",
       "medium": "cgi style image",
-      "nl": "Cosy game rendering: rounded low-poly forms, flat pastel textures, soft ambient shading, tiny simple facial marks, cgi style image.",
+      "nl": "Cosy game rendering, rounded low-poly forms, flat pastel textures, soft ambient shading, tiny simple facial marks, cgi style image.",
       "tags": [
         "3d",
         "low_poly",
@@ -1785,7 +1785,7 @@
       "family": "3D & Games",
       "axis": "style",
       "medium": "oil painting style image",
-      "nl": "Bold impasto rendering: thick swirling strokes catching directional light, sculptural ridges, warm layered luminosity, oil painting style image.",
+      "nl": "Bold impasto rendering, thick swirling strokes catching directional light, sculptural ridges, warm layered luminosity, oil painting style image.",
       "tags": [
         "oil_painting_(medium)",
         "textured",
@@ -1807,7 +1807,7 @@
       "family": "3D & Games",
       "axis": "style",
       "medium": "illustration style image",
-      "nl": "Arts-and-crafts pattern rendering: flat stylised birds and foliage, even outline, muted heritage palette, repeating rhythm, illustration style image.",
+      "nl": "Arts-and-crafts pattern rendering, flat stylised birds and foliage, even outline, muted heritage palette, repeating rhythm, illustration style image.",
       "tags": [
         "art_nouveau",
         "flat_color",
@@ -1829,7 +1829,7 @@
       "family": "3D & Games",
       "axis": "style",
       "medium": "graphic style image",
-      "nl": "Bold pattern-block rendering: clashing primary geometry, thick black stripes, flat poster colour, playful repetition, graphic style image.",
+      "nl": "Bold pattern-block rendering, clashing primary geometry, thick black stripes, flat poster colour, playful repetition, graphic style image.",
       "tags": [
         "flat_color",
         "colorful",
@@ -1851,7 +1851,7 @@
       "family": "3D & Games",
       "axis": "style",
       "medium": "cgi style image",
-      "nl": "JRPG cinematic rendering: glossy stylised characters, elaborate costume detail, rim-lit hair strands, cool cinematic grade, cgi style image.",
+      "nl": "JRPG cinematic rendering, glossy stylised characters, elaborate costume detail, rim-lit hair strands, cool cinematic grade, cgi style image.",
       "tags": [
         "3d",
         "rim_lighting",
@@ -1873,7 +1873,7 @@
       "family": "3D & Games",
       "axis": "style",
       "medium": "collage style image",
-      "nl": "Collage rendering: layered cut fragments with visible edges, mismatched scale and grain, tape and shadow between pieces, collage style image.",
+      "nl": "Collage rendering, layered cut fragments with visible edges, mismatched scale and grain, tape and shadow between pieces, collage style image.",
       "tags": [
         "collage",
         "textured",
@@ -1895,7 +1895,7 @@
       "family": "3D & Games",
       "axis": "style",
       "medium": "cgi style image",
-      "nl": "Collectible-figure rendering: matte cast resin with satin varnish, crisp sculpted detail, base plinth, product studio light, cgi style image.",
+      "nl": "Collectible-figure rendering, matte cast resin with satin varnish, crisp sculpted detail, base plinth, product studio light, cgi style image.",
       "tags": [
         "3d",
         "plastic",
@@ -1917,7 +1917,7 @@
       "family": "3D & Games",
       "axis": "style",
       "medium": "print style image",
-      "nl": "Contemporary litho rendering: grainy crayon tone on stone, limited ink palette, soft edge bleed, heavy rag paper, print style image.",
+      "nl": "Contemporary litho rendering, grainy crayon tone on stone, limited ink palette, soft edge bleed, heavy rag paper, print style image.",
       "tags": [
         "lithograph",
         "limited_palette",
@@ -1939,7 +1939,7 @@
       "family": "3D & Games",
       "axis": "style",
       "medium": "print style image",
-      "nl": "Modern ukiyo-e rendering: flat woodblock colour fields, keyblock outline, bokashi gradients, contemporary palette, paper grain, print style image.",
+      "nl": "Modern ukiyo-e rendering, flat woodblock colour fields, keyblock outline, bokashi gradients, contemporary palette, paper grain, print style image.",
       "tags": [
         "ukiyo-e",
         "woodcut",
@@ -1962,7 +1962,7 @@
       "family": "3D & Games",
       "axis": "style",
       "medium": "handmade style image",
-      "nl": "Stop-motion puppet rendering: fabric and resin materials, visible stitch and seam detail, macro depth of field, moody practical light, handmade style image.",
+      "nl": "Stop-motion puppet rendering, fabric and resin materials, visible stitch and seam detail, macro depth of field, moody practical light, handmade style image.",
       "tags": [
         "stop_motion",
         "textured",
@@ -1985,7 +1985,7 @@
       "family": "3D & Games",
       "axis": "style",
       "medium": "game art style image",
-      "nl": "Stylised shooter rendering: chunky exaggerated proportions, saturated flat-ish textures, crisp cartoon shading, bright key, game art style image.",
+      "nl": "Stylised shooter rendering, chunky exaggerated proportions, saturated flat-ish textures, crisp cartoon shading, bright key, game art style image.",
       "tags": [
         "3d",
         "colorful",
@@ -2007,7 +2007,7 @@
       "family": "3D & Games",
       "axis": "style",
       "medium": "vector style image",
-      "nl": "Icon-vignette rendering: single glossy symbol centred in a rounded frame, soft inner gradient, thick clean edge, vector style image.",
+      "nl": "Icon-vignette rendering, single glossy symbol centred in a rounded frame, soft inner gradient, thick clean edge, vector style image.",
       "tags": [
         "icon_(computing)",
         "gradient",
@@ -2029,7 +2029,7 @@
       "family": "3D & Games",
       "axis": "style",
       "medium": "painting style image",
-      "nl": "Deco-portrait rendering: elongated elegant features, soft airbrushed skin, pastel-and-black palette, sketchy loose background, painting style image.",
+      "nl": "Deco-portrait rendering, elongated elegant features, soft airbrushed skin, pastel-and-black palette, sketchy loose background, painting style image.",
       "tags": [
         "pastel_colors",
         "airbrush_(medium)",
@@ -2051,7 +2051,7 @@
       "family": "3D & Games",
       "axis": "style",
       "medium": "vector style image",
-      "nl": "Flat explainer rendering: geometric vector shapes, glowing neon accents on deep space blue, no outlines, tidy iconography, vector style image.",
+      "nl": "Flat explainer rendering, geometric vector shapes, glowing neon accents on deep space blue, no outlines, tidy iconography, vector style image.",
       "tags": [
         "vector_trace",
         "flat_color",
@@ -2074,7 +2074,7 @@
       "family": "3D & Games",
       "axis": "style",
       "medium": "cgi style image",
-      "nl": "Minifigure rendering: glossy ABS plastic, cylindrical hands and stud connections, printed flat face detail, product light, cgi style image.",
+      "nl": "Minifigure rendering, glossy ABS plastic, cylindrical hands and stud connections, printed flat face detail, product light, cgi style image.",
       "tags": [
         "plastic",
         "shiny",
@@ -2096,7 +2096,7 @@
       "family": "3D & Games",
       "axis": "style",
       "medium": "cgi style image",
-      "nl": "Brick-built rendering: everything assembled from studded plastic bricks, stepped geometry, glossy moulded surfaces, cgi style image.",
+      "nl": "Brick-built rendering, everything assembled from studded plastic bricks, stepped geometry, glossy moulded surfaces, cgi style image.",
       "tags": [
         "plastic",
         "shiny",
@@ -2118,7 +2118,7 @@
       "family": "3D & Games",
       "axis": "style",
       "medium": "material style image",
-      "nl": "Bas-relief rendering: shallow carved depth, raking light picking out edges, uniform stone or plaster material, material style image.",
+      "nl": "Bas-relief rendering, shallow carved depth, raking light picking out edges, uniform stone or plaster material, material style image.",
       "tags": [
         "stone",
         "monochrome",
@@ -2140,7 +2140,7 @@
       "family": "3D & Games",
       "axis": "style",
       "medium": "illustration style image",
-      "nl": "Lowbrow rendering: cartoon-grotesque characters painted with slick airbrush polish, candy palette, glossy highlights, illustration style image.",
+      "nl": "Lowbrow rendering, cartoon-grotesque characters painted with slick airbrush polish, candy palette, glossy highlights, illustration style image.",
       "tags": [
         "airbrush_(medium)",
         "colorful",
@@ -2162,7 +2162,7 @@
       "family": "3D & Games",
       "axis": "style",
       "medium": "print style image",
-      "nl": "Impossible-geometry rendering: tessellated interlocking forms, contradictory perspective, meticulous hatched monochrome, print style image.",
+      "nl": "Impossible-geometry rendering, tessellated interlocking forms, contradictory perspective, meticulous hatched monochrome, print style image.",
       "tags": [
         "lithograph",
         "monochrome",
@@ -2185,7 +2185,7 @@
       "family": "3D & Games",
       "axis": "style",
       "medium": "material style image",
-      "nl": "Marble rendering: translucent white stone with grey veining, polished subsurface glow, carved chisel planes, museum light, material style image.",
+      "nl": "Marble rendering, translucent white stone with grey veining, polished subsurface glow, carved chisel planes, museum light, material style image.",
       "tags": [
         "marble",
         "stone",
@@ -2208,7 +2208,7 @@
       "family": "3D & Games",
       "axis": "style",
       "medium": "collage style image",
-      "nl": "Mixed-media rendering: paint over collaged paper and photo fragments, stitched and taped joins, layered surface texture, collage style image.",
+      "nl": "Mixed-media rendering, paint over collaged paper and photo fragments, stitched and taped joins, layered surface texture, collage style image.",
       "tags": [
         "collage",
         "textured",
@@ -2230,7 +2230,7 @@
       "family": "3D & Games",
       "axis": "style",
       "medium": "print style image",
-      "nl": "Modern litho rendering: flat layered spot inks, subtle grain, hand-drawn crayon texture, deckled paper edge, print style image.",
+      "nl": "Modern litho rendering, flat layered spot inks, subtle grain, hand-drawn crayon texture, deckled paper edge, print style image.",
       "tags": [
         "lithograph",
         "limited_palette",
@@ -2252,7 +2252,7 @@
       "family": "3D & Games",
       "axis": "style",
       "medium": "cgi style image",
-      "nl": "Nintendo-bright rendering: clean rounded geometry, saturated primary materials, soft even key, glossy cartoon highlights, cgi style image.",
+      "nl": "Nintendo-bright rendering, clean rounded geometry, saturated primary materials, soft even key, glossy cartoon highlights, cgi style image.",
       "tags": [
         "3d",
         "colorful",
@@ -2274,7 +2274,7 @@
       "family": "3D & Games",
       "axis": "style",
       "medium": "handmade style image",
-      "nl": "Puppet rendering: felted fabric skin and fur, oversized soft features, hand-operated posing, warm even stage light, handmade style image.",
+      "nl": "Puppet rendering, felted fabric skin and fur, oversized soft features, hand-operated posing, warm even stage light, handmade style image.",
       "tags": [
         "textured",
         "fur",
@@ -2296,7 +2296,7 @@
       "family": "3D & Games",
       "axis": "style",
       "medium": "illustration style image",
-      "nl": "Negative-space rendering: subject implied by the empty ground, few bold shapes, high contrast, generous emptiness, illustration style image.",
+      "nl": "Negative-space rendering, subject implied by the empty ground, few bold shapes, high contrast, generous emptiness, illustration style image.",
       "tags": [
         "minimalism",
         "silhouette",
@@ -2318,7 +2318,7 @@
       "family": "3D & Games",
       "axis": "style",
       "medium": "illustration style image",
-      "nl": "Retro-thriller rendering: neon magenta and cyan halftone screens, hard shadow blocking, print misregistration, grain, illustration style image.",
+      "nl": "Retro-thriller rendering, neon magenta and cyan halftone screens, hard shadow blocking, print misregistration, grain, illustration style image.",
       "tags": [
         "halftone",
         "neon_palette",
@@ -2341,7 +2341,7 @@
       "family": "3D & Games",
       "axis": "style",
       "medium": "graphic style image",
-      "nl": "Neon-sign rendering: glowing glass tubing against a dark wall, halo bloom and reflected spill, warm transformer flicker, graphic style image.",
+      "nl": "Neon-sign rendering, glowing glass tubing against a dark wall, halo bloom and reflected spill, warm transformer flicker, graphic style image.",
       "tags": [
         "neon_palette",
         "glowing",
@@ -2363,7 +2363,7 @@
       "family": "3D & Games",
       "axis": "style",
       "medium": "graphic style image",
-      "nl": "Neon-line rendering: luminous drawn strokes on black, additive glow at crossings, saturated hue shifts, soft bloom, graphic style image.",
+      "nl": "Neon-line rendering, luminous drawn strokes on black, additive glow at crossings, saturated hue shifts, soft bloom, graphic style image.",
       "tags": [
         "neon_palette",
         "glowing",
@@ -2385,7 +2385,7 @@
       "family": "3D & Games",
       "axis": "style",
       "medium": "illustration style image",
-      "nl": "Hero-shooter concept rendering: clean shape language, saturated team colour, painted material blocking, crisp rim light, illustration style image.",
+      "nl": "Hero-shooter concept rendering, clean shape language, saturated team colour, painted material blocking, crisp rim light, illustration style image.",
       "tags": [
         "concept_art",
         "colorful",
@@ -2407,7 +2407,7 @@
       "family": "3D & Games",
       "axis": "style",
       "medium": "handmade style image",
-      "nl": "Paper-cutout rendering: layered card shapes with soft drop shadows, matte stock texture, hand-cut edge wobble, handmade style image.",
+      "nl": "Paper-cutout rendering, layered card shapes with soft drop shadows, matte stock texture, hand-cut edge wobble, handmade style image.",
       "tags": [
         "papercraft",
         "flat_color",
@@ -2429,7 +2429,7 @@
       "family": "3D & Games",
       "axis": "style",
       "medium": "cgi style image",
-      "nl": "Partial-wireframe rendering: shaded geometry dissolving into glowing topology lines, dark technical ground, cyan edge light, cgi style image.",
+      "nl": "Partial-wireframe rendering, shaded geometry dissolving into glowing topology lines, dark technical ground, cyan edge light, cgi style image.",
       "tags": [
         "wireframe",
         "3d",
@@ -2452,7 +2452,7 @@
       "family": "3D & Games",
       "axis": "style",
       "medium": "cgi style image",
-      "nl": "Feature-CGI rendering: appealing rounded designs, subsurface skin warmth, art-directed key with soft bounce, rich clean colour, cgi style image.",
+      "nl": "Feature-CGI rendering, appealing rounded designs, subsurface skin warmth, art-directed key with soft bounce, rich clean colour, cgi style image.",
       "tags": [
         "3d",
         "cinematic_lighting",
@@ -2474,7 +2474,7 @@
       "family": "3D & Games",
       "axis": "style",
       "medium": "material style image",
-      "nl": "Sculptural rendering: modelled volume in a single material, raking gallery light, honest tool marks, neutral plinth ground, material style image.",
+      "nl": "Sculptural rendering, modelled volume in a single material, raking gallery light, honest tool marks, neutral plinth ground, material style image.",
       "tags": [
         "stone",
         "greyscale",
@@ -2496,7 +2496,7 @@
       "family": "3D & Games",
       "axis": "style",
       "medium": "graphic style image",
-      "nl": "Retro-pop rendering: mid-century flat shapes, halftone texture, cheerful limited palette, chunky rounded forms, graphic style image.",
+      "nl": "Retro-pop rendering, mid-century flat shapes, halftone texture, cheerful limited palette, chunky rounded forms, graphic style image.",
       "tags": [
         "retro_artstyle",
         "halftone",
@@ -2519,7 +2519,7 @@
       "family": "3D & Games",
       "axis": "style",
       "medium": "cgi style image",
-      "nl": "Toy-figure rendering: simplified moulded plastic bodies, printed flat faces, glossy primary colour, visible joint seams, cgi style image.",
+      "nl": "Toy-figure rendering, simplified moulded plastic bodies, printed flat faces, glossy primary colour, visible joint seams, cgi style image.",
       "tags": [
         "plastic",
         "shiny",
@@ -2541,7 +2541,7 @@
       "family": "3D & Games",
       "axis": "style",
       "medium": "graphic style image",
-      "nl": "Psychedelic rendering: kaleidoscopic symmetry, melting saturated colour, vibrating complementary edges, dense ornament, graphic style image.",
+      "nl": "Psychedelic rendering, kaleidoscopic symmetry, melting saturated colour, vibrating complementary edges, dense ornament, graphic style image.",
       "tags": [
         "psychedelic",
         "colorful",
@@ -2563,7 +2563,7 @@
       "family": "3D & Games",
       "axis": "style",
       "medium": "handmade style image",
-      "nl": "Paper-quilling rendering: coiled paper strips set on edge, layered spiral shapes, soft shadow between coils, matte stock, handmade style image.",
+      "nl": "Paper-quilling rendering, coiled paper strips set on edge, layered spiral shapes, soft shadow between coils, matte stock, handmade style image.",
       "tags": [
         "papercraft",
         "textured",
@@ -2585,7 +2585,7 @@
       "family": "3D & Games",
       "axis": "style",
       "medium": "cgi style image",
-      "nl": "Comic-CGI hybrid rendering: halftone dot shading over 3D forms, chromatic offset edges, ben-day texture, bold graphic colour, cgi style image.",
+      "nl": "Comic-CGI hybrid rendering, halftone dot shading over 3D forms, chromatic offset edges, ben-day texture, bold graphic colour, cgi style image.",
       "tags": [
         "halftone",
         "3d",
@@ -2608,7 +2608,7 @@
       "family": "3D & Games",
       "axis": "style",
       "medium": "cgi style image",
-      "nl": "Stylised CGI rendering: angular faceted character forms, flat-ish painted textures, hard directional key, sparse detail, cgi style image.",
+      "nl": "Stylised CGI rendering, angular faceted character forms, flat-ish painted textures, hard directional key, sparse detail, cgi style image.",
       "tags": [
         "3d",
         "cel_shading",
@@ -2630,7 +2630,7 @@
       "family": "3D & Games",
       "axis": "style",
       "medium": "graphic style image",
-      "nl": "Tessellated rendering: interlocking repeated shapes filling the plane, no gaps, flat alternating colour, precise geometry, graphic style image.",
+      "nl": "Tessellated rendering, interlocking repeated shapes filling the plane, no gaps, flat alternating colour, precise geometry, graphic style image.",
       "tags": [
         "mosaic",
         "flat_color",
@@ -2652,7 +2652,7 @@
       "family": "3D & Games",
       "axis": "style",
       "medium": "cgi style image",
-      "nl": "Hybrid CGI rendering: 3D forms with hand-drawn 2D effects layered on top, halftone texture, saturated graphic colour, cgi style image.",
+      "nl": "Hybrid CGI rendering, 3D forms with hand-drawn 2D effects layered on top, halftone texture, saturated graphic colour, cgi style image.",
       "tags": [
         "3d",
         "halftone",
@@ -2675,7 +2675,7 @@
       "family": "3D & Games",
       "axis": "style",
       "medium": "game art style image",
-      "nl": "Life-sim rendering: mid-poly interiors, simple UI-clean materials, even ambient light, saturated furnishing colour, game art style image.",
+      "nl": "Life-sim rendering, mid-poly interiors, simple UI-clean materials, even ambient light, saturated furnishing colour, game art style image.",
       "tags": [
         "3d",
         "fake_screenshot",
@@ -2697,7 +2697,7 @@
       "family": "3D & Games",
       "axis": "style",
       "medium": "technical drawing style image",
-      "nl": "Topographic rendering: nested contour lines describing elevation, even stroke weight, limited two-tone palette, technical drawing style image.",
+      "nl": "Topographic rendering, nested contour lines describing elevation, even stroke weight, limited two-tone palette, technical drawing style image.",
       "tags": [
         "diagram",
         "lineart",
@@ -2719,7 +2719,7 @@
       "family": "3D & Games",
       "axis": "style",
       "medium": "game art style image",
-      "nl": "Unreal cinematic rendering: realtime global illumination, volumetric fog beams, screen-space reflections, filmic tonemap, game art style image.",
+      "nl": "Unreal cinematic rendering, realtime global illumination, volumetric fog beams, screen-space reflections, filmic tonemap, game art style image.",
       "tags": [
         "3d",
         "cinematic_lighting",
@@ -2742,7 +2742,7 @@
       "family": "3D & Games",
       "axis": "style",
       "medium": "print style image",
-      "nl": "Ben-day rendering: tone built from dots that grow and shrink, hard black keyline, flat spot inks, visible registration, print style image.",
+      "nl": "Ben-day rendering, tone built from dots that grow and shrink, hard black keyline, flat spot inks, visible registration, print style image.",
       "tags": [
         "halftone",
         "flat_color",
@@ -2765,7 +2765,7 @@
       "family": "3D & Games",
       "axis": "style",
       "medium": "vector style image",
-      "nl": "Sticker-vignette rendering: subject inside a thick white die-cut border, flat bold colour, glossy vinyl sheen, no background, vector style image.",
+      "nl": "Sticker-vignette rendering, subject inside a thick white die-cut border, flat bold colour, glossy vinyl sheen, no background, vector style image.",
       "tags": [
         "sticker",
         "flat_color",
@@ -2787,7 +2787,7 @@
       "family": "3D & Games",
       "axis": "style",
       "medium": "illustration style image",
-      "nl": "Tattoo-flash rendering: bold black contour, limited spot colour, tight shading hatch, flat print layout on cream paper, illustration style image.",
+      "nl": "Tattoo-flash rendering, bold black contour, limited spot colour, tight shading hatch, flat print layout on cream paper, illustration style image.",
       "tags": [
         "lineart",
         "limited_palette",
@@ -2810,7 +2810,7 @@
       "family": "3D & Games",
       "axis": "style",
       "medium": "illustration style image",
-      "nl": "Vignette-framed rendering: subject centred in a soft-edged oval of light, surroundings fading to the paper, illustration style image.",
+      "nl": "Vignette-framed rendering, subject centred in a soft-edged oval of light, surroundings fading to the paper, illustration style image.",
       "tags": [
         "vignetting",
         "simple_background",
@@ -2832,7 +2832,7 @@
       "family": "3D & Games",
       "axis": "style",
       "medium": "handmade style image",
-      "nl": "Plasticine stop-motion rendering: fingerprint-dented clay, wide toothy grins, warm even set light, visible armature bulk, handmade style image.",
+      "nl": "Plasticine stop-motion rendering, fingerprint-dented clay, wide toothy grins, warm even set light, visible armature bulk, handmade style image.",
       "tags": [
         "claymation",
         "stop_motion",
@@ -2854,7 +2854,7 @@
       "family": "3D & Games",
       "axis": "style",
       "medium": "cgi style image",
-      "nl": "Toon-sea rendering: thick cel bands, bright flat sky colour, stylised swirl effects, black ink contour, soft glow, cgi style image.",
+      "nl": "Toon-sea rendering, thick cel bands, bright flat sky colour, stylised swirl effects, black ink contour, soft glow, cgi style image.",
       "tags": [
         "cel_shading",
         "3d",
@@ -2877,7 +2877,7 @@
       "family": "3D & Games",
       "axis": "style",
       "medium": "cgi style image",
-      "nl": "Brick-built rendering: stepped geometry from studded plastic bricks, glossy moulded surfaces, visible stud tops, cgi style image.",
+      "nl": "Brick-built rendering, stepped geometry from studded plastic bricks, glossy moulded surfaces, visible stud tops, cgi style image.",
       "tags": [
         "plastic",
         "shiny",
@@ -2897,7 +2897,7 @@
       "family": "3D & Games",
       "axis": "style",
       "medium": "handmade style image",
-      "nl": "Plasticine object rendering: soft dented clay surfaces, thumbprint texture, slightly uneven volumes, warm set light, handmade style image.",
+      "nl": "Plasticine object rendering, soft dented clay surfaces, thumbprint texture, slightly uneven volumes, warm set light, handmade style image.",
       "tags": [
         "claymation",
         "stop_motion",
@@ -2919,7 +2919,7 @@
       "family": "3D & Games",
       "axis": "style",
       "medium": "cgi style image",
-      "nl": "Die-cast rendering: painted metal body with slight orange-peel finish, chrome trim, rubber tyres, tiny moulded panel lines, cgi style image.",
+      "nl": "Die-cast rendering, painted metal body with slight orange-peel finish, chrome trim, rubber tyres, tiny moulded panel lines, cgi style image.",
       "tags": [
         "metallic",
         "plastic",
@@ -2940,7 +2940,7 @@
       "family": "3D & Games",
       "axis": "style",
       "medium": "handmade style image",
-      "nl": "Needle-felt rendering: fuzzy wool fibre surface, compressed soft volumes, needle pocks, heathered colour, handmade style image.",
+      "nl": "Needle-felt rendering, fuzzy wool fibre surface, compressed soft volumes, needle pocks, heathered colour, handmade style image.",
       "tags": [
         "knitted",
         "textured",
@@ -2959,7 +2959,7 @@
       "family": "3D & Games",
       "axis": "style",
       "medium": "handmade style image",
-      "nl": "Origami rendering: crisp folded planes, sharp crease lines, matte paper colour, soft shadow in the valleys, handmade style image.",
+      "nl": "Origami rendering, crisp folded planes, sharp crease lines, matte paper colour, soft shadow in the valleys, handmade style image.",
       "tags": [
         "papercraft",
         "textured",
@@ -2981,7 +2981,7 @@
       "family": "3D & Games",
       "axis": "style",
       "medium": "handmade style image",
-      "nl": "Papercraft rendering: faceted card panels with glue tabs, visible fold seams, matte stock, soft studio shadow, handmade style image.",
+      "nl": "Papercraft rendering, faceted card panels with glue tabs, visible fold seams, matte stock, soft studio shadow, handmade style image.",
       "tags": [
         "papercraft",
         "low_poly",
@@ -3003,7 +3003,7 @@
       "family": "3D & Games",
       "axis": "style",
       "medium": "cgi style image",
-      "nl": "Designer-toy rendering: smooth vinyl body, satin paint with crisp masking edges, subtle seam line, product studio light, cgi style image.",
+      "nl": "Designer-toy rendering, smooth vinyl body, satin paint with crisp masking edges, subtle seam line, product studio light, cgi style image.",
       "tags": [
         "plastic",
         "shiny",
@@ -3023,7 +3023,7 @@
       "family": "3D & Games",
       "axis": "style",
       "medium": "handmade style image",
-      "nl": "Plush rendering: soft pile fabric, visible seam stitching, embroidered features, stuffed rounded volumes, handmade style image.",
+      "nl": "Plush rendering, soft pile fabric, visible seam stitching, embroidered features, stuffed rounded volumes, handmade style image.",
       "tags": [
         "textured",
         "embroidery",
@@ -3043,7 +3043,7 @@
       "family": "3D & Games",
       "axis": "style",
       "medium": "cgi style image",
-      "nl": "Garage-kit rendering: hand-cast resin with fine sculpted detail, airbrushed paint gradients, satin varnish, base plinth, cgi style image.",
+      "nl": "Garage-kit rendering, hand-cast resin with fine sculpted detail, airbrushed paint gradients, satin varnish, base plinth, cgi style image.",
       "tags": [
         "3d",
         "plastic",
@@ -3063,7 +3063,7 @@
       "family": "3D & Games",
       "axis": "style",
       "medium": "handmade style image",
-      "nl": "Stop-motion puppet rendering: fabric and silicone materials over an armature, macro depth of field, practical set light, handmade style image.",
+      "nl": "Stop-motion puppet rendering, fabric and silicone materials over an armature, macro depth of field, practical set light, handmade style image.",
       "tags": [
         "stop_motion",
         "textured",
@@ -3083,7 +3083,7 @@
       "family": "3D & Games",
       "axis": "style",
       "medium": "cgi style image",
-      "nl": "Vinyl-figure rendering: glossy rotocast surface, simplified stylised forms, flat sprayed colour blocks, seam at the waist, cgi style image.",
+      "nl": "Vinyl-figure rendering, glossy rotocast surface, simplified stylised forms, flat sprayed colour blocks, seam at the waist, cgi style image.",
       "tags": [
         "plastic",
         "shiny",
@@ -3103,7 +3103,7 @@
       "family": "3D & Games",
       "axis": "style",
       "medium": "pixel art style image",
-      "nl": "One-bit rendering: pure black and white pixels only, checker and Bayer dithering for tone, hard aliased edges, pixel art style image.",
+      "nl": "One-bit rendering, pure black and white pixels only, checker and Bayer dithering for tone, hard aliased edges, pixel art style image.",
       "tags": [
         "pixel_art",
         "dithering",
@@ -3123,7 +3123,7 @@
       "family": "3D & Games",
       "axis": "style",
       "medium": "pixel art style image",
-      "nl": "16-bit rendering: console palette limits, dithered shading ramps, crisp sprite outlines, parallax-flat backgrounds, pixel art style image.",
+      "nl": "16-bit rendering, console palette limits, dithered shading ramps, crisp sprite outlines, parallax-flat backgrounds, pixel art style image.",
       "tags": [
         "pixel_art",
         "dithering",
@@ -3143,7 +3143,7 @@
       "family": "3D & Games",
       "axis": "style",
       "medium": "pixel art style image",
-      "nl": "Pre-rendered hybrid: sprites baked from 3D onto a pixel grid, dithered gradients, richer palette, slight blur in the source, pixel art style image.",
+      "nl": "Pre-rendered hybrid, sprites baked from 3D onto a pixel grid, dithered gradients, richer palette, slight blur in the source, pixel art style image.",
       "tags": [
         "pixel_art",
         "dithering",
@@ -3163,7 +3163,7 @@
       "family": "3D & Games",
       "axis": "style",
       "medium": "pixel art style image",
-      "nl": "8-bit rendering: tiny fixed palette, chunky pixels on a coarse grid, no antialiasing, tile-repeated background, pixel art style image.",
+      "nl": "8-bit rendering, tiny fixed palette, chunky pixels on a coarse grid, no antialiasing, tile-repeated background, pixel art style image.",
       "tags": [
         "pixel_art",
         "limited_palette",

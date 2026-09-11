@@ -27,6 +27,19 @@ STYLES_DIR = os.path.join(ROOT, "styles")
 VOCAB_PATH = os.path.join(ROOT, "data", "tags.txt")
 
 MAX = 380
+
+# The frame's shape and size belong to the workflow, never to a style clause.
+# Written narrowly on purpose: "two-head-tall bodies" is a proportion and
+# "vertical scanlines" is a texture, so neither may trip this.
+RATIO = re.compile(
+    r"\b\d+(?:\.\d+)?\s*:\s*\d+\b"                       # 16:9, 2.39:1
+    r"|\baspect\b"                                            # aspect, aspect ratio
+    r"|\bletterbox(?:ed|ing)?\b"
+    r"|\bwidescreen\b"
+    r"|\b(?:tall|wide|vertical|horizontal|square|landscape|portrait)\s+"
+    r"(?:framing|crop|format|orientation|composition|panel|panels|frame)\b",
+    re.I,
+)
 AXES = {"style", "format", "finish"}
 
 # Families brought in from another project. Their structure is checked — name,
@@ -121,6 +134,12 @@ def main():
                 errors.append(f"{where}: instruction/scope language in the clause")
             if CONTENT.search(clause) and not imported:
                 errors.append(f"{where}: clause names picture content")
+            # the process phrase is separated by a comma, not a colon
+            if ": " in clause and not imported:
+                errors.append(f"{where}: colon after the process phrase, use a comma")
+            # the workflow sets the frame size, so a clause never names one
+            if RATIO.search(clause) and not imported:
+                errors.append(f"{where}: names an aspect ratio, the workflow sets that")
             if medium and entry.get("written") and not clause.rstrip(".").lower().endswith(medium.lower()):
                 errors.append(f"{where}: clause must close with '{medium}'")
 

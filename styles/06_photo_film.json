@@ -8,11 +8,10 @@
       "family": "Photography & Film",
       "axis": "finish",
       "medium": "photograph style image",
-      "nl": "Anamorphic finish: horizontal blue streaks off every hot light, oval bokeh, slight edge stretching, photograph style image.",
+      "nl": "Anamorphic finish, horizontal blue streaks off every hot light, oval bokeh, slight edge stretching, photograph style image.",
       "tags": [
         "lens_flare",
-        "bokeh",
-        "widescreen"
+        "bokeh"
       ],
       "tags_negative": [
         "simple_background"
@@ -27,7 +26,7 @@
       "family": "Photography & Film",
       "axis": "finish",
       "medium": "photograph style image",
-      "nl": "Beauty-retouch finish: skin cleaned but pores and fine hair kept, even tonal transitions, controlled specular sheen, no plastic smoothing, photograph style image.",
+      "nl": "Beauty-retouch finish, skin cleaned but pores and fine hair kept, even tonal transitions, controlled specular sheen, no plastic smoothing, photograph style image.",
       "tags": [
         "realistic",
         "photo_(medium)",
@@ -46,7 +45,7 @@
       "family": "Photography & Film",
       "axis": "finish",
       "medium": "photograph style image",
-      "nl": "Bloom finish: bright areas blooming softly into their surroundings, haloed highlights, gentle contrast lift, photograph style image.",
+      "nl": "Bloom finish, bright areas blooming softly into their surroundings, haloed highlights, gentle contrast lift, photograph style image.",
       "tags": [
         "glowing",
         "soft_focus",
@@ -65,7 +64,7 @@
       "family": "Photography & Film",
       "axis": "finish",
       "medium": "photograph style image",
-      "nl": "Catalogue-clean finish: even shadowless light, true colour, seamless ground, crisp edge separation, no atmosphere, photograph style image.",
+      "nl": "Catalogue-clean finish, even shadowless light, true colour, seamless ground, crisp edge separation, no atmosphere, photograph style image.",
       "tags": [
         "simple_background",
         "photo_(medium)",
@@ -84,7 +83,7 @@
       "family": "Photography & Film",
       "axis": "finish",
       "medium": "photograph style image",
-      "nl": "Catchlight finish: bright specular reflections in the eyes, wet corneal sheen, crisp iris detail, life in the gaze, photograph style image.",
+      "nl": "Catchlight finish, bright specular reflections in the eyes, wet corneal sheen, crisp iris detail, life in the gaze, photograph style image.",
       "tags": [
         "realistic",
         "portrait",
@@ -103,7 +102,7 @@
       "family": "Photography & Film",
       "axis": "finish",
       "medium": "photograph style image",
-      "nl": "Chromatic-aberration finish: red and cyan fringing along high-contrast edges, colour separation growing toward the corners, photograph style image.",
+      "nl": "Chromatic-aberration finish, red and cyan fringing along high-contrast edges, colour separation growing toward the corners, photograph style image.",
       "tags": [
         "chromatic_aberration",
         "glitch",
@@ -122,7 +121,7 @@
       "family": "Photography & Film",
       "axis": "finish",
       "medium": "photograph style image",
-      "nl": "Cinematic-real finish: motivated key light, film colour response, gentle highlight roll-off, fine grain, still believable as a photograph, photograph style image.",
+      "nl": "Cinematic-real finish, motivated key light, film colour response, gentle highlight roll-off, fine grain, still believable as a photograph, photograph style image.",
       "tags": [
         "cinematic_lighting",
         "film_grain",
@@ -142,7 +141,7 @@
       "family": "Photography & Film",
       "axis": "finish",
       "medium": "photograph style image",
-      "nl": "Clean-digital finish: noise-free shadows, neutral colour science, controlled micro-contrast, no grain or halation, photograph style image.",
+      "nl": "Clean-digital finish, noise-free shadows, neutral colour science, controlled micro-contrast, no grain or halation, photograph style image.",
       "tags": [
         "highres",
         "realistic"
@@ -161,7 +160,7 @@
       "family": "Photography & Film",
       "axis": "finish",
       "medium": "photograph style image",
-      "nl": "Crushed-black finish: shadows clipped to pure black, punchy separation, no detail in the darks, photograph style image.",
+      "nl": "Crushed-black finish, shadows clipped to pure black, punchy separation, no detail in the darks, photograph style image.",
       "tags": [
         "high_contrast",
         "dark",
@@ -180,7 +179,7 @@
       "family": "Photography & Film",
       "axis": "finish",
       "medium": "photograph style image",
-      "nl": "Deep-focus finish: foreground and distance equally sharp, small aperture clarity, crisp edge detail throughout, photograph style image.",
+      "nl": "Deep-focus finish, foreground and distance equally sharp, small aperture clarity, crisp edge detail throughout, photograph style image.",
       "tags": [
         "highres",
         "realistic"
@@ -199,7 +198,7 @@
       "family": "Photography & Film",
       "axis": "finish",
       "medium": "photograph style image",
-      "nl": "Documentary finish: unstyled available light, honest mid contrast, working-lens rendering, grain left in, photograph style image.",
+      "nl": "Documentary finish, unstyled available light, honest mid contrast, working-lens rendering, grain left in, photograph style image.",
       "tags": [
         "photo_(medium)",
         "film_grain",
@@ -219,7 +218,7 @@
       "family": "Photography & Film",
       "axis": "finish",
       "medium": "photograph style image",
-      "nl": "Damaged-print finish: hairline scratches, dust specks, small emulsion nicks, uneven fading at the edges, photograph style image.",
+      "nl": "Damaged-print finish, hairline scratches, dust specks, small emulsion nicks, uneven fading at the edges, photograph style image.",
       "tags": [
         "textured",
         "film_grain",
@@ -238,7 +237,7 @@
       "family": "Photography & Film",
       "axis": "finish",
       "medium": "photograph style image",
-      "nl": "Fine-art print finish: full tonal scale, deep controlled blacks, delicate highlight separation, matte paper tonality, photograph style image.",
+      "nl": "Fine-art print finish, full tonal scale, deep controlled blacks, delicate highlight separation, matte paper tonality, photograph style image.",
       "tags": [
         "photo_(medium)",
         "monochrome",
@@ -258,7 +257,7 @@
       "family": "Photography & Film",
       "axis": "finish",
       "medium": "photograph style image",
-      "nl": "Forensic finish: flat record light, no glamour, neutral colour balance, everything equally sharp, evidence clarity, photograph style image.",
+      "nl": "Forensic finish, flat record light, no glamour, neutral colour balance, everything equally sharp, evidence clarity, photograph style image.",
       "tags": [
         "photo_(medium)",
         "desaturated",
@@ -278,7 +277,7 @@
       "family": "Photography & Film",
       "axis": "finish",
       "medium": "photograph style image",
-      "nl": "Frozen-motion finish: fast-shutter crispness, suspended droplets and debris, no trailing blur anywhere, photograph style image.",
+      "nl": "Frozen-motion finish, fast-shutter crispness, suspended droplets and debris, no trailing blur anywhere, photograph style image.",
       "tags": [
         "highres",
         "flash_photography",
@@ -297,7 +296,7 @@
       "family": "Photography & Film",
       "axis": "finish",
       "medium": "photograph style image",
-      "nl": "Handheld finish: slight camera shake implied, available light, imperfect framing, mild motion smear at the edges, photograph style image.",
+      "nl": "Handheld finish, slight camera shake implied, available light, imperfect framing, mild motion smear at the edges, photograph style image.",
       "tags": [
         "photo_(medium)",
         "motion_blur",
@@ -316,7 +315,7 @@
       "family": "Photography & Film",
       "axis": "finish",
       "medium": "photograph style image",
-      "nl": "Heavy-grain finish: coarse clumped silver structure through the mid tones, softened fine detail, gritty texture, photograph style image.",
+      "nl": "Heavy-grain finish, coarse clumped silver structure through the mid tones, softened fine detail, gritty texture, photograph style image.",
       "tags": [
         "film_grain",
         "textured",
@@ -335,7 +334,7 @@
       "family": "Photography & Film",
       "axis": "finish",
       "medium": "photograph style image",
-      "nl": "Vignette finish: corners falling into shadow, brightness concentrated at the centre, slight edge softening, photograph style image.",
+      "nl": "Vignette finish, corners falling into shadow, brightness concentrated at the centre, slight edge softening, photograph style image.",
       "tags": [
         "vignetting",
         "dark",
@@ -354,7 +353,7 @@
       "family": "Photography & Film",
       "axis": "finish",
       "medium": "photograph style image",
-      "nl": "High-key finish: bright shadowless wash, tones pushed toward white, minimal contrast, airy openness, photograph style image.",
+      "nl": "High-key finish, bright shadowless wash, tones pushed toward white, minimal contrast, airy openness, photograph style image.",
       "tags": [
         "white_theme",
         "pale_color",
@@ -373,7 +372,7 @@
       "family": "Photography & Film",
       "axis": "finish",
       "medium": "photograph style image",
-      "nl": "Hyperreal finish: forensic pore, fibre and dust detail, micro-contrast everywhere, sharp specular micro-highlights, photograph style image.",
+      "nl": "Hyperreal finish, forensic pore, fibre and dust detail, micro-contrast everywhere, sharp specular micro-highlights, photograph style image.",
       "tags": [
         "photorealistic",
         "realistic",
@@ -393,7 +392,7 @@
       "family": "Photography & Film",
       "axis": "finish",
       "medium": "photograph style image",
-      "nl": "Imperfection finish: flyaway hairs, asymmetry, skin texture and small blemishes kept, uneven fabric wear, photograph style image.",
+      "nl": "Imperfection finish, flyaway hairs, asymmetry, skin texture and small blemishes kept, uneven fabric wear, photograph style image.",
       "tags": [
         "realistic",
         "textured",
@@ -412,7 +411,7 @@
       "family": "Photography & Film",
       "axis": "finish",
       "medium": "photograph style image",
-      "nl": "Dirty-lens finish: dust specks and smears on the front element, veiling haze around light sources, lowered micro-contrast, photograph style image.",
+      "nl": "Dirty-lens finish, dust specks and smears on the front element, veiling haze around light sources, lowered micro-contrast, photograph style image.",
       "tags": [
         "lens_flare",
         "textured",
@@ -431,7 +430,7 @@
       "family": "Photography & Film",
       "axis": "finish",
       "medium": "photograph style image",
-      "nl": "Lifelike finish: convincing presence rather than forensic detail, natural light falloff, believable colour, gentle sharpness, photograph style image.",
+      "nl": "Lifelike finish, convincing presence rather than forensic detail, natural light falloff, believable colour, gentle sharpness, photograph style image.",
       "tags": [
         "realistic",
         "photo_(medium)",
@@ -450,7 +449,7 @@
       "family": "Photography & Film",
       "axis": "finish",
       "medium": "photograph style image",
-      "nl": "Matte-grade finish: blacks lifted to charcoal, compressed highlights, low saturation, faded print feel, photograph style image.",
+      "nl": "Matte-grade finish, blacks lifted to charcoal, compressed highlights, low saturation, faded print feel, photograph style image.",
       "tags": [
         "muted_color",
         "desaturated",
@@ -469,7 +468,7 @@
       "family": "Photography & Film",
       "axis": "finish",
       "medium": "photograph style image",
-      "nl": "Lived-in finish: wear, dust and creases left in, nothing reset for the camera, uneven ambient light, photograph style image.",
+      "nl": "Lived-in finish, wear, dust and creases left in, nothing reset for the camera, uneven ambient light, photograph style image.",
       "tags": [
         "realistic",
         "textured",
@@ -489,7 +488,7 @@
       "family": "Photography & Film",
       "axis": "finish",
       "medium": "photograph style image",
-      "nl": "Low-key finish: most of the frame in shadow, a single sculpted highlight, dense black surround, photograph style image.",
+      "nl": "Low-key finish, most of the frame in shadow, a single sculpted highlight, dense black surround, photograph style image.",
       "tags": [
         "dark",
         "chiaroscuro",
@@ -508,7 +507,7 @@
       "family": "Photography & Film",
       "axis": "finish",
       "medium": "photograph style image",
-      "nl": "Natural-skin finish: visible pores and vellus hair, subsurface warmth under the surface, uneven tone, soft specular sheen, photograph style image.",
+      "nl": "Natural-skin finish, visible pores and vellus hair, subsurface warmth under the surface, uneven tone, soft specular sheen, photograph style image.",
       "tags": [
         "realistic",
         "textured",
@@ -527,7 +526,7 @@
       "family": "Photography & Film",
       "axis": "finish",
       "medium": "photograph style image",
-      "nl": "Photojournalistic finish: available light, decisive framing, working colour, grain and noise accepted, no styling, photograph style image.",
+      "nl": "Photojournalistic finish, available light, decisive framing, working colour, grain and noise accepted, no styling, photograph style image.",
       "tags": [
         "photo_(medium)",
         "film_grain",
@@ -547,7 +546,7 @@
       "family": "Photography & Film",
       "axis": "finish",
       "medium": "photograph style image",
-      "nl": "Photoreal finish: camera-believable optics, correct light falloff, real material response, no illustration cues, photograph style image.",
+      "nl": "Photoreal finish, camera-believable optics, correct light falloff, real material response, no illustration cues, photograph style image.",
       "tags": [
         "photorealistic",
         "realistic",
@@ -566,7 +565,7 @@
       "family": "Photography & Film",
       "axis": "finish",
       "medium": "photograph style image",
-      "nl": "Raw-file finish: minimally processed, flat contrast curve, neutral colour, noise left intact, no sharpening halo, photograph style image.",
+      "nl": "Raw-file finish, minimally processed, flat contrast curve, neutral colour, noise left intact, no sharpening halo, photograph style image.",
       "tags": [
         "photo_(medium)",
         "desaturated",
@@ -585,7 +584,7 @@
       "family": "Photography & Film",
       "axis": "finish",
       "medium": "photograph style image",
-      "nl": "Shallow-focus finish: paper-thin plane of focus, creamy blurred surroundings, rounded specular highlights, photograph style image.",
+      "nl": "Shallow-focus finish, paper-thin plane of focus, creamy blurred surroundings, rounded specular highlights, photograph style image.",
       "tags": [
         "depth_of_field",
         "bokeh",
@@ -604,7 +603,7 @@
       "family": "Photography & Film",
       "axis": "finish",
       "medium": "photograph style image",
-      "nl": "Film-stock finish: highlight roll-off instead of clipping, grain structure in the mid tones, warm colour response, photograph style image.",
+      "nl": "Film-stock finish, highlight roll-off instead of clipping, grain structure in the mid tones, warm colour response, photograph style image.",
       "tags": [
         "film_grain",
         "photo_(medium)",
@@ -625,7 +624,7 @@
       "family": "Photography & Film",
       "axis": "finish",
       "medium": "photograph style image",
-      "nl": "Slow-shutter finish: trailing motion smears behind moving edges, ghosted overlaps, static parts still sharp, photograph style image.",
+      "nl": "Slow-shutter finish, trailing motion smears behind moving edges, ghosted overlaps, static parts still sharp, photograph style image.",
       "tags": [
         "motion_blur",
         "long_exposure"
@@ -643,7 +642,7 @@
       "family": "Photography & Film",
       "axis": "finish",
       "medium": "photograph style image",
-      "nl": "Snapshot finish: unposed mid-gesture framing, on-camera light, careless horizon, ordinary lens rendering, photograph style image.",
+      "nl": "Snapshot finish, unposed mid-gesture framing, on-camera light, careless horizon, ordinary lens rendering, photograph style image.",
       "tags": [
         "photo_(medium)",
         "flash_photography",
@@ -662,7 +661,7 @@
       "family": "Photography & Film",
       "axis": "finish",
       "medium": "photograph style image",
-      "nl": "Street-real finish: mixed ambient light sources, dirt in the corners, unposed timing, grain and slight motion, photograph style image.",
+      "nl": "Street-real finish, mixed ambient light sources, dirt in the corners, unposed timing, grain and slight motion, photograph style image.",
       "tags": [
         "photo_(medium)",
         "film_grain",
@@ -682,7 +681,7 @@
       "family": "Photography & Film",
       "axis": "finish",
       "medium": "photograph style image",
-      "nl": "Subsurface finish: light bleeding through ears, nostrils and thin skin, warm interior glow, waxy translucency in marble and wax, photograph style image.",
+      "nl": "Subsurface finish, light bleeding through ears, nostrils and thin skin, warm interior glow, waxy translucency in marble and wax, photograph style image.",
       "tags": [
         "realistic",
         "transparent",
@@ -702,7 +701,7 @@
       "family": "Photography & Film",
       "axis": "finish",
       "medium": "photograph style image",
-      "nl": "Ultra-detail finish: every fibre, pore and grain resolved, high micro-contrast, crisp edge definition throughout, photograph style image.",
+      "nl": "Ultra-detail finish, every fibre, pore and grain resolved, high micro-contrast, crisp edge definition throughout, photograph style image.",
       "tags": [
         "highres",
         "textured",
@@ -722,7 +721,7 @@
       "family": "Photography & Film",
       "axis": "finish",
       "medium": "photograph style image",
-      "nl": "Veiling-flare finish: milky wash across the shadows from a light just off frame, lifted blacks, reduced saturation, photograph style image.",
+      "nl": "Veiling-flare finish, milky wash across the shadows from a light just off frame, lifted blacks, reduced saturation, photograph style image.",
       "tags": [
         "lens_flare",
         "soft_focus",
@@ -741,7 +740,7 @@
       "family": "Photography & Film",
       "axis": "finish",
       "medium": "photograph style image",
-      "nl": "Pore-level finish: fine skin texture held in focus, subtle oil sheen, uneven micro-tone, no smoothing pass, photograph style image.",
+      "nl": "Pore-level finish, fine skin texture held in focus, subtle oil sheen, uneven micro-tone, no smoothing pass, photograph style image.",
       "tags": [
         "realistic",
         "textured",
@@ -760,7 +759,7 @@
       "family": "Photography & Film",
       "axis": "finish",
       "medium": "photograph style image",
-      "nl": "Wet finish: water beading over every surface, hard specular glints, mirrored reflections in the flats, darkened saturated colour, photograph style image.",
+      "nl": "Wet finish, water beading over every surface, hard specular glints, mirrored reflections in the flats, darkened saturated colour, photograph style image.",
       "tags": [
         "wet",
         "shiny",
@@ -779,7 +778,7 @@
       "family": "Photography & Film",
       "axis": "format",
       "medium": "photograph style image",
-      "nl": "Composed as a film strip: consecutive frames in a row with sprocket holes, frame numbers and edge markings, orange base, photograph style image.",
+      "nl": "Composed as a film strip, consecutive frames in a row with sprocket holes, frame numbers and edge markings, orange base, photograph style image.",
       "tags": [
         "contact_sheet",
         "multiple_views",
@@ -799,7 +798,7 @@
       "family": "Photography & Film",
       "axis": "format",
       "medium": "photograph style image",
-      "nl": "Composed as an ID photograph: square-on head and shoulders, flat frontal light, plain pale backdrop, neutral expression, institutional colour, photograph style image.",
+      "nl": "Composed as an ID photograph, square-on head and shoulders, flat frontal light, plain pale backdrop, neutral expression, institutional colour, photograph style image.",
       "tags": [
         "portrait",
         "simple_background",
@@ -821,7 +820,7 @@
       "family": "Photography & Film",
       "axis": "format",
       "medium": "photograph style image",
-      "nl": "Composed as a lobby card: a landscape film still inside a printed border with title lettering space at the base, faded ink, photograph style image.",
+      "nl": "Composed as a lobby card, a landscape film still inside a printed border with title lettering space at the base, faded ink, photograph style image.",
       "tags": [
         "photo_border",
         "poster",
@@ -841,7 +840,7 @@
       "family": "Photography & Film",
       "axis": "format",
       "medium": "photograph style image",
-      "nl": "Composed as a security-camera frame: high corner angle, wide distorted lens, timestamp overlay, compressed noisy image, photograph style image.",
+      "nl": "Composed as a security-camera frame, high corner angle, wide distorted lens, timestamp overlay, compressed noisy image, photograph style image.",
       "tags": [
         "fake_screenshot",
         "glitch",
@@ -861,7 +860,7 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "film still style image",
-      "nl": "16mm documentary capture: pronounced grain, available light, handheld framing, slightly soft small-gauge optics, muted colour, film still style image.",
+      "nl": "16mm documentary capture, pronounced grain, available light, handheld framing, slightly soft small-gauge optics, muted colour, film still style image.",
       "tags": [
         "film_grain",
         "photo_(medium)",
@@ -881,7 +880,7 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "film still style image",
-      "nl": "1940s noir cinematography: hard key with slatted shadow, silver-gelatin contrast, smoke haze, deep blacks, 35mm grain, film still style image.",
+      "nl": "1940s noir cinematography, hard key with slatted shadow, silver-gelatin contrast, smoke haze, deep blacks, 35mm grain, film still style image.",
       "tags": [
         "monochrome",
         "chiaroscuro",
@@ -902,7 +901,7 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "film still style image",
-      "nl": "Three-strip Technicolor look: super-saturated primaries, glowing skin tones, dense blacks, painted-set brightness, fine grain, film still style image.",
+      "nl": "Three-strip Technicolor look, super-saturated primaries, glowing skin tones, dense blacks, painted-set brightness, fine grain, film still style image.",
       "tags": [
         "colorful",
         "high_saturation",
@@ -922,7 +921,7 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "film still style image",
-      "nl": "1970s New Hollywood look: warm faded colour, lifted blacks, zoom-lens compression, smoky ambience, heavy grain, film still style image.",
+      "nl": "1970s New Hollywood look, warm faded colour, lifted blacks, zoom-lens compression, smoky ambience, heavy grain, film still style image.",
       "tags": [
         "film_grain",
         "muted_color",
@@ -942,7 +941,7 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "film still style image",
-      "nl": "1980s studio action look: hard rim-lit figures, smoke-filled beams, teal shadow and amber key, punchy grain, film still style image.",
+      "nl": "1980s studio action look, hard rim-lit figures, smoke-filled beams, teal shadow and amber key, punchy grain, film still style image.",
       "tags": [
         "rim_lighting",
         "cinematic_lighting",
@@ -963,7 +962,7 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "film still style image",
-      "nl": "1990s indie 35mm look: naturalistic available light, slightly green-grey grade, soft contrast, visible grain, unfussy framing, film still style image.",
+      "nl": "1990s indie 35mm look, naturalistic available light, slightly green-grey grade, soft contrast, visible grain, unfussy framing, film still style image.",
       "tags": [
         "film_grain",
         "muted_color",
@@ -983,12 +982,11 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "film still style image",
-      "nl": "35mm movie still: motivated cinematic key, filmic highlight roll-off, shallow focus, subtle halation, fine grain, film still style image.",
+      "nl": "35mm movie still, motivated cinematic key, filmic highlight roll-off, shallow focus, subtle halation, fine grain, film still style image.",
       "tags": [
         "cinematic_lighting",
         "film_grain",
-        "depth_of_field",
-        "widescreen"
+        "depth_of_field"
       ],
       "tags_negative": [
         "flat_color"
@@ -1003,9 +1001,8 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "film still style image",
-      "nl": "70mm epic capture: enormous resolving detail, deep focus across the frame, rich saturated colour, almost invisible grain, film still style image.",
+      "nl": "70mm epic capture, enormous resolving detail, deep focus across the frame, rich saturated colour, almost invisible grain, film still style image.",
       "tags": [
-        "widescreen",
         "highres",
         "cinematic_lighting",
         "colorful"
@@ -1023,11 +1020,10 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "film still style image",
-      "nl": "Anamorphic capture: oval bokeh, horizontal blue streak flares, edge distortion, 2.39:1 framing, gentle halation, film still style image.",
+      "nl": "Anamorphic capture, oval bokeh, horizontal blue streak flares, edge distortion, gentle halation, shallow focus, film still style image.",
       "tags": [
         "lens_flare",
         "bokeh",
-        "widescreen",
         "cinematic_lighting",
         "depth_of_field"
       ],
@@ -1044,12 +1040,11 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "film still style image",
-      "nl": "Contemporary auteur digital: clean sensor detail, precise symmetrical framing, controlled restrained palette, soft filmic grade, film still style image.",
+      "nl": "Contemporary auteur digital, clean sensor detail, precise symmetrical framing, controlled restrained palette, soft filmic grade, film still style image.",
       "tags": [
         "cinematic_lighting",
         "muted_color",
-        "highres",
-        "widescreen"
+        "highres"
       ],
       "tags_negative": [
         "film_grain"
@@ -1064,7 +1059,7 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "film still style image",
-      "nl": "Day-for-night rendering: daylight underexposed and printed cold, blue-shifted midtones under a still-bright sky, shadows keeping their daytime direction, filtered dense blacks, film still style image.",
+      "nl": "Day-for-night rendering, daylight underexposed and printed cold, blue-shifted midtones under a still-bright sky, shadows keeping their daytime direction, filtered dense blacks, film still style image.",
       "tags": [
         "blue_theme",
         "dark",
@@ -1084,7 +1079,7 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "video artefact style image",
-      "nl": "Found-footage capture: camcorder auto-exposure hunting, harsh on-camera light against black, interlace smear, timestamp, video artefact style image.",
+      "nl": "Found-footage capture, camcorder auto-exposure hunting, harsh on-camera light against black, interlace smear, timestamp, video artefact style image.",
       "tags": [
         "glitch",
         "dark",
@@ -1105,7 +1100,7 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "film still style image",
-      "nl": "Hand-cranked rendering: an uneven frame rate quickening and dragging, orthochromatic tonality with dark skies and pale skin, iris vignette closing the corners, dust, splices and frame jump, film still style image.",
+      "nl": "Hand-cranked rendering, an uneven frame rate quickening and dragging, orthochromatic tonality with dark skies and pale skin, iris vignette closing the corners, dust, splices and frame jump, film still style image.",
       "tags": [
         "monochrome",
         "film_grain",
@@ -1125,7 +1120,7 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "film still style image",
-      "nl": "Kinescope rendering: film shot off a television tube, scanline mush and blooming whites, crushed greys, a jittering frame edge and heavy grain over everything, film still style image.",
+      "nl": "Kinescope rendering, film shot off a television tube, scanline mush and blooming whites, crushed greys, a jittering frame edge and heavy grain over everything, film still style image.",
       "tags": [
         "monochrome",
         "film_grain",
@@ -1145,7 +1140,7 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "film still style image",
-      "nl": "Process-shot rendering: a flat projected plate behind the foreground, grain and contrast mismatched between the two layers, gentle plate flicker, hard studio key on the front, film still style image.",
+      "nl": "Process-shot rendering, a flat projected plate behind the foreground, grain and contrast mismatched between the two layers, gentle plate flicker, hard studio key on the front, film still style image.",
       "tags": [
         "film_grain",
         "retro_artstyle",
@@ -1164,7 +1159,7 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "film still style image",
-      "nl": "Super 8 capture: soft small-gauge optics, heavy warm grain, gate weave, blown highlights, faded 1970s colour, film still style image.",
+      "nl": "Super 8 capture, soft small-gauge optics, heavy warm grain, gate weave, blown highlights, faded 1970s colour, film still style image.",
       "tags": [
         "film_grain",
         "retro_artstyle",
@@ -1184,7 +1179,7 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "film still style image",
-      "nl": "Two-strip rendering: only red-orange and blue-green records present, yellows absent and cyans gone muddy, skin running warm brick, soft registration fringing at every edge, film still style image.",
+      "nl": "Two-strip rendering, only red-orange and blue-green records present, yellows absent and cyans gone muddy, skin running warm brick, soft registration fringing at every edge, film still style image.",
       "tags": [
         "limited_palette",
         "film_grain",
@@ -1204,7 +1199,7 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Golden-hour lighting: low warm sun, long soft shadows, amber rim on edges, hazy air glow, gentle contrast, photograph style image.",
+      "nl": "Golden-hour lighting, low warm sun, long soft shadows, amber rim on edges, hazy air glow, gentle contrast, photograph style image.",
       "tags": [
         "sunlight",
         "sunset",
@@ -1225,7 +1220,7 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Harsh noon lighting: overhead sun, short hard-edged shadows, blown highlights, deep contrast, bleached colour, photograph style image.",
+      "nl": "Harsh noon lighting, overhead sun, short hard-edged shadows, blown highlights, deep contrast, bleached colour, photograph style image.",
       "tags": [
         "sunlight",
         "high_contrast",
@@ -1244,7 +1239,7 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Neon night lighting: coloured sign spill as the key, wet reflective surfaces, deep unlit shadow, chromatic glow bloom, photograph style image.",
+      "nl": "Neon night lighting, coloured sign spill as the key, wet reflective surfaces, deep unlit shadow, chromatic glow bloom, photograph style image.",
       "tags": [
         "neon_palette",
         "wet",
@@ -1265,7 +1260,7 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Overcast lighting: huge soft sky source, shadowless wraparound light, cool neutral grade, low contrast, photograph style image.",
+      "nl": "Overcast lighting, huge soft sky source, shadowless wraparound light, cool neutral grade, low contrast, photograph style image.",
       "tags": [
         "soft_focus",
         "muted_color",
@@ -1285,7 +1280,7 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Practical-lamp lighting: warm tungsten pools with cold window fill, visible falloff, mixed colour temperature, soft shadow edges, photograph style image.",
+      "nl": "Practical-lamp lighting, warm tungsten pools with cold window fill, visible falloff, mixed colour temperature, soft shadow edges, photograph style image.",
       "tags": [
         "glowing",
         "orange_theme",
@@ -1305,7 +1300,7 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "1990s compact capture: direct flash falloff, slightly soft zoom optics, warm consumer film colour, date stamp orange, photograph style image.",
+      "nl": "1990s compact capture, direct flash falloff, slightly soft zoom optics, warm consumer film colour, date stamp orange, photograph style image.",
       "tags": [
         "flash_photography",
         "film_grain",
@@ -1325,7 +1320,7 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "35mm colour negative: soft highlight roll-off, warm skin response, fine grain, gentle contrast, lab-print colour, photograph style image.",
+      "nl": "35mm colour negative, soft highlight roll-off, warm skin response, fine grain, gentle contrast, lab-print colour, photograph style image.",
       "tags": [
         "film_grain",
         "photo_(medium)",
@@ -1344,7 +1339,7 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "35mm film capture: classic still-camera rendering, visible grain structure, natural colour, moderate contrast, photograph style image.",
+      "nl": "35mm film capture, classic still-camera rendering, visible grain structure, natural colour, moderate contrast, photograph style image.",
       "tags": [
         "film_grain",
         "photo_(medium)"
@@ -1365,7 +1360,7 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "6x6 medium-format capture: square frame, huge tonal depth, creamy out-of-focus falloff, expensive stillness, photograph style image.",
+      "nl": "Medium-format capture, huge tonal depth, creamy out-of-focus falloff, gentle corner falloff, expensive stillness, photograph style image.",
       "tags": [
         "photo_(medium)",
         "depth_of_field",
@@ -1385,7 +1380,7 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Action-cam rendering: ultra-wide barrel distortion, deep focus, oversaturated contrast, motion judder and lens flare, photograph style image.",
+      "nl": "Action-cam rendering, ultra-wide barrel distortion, deep focus, oversaturated contrast, motion judder and lens flare, photograph style image.",
       "tags": [
         "fisheye",
         "high_saturation",
@@ -1405,7 +1400,7 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Aerial capture: high oblique viewpoint, compressed landscape pattern, atmospheric haze, small even shadows, photograph style image.",
+      "nl": "Aerial capture, high oblique viewpoint, compressed landscape pattern, atmospheric haze, small even shadows, photograph style image.",
       "tags": [
         "scenery",
         "photo_(medium)",
@@ -1424,7 +1419,7 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Nadir drone capture: straight-down viewpoint, flattened geometry, graphic pattern reading, hard midday shadows, photograph style image.",
+      "nl": "Nadir drone capture, straight-down viewpoint, flattened geometry, graphic pattern reading, hard midday shadows, photograph style image.",
       "tags": [
         "scenery",
         "map",
@@ -1444,7 +1439,7 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Albumen print: warm violet-brown tonality, glossy egg-white surface, fine detail, slight fading at the edges, photograph style image.",
+      "nl": "Albumen print, warm violet-brown tonality, glossy egg-white surface, fine detail, slight fading at the edges, photograph style image.",
       "tags": [
         "sepia",
         "traditional_media",
@@ -1464,7 +1459,7 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Ambrotype rendering: a collodion positive on black glass, silvery cream highlights against deep tonal blacks, short tonal scale, pouring swirls at the plate edge and varnish bloom, photograph style image.",
+      "nl": "Ambrotype rendering, a collodion positive on black glass, silvery cream highlights against deep tonal blacks, short tonal scale, pouring swirls at the plate edge and varnish bloom, photograph style image.",
       "tags": [
         "monochrome",
         "photo_(medium)",
@@ -1484,7 +1479,7 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "video artefact style image",
-      "nl": "Camcorder capture: chroma smear, tracking noise, blown auto-exposure, low-light crush, timestamp burn, video artefact style image.",
+      "nl": "Camcorder capture, chroma smear, tracking noise, blown auto-exposure, low-light crush, timestamp burn, video artefact style image.",
       "tags": [
         "glitch",
         "analog_horror",
@@ -1504,7 +1499,7 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Architectural exterior: corrected verticals, deep focus, clean sky gradient, raking daylight defining planes, photograph style image.",
+      "nl": "Architectural exterior, corrected verticals, deep focus, clean sky gradient, raking daylight defining planes, photograph style image.",
       "tags": [
         "scenery",
         "photo_(medium)",
@@ -1524,7 +1519,7 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Architecture photography: shift-lens straight verticals, geometric framing, even ambient exposure, material texture held sharp, photograph style image.",
+      "nl": "Architecture photography, shift-lens straight verticals, geometric framing, even ambient exposure, material texture held sharp, photograph style image.",
       "tags": [
         "scenery",
         "photo_(medium)",
@@ -1544,7 +1539,7 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Polar rendering: shadowless white-out light, horizon dissolving into sky, faint blue snow shading, minimal contrast, photograph style image.",
+      "nl": "Polar rendering, shadowless white-out light, horizon dissolving into sky, faint blue snow shading, minimal contrast, photograph style image.",
       "tags": [
         "white_theme",
         "pale_color",
@@ -1564,11 +1559,10 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "film still style image",
-      "nl": "Modern digital cinema capture: smooth highlight handling, wide latitude shadows, filmic skin rendering, clean fine noise, film still style image.",
+      "nl": "Modern digital cinema capture, smooth highlight handling, wide latitude shadows, filmic skin rendering, clean fine noise, film still style image.",
       "tags": [
         "cinematic_lighting",
         "highres",
-        "widescreen",
         "depth_of_field"
       ],
       "tags_negative": [
@@ -1584,7 +1578,7 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Astrophotography capture: star-field detail against deep black, faint nebula colour, long-exposure noise control, foreground silhouette, photograph style image.",
+      "nl": "Astrophotography capture, star-field detail against deep black, faint nebula colour, long-exposure noise control, foreground silhouette, photograph style image.",
       "tags": [
         "dark",
         "scenery",
@@ -1605,7 +1599,7 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Aurora rendering: green and violet curtains rippling above a dark horizon, star field, cold reflected ground light, photograph style image.",
+      "nl": "Aurora rendering, green and violet curtains rippling above a dark horizon, star field, cold reflected ground light, photograph style image.",
       "tags": [
         "green_theme",
         "purple_theme",
@@ -1626,7 +1620,7 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Autochrome plate: potato-starch grain mosaic, muted pastel colour, soft focus, dark corners, early-colour dreaminess, photograph style image.",
+      "nl": "Autochrome plate, potato-starch grain mosaic, muted pastel colour, soft focus, dark corners, early-colour dreaminess, photograph style image.",
       "tags": [
         "pastel_colors",
         "soft_focus",
@@ -1647,7 +1641,7 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Automotive capture: long reflections controlled across bodywork, low camera angle, gradient sky in the paint, hard specular edges, photograph style image.",
+      "nl": "Automotive capture, long reflections controlled across bodywork, low camera angle, gradient sky in the paint, hard specular edges, photograph style image.",
       "tags": [
         "metallic",
         "shiny",
@@ -1667,7 +1661,7 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Restaurant rendering: warm pendant pools over dark interiors, mixed colour temperature, shallow focus, visible high-ISO grain, photograph style image.",
+      "nl": "Restaurant rendering, warm pendant pools over dark interiors, mixed colour temperature, shallow focus, visible high-ISO grain, photograph style image.",
       "tags": [
         "glowing",
         "dark",
@@ -1688,7 +1682,7 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Aviation capture: long-lens compression, heat haze shimmer, scale against sky, panned prop blur, high-altitude clarity, photograph style image.",
+      "nl": "Aviation capture, long-lens compression, heat haze shimmer, scale against sky, panned prop blur, high-altitude clarity, photograph style image.",
       "tags": [
         "scenery",
         "motion_blur",
@@ -1708,7 +1702,7 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Beauty capture: skin as landscape, large soft key with reflector fill, glossy lip and eye highlights, shallow macro focus, photograph style image.",
+      "nl": "Beauty capture, skin as landscape, large soft key with reflector fill, glossy lip and eye highlights, shallow macro focus, photograph style image.",
       "tags": [
         "portrait",
         "soft_focus",
@@ -1728,7 +1722,7 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Bird-in-flight capture: frozen wing geometry, long-lens compression, clean sky separation, sharp eye detail, photograph style image.",
+      "nl": "Bird-in-flight capture, frozen wing geometry, long-lens compression, clean sky separation, sharp eye detail, photograph style image.",
       "tags": [
         "photo_(medium)",
         "depth_of_field",
@@ -1748,7 +1742,7 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Bodycam rendering: chest-height wide lens, barrel distortion, auto-exposure hunting, motion smear, timestamp overlay, photograph style image.",
+      "nl": "Bodycam rendering, chest-height wide lens, barrel distortion, auto-exposure hunting, motion smear, timestamp overlay, photograph style image.",
       "tags": [
         "fisheye",
         "motion_blur",
@@ -1768,7 +1762,7 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Boudoir capture: warm low-key window light, sheer fabric translucency, soft shadow gradation, intimate shallow focus, photograph style image.",
+      "nl": "Boudoir capture, warm low-key window light, sheer fabric translucency, soft shadow gradation, intimate shallow focus, photograph style image.",
       "tags": [
         "soft_focus",
         "depth_of_field",
@@ -1788,7 +1782,7 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Bounce-flash rendering: light thrown off the ceiling, soft top-down fill, warm ambient mixing underneath, mild falloff, photograph style image.",
+      "nl": "Bounce-flash rendering, light thrown off the ceiling, soft top-down fill, warm ambient mixing underneath, mild falloff, photograph style image.",
       "tags": [
         "flash_photography",
         "soft_focus",
@@ -1808,7 +1802,7 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Bromoil rendering: greasy ink brushed onto a bleached print, mottled tonal patches, painterly stipple texture, warm black, photograph style image.",
+      "nl": "Bromoil rendering, greasy ink brushed onto a bleached print, mottled tonal patches, painterly stipple texture, warm black, photograph style image.",
       "tags": [
         "monochrome",
         "textured",
@@ -1828,7 +1822,7 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Phone-camera capture: slightly wide lens, arm's-length framing, heavy computational sharpening, HDR-flat shadows, photograph style image.",
+      "nl": "Phone-camera capture, slightly wide lens, arm's-length framing, heavy computational sharpening, HDR-flat shadows, photograph style image.",
       "tags": [
         "photo_(medium)",
         "high_contrast",
@@ -1847,7 +1841,7 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Carbon-transfer rendering: relief pigment layer with slight physical thickness, deep luminous blacks, matte tissue surface, photograph style image.",
+      "nl": "Carbon-transfer rendering, relief pigment layer with slight physical thickness, deep luminous blacks, matte tissue surface, photograph style image.",
       "tags": [
         "monochrome",
         "textured",
@@ -1867,7 +1861,7 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "CCTV capture: fixed high angle, fisheye edge stretch, low frame-rate smear, IR-grey night response, timestamp overlay, photograph style image.",
+      "nl": "CCTV capture, fixed high angle, fisheye edge stretch, low frame-rate smear, IR-grey night response, timestamp overlay, photograph style image.",
       "tags": [
         "fake_screenshot",
         "desaturated",
@@ -1890,7 +1884,7 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "material style image",
-      "nl": "Chemigram rendering: developer and fixer painted onto paper, organic tide lines, abstract dark blooms, no lens image at all, material style image.",
+      "nl": "Chemigram rendering, developer and fixer painted onto paper, organic tide lines, abstract dark blooms, no lens image at all, material style image.",
       "tags": [
         "monochrome",
         "textured",
@@ -1910,7 +1904,7 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Chronophotographic rendering: successive instants recorded on one plate, overlapping phases fanned across a black field, even stroboscopic spacing, bright rims where phases cross, photograph style image.",
+      "nl": "Chronophotographic rendering, successive instants recorded on one plate, overlapping phases fanned across a black field, even stroboscopic spacing, bright rims where phases cross, photograph style image.",
       "tags": [
         "monochrome",
         "dark",
@@ -1930,7 +1924,7 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Cibachrome rendering: azo dyes on a polyester base, glassy high-gloss surface, near-black shadows against vivid clean primaries, biting micro-contrast right across the frame, photograph style image.",
+      "nl": "Cibachrome rendering, azo dyes on a polyester base, glassy high-gloss surface, near-black shadows against vivid clean primaries, biting micro-contrast right across the frame, photograph style image.",
       "tags": [
         "photo_(medium)",
         "high_contrast",
@@ -1950,7 +1944,7 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Tungsten night film: cyan-leaning shadows, red halation blooming around every light, fine grain, cool street colour, photograph style image.",
+      "nl": "Tungsten night film, cyan-leaning shadows, red halation blooming around every light, fine grain, cool street colour, photograph style image.",
       "tags": [
         "film_grain",
         "lens_flare",
@@ -1971,7 +1965,7 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Cinewhoop rendering: an ultra-wide micro-drone lens, horizon warped and rolling hard, propeller tips smearing the frame corners, punchy contrast and deep saturation, photograph style image.",
+      "nl": "Cinewhoop rendering, an ultra-wide micro-drone lens, horizon warped and rolling hard, propeller tips smearing the frame corners, punchy contrast and deep saturation, photograph style image.",
       "tags": [
         "fisheye",
         "high_contrast",
@@ -1991,7 +1985,7 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Cloud-chamber rendering: condensation trails threading a vapour volume, thin bright forked tracks curling through a field, dark chamber ground, shallow depth softening the far trails, photograph style image.",
+      "nl": "Cloud-chamber rendering, condensation trails threading a vapour volume, thin bright forked tracks curling through a field, dark chamber ground, shallow depth softening the far trails, photograph style image.",
       "tags": [
         "monochrome",
         "dark",
@@ -2011,7 +2005,7 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Concert capture: coloured stage wash as the only light, hot rim on the performer, haze beams, deep unlit crowd, photograph style image.",
+      "nl": "Concert capture, coloured stage wash as the only light, hot rim on the performer, haze beams, deep unlit crowd, photograph style image.",
       "tags": [
         "backlighting",
         "dark",
@@ -2032,7 +2026,7 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Concert flash capture: hard on-camera burst freezing the foreground, dark falloff behind, coloured stage spill in the background, photograph style image.",
+      "nl": "Concert flash capture, hard on-camera burst freezing the foreground, dark falloff behind, coloured stage spill in the background, photograph style image.",
       "tags": [
         "flash_photography",
         "dark",
@@ -2052,7 +2046,7 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Modern digital capture: clean sensor detail, neutral colour science, controlled dynamic range, subtle micro-contrast, photograph style image.",
+      "nl": "Modern digital capture, clean sensor detail, neutral colour science, controlled dynamic range, subtle micro-contrast, photograph style image.",
       "tags": [
         "highres",
         "photo_(medium)",
@@ -2071,7 +2065,7 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Copy-stand rendering: flat frontal documentation, cross-polarised light with every specular killed, colour-target neutrality, dead-square framing and no depth cue at all, photograph style image.",
+      "nl": "Copy-stand rendering, flat frontal documentation, cross-polarised light with every specular killed, colour-target neutrality, perpendicular alignment and no depth cue at all, photograph style image.",
       "tags": [
         "photo_(medium)",
         "realistic",
@@ -2091,7 +2085,7 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Cross-processed film: wrong-chemistry colour shift, cyan shadows and yellow highlights, crushed contrast, unstable cast, photograph style image.",
+      "nl": "Cross-processed film, wrong-chemistry colour shift, cyan shadows and yellow highlights, crushed contrast, unstable cast, photograph style image.",
       "tags": [
         "high_contrast",
         "film_grain",
@@ -2116,7 +2110,7 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "video artefact style image",
-      "nl": "CRT capture: curved glass geometry, phosphor scanlines, glowing bloom around bright areas, slight chroma bleed, video artefact style image.",
+      "nl": "CRT capture, curved glass geometry, phosphor scanlines, glowing bloom around bright areas, slight chroma bleed, video artefact style image.",
       "tags": [
         "glitch",
         "glowing",
@@ -2138,7 +2132,7 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Cyanotype print: Prussian-blue monochrome, white paper highlights, brush-coated uneven edges, contact-print softness, photograph style image.",
+      "nl": "Cyanotype print, Prussian-blue monochrome, white paper highlights, brush-coated uneven edges, contact-print softness, photograph style image.",
       "tags": [
         "blue_theme",
         "monochrome",
@@ -2158,7 +2152,7 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "instant photograph style image",
-      "nl": "Daguerreotype plate: mirror-silver surface, delicate reversed tonality, shallow depth, tarnish halo at the edges, instant photograph style image.",
+      "nl": "Daguerreotype plate, mirror-silver surface, delicate reversed tonality, shallow depth, tarnish halo at the edges, instant photograph style image.",
       "tags": [
         "sepia",
         "monochrome",
@@ -2178,7 +2172,7 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Dance capture: peak-of-motion limb line, hard studio key isolating the figure, slight trailing blur, dark ground, photograph style image.",
+      "nl": "Dance capture, peak-of-motion limb line, hard studio key isolating the figure, slight trailing blur, dark ground, photograph style image.",
       "tags": [
         "motion_blur",
         "dark",
@@ -2198,7 +2192,7 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Dashcam rendering: fixed windscreen view, blown headlight cores, compression blocking in the dark, timestamp bar, photograph style image.",
+      "nl": "Dashcam rendering, fixed windscreen view, blown headlight cores, compression blocking in the dark, timestamp bar, photograph style image.",
       "tags": [
         "fake_screenshot",
         "dark",
@@ -2218,7 +2212,7 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Heat-haze rendering: shimmering distortion above hot ground, bleached highlights, dust in the air, long telephoto compression, photograph style image.",
+      "nl": "Heat-haze rendering, shimmering distortion above hot ground, bleached highlights, dust in the air, long telephoto compression, photograph style image.",
       "tags": [
         "sunlight",
         "pale_color",
@@ -2238,7 +2232,7 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Disposable-camera capture: harsh frontal flash, red-eye tendency, soft plastic-lens edges, heavy grain, blown foreground, photograph style image.",
+      "nl": "Disposable-camera capture, harsh frontal flash, red-eye tendency, soft plastic-lens edges, heavy grain, blown foreground, photograph style image.",
       "tags": [
         "flash_photography",
         "film_grain",
@@ -2258,7 +2252,7 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Reportage capture: available light, event access framing, working mid contrast, grain retained, no styling, photograph style image.",
+      "nl": "Reportage capture, available light, event access framing, working mid contrast, grain retained, no styling, photograph style image.",
       "tags": [
         "photo_(medium)",
         "film_grain",
@@ -2278,7 +2272,7 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Double-exposure film: two frames stacked in-camera, overlapping ghost densities, blown overlap highlights, grain doubled, photograph style image.",
+      "nl": "Double-exposure film, two frames stacked in-camera, overlapping ghost densities, blown overlap highlights, grain doubled, photograph style image.",
       "tags": [
         "film_grain",
         "transparent",
@@ -2298,7 +2292,7 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Dye-transfer rendering: three dye layers laid in exact register, dense saturated colour with clean neutral greys, mid-century advertising punch, smooth glossy surface, photograph style image.",
+      "nl": "Dye-transfer rendering, three dye layers laid in exact register, dense saturated colour with clean neutral greys, mid-century advertising punch, smooth glossy surface, photograph style image.",
       "tags": [
         "photo_(medium)",
         "high_saturation",
@@ -2318,7 +2312,7 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "On-model rendering: flat even studio light, plain pale sweep, garment shape and colour true, minimal shadow, photograph style image.",
+      "nl": "On-model rendering, flat even studio light, plain pale sweep, garment shape and colour true, minimal shadow, photograph style image.",
       "tags": [
         "simple_background",
         "white_theme",
@@ -2338,7 +2332,7 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Early digital capture: harsh sharpening halos, limited dynamic range, noisy shadows, slightly off white balance, photograph style image.",
+      "nl": "Early digital capture, harsh sharpening halos, limited dynamic range, noisy shadows, slightly off white balance, photograph style image.",
       "tags": [
         "photo_(medium)",
         "high_contrast",
@@ -2358,7 +2352,7 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Early compact-digital capture: tiny-sensor noise, aggressive JPEG artefacts, flat flash exposure, cool colour cast, photograph style image.",
+      "nl": "Early compact-digital capture, tiny-sensor noise, aggressive JPEG artefacts, flat flash exposure, cool colour cast, photograph style image.",
       "tags": [
         "photo_(medium)",
         "glitch",
@@ -2378,7 +2372,7 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Saturated colour-negative landscape: vivid greens and blues, fine grain, deep contrast, crisp far detail, photograph style image.",
+      "nl": "Saturated colour-negative landscape, vivid greens and blues, fine grain, deep contrast, crisp far detail, photograph style image.",
       "tags": [
         "scenery",
         "colorful",
@@ -2398,7 +2392,7 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "instant photograph style image",
-      "nl": "Emulsion-lift rendering: instant-film skin floated onto paper, wrinkled and torn edges, soft muted colour, instant photograph style image.",
+      "nl": "Emulsion-lift rendering, instant-film skin floated onto paper, wrinkled and torn edges, soft muted colour, instant photograph style image.",
       "tags": [
         "instant_photo",
         "textured",
@@ -2418,7 +2412,7 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Endoscope rendering: a tiny wide-angle lens held close to a wet surface, strong barrel distortion, circular black vignette framing the field, hot ring-light hotspot glaring off moisture, photograph style image.",
+      "nl": "Endoscope rendering, a tiny wide-angle lens held close to a wet surface, strong barrel distortion, circular black vignette framing the field, hot ring-light hotspot glaring off moisture, photograph style image.",
       "tags": [
         "fisheye",
         "wet",
@@ -2438,7 +2432,7 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Environmental portrait: subject placed in their own habitat, context kept legible, natural mixed light, moderate depth, photograph style image.",
+      "nl": "Environmental portrait, subject placed in their own habitat, context kept legible, natural mixed light, moderate depth, photograph style image.",
       "tags": [
         "portrait",
         "scenery",
@@ -2458,7 +2452,7 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Expired film capture: drifting colour balance, low contrast, coarse grain clumps, edge fogging, photograph style image.",
+      "nl": "Expired film capture, drifting colour balance, low contrast, coarse grain clumps, edge fogging, photograph style image.",
       "tags": [
         "film_grain",
         "muted_color",
@@ -2480,7 +2474,7 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Family-album capture: hard direct flash, honest ugly room behind, warm print colour, slight paper texture, photograph style image.",
+      "nl": "Family-album capture, hard direct flash, honest ugly room behind, warm print colour, slight paper texture, photograph style image.",
       "tags": [
         "flash_photography",
         "film_grain",
@@ -2500,7 +2494,7 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Fashion editorial capture: sculpted directional light, garment shape held clean, styled colour palette, magazine-grade retouch, photograph style image.",
+      "nl": "Fashion editorial capture, sculpted directional light, garment shape held clean, styled colour palette, magazine-grade retouch, photograph style image.",
       "tags": [
         "photo_(medium)",
         "cinematic_lighting",
@@ -2520,7 +2514,7 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Grain-forward capture: visible silver-halide structure through the mid tones, slight softening of fine detail, organic texture, photograph style image.",
+      "nl": "Grain-forward capture, visible silver-halide structure through the mid tones, slight softening of fine detail, organic texture, photograph style image.",
       "tags": [
         "film_grain",
         "textured",
@@ -2539,7 +2533,7 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Fine-art figure capture: body read as form, raking sculptural light, monochrome tonal scale, deep shadow modelling, photograph style image.",
+      "nl": "Fine-art figure capture, body read as form, raking sculptural light, monochrome tonal scale, deep shadow modelling, photograph style image.",
       "tags": [
         "monochrome",
         "chiaroscuro",
@@ -2559,7 +2553,7 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Firelight rendering: low warm flickering key from below, deep amber falloff, dancing shadow edges, dark surround, photograph style image.",
+      "nl": "Firelight rendering, low warm flickering key from below, deep amber falloff, dancing shadow edges, dark surround, photograph style image.",
       "tags": [
         "orange_theme",
         "glowing",
@@ -2579,7 +2573,7 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Flat-lay rendering: straight-down view of arranged objects, soft even light, tidy negative space, true surface colour, photograph style image.",
+      "nl": "Flat-lay rendering, straight-down view of arranged objects, soft even light, tidy negative space, true surface colour, photograph style image.",
       "tags": [
         "still_life",
         "simple_background",
@@ -2599,7 +2593,7 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Fluorescent rendering: flat green-cyan overhead wash, shadowless ceiling light, dull surface colour, faint flicker banding, photograph style image.",
+      "nl": "Fluorescent rendering, flat green-cyan overhead wash, shadowless ceiling light, dull surface colour, faint flicker banding, photograph style image.",
       "tags": [
         "green_theme",
         "desaturated",
@@ -2619,7 +2613,7 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Food capture: raking side light for texture, steam catching backlight, glossy sauce highlights, shallow focus, photograph style image.",
+      "nl": "Food capture, raking side light for texture, steam catching backlight, glossy sauce highlights, shallow focus, photograph style image.",
       "tags": [
         "still_life",
         "backlighting",
@@ -2639,7 +2633,7 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Styled food capture: composed props, controlled crumb placement, soft window key with bounce, warm appetising grade, photograph style image.",
+      "nl": "Styled food capture, composed props, controlled crumb placement, soft window key with bounce, warm appetising grade, photograph style image.",
       "tags": [
         "still_life",
         "soft_focus",
@@ -2659,7 +2653,7 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Freelens rendering: tilted plane of focus, light leaking around the detached lens, sharp sliver against heavy blur, photograph style image.",
+      "nl": "Freelens rendering, tilted plane of focus, light leaking around the detached lens, sharp sliver against heavy blur, photograph style image.",
       "tags": [
         "depth_of_field",
         "lens_flare",
@@ -2679,7 +2673,7 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Fuji pro colour negative: airy green-leaning palette, cool shadows, gentle contrast, soft creamy highlights, photograph style image.",
+      "nl": "Fuji pro colour negative, airy green-leaning palette, cool shadows, gentle contrast, soft creamy highlights, photograph style image.",
       "tags": [
         "film_grain",
         "muted_color",
@@ -2699,7 +2693,7 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Glamour capture: Hollywood-descended shine, butterfly key with fill, satin highlight roll-off, soft diffusion, photograph style image.",
+      "nl": "Glamour capture, Hollywood-descended shine, butterfly key with fill, satin highlight roll-off, soft diffusion, photograph style image.",
       "tags": [
         "soft_focus",
         "cinematic_lighting",
@@ -2719,7 +2713,7 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Gum-bichromate rendering: brushed pigment coats in registered layers, soft grainy tone, visible brush edges around the frame, photograph style image.",
+      "nl": "Gum-bichromate rendering, brushed pigment coats in registered layers, soft grainy tone, visible brush edges around the frame, photograph style image.",
       "tags": [
         "textured",
         "muted_color",
@@ -2739,7 +2733,7 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Subtle halation: warm red bleed around bright edges, soft glow into adjacent shadow, mild highlight blooming, photograph style image.",
+      "nl": "Subtle halation, warm red bleed around bright edges, soft glow into adjacent shadow, mild highlight blooming, photograph style image.",
       "tags": [
         "lens_flare",
         "glowing",
@@ -2762,7 +2756,7 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Hard-shadow rendering: crisp leaf shadow patterns cast across the frame, bright noon sun, saturated colour, deep contrast, photograph style image.",
+      "nl": "Hard-shadow rendering, crisp leaf shadow patterns cast across the frame, bright noon sun, saturated colour, deep contrast, photograph style image.",
       "tags": [
         "sunlight",
         "high_contrast",
@@ -2782,7 +2776,7 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Professional headshot: eyes tack sharp, soft key with fill, clean neutral backdrop, natural skin rendering, photograph style image.",
+      "nl": "Professional headshot, eyes tack sharp, soft key with fill, clean neutral backdrop, natural skin rendering, photograph style image.",
       "tags": [
         "portrait",
         "upper_body",
@@ -2802,7 +2796,7 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "High-fashion capture: hard sculptural key, extreme styling, graphic negative space, immaculate retouch, cool colour grade, photograph style image.",
+      "nl": "High-fashion capture, hard sculptural key, extreme styling, graphic negative space, immaculate retouch, cool colour grade, photograph style image.",
       "tags": [
         "cinematic_lighting",
         "high_contrast",
@@ -2822,7 +2816,7 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "High-key catalogue capture: bright shadowless wash, near-white background, gentle contrast, true product colour, photograph style image.",
+      "nl": "High-key catalogue capture, bright shadowless wash, near-white background, gentle contrast, true product colour, photograph style image.",
       "tags": [
         "white_theme",
         "simple_background",
@@ -2842,7 +2836,7 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "High-speed strobe rendering: a microsecond flash freezing a splash crown mid-collapse, needle-sharp droplet rims, black velvet ground, hard specular points along every wet edge, photograph style image.",
+      "nl": "High-speed strobe rendering, a microsecond flash freezing a splash crown mid-collapse, needle-sharp droplet rims, black velvet ground, hard specular points along every wet edge, photograph style image.",
       "tags": [
         "flash_photography",
         "wet",
@@ -2863,7 +2857,7 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Toy-camera capture: heavy vignette, soft plastic-lens corners, light leaks, unpredictable colour shift, medium-format grain, photograph style image.",
+      "nl": "Toy-camera capture, heavy vignette, soft plastic-lens corners, light leaks, unpredictable colour shift, medium-format grain, photograph style image.",
       "tags": [
         "vignetting",
         "soft_focus",
@@ -2885,7 +2879,7 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Clinical rendering: cold blue-white LED wash, high ambient fill, pale surfaces, clean shadowless flatness, photograph style image.",
+      "nl": "Clinical rendering, cold blue-white LED wash, high ambient fill, pale surfaces, clean shadowless flatness, photograph style image.",
       "tags": [
         "blue_theme",
         "white_theme",
@@ -2905,7 +2899,7 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Brochure rendering: warm inviting lamplight balanced with dusk windows, styled surfaces, gentle contrast, glossy finish, photograph style image.",
+      "nl": "Brochure rendering, warm inviting lamplight balanced with dusk windows, styled surfaces, gentle contrast, glossy finish, photograph style image.",
       "tags": [
         "glowing",
         "orange_theme",
@@ -2925,7 +2919,7 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "HP5 black and white: gritty grain, forgiving mid tones, deep printable blacks, documentary contrast, photograph style image.",
+      "nl": "HP5 black and white, gritty grain, forgiving mid tones, deep printable blacks, documentary contrast, photograph style image.",
       "tags": [
         "monochrome",
         "film_grain",
@@ -2945,7 +2939,7 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Infrared capture: white glowing foliage, near-black sky, pale skin rendering, soft halation, high contrast, photograph style image.",
+      "nl": "Infrared capture, white glowing foliage, near-black sky, pale skin rendering, soft halation, high contrast, photograph style image.",
       "tags": [
         "monochrome",
         "high_contrast",
@@ -2965,7 +2959,7 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "False-colour infrared: magenta and cyan channel swap, surreal pink foliage, dark skies, glowing edges, photograph style image.",
+      "nl": "False-colour infrared, magenta and cyan channel swap, surreal pink foliage, dark skies, glowing edges, photograph style image.",
       "tags": [
         "pink_theme",
         "surreal",
@@ -2985,7 +2979,7 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "ICM rendering: the camera swept deliberately through a slow exposure, forms drawn into soft vertical or arcing streaks, colour surviving as banded washes, one faint edge left half-legible, photograph style image.",
+      "nl": "ICM rendering, the camera swept deliberately through a slow exposure, forms drawn into soft vertical or arcing streaks, colour surviving as banded washes, one faint edge left half-legible, photograph style image.",
       "tags": [
         "motion_blur",
         "long_exposure",
@@ -3005,7 +2999,7 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Interior capture: corrected verticals, balanced window and lamp exposure, clean wide framing, material texture legible, photograph style image.",
+      "nl": "Interior capture, corrected verticals, balanced window and lamp exposure, clean sightlines, material texture legible, photograph style image.",
       "tags": [
         "scenery",
         "photo_(medium)",
@@ -3025,7 +3019,7 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Dusk interior capture: warm lamps against deep blue window light, mixed colour temperature, glowing pools, soft falloff, photograph style image.",
+      "nl": "Dusk interior capture, warm lamps against deep blue window light, mixed colour temperature, glowing pools, soft falloff, photograph style image.",
       "tags": [
         "glowing",
         "blue_theme",
@@ -3045,7 +3039,7 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Kallitype rendering: warm brown silver tones on coated rag paper, brush-edged border, long delicate tonal scale, photograph style image.",
+      "nl": "Kallitype rendering, warm brown silver tones on coated rag paper, brush-edged border, long delicate tonal scale, photograph style image.",
       "tags": [
         "sepia",
         "monochrome",
@@ -3065,7 +3059,7 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Kirlian rendering: electric corona glowing around the subject's outline, deep black surround, violet-cyan discharge fringe, photograph style image.",
+      "nl": "Kirlian rendering, electric corona glowing around the subject's outline, deep black surround, violet-cyan discharge fringe, photograph style image.",
       "tags": [
         "glowing",
         "dark",
@@ -3085,7 +3079,7 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Knolling capture: straight-down view, objects aligned on a grid, flat even light, hard tiny shadows, plain ground, photograph style image.",
+      "nl": "Knolling capture, straight-down view, objects aligned on a grid, flat even light, hard tiny shadows, plain ground, photograph style image.",
       "tags": [
         "still_life",
         "simple_background",
@@ -3105,7 +3099,7 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "1970s Kodachrome: dense warm reds, tight blues, fine grain, hard contrast, archival slide-film blacks, photograph style image.",
+      "nl": "1970s Kodachrome, dense warm reds, tight blues, fine grain, hard contrast, archival slide-film blacks, photograph style image.",
       "tags": [
         "film_grain",
         "retro_artstyle",
@@ -3129,7 +3123,7 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Consumer gold film: sunny warm cast, soft highlight roll-off, moderate grain, friendly saturated colour, photograph style image.",
+      "nl": "Consumer gold film, sunny warm cast, soft highlight roll-off, moderate grain, friendly saturated colour, photograph style image.",
       "tags": [
         "film_grain",
         "orange_theme",
@@ -3149,7 +3143,7 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Portra colour negative: gentle warm skin rendering, low contrast, pastel highlight roll-off, very fine grain, photograph style image.",
+      "nl": "Portra colour negative, gentle warm skin rendering, low contrast, pastel highlight roll-off, very fine grain, photograph style image.",
       "tags": [
         "film_grain",
         "pastel_colors",
@@ -3169,7 +3163,7 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Landscape capture: deep focus across the frame, weather as the subject, layered aerial perspective, natural colour, photograph style image.",
+      "nl": "Landscape capture, deep focus across the frame, weather as the subject, layered aerial perspective, natural colour, photograph style image.",
       "tags": [
         "scenery",
         "photo_(medium)",
@@ -3189,7 +3183,7 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Large-format landscape: enormous resolving detail, movements-corrected planes, full tonal scale, sheet-film smoothness, photograph style image.",
+      "nl": "Large-format landscape, enormous resolving detail, movements-corrected planes, full tonal scale, sheet-film smoothness, photograph style image.",
       "tags": [
         "scenery",
         "highres",
@@ -3209,7 +3203,7 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Large-format capture: sheet-film detail, shallow plane of focus wide open, ritual stillness, gentle tonal gradation, photograph style image.",
+      "nl": "Large-format capture, sheet-film detail, shallow plane of focus wide open, ritual stillness, gentle tonal gradation, photograph style image.",
       "tags": [
         "highres",
         "photo_(medium)",
@@ -3231,7 +3225,7 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Light-painting capture: drawn photon trails in a long exposure, dark surround, glowing streak edges, static sharp subject, photograph style image.",
+      "nl": "Light-painting capture, drawn photon trails in a long exposure, dark surround, glowing streak edges, static sharp subject, photograph style image.",
       "tags": [
         "long_exposure",
         "glowing",
@@ -3251,7 +3245,7 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Lith print: infectious warm-black shadows, blown gritty highlights, coarse grain clumps, peach-tinted paper base, photograph style image.",
+      "nl": "Lith print, infectious warm-black shadows, blown gritty highlights, coarse grain clumps, peach-tinted paper base, photograph style image.",
       "tags": [
         "monochrome",
         "high_contrast",
@@ -3272,7 +3266,7 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Lomo capture: oversaturated cross-processed colour, heavy vignette, soft corners, unpredictable light leaks, photograph style image.",
+      "nl": "Lomo capture, oversaturated cross-processed colour, heavy vignette, soft corners, unpredictable light leaks, photograph style image.",
       "tags": [
         "high_saturation",
         "vignetting",
@@ -3292,7 +3286,7 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Long exposure: silked water and cloud, ghosted moving figures, static detail razor sharp, smooth tonal blur, photograph style image.",
+      "nl": "Long exposure, silked water and cloud, ghosted moving figures, static detail razor sharp, smooth tonal blur, photograph style image.",
       "tags": [
         "long_exposure",
         "motion_blur",
@@ -3312,7 +3306,7 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Night long exposure: light trails through the frame, deep clean shadows, star-point highlights, still surfaces mirror-sharp, photograph style image.",
+      "nl": "Night long exposure, light trails through the frame, deep clean shadows, star-point highlights, still surfaces mirror-sharp, photograph style image.",
       "tags": [
         "long_exposure",
         "dark",
@@ -3332,7 +3326,7 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Low-key studio capture: single hard source, most of the frame in shadow, sculpted highlight edge, black falloff, photograph style image.",
+      "nl": "Low-key studio capture, single hard source, most of the frame in shadow, sculpted highlight edge, black falloff, photograph style image.",
       "tags": [
         "chiaroscuro",
         "dark",
@@ -3352,7 +3346,7 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Lumen rendering: sunlight printing directly onto silver paper over hours, pink, violet and sepia staining, soft contact edges, mottled uneven bleaching across the sheet, photograph style image.",
+      "nl": "Lumen rendering, sunlight printing directly onto silver paper over hours, pink, violet and sepia staining, soft contact edges, mottled uneven bleaching across the sheet, photograph style image.",
       "tags": [
         "pink_theme",
         "pale_color",
@@ -3372,7 +3366,7 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Macro capture: paper-thin depth of field, scale-shocking detail, diffused close light, soft creamy background wash, photograph style image.",
+      "nl": "Macro capture, paper-thin depth of field, scale-shocking detail, diffused close light, soft creamy background wash, photograph style image.",
       "tags": [
         "depth_of_field",
         "bokeh",
@@ -3392,7 +3386,7 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Nature macro: dew and hair detail at extreme magnification, natural diffuse light, shallow focus plane, green bokeh, photograph style image.",
+      "nl": "Nature macro, dew and hair detail at extreme magnification, natural diffuse light, shallow focus plane, green bokeh, photograph style image.",
       "tags": [
         "depth_of_field",
         "bokeh",
@@ -3412,7 +3406,7 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Working-deck capture: salt spray on the lens, overcast flat light, rust and rope texture, cold desaturated grade, photograph style image.",
+      "nl": "Working-deck capture, salt spray on the lens, overcast flat light, rust and rope texture, cold desaturated grade, photograph style image.",
       "tags": [
         "desaturated",
         "textured",
@@ -3433,7 +3427,7 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Medium-format capture: deep tonal separation, smooth focus falloff, low noise, expensive stillness in the rendering, photograph style image.",
+      "nl": "Medium-format capture, deep tonal separation, smooth focus falloff, low noise, expensive stillness in the rendering, photograph style image.",
       "tags": [
         "highres",
         "depth_of_field",
@@ -3453,7 +3447,7 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Medium-format portrait: creamy shallow focus, immense skin tonal detail, soft window key, muted colour depth, photograph style image.",
+      "nl": "Medium-format portrait, creamy shallow focus, immense skin tonal detail, soft window key, muted colour depth, photograph style image.",
       "tags": [
         "portrait",
         "bokeh",
@@ -3473,7 +3467,7 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Microfiche rendering: a high-contrast library scan, blown-out white ground with crushed grey midtones, dust specks and scratch lines, soft optical fall-off into the corners, photograph style image.",
+      "nl": "Microfiche rendering, a high-contrast library scan, blown-out white ground with crushed grey midtones, dust specks and scratch lines, soft optical fall-off into the corners, photograph style image.",
       "tags": [
         "monochrome",
         "high_contrast",
@@ -3493,7 +3487,7 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Microscopy rendering: stained translucent structures, razor-thin focus, circular field vignette, clinical backlight, photograph style image.",
+      "nl": "Microscopy rendering, stained translucent structures, razor-thin focus, circular field vignette, clinical backlight, photograph style image.",
       "tags": [
         "transparent",
         "depth_of_field",
@@ -3514,7 +3508,7 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Astro-panorama rendering: dense star core arching over a silhouetted horizon, deep blue-black sky, faint airglow, photograph style image.",
+      "nl": "Astro-panorama rendering, dense star core arching over a silhouetted horizon, deep blue-black sky, faint airglow, photograph style image.",
       "tags": [
         "dark",
         "scenery",
@@ -3535,7 +3529,7 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Moonlight rendering: cool blue ambient over a long exposure, star points, soft shadow edges, silky water and cloud, photograph style image.",
+      "nl": "Moonlight rendering, cool blue ambient over a long exposure, star points, soft shadow edges, silky water and cloud, photograph style image.",
       "tags": [
         "blue_theme",
         "long_exposure",
@@ -3555,7 +3549,7 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Panned capture: subject held sharp against horizontally streaked surroundings, directional blur, sense of speed, photograph style image.",
+      "nl": "Panned capture, subject held sharp against horizontally streaked surroundings, directional blur, sense of speed, photograph style image.",
       "tags": [
         "motion_blur",
         "photo_(medium)",
@@ -3577,7 +3571,7 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Multiple-exposure capture: stacked ghost layers, additive highlight build-up, semi-transparent overlaps, doubled grain, photograph style image.",
+      "nl": "Multiple-exposure capture, stacked ghost layers, additive highlight build-up, semi-transparent overlaps, doubled grain, photograph style image.",
       "tags": [
         "transparent",
         "film_grain",
@@ -3597,7 +3591,7 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Night-vision rendering: monochrome green phosphor image, heavy sensor noise, blown highlights, vignetted circular field, photograph style image.",
+      "nl": "Night-vision rendering, monochrome green phosphor image, heavy sensor noise, blown highlights, vignetted circular field, photograph style image.",
       "tags": [
         "green_theme",
         "dark",
@@ -3618,7 +3612,7 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Telephoto candid capture: compressed background, hunted framing, uneven street light, slight motion softness, photograph style image.",
+      "nl": "Telephoto candid capture, compressed background, hunted framing, uneven street light, slight motion softness, photograph style image.",
       "tags": [
         "depth_of_field",
         "photo_(medium)",
@@ -3639,7 +3633,7 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Petzval rendering: swirling looped bokeh at the edges, sharp centre, strong field curvature, vignette falloff, photograph style image.",
+      "nl": "Petzval rendering, swirling looped bokeh at the edges, sharp centre, strong field curvature, vignette falloff, photograph style image.",
       "tags": [
         "bokeh",
         "vignetting",
@@ -3659,7 +3653,7 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Photogram rendering: objects laid straight onto the paper and exposed, luminous white silhouettes on dense black, soft penumbra where contact loosens, no lens-drawn detail anywhere, photograph style image.",
+      "nl": "Photogram rendering, objects laid straight onto the paper and exposed, luminous white silhouettes on dense black, soft penumbra where contact loosens, no lens-drawn detail anywhere, photograph style image.",
       "tags": [
         "monochrome",
         "silhouette",
@@ -3679,7 +3673,7 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Pictorialist capture: soft-focus lens, brush-marked printing, warm platinum tone, painterly atmospheric haze, photograph style image.",
+      "nl": "Pictorialist capture, soft-focus lens, brush-marked printing, warm platinum tone, painterly atmospheric haze, photograph style image.",
       "tags": [
         "soft_focus",
         "sepia",
@@ -3699,7 +3693,7 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Pinhole capture: infinite depth with overall softness, heavy vignette, long-exposure ghosting, gentle radial distortion, photograph style image.",
+      "nl": "Pinhole capture, infinite depth with overall softness, heavy vignette, long-exposure ghosting, gentle radial distortion, photograph style image.",
       "tags": [
         "soft_focus",
         "vignetting",
@@ -3719,7 +3713,7 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Platinum print: matte noble greys, extremely long tonal scale, no glossy blacks, cotton paper texture, photograph style image.",
+      "nl": "Platinum print, matte noble greys, extremely long tonal scale, no glossy blacks, cotton paper texture, photograph style image.",
       "tags": [
         "monochrome",
         "greyscale",
@@ -3743,7 +3737,7 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "instant photograph style image",
-      "nl": "Instant-film capture: soft low-contrast colour, cyan-shifted shadows, white border, chemical unevenness, instant photograph style image.",
+      "nl": "Instant-film capture, soft low-contrast colour, cyan-shifted shadows, white border, chemical unevenness, instant photograph style image.",
       "tags": [
         "instant_photo",
         "photo_border",
@@ -3765,7 +3759,7 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Warm Portra portrait: gentle skin gradation, soft neutral shadows, fine grain, low-contrast pastel highlights, photograph style image.",
+      "nl": "Warm Portra portrait, gentle skin gradation, soft neutral shadows, fine grain, low-contrast pastel highlights, photograph style image.",
       "tags": [
         "portrait",
         "film_grain",
@@ -3785,7 +3779,7 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Prism rendering: refracted duplicate slivers along one edge, rainbow fringe spill, soft smeared overlay across the frame, photograph style image.",
+      "nl": "Prism rendering, refracted duplicate slivers along one edge, rainbow fringe spill, soft smeared overlay across the frame, photograph style image.",
       "tags": [
         "iridescent",
         "lens_flare",
@@ -3805,7 +3799,7 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Tabletop product capture: controlled reflection panels, gradient background falloff, crisp edge definition, true colour, photograph style image.",
+      "nl": "Tabletop product capture, controlled reflection panels, gradient background falloff, crisp edge definition, true colour, photograph style image.",
       "tags": [
         "still_life",
         "simple_background",
@@ -3825,7 +3819,7 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Push-processed film: raised contrast, enlarged grain clumps, blocked shadows, gritty mid tones, photograph style image.",
+      "nl": "Push-processed film, raised contrast, enlarged grain clumps, blocked shadows, gritty mid tones, photograph style image.",
       "tags": [
         "film_grain",
         "high_contrast",
@@ -3845,7 +3839,7 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Rangefinder street capture: 35mm framing, deep zone focus, quiet observational distance, natural mixed light, fine grain, photograph style image.",
+      "nl": "Rangefinder street capture, 35mm framing, deep zone focus, quiet observational distance, natural mixed light, fine grain, photograph style image.",
       "tags": [
         "photo_(medium)",
         "film_grain",
@@ -3864,7 +3858,7 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Property rendering: wide corrected verticals, windows exposed to keep the view, bright even ambient fill, tidy neutral colour, photograph style image.",
+      "nl": "Property rendering, wide corrected verticals, windows exposed to keep the view, bright even ambient fill, tidy neutral colour, photograph style image.",
       "tags": [
         "scenery",
         "highres",
@@ -3884,7 +3878,7 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Ring-flash rendering: shadowless frontal light with a thin halo shadow behind, circular catchlights, punchy saturation, photograph style image.",
+      "nl": "Ring-flash rendering, shadowless frontal light with a thin halo shadow behind, circular catchlights, punchy saturation, photograph style image.",
       "tags": [
         "flash_photography",
         "high_contrast",
@@ -3904,7 +3898,7 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Salted-paper rendering: matte fibrous print with the sheet's own fibre visible, soft violet-brown tone, low contrast and gentle highlight roll-off, a faint even fog across the image, photograph style image.",
+      "nl": "Salted-paper rendering, matte fibrous print with the sheet's own fibre visible, soft violet-brown tone, low contrast and gentle highlight roll-off, a faint even fog across the image, photograph style image.",
       "tags": [
         "sepia",
         "monochrome",
@@ -3924,7 +3918,7 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Satellite rendering: straight-down orbital view, flattened land patterns, thin cloud veils, faint sensor banding, photograph style image.",
+      "nl": "Satellite rendering, straight-down orbital view, flattened land patterns, thin cloud veils, faint sensor banding, photograph style image.",
       "tags": [
         "map",
         "scenery",
@@ -3944,7 +3938,7 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Schlieren rendering: invisible air currents made visible as rippling grey streaks, knife-edge shading, laboratory flatness, photograph style image.",
+      "nl": "Schlieren rendering, invisible air currents made visible as rippling grey streaks, knife-edge shading, laboratory flatness, photograph style image.",
       "tags": [
         "monochrome",
         "greyscale",
@@ -3964,7 +3958,7 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Seascape capture: horizon-anchored composition, either frozen spray or silked water, salt haze, cool blue-grey grade, photograph style image.",
+      "nl": "Seascape capture, horizon-anchored composition, either frozen spray or silked water, salt haze, cool blue-grey grade, photograph style image.",
       "tags": [
         "scenery",
         "long_exposure",
@@ -3984,7 +3978,7 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Selenium-toned print: eggplant-cooled blacks, extended shadow separation, archival gloss, silver tonality, photograph style image.",
+      "nl": "Selenium-toned print, eggplant-cooled blacks, extended shadow separation, archival gloss, silver tonality, photograph style image.",
       "tags": [
         "monochrome",
         "purple_theme",
@@ -4004,7 +3998,7 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Slit-scan rendering: one narrow slit exposed continuously through time, forms smeared into long ribbons along the scan axis, motionless edges left needle-sharp, vertical banding throughout, photograph style image.",
+      "nl": "Slit-scan rendering, one narrow slit exposed continuously through time, forms smeared into long ribbons along the scan axis, motionless edges left needle-sharp, vertical banding throughout, photograph style image.",
       "tags": [
         "motion_blur",
         "photo_(medium)",
@@ -4023,7 +4017,7 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Sodium-lamp rendering: monochromatic amber wash, colour reduced to orange and black, hard pools of light, deep shadow, photograph style image.",
+      "nl": "Sodium-lamp rendering, monochromatic amber wash, colour reduced to orange and black, hard pools of light, deep shadow, photograph style image.",
       "tags": [
         "orange_theme",
         "dark",
@@ -4043,7 +4037,7 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Solargraph rendering: a months-long pinhole exposure printing stacked arcs of sun tracks, reversed muted colour, immobile forms softened to ghosts, heavy vignette and paper staining, photograph style image.",
+      "nl": "Solargraph rendering, a months-long pinhole exposure printing stacked arcs of sun tracks, reversed muted colour, immobile forms softened to ghosts, heavy vignette and paper staining, photograph style image.",
       "tags": [
         "long_exposure",
         "muted_color",
@@ -4063,7 +4057,7 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Sabattier rendering: partially reversed tones with bright Mackie lines tracing every edge, silver-grey mid tones, photograph style image.",
+      "nl": "Sabattier rendering, partially reversed tones with bright Mackie lines tracing every edge, silver-grey mid tones, photograph style image.",
       "tags": [
         "monochrome",
         "high_contrast",
@@ -4083,7 +4077,7 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Split-toned print: one hue in the highlights and its opposite in the shadows, neutral mid tones, gentle contrast, photograph style image.",
+      "nl": "Split-toned print, one hue in the highlights and its opposite in the shadows, neutral mid tones, gentle contrast, photograph style image.",
       "tags": [
         "duotone",
         "monochrome",
@@ -4103,7 +4097,7 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Arena rendering: high wide vantage, hard overhead floodlight, saturated pitch colour, crowd falling into shadow, photograph style image.",
+      "nl": "Arena rendering, high wide vantage, hard overhead floodlight, saturated pitch colour, crowd falling into shadow, photograph style image.",
       "tags": [
         "scenery",
         "high_contrast",
@@ -4123,7 +4117,7 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Peak-action capture: extreme telephoto isolation, blurred crowd wash, hard rim light on the athlete, frozen detail, photograph style image.",
+      "nl": "Peak-action capture, extreme telephoto isolation, blurred crowd wash, hard rim light on the athlete, frozen detail, photograph style image.",
       "tags": [
         "bokeh",
         "depth_of_field",
@@ -4145,7 +4139,7 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Star-trail rendering: hundreds of night frames stacked into concentric arcs about the pole, warm light pollution banding the horizon, faint gaps where frames join, deep blue-black sky, photograph style image.",
+      "nl": "Star-trail rendering, hundreds of night frames stacked into concentric arcs about the pole, warm light pollution banding the horizon, faint gaps where frames join, deep blue-black sky, photograph style image.",
       "tags": [
         "long_exposure",
         "dark",
@@ -4165,7 +4159,7 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Still-life capture: arranged objects, single soft key, deliberate shadow shapes, matte surfaces, quiet colour, photograph style image.",
+      "nl": "Still-life capture, arranged objects, single soft key, deliberate shadow shapes, matte surfaces, quiet colour, photograph style image.",
       "tags": [
         "still_life",
         "simple_background",
@@ -4185,7 +4179,7 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Storm rendering: bruised green-black cloud structure, hard sunlit ground strip, rain curtains, high dynamic contrast, photograph style image.",
+      "nl": "Storm rendering, bruised green-black cloud structure, hard sunlit ground strip, rain curtains, high dynamic contrast, photograph style image.",
       "tags": [
         "scenery",
         "dark",
@@ -4205,7 +4199,7 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Street black and white on HP5: gritty grain, high mid contrast, deep blacks, available mixed light, snap framing, photograph style image.",
+      "nl": "Street black and white on HP5, gritty grain, high mid contrast, deep blacks, available mixed light, snap framing, photograph style image.",
       "tags": [
         "monochrome",
         "film_grain",
@@ -4225,7 +4219,7 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Street capture: public decisive moment, available light, layered background, unposed gesture, natural colour, photograph style image.",
+      "nl": "Street capture, public decisive moment, available light, layered background, unposed gesture, natural colour, photograph style image.",
       "tags": [
         "photo_(medium)",
         "film_grain",
@@ -4244,7 +4238,7 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Strip-camera rendering: a fixed slit recording against continuously moving film, forms stretched or squeezed by their own speed, repeating banded background, no perspective convergence, photograph style image.",
+      "nl": "Strip-camera rendering, a fixed slit recording against continuously moving film, forms stretched or squeezed by their own speed, repeating banded background, no perspective convergence, photograph style image.",
       "tags": [
         "motion_blur",
         "photo_(medium)",
@@ -4263,7 +4257,7 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Studio beauty capture: beauty-dish key with under-fill, clean specular skin sheen, seamless backdrop, precise retouch, photograph style image.",
+      "nl": "Studio beauty capture, beauty-dish key with under-fill, clean specular skin sheen, seamless backdrop, precise retouch, photograph style image.",
       "tags": [
         "portrait",
         "simple_background",
@@ -4283,10 +4277,9 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Swing-lens rendering: a rotating slit sweeping a very wide field, horizon bowing gently through the frame, faint exposure banding between sweeps, tapered stretch towards both ends, photograph style image.",
+      "nl": "Swing-lens rendering, a rotating slit sweeping a very wide field, horizon bowing gently through the frame, faint exposure banding between sweeps, tapered stretch towards both ends, photograph style image.",
       "tags": [
         "photo_(medium)",
-        "widescreen",
         "realistic"
       ],
       "tags_negative": [
@@ -4302,7 +4295,7 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Thermal rendering: heat mapped to a false-colour ramp, glowing warm bodies against cold surroundings, no texture detail, photograph style image.",
+      "nl": "Thermal rendering, heat mapped to a false-colour ramp, glowing warm bodies against cold surroundings, no texture detail, photograph style image.",
       "tags": [
         "glowing",
         "gradient",
@@ -4322,7 +4315,7 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Tilt-shift capture: razor-thin focus band with blur above and below, saturated colour, high viewpoint, toy-scale illusion, photograph style image.",
+      "nl": "Tilt-shift capture, razor-thin focus band with blur above and below, saturated colour, high viewpoint, toy-scale illusion, photograph style image.",
       "tags": [
         "depth_of_field",
         "high_saturation",
@@ -4342,7 +4335,7 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "instant photograph style image",
-      "nl": "Tintype plate: dark metal base, silvery reversed tonality, shallow focus, chemical streaks and edge flaws, instant photograph style image.",
+      "nl": "Tintype plate, dark metal base, silvery reversed tonality, shallow focus, chemical streaks and edge flaws, instant photograph style image.",
       "tags": [
         "monochrome",
         "sepia",
@@ -4363,7 +4356,7 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Trail-camera rendering: monochrome infrared flash at night, flat frontal light falling off hard into blackness, bright eye-shine, a burnt-in data bar and heavy sensor noise, photograph style image.",
+      "nl": "Trail-camera rendering, monochrome infrared flash at night, flat frontal light falling off hard into blackness, bright eye-shine, a burnt-in data bar and heavy sensor noise, photograph style image.",
       "tags": [
         "monochrome",
         "flash_photography",
@@ -4383,7 +4376,7 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Tri-X black and white: punchy street contrast, coarse grain, deep blacks, bright separated highlights, photograph style image.",
+      "nl": "Tri-X black and white, punchy street contrast, coarse grain, deep blacks, bright separated highlights, photograph style image.",
       "tags": [
         "monochrome",
         "film_grain",
@@ -4405,7 +4398,7 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "film still style image",
-      "nl": "Tungsten cinema stock at night: cool cyan shadows, warm practicals, halation around lamps, fine grain, film still style image.",
+      "nl": "Tungsten cinema stock at night, cool cyan shadows, warm practicals, halation around lamps, fine grain, film still style image.",
       "tags": [
         "film_grain",
         "glowing",
@@ -4426,16 +4419,14 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Twin-lens capture: square frame, waist-level viewpoint, mid-century tonality, gentle corner falloff, photograph style image.",
+      "nl": "Twin-lens capture, waist-level viewpoint, mid-century tonality, gentle corner falloff, soft flare tolerance, photograph style image.",
       "tags": [
         "photo_(medium)",
         "monochrome",
         "vignetting",
         "retro_artstyle"
       ],
-      "tags_negative": [
-        "widescreen"
-      ],
+      "tags_negative": [],
       "negative": "wide letterbox crop, modern colour science",
       "aliases": [],
       "written": true
@@ -4446,7 +4437,7 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Underwater capture: cyan-green colour cast, backscatter particles, god-ray shafts from above, soft distance falloff, photograph style image.",
+      "nl": "Underwater capture, cyan-green colour cast, backscatter particles, god-ray shafts from above, soft distance falloff, photograph style image.",
       "tags": [
         "underwater",
         "green_theme",
@@ -4470,7 +4461,7 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Velvia slide film: hyper-saturated greens and reds, dense blacks, high contrast, ultra-fine grain, photograph style image.",
+      "nl": "Velvia slide film, hyper-saturated greens and reds, dense blacks, high contrast, ultra-fine grain, photograph style image.",
       "tags": [
         "high_saturation",
         "scenery",
@@ -4490,7 +4481,7 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "video artefact style image",
-      "nl": "VHS capture: chroma bleed, tracking bands, soft blown highlights, interlace comb edges, worn tape colour, video artefact style image.",
+      "nl": "VHS capture, chroma bleed, tracking bands, soft blown highlights, interlace comb edges, worn tape colour, video artefact style image.",
       "tags": [
         "glitch",
         "film_grain",
@@ -4512,7 +4503,7 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Video-call rendering: tiled participant panels, mismatched exposure per tile, compression artefacts, name-bar strips, photograph style image.",
+      "nl": "Video-call rendering, tiled participant panels, mismatched exposure per tile, compression artefacts, name-bar strips, photograph style image.",
       "tags": [
         "fake_screenshot",
         "multiple_views",
@@ -4532,7 +4523,7 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "View-camera capture: swing-and-tilt controlled focus plane, corrected verticals, immense sheet-film detail, photograph style image.",
+      "nl": "View-camera capture, swing-and-tilt controlled focus plane, corrected verticals, immense sheet-film detail, photograph style image.",
       "tags": [
         "highres",
         "photo_(medium)",
@@ -4552,7 +4543,7 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Webcam rendering: low-resolution softness, flat frontal exposure, colour noise in shadow, mild ghosting between frames, photograph style image.",
+      "nl": "Webcam rendering, low-resolution softness, flat frontal exposure, colour noise in shadow, mild ghosting between frames, photograph style image.",
       "tags": [
         "fake_screenshot",
         "desaturated",
@@ -4572,7 +4563,7 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Wedding reportage: available chaos caught candidly, mixed venue light, warm skin grade, occasional bounce flash, photograph style image.",
+      "nl": "Wedding reportage, available chaos caught candidly, mixed venue light, warm skin grade, occasional bounce flash, photograph style image.",
       "tags": [
         "photo_(medium)",
         "flash_photography",
@@ -4592,7 +4583,7 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "instant photograph style image",
-      "nl": "Collodion plate: reversed tonal scale, blue-blind skies gone white, pour marks at the border, silver sheen, instant photograph style image.",
+      "nl": "Collodion plate, reversed tonal scale, blue-blind skies gone white, pour marks at the border, silver sheen, instant photograph style image.",
       "tags": [
         "monochrome",
         "sepia",
@@ -4614,7 +4605,7 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Wildlife capture: long-lens compression, catchlight in the animal's eye, blurred habitat wash, natural early light, photograph style image.",
+      "nl": "Wildlife capture, long-lens compression, catchlight in the animal's eye, blurred habitat wash, natural early light, photograph style image.",
       "tags": [
         "bokeh",
         "depth_of_field",
@@ -4634,7 +4625,7 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Telephoto wildlife capture: extreme compression, creamy separated background, sharp fur and feather detail, low-angle light, photograph style image.",
+      "nl": "Telephoto wildlife capture, extreme compression, creamy separated background, sharp fur and feather detail, low-angle light, photograph style image.",
       "tags": [
         "bokeh",
         "depth_of_field",
@@ -4655,7 +4646,7 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Yearbook studio capture: mottled blue-grey backdrop, soft frontal key with hair light, mild retouch, dated colour, photograph style image.",
+      "nl": "Yearbook studio capture, mottled blue-grey backdrop, soft frontal key with hair light, mild retouch, dated colour, photograph style image.",
       "tags": [
         "portrait",
         "simple_background",
@@ -4675,7 +4666,7 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Zoom-burst rendering: focal length pulled during a long exposure, radial streaks flung outward from a still centre, one small core left readable, colour smeared into rays, photograph style image.",
+      "nl": "Zoom-burst rendering, focal length pulled during a long exposure, radial streaks flung outward from a still centre, one small core left readable, colour smeared into rays, photograph style image.",
       "tags": [
         "motion_blur",
         "long_exposure",
@@ -4695,7 +4686,7 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Heavily graded digital capture: lifted shadows, split-toned colour, clarity-boosted texture, glossy finished contrast, photograph style image.",
+      "nl": "Heavily graded digital capture, lifted shadows, split-toned colour, clarity-boosted texture, glossy finished contrast, photograph style image.",
       "tags": [
         "high_contrast",
         "highres",
@@ -4717,7 +4708,7 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Analogue capture: emulsion grain, warm imperfect colour, soft highlight roll-off, occasional dust and scratch, photograph style image.",
+      "nl": "Analogue capture, emulsion grain, warm imperfect colour, soft highlight roll-off, occasional dust and scratch, photograph style image.",
       "tags": [
         "film_grain",
         "muted_color",
@@ -4739,7 +4730,7 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Staged portrait capture: theatrical key light, rich saturated grade, deliberate environmental staging, painterly depth, photograph style image.",
+      "nl": "Staged portrait capture, theatrical key light, rich saturated grade, deliberate environmental staging, painterly depth, photograph style image.",
       "tags": [
         "portrait",
         "cinematic_lighting",
@@ -4761,7 +4752,7 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Art-photography capture: composed conceptual framing, restrained palette, deliberate negative space, gallery print tonality, photograph style image.",
+      "nl": "Art-photography capture, composed conceptual framing, restrained palette, deliberate negative space, gallery print tonality, photograph style image.",
       "tags": [
         "photo_(medium)",
         "muted_color",
@@ -4783,7 +4774,7 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Backlit portrait: sun behind the subject, glowing hair rim, hazy lens flare, lifted shadow fill, photograph style image.",
+      "nl": "Backlit portrait, sun behind the subject, glowing hair rim, hazy lens flare, lifted shadow fill, photograph style image.",
       "tags": [
         "backlighting",
         "lens_flare",
@@ -4806,7 +4797,7 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Documentary monochrome: available light, full grey scale, grain in the mid tones, honest unstyled framing, photograph style image.",
+      "nl": "Documentary monochrome, available light, full grey scale, grain in the mid tones, honest unstyled framing, photograph style image.",
       "tags": [
         "monochrome",
         "greyscale",
@@ -4828,7 +4819,7 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Bleach-bypass grade: silver retained for crushed contrast, desaturated colour over a grey base, gritty texture, photograph style image.",
+      "nl": "Bleach-bypass grade, silver retained for crushed contrast, desaturated colour over a grey base, gritty texture, photograph style image.",
       "tags": [
         "desaturated",
         "high_contrast",
@@ -4850,7 +4841,7 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "film still style image",
-      "nl": "Blue-hour capture: deep cobalt ambient sky, warm practical lamps as accents, soft directionless fill, fine grain, film still style image.",
+      "nl": "Blue-hour capture, deep cobalt ambient sky, warm practical lamps as accents, soft directionless fill, fine grain, film still style image.",
       "tags": [
         "blue_theme",
         "glowing",
@@ -4872,7 +4863,7 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Abstracted monochrome capture: graphic tonal shapes, extreme close framing, deep blacks, sculptural texture, photograph style image.",
+      "nl": "Abstracted monochrome capture, graphic tonal shapes, extreme close framing, deep blacks, sculptural texture, photograph style image.",
       "tags": [
         "monochrome",
         "high_contrast",
@@ -4894,7 +4885,7 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Butterfly-lit portrait: key directly above the lens axis, small shadow under the nose, sculpted cheekbones, soft fill, photograph style image.",
+      "nl": "Butterfly-lit portrait, key directly above the lens axis, small shadow under the nose, sculpted cheekbones, soft fill, photograph style image.",
       "tags": [
         "portrait",
         "cinematic_lighting",
@@ -4916,7 +4907,7 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Candid capture: unaware subject, mid-gesture timing, available light, imperfect framing, natural colour, photograph style image.",
+      "nl": "Candid capture, unaware subject, mid-gesture timing, available light, imperfect framing, natural colour, photograph style image.",
       "tags": [
         "photo_(medium)",
         "realistic",
@@ -4937,10 +4928,9 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "film still style image",
-      "nl": "Cinematic photographic capture: motivated key, teal-and-amber separation, letterbox framing, shallow focus, gentle grain, film still style image.",
+      "nl": "Cinematic photographic capture, motivated key, teal-and-amber separation, shallow focus, gentle grain, soft highlight rolloff, film still style image.",
       "tags": [
         "cinematic_lighting",
-        "widescreen",
         "depth_of_field",
         "film_grain"
       ],
@@ -4959,7 +4949,7 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Neon-grid capture: black surfaces with glowing edge lines, cyan and orange emissive strips, hard reflections, photograph style image.",
+      "nl": "Neon-grid capture, black surfaces with glowing edge lines, cyan and orange emissive strips, hard reflections, photograph style image.",
       "tags": [
         "neon_palette",
         "glowing",
@@ -4982,7 +4972,7 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Commercial beauty capture: flawless even key, controlled specular sheen, saturated product colour, clinical retouch, photograph style image.",
+      "nl": "Commercial beauty capture, flawless even key, controlled specular sheen, saturated product colour, clinical retouch, photograph style image.",
       "tags": [
         "portrait",
         "simple_background",
@@ -5004,7 +4994,7 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Cosplay capture: costume material read clearly, coloured accent lighting, atmospheric haze, sharp prop detail, photograph style image.",
+      "nl": "Cosplay capture, costume material read clearly, coloured accent lighting, atmospheric haze, sharp prop detail, photograph style image.",
       "tags": [
         "photo_(medium)",
         "glowing",
@@ -5026,7 +5016,7 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Cyberpunk capture: neon sign spill, rain-wet reflections, smog volumetrics, magenta-cyan grade, deep black shadow, photograph style image.",
+      "nl": "Cyberpunk capture, neon sign spill, rain-wet reflections, smog volumetrics, magenta-cyan grade, deep black shadow, photograph style image.",
       "tags": [
         "neon_palette",
         "wet",
@@ -5049,7 +5039,7 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Direct-flash capture: hard frontal burst, sharp shadow outline behind, blown near-field, rapid falloff to black, photograph style image.",
+      "nl": "Direct-flash capture, hard frontal burst, sharp shadow outline behind, blown near-field, rapid falloff to black, photograph style image.",
       "tags": [
         "flash_photography",
         "high_contrast",
@@ -5071,7 +5061,7 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Dutch-angle capture: tilted horizon, destabilised diagonals, wide-lens tension, hard directional light, photograph style image.",
+      "nl": "Dutch-angle capture, tilted horizon, destabilised diagonals, wide-lens tension, hard directional light, photograph style image.",
       "tags": [
         "dutch_angle",
         "high_contrast",
@@ -5092,7 +5082,7 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Editorial capture: magazine styling with photographic honesty, sculpted key light, considered colour palette, clean retouch, photograph style image.",
+      "nl": "Editorial capture, magazine styling with photographic honesty, sculpted key light, considered colour palette, clean retouch, photograph style image.",
       "tags": [
         "photo_(medium)",
         "cinematic_lighting",
@@ -5114,7 +5104,7 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Ethereal portrait capture: veiled diffusion glow, pale luminous palette, soft backlight halo, delicate low contrast, photograph style image.",
+      "nl": "Ethereal portrait capture, veiled diffusion glow, pale luminous palette, soft backlight halo, delicate low contrast, photograph style image.",
       "tags": [
         "soft_focus",
         "backlighting",
@@ -5137,7 +5127,7 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "film still style image",
-      "nl": "Noir capture: single hard key, venetian-blind shadow, smoke in the beam, crushed blacks, silver monochrome, film still style image.",
+      "nl": "Noir capture, single hard key, venetian-blind shadow, smoke in the beam, crushed blacks, silver monochrome, film still style image.",
       "tags": [
         "monochrome",
         "chiaroscuro",
@@ -5161,7 +5151,7 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Fish-eye capture: extreme barrel distortion, curved horizon, exaggerated near-field scale, deep focus, photograph style image.",
+      "nl": "Fish-eye capture, extreme barrel distortion, curved horizon, exaggerated near-field scale, deep focus, photograph style image.",
       "tags": [
         "fisheye",
         "high_contrast",
@@ -5183,7 +5173,7 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Full-length capture: head-to-toe framing with headroom, even floor-level light, clean ground separation, natural proportion, photograph style image.",
+      "nl": "Full-length capture, head-to-toe framing with headroom, even floor-level light, clean ground separation, natural proportion, photograph style image.",
       "tags": [
         "full_body",
         "photo_(medium)",
@@ -5204,7 +5194,7 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Golden-hour capture: low amber sun, long soft shadows, warm rim light, glowing dust haze, gentle contrast, photograph style image.",
+      "nl": "Golden-hour capture, low amber sun, long soft shadows, warm rim light, glowing dust haze, gentle contrast, photograph style image.",
       "tags": [
         "sunlight",
         "sunset",
@@ -5227,7 +5217,7 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Men's-magazine capture: crisp tailored styling, hard sculpted key with deep fill, cool neutral grade, immaculate retouch, photograph style image.",
+      "nl": "Men's-magazine capture, crisp tailored styling, hard sculpted key with deep fill, cool neutral grade, immaculate retouch, photograph style image.",
       "tags": [
         "portrait",
         "cinematic_lighting",
@@ -5249,7 +5239,7 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "HDR capture: shadows and highlights compressed into view, local contrast boosted, halo edges, hyper-detailed texture, photograph style image.",
+      "nl": "HDR capture, shadows and highlights compressed into view, local contrast boosted, halo edges, hyper-detailed texture, photograph style image.",
       "tags": [
         "high_contrast",
         "highres",
@@ -5271,7 +5261,7 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "High-angle capture: camera looking down, compressed floor plane, shortened figure proportion, even overhead light, photograph style image.",
+      "nl": "High-angle capture, camera looking down, compressed floor plane, shortened figure proportion, even overhead light, photograph style image.",
       "tags": [
         "photo_(medium)",
         "scenery",
@@ -5292,7 +5282,7 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "High-contrast capture: blown white surround, hard rim tracing the subject, dense shadow detail, decisive tonal separation, photograph style image.",
+      "nl": "High-contrast capture, blown white surround, hard rim tracing the subject, dense shadow detail, decisive tonal separation, photograph style image.",
       "tags": [
         "high_contrast",
         "white_theme",
@@ -5314,7 +5304,7 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "High-key capture: bright shadowless wash, white-on-white tonality, soft wraparound fill, airy low contrast, photograph style image.",
+      "nl": "High-key capture, bright shadowless wash, white-on-white tonality, soft wraparound fill, airy low contrast, photograph style image.",
       "tags": [
         "white_theme",
         "soft_focus",
@@ -5336,7 +5326,7 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "film still style image",
-      "nl": "Suspense-cinema capture: symmetrical unsettling framing, hard shadow bars, saturated period colour, deep staging, film still style image.",
+      "nl": "Suspense-cinema capture, symmetrical unsettling framing, hard shadow bars, saturated period colour, deep staging, film still style image.",
       "tags": [
         "cinematic_lighting",
         "high_contrast",
@@ -5358,7 +5348,7 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Synthwave-graded capture: magenta-to-cyan gradient wash, glowing grid reflections, chrome specular sheen, dark surround, photograph style image.",
+      "nl": "Synthwave-graded capture, magenta-to-cyan gradient wash, glowing grid reflections, chrome specular sheen, dark surround, photograph style image.",
       "tags": [
         "neon_palette",
         "gradient",
@@ -5381,7 +5371,7 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Imperfection-led capture: skin texture, stray hair and creases kept, uneven ambient light, honest colour, photograph style image.",
+      "nl": "Imperfection-led capture, skin texture, stray hair and creases kept, uneven ambient light, honest colour, photograph style image.",
       "tags": [
         "realistic",
         "textured",
@@ -5403,7 +5393,7 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Social-glamour capture: warm even key, glossy skin sheen, saturated highlight bloom, shallow phone-style depth, photograph style image.",
+      "nl": "Social-glamour capture, warm even key, glossy skin sheen, saturated highlight bloom, shallow phone-style depth, photograph style image.",
       "tags": [
         "portrait",
         "soft_focus",
@@ -5425,7 +5415,7 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "film still style image",
-      "nl": "Neon-action capture: cyan and magenta wash across black, hard specular on wet surfaces, backlit haze, crushed shadow, film still style image.",
+      "nl": "Neon-action capture, cyan and magenta wash across black, hard specular on wet surfaces, backlit haze, crushed shadow, film still style image.",
       "tags": [
         "neon_palette",
         "dark",
@@ -5448,7 +5438,7 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Corporate headshot capture: soft two-light setup, clean blurred office background, neutral colour, tidy retouch, photograph style image.",
+      "nl": "Corporate headshot capture, soft two-light setup, clean blurred office background, neutral colour, tidy retouch, photograph style image.",
       "tags": [
         "portrait",
         "simple_background",
@@ -5470,7 +5460,7 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Low-key capture: mostly shadow, one small hard source, sculpted highlight edges, deep black background, photograph style image.",
+      "nl": "Low-key capture, mostly shadow, one small hard source, sculpted highlight edges, deep black background, photograph style image.",
       "tags": [
         "dark",
         "chiaroscuro",
@@ -5492,7 +5482,7 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "film still style image",
-      "nl": "Green-graded capture: pervasive digital-green cast, crushed blacks, hard practical highlights, cool sterile mood, film still style image.",
+      "nl": "Green-graded capture, pervasive digital-green cast, crushed blacks, hard practical highlights, cool sterile mood, film still style image.",
       "tags": [
         "green_theme",
         "dark",
@@ -5514,7 +5504,7 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "film still style image",
-      "nl": "Amber-graded capture: heavy yellow-ochre wash, dusty haze, warm crushed shadow, sun-baked contrast, film still style image.",
+      "nl": "Amber-graded capture, heavy yellow-ochre wash, dusty haze, warm crushed shadow, sun-baked contrast, film still style image.",
       "tags": [
         "yellow_theme",
         "orange_theme",
@@ -5536,7 +5526,7 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Documentary-expedition capture: natural available light, rich saturated field colour, sharp storytelling detail, deep focus, photograph style image.",
+      "nl": "Documentary-expedition capture, natural available light, rich saturated field colour, sharp storytelling detail, deep focus, photograph style image.",
       "tags": [
         "photo_(medium)",
         "colorful",
@@ -5558,7 +5548,7 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Natural-light capture: window or sky as the only source, soft directional falloff, honest colour, gentle contrast, photograph style image.",
+      "nl": "Natural-light capture, window or sky as the only source, soft directional falloff, honest colour, gentle contrast, photograph style image.",
       "tags": [
         "sunlight",
         "soft_focus",
@@ -5580,7 +5570,7 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Neon-lit capture: coloured tube light as the key, glowing spill on skin, saturated hue clash, dark surround, photograph style image.",
+      "nl": "Neon-lit capture, coloured tube light as the key, glowing spill on skin, saturated hue clash, dark surround, photograph style image.",
       "tags": [
         "neon_palette",
         "glowing",
@@ -5602,7 +5592,7 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Night capture: deep shadow with pooled artificial light, noise in the darks, warm-cool source mixing, star highlights, photograph style image.",
+      "nl": "Night capture, deep shadow with pooled artificial light, noise in the darks, warm-cool source mixing, star highlights, photograph style image.",
       "tags": [
         "dark",
         "glowing",
@@ -5624,7 +5614,7 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Double-exposure interplay: a silhouette filled with a second scene, blended densities, soft edge transitions, photograph style image.",
+      "nl": "Double-exposure interplay, a silhouette filled with a second scene, blended densities, soft edge transitions, photograph style image.",
       "tags": [
         "silhouette",
         "transparent",
@@ -5646,7 +5636,7 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Raw monochrome fashion capture: available light, minimal retouch, visible skin texture, grainy silver tonality, photograph style image.",
+      "nl": "Raw monochrome fashion capture, available light, minimal retouch, visible skin texture, grainy silver tonality, photograph style image.",
       "tags": [
         "monochrome",
         "film_grain",
@@ -5668,7 +5658,7 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Straight photographic capture: real lens optics, natural light falloff, believable colour response, fine detail, photograph style image.",
+      "nl": "Straight photographic capture, real lens optics, natural light falloff, believable colour response, fine detail, photograph style image.",
       "tags": [
         "photo_(medium)",
         "realistic"
@@ -5688,7 +5678,7 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Studio shoot capture: controlled key and fill, seamless backdrop, styled colour, crisp commercial finish, photograph style image.",
+      "nl": "Studio shoot capture, controlled key and fill, seamless backdrop, styled colour, crisp commercial finish, photograph style image.",
       "tags": [
         "simple_background",
         "cinematic_lighting",
@@ -5710,7 +5700,7 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Glossy glamour capture: warm golden key, oiled highlight sheen, saturated skin tones, soft diffusion, photograph style image.",
+      "nl": "Glossy glamour capture, warm golden key, oiled highlight sheen, saturated skin tones, soft diffusion, photograph style image.",
       "tags": [
         "portrait",
         "glowing",
@@ -5732,7 +5722,7 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Polished social capture: bright even light, gentle skin smoothing, warm lifted grade, shallow phone-style depth, photograph style image.",
+      "nl": "Polished social capture, bright even light, gentle skin smoothing, warm lifted grade, shallow phone-style depth, photograph style image.",
       "tags": [
         "soft_focus",
         "photo_(medium)",
@@ -5754,7 +5744,7 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Rembrandt-lit capture: 45-degree key with a triangle of light on the shadow cheek, deep chiaroscuro, warm earth palette, photograph style image.",
+      "nl": "Rembrandt-lit capture, 45-degree key with a triangle of light on the shadow cheek, deep chiaroscuro, warm earth palette, photograph style image.",
       "tags": [
         "chiaroscuro",
         "portrait",
@@ -5777,7 +5767,7 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Selfie capture: arm's-length wide lens, slight perspective exaggeration, frontal ambient light, phone-processed sharpening, photograph style image.",
+      "nl": "Selfie capture, arm's-length wide lens, slight perspective exaggeration, frontal ambient light, phone-processed sharpening, photograph style image.",
       "tags": [
         "photo_(medium)",
         "portrait",
@@ -5798,7 +5788,7 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Selective-colour noir capture: stark black-and-white frame with one element in hot colour, blown whites, inky blacks, photograph style image.",
+      "nl": "Selective-colour noir capture, stark black-and-white frame with one element in hot colour, blown whites, inky blacks, photograph style image.",
       "tags": [
         "monochrome",
         "spot_color",
@@ -5821,7 +5811,7 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Multi-camera sitcom capture: flat bright three-point wash, shadowless set, warm saturated colour, video-clean look, photograph style image.",
+      "nl": "Multi-camera sitcom capture, flat bright three-point wash, shadowless set, warm saturated colour, video-clean look, photograph style image.",
       "tags": [
         "high_saturation",
         "photo_(medium)",
@@ -5842,7 +5832,7 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Beauty-dish portrait: crisp-yet-soft key from above, wraparound fill, defined cheekbone shadow, clean specular skin, photograph style image.",
+      "nl": "Beauty-dish portrait, crisp-yet-soft key from above, wraparound fill, defined cheekbone shadow, clean specular skin, photograph style image.",
       "tags": [
         "portrait",
         "soft_focus",
@@ -5864,7 +5854,7 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "film still style image",
-      "nl": "1980s-horror capture: red-and-cyan practical glow, drifting fog, heavy vignette, retro film grain, deep shadow, film still style image.",
+      "nl": "1980s-horror capture, red-and-cyan practical glow, drifting fog, heavy vignette, retro film grain, deep shadow, film still style image.",
       "tags": [
         "dark",
         "neon_palette",
@@ -5887,7 +5877,7 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Streamer-setup capture: ring-light catchlight, RGB LED wash behind, glossy skin sheen, webcam-flat frontal exposure, photograph style image.",
+      "nl": "Streamer-setup capture, ring-light catchlight, RGB LED wash behind, glossy skin sheen, webcam-flat frontal exposure, photograph style image.",
       "tags": [
         "glowing",
         "neon_palette",
@@ -5909,7 +5899,7 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Studio capture: strobe key with fill and rim, seamless paper ground, controlled falloff, accurate colour, photograph style image.",
+      "nl": "Studio capture, strobe key with fill and rim, seamless paper ground, controlled falloff, accurate colour, photograph style image.",
       "tags": [
         "simple_background",
         "cinematic_lighting",
@@ -5931,7 +5921,7 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "High-fashion studio capture: sculptural precision light, statuesque staging, immaculate retouch that keeps character, photograph style image.",
+      "nl": "High-fashion studio capture, sculptural precision light, statuesque staging, immaculate retouch that keeps character, photograph style image.",
       "tags": [
         "portrait",
         "cinematic_lighting",
@@ -5953,7 +5943,7 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Translucency capture: light passing through thin materials, glowing edge transmission, soft interior scatter, backlit clarity, photograph style image.",
+      "nl": "Translucency capture, light passing through thin materials, glowing edge transmission, soft interior scatter, backlit clarity, photograph style image.",
       "tags": [
         "transparent",
         "backlighting",
@@ -5975,7 +5965,7 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Vogue-style capture: sculpted editorial key, luxurious styling, restrained cool palette, flawless retouch, generous negative space, photograph style image.",
+      "nl": "Vogue-style capture, sculpted editorial key, luxurious styling, restrained cool palette, flawless retouch, generous negative space, photograph style image.",
       "tags": [
         "magazine_cover",
         "cinematic_lighting",
@@ -5997,12 +5987,11 @@
       "family": "Photography & Film",
       "axis": "style",
       "medium": "film still style image",
-      "nl": "Symmetrical pastel capture: dead-centre framing, flat frontal light, pastel-and-mustard palette, planar staging, film still style image.",
+      "nl": "Symmetrical pastel capture, dead-centre framing, flat frontal light, pastel-and-mustard palette, planar staging, film still style image.",
       "tags": [
         "pastel_colors",
         "simple_background",
-        "photo_(medium)",
-        "widescreen"
+        "photo_(medium)"
       ],
       "tags_negative": [
         "dark"

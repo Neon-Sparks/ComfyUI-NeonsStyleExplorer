@@ -1,252 +1,423 @@
 [
-  {
-    "name": "[Photo] Ambrotype",
-    "family": "Photography & Film",
-    "axis": "style",
-    "medium": "photograph style image",
-    "nl": "Ambrotype rendering: a collodion positive on black glass, silvery cream highlights against deep tonal blacks, short tonal scale, pouring swirls at the plate edge and varnish bloom, photograph style image.",
-    "tags": ["monochrome", "photo_(medium)", "high_contrast", "dark"],
-    "tags_negative": ["colorful"],
-    "negative": "clean digital tonality, saturated colour"
-  },
-  {
-    "name": "[Photo] Salted Paper Print",
-    "family": "Photography & Film",
-    "axis": "style",
-    "medium": "photograph style image",
-    "nl": "Salted-paper rendering: matte fibrous print with the sheet's own fibre visible, soft violet-brown tone, low contrast and gentle highlight roll-off, a faint even fog across the image, photograph style image.",
-    "tags": ["sepia", "monochrome", "photo_(medium)", "textured"],
-    "tags_negative": ["high_contrast"],
-    "negative": "glossy modern print, punchy contrast"
-  },
-  {
-    "name": "[Photo] Dye Transfer Print",
-    "family": "Photography & Film",
-    "axis": "style",
-    "medium": "photograph style image",
-    "nl": "Dye-transfer rendering: three dye layers laid in exact register, dense saturated colour with clean neutral greys, mid-century advertising punch, smooth glossy surface, photograph style image.",
-    "tags": ["photo_(medium)", "high_saturation", "realistic", "shiny"],
-    "tags_negative": ["desaturated"],
-    "negative": "muted flat colour, heavy grain"
-  },
-  {
-    "name": "[Photo] Cibachrome Gloss",
-    "family": "Photography & Film",
-    "axis": "style",
-    "medium": "photograph style image",
-    "nl": "Cibachrome rendering: azo dyes on a polyester base, glassy high-gloss surface, near-black shadows against vivid clean primaries, biting micro-contrast right across the frame, photograph style image.",
-    "tags": ["photo_(medium)", "high_contrast", "high_saturation", "shiny"],
-    "tags_negative": ["muted_color"],
-    "negative": "matte fibre paper, soft pastel tonality"
-  },
-  {
-    "name": "[Photo] Slit-Scan Strip",
-    "family": "Photography & Film",
-    "axis": "style",
-    "medium": "photograph style image",
-    "nl": "Slit-scan rendering: one narrow slit exposed continuously through time, forms smeared into long ribbons along the scan axis, motionless edges left needle-sharp, vertical banding throughout, photograph style image.",
-    "tags": ["motion_blur", "photo_(medium)", "long_exposure"],
-    "tags_negative": ["photorealistic"],
-    "negative": "single frozen instant, undistorted geometry"
-  },
-  {
-    "name": "[Photo] Chronophotography",
-    "family": "Photography & Film",
-    "axis": "style",
-    "medium": "photograph style image",
-    "nl": "Chronophotographic rendering: successive instants recorded on one plate, overlapping phases fanned across a black field, even stroboscopic spacing, bright rims where phases cross, photograph style image.",
-    "tags": ["monochrome", "dark", "photo_(medium)", "motion_lines"],
-    "tags_negative": ["colorful"],
-    "negative": "single clean exposure, colour film palette"
-  },
-  {
-    "name": "[Photo] Photogram",
-    "family": "Photography & Film",
-    "axis": "style",
-    "medium": "photograph style image",
-    "nl": "Photogram rendering: objects laid straight onto the paper and exposed, luminous white silhouettes on dense black, soft penumbra where contact loosens, no lens-drawn detail anywhere, photograph style image.",
-    "tags": ["monochrome", "silhouette", "high_contrast", "dark"],
-    "tags_negative": ["photorealistic"],
-    "negative": "lens perspective, surface texture detail"
-  },
-  {
-    "name": "[Photo] Solargraph",
-    "family": "Photography & Film",
-    "axis": "style",
-    "medium": "photograph style image",
-    "nl": "Solargraph rendering: a months-long pinhole exposure printing stacked arcs of sun tracks, reversed muted colour, immobile forms softened to ghosts, heavy vignette and paper staining, photograph style image.",
-    "tags": ["long_exposure", "muted_color", "vignetting", "blurry"],
-    "tags_negative": ["high_contrast"],
-    "negative": "sharp instant capture, neutral colour"
-  },
-  {
-    "name": "[Photo] Lumen Print",
-    "family": "Photography & Film",
-    "axis": "style",
-    "medium": "photograph style image",
-    "nl": "Lumen rendering: sunlight printing directly onto silver paper over hours, pink, violet and sepia staining, soft contact edges, mottled uneven bleaching across the sheet, photograph style image.",
-    "tags": ["pink_theme", "pale_color", "photo_(medium)", "textured"],
-    "tags_negative": ["high_contrast"],
-    "negative": "neutral greyscale, crisp detail"
-  },
-  {
-    "name": "[Photo] Swing-Lens Panorama",
-    "family": "Photography & Film",
-    "axis": "style",
-    "medium": "photograph style image",
-    "nl": "Swing-lens rendering: a rotating slit sweeping a very wide field, horizon bowing gently through the frame, faint exposure banding between sweeps, tapered stretch towards both ends, photograph style image.",
-    "tags": ["photo_(medium)", "widescreen", "realistic"],
-    "tags_negative": ["fisheye"],
-    "negative": "rectilinear framing, cropped narrow view"
-  },
-  {
-    "name": "[Photo] Zoom-Burst",
-    "family": "Photography & Film",
-    "axis": "style",
-    "medium": "photograph style image",
-    "nl": "Zoom-burst rendering: focal length pulled during a long exposure, radial streaks flung outward from a still centre, one small core left readable, colour smeared into rays, photograph style image.",
-    "tags": ["motion_blur", "long_exposure", "blurry", "colorful"],
-    "tags_negative": ["photorealistic"],
-    "negative": "static sharp exposure, even focus"
-  },
-  {
-    "name": "[Photo] Star-Trail Stack",
-    "family": "Photography & Film",
-    "axis": "style",
-    "medium": "photograph style image",
-    "nl": "Star-trail rendering: hundreds of night frames stacked into concentric arcs about the pole, warm light pollution banding the horizon, faint gaps where frames join, deep blue-black sky, photograph style image.",
-    "tags": ["long_exposure", "dark", "blue_theme", "photo_(medium)"],
-    "tags_negative": ["flash_photography"],
-    "negative": "daylight scene, single short exposure"
-  },
-  {
-    "name": "[Photo] Microfiche Scan",
-    "family": "Photography & Film",
-    "axis": "style",
-    "medium": "photograph style image",
-    "nl": "Microfiche rendering: a high-contrast library scan, blown-out white ground with crushed grey midtones, dust specks and scratch lines, soft optical fall-off into the corners, photograph style image.",
-    "tags": ["monochrome", "high_contrast", "greyscale", "vignetting"],
-    "tags_negative": ["colorful"],
-    "negative": "colour reproduction, smooth clean scan"
-  },
-  {
-    "name": "[Photo] Copy-Stand Reproduction",
-    "family": "Photography & Film",
-    "axis": "style",
-    "medium": "photograph style image",
-    "nl": "Copy-stand rendering: flat frontal documentation, cross-polarised light with every specular killed, colour-target neutrality, dead-square framing and no depth cue at all, photograph style image.",
-    "tags": ["photo_(medium)", "realistic", "simple_background", "desaturated"],
-    "tags_negative": ["bokeh"],
-    "negative": "dramatic lighting, shallow focus"
-  },
-  {
-    "name": "[Photo] Strip Camera Finish",
-    "family": "Photography & Film",
-    "axis": "style",
-    "medium": "photograph style image",
-    "nl": "Strip-camera rendering: a fixed slit recording against continuously moving film, forms stretched or squeezed by their own speed, repeating banded background, no perspective convergence, photograph style image.",
-    "tags": ["motion_blur", "photo_(medium)", "long_exposure"],
-    "tags_negative": ["photorealistic"],
-    "negative": "conventional framing, frozen single instant"
-  },
-  {
-    "name": "[Photo] Cloud Chamber Track",
-    "family": "Photography & Film",
-    "axis": "style",
-    "medium": "photograph style image",
-    "nl": "Cloud-chamber rendering: condensation trails threading a vapour volume, thin bright forked tracks curling through a field, dark chamber ground, shallow depth softening the far trails, photograph style image.",
-    "tags": ["monochrome", "dark", "glowing", "photo_(medium)"],
-    "tags_negative": ["colorful"],
-    "negative": "solid opaque forms, flat graphic shapes"
-  },
-  {
-    "name": "[Photo] High-Speed Strobe",
-    "family": "Photography & Film",
-    "axis": "style",
-    "medium": "photograph style image",
-    "nl": "High-speed strobe rendering: a microsecond flash freezing a splash crown mid-collapse, needle-sharp droplet rims, black velvet ground, hard specular points along every wet edge, photograph style image.",
-    "tags": ["flash_photography", "wet", "dark", "high_contrast", "shiny"],
-    "tags_negative": ["motion_blur"],
-    "negative": "long exposure smear, ambient soft light"
-  },
-  {
-    "name": "[Photo] Trail Camera Infrared",
-    "family": "Photography & Film",
-    "axis": "style",
-    "medium": "photograph style image",
-    "nl": "Trail-camera rendering: monochrome infrared flash at night, flat frontal light falling off hard into blackness, bright eye-shine, a burnt-in data bar and heavy sensor noise, photograph style image.",
-    "tags": ["monochrome", "flash_photography", "dark", "analog_horror"],
-    "tags_negative": ["colorful"],
-    "negative": "daylight colour, clean low-noise capture"
-  },
-  {
-    "name": "[Photo] Endoscope Fisheye",
-    "family": "Photography & Film",
-    "axis": "style",
-    "medium": "photograph style image",
-    "nl": "Endoscope rendering: a tiny wide-angle lens held close to a wet surface, strong barrel distortion, circular black vignette framing the field, hot ring-light hotspot glaring off moisture, photograph style image.",
-    "tags": ["fisheye", "wet", "vignetting", "flash_photography"],
-    "tags_negative": ["depth_of_field"],
-    "negative": "long lens compression, dry matte surfaces"
-  },
-  {
-    "name": "[Photo] Cinewhoop Drone",
-    "family": "Photography & Film",
-    "axis": "style",
-    "medium": "photograph style image",
-    "nl": "Cinewhoop rendering: an ultra-wide micro-drone lens, horizon warped and rolling hard, propeller tips smearing the frame corners, punchy contrast and deep saturation, photograph style image.",
-    "tags": ["fisheye", "high_contrast", "motion_blur", "high_saturation"],
-    "tags_negative": ["depth_of_field"],
-    "negative": "tripod stillness, telephoto compression"
-  },
-  {
-    "name": "[Cinema] Two-Strip Technicolor",
-    "family": "Photography & Film",
-    "axis": "style",
-    "medium": "film still style image",
-    "nl": "Two-strip rendering: only red-orange and blue-green records present, yellows absent and cyans gone muddy, skin running warm brick, soft registration fringing at every edge, film still style image.",
-    "tags": ["limited_palette", "film_grain", "retro_artstyle", "chromatic_aberration"],
-    "tags_negative": ["high_saturation"],
-    "negative": "full modern colour gamut, clean digital grade"
-  },
-  {
-    "name": "[Cinema] Kinescope Broadcast",
-    "family": "Photography & Film",
-    "axis": "style",
-    "medium": "film still style image",
-    "nl": "Kinescope rendering: film shot off a television tube, scanline mush and blooming whites, crushed greys, a jittering frame edge and heavy grain over everything, film still style image.",
-    "tags": ["monochrome", "film_grain", "blurry", "retro_artstyle"],
-    "tags_negative": ["highres"],
-    "negative": "sharp digital capture, clean blacks"
-  },
-  {
-    "name": "[Cinema] Rear-Projection Process",
-    "family": "Photography & Film",
-    "axis": "style",
-    "medium": "film still style image",
-    "nl": "Process-shot rendering: a flat projected plate behind the foreground, grain and contrast mismatched between the two layers, gentle plate flicker, hard studio key on the front, film still style image.",
-    "tags": ["film_grain", "retro_artstyle", "cinematic_lighting"],
-    "tags_negative": ["photorealistic"],
-    "negative": "location realism, matched depth cues"
-  },
-  {
-    "name": "[Cinema] Day-for-Night",
-    "family": "Photography & Film",
-    "axis": "style",
-    "medium": "film still style image",
-    "nl": "Day-for-night rendering: daylight underexposed and printed cold, blue-shifted midtones under a still-bright sky, shadows keeping their daytime direction, filtered dense blacks, film still style image.",
-    "tags": ["blue_theme", "dark", "cinematic_lighting", "film_grain"],
-    "tags_negative": ["overexposure"],
-    "negative": "true night lighting, warm practical lamps"
-  },
-  {
-    "name": "[Cinema] Hand-Cranked Silent",
-    "family": "Photography & Film",
-    "axis": "style",
-    "medium": "film still style image",
-    "nl": "Hand-cranked rendering: an uneven frame rate quickening and dragging, orthochromatic tonality with dark skies and pale skin, iris vignette closing the corners, dust, splices and frame jump, film still style image.",
-    "tags": ["monochrome", "film_grain", "vignetting", "retro_artstyle"],
-    "tags_negative": ["highres"],
-    "negative": "steady modern capture, panchromatic tonality"
-  }
+ {
+  "name": "[Photo] Ambrotype",
+  "family": "Photography & Film",
+  "axis": "style",
+  "medium": "photograph style image",
+  "nl": "Ambrotype rendering, a collodion positive on black glass, silvery cream highlights against deep tonal blacks, short tonal scale, pouring swirls at the plate edge and varnish bloom, photograph style image.",
+  "tags": [
+   "monochrome",
+   "photo_(medium)",
+   "high_contrast",
+   "dark"
+  ],
+  "tags_negative": [
+   "colorful"
+  ],
+  "negative": "clean digital tonality, saturated colour"
+ },
+ {
+  "name": "[Photo] Salted Paper Print",
+  "family": "Photography & Film",
+  "axis": "style",
+  "medium": "photograph style image",
+  "nl": "Salted-paper rendering, matte fibrous print with the sheet's own fibre visible, soft violet-brown tone, low contrast and gentle highlight roll-off, a faint even fog across the image, photograph style image.",
+  "tags": [
+   "sepia",
+   "monochrome",
+   "photo_(medium)",
+   "textured"
+  ],
+  "tags_negative": [
+   "high_contrast"
+  ],
+  "negative": "glossy modern print, punchy contrast"
+ },
+ {
+  "name": "[Photo] Dye Transfer Print",
+  "family": "Photography & Film",
+  "axis": "style",
+  "medium": "photograph style image",
+  "nl": "Dye-transfer rendering, three dye layers laid in exact register, dense saturated colour with clean neutral greys, mid-century advertising punch, smooth glossy surface, photograph style image.",
+  "tags": [
+   "photo_(medium)",
+   "high_saturation",
+   "realistic",
+   "shiny"
+  ],
+  "tags_negative": [
+   "desaturated"
+  ],
+  "negative": "muted flat colour, heavy grain"
+ },
+ {
+  "name": "[Photo] Cibachrome Gloss",
+  "family": "Photography & Film",
+  "axis": "style",
+  "medium": "photograph style image",
+  "nl": "Cibachrome rendering, azo dyes on a polyester base, glassy high-gloss surface, near-black shadows against vivid clean primaries, biting micro-contrast right across the frame, photograph style image.",
+  "tags": [
+   "photo_(medium)",
+   "high_contrast",
+   "high_saturation",
+   "shiny"
+  ],
+  "tags_negative": [
+   "muted_color"
+  ],
+  "negative": "matte fibre paper, soft pastel tonality"
+ },
+ {
+  "name": "[Photo] Slit-Scan Strip",
+  "family": "Photography & Film",
+  "axis": "style",
+  "medium": "photograph style image",
+  "nl": "Slit-scan rendering, one narrow slit exposed continuously through time, forms smeared into long ribbons along the scan axis, motionless edges left needle-sharp, vertical banding throughout, photograph style image.",
+  "tags": [
+   "motion_blur",
+   "photo_(medium)",
+   "long_exposure"
+  ],
+  "tags_negative": [
+   "photorealistic"
+  ],
+  "negative": "single frozen instant, undistorted geometry"
+ },
+ {
+  "name": "[Photo] Chronophotography",
+  "family": "Photography & Film",
+  "axis": "style",
+  "medium": "photograph style image",
+  "nl": "Chronophotographic rendering, successive instants recorded on one plate, overlapping phases fanned across a black field, even stroboscopic spacing, bright rims where phases cross, photograph style image.",
+  "tags": [
+   "monochrome",
+   "dark",
+   "photo_(medium)",
+   "motion_lines"
+  ],
+  "tags_negative": [
+   "colorful"
+  ],
+  "negative": "single clean exposure, colour film palette"
+ },
+ {
+  "name": "[Photo] Photogram",
+  "family": "Photography & Film",
+  "axis": "style",
+  "medium": "photograph style image",
+  "nl": "Photogram rendering, objects laid straight onto the paper and exposed, luminous white silhouettes on dense black, soft penumbra where contact loosens, no lens-drawn detail anywhere, photograph style image.",
+  "tags": [
+   "monochrome",
+   "silhouette",
+   "high_contrast",
+   "dark"
+  ],
+  "tags_negative": [
+   "photorealistic"
+  ],
+  "negative": "lens perspective, surface texture detail"
+ },
+ {
+  "name": "[Photo] Solargraph",
+  "family": "Photography & Film",
+  "axis": "style",
+  "medium": "photograph style image",
+  "nl": "Solargraph rendering, a months-long pinhole exposure printing stacked arcs of sun tracks, reversed muted colour, immobile forms softened to ghosts, heavy vignette and paper staining, photograph style image.",
+  "tags": [
+   "long_exposure",
+   "muted_color",
+   "vignetting",
+   "blurry"
+  ],
+  "tags_negative": [
+   "high_contrast"
+  ],
+  "negative": "sharp instant capture, neutral colour"
+ },
+ {
+  "name": "[Photo] Lumen Print",
+  "family": "Photography & Film",
+  "axis": "style",
+  "medium": "photograph style image",
+  "nl": "Lumen rendering, sunlight printing directly onto silver paper over hours, pink, violet and sepia staining, soft contact edges, mottled uneven bleaching across the sheet, photograph style image.",
+  "tags": [
+   "pink_theme",
+   "pale_color",
+   "photo_(medium)",
+   "textured"
+  ],
+  "tags_negative": [
+   "high_contrast"
+  ],
+  "negative": "neutral greyscale, crisp detail"
+ },
+ {
+  "name": "[Photo] Swing-Lens Panorama",
+  "family": "Photography & Film",
+  "axis": "style",
+  "medium": "photograph style image",
+  "nl": "Swing-lens rendering, a rotating slit sweeping a very wide field, horizon bowing gently through the frame, faint exposure banding between sweeps, tapered stretch towards both ends, photograph style image.",
+  "tags": [
+   "photo_(medium)",
+   "realistic"
+  ],
+  "tags_negative": [
+   "fisheye"
+  ],
+  "negative": "rectilinear framing, cropped narrow view"
+ },
+ {
+  "name": "[Photo] Zoom-Burst",
+  "family": "Photography & Film",
+  "axis": "style",
+  "medium": "photograph style image",
+  "nl": "Zoom-burst rendering, focal length pulled during a long exposure, radial streaks flung outward from a still centre, one small core left readable, colour smeared into rays, photograph style image.",
+  "tags": [
+   "motion_blur",
+   "long_exposure",
+   "blurry",
+   "colorful"
+  ],
+  "tags_negative": [
+   "photorealistic"
+  ],
+  "negative": "static sharp exposure, even focus"
+ },
+ {
+  "name": "[Photo] Star-Trail Stack",
+  "family": "Photography & Film",
+  "axis": "style",
+  "medium": "photograph style image",
+  "nl": "Star-trail rendering, hundreds of night frames stacked into concentric arcs about the pole, warm light pollution banding the horizon, faint gaps where frames join, deep blue-black sky, photograph style image.",
+  "tags": [
+   "long_exposure",
+   "dark",
+   "blue_theme",
+   "photo_(medium)"
+  ],
+  "tags_negative": [
+   "flash_photography"
+  ],
+  "negative": "daylight scene, single short exposure"
+ },
+ {
+  "name": "[Photo] Microfiche Scan",
+  "family": "Photography & Film",
+  "axis": "style",
+  "medium": "photograph style image",
+  "nl": "Microfiche rendering, a high-contrast library scan, blown-out white ground with crushed grey midtones, dust specks and scratch lines, soft optical fall-off into the corners, photograph style image.",
+  "tags": [
+   "monochrome",
+   "high_contrast",
+   "greyscale",
+   "vignetting"
+  ],
+  "tags_negative": [
+   "colorful"
+  ],
+  "negative": "colour reproduction, smooth clean scan"
+ },
+ {
+  "name": "[Photo] Copy-Stand Reproduction",
+  "family": "Photography & Film",
+  "axis": "style",
+  "medium": "photograph style image",
+  "nl": "Copy-stand rendering, flat frontal documentation, cross-polarised light with every specular killed, colour-target neutrality, perpendicular alignment and no depth cue at all, photograph style image.",
+  "tags": [
+   "photo_(medium)",
+   "realistic",
+   "simple_background",
+   "desaturated"
+  ],
+  "tags_negative": [
+   "bokeh"
+  ],
+  "negative": "dramatic lighting, shallow focus"
+ },
+ {
+  "name": "[Photo] Strip Camera Finish",
+  "family": "Photography & Film",
+  "axis": "style",
+  "medium": "photograph style image",
+  "nl": "Strip-camera rendering, a fixed slit recording against continuously moving film, forms stretched or squeezed by their own speed, repeating banded background, no perspective convergence, photograph style image.",
+  "tags": [
+   "motion_blur",
+   "photo_(medium)",
+   "long_exposure"
+  ],
+  "tags_negative": [
+   "photorealistic"
+  ],
+  "negative": "conventional framing, frozen single instant"
+ },
+ {
+  "name": "[Photo] Cloud Chamber Track",
+  "family": "Photography & Film",
+  "axis": "style",
+  "medium": "photograph style image",
+  "nl": "Cloud-chamber rendering, condensation trails threading a vapour volume, thin bright forked tracks curling through a field, dark chamber ground, shallow depth softening the far trails, photograph style image.",
+  "tags": [
+   "monochrome",
+   "dark",
+   "glowing",
+   "photo_(medium)"
+  ],
+  "tags_negative": [
+   "colorful"
+  ],
+  "negative": "solid opaque forms, flat graphic shapes"
+ },
+ {
+  "name": "[Photo] High-Speed Strobe",
+  "family": "Photography & Film",
+  "axis": "style",
+  "medium": "photograph style image",
+  "nl": "High-speed strobe rendering, a microsecond flash freezing a splash crown mid-collapse, needle-sharp droplet rims, black velvet ground, hard specular points along every wet edge, photograph style image.",
+  "tags": [
+   "flash_photography",
+   "wet",
+   "dark",
+   "high_contrast",
+   "shiny"
+  ],
+  "tags_negative": [
+   "motion_blur"
+  ],
+  "negative": "long exposure smear, ambient soft light"
+ },
+ {
+  "name": "[Photo] Trail Camera Infrared",
+  "family": "Photography & Film",
+  "axis": "style",
+  "medium": "photograph style image",
+  "nl": "Trail-camera rendering, monochrome infrared flash at night, flat frontal light falling off hard into blackness, bright eye-shine, a burnt-in data bar and heavy sensor noise, photograph style image.",
+  "tags": [
+   "monochrome",
+   "flash_photography",
+   "dark",
+   "analog_horror"
+  ],
+  "tags_negative": [
+   "colorful"
+  ],
+  "negative": "daylight colour, clean low-noise capture"
+ },
+ {
+  "name": "[Photo] Endoscope Fisheye",
+  "family": "Photography & Film",
+  "axis": "style",
+  "medium": "photograph style image",
+  "nl": "Endoscope rendering, a tiny wide-angle lens held close to a wet surface, strong barrel distortion, circular black vignette framing the field, hot ring-light hotspot glaring off moisture, photograph style image.",
+  "tags": [
+   "fisheye",
+   "wet",
+   "vignetting",
+   "flash_photography"
+  ],
+  "tags_negative": [
+   "depth_of_field"
+  ],
+  "negative": "long lens compression, dry matte surfaces"
+ },
+ {
+  "name": "[Photo] Cinewhoop Drone",
+  "family": "Photography & Film",
+  "axis": "style",
+  "medium": "photograph style image",
+  "nl": "Cinewhoop rendering, an ultra-wide micro-drone lens, horizon warped and rolling hard, propeller tips smearing the frame corners, punchy contrast and deep saturation, photograph style image.",
+  "tags": [
+   "fisheye",
+   "high_contrast",
+   "motion_blur",
+   "high_saturation"
+  ],
+  "tags_negative": [
+   "depth_of_field"
+  ],
+  "negative": "tripod stillness, telephoto compression"
+ },
+ {
+  "name": "[Cinema] Two-Strip Technicolor",
+  "family": "Photography & Film",
+  "axis": "style",
+  "medium": "film still style image",
+  "nl": "Two-strip rendering, only red-orange and blue-green records present, yellows absent and cyans gone muddy, skin running warm brick, soft registration fringing at every edge, film still style image.",
+  "tags": [
+   "limited_palette",
+   "film_grain",
+   "retro_artstyle",
+   "chromatic_aberration"
+  ],
+  "tags_negative": [
+   "high_saturation"
+  ],
+  "negative": "full modern colour gamut, clean digital grade"
+ },
+ {
+  "name": "[Cinema] Kinescope Broadcast",
+  "family": "Photography & Film",
+  "axis": "style",
+  "medium": "film still style image",
+  "nl": "Kinescope rendering, film shot off a television tube, scanline mush and blooming whites, crushed greys, a jittering frame edge and heavy grain over everything, film still style image.",
+  "tags": [
+   "monochrome",
+   "film_grain",
+   "blurry",
+   "retro_artstyle"
+  ],
+  "tags_negative": [
+   "highres"
+  ],
+  "negative": "sharp digital capture, clean blacks"
+ },
+ {
+  "name": "[Cinema] Rear-Projection Process",
+  "family": "Photography & Film",
+  "axis": "style",
+  "medium": "film still style image",
+  "nl": "Process-shot rendering, a flat projected plate behind the foreground, grain and contrast mismatched between the two layers, gentle plate flicker, hard studio key on the front, film still style image.",
+  "tags": [
+   "film_grain",
+   "retro_artstyle",
+   "cinematic_lighting"
+  ],
+  "tags_negative": [
+   "photorealistic"
+  ],
+  "negative": "location realism, matched depth cues"
+ },
+ {
+  "name": "[Cinema] Day-for-Night",
+  "family": "Photography & Film",
+  "axis": "style",
+  "medium": "film still style image",
+  "nl": "Day-for-night rendering, daylight underexposed and printed cold, blue-shifted midtones under a still-bright sky, shadows keeping their daytime direction, filtered dense blacks, film still style image.",
+  "tags": [
+   "blue_theme",
+   "dark",
+   "cinematic_lighting",
+   "film_grain"
+  ],
+  "tags_negative": [
+   "overexposure"
+  ],
+  "negative": "true night lighting, warm practical lamps"
+ },
+ {
+  "name": "[Cinema] Hand-Cranked Silent",
+  "family": "Photography & Film",
+  "axis": "style",
+  "medium": "film still style image",
+  "nl": "Hand-cranked rendering, an uneven frame rate quickening and dragging, orthochromatic tonality with dark skies and pale skin, iris vignette closing the corners, dust, splices and frame jump, film still style image.",
+  "tags": [
+   "monochrome",
+   "film_grain",
+   "vignetting",
+   "retro_artstyle"
+  ],
+  "tags_negative": [
+   "highres"
+  ],
+  "negative": "steady modern capture, panchromatic tonality"
+ }
 ]

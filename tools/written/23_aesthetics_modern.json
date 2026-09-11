@@ -1,32 +1,525 @@
 [
-  {"name":"[Aesthetic] Barbiecore","family":"Design & Aesthetics","axis":"style","medium":"photograph style image","nl":"Barbiecore rendering: hot fuchsia and bubblegum palette, glossy plastic surfaces, bright even flash, saturated candy contrast, photograph style image.","tags":["pink_theme","plastic","shiny","high_saturation","flash_photography"],"tags_negative":["muted_color"],"negative":"muted earthy palette, moody shadow"},
-  {"name":"[Aesthetic] Brat Green","family":"Design & Aesthetics","axis":"style","medium":"graphic style image","nl":"Brat-green rendering: flat acid lime field, low-resolution blur, deliberately cheap type-space, harsh compression, graphic style image.","tags":["green_theme","minimalism","glitch","flat_color"],"tags_negative":["highres"],"negative":"polished gradients, photographic detail"},
-  {"name":"[Aesthetic] Mob Wife","family":"Design & Aesthetics","axis":"style","medium":"photograph style image","nl":"Mob-wife rendering: heavy fur texture, gold jewellery glint, leopard print, smoky low light with hard flash, photograph style image.","tags":["fur","gold","dark","flash_photography","textured"],"tags_negative":["pale_color"],"negative":"pale minimal styling, soft daylight"},
-  {"name":"[Aesthetic] Tomato Girl","family":"Design & Aesthetics","axis":"style","medium":"photograph style image","nl":"Tomato-girl rendering: Mediterranean noon sun, red-and-white palette, linen texture, hard leaf shadows, warm film grain, photograph style image.","tags":["red_theme","sunlight","film_grain","textured"],"tags_negative":["dark"],"negative":"cold night grade, glossy studio light"},
-  {"name":"[Aesthetic] Blokecore","family":"Design & Aesthetics","axis":"style","medium":"photograph style image","nl":"Blokecore rendering: 1990s terrace colour, nylon sheen, overcast flat light, grainy tabloid print feel, photograph style image.","tags":["1990s_(style)","film_grain","muted_color","desaturated"],"tags_negative":["neon_palette"],"negative":"neon studio grade, glossy retouching"},
-  {"name":"[Aesthetic] Cluttercore","family":"Design & Aesthetics","axis":"style","medium":"photograph style image","nl":"Cluttercore rendering: every surface layered with objects, warm mixed lamplight, dense pattern collisions, soft depth falloff, photograph style image.","tags":["textured","colorful","depth_of_field","brown_theme"],"tags_negative":["minimalism"],"negative":"empty minimal space, cold clean light"},
-  {"name":"[Aesthetic] Indie Sleaze","family":"Design & Aesthetics","axis":"style","medium":"photograph style image","nl":"Indie-sleaze rendering: harsh on-camera flash, blown skin, crushed black surround, red-eye and motion smear, cheap digital noise, photograph style image.","tags":["flash_photography","dark","high_contrast","film_grain","motion_blur"],"tags_negative":["soft_focus"],"negative":"soft controlled studio light, clean retouch"},
-  {"name":"[Aesthetic] Tumblr 2014","family":"Design & Aesthetics","axis":"style","medium":"photograph style image","nl":"2014 blog rendering: washed pastel grade, lifted milky blacks, heavy vignette, soft focus and dust overlay, photograph style image.","tags":["pastel_colors","soft_focus","vignetting","pale_color"],"tags_negative":["high_contrast"],"negative":"punchy modern contrast, clean neutral colour"},
-  {"name":"[Aesthetic] Seapunk","family":"Design & Aesthetics","axis":"style","medium":"graphic style image","nl":"Seapunk rendering: aqua and lilac gradients, dolphin-and-wave motifs, glossy 3D clip-art sheen, low-res web texture, graphic style image.","tags":["gradient","glowing","vaporwave","glitch","blue_theme"],"tags_negative":["muted_color"],"negative":"muted natural palette, matte photographic texture"},
-  {"name":"[Aesthetic] Cybergrunge","family":"Design & Aesthetics","axis":"style","medium":"graphic style image","nl":"Cybergrunge rendering: scanned texture over glitched screenshots, acid green on black, distressed type blocks, heavy noise, graphic style image.","tags":["glitch","dark","green_theme","textured","high_contrast"],"tags_negative":["pastel_colors"],"negative":"clean pastel design, soft daylight"},
-  {"name":"[Aesthetic] Acid House Flyer","family":"Design & Aesthetics","axis":"style","medium":"poster style image","nl":"Acid-house flyer rendering: smiley motifs, fluorescent yellow and magenta inks, photocopied blur, misregistered overprint, poster style image.","tags":["risograph","high_saturation","yellow_theme","halftone","textured"],"tags_negative":["minimalism"],"negative":"restrained corporate layout, subtle palette"},
-  {"name":"[Aesthetic] Jungle Rave Flyer","family":"Design & Aesthetics","axis":"style","medium":"poster style image","nl":"Rave-flyer rendering: chrome bevel lettering, laser gradients, black backdrop, cluttered logo stack, cheap print bleed, poster style image.","tags":["metallic","gradient","dark","glowing","poster"],"tags_negative":["minimalism"],"negative":"clean white space, muted restraint"},
-  {"name":"[Aesthetic] Skeuomorphic UI","family":"Design & Aesthetics","axis":"style","medium":"graphic style image","nl":"Skeuomorphic rendering: brushed metal and linen textures, glossy bevelled buttons, inner shadows and stitching, drop-shadow depth, graphic style image.","tags":["metallic","shiny","gradient","textured","3d"],"tags_negative":["minimalism"],"negative":"flat modern UI, texture-free colour"},
-  {"name":"[Aesthetic] Frutiger Metro","family":"Design & Aesthetics","axis":"style","medium":"graphic style image","nl":"Metro-flat rendering: bold colour tiles, thin geometric icons, generous grid space, zero shadow or gloss, graphic style image.","tags":["flat_color","minimalism","vector_trace","colorful"],"tags_negative":["gradient","textured"],"negative":"glossy bevels, photographic texture"},
-  {"name":"[Aesthetic] Brutalist Web","family":"Design & Aesthetics","axis":"style","medium":"graphic style image","nl":"Brutalist-web rendering: default system type, raw blue links, hard black rules, unstyled boxes on stark white, graphic style image.","tags":["white_theme","minimalism","high_contrast","monochrome"],"tags_negative":["gradient"],"negative":"polished gradients, decorative illustration"},
-  {"name":"[Aesthetic] Deconstructivism","family":"Design & Aesthetics","axis":"style","medium":"photograph style image","nl":"Deconstructivist rendering: fragmented tilted planes, non-parallel geometry, metal and glass skins, hard directional daylight, photograph style image.","tags":["metallic","glass","scenery","high_contrast"],"tags_negative":["minimalism"],"negative":"orthogonal calm geometry, soft even light"},
-  {"name":"[Aesthetic] Parametricism","family":"Design & Aesthetics","axis":"style","medium":"cgi style image","nl":"Parametric rendering: continuous flowing surfaces, algorithmic rib arrays, seamless white composite skin, soft studio gradient light, cgi style image.","tags":["3d","white_theme","gradient","minimalism"],"tags_negative":["textured"],"negative":"rough handmade texture, angular brutalism"},
-  {"name":"[Aesthetic] Tiki Lounge","family":"Design & Aesthetics","axis":"style","medium":"photograph style image","nl":"Tiki-lounge rendering: carved dark wood, bamboo texture, amber lantern pools, tropical print saturation, deep shadow, photograph style image.","tags":["wood","brown_theme","dark","glowing","textured"],"tags_negative":["white_theme"],"negative":"bright minimal interior, cold daylight"},
-  {"name":"[Aesthetic] Shabby Chic","family":"Design & Aesthetics","axis":"style","medium":"photograph style image","nl":"Shabby-chic rendering: chipped white paint over wood, faded floral fabric, soft window daylight, powdery pastel palette, photograph style image.","tags":["pale_color","textured","wood","soft_focus"],"tags_negative":["high_contrast"],"negative":"glossy modern surfaces, saturated contrast"},
-  {"name":"[Aesthetic] Gorpcore","family":"Design & Aesthetics","axis":"style","medium":"photograph style image","nl":"Gorpcore rendering: technical nylon sheen, reflective trims, alpine overcast light, utilitarian colour blocking, photograph style image.","tags":["shiny","muted_color","photo_(medium)","textured"],"tags_negative":["glowing"],"negative":"glamour studio light, ornate styling"},
-  {"name":"[Aesthetic] Techwear","family":"Design & Aesthetics","axis":"style","medium":"photograph style image","nl":"Techwear rendering: matte black synthetic layers, strap and buckle hardware, cold city light, desaturated grey-black palette, photograph style image.","tags":["dark","desaturated","textured","metallic"],"tags_negative":["colorful"],"negative":"warm saturated colour, soft romantic light"},
-  {"name":"[Aesthetic] Clowncore","family":"Design & Aesthetics","axis":"style","medium":"graphic style image","nl":"Clowncore rendering: primary polka dots and stripes clashing, glossy vinyl texture, harsh flash, unsettling saturation, graphic style image.","tags":["colorful","high_saturation","plastic","flash_photography"],"tags_negative":["muted_color"],"negative":"muted tasteful palette, soft natural light"},
-  {"name":"[Aesthetic] Decora","family":"Design & Aesthetics","axis":"style","medium":"photograph style image","nl":"Decora rendering: layered plastic accessories in clashing candy colour, glitter sparkle, bright flat flash, dense visual noise, photograph style image.","tags":["colorful","plastic","sparkle","flash_photography","high_saturation"],"tags_negative":["minimalism"],"negative":"minimal styling, muted palette"},
-  {"name":"[Aesthetic] Fairy Kei","family":"Design & Aesthetics","axis":"style","medium":"photograph style image","nl":"Fairy-kei rendering: faded 1980s pastel palette, plush toy texture, soft diffuse light, milky low contrast, photograph style image.","tags":["pastel_colors","soft_focus","pale_color","textured"],"tags_negative":["dark"],"negative":"dark saturated grade, hard contrast"},
-  {"name":"[Aesthetic] Lolita Fashion","family":"Design & Aesthetics","axis":"style","medium":"photograph style image","nl":"Lolita rendering: layered lace and ruffle texture, bell silhouettes, powdery pastel or blackwork palette, soft even light, photograph style image.","tags":["pastel_colors","textured","soft_focus","embroidery"],"tags_negative":["desaturated"],"negative":"utilitarian minimalism, harsh contrast"},
-  {"name":"[Aesthetic] Gyaru","family":"Design & Aesthetics","axis":"style","medium":"photograph style image","nl":"Gyaru rendering: bleached hair sheen, bronzed skin, glossy highlights, purikura-bright flash with soft bloom, photograph style image.","tags":["glowing","flash_photography","high_saturation","soft_focus"],"tags_negative":["muted_color"],"negative":"muted natural grade, moody shadow"},
-  {"name":"[Aesthetic] Regencycore","family":"Design & Aesthetics","axis":"style","medium":"photograph style image","nl":"Regency rendering: candle-warm interiors, silk and embroidery sheen, pastel-and-gold palette, soft painterly diffusion, photograph style image.","tags":["gold","pastel_colors","glowing","soft_focus","textured"],"tags_negative":["neon_palette"],"negative":"neon modern grade, industrial texture"},
-  {"name":"[Aesthetic] Soviet Modernism","family":"Design & Aesthetics","axis":"style","medium":"photograph style image","nl":"Soviet-modernist rendering: monumental concrete geometry, mosaic panel accents, flat overcast light, muted grey-ochre palette, photograph style image.","tags":["stone","mosaic","grey_background","muted_color","scenery"],"tags_negative":["colorful"],"negative":"warm decorative colour, glossy modern glass"},
-  {"name":"[Aesthetic] Ulm Rationalism","family":"Design & Aesthetics","axis":"style","medium":"graphic style image","nl":"Rationalist rendering: strict modular grid, one accent colour on grey, systematic geometry, no ornament at all, graphic style image.","tags":["minimalism","grey_background","flat_color","limited_palette"],"tags_negative":["textured"],"negative":"decorative ornament, painterly texture"},
-  {"name":"[Aesthetic] Anti-Design","family":"Design & Aesthetics","axis":"style","medium":"graphic style image","nl":"Anti-design rendering: deliberately clashing type and colour, misaligned boxes, stretched imagery, ugly-on-purpose composition, graphic style image.","tags":["colorful","high_contrast","glitch","collage"],"tags_negative":["minimalism"],"negative":"tidy grid alignment, harmonious palette"}
+ {
+  "name": "[Aesthetic] Barbiecore",
+  "family": "Design & Aesthetics",
+  "axis": "style",
+  "medium": "photograph style image",
+  "nl": "Barbiecore rendering, hot fuchsia and bubblegum palette, glossy plastic surfaces, bright even flash, saturated candy contrast, photograph style image.",
+  "tags": [
+   "pink_theme",
+   "plastic",
+   "shiny",
+   "high_saturation",
+   "flash_photography"
+  ],
+  "tags_negative": [
+   "muted_color"
+  ],
+  "negative": "muted earthy palette, moody shadow"
+ },
+ {
+  "name": "[Aesthetic] Brat Green",
+  "family": "Design & Aesthetics",
+  "axis": "style",
+  "medium": "graphic style image",
+  "nl": "Brat-green rendering, flat acid lime field, low-resolution blur, deliberately cheap type-space, harsh compression, graphic style image.",
+  "tags": [
+   "green_theme",
+   "minimalism",
+   "glitch",
+   "flat_color"
+  ],
+  "tags_negative": [
+   "highres"
+  ],
+  "negative": "polished gradients, photographic detail"
+ },
+ {
+  "name": "[Aesthetic] Mob Wife",
+  "family": "Design & Aesthetics",
+  "axis": "style",
+  "medium": "photograph style image",
+  "nl": "Mob-wife rendering, heavy fur texture, gold jewellery glint, leopard print, smoky low light with hard flash, photograph style image.",
+  "tags": [
+   "fur",
+   "gold",
+   "dark",
+   "flash_photography",
+   "textured"
+  ],
+  "tags_negative": [
+   "pale_color"
+  ],
+  "negative": "pale minimal styling, soft daylight"
+ },
+ {
+  "name": "[Aesthetic] Tomato Girl",
+  "family": "Design & Aesthetics",
+  "axis": "style",
+  "medium": "photograph style image",
+  "nl": "Tomato-girl rendering, Mediterranean noon sun, red-and-white palette, linen texture, hard leaf shadows, warm film grain, photograph style image.",
+  "tags": [
+   "red_theme",
+   "sunlight",
+   "film_grain",
+   "textured"
+  ],
+  "tags_negative": [
+   "dark"
+  ],
+  "negative": "cold night grade, glossy studio light"
+ },
+ {
+  "name": "[Aesthetic] Blokecore",
+  "family": "Design & Aesthetics",
+  "axis": "style",
+  "medium": "photograph style image",
+  "nl": "Blokecore rendering, 1990s terrace colour, nylon sheen, overcast flat light, grainy tabloid print feel, photograph style image.",
+  "tags": [
+   "1990s_(style)",
+   "film_grain",
+   "muted_color",
+   "desaturated"
+  ],
+  "tags_negative": [
+   "neon_palette"
+  ],
+  "negative": "neon studio grade, glossy retouching"
+ },
+ {
+  "name": "[Aesthetic] Cluttercore",
+  "family": "Design & Aesthetics",
+  "axis": "style",
+  "medium": "photograph style image",
+  "nl": "Cluttercore rendering, every surface layered with objects, warm mixed lamplight, dense pattern collisions, soft depth falloff, photograph style image.",
+  "tags": [
+   "textured",
+   "colorful",
+   "depth_of_field",
+   "brown_theme"
+  ],
+  "tags_negative": [
+   "minimalism"
+  ],
+  "negative": "empty minimal space, cold clean light"
+ },
+ {
+  "name": "[Aesthetic] Indie Sleaze",
+  "family": "Design & Aesthetics",
+  "axis": "style",
+  "medium": "photograph style image",
+  "nl": "Indie-sleaze rendering, harsh on-camera flash, blown skin, crushed black surround, red-eye and motion smear, cheap digital noise, photograph style image.",
+  "tags": [
+   "flash_photography",
+   "dark",
+   "high_contrast",
+   "film_grain",
+   "motion_blur"
+  ],
+  "tags_negative": [
+   "soft_focus"
+  ],
+  "negative": "soft controlled studio light, clean retouch"
+ },
+ {
+  "name": "[Aesthetic] Tumblr 2014",
+  "family": "Design & Aesthetics",
+  "axis": "style",
+  "medium": "photograph style image",
+  "nl": "2014 blog rendering, washed pastel grade, lifted milky blacks, heavy vignette, soft focus and dust overlay, photograph style image.",
+  "tags": [
+   "pastel_colors",
+   "soft_focus",
+   "vignetting",
+   "pale_color"
+  ],
+  "tags_negative": [
+   "high_contrast"
+  ],
+  "negative": "punchy modern contrast, clean neutral colour"
+ },
+ {
+  "name": "[Aesthetic] Seapunk",
+  "family": "Design & Aesthetics",
+  "axis": "style",
+  "medium": "graphic style image",
+  "nl": "Seapunk rendering, aqua and lilac gradients, dolphin-and-wave motifs, glossy 3D clip-art sheen, low-res web texture, graphic style image.",
+  "tags": [
+   "gradient",
+   "glowing",
+   "vaporwave",
+   "glitch",
+   "blue_theme"
+  ],
+  "tags_negative": [
+   "muted_color"
+  ],
+  "negative": "muted natural palette, matte photographic texture"
+ },
+ {
+  "name": "[Aesthetic] Cybergrunge",
+  "family": "Design & Aesthetics",
+  "axis": "style",
+  "medium": "graphic style image",
+  "nl": "Cybergrunge rendering, scanned texture over glitched screenshots, acid green on black, distressed type blocks, heavy noise, graphic style image.",
+  "tags": [
+   "glitch",
+   "dark",
+   "green_theme",
+   "textured",
+   "high_contrast"
+  ],
+  "tags_negative": [
+   "pastel_colors"
+  ],
+  "negative": "clean pastel design, soft daylight"
+ },
+ {
+  "name": "[Aesthetic] Acid House Flyer",
+  "family": "Design & Aesthetics",
+  "axis": "style",
+  "medium": "poster style image",
+  "nl": "Acid-house flyer rendering, smiley motifs, fluorescent yellow and magenta inks, photocopied blur, misregistered overprint, poster style image.",
+  "tags": [
+   "risograph",
+   "high_saturation",
+   "yellow_theme",
+   "halftone",
+   "textured"
+  ],
+  "tags_negative": [
+   "minimalism"
+  ],
+  "negative": "restrained corporate layout, subtle palette"
+ },
+ {
+  "name": "[Aesthetic] Jungle Rave Flyer",
+  "family": "Design & Aesthetics",
+  "axis": "style",
+  "medium": "poster style image",
+  "nl": "Rave-flyer rendering, chrome bevel lettering, laser gradients, black backdrop, cluttered logo stack, cheap print bleed, poster style image.",
+  "tags": [
+   "metallic",
+   "gradient",
+   "dark",
+   "glowing",
+   "poster"
+  ],
+  "tags_negative": [
+   "minimalism"
+  ],
+  "negative": "clean white space, muted restraint"
+ },
+ {
+  "name": "[Aesthetic] Skeuomorphic UI",
+  "family": "Design & Aesthetics",
+  "axis": "style",
+  "medium": "graphic style image",
+  "nl": "Skeuomorphic rendering, brushed metal and linen textures, glossy bevelled buttons, inner shadows and stitching, drop-shadow depth, graphic style image.",
+  "tags": [
+   "metallic",
+   "shiny",
+   "gradient",
+   "textured",
+   "3d"
+  ],
+  "tags_negative": [
+   "minimalism"
+  ],
+  "negative": "flat modern UI, texture-free colour"
+ },
+ {
+  "name": "[Aesthetic] Frutiger Metro",
+  "family": "Design & Aesthetics",
+  "axis": "style",
+  "medium": "graphic style image",
+  "nl": "Metro-flat rendering, bold colour tiles, thin geometric icons, generous grid space, zero shadow or gloss, graphic style image.",
+  "tags": [
+   "flat_color",
+   "minimalism",
+   "vector_trace",
+   "colorful"
+  ],
+  "tags_negative": [
+   "gradient",
+   "textured"
+  ],
+  "negative": "glossy bevels, photographic texture"
+ },
+ {
+  "name": "[Aesthetic] Brutalist Web",
+  "family": "Design & Aesthetics",
+  "axis": "style",
+  "medium": "graphic style image",
+  "nl": "Brutalist-web rendering, default system type, raw blue links, hard black rules, unstyled boxes on stark white, graphic style image.",
+  "tags": [
+   "white_theme",
+   "minimalism",
+   "high_contrast",
+   "monochrome"
+  ],
+  "tags_negative": [
+   "gradient"
+  ],
+  "negative": "polished gradients, decorative illustration"
+ },
+ {
+  "name": "[Aesthetic] Deconstructivism",
+  "family": "Design & Aesthetics",
+  "axis": "style",
+  "medium": "photograph style image",
+  "nl": "Deconstructivist rendering, fragmented tilted planes, non-parallel geometry, metal and glass skins, hard directional daylight, photograph style image.",
+  "tags": [
+   "metallic",
+   "glass",
+   "scenery",
+   "high_contrast"
+  ],
+  "tags_negative": [
+   "minimalism"
+  ],
+  "negative": "orthogonal calm geometry, soft even light"
+ },
+ {
+  "name": "[Aesthetic] Parametricism",
+  "family": "Design & Aesthetics",
+  "axis": "style",
+  "medium": "cgi style image",
+  "nl": "Parametric rendering, continuous flowing surfaces, algorithmic rib arrays, seamless white composite skin, soft studio gradient light, cgi style image.",
+  "tags": [
+   "3d",
+   "white_theme",
+   "gradient",
+   "minimalism"
+  ],
+  "tags_negative": [
+   "textured"
+  ],
+  "negative": "rough handmade texture, angular brutalism"
+ },
+ {
+  "name": "[Aesthetic] Tiki Lounge",
+  "family": "Design & Aesthetics",
+  "axis": "style",
+  "medium": "photograph style image",
+  "nl": "Tiki-lounge rendering, carved dark wood, bamboo texture, amber lantern pools, tropical print saturation, deep shadow, photograph style image.",
+  "tags": [
+   "wood",
+   "brown_theme",
+   "dark",
+   "glowing",
+   "textured"
+  ],
+  "tags_negative": [
+   "white_theme"
+  ],
+  "negative": "bright minimal interior, cold daylight"
+ },
+ {
+  "name": "[Aesthetic] Shabby Chic",
+  "family": "Design & Aesthetics",
+  "axis": "style",
+  "medium": "photograph style image",
+  "nl": "Shabby-chic rendering, chipped white paint over wood, faded floral fabric, soft window daylight, powdery pastel palette, photograph style image.",
+  "tags": [
+   "pale_color",
+   "textured",
+   "wood",
+   "soft_focus"
+  ],
+  "tags_negative": [
+   "high_contrast"
+  ],
+  "negative": "glossy modern surfaces, saturated contrast"
+ },
+ {
+  "name": "[Aesthetic] Gorpcore",
+  "family": "Design & Aesthetics",
+  "axis": "style",
+  "medium": "photograph style image",
+  "nl": "Gorpcore rendering, technical nylon sheen, reflective trims, alpine overcast light, utilitarian colour blocking, photograph style image.",
+  "tags": [
+   "shiny",
+   "muted_color",
+   "photo_(medium)",
+   "textured"
+  ],
+  "tags_negative": [
+   "glowing"
+  ],
+  "negative": "glamour studio light, ornate styling"
+ },
+ {
+  "name": "[Aesthetic] Techwear",
+  "family": "Design & Aesthetics",
+  "axis": "style",
+  "medium": "photograph style image",
+  "nl": "Techwear rendering, matte black synthetic layers, strap and buckle hardware, cold city light, desaturated grey-black palette, photograph style image.",
+  "tags": [
+   "dark",
+   "desaturated",
+   "textured",
+   "metallic"
+  ],
+  "tags_negative": [
+   "colorful"
+  ],
+  "negative": "warm saturated colour, soft romantic light"
+ },
+ {
+  "name": "[Aesthetic] Clowncore",
+  "family": "Design & Aesthetics",
+  "axis": "style",
+  "medium": "graphic style image",
+  "nl": "Clowncore rendering, primary polka dots and stripes clashing, glossy vinyl texture, harsh flash, unsettling saturation, graphic style image.",
+  "tags": [
+   "colorful",
+   "high_saturation",
+   "plastic",
+   "flash_photography"
+  ],
+  "tags_negative": [
+   "muted_color"
+  ],
+  "negative": "muted tasteful palette, soft natural light"
+ },
+ {
+  "name": "[Aesthetic] Decora",
+  "family": "Design & Aesthetics",
+  "axis": "style",
+  "medium": "photograph style image",
+  "nl": "Decora rendering, layered plastic accessories in clashing candy colour, glitter sparkle, bright flat flash, dense visual noise, photograph style image.",
+  "tags": [
+   "colorful",
+   "plastic",
+   "sparkle",
+   "flash_photography",
+   "high_saturation"
+  ],
+  "tags_negative": [
+   "minimalism"
+  ],
+  "negative": "minimal styling, muted palette"
+ },
+ {
+  "name": "[Aesthetic] Fairy Kei",
+  "family": "Design & Aesthetics",
+  "axis": "style",
+  "medium": "photograph style image",
+  "nl": "Fairy-kei rendering, faded 1980s pastel palette, plush toy texture, soft diffuse light, milky low contrast, photograph style image.",
+  "tags": [
+   "pastel_colors",
+   "soft_focus",
+   "pale_color",
+   "textured"
+  ],
+  "tags_negative": [
+   "dark"
+  ],
+  "negative": "dark saturated grade, hard contrast"
+ },
+ {
+  "name": "[Aesthetic] Lolita Fashion",
+  "family": "Design & Aesthetics",
+  "axis": "style",
+  "medium": "photograph style image",
+  "nl": "Lolita rendering, layered lace and ruffle texture, bell silhouettes, powdery pastel or blackwork palette, soft even light, photograph style image.",
+  "tags": [
+   "pastel_colors",
+   "textured",
+   "soft_focus",
+   "embroidery"
+  ],
+  "tags_negative": [
+   "desaturated"
+  ],
+  "negative": "utilitarian minimalism, harsh contrast"
+ },
+ {
+  "name": "[Aesthetic] Gyaru",
+  "family": "Design & Aesthetics",
+  "axis": "style",
+  "medium": "photograph style image",
+  "nl": "Gyaru rendering, bleached hair sheen, bronzed skin, glossy highlights, purikura-bright flash with soft bloom, photograph style image.",
+  "tags": [
+   "glowing",
+   "flash_photography",
+   "high_saturation",
+   "soft_focus"
+  ],
+  "tags_negative": [
+   "muted_color"
+  ],
+  "negative": "muted natural grade, moody shadow"
+ },
+ {
+  "name": "[Aesthetic] Regencycore",
+  "family": "Design & Aesthetics",
+  "axis": "style",
+  "medium": "photograph style image",
+  "nl": "Regency rendering, candle-warm interiors, silk and embroidery sheen, pastel-and-gold palette, soft painterly diffusion, photograph style image.",
+  "tags": [
+   "gold",
+   "pastel_colors",
+   "glowing",
+   "soft_focus",
+   "textured"
+  ],
+  "tags_negative": [
+   "neon_palette"
+  ],
+  "negative": "neon modern grade, industrial texture"
+ },
+ {
+  "name": "[Aesthetic] Soviet Modernism",
+  "family": "Design & Aesthetics",
+  "axis": "style",
+  "medium": "photograph style image",
+  "nl": "Soviet-modernist rendering, monumental concrete geometry, mosaic panel accents, flat overcast light, muted grey-ochre palette, photograph style image.",
+  "tags": [
+   "stone",
+   "mosaic",
+   "grey_background",
+   "muted_color",
+   "scenery"
+  ],
+  "tags_negative": [
+   "colorful"
+  ],
+  "negative": "warm decorative colour, glossy modern glass"
+ },
+ {
+  "name": "[Aesthetic] Ulm Rationalism",
+  "family": "Design & Aesthetics",
+  "axis": "style",
+  "medium": "graphic style image",
+  "nl": "Rationalist rendering, strict modular grid, one accent colour on grey, systematic geometry, no ornament at all, graphic style image.",
+  "tags": [
+   "minimalism",
+   "grey_background",
+   "flat_color",
+   "limited_palette"
+  ],
+  "tags_negative": [
+   "textured"
+  ],
+  "negative": "decorative ornament, painterly texture"
+ },
+ {
+  "name": "[Aesthetic] Anti-Design",
+  "family": "Design & Aesthetics",
+  "axis": "style",
+  "medium": "graphic style image",
+  "nl": "Anti-design rendering, deliberately clashing type and colour, misaligned boxes, stretched imagery, ugly-on-purpose composition, graphic style image.",
+  "tags": [
+   "colorful",
+   "high_contrast",
+   "glitch",
+   "collage"
+  ],
+  "tags_negative": [
+   "minimalism"
+  ],
+  "negative": "tidy grid alignment, harmonious palette"
+ }
 ]

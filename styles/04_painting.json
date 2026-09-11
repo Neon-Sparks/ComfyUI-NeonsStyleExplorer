@@ -8,7 +8,7 @@
       "family": "Traditional Painting",
       "axis": "style",
       "medium": "painting style image",
-      "nl": "Dot-painting rendering: fields built from repeated ochre dots, concentric and track motifs, earth red, yellow and white on dark ground, painting style image.",
+      "nl": "Dot-painting rendering, fields built from repeated ochre dots, concentric and track motifs, earth red, yellow and white on dark ground, painting style image.",
       "tags": [
         "traditional_media",
         "halftone",
@@ -29,7 +29,7 @@
       "family": "Traditional Painting",
       "axis": "style",
       "medium": "abstract style image",
-      "nl": "Late abstract-expressionist field: stained thin colour washes, heavy gestural slabs over them, raw canvas showing through, huge scale marks, abstract style image.",
+      "nl": "Late abstract-expressionist field, stained thin colour washes, heavy gestural slabs over them, raw canvas showing through, huge scale marks, abstract style image.",
       "tags": [
         "painting_(medium)",
         "gradient",
@@ -53,7 +53,7 @@
       "family": "Traditional Painting",
       "axis": "style",
       "medium": "oil painting style image",
-      "nl": "Academic salon oil: invisible blended brushwork, precise anatomy, warm varnished glazes, controlled studio light, dark ground, oil painting style image.",
+      "nl": "Academic salon oil, invisible blended brushwork, precise anatomy, warm varnished glazes, controlled studio light, dark ground, oil painting style image.",
       "tags": [
         "oil_painting_(medium)",
         "traditional_media",
@@ -73,7 +73,7 @@
       "family": "Traditional Painting",
       "axis": "style",
       "medium": "painting style image",
-      "nl": "Acrylic rendering: brighter flatter colour than oil, fast-dried hard edges, matte plastic film, slight brush ridging, painting style image.",
+      "nl": "Acrylic rendering, brighter flatter colour than oil, fast-dried hard edges, matte plastic film, slight brush ridging, painting style image.",
       "tags": [
         "acrylic_paint_(medium)",
         "traditional_media",
@@ -93,7 +93,7 @@
       "family": "Traditional Painting",
       "axis": "style",
       "medium": "painting style image",
-      "nl": "Afrofuturist painting: indigo and gold palette, patterned textile fields, cosmic glow behind the figure, metallic leaf accents, painting style image.",
+      "nl": "Afrofuturist painting, indigo and gold palette, patterned textile fields, cosmic glow behind the figure, metallic leaf accents, painting style image.",
       "tags": [
         "gold",
         "colorful",
@@ -114,7 +114,7 @@
       "family": "Traditional Painting",
       "axis": "style",
       "medium": "painting style image",
-      "nl": "Amate rendering: bright flat figures painted on mottled fig-bark paper, hard black outlines, symmetrical birds and blossoms, the fibrous uneven ground showing through everywhere, painting style image.",
+      "nl": "Amate rendering, bright flat figures painted on mottled fig-bark paper, hard black outlines, symmetrical birds and blossoms, the fibrous uneven ground showing through everywhere, painting style image.",
       "tags": [
         "traditional_media",
         "flat_color",
@@ -135,7 +135,7 @@
       "family": "Traditional Painting",
       "axis": "style",
       "medium": "painting style image",
-      "nl": "Analytic-cubist rendering: form shattered into overlapping facets, monochrome ochre-and-grey palette, ambiguous shallow space, painting style image.",
+      "nl": "Analytic-cubist rendering, form shattered into overlapping facets, monochrome ochre-and-grey palette, ambiguous shallow space, painting style image.",
       "tags": [
         "cubism",
         "monochrome",
@@ -155,7 +155,7 @@
       "family": "Traditional Painting",
       "axis": "style",
       "medium": "painting style image",
-      "nl": "Arabesque illumination: interlaced geometric vine ornament, lapis and gold leaf, flat jewel colour, fine white outlining, painting style image.",
+      "nl": "Arabesque illumination, interlaced geometric vine ornament, lapis and gold leaf, flat jewel colour, fine white outlining, painting style image.",
       "tags": [
         "gold",
         "traditional_media",
@@ -176,7 +176,7 @@
       "family": "Traditional Painting",
       "axis": "style",
       "medium": "painting style image",
-      "nl": "Art-brut rendering: untrained urgent mark-making, flattened space, scratched-in detail, raw unmixed colour, crowded surface, painting style image.",
+      "nl": "Art-brut rendering, untrained urgent mark-making, flattened space, scratched-in detail, raw unmixed colour, crowded surface, painting style image.",
       "tags": [
         "painting_(medium)",
         "textured",
@@ -196,7 +196,7 @@
       "family": "Traditional Painting",
       "axis": "style",
       "medium": "painting style image",
-      "nl": "Art-deco rendering: streamlined symmetrical forms, sunburst and chevron motifs, gold-on-black palette, hard flat colour zones, painting style image.",
+      "nl": "Art-deco rendering, streamlined symmetrical forms, sunburst and chevron motifs, gold-on-black palette, hard flat colour zones, painting style image.",
       "tags": [
         "art_deco",
         "gold",
@@ -216,7 +216,7 @@
       "family": "Traditional Painting",
       "axis": "style",
       "medium": "painting style image",
-      "nl": "Art-nouveau rendering: whiplash botanical line, flat decorative colour, ornamental border framing, muted jewel palette, painting style image.",
+      "nl": "Art-nouveau rendering, whiplash botanical line, flat decorative colour, ornamental border framing, muted jewel palette, painting style image.",
       "tags": [
         "art_nouveau",
         "flat_color",
@@ -236,7 +236,7 @@
       "family": "Traditional Painting",
       "axis": "style",
       "medium": "drawing style image",
-      "nl": "Ballpoint rendering: humble blue-black hatching, glossy ink build-up, blotted starts, notebook paper grain, drawing style image.",
+      "nl": "Ballpoint rendering, humble blue-black hatching, glossy ink build-up, blotted starts, notebook paper grain, drawing style image.",
       "tags": [
         "ballpoint_pen_(medium)",
         "cross-hatching",
@@ -257,7 +257,7 @@
       "family": "Traditional Painting",
       "axis": "style",
       "medium": "oil painting style image",
-      "nl": "Barbizon rendering: earthy woodland palette, soft atmospheric light through leaves, loose tonal brushwork, warm ground showing, oil painting style image.",
+      "nl": "Barbizon rendering, earthy woodland palette, soft atmospheric light through leaves, loose tonal brushwork, warm ground showing, oil painting style image.",
       "tags": [
         "oil_painting_(medium)",
         "muted_color",
@@ -277,7 +277,7 @@
       "family": "Traditional Painting",
       "axis": "style",
       "medium": "oil painting style image",
-      "nl": "Baroque rendering: diagonal theatrical composition, dramatic raking light, deep shadow ground, rich flesh and fabric glazes, oil painting style image.",
+      "nl": "Baroque rendering, diagonal theatrical composition, dramatic raking light, deep shadow ground, rich flesh and fabric glazes, oil painting style image.",
       "tags": [
         "oil_painting_(medium)",
         "chiaroscuro",
@@ -297,7 +297,7 @@
       "family": "Traditional Painting",
       "axis": "style",
       "medium": "oil painting style image",
-      "nl": "Baroque chiaroscuro: single dramatic light source, deep black surround, luminous modelled flesh, warm glaze depth, oil painting style image.",
+      "nl": "Baroque chiaroscuro, single dramatic light source, deep black surround, luminous modelled flesh, warm glaze depth, oil painting style image.",
       "tags": [
         "chiaroscuro",
         "dark",
@@ -317,7 +317,7 @@
       "family": "Traditional Painting",
       "axis": "style",
       "medium": "oil painting style image",
-      "nl": "Baroque oil rendering: dark ground with warm flesh built in glazes, velvet and satin highlights, dynamic drapery, oil painting style image.",
+      "nl": "Baroque oil rendering, dark ground with warm flesh built in glazes, velvet and satin highlights, dynamic drapery, oil painting style image.",
       "tags": [
         "oil_painting_(medium)",
         "chiaroscuro",
@@ -337,7 +337,7 @@
       "family": "Traditional Painting",
       "axis": "style",
       "medium": "material style image",
-      "nl": "Batik-painting rendering: wax-resist white lines with crackle veining, layered dye colour, cloth weave showing through, material style image.",
+      "nl": "Batik-painting rendering, wax-resist white lines with crackle veining, layered dye colour, cloth weave showing through, material style image.",
       "tags": [
         "textured",
         "colorful",
@@ -357,7 +357,7 @@
       "family": "Traditional Painting",
       "axis": "style",
       "medium": "oil painting style image",
-      "nl": "Bay Area figurative rendering: thick loaded strokes left deliberately unresolved, high Californian daylight flattening the palette, drawing done with the brush itself, scraped-back passages showing earlier layers, oil painting style image.",
+      "nl": "Bay Area figurative rendering, thick loaded strokes left deliberately unresolved, high Californian daylight flattening the palette, drawing done with the brush itself, scraped-back passages showing earlier layers, oil painting style image.",
       "tags": [
         "oil_painting_(medium)",
         "textured",
@@ -377,7 +377,7 @@
       "family": "Traditional Painting",
       "axis": "style",
       "medium": "oil painting style image",
-      "nl": "Spanish bodegón rendering: a few humble objects spaced along a bare ledge, hard side light against a near-black ground, austere intervals, matte earthy palette with restrained highlights, oil painting style image.",
+      "nl": "Spanish bodegón rendering, a few humble objects spaced along a bare ledge, hard side light against a near-black ground, austere intervals, matte earthy palette with restrained highlights, oil painting style image.",
       "tags": [
         "oil_painting_(medium)",
         "still_life",
@@ -398,7 +398,7 @@
       "family": "Traditional Painting",
       "axis": "style",
       "medium": "painting style image",
-      "nl": "Byzantine gold-ground rendering: flat gilded background, frontal hieratic figures, linear drapery folds, egg-tempera matte surface, painting style image.",
+      "nl": "Byzantine gold-ground rendering, flat gilded background, frontal hieratic figures, linear drapery folds, egg-tempera matte surface, painting style image.",
       "tags": [
         "gold",
         "tempera_(medium)",
@@ -418,7 +418,7 @@
       "family": "Traditional Painting",
       "axis": "style",
       "medium": "painting style image",
-      "nl": "Icon rendering: gold leaf halo, olive underpaint through the flesh, stylised linear features, cracked varnish surface, painting style image.",
+      "nl": "Icon rendering, gold leaf halo, olive underpaint through the flesh, stylised linear features, cracked varnish surface, painting style image.",
       "tags": [
         "gold",
         "tempera_(medium)",
@@ -439,7 +439,7 @@
       "family": "Traditional Painting",
       "axis": "style",
       "medium": "oil painting style image",
-      "nl": "Camera-obscura rendering: optical circles of confusion on highlights, soft focus falloff, cool daylight interior, pointillist glints, oil painting style image.",
+      "nl": "Camera-obscura rendering, optical circles of confusion on highlights, soft focus falloff, cool daylight interior, pointillist glints, oil painting style image.",
       "tags": [
         "soft_focus",
         "bokeh",
@@ -459,7 +459,7 @@
       "family": "Traditional Painting",
       "axis": "style",
       "medium": "oil painting style image",
-      "nl": "Capriccio rendering: invented ruins assembled beside real monuments, warm bituminous shadow, crumbling stone laid in dry scumbles, wide even daylight and a chalky distance, oil painting style image.",
+      "nl": "Capriccio rendering, invented ruins assembled beside real monuments, warm bituminous shadow, crumbling stone laid in dry scumbles, wide even daylight and a chalky distance, oil painting style image.",
       "tags": [
         "oil_painting_(medium)",
         "scenery",
@@ -479,7 +479,7 @@
       "family": "Traditional Painting",
       "axis": "style",
       "medium": "oil painting style image",
-      "nl": "Caravaggesque rendering: spotlight emerging from darkness, hard shadow edges, earthy flesh, near-black background, oil painting style image.",
+      "nl": "Caravaggesque rendering, spotlight emerging from darkness, hard shadow edges, earthy flesh, near-black background, oil painting style image.",
       "tags": [
         "chiaroscuro",
         "dark",
@@ -499,7 +499,7 @@
       "family": "Traditional Painting",
       "axis": "style",
       "medium": "painting style image",
-      "nl": "Cave-pictograph rendering: ochre and charcoal pigment on rough rock, blown-hand outlines, flat silhouettes, mineral bleed into stone, painting style image.",
+      "nl": "Cave-pictograph rendering, ochre and charcoal pigment on rough rock, blown-hand outlines, flat silhouettes, mineral bleed into stone, painting style image.",
       "tags": [
         "traditional_media",
         "brown_theme",
@@ -520,7 +520,7 @@
       "family": "Traditional Painting",
       "axis": "style",
       "medium": "drawing style image",
-      "nl": "Charcoal rendering: velvet blacks smudged with the finger, lifted white highlights, dusty grain, toothy paper, drawing style image.",
+      "nl": "Charcoal rendering, velvet blacks smudged with the finger, lifted white highlights, dusty grain, toothy paper, drawing style image.",
       "tags": [
         "charcoal_(medium)",
         "monochrome",
@@ -543,7 +543,7 @@
       "family": "Traditional Painting",
       "axis": "style",
       "medium": "drawing style image",
-      "nl": "Academic charcoal study: careful tonal massing, blended mid greys, eraser-cut highlights, plumb-line construction marks, drawing style image.",
+      "nl": "Academic charcoal study, careful tonal massing, blended mid greys, eraser-cut highlights, plumb-line construction marks, drawing style image.",
       "tags": [
         "charcoal_(medium)",
         "monochrome",
@@ -564,7 +564,7 @@
       "family": "Traditional Painting",
       "axis": "style",
       "medium": "ink painting style image",
-      "nl": "Shan-shui rendering: layered ink washes for mist and mountain, dry-brush texture strokes, vast empty paper, sparse detail, ink painting style image.",
+      "nl": "Shan-shui rendering, layered ink washes for mist and mountain, dry-brush texture strokes, vast empty paper, sparse detail, ink painting style image.",
       "tags": [
         "ink_wash_painting",
         "monochrome",
@@ -584,7 +584,7 @@
       "family": "Traditional Painting",
       "axis": "style",
       "medium": "painting style image",
-      "nl": "Classical rendering: marble-pale figures in contrapposto, carved drapery folds, restrained ochre palette, frieze-flat staging, painting style image.",
+      "nl": "Classical rendering, marble-pale figures in contrapposto, carved drapery folds, restrained ochre palette, frieze-flat staging, painting style image.",
       "tags": [
         "marble",
         "muted_color",
@@ -604,7 +604,7 @@
       "family": "Traditional Painting",
       "axis": "style",
       "medium": "abstract style image",
-      "nl": "Colour-field rendering: large stained planes of hovering colour, soft bleeding boundaries, matte unvarnished surface, no drawing, abstract style image.",
+      "nl": "Colour-field rendering, large stained planes of hovering colour, soft bleeding boundaries, matte unvarnished surface, no drawing, abstract style image.",
       "tags": [
         "gradient",
         "flat_color",
@@ -624,7 +624,7 @@
       "family": "Traditional Painting",
       "axis": "style",
       "medium": "drawing style image",
-      "nl": "Coloured-pencil rendering: waxy layered strokes, visible directional hatching, paper tooth breaking the colour, gentle burnish, drawing style image.",
+      "nl": "Coloured-pencil rendering, waxy layered strokes, visible directional hatching, paper tooth breaking the colour, gentle burnish, drawing style image.",
       "tags": [
         "colored_pencil_(medium)",
         "traditional_media",
@@ -646,7 +646,7 @@
       "family": "Traditional Painting",
       "axis": "style",
       "medium": "abstract style image",
-      "nl": "Concrete-art rendering: exact geometry fixed by rule before the brush, hard-edged bars and squares in flat unmodulated paint, mathematical spacing, no gesture anywhere on the surface, abstract style image.",
+      "nl": "Concrete-art rendering, exact geometry fixed by rule before the brush, hard-edged bars and squares in flat unmodulated paint, mathematical spacing, no gesture anywhere on the surface, abstract style image.",
       "tags": [
         "flat_color",
         "minimalism",
@@ -666,7 +666,7 @@
       "family": "Traditional Painting",
       "axis": "style",
       "medium": "painting style image",
-      "nl": "Contemporary figurative rendering: current paint handling, unfinished passages beside resolved detail, cool muted palette, visible drips, painting style image.",
+      "nl": "Contemporary figurative rendering, current paint handling, unfinished passages beside resolved detail, cool muted palette, visible drips, painting style image.",
       "tags": [
         "painting_(medium)",
         "muted_color",
@@ -686,7 +686,7 @@
       "family": "Traditional Painting",
       "axis": "style",
       "medium": "drawing style image",
-      "nl": "Cross-hatch rendering: form built purely from crossing pen strokes, tonal density by line spacing, white paper as light, drawing style image.",
+      "nl": "Cross-hatch rendering, form built purely from crossing pen strokes, tonal density by line spacing, white paper as light, drawing style image.",
       "tags": [
         "cross-hatching",
         "monochrome",
@@ -706,7 +706,7 @@
       "family": "Traditional Painting",
       "axis": "style",
       "medium": "painting style image",
-      "nl": "Cuzco-school rendering: Andean colonial devotional painting, gold brocade patterning laid flat over dark drapery, frontal hieratic poses, matte earth palette with red bole showing at the edges, painting style image.",
+      "nl": "Cuzco-school rendering, Andean colonial devotional painting, gold brocade patterning laid flat over dark drapery, frontal hieratic poses, matte earth palette with red bole showing at the edges, painting style image.",
       "tags": [
         "painting_(medium)",
         "gold",
@@ -726,7 +726,7 @@
       "family": "Traditional Painting",
       "axis": "style",
       "medium": "collage style image",
-      "nl": "Dada collage rendering: cut newsprint fragments, mismatched scales, typographic scraps, glue wrinkles, torn edges, collage style image.",
+      "nl": "Dada collage rendering, cut newsprint fragments, mismatched scales, typographic scraps, glue wrinkles, torn edges, collage style image.",
       "tags": [
         "collage",
         "halftone",
@@ -746,7 +746,7 @@
       "family": "Traditional Painting",
       "axis": "style",
       "medium": "abstract style image",
-      "nl": "Decalcomania rendering: paint pressed between two surfaces and pulled apart, veined lace and coral textures left behind, accidental near-symmetry, dark tonal pooling at the edges, abstract style image.",
+      "nl": "Decalcomania rendering, paint pressed between two surfaces and pulled apart, veined lace and coral textures left behind, accidental near-symmetry, dark tonal pooling at the edges, abstract style image.",
       "tags": [
         "textured",
         "painting_(medium)",
@@ -765,7 +765,7 @@
       "family": "Traditional Painting",
       "axis": "style",
       "medium": "painting style image",
-      "nl": "Divisionist rendering: separated strokes of pure complementary colour, optical mixing at distance, even mark rhythm, painting style image.",
+      "nl": "Divisionist rendering, separated strokes of pure complementary colour, optical mixing at distance, even mark rhythm, painting style image.",
       "tags": [
         "impressionism",
         "halftone",
@@ -785,7 +785,7 @@
       "family": "Traditional Painting",
       "axis": "style",
       "medium": "oil painting style image",
-      "nl": "Dutch marine rendering: grey-green swell under a towering cloud bank, rigging picked out hair-thin against pale sky, low horizon far down the frame, silvery tonal restraint overall, oil painting style image.",
+      "nl": "Dutch marine rendering, grey-green swell under a towering cloud bank, rigging picked out hair-thin against pale sky, low horizon far down the frame, silvery tonal restraint overall, oil painting style image.",
       "tags": [
         "oil_painting_(medium)",
         "scenery",
@@ -805,7 +805,7 @@
       "family": "Traditional Painting",
       "axis": "style",
       "medium": "collage style image",
-      "nl": "Décollage rendering: layers of pasted street posters torn back into each other, fragments of type and flat colour surfacing at random, ragged wet edges, paste bloom and grime across the sheet, collage style image.",
+      "nl": "Décollage rendering, layers of pasted street posters torn back into each other, fragments of type and flat colour surfacing at random, ragged wet edges, paste bloom and grime across the sheet, collage style image.",
       "tags": [
         "collage",
         "textured",
@@ -824,7 +824,7 @@
       "family": "Traditional Painting",
       "axis": "style",
       "medium": "oil painting style image",
-      "nl": "Renaissance rendering: measured one-point perspective, idealised anatomy, clear even light, luminous layered glazes, oil painting style image.",
+      "nl": "Renaissance rendering, measured one-point perspective, idealised anatomy, clear even light, luminous layered glazes, oil painting style image.",
       "tags": [
         "oil_painting_(medium)",
         "traditional_media",
@@ -846,7 +846,7 @@
       "family": "Traditional Painting",
       "axis": "style",
       "medium": "painting style image",
-      "nl": "Early-renaissance tempera: dry matte surface, fine hatched modelling, gold-leaf accents, pale even light, panel grain, painting style image.",
+      "nl": "Early-renaissance tempera, dry matte surface, fine hatched modelling, gold-leaf accents, pale even light, panel grain, painting style image.",
       "tags": [
         "tempera_(medium)",
         "gold",
@@ -867,7 +867,7 @@
       "family": "Traditional Painting",
       "axis": "style",
       "medium": "painting style image",
-      "nl": "Egyptian wall rendering: profile-and-frontal composite figures, flat mineral ochre and lapis, register bands, plaster texture, painting style image.",
+      "nl": "Egyptian wall rendering, profile-and-frontal composite figures, flat mineral ochre and lapis, register bands, plaster texture, painting style image.",
       "tags": [
         "flat_color",
         "traditional_media",
@@ -887,7 +887,7 @@
       "family": "Traditional Painting",
       "axis": "style",
       "medium": "painting style image",
-      "nl": "Ethiopian church rendering: wide almond eyes and frontal stares, thick black contour around every shape, flat saturated red, yellow and green, banded borders enclosing each panel, painting style image.",
+      "nl": "Ethiopian church rendering, wide almond eyes and frontal stares, thick black contour around every shape, flat saturated red, yellow and green, banded borders enclosing each panel, painting style image.",
       "tags": [
         "painting_(medium)",
         "flat_color",
@@ -907,7 +907,7 @@
       "family": "Traditional Painting",
       "axis": "style",
       "medium": "painting style image",
-      "nl": "Expressionist rendering: distorted forms, high-keyed emotional colour, slashing visible brushwork, heavy contour, painting style image.",
+      "nl": "Expressionist rendering, distorted forms, high-keyed emotional colour, slashing visible brushwork, heavy contour, painting style image.",
       "tags": [
         "painting_(medium)",
         "colorful",
@@ -927,7 +927,7 @@
       "family": "Traditional Painting",
       "axis": "style",
       "medium": "painting style image",
-      "nl": "Fauvist rendering: arbitrary wild colour, unmixed strokes side by side, flattened space, bold contour, painting style image.",
+      "nl": "Fauvist rendering, arbitrary wild colour, unmixed strokes side by side, flattened space, bold contour, painting style image.",
       "tags": [
         "colorful",
         "high_saturation",
@@ -947,7 +947,7 @@
       "family": "Traditional Painting",
       "axis": "style",
       "medium": "painting style image",
-      "nl": "Fayum rendering: encaustic wax portrait on wood, large dark eyes, warm ochre flesh, visible brush and panel grain, painting style image.",
+      "nl": "Fayum rendering, encaustic wax portrait on wood, large dark eyes, warm ochre flesh, visible brush and panel grain, painting style image.",
       "tags": [
         "tempera_(medium)",
         "brown_theme",
@@ -968,7 +968,7 @@
       "family": "Traditional Painting",
       "axis": "style",
       "medium": "painting style image",
-      "nl": "Fresco rendering: pigment sunk into wet lime plaster, chalky matte surface, muted mineral palette, hairline cracks, painting style image.",
+      "nl": "Fresco rendering, pigment sunk into wet lime plaster, chalky matte surface, muted mineral palette, hairline cracks, painting style image.",
       "tags": [
         "painting_(medium)",
         "traditional_media",
@@ -989,7 +989,7 @@
       "family": "Traditional Painting",
       "axis": "style",
       "medium": "drawing style image",
-      "nl": "Frottage rendering: graphite rubbed over paper laid on rough boards, grain and knots printing through as tonal fields, no drawn line at all, smudged open edges where the rubbing stops, drawing style image.",
+      "nl": "Frottage rendering, graphite rubbed over paper laid on rough boards, grain and knots printing through as tonal fields, no drawn line at all, smudged open edges where the rubbing stops, drawing style image.",
       "tags": [
         "graphite_(medium)",
         "monochrome",
@@ -1009,7 +1009,7 @@
       "family": "Traditional Painting",
       "axis": "style",
       "medium": "painting style image",
-      "nl": "Futurist rendering: motion split into repeated overlapping forms, force lines, mechanical palette, faceted speed planes, painting style image.",
+      "nl": "Futurist rendering, motion split into repeated overlapping forms, force lines, mechanical palette, faceted speed planes, painting style image.",
       "tags": [
         "motion_lines",
         "cubism",
@@ -1029,7 +1029,7 @@
       "family": "Traditional Painting",
       "axis": "style",
       "medium": "painting style image",
-      "nl": "German-expressionist rendering: woodcut-angular figures, acid clashing colour, jagged contour, anxious distorted space, painting style image.",
+      "nl": "German-expressionist rendering, woodcut-angular figures, acid clashing colour, jagged contour, anxious distorted space, painting style image.",
       "tags": [
         "woodcut",
         "high_contrast",
@@ -1049,7 +1049,7 @@
       "family": "Traditional Painting",
       "axis": "style",
       "medium": "oil painting style image",
-      "nl": "Glazed oil rendering: transparent colour layers over a monochrome underpainting, glowing depth, invisible brush marks, oil painting style image.",
+      "nl": "Glazed oil rendering, transparent colour layers over a monochrome underpainting, glowing depth, invisible brush marks, oil painting style image.",
       "tags": [
         "oil_painting_(medium)",
         "gradient",
@@ -1069,7 +1069,7 @@
       "family": "Traditional Painting",
       "axis": "style",
       "medium": "painting style image",
-      "nl": "Gond rendering: forms filled with dotted and dashed pattern lines, saturated flat colour, decorative flora and fauna motifs, painting style image.",
+      "nl": "Gond rendering, forms filled with dotted and dashed pattern lines, saturated flat colour, decorative flora and fauna motifs, painting style image.",
       "tags": [
         "flat_color",
         "colorful",
@@ -1090,7 +1090,7 @@
       "family": "Traditional Painting",
       "axis": "style",
       "medium": "ink painting style image",
-      "nl": "Gongbi rendering: fine even outline, many thin colour washes inside it, meticulous decorative detail, silk ground, ink painting style image.",
+      "nl": "Gongbi rendering, fine even outline, many thin colour washes inside it, meticulous decorative detail, silk ground, ink painting style image.",
       "tags": [
         "ink_wash_painting",
         "lineart",
@@ -1112,7 +1112,7 @@
       "family": "Traditional Painting",
       "axis": "style",
       "medium": "painting style image",
-      "nl": "Gothic rendering: attenuated elongated figures, pointed arch framing, stained-glass colour, flat gilded ground, painting style image.",
+      "nl": "Gothic rendering, attenuated elongated figures, pointed arch framing, stained-glass colour, flat gilded ground, painting style image.",
       "tags": [
         "gold",
         "stained_glass",
@@ -1132,7 +1132,7 @@
       "family": "Traditional Painting",
       "axis": "style",
       "medium": "painting style image",
-      "nl": "Gothic panel rendering: tempera on gessoed wood, tooled gold halos, linear drapery, jewel-flat colour, craquelure, painting style image.",
+      "nl": "Gothic panel rendering, tempera on gessoed wood, tooled gold halos, linear drapery, jewel-flat colour, craquelure, painting style image.",
       "tags": [
         "tempera_(medium)",
         "gold",
@@ -1153,7 +1153,7 @@
       "family": "Traditional Painting",
       "axis": "style",
       "medium": "painting style image",
-      "nl": "Gouache rendering: matte opaque colour, poster-flat coverage, crisp edges over dried layers, slight streaking, painting style image.",
+      "nl": "Gouache rendering, matte opaque colour, poster-flat coverage, crisp edges over dried layers, slight streaking, painting style image.",
       "tags": [
         "gouache_(medium)",
         "flat_color",
@@ -1175,7 +1175,7 @@
       "family": "Traditional Painting",
       "axis": "style",
       "medium": "painting style image",
-      "nl": "Wildstyle rendering: interlocking arrow letterforms, spray-can fades, hard outline and halo, drips and overspray on concrete, painting style image.",
+      "nl": "Wildstyle rendering, interlocking arrow letterforms, spray-can fades, hard outline and halo, drips and overspray on concrete, painting style image.",
       "tags": [
         "stencil",
         "colorful",
@@ -1196,7 +1196,7 @@
       "family": "Traditional Painting",
       "axis": "style",
       "medium": "drawing style image",
-      "nl": "Graphite plate rendering: silvery pencil sheen, tight even hatching, smooth tonal gradation, hot-press paper, drawing style image.",
+      "nl": "Graphite plate rendering, silvery pencil sheen, tight even hatching, smooth tonal gradation, hot-press paper, drawing style image.",
       "tags": [
         "graphite_(medium)",
         "monochrome",
@@ -1216,7 +1216,7 @@
       "family": "Traditional Painting",
       "axis": "style",
       "medium": "drawing style image",
-      "nl": "Graphite study: soft pencil line with academic tonal hatching, smudged mid greys, kneaded-eraser highlights, visible paper grain, drawing style image.",
+      "nl": "Graphite study, soft pencil line with academic tonal hatching, smudged mid greys, kneaded-eraser highlights, visible paper grain, drawing style image.",
       "tags": [
         "graphite_(medium)",
         "sketch",
@@ -1237,7 +1237,7 @@
       "family": "Traditional Painting",
       "axis": "style",
       "medium": "painting style image",
-      "nl": "Greek-vase rendering: black-figure silhouettes on terracotta, incised interior detail, meander border bands, curved surface sheen, painting style image.",
+      "nl": "Greek-vase rendering, black-figure silhouettes on terracotta, incised interior detail, meander border bands, curved surface sheen, painting style image.",
       "tags": [
         "silhouette",
         "brown_theme",
@@ -1258,7 +1258,7 @@
       "family": "Traditional Painting",
       "axis": "style",
       "medium": "painting style image",
-      "nl": "Grisaille rendering: full modelling in grey monochrome, sculptural relief illusion, subtle warm-cool grey shifts, painting style image.",
+      "nl": "Grisaille rendering, full modelling in grey monochrome, sculptural relief illusion, subtle warm-cool grey shifts, painting style image.",
       "tags": [
         "greyscale",
         "monochrome",
@@ -1278,7 +1278,7 @@
       "family": "Traditional Painting",
       "axis": "style",
       "medium": "abstract style image",
-      "nl": "Hard-edge rendering: razor-clean boundaries between flat colour zones, matte even paint, no brush marks at all, abstract style image.",
+      "nl": "Hard-edge rendering, razor-clean boundaries between flat colour zones, matte even paint, no brush marks at all, abstract style image.",
       "tags": [
         "flat_color",
         "minimalism",
@@ -1298,7 +1298,7 @@
       "family": "Traditional Painting",
       "axis": "style",
       "medium": "abstract style image",
-      "nl": "Hard-edge rendering: flat bands meeting on razor-taped boundaries, the panel's own irregular outline treated as part of the design, matte acrylic evenness, no tonal modelling, abstract style image.",
+      "nl": "Hard-edge rendering, flat bands meeting on razor-taped boundaries, the panel's own irregular outline treated as part of the design, matte acrylic evenness, no tonal modelling, abstract style image.",
       "tags": [
         "flat_color",
         "minimalism",
@@ -1318,7 +1318,7 @@
       "family": "Traditional Painting",
       "axis": "style",
       "medium": "painting style image",
-      "nl": "Hellenistic rendering: torsioned dynamic figures, deeply carved drapery, emotive faces, marble-pale tonality, painting style image.",
+      "nl": "Hellenistic rendering, torsioned dynamic figures, deeply carved drapery, emotive faces, marble-pale tonality, painting style image.",
       "tags": [
         "marble",
         "greyscale",
@@ -1338,7 +1338,7 @@
       "family": "Traditional Painting",
       "axis": "style",
       "medium": "oil painting style image",
-      "nl": "High-renaissance oil: sfumato transitions, balanced pyramid composition, warm luminous flesh, dark landscape distance, oil painting style image.",
+      "nl": "High-renaissance oil, sfumato transitions, balanced pyramid composition, warm luminous flesh, dark landscape distance, oil painting style image.",
       "tags": [
         "oil_painting_(medium)",
         "soft_focus",
@@ -1358,7 +1358,7 @@
       "family": "Traditional Painting",
       "axis": "style",
       "medium": "oil painting style image",
-      "nl": "Hudson-River rendering: luminous glowing sky, vast atmospheric wilderness, tiny scale figures, warm golden haze, oil painting style image.",
+      "nl": "Hudson-River rendering, luminous glowing sky, vast atmospheric wilderness, tiny scale figures, warm golden haze, oil painting style image.",
       "tags": [
         "scenery",
         "oil_painting_(medium)",
@@ -1379,7 +1379,7 @@
       "family": "Traditional Painting",
       "axis": "style",
       "medium": "oil painting style image",
-      "nl": "Luminist rendering: mirror-still water, invisible brushwork, pearlescent horizon glow, silent atmospheric gradation, oil painting style image.",
+      "nl": "Luminist rendering, mirror-still water, invisible brushwork, pearlescent horizon glow, silent atmospheric gradation, oil painting style image.",
       "tags": [
         "scenery",
         "glowing",
@@ -1400,7 +1400,7 @@
       "family": "Traditional Painting",
       "axis": "style",
       "medium": "material style image",
-      "nl": "Huichol yarn rendering: image built from pressed wax-set yarn lines, concentric colour contours, raised fibre texture, material style image.",
+      "nl": "Huichol yarn rendering, image built from pressed wax-set yarn lines, concentric colour contours, raised fibre texture, material style image.",
       "tags": [
         "knitted",
         "textured",
@@ -1420,7 +1420,7 @@
       "family": "Traditional Painting",
       "axis": "style",
       "medium": "painting style image",
-      "nl": "Illuminated-manuscript rendering: gold-leaf initials, lapis and vermilion miniatures, flat patterned ground, vellum tone, painting style image.",
+      "nl": "Illuminated-manuscript rendering, gold-leaf initials, lapis and vermilion miniatures, flat patterned ground, vellum tone, painting style image.",
       "tags": [
         "gold",
         "traditional_media",
@@ -1441,7 +1441,7 @@
       "family": "Traditional Painting",
       "axis": "style",
       "medium": "oil painting style image",
-      "nl": "Knife impasto rendering: thick ridged paint catching real light, scraped flat planes, sculptural surface relief, oil painting style image.",
+      "nl": "Knife impasto rendering, thick ridged paint catching real light, scraped flat planes, sculptural surface relief, oil painting style image.",
       "tags": [
         "oil_painting_(medium)",
         "textured",
@@ -1461,7 +1461,7 @@
       "family": "Traditional Painting",
       "axis": "style",
       "medium": "oil painting style image",
-      "nl": "Impressionist rendering: broken colour strokes, no black in the shadows, outdoor light dissolving edges, vibrating complementaries, oil painting style image.",
+      "nl": "Impressionist rendering, broken colour strokes, no black in the shadows, outdoor light dissolving edges, vibrating complementaries, oil painting style image.",
       "tags": [
         "impressionism",
         "oil_painting_(medium)",
@@ -1481,7 +1481,7 @@
       "family": "Traditional Painting",
       "axis": "style",
       "medium": "ink painting style image",
-      "nl": "Calligraphic brush rendering: one-stroke gestures with pressure variation, dry-brush split ends, ink pooling at the turns, ink painting style image.",
+      "nl": "Calligraphic brush rendering, one-stroke gestures with pressure variation, dry-brush split ends, ink pooling at the turns, ink painting style image.",
       "tags": [
         "ink_wash_painting",
         "monochrome",
@@ -1504,7 +1504,7 @@
       "family": "Traditional Painting",
       "axis": "style",
       "medium": "print style image",
-      "nl": "Stonecut rendering: flat silhouette figures in two or three colours, hand-rubbed uneven ink, wide empty paper, print style image.",
+      "nl": "Stonecut rendering, flat silhouette figures in two or three colours, hand-rubbed uneven ink, wide empty paper, print style image.",
       "tags": [
         "silhouette",
         "limited_palette",
@@ -1525,7 +1525,7 @@
       "family": "Traditional Painting",
       "axis": "style",
       "medium": "painting style image",
-      "nl": "Kalighat rendering: sweeping calligraphic brush contour, broad watercolour washes, minimal background, bold economical form, painting style image.",
+      "nl": "Kalighat rendering, sweeping calligraphic brush contour, broad watercolour washes, minimal background, bold economical form, painting style image.",
       "tags": [
         "watercolor_(medium)",
         "lineart",
@@ -1545,7 +1545,7 @@
       "family": "Traditional Painting",
       "axis": "style",
       "medium": "painting style image",
-      "nl": "Kerala mural rendering: ochre, indigo and terre-verte on lime plaster, elaborate crowns and jewellery drawn in fine line, rounded stylised anatomy, dense floral fill packing the ground, painting style image.",
+      "nl": "Kerala mural rendering, ochre, indigo and terre-verte on lime plaster, elaborate crowns and jewellery drawn in fine line, rounded stylised anatomy, dense floral fill packing the ground, painting style image.",
       "tags": [
         "painting_(medium)",
         "flat_color",
@@ -1565,7 +1565,7 @@
       "family": "Traditional Painting",
       "axis": "style",
       "medium": "painting style image",
-      "nl": "Minhwa rendering: flat bright folk colour, symmetrical playful composition, bold black outline, mineral pigment on paper, painting style image.",
+      "nl": "Minhwa rendering, flat bright folk colour, symmetrical playful composition, bold black outline, mineral pigment on paper, painting style image.",
       "tags": [
         "flat_color",
         "colorful",
@@ -1585,7 +1585,7 @@
       "family": "Traditional Painting",
       "axis": "style",
       "medium": "painting style image",
-      "nl": "Nabis rendering: flattened decorative space, patterned interiors, muted matte colour, soft simplified contour, painting style image.",
+      "nl": "Nabis rendering, flattened decorative space, patterned interiors, muted matte colour, soft simplified contour, painting style image.",
       "tags": [
         "flat_color",
         "muted_color",
@@ -1605,7 +1605,7 @@
       "family": "Traditional Painting",
       "axis": "style",
       "medium": "abstract style image",
-      "nl": "Lyrical-abstract rendering: fluid poured colour fields, soft blooming edges, translucent overlaps, unstructured drift, abstract style image.",
+      "nl": "Lyrical-abstract rendering, fluid poured colour fields, soft blooming edges, translucent overlaps, unstructured drift, abstract style image.",
       "tags": [
         "gradient",
         "painting_(medium)",
@@ -1625,7 +1625,7 @@
       "family": "Traditional Painting",
       "axis": "style",
       "medium": "painting style image",
-      "nl": "Madhubani rendering: double-outline figures, every gap filled with pattern, flat natural-dye colour, no empty ground, painting style image.",
+      "nl": "Madhubani rendering, double-outline figures, every gap filled with pattern, flat natural-dye colour, no empty ground, painting style image.",
       "tags": [
         "lineart",
         "flat_color",
@@ -1646,7 +1646,7 @@
       "family": "Traditional Painting",
       "axis": "style",
       "medium": "oil painting style image",
-      "nl": "Magic-realist rendering: photographic precision with one impossible element, still cool light, hard-edged clarity, oil painting style image.",
+      "nl": "Magic-realist rendering, photographic precision with one impossible element, still cool light, hard-edged clarity, oil painting style image.",
       "tags": [
         "realistic",
         "surreal",
@@ -1666,7 +1666,7 @@
       "family": "Traditional Painting",
       "axis": "style",
       "medium": "oil painting style image",
-      "nl": "Mannerist rendering: elongated stylish figures, crowded serpentine composition, acid shot colour, artificial light, oil painting style image.",
+      "nl": "Mannerist rendering, elongated stylish figures, crowded serpentine composition, acid shot colour, artificial light, oil painting style image.",
       "tags": [
         "oil_painting_(medium)",
         "colorful",
@@ -1686,7 +1686,7 @@
       "family": "Traditional Painting",
       "axis": "style",
       "medium": "painting style image",
-      "nl": "Kowhaiwhai rendering: unfurling koru spirals in red, black and white, mirrored rafter rhythm, flat painted panels, painting style image.",
+      "nl": "Kowhaiwhai rendering, unfurling koru spirals in red, black and white, mirrored rafter rhythm, flat painted panels, painting style image.",
       "tags": [
         "flat_color",
         "red_theme",
@@ -1707,7 +1707,7 @@
       "family": "Traditional Painting",
       "axis": "style",
       "medium": "painting style image",
-      "nl": "Medieval illumination: flat jewel colour, gold ground, stacked non-perspectival space, decorative border vines, vellum grain, painting style image.",
+      "nl": "Medieval illumination, flat jewel colour, gold ground, stacked non-perspectival space, decorative border vines, vellum grain, painting style image.",
       "tags": [
         "gold",
         "flat_color",
@@ -1727,7 +1727,7 @@
       "family": "Traditional Painting",
       "axis": "style",
       "medium": "oil painting style image",
-      "nl": "Metaphysical rendering: empty arcaded squares, impossible long shadows, airless stillness, muted ochre and green, oil painting style image.",
+      "nl": "Metaphysical rendering, empty arcaded squares, impossible long shadows, airless stillness, muted ochre and green, oil painting style image.",
       "tags": [
         "surreal",
         "muted_color",
@@ -1747,7 +1747,7 @@
       "family": "Traditional Painting",
       "axis": "style",
       "medium": "painting style image",
-      "nl": "Muralist rendering: monumental simplified figures, earth-red and ochre palette, fresco matte surface, public epic scale, painting style image.",
+      "nl": "Muralist rendering, monumental simplified figures, earth-red and ochre palette, fresco matte surface, public epic scale, painting style image.",
       "tags": [
         "painting_(medium)",
         "brown_theme",
@@ -1767,7 +1767,7 @@
       "family": "Traditional Painting",
       "axis": "style",
       "medium": "painting style image",
-      "nl": "Mithila rendering: double contour lines packed with hatching and dots, flat natural-dye colour, symmetrical filled ground, painting style image.",
+      "nl": "Mithila rendering, double contour lines packed with hatching and dots, flat natural-dye colour, symmetrical filled ground, painting style image.",
       "tags": [
         "lineart",
         "flat_color",
@@ -1788,7 +1788,7 @@
       "family": "Traditional Painting",
       "axis": "style",
       "medium": "abstract style image",
-      "nl": "Single-hue rendering: one colour carried across the whole surface, tonal life coming only from brush drag and weave grain, edges left frankly visible, no drawn incident, abstract style image.",
+      "nl": "Single-hue rendering, one colour carried across the whole surface, tonal life coming only from brush drag and weave grain, edges left frankly visible, no drawn incident, abstract style image.",
       "tags": [
         "minimalism",
         "monochrome",
@@ -1807,7 +1807,7 @@
       "family": "Traditional Painting",
       "axis": "style",
       "medium": "painting style image",
-      "nl": "Mughal miniature: fine squirrel-hair line, jewel mineral colour, elevated garden perspective, gold-flecked border, painting style image.",
+      "nl": "Mughal miniature, fine squirrel-hair line, jewel mineral colour, elevated garden perspective, gold-flecked border, painting style image.",
       "tags": [
         "gold",
         "flat_color",
@@ -1828,7 +1828,7 @@
       "family": "Traditional Painting",
       "axis": "style",
       "medium": "painting style image",
-      "nl": "Naive folk rendering: flattened perspective, careful outlining, cheerful unmixed colour, decorative repeated detail, painting style image.",
+      "nl": "Naive folk rendering, flattened perspective, careful outlining, cheerful unmixed colour, decorative repeated detail, painting style image.",
       "tags": [
         "flat_color",
         "colorful",
@@ -1848,7 +1848,7 @@
       "family": "Traditional Painting",
       "axis": "style",
       "medium": "painting style image",
-      "nl": "Ndebele rendering: hard-edged geometric blocks in saturated colour, every field bound by a heavy black band, stepped symmetrical forms, chalky wall texture under the paint, painting style image.",
+      "nl": "Ndebele rendering, hard-edged geometric blocks in saturated colour, every field bound by a heavy black band, stepped symmetrical forms, chalky wall texture under the paint, painting style image.",
       "tags": [
         "flat_color",
         "colorful",
@@ -1868,7 +1868,7 @@
       "family": "Traditional Painting",
       "axis": "style",
       "medium": "abstract style image",
-      "nl": "Neo-concrete rendering: geometric planes folded off the flat, hinged panels and cut angles casting their own thin shadows, restrained palette on white, hand-finished matte edges, abstract style image.",
+      "nl": "Neo-concrete rendering, geometric planes folded off the flat, hinged panels and cut angles casting their own thin shadows, restrained palette on white, hand-finished matte edges, abstract style image.",
       "tags": [
         "minimalism",
         "flat_color",
@@ -1887,7 +1887,7 @@
       "family": "Traditional Painting",
       "axis": "style",
       "medium": "painting style image",
-      "nl": "Neo-expressionist rendering: violent thick brushwork, raw scraped colour, crude figuration, mixed material grit, painting style image.",
+      "nl": "Neo-expressionist rendering, violent thick brushwork, raw scraped colour, crude figuration, mixed material grit, painting style image.",
       "tags": [
         "painting_(medium)",
         "textured",
@@ -1907,7 +1907,7 @@
       "family": "Traditional Painting",
       "axis": "style",
       "medium": "oil painting style image",
-      "nl": "Neoclassical rendering: stoic clean contour, sculptural modelling, cool restrained palette, stage-lit clarity, oil painting style image.",
+      "nl": "Neoclassical rendering, stoic clean contour, sculptural modelling, cool restrained palette, stage-lit clarity, oil painting style image.",
       "tags": [
         "oil_painting_(medium)",
         "muted_color",
@@ -1927,7 +1927,7 @@
       "family": "Traditional Painting",
       "axis": "style",
       "medium": "abstract style image",
-      "nl": "Nested-square rendering: concentric flat rectangles stepped downward, neighbouring colours chosen so each shifts the other, matte board-like surface, no blending at the joins, abstract style image.",
+      "nl": "Nested-square rendering, concentric flat rectangles stepped downward, neighbouring colours chosen so each shifts the other, matte board-like surface, no blending at the joins, abstract style image.",
       "tags": [
         "flat_color",
         "minimalism",
@@ -1946,7 +1946,7 @@
       "family": "Traditional Painting",
       "axis": "style",
       "medium": "oil painting style image",
-      "nl": "New-objectivity rendering: unflattering precise realism, hard cold light, sour green-grey palette, clinical detail, oil painting style image.",
+      "nl": "New-objectivity rendering, unflattering precise realism, hard cold light, sour green-grey palette, clinical detail, oil painting style image.",
       "tags": [
         "realistic",
         "muted_color",
@@ -1966,7 +1966,7 @@
       "family": "Traditional Painting",
       "axis": "style",
       "medium": "painting style image",
-      "nl": "Nihonga rendering: mineral pigment and shell white on paper, matte granular surface, flat decorative space, gold ground accents, painting style image.",
+      "nl": "Nihonga rendering, mineral pigment and shell white on paper, matte granular surface, flat decorative space, gold ground accents, painting style image.",
       "tags": [
         "nihonga",
         "traditional_media",
@@ -1987,7 +1987,7 @@
       "family": "Traditional Painting",
       "axis": "style",
       "medium": "oil painting style image",
-      "nl": "Northern-renaissance rendering: micro-detailed oil surfaces, crisp fabric and metal, cool even north light, deep saturated glaze, oil painting style image.",
+      "nl": "Northern-renaissance rendering, micro-detailed oil surfaces, crisp fabric and metal, cool even north light, deep saturated glaze, oil painting style image.",
       "tags": [
         "oil_painting_(medium)",
         "highres",
@@ -2007,7 +2007,7 @@
       "family": "Traditional Painting",
       "axis": "style",
       "medium": "oil painting style image",
-      "nl": "Northern-detail rendering: jeweller's precision in every texture, tiny reflections in glass and pearls, cool clear light, oil painting style image.",
+      "nl": "Northern-detail rendering, jeweller's precision in every texture, tiny reflections in glass and pearls, cool clear light, oil painting style image.",
       "tags": [
         "oil_painting_(medium)",
         "highres",
@@ -2027,7 +2027,7 @@
       "family": "Traditional Painting",
       "axis": "style",
       "medium": "painting style image",
-      "nl": "Formline rendering: swelling and tapering black ovoid contours, red and cyan secondary fills, symmetrical interlocking design, painting style image.",
+      "nl": "Formline rendering, swelling and tapering black ovoid contours, red and cyan secondary fills, symmetrical interlocking design, painting style image.",
       "tags": [
         "flat_color",
         "outline",
@@ -2048,7 +2048,7 @@
       "family": "Traditional Painting",
       "axis": "style",
       "medium": "oil painting style image",
-      "nl": "Oil-on-canvas rendering: loaded brush marks over canvas weave, blended wet-into-wet transitions, layered depth, varnish sheen, oil painting style image.",
+      "nl": "Oil-on-canvas rendering, loaded brush marks over canvas weave, blended wet-into-wet transitions, layered depth, varnish sheen, oil painting style image.",
       "tags": [
         "oil_painting_(medium)",
         "traditional_media",
@@ -2069,7 +2069,7 @@
       "family": "Traditional Painting",
       "axis": "style",
       "medium": "abstract style image",
-      "nl": "Op-art rendering: precise repeating geometry, vibrating black-and-white contrast, illusory bulge and movement, flat inks, abstract style image.",
+      "nl": "Op-art rendering, precise repeating geometry, vibrating black-and-white contrast, illusory bulge and movement, flat inks, abstract style image.",
       "tags": [
         "psychedelic",
         "high_contrast",
@@ -2092,7 +2092,7 @@
       "family": "Traditional Painting",
       "axis": "style",
       "medium": "painting style image",
-      "nl": "Orphist rendering: prismatic discs and interlocking arcs, simultaneous contrasts of pure hue doing the work of light, rhythm built from colour alone, faceted overlaps without outline, painting style image.",
+      "nl": "Orphist rendering, prismatic discs and interlocking arcs, simultaneous contrasts of pure hue doing the work of light, rhythm built from colour alone, faceted overlaps without outline, painting style image.",
       "tags": [
         "colorful",
         "painting_(medium)",
@@ -2112,7 +2112,7 @@
       "family": "Traditional Painting",
       "axis": "style",
       "medium": "material style image",
-      "nl": "Otomi rendering: flat animal and flora silhouettes in satin-stitch colour blocks, white cloth ground, even outline, material style image.",
+      "nl": "Otomi rendering, flat animal and flora silhouettes in satin-stitch colour blocks, white cloth ground, even outline, material style image.",
       "tags": [
         "embroidery",
         "flat_color",
@@ -2133,7 +2133,7 @@
       "family": "Traditional Painting",
       "axis": "style",
       "medium": "painting style image",
-      "nl": "Pahari rendering: soft hill country in cool thin washes, delicate courtly line, lyrical pastel palette, sparing gold accents, a generous plain band of sky above, painting style image.",
+      "nl": "Pahari rendering, soft hill country in cool thin washes, delicate courtly line, lyrical pastel palette, sparing gold accents, a generous plain band of sky above, painting style image.",
       "tags": [
         "painting_(medium)",
         "pastel_colors",
@@ -2153,7 +2153,7 @@
       "family": "Traditional Painting",
       "axis": "style",
       "medium": "painting style image",
-      "nl": "Soft-pastel rendering: chalk bloom on toothy paper, blended finger-smudged transitions, dusty matte colour, painting style image.",
+      "nl": "Soft-pastel rendering, chalk bloom on toothy paper, blended finger-smudged transitions, dusty matte colour, painting style image.",
       "tags": [
         "pastel_(medium)",
         "traditional_media",
@@ -2173,7 +2173,7 @@
       "family": "Traditional Painting",
       "axis": "style",
       "medium": "painting style image",
-      "nl": "Pastel portrait rendering: powdery skin transitions, paper tooth in the highlights, soft edges, warm chalky palette, painting style image.",
+      "nl": "Pastel portrait rendering, powdery skin transitions, paper tooth in the highlights, soft edges, warm chalky palette, painting style image.",
       "tags": [
         "pastel_(medium)",
         "portrait",
@@ -2193,7 +2193,7 @@
       "family": "Traditional Painting",
       "axis": "style",
       "medium": "painting style image",
-      "nl": "Pattachitra rendering: fine black contour on treated cloth, natural mineral colour, dense floral border, flat stylised figures, painting style image.",
+      "nl": "Pattachitra rendering, fine black contour on treated cloth, natural mineral colour, dense floral border, flat stylised figures, painting style image.",
       "tags": [
         "lineart",
         "flat_color",
@@ -2214,7 +2214,7 @@
       "family": "Traditional Painting",
       "axis": "style",
       "medium": "painting style image",
-      "nl": "Persian miniature: flattened stacked space, lapis and gold jewel colour, fine contour line, dense ornamental field, painting style image.",
+      "nl": "Persian miniature, flattened stacked space, lapis and gold jewel colour, fine contour line, dense ornamental field, painting style image.",
       "tags": [
         "gold",
         "flat_color",
@@ -2235,7 +2235,7 @@
       "family": "Traditional Painting",
       "axis": "style",
       "medium": "oil painting style image",
-      "nl": "Photoreal oil rendering: paint imitating a photograph, smooth invisible blending, camera-accurate detail, subtle canvas grain, oil painting style image.",
+      "nl": "Photoreal oil rendering, paint imitating a photograph, smooth invisible blending, camera-accurate detail, subtle canvas grain, oil painting style image.",
       "tags": [
         "photorealistic",
         "oil_painting_(medium)",
@@ -2255,7 +2255,7 @@
       "family": "Traditional Painting",
       "axis": "style",
       "medium": "painting style image",
-      "nl": "Photorealist rendering: painted from photographic source, hard-edged reflections, even mechanical detail, flat depth of field, painting style image.",
+      "nl": "Photorealist rendering, painted from photographic source, hard-edged reflections, even mechanical detail, flat depth of field, painting style image.",
       "tags": [
         "photorealistic",
         "realistic",
@@ -2275,7 +2275,7 @@
       "family": "Traditional Painting",
       "axis": "style",
       "medium": "oil painting style image",
-      "nl": "Plein-air rendering: fast wet-into-wet strokes, colour notes over a toned ground, unfinished corners, outdoor light truth, oil painting style image.",
+      "nl": "Plein-air rendering, fast wet-into-wet strokes, colour notes over a toned ground, unfinished corners, outdoor light truth, oil painting style image.",
       "tags": [
         "oil_painting_(medium)",
         "unfinished",
@@ -2295,7 +2295,7 @@
       "family": "Traditional Painting",
       "axis": "style",
       "medium": "painting style image",
-      "nl": "Pointillist rendering: pure colour dots optically mixing, even dot scale across the canvas, vibrating complementaries, painting style image.",
+      "nl": "Pointillist rendering, pure colour dots optically mixing, even dot scale across the canvas, vibrating complementaries, painting style image.",
       "tags": [
         "halftone",
         "colorful",
@@ -2315,7 +2315,7 @@
       "family": "Traditional Painting",
       "axis": "style",
       "medium": "oil painting style image",
-      "nl": "Post-impressionist rendering: structured directional strokes, symbolic heightened colour, firm simplified form, oil painting style image.",
+      "nl": "Post-impressionist rendering, structured directional strokes, symbolic heightened colour, firm simplified form, oil painting style image.",
       "tags": [
         "oil_painting_(medium)",
         "colorful",
@@ -2335,7 +2335,7 @@
       "family": "Traditional Painting",
       "axis": "style",
       "medium": "oil painting style image",
-      "nl": "Pre-Raphaelite rendering: jewel-bright colour on a white ground, botanical precision, literary staging, even sharp focus, oil painting style image.",
+      "nl": "Pre-Raphaelite rendering, jewel-bright colour on a white ground, botanical precision, literary staging, even sharp focus, oil painting style image.",
       "tags": [
         "oil_painting_(medium)",
         "colorful",
@@ -2355,7 +2355,7 @@
       "family": "Traditional Painting",
       "axis": "style",
       "medium": "painting style image",
-      "nl": "Precisionist rendering: industrial forms flattened into clean geometry, hard-edged planes, smooth unmodulated colour, no texture, painting style image.",
+      "nl": "Precisionist rendering, industrial forms flattened into clean geometry, hard-edged planes, smooth unmodulated colour, no texture, painting style image.",
       "tags": [
         "flat_color",
         "minimalism",
@@ -2375,7 +2375,7 @@
       "family": "Traditional Painting",
       "axis": "style",
       "medium": "oil painting style image",
-      "nl": "Ostentatious still-life rendering: silver, glass and fruit piled in dark opulence, one raking light, wet reflections and dew rendered to a hair, deep varnished shadow swallowing the corners, oil painting style image.",
+      "nl": "Ostentatious still-life rendering, silver, glass and fruit piled in dark opulence, one raking light, wet reflections and dew rendered to a hair, deep varnished shadow swallowing the corners, oil painting style image.",
       "tags": [
         "oil_painting_(medium)",
         "still_life",
@@ -2396,7 +2396,7 @@
       "family": "Traditional Painting",
       "axis": "style",
       "medium": "painting style image",
-      "nl": "Quadratura rendering: illusionistic architecture in steep upward perspective, painted cornices and coffers continuing the real room, foreshortened forms crowding the rim, chalky plaster tone throughout, painting style image.",
+      "nl": "Quadratura rendering, illusionistic architecture in steep upward perspective, painted cornices and coffers continuing the real room, foreshortened forms crowding the rim, chalky plaster tone throughout, painting style image.",
       "tags": [
         "painting_(medium)",
         "scenery",
@@ -2415,7 +2415,7 @@
       "family": "Traditional Painting",
       "axis": "style",
       "medium": "abstract style image",
-      "nl": "Rayonist rendering: crossing rays of reflected light, splintered coloured beams, dissolved form, dynamic linear energy, abstract style image.",
+      "nl": "Rayonist rendering, crossing rays of reflected light, splintered coloured beams, dissolved form, dynamic linear energy, abstract style image.",
       "tags": [
         "colorful",
         "high_contrast",
@@ -2435,7 +2435,7 @@
       "family": "Traditional Painting",
       "axis": "style",
       "medium": "oil painting style image",
-      "nl": "Realist rendering: unidealised labour and weather, earth-heavy palette, palette-knife texture, plain daylight, oil painting style image.",
+      "nl": "Realist rendering, unidealised labour and weather, earth-heavy palette, palette-knife texture, plain daylight, oil painting style image.",
       "tags": [
         "oil_painting_(medium)",
         "muted_color",
@@ -2455,7 +2455,7 @@
       "family": "Traditional Painting",
       "axis": "style",
       "medium": "oil painting style image",
-      "nl": "Naturalist rendering: observed truthful detail, subdued daylight, restrained palette, careful tonal modelling, oil painting style image.",
+      "nl": "Naturalist rendering, observed truthful detail, subdued daylight, restrained palette, careful tonal modelling, oil painting style image.",
       "tags": [
         "realistic",
         "muted_color",
@@ -2475,7 +2475,7 @@
       "family": "Traditional Painting",
       "axis": "style",
       "medium": "oil painting style image",
-      "nl": "Regionalist rendering: rounded stylised rural forms, warm earth palette, smooth modelled surfaces, clear midday light, oil painting style image.",
+      "nl": "Regionalist rendering, rounded stylised rural forms, warm earth palette, smooth modelled surfaces, clear midday light, oil painting style image.",
       "tags": [
         "oil_painting_(medium)",
         "brown_theme",
@@ -2495,7 +2495,7 @@
       "family": "Traditional Painting",
       "axis": "style",
       "medium": "painting style image",
-      "nl": "Retablo rendering: oil on tin, naive figures, hand-lettered dedication banner, aged scratched metal ground, painting style image.",
+      "nl": "Retablo rendering, oil on tin, naive figures, hand-lettered dedication banner, aged scratched metal ground, painting style image.",
       "tags": [
         "oil_painting_(medium)",
         "metallic",
@@ -2516,7 +2516,7 @@
       "family": "Traditional Painting",
       "axis": "style",
       "medium": "painting style image",
-      "nl": "Rinpa screen rendering: gold-leaf ground with flat mineral colour, tarashikomi pooled washes, bold cropped composition, painting style image.",
+      "nl": "Rinpa screen rendering, gold-leaf ground with flat mineral colour, tarashikomi pooled washes, bold cropped composition, painting style image.",
       "tags": [
         "gold",
         "nihonga",
@@ -2537,7 +2537,7 @@
       "family": "Traditional Painting",
       "axis": "style",
       "medium": "oil painting style image",
-      "nl": "Rococo rendering: pastel froth palette, feathery light brushwork, gilded ornament, diffused boudoir light, oil painting style image.",
+      "nl": "Rococo rendering, pastel froth palette, feathery light brushwork, gilded ornament, diffused boudoir light, oil painting style image.",
       "tags": [
         "pastel_colors",
         "gold",
@@ -2557,7 +2557,7 @@
       "family": "Traditional Painting",
       "axis": "style",
       "medium": "painting style image",
-      "nl": "Rococo pastel rendering: powder-blue and rose chalk, powdered soft edges, silk sheen, delicate ornamental detail, painting style image.",
+      "nl": "Rococo pastel rendering, powder-blue and rose chalk, powdered soft edges, silk sheen, delicate ornamental detail, painting style image.",
       "tags": [
         "pastel_(medium)",
         "pastel_colors",
@@ -2577,7 +2577,7 @@
       "family": "Traditional Painting",
       "axis": "style",
       "medium": "oil painting style image",
-      "nl": "Romantic landscape: sublime storm light, tiny human scale against vast nature, dramatic value contrast, warm-cold clash, oil painting style image.",
+      "nl": "Romantic landscape, sublime storm light, tiny human scale against vast nature, dramatic value contrast, warm-cold clash, oil painting style image.",
       "tags": [
         "scenery",
         "oil_painting_(medium)",
@@ -2597,7 +2597,7 @@
       "family": "Traditional Painting",
       "axis": "style",
       "medium": "oil painting style image",
-      "nl": "Romantic rendering: emotional turbulence, sweeping brushwork, dark stormy tonality with a burst of light, oil painting style image.",
+      "nl": "Romantic rendering, emotional turbulence, sweeping brushwork, dark stormy tonality with a burst of light, oil painting style image.",
       "tags": [
         "oil_painting_(medium)",
         "dark",
@@ -2617,7 +2617,7 @@
       "family": "Traditional Painting",
       "axis": "style",
       "medium": "painting style image",
-      "nl": "Rosemaling rendering: Norwegian scrollwork in flowing C and S strokes, two tones blended on a single brush, ox-blood or blue-grey painted ground, cream linework tying the panels together, painting style image.",
+      "nl": "Rosemaling rendering, Norwegian scrollwork in flowing C and S strokes, two tones blended on a single brush, ox-blood or blue-grey painted ground, cream linework tying the panels together, painting style image.",
       "tags": [
         "painting_(medium)",
         "traditional_media",
@@ -2637,7 +2637,7 @@
       "family": "Traditional Painting",
       "axis": "style",
       "medium": "drawing style image",
-      "nl": "Rule-drawn rendering: pencil lines set out to a written instruction, dense hatched bands meeting at fixed angles, flat wall tone showing between passes, faint construction marks left in place, drawing style image.",
+      "nl": "Rule-drawn rendering, pencil lines set out to a written instruction, dense hatched bands meeting at fixed angles, flat wall tone showing between passes, faint construction marks left in place, drawing style image.",
       "tags": [
         "graphite_(medium)",
         "lineart",
@@ -2657,7 +2657,7 @@
       "family": "Traditional Painting",
       "axis": "style",
       "medium": "oil painting style image",
-      "nl": "Sfumato rendering: tone carried through imperceptible steps, no contour left anywhere, form emerging out of smoke-soft transitions, warm dark ground glowing up through thin glazes, oil painting style image.",
+      "nl": "Sfumato rendering, tone carried through imperceptible steps, no contour left anywhere, form emerging out of smoke-soft transitions, warm dark ground glowing up through thin glazes, oil painting style image.",
       "tags": [
         "oil_painting_(medium)",
         "chiaroscuro",
@@ -2677,7 +2677,7 @@
       "family": "Traditional Painting",
       "axis": "style",
       "medium": "drawing style image",
-      "nl": "Silverpoint rendering: fine grey metal line that cannot be erased, delicate hatched tone, warm prepared ground, drawing style image.",
+      "nl": "Silverpoint rendering, fine grey metal line that cannot be erased, delicate hatched tone, warm prepared ground, drawing style image.",
       "tags": [
         "graphite_(medium)",
         "monochrome",
@@ -2697,7 +2697,7 @@
       "family": "Traditional Painting",
       "axis": "style",
       "medium": "painting style image",
-      "nl": "Sinopia rendering: red-earth underdrawing brushed straight onto damp plaster, confident single-pass contours, thin washes blocking the masses, lime-white ground breathing through everything, painting style image.",
+      "nl": "Sinopia rendering, red-earth underdrawing brushed straight onto damp plaster, confident single-pass contours, thin washes blocking the masses, lime-white ground breathing through everything, painting style image.",
       "tags": [
         "painting_(medium)",
         "unfinished",
@@ -2717,7 +2717,7 @@
       "family": "Traditional Painting",
       "axis": "style",
       "medium": "oil painting style image",
-      "nl": "Socialist-realist rendering: monumental heroic figures, low viewpoint, warm optimistic light, smooth academic finish, oil painting style image.",
+      "nl": "Socialist-realist rendering, monumental heroic figures, low viewpoint, warm optimistic light, smooth academic finish, oil painting style image.",
       "tags": [
         "oil_painting_(medium)",
         "realistic",
@@ -2737,7 +2737,7 @@
       "family": "Traditional Painting",
       "axis": "style",
       "medium": "print style image",
-      "nl": "Sosaku-hanga rendering: self-carved block marks left visible, muted modern palette, uneven hand-rubbed ink, paper fibre, print style image.",
+      "nl": "Sosaku-hanga rendering, self-carved block marks left visible, muted modern palette, uneven hand-rubbed ink, paper fibre, print style image.",
       "tags": [
         "woodcut",
         "muted_color",
@@ -2757,7 +2757,7 @@
       "family": "Traditional Painting",
       "axis": "style",
       "medium": "drawing style image",
-      "nl": "Stipple rendering: tone built from thousands of ink dots, no lines at all, soft granular gradation, white paper, drawing style image.",
+      "nl": "Stipple rendering, tone built from thousands of ink dots, no lines at all, soft granular gradation, white paper, drawing style image.",
       "tags": [
         "halftone",
         "monochrome",
@@ -2777,7 +2777,7 @@
       "family": "Traditional Painting",
       "axis": "style",
       "medium": "painting style image",
-      "nl": "Street-mural rendering: spray-can gradients, hard stencil edges, wall texture through the paint, saturated public-scale colour, painting style image.",
+      "nl": "Street-mural rendering, spray-can gradients, hard stencil edges, wall texture through the paint, saturated public-scale colour, painting style image.",
       "tags": [
         "stencil",
         "colorful",
@@ -2798,7 +2798,7 @@
       "family": "Traditional Painting",
       "axis": "style",
       "medium": "painting style image",
-      "nl": "Muralist street rendering: bold simplified shapes read from distance, saturated flat colour, concrete grain, hard outline, painting style image.",
+      "nl": "Muralist street rendering, bold simplified shapes read from distance, saturated flat colour, concrete grain, hard outline, painting style image.",
       "tags": [
         "flat_color",
         "colorful",
@@ -2818,7 +2818,7 @@
       "family": "Traditional Painting",
       "axis": "style",
       "medium": "ink painting style image",
-      "nl": "Sumi-e rendering: economical brush strokes, graded ink tones, generous empty paper, dry-brush texture at the tips, ink painting style image.",
+      "nl": "Sumi-e rendering, economical brush strokes, graded ink tones, generous empty paper, dry-brush texture at the tips, ink painting style image.",
       "tags": [
         "ink_wash_painting",
         "monochrome",
@@ -2838,7 +2838,7 @@
       "family": "Traditional Painting",
       "axis": "style",
       "medium": "abstract style image",
-      "nl": "Suprematist rendering: flat geometric planes floating on white, tilted rectangles and circles, primary-plus-black palette, abstract style image.",
+      "nl": "Suprematist rendering, flat geometric planes floating on white, tilted rectangles and circles, primary-plus-black palette, abstract style image.",
       "tags": [
         "minimalism",
         "flat_color",
@@ -2858,7 +2858,7 @@
       "family": "Traditional Painting",
       "axis": "style",
       "medium": "oil painting style image",
-      "nl": "Surreal oil rendering: impossible juxtapositions painted with deadpan realism, glassy sky gradients, long dream shadows, oil painting style image.",
+      "nl": "Surreal oil rendering, impossible juxtapositions painted with deadpan realism, glassy sky gradients, long dream shadows, oil painting style image.",
       "tags": [
         "surreal",
         "oil_painting_(medium)",
@@ -2878,7 +2878,7 @@
       "family": "Traditional Painting",
       "axis": "style",
       "medium": "painting style image",
-      "nl": "Surrealist rendering: dream logic in convincing paint, uncanny scale shifts, smooth academic modelling, still airless light, painting style image.",
+      "nl": "Surrealist rendering, dream logic in convincing paint, uncanny scale shifts, smooth academic modelling, still airless light, painting style image.",
       "tags": [
         "surreal",
         "painting_(medium)",
@@ -2898,7 +2898,7 @@
       "family": "Traditional Painting",
       "axis": "style",
       "medium": "painting style image",
-      "nl": "Symbolist rendering: inward mystical mood, muted twilight palette, decorative flattened forms, veiled soft edges, painting style image.",
+      "nl": "Symbolist rendering, inward mystical mood, muted twilight palette, decorative flattened forms, veiled soft edges, painting style image.",
       "tags": [
         "muted_color",
         "soft_focus",
@@ -2918,7 +2918,7 @@
       "family": "Traditional Painting",
       "axis": "style",
       "medium": "painting style image",
-      "nl": "Synthetic-cubist rendering: flat collaged planes, pasted paper and stencilled letters, simplified bold colour, shallow space, painting style image.",
+      "nl": "Synthetic-cubist rendering, flat collaged planes, pasted paper and stencilled letters, simplified bold colour, shallow space, painting style image.",
       "tags": [
         "cubism",
         "collage",
@@ -2938,7 +2938,7 @@
       "family": "Traditional Painting",
       "axis": "style",
       "medium": "abstract style image",
-      "nl": "Informel rendering: blots and stabs of loaded pigment, scraped smears dragged across each other, no composition beyond the mark itself, earthy palette on raw ground, abstract style image.",
+      "nl": "Informel rendering, blots and stabs of loaded pigment, scraped smears dragged across each other, no composition beyond the mark itself, earthy palette on raw ground, abstract style image.",
       "tags": [
         "painting_(medium)",
         "textured",
@@ -2958,7 +2958,7 @@
       "family": "Traditional Painting",
       "axis": "style",
       "medium": "painting style image",
-      "nl": "Tanjore rendering: raised gesso relief under gold foil, inset glass jewels, flat vivid figures, ornate arch framing, painting style image.",
+      "nl": "Tanjore rendering, raised gesso relief under gold foil, inset glass jewels, flat vivid figures, ornate arch framing, painting style image.",
       "tags": [
         "gold",
         "flat_color",
@@ -2979,7 +2979,7 @@
       "family": "Traditional Painting",
       "axis": "style",
       "medium": "painting style image",
-      "nl": "Egg-tempera rendering: dry matte finish, fine cross-hatched modelling, luminous pale colour, panel-smooth surface, painting style image.",
+      "nl": "Egg-tempera rendering, dry matte finish, fine cross-hatched modelling, luminous pale colour, panel-smooth surface, painting style image.",
       "tags": [
         "tempera_(medium)",
         "traditional_media",
@@ -2999,7 +2999,7 @@
       "family": "Traditional Painting",
       "axis": "style",
       "medium": "painting style image",
-      "nl": "Thangka rendering: sacred symmetrical diagram, mineral pigment and gold line, flat jewel colour, brocade-style border, painting style image.",
+      "nl": "Thangka rendering, sacred symmetrical diagram, mineral pigment and gold line, flat jewel colour, brocade-style border, painting style image.",
       "tags": [
         "gold",
         "flat_color",
@@ -3022,7 +3022,7 @@
       "family": "Traditional Painting",
       "axis": "style",
       "medium": "painting style image",
-      "nl": "Tingatinga rendering: glossy enamel on board, saturated flat colour, bold outlines, repeated decorative pattern fill, painting style image.",
+      "nl": "Tingatinga rendering, glossy enamel on board, saturated flat colour, bold outlines, repeated decorative pattern fill, painting style image.",
       "tags": [
         "flat_color",
         "colorful",
@@ -3043,7 +3043,7 @@
       "family": "Traditional Painting",
       "axis": "style",
       "medium": "oil painting style image",
-      "nl": "Tonalist rendering: hushed limited palette, soft veiled atmosphere, low contrast, blurred horizon, oil painting style image.",
+      "nl": "Tonalist rendering, hushed limited palette, soft veiled atmosphere, low contrast, blurred horizon, oil painting style image.",
       "tags": [
         "muted_color",
         "soft_focus",
@@ -3063,7 +3063,7 @@
       "family": "Traditional Painting",
       "axis": "style",
       "medium": "painting style image",
-      "nl": "Trompe-l'oeil rendering: shallow relief illusion, cast shadows painted onto the surface, hyper-crisp edges, life-scale flatness, painting style image.",
+      "nl": "Trompe-l'oeil rendering, shallow relief illusion, cast shadows painted onto the surface, hyper-crisp edges, life-scale flatness, painting style image.",
       "tags": [
         "photorealistic",
         "realistic",
@@ -3083,7 +3083,7 @@
       "family": "Traditional Painting",
       "axis": "style",
       "medium": "print style image",
-      "nl": "Ukiyo-e rendering: flat mineral colour fields, keyblock contour, bokashi sky gradient, wood grain and paper fibre, print style image.",
+      "nl": "Ukiyo-e rendering, flat mineral colour fields, keyblock contour, bokashi sky gradient, wood grain and paper fibre, print style image.",
       "tags": [
         "ukiyo-e",
         "woodcut",
@@ -3104,7 +3104,7 @@
       "family": "Traditional Painting",
       "axis": "style",
       "medium": "oil painting style image",
-      "nl": "Vanitas rendering: dark ground with a single raking light, glassware and metal glints, muted earth palette, glazed depth, oil painting style image.",
+      "nl": "Vanitas rendering, dark ground with a single raking light, glassware and metal glints, muted earth palette, glazed depth, oil painting style image.",
       "tags": [
         "chiaroscuro",
         "dark",
@@ -3125,7 +3125,7 @@
       "family": "Traditional Painting",
       "axis": "style",
       "medium": "painting style image",
-      "nl": "Verdaccio rendering: olive-green tonal underpainting showing through thin flesh glazes, hatched modelling, panel-smooth surface, painting style image.",
+      "nl": "Verdaccio rendering, olive-green tonal underpainting showing through thin flesh glazes, hatched modelling, panel-smooth surface, painting style image.",
       "tags": [
         "tempera_(medium)",
         "green_theme",
@@ -3145,7 +3145,7 @@
       "family": "Traditional Painting",
       "axis": "style",
       "medium": "painting style image",
-      "nl": "Vorticist rendering: hard angular machine planes, sharp diagonal energy, cold metallic palette, faceted mechanical space, painting style image.",
+      "nl": "Vorticist rendering, hard angular machine planes, sharp diagonal energy, cold metallic palette, faceted mechanical space, painting style image.",
       "tags": [
         "cubism",
         "metallic",
@@ -3165,7 +3165,7 @@
       "family": "Traditional Painting",
       "axis": "style",
       "medium": "painting style image",
-      "nl": "Warli rendering: white rice-paste figures built from triangles and circles on earth-red ground, rhythmic repetition, no shading, painting style image.",
+      "nl": "Warli rendering, white rice-paste figures built from triangles and circles on earth-red ground, rhythmic repetition, no shading, painting style image.",
       "tags": [
         "flat_color",
         "brown_theme",
@@ -3186,7 +3186,7 @@
       "family": "Traditional Painting",
       "axis": "style",
       "medium": "watercolour painting style image",
-      "nl": "Watercolour rendering: transparent washes, blooming wet edges, white paper doing the highlights, granulating pigment, watercolour painting style image.",
+      "nl": "Watercolour rendering, transparent washes, blooming wet edges, white paper doing the highlights, granulating pigment, watercolour painting style image.",
       "tags": [
         "watercolor_(medium)",
         "traditional_media",
@@ -3209,7 +3209,7 @@
       "family": "Traditional Painting",
       "axis": "style",
       "medium": "watercolour painting style image",
-      "nl": "Botanical watercolour: precise dry-brush detail over pale washes, cream paper ground, scientific clarity, soft shadow, watercolour painting style image.",
+      "nl": "Botanical watercolour, precise dry-brush detail over pale washes, cream paper ground, scientific clarity, soft shadow, watercolour painting style image.",
       "tags": [
         "watercolor_(medium)",
         "diagram",
@@ -3229,7 +3229,7 @@
       "family": "Traditional Painting",
       "axis": "style",
       "medium": "watercolour painting style image",
-      "nl": "Loose watercolour rendering: big wet washes, pigment pooling at the edges, unpainted paper gaps, happy accidents, watercolour painting style image.",
+      "nl": "Loose watercolour rendering, big wet washes, pigment pooling at the edges, unpainted paper gaps, happy accidents, watercolour painting style image.",
       "tags": [
         "watercolor_(medium)",
         "traditional_media",
@@ -3249,7 +3249,7 @@
       "family": "Traditional Painting",
       "axis": "style",
       "medium": "watercolour painting style image",
-      "nl": "Wet-on-wet rendering: colour diffusing into damp paper, soft feathered boundaries, atmospheric bleed, no hard edges, watercolour painting style image.",
+      "nl": "Wet-on-wet rendering, colour diffusing into damp paper, soft feathered boundaries, atmospheric bleed, no hard edges, watercolour painting style image.",
       "tags": [
         "watercolor_(medium)",
         "soft_focus",
@@ -3269,7 +3269,7 @@
       "family": "Traditional Painting",
       "axis": "style",
       "medium": "abstract style image",
-      "nl": "Monochrome-relief rendering: an all-white field broken only by cast shadow, folds, cuts and studs raked by low side light, chalky matte surface, tonal range built from depth rather than colour, abstract style image.",
+      "nl": "Monochrome-relief rendering, an all-white field broken only by cast shadow, folds, cuts and studs raked by low side light, chalky matte surface, tonal range built from depth rather than colour, abstract style image.",
       "tags": [
         "white_theme",
         "minimalism",
@@ -3289,7 +3289,7 @@
       "family": "Traditional Painting",
       "axis": "style",
       "medium": "ink painting style image",
-      "nl": "Xieyi rendering: freehand expressive brush, few decisive strokes, splashed ink tone, wide empty paper, ink painting style image.",
+      "nl": "Xieyi rendering, freehand expressive brush, few decisive strokes, splashed ink tone, wide empty paper, ink painting style image.",
       "tags": [
         "ink_wash_painting",
         "monochrome",
@@ -3309,7 +3309,7 @@
       "family": "Traditional Painting",
       "axis": "style",
       "medium": "painting style image",
-      "nl": "Yamato-e rendering: raised-viewpoint interiors with roofs removed, flat mineral pigment, gold cloud bands, fine ink contour, painting style image.",
+      "nl": "Yamato-e rendering, raised-viewpoint interiors with roofs removed, flat mineral pigment, gold cloud bands, fine ink contour, painting style image.",
       "tags": [
         "nihonga",
         "gold",
@@ -3330,7 +3330,7 @@
       "family": "Traditional Painting",
       "axis": "style",
       "medium": "material style image",
-      "nl": "Zellige rendering: hand-cut glazed tile tessellation, interlacing star geometry, uneven glaze sheen, fine grout lines, material style image.",
+      "nl": "Zellige rendering, hand-cut glazed tile tessellation, interlacing star geometry, uneven glaze sheen, fine grout lines, material style image.",
       "tags": [
         "mosaic",
         "textured",
@@ -3350,7 +3350,7 @@
       "family": "Traditional Painting",
       "axis": "style",
       "medium": "illustration style image",
-      "nl": "Modern pin-up rendering: clean digital paint, glossy skin highlights, saturated retro palette, crisp rim light, illustration style image.",
+      "nl": "Modern pin-up rendering, clean digital paint, glossy skin highlights, saturated retro palette, crisp rim light, illustration style image.",
       "tags": [
         "painting_(medium)",
         "colorful",
@@ -3372,7 +3372,7 @@
       "family": "Traditional Painting",
       "axis": "style",
       "medium": "oil painting style image",
-      "nl": "Academic realist rendering: sight-size accuracy, smooth flesh transitions, controlled north light, muted earth palette, oil painting style image.",
+      "nl": "Academic realist rendering, sight-size accuracy, smooth flesh transitions, controlled north light, muted earth palette, oil painting style image.",
       "tags": [
         "realistic",
         "oil_painting_(medium)",
@@ -3394,7 +3394,7 @@
       "family": "Traditional Painting",
       "axis": "style",
       "medium": "painting style image",
-      "nl": "Acrylic dreamscape rendering: saturated poured colour fields, glossy blended skies, hard-edged shapes floating in space, painting style image.",
+      "nl": "Acrylic dreamscape rendering, saturated poured colour fields, glossy blended skies, hard-edged shapes floating in space, painting style image.",
       "tags": [
         "acrylic_paint_(medium)",
         "gradient",
@@ -3416,7 +3416,7 @@
       "family": "Traditional Painting",
       "axis": "style",
       "medium": "illustration style image",
-      "nl": "Adventure-illustration rendering: dynamic staging, warm painted light, brushy energetic texture, saturated pulp palette, illustration style image.",
+      "nl": "Adventure-illustration rendering, dynamic staging, warm painted light, brushy energetic texture, saturated pulp palette, illustration style image.",
       "tags": [
         "painting_(medium)",
         "colorful",
@@ -3438,7 +3438,7 @@
       "family": "Traditional Painting",
       "axis": "style",
       "medium": "watercolour painting style image",
-      "nl": "Dripping-watercolour portrait rendering: fine ink features dissolving into runs and splatter, pale skin washes, raw paper, watercolour painting style image.",
+      "nl": "Dripping-watercolour portrait rendering, fine ink features dissolving into runs and splatter, pale skin washes, raw paper, watercolour painting style image.",
       "tags": [
         "watercolor_(medium)",
         "pale_color",
@@ -3461,7 +3461,7 @@
       "family": "Traditional Painting",
       "axis": "style",
       "medium": "illustration style image",
-      "nl": "Airbrush fantasy rendering: seamless sprayed gradients, chrome and skin sheen, glowing atmospheric haze, 1980s palette, illustration style image.",
+      "nl": "Airbrush fantasy rendering, seamless sprayed gradients, chrome and skin sheen, glowing atmospheric haze, 1980s palette, illustration style image.",
       "tags": [
         "airbrush_(medium)",
         "gradient",
@@ -3484,7 +3484,7 @@
       "family": "Traditional Painting",
       "axis": "style",
       "medium": "illustration style image",
-      "nl": "Mucha-style rendering: whiplash contour line, pastel-and-gold decorative panels, mosaic halo framing, flat ornamental colour, illustration style image.",
+      "nl": "Mucha-style rendering, whiplash contour line, pastel-and-gold decorative panels, mosaic halo framing, flat ornamental colour, illustration style image.",
       "tags": [
         "art_nouveau",
         "gold",
@@ -3507,7 +3507,7 @@
       "family": "Traditional Painting",
       "axis": "style",
       "medium": "illustration style image",
-      "nl": "Epic-fantasy digital rendering: glowing focal light against near-black surroundings, textured brush chaos, teal-and-ember palette, illustration style image.",
+      "nl": "Epic-fantasy digital rendering, glowing focal light against near-black surroundings, textured brush chaos, teal-and-ember palette, illustration style image.",
       "tags": [
         "dark",
         "glowing",
@@ -3530,7 +3530,7 @@
       "family": "Traditional Painting",
       "axis": "style",
       "medium": "print style image",
-      "nl": "Pop-silkscreen rendering: high-contrast photographic base, flat clashing colour blocks, offset registration, mechanical print flatness, print style image.",
+      "nl": "Pop-silkscreen rendering, high-contrast photographic base, flat clashing colour blocks, offset registration, mechanical print flatness, print style image.",
       "tags": [
         "stencil",
         "flat_color",
@@ -3553,7 +3553,7 @@
       "family": "Traditional Painting",
       "axis": "style",
       "medium": "painting style image",
-      "nl": "Deco-gold rendering: black lacquer ground, gilded geometric ornament, symmetrical fan motifs, hard metallic edge, painting style image.",
+      "nl": "Deco-gold rendering, black lacquer ground, gilded geometric ornament, symmetrical fan motifs, hard metallic edge, painting style image.",
       "tags": [
         "art_deco",
         "gold",
@@ -3576,7 +3576,7 @@
       "family": "Traditional Painting",
       "axis": "style",
       "medium": "oil painting style image",
-      "nl": "Ashcan rendering: dark urban palette, rapid loaded brushwork, smoky street light, gritty everyday subject handling, oil painting style image.",
+      "nl": "Ashcan rendering, dark urban palette, rapid loaded brushwork, smoky street light, gritty everyday subject handling, oil painting style image.",
       "tags": [
         "oil_painting_(medium)",
         "dark",
@@ -3598,7 +3598,7 @@
       "family": "Traditional Painting",
       "axis": "style",
       "medium": "painting style image",
-      "nl": "Loose ink-and-paint rendering: smeared washes, scratched line, bleeding spot colour, unfinished raw edges, painting style image.",
+      "nl": "Loose ink-and-paint rendering, smeared washes, scratched line, bleeding spot colour, unfinished raw edges, painting style image.",
       "tags": [
         "ink_(medium)",
         "unfinished",
@@ -3621,7 +3621,7 @@
       "family": "Traditional Painting",
       "axis": "style",
       "medium": "painting style image",
-      "nl": "Expressionist mixed-media rendering: collaged textures, slashing ink, spattered paint, distorted anatomy, chaotic layering, painting style image.",
+      "nl": "Expressionist mixed-media rendering, collaged textures, slashing ink, spattered paint, distorted anatomy, chaotic layering, painting style image.",
       "tags": [
         "collage",
         "ink_(medium)",
@@ -3644,7 +3644,7 @@
       "family": "Traditional Painting",
       "axis": "style",
       "medium": "oil painting style image",
-      "nl": "Fantasy-oil rendering: airbrush-smooth muscular figures, bronze skin sheen, dramatic warm key, glossy metal and mist, oil painting style image.",
+      "nl": "Fantasy-oil rendering, airbrush-smooth muscular figures, bronze skin sheen, dramatic warm key, glossy metal and mist, oil painting style image.",
       "tags": [
         "oil_painting_(medium)",
         "airbrush_(medium)",
@@ -3667,7 +3667,7 @@
       "family": "Traditional Painting",
       "axis": "style",
       "medium": "painting style image",
-      "nl": "Brushwork-forward rendering: every stroke left visible, directional marks describing form, thick loaded edges, painting style image.",
+      "nl": "Brushwork-forward rendering, every stroke left visible, directional marks describing form, thick loaded edges, painting style image.",
       "tags": [
         "painting_(medium)",
         "textured",
@@ -3688,7 +3688,7 @@
       "family": "Traditional Painting",
       "axis": "style",
       "medium": "painting style image",
-      "nl": "Ink-and-tea rendering: calligraphic ink lines bleeding into stained washes, metallic gold pooling, organic drips, painting style image.",
+      "nl": "Ink-and-tea rendering, calligraphic ink lines bleeding into stained washes, metallic gold pooling, organic drips, painting style image.",
       "tags": [
         "ink_(medium)",
         "gold",
@@ -3711,7 +3711,7 @@
       "family": "Traditional Painting",
       "axis": "style",
       "medium": "oil painting style image",
-      "nl": "Contemporary realist oil: soft-focus edges around sharp features, cool grey palette with warm accents, visible knife texture, oil painting style image.",
+      "nl": "Contemporary realist oil, soft-focus edges around sharp features, cool grey palette with warm accents, visible knife texture, oil painting style image.",
       "tags": [
         "oil_painting_(medium)",
         "realistic",
@@ -3733,7 +3733,7 @@
       "family": "Traditional Painting",
       "axis": "style",
       "medium": "watercolour painting style image",
-      "nl": "Naturalist watercolour rendering: precise wildlife detail over soft washes, muted field palette, wood-engraving crispness, watercolour painting style image.",
+      "nl": "Naturalist watercolour rendering, precise wildlife detail over soft washes, muted field palette, wood-engraving crispness, watercolour painting style image.",
       "tags": [
         "watercolor_(medium)",
         "muted_color",
@@ -3755,7 +3755,7 @@
       "family": "Traditional Painting",
       "axis": "style",
       "medium": "oil painting style image",
-      "nl": "Chiaroscuro rendering: extreme light-to-dark modelling, single directional source, black surrounding void, glowing lit planes, oil painting style image.",
+      "nl": "Chiaroscuro rendering, extreme light-to-dark modelling, single directional source, black surrounding void, glowing lit planes, oil painting style image.",
       "tags": [
         "chiaroscuro",
         "dark",
@@ -3777,7 +3777,7 @@
       "family": "Traditional Painting",
       "axis": "style",
       "medium": "painting style image",
-      "nl": "Cloisonnist rendering: flat colour areas bounded by heavy dark contours, stained-glass division, simplified form, painting style image.",
+      "nl": "Cloisonnist rendering, flat colour areas bounded by heavy dark contours, stained-glass division, simplified form, painting style image.",
       "tags": [
         "flat_color",
         "outline",
@@ -3799,7 +3799,7 @@
       "family": "Traditional Painting",
       "axis": "style",
       "medium": "illustration style image",
-      "nl": "Commercial illustration rendering: clean confident shapes, controlled palette, polished light modelling, print-ready clarity, illustration style image.",
+      "nl": "Commercial illustration rendering, clean confident shapes, controlled palette, polished light modelling, print-ready clarity, illustration style image.",
       "tags": [
         "painting_(medium)",
         "flat_color",
@@ -3821,7 +3821,7 @@
       "family": "Traditional Painting",
       "axis": "style",
       "medium": "painting style image",
-      "nl": "Contemporary gothic rendering: desaturated bone-and-ash palette, cold rim light, cracked texture overlays, deep shadow, painting style image.",
+      "nl": "Contemporary gothic rendering, desaturated bone-and-ash palette, cold rim light, cracked texture overlays, deep shadow, painting style image.",
       "tags": [
         "dark",
         "desaturated",
@@ -3844,7 +3844,7 @@
       "family": "Traditional Painting",
       "axis": "style",
       "medium": "oil painting style image",
-      "nl": "Contemporary oil rendering: confident economical strokes, cool-warm temperature play, edges lost and found, canvas grain, oil painting style image.",
+      "nl": "Contemporary oil rendering, confident economical strokes, cool-warm temperature play, edges lost and found, canvas grain, oil painting style image.",
       "tags": [
         "oil_painting_(medium)",
         "textured",
@@ -3866,7 +3866,7 @@
       "family": "Traditional Painting",
       "axis": "style",
       "medium": "painting style image",
-      "nl": "Cubist rendering: multiple viewpoints fused, faceted planes, shallow ambiguous depth, restrained ochre-grey palette, painting style image.",
+      "nl": "Cubist rendering, multiple viewpoints fused, faceted planes, shallow ambiguous depth, restrained ochre-grey palette, painting style image.",
       "tags": [
         "cubism",
         "muted_color",
@@ -3888,7 +3888,7 @@
       "family": "Traditional Painting",
       "axis": "style",
       "medium": "painting style image",
-      "nl": "Anxious expressionist rendering: undulating wave-like strokes, acid sunset colour, hollow simplified faces, thin scrubbed paint, painting style image.",
+      "nl": "Anxious expressionist rendering, undulating wave-like strokes, acid sunset colour, hollow simplified faces, thin scrubbed paint, painting style image.",
       "tags": [
         "painting_(medium)",
         "colorful",
@@ -3910,7 +3910,7 @@
       "family": "Traditional Painting",
       "axis": "style",
       "medium": "poster style image",
-      "nl": "Giallo-poster rendering: lurid red-and-cyan lighting, hand-painted airbrush figures, hard vignette, pulp print texture, poster style image.",
+      "nl": "Giallo-poster rendering, lurid red-and-cyan lighting, hand-painted airbrush figures, hard vignette, pulp print texture, poster style image.",
       "tags": [
         "poster",
         "airbrush_(medium)",
@@ -3933,7 +3933,7 @@
       "family": "Traditional Painting",
       "axis": "style",
       "medium": "painting style image",
-      "nl": "Graffiti-painting rendering: spray gradients, drip runs, hard outline with halo, layered tags beneath, wall grain, painting style image.",
+      "nl": "Graffiti-painting rendering, spray gradients, drip runs, hard outline with halo, layered tags beneath, wall grain, painting style image.",
       "tags": [
         "stencil",
         "colorful",
@@ -3956,7 +3956,7 @@
       "family": "Traditional Painting",
       "axis": "style",
       "medium": "poster style image",
-      "nl": "Grindhouse-poster rendering: blown four-colour print, scratched grindy texture, hot red and yellow, hand-painted montage, poster style image.",
+      "nl": "Grindhouse-poster rendering, blown four-colour print, scratched grindy texture, hot red and yellow, hand-painted montage, poster style image.",
       "tags": [
         "poster",
         "halftone",
@@ -3979,7 +3979,7 @@
       "family": "Traditional Painting",
       "axis": "style",
       "medium": "painting style image",
-      "nl": "Matisse-style rendering: flat decorative colour planes, cut-paper simplicity, patterned interiors, confident contour, painting style image.",
+      "nl": "Matisse-style rendering, flat decorative colour planes, cut-paper simplicity, patterned interiors, confident contour, painting style image.",
       "tags": [
         "flat_color",
         "colorful",
@@ -4001,7 +4001,7 @@
       "family": "Traditional Painting",
       "axis": "style",
       "medium": "painting style image",
-      "nl": "Hyperrealist rendering: beyond-photographic detail, exaggerated micro-texture, glassy reflections, flat even focus, painting style image.",
+      "nl": "Hyperrealist rendering, beyond-photographic detail, exaggerated micro-texture, glassy reflections, flat even focus, painting style image.",
       "tags": [
         "photorealistic",
         "highres",
@@ -4025,7 +4025,7 @@
       "family": "Traditional Painting",
       "axis": "style",
       "medium": "oil painting style image",
-      "nl": "Impasto rendering: paint raised off the surface, knife ridges catching light, sculptural stroke edges, thick loaded colour, oil painting style image.",
+      "nl": "Impasto rendering, paint raised off the surface, knife ridges catching light, sculptural stroke edges, thick loaded colour, oil painting style image.",
       "tags": [
         "oil_painting_(medium)",
         "textured",
@@ -4046,7 +4046,7 @@
       "family": "Traditional Painting",
       "axis": "style",
       "medium": "abstract style image",
-      "nl": "Drip-painting rendering: skeins of poured enamel crossing the whole surface, no focal point, layered rhythmic tangle, abstract style image.",
+      "nl": "Drip-painting rendering, skeins of poured enamel crossing the whole surface, no focal point, layered rhythmic tangle, abstract style image.",
       "tags": [
         "painting_(medium)",
         "textured",
@@ -4067,7 +4067,7 @@
       "family": "Traditional Painting",
       "axis": "style",
       "medium": "painting style image",
-      "nl": "Klimt-inspired rendering: gold-leaf pattern fields around naturalistic faces, mosaic ornament, flat decorative space, painting style image.",
+      "nl": "Klimt-inspired rendering, gold-leaf pattern fields around naturalistic faces, mosaic ornament, flat decorative space, painting style image.",
       "tags": [
         "gold",
         "flat_color",
@@ -4090,7 +4090,7 @@
       "family": "Traditional Painting",
       "axis": "style",
       "medium": "oil painting style image",
-      "nl": "Impressionist-light rendering: broken dabs of complementary colour, dissolved contours, luminous atmospheric haze, oil painting style image.",
+      "nl": "Impressionist-light rendering, broken dabs of complementary colour, dissolved contours, luminous atmospheric haze, oil painting style image.",
       "tags": [
         "impressionism",
         "oil_painting_(medium)",
@@ -4112,7 +4112,7 @@
       "family": "Traditional Painting",
       "axis": "style",
       "medium": "oil painting style image",
-      "nl": "Narrative illustration rendering: warm storytelling light, meticulous everyday detail, gently exaggerated expression, oil painting style image.",
+      "nl": "Narrative illustration rendering, warm storytelling light, meticulous everyday detail, gently exaggerated expression, oil painting style image.",
       "tags": [
         "oil_painting_(medium)",
         "realistic",
@@ -4134,7 +4134,7 @@
       "family": "Traditional Painting",
       "axis": "style",
       "medium": "painting style image",
-      "nl": "General painted rendering: visible brush marks, layered pigment, soft edge control, canvas or board texture, painting style image.",
+      "nl": "General painted rendering, visible brush marks, layered pigment, soft edge control, canvas or board texture, painting style image.",
       "tags": [
         "painting_(medium)",
         "traditional_media",
@@ -4155,7 +4155,7 @@
       "family": "Traditional Painting",
       "axis": "style",
       "medium": "illustration style image",
-      "nl": "Classic pin-up rendering: airbrushed gouache skin, saturated candy palette, cheerful poster light, crisp contour, illustration style image.",
+      "nl": "Classic pin-up rendering, airbrushed gouache skin, saturated candy palette, cheerful poster light, crisp contour, illustration style image.",
       "tags": [
         "airbrush_(medium)",
         "gouache_(medium)",
@@ -4177,7 +4177,7 @@
       "family": "Traditional Painting",
       "axis": "style",
       "medium": "print style image",
-      "nl": "Pop-art rendering: ben-day dots, thick black keyline, flat primary inks, comic-panel simplification, print style image.",
+      "nl": "Pop-art rendering, ben-day dots, thick black keyline, flat primary inks, comic-panel simplification, print style image.",
       "tags": [
         "halftone",
         "flat_color",
@@ -4200,7 +4200,7 @@
       "family": "Traditional Painting",
       "axis": "style",
       "medium": "oil painting style image",
-      "nl": "Rembrandt-style rendering: warm impasto highlights emerging from brown shadow, glowing flesh, loose late brushwork, oil painting style image.",
+      "nl": "Rembrandt-style rendering, warm impasto highlights emerging from brown shadow, glowing flesh, loose late brushwork, oil painting style image.",
       "tags": [
         "chiaroscuro",
         "oil_painting_(medium)",
@@ -4223,7 +4223,7 @@
       "family": "Traditional Painting",
       "axis": "style",
       "medium": "oil painting style image",
-      "nl": "Dalí-style rendering: hyper-crisp desert light, melting distorted forms, long shadows, glassy academic finish, oil painting style image.",
+      "nl": "Dalí-style rendering, hyper-crisp desert light, melting distorted forms, long shadows, glassy academic finish, oil painting style image.",
       "tags": [
         "surreal",
         "oil_painting_(medium)",
@@ -4245,7 +4245,7 @@
       "family": "Traditional Painting",
       "axis": "style",
       "medium": "oil painting style image",
-      "nl": "Tenebrist rendering: violent light-dark contrast, most of the canvas in near-black, single shaft picking out form, oil painting style image.",
+      "nl": "Tenebrist rendering, violent light-dark contrast, most of the canvas in near-black, single shaft picking out form, oil painting style image.",
       "tags": [
         "chiaroscuro",
         "dark",
@@ -4267,7 +4267,7 @@
       "family": "Traditional Painting",
       "axis": "style",
       "medium": "oil painting style image",
-      "nl": "Thick-stroke rendering: broad loaded marks, few strokes per form, ridged paint edges, bold simplified colour, oil painting style image.",
+      "nl": "Thick-stroke rendering, broad loaded marks, few strokes per form, ridged paint edges, bold simplified colour, oil painting style image.",
       "tags": [
         "oil_painting_(medium)",
         "textured",
@@ -4288,7 +4288,7 @@
       "family": "Traditional Painting",
       "axis": "style",
       "medium": "oil painting style image",
-      "nl": "Van-Gogh-style rendering: swirling directional impasto, vibrating complementary colour, thick contour strokes, restless surface, oil painting style image.",
+      "nl": "Van-Gogh-style rendering, swirling directional impasto, vibrating complementary colour, thick contour strokes, restless surface, oil painting style image.",
       "tags": [
         "oil_painting_(medium)",
         "textured",
@@ -4310,7 +4310,7 @@
       "family": "Traditional Painting",
       "axis": "style",
       "medium": "watercolour painting style image",
-      "nl": "Wet-on-wet ink-and-watercolour rendering: ink lines bleeding into damp washes, soft feathered boundaries, granulating pools, watercolour painting style image.",
+      "nl": "Wet-on-wet ink-and-watercolour rendering, ink lines bleeding into damp washes, soft feathered boundaries, granulating pools, watercolour painting style image.",
       "tags": [
         "watercolor_(medium)",
         "ink_(medium)",
