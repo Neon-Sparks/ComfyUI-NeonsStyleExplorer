@@ -1,5 +1,14 @@
 # Changelog
 
+## 2.0.1 — green CI
+
+* **The test workflow failed on a clean runner.** Two preview tests write a real
+  JPEG, so they import Pillow — which ComfyUI ships and the node therefore does
+  not declare, leaving the GitHub runner without it. CI now installs Pillow and
+  numpy before the build, and those two tests skip cleanly rather than error
+  when Pillow is absent, so a bare checkout still passes. Nothing in the node
+  changed.
+
 ## 2.0.0 — the LoRA node
 
 The second node arrives properly, and the style browser gains a filter for your

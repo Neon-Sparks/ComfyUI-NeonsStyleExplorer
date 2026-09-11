@@ -5,6 +5,13 @@ import os
 import sys
 import unittest
 
+try:                                    # ComfyUI ships Pillow; a bare checkout may not
+    from PIL import Image as _Image
+    HAVE_PILLOW = True
+except ImportError:                     # the two preview tests write a real file
+    _Image = None
+    HAVE_PILLOW = False
+
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 PKG = "ns_pkg"
 
@@ -727,6 +734,7 @@ class Catalog(unittest.TestCase):
         self.assertEqual(loras.split("krea 2\\portraits\\soft.safetensors"),
                          ("krea 2", "portraits", "soft"))   # windows separators
 
+    @unittest.skipUnless(HAVE_PILLOW, "Pillow is needed to write a test image")
     def test_lora_previews_are_per_gallery(self):
         """The same LoRA filed under two checkpoints keeps two sets of images —
         the reason galleries exist at all."""
@@ -735,7 +743,7 @@ class Catalog(unittest.TestCase):
         loras = importlib.import_module(f"{PKG}.loras")
         from io import BytesIO
 
-        from PIL import Image
+        Image = _Image
 
         one = "krea 2/portraits/soft.safetensors"
         two = "sdxl/portraits/soft.safetensors"
@@ -788,13 +796,14 @@ class Catalog(unittest.TestCase):
             wipe_user_files("custom.json", "overrides.json")
             catalog.entries(force=True)
 
+    @unittest.skipUnless(HAVE_PILLOW, "Pillow is needed to write a test image")
     def test_lora_save_round_trip(self):
         """A saved image lands in the LoRA's gallery and comes back in the
         manifest the browser reads."""
         import shutil
         from io import BytesIO
 
-        from PIL import Image
+        Image = _Image
 
         loras = importlib.import_module(f"{PKG}.loras")
         name = "krea 2/portraits/probe.safetensors"
