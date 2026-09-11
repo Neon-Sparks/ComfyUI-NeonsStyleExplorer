@@ -8,6 +8,11 @@
   numpy before the build, and those two tests skip cleanly rather than error
   when Pillow is absent, so a bare checkout still passes. Nothing in the node
   changed.
+* **The Node 20 deprecation warning.** `actions/checkout@v4` and
+  `setup-python@v5` declare the Node 20 action runtime, which GitHub has retired
+  and now force-upgrades; they are on `@v5` / `@v6` (Node 24) instead, and
+  `setup-node` is at `@v5` building with Node 22. This is the runner's own
+  runtime, not the Node the checks use.
 
 ## 2.0.0 — the LoRA node
 
