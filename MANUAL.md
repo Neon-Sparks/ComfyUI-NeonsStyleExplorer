@@ -605,12 +605,6 @@ Neither is touched by an update.
 
 ## 15. Troubleshooting
 
-**A saved preview appears on the wrong style, or on none.** Fixed in 2.2.1. A
-style keeps its id through a rename, so the server always filed the image
-correctly — but the browser indexed only the style's current name, and a node
-still holding the old one looked for previews under a key nothing writes. Your
-images were never lost; they appear again as soon as this version loads.
-
 **Revert does nothing after editing a style.** Fixed in 2.2.0 — an override is
 keyed by the style's shipped name, and after a rename the browser only knew the
 new one, so Revert matched nothing and said nothing. It now finds the override

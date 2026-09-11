@@ -1,22 +1,5 @@
 # Changelog
 
-## 2.2.1 — previews find their style again
-
-* **A preview could seem to save to the wrong style.** Previews are filed under
-  a style's permanent id, and the server resolves any name the style answers to
-  — current or alias — so the image always landed correctly. The browser,
-  though, indexed only the CURRENT name: a node still holding an earlier name
-  (after a rename, or from an older workflow using a `[Clio]` or `[v2]` name)
-  fell through to slugging that name and looked for previews under a key nothing
-  writes, so the card showed none. The browser now indexes every alias as well.
-* Nothing was lost — those images have been on disk all along and appear as soon
-  as this version loads.
-* A name the catalog genuinely does not know is now reported in the console
-  instead of quietly producing a key of its own.
-* `tools/harness/preview_key_aliases.mjs` checks that a current name, a renamed
-  one and an old alias all resolve to the same key the server writes, while a
-  different style stays separate.
-
 ## 2.2.0 — every clause names its own craft, and Revert works
 
 * **475 more clauses stopped calling themselves renderings.** Every opening was

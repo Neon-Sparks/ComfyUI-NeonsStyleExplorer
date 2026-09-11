@@ -89,32 +89,10 @@ export function lastErrorText(fallback = "that did not work") {
     return `server error ${error.status} — see the ComfyUI console`;
 }
 
-/**
- * Index every name a style answers to.
- *
- * A style keeps its id through a rename and its old name becomes an alias, so
- * the server files previews under the id either way. The browser only indexed
- * the CURRENT name, so a node still holding the old one fell back to slugging
- * that name — looking for previews under a key nothing writes, which made a
- * saved image seem to land on the wrong style.
- */
-function indexAliases(catalog) {
-    const byAlias = {};
-    for (const entry of Object.values(catalog?.by_name || {})) {
-        if (!entry?.name) continue;
-        byAlias[entry.name.toLowerCase()] = entry;
-        for (const alias of entry.aliases || []) {
-            if (alias && !byAlias[alias.toLowerCase()]) byAlias[alias.toLowerCase()] = entry;
-        }
-    }
-    catalog.by_alias = byAlias;
-    return catalog;
-}
-
 export async function loadCatalog() {
     const data = await call("/neons_style/catalog");
     if (data?.styles) {
-        state.catalog = indexAliases(data);
+        state.catalog = data;
         state.favourites = data.favourites || [];
         state.recents = data.recents || [];
         state.ready = true;
@@ -129,7 +107,7 @@ export async function loadCatalog() {
         try {
             const module = await import("./style_index.js");
             if (module?.NEONS_STYLE_INDEX?.styles) {
-                state.catalog = indexAliases(module.NEONS_STYLE_INDEX);
+                state.catalog = module.NEONS_STYLE_INDEX;
                 console.warn("Neons Style Explorer: using the bundled catalog snapshot — restart ComfyUI");
             }
         } catch (err) {
@@ -418,19 +396,11 @@ export const importStyles = (styles) => call("/neons_style/import", { styles });
 
 export function entryOf(name) {
     if (!name || name === "None" || name === RANDOM) return null;
-    return state.catalog.by_name?.[name]
-        || state.catalog.by_alias?.[String(name).toLowerCase()]
-        || null;
+    return state.catalog.by_name?.[name] || null;
 }
 
 export function keyOf(name) {
     const entry = entryOf(name);
-    if (!entry && name && name !== "None" && name !== RANDOM && state.ready) {
-        // a key derived from a name the catalog does not know cannot match what
-        // the server writes; say so rather than quietly filing it elsewhere
-        console.warn(`Neons Style Explorer: '${name}' is not in the catalog — `
-            + "its previews cannot be matched");
-    }
     return String(entry?.id || name || "")
         .replace(/[^A-Za-z0-9]+/g, "_")
         .replace(/^_+|_+$/g, "")
