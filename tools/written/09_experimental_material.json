@@ -2,7 +2,7 @@
  {
   "name": "[Experimental] Anaglyph Stereo",
   "medium": "material style image",
-  "nl": "Anaglyph rendering, red and cyan channels offset apart, ghosted double edges, desaturated middle tones, faint print misregistration, material style image.",
+  "nl": "Anaglyph rendering, red and cyan channels offset apart, ghosted double edges, desaturated middle tones, faint print misregistration, material style image,",
   "tags": [
    "duotone",
    "glitch",
@@ -17,7 +17,7 @@
  {
   "name": "[Experimental] Analog Paper Collage",
   "medium": "collage style image",
-  "nl": "Paper-collage rendering, torn and scissor-cut edges, layered magazine stock, visible glue wrinkle and drop shadow, mixed halftone textures, collage style image.",
+  "nl": "Paper-collage rendering, torn and scissor-cut edges, layered magazine stock, visible glue wrinkle and drop shadow, mixed halftone textures, collage style image,",
   "tags": [
    "collage",
    "halftone",
@@ -32,7 +32,7 @@
  {
   "name": "[Experimental] ASCII Text Picture",
   "medium": "material style image",
-  "nl": "ASCII rendering, image built from monospaced characters, density-mapped tonal ramp, terminal green or grey on black, aliased character grid, material style image.",
+  "nl": "ASCII rendering, image built from monospaced characters, density-mapped tonal ramp, terminal green or grey on black, aliased character grid, material style image,",
   "tags": [
    "monochrome",
    "dithering",
@@ -47,7 +47,7 @@
  {
   "name": "[Experimental] Ceramic Glaze Illustration",
   "medium": "material style image",
-  "nl": "Glazed-ceramic rendering, pooled glossy glaze over matte clay body, crackle craze lines, kiln colour shifts, soft specular sheen, material style image.",
+  "nl": "Glazed-ceramic rendering, pooled glossy glaze over matte clay body, crackle craze lines, kiln colour shifts, soft specular sheen, material style image,",
   "tags": [
    "porcelain",
    "shiny",
@@ -62,7 +62,7 @@
  {
   "name": "[Experimental] Cross-Stitch Sampler",
   "medium": "material style image",
-  "nl": "Cross-stitch rendering, X-shaped floss stitches on aida grid, stepped blocky colour, visible weave holes, slight thread sheen, material style image.",
+  "nl": "Cross-stitch rendering, X-shaped floss stitches on aida grid, stepped blocky colour, visible weave holes, slight thread sheen, material style image,",
   "tags": [
    "embroidery",
    "textured",
@@ -77,7 +77,7 @@
  {
   "name": "[Experimental] Dot-Matrix Print",
   "medium": "material style image",
-  "nl": "Dot-matrix rendering, impact-printed dot rows, banded overlap, faded ribbon ink, tractor-feed paper texture, monochrome tonality, material style image.",
+  "nl": "Dot-matrix rendering, impact-printed dot rows, banded overlap, faded ribbon ink, tractor-feed paper texture, monochrome tonality, material style image,",
   "tags": [
    "dithering",
    "monochrome",
@@ -92,7 +92,7 @@
  {
   "name": "[Experimental] Embroidery Needlepoint",
   "medium": "handmade style image",
-  "nl": "Needlepoint rendering, raised satin-stitch floss, directional thread sheen, canvas showing at the edges, soft fibre halo, handmade style image.",
+  "nl": "Needlepoint rendering, raised satin-stitch floss, directional thread sheen, canvas showing at the edges, soft fibre halo, handmade style image,",
   "tags": [
    "embroidery",
    "textured",
@@ -106,7 +106,7 @@
  {
   "name": "[Experimental] Ethereal Motion Blur",
   "medium": "material style image",
-  "nl": "Long-blur rendering, smeared directional streaks, dissolved edges, ghost trails through mid tones, soft luminous falloff, material style image.",
+  "nl": "Long-blur rendering, smeared directional streaks, dissolved edges, ghost trails through mid tones, soft luminous falloff, material style image,",
   "tags": [
    "motion_blur",
    "long_exposure",
@@ -121,7 +121,7 @@
  {
   "name": "[Experimental] Glitch Datamosh Still",
   "medium": "video artefact style image",
-  "nl": "Datamosh rendering, smeared macroblocks, channel displacement, frozen compression artefacts, banded colour tearing, video artefact style image.",
+  "nl": "Datamosh rendering, smeared macroblocks, channel displacement, frozen compression artefacts, banded colour tearing, video artefact style image,",
   "tags": [
    "glitch",
    "dithering",
@@ -136,7 +136,7 @@
  {
   "name": "[Experimental] Holographic Foil",
   "medium": "material style image",
-  "nl": "Holographic-foil rendering, iridescent rainbow shift across a mirrored surface, hard specular banding, prismatic edge flare, embossed sheen, material style image.",
+  "nl": "Holographic-foil rendering, iridescent rainbow shift across a mirrored surface, hard specular banding, prismatic edge flare, embossed sheen, material style image,",
   "tags": [
    "holographic",
    "iridescent",
@@ -151,7 +151,7 @@
  {
   "name": "[Experimental] Ink in Water",
   "medium": "ink painting style image",
-  "nl": "Ink-in-water rendering, diffusing pigment plumes, feathered tendrils, soft density gradients through clear fluid, dark-to-clear falloff, ink painting style image.",
+  "nl": "Ink-in-water painting, diffusing pigment plumes, feathered tendrils, soft density gradients through clear fluid, dark-to-clear falloff, ink painting style image,",
   "tags": [
    "ink_wash_painting",
    "gradient",
@@ -166,7 +166,7 @@
  {
   "name": "[Experimental] Kids Crayon",
   "medium": "material style image",
-  "nl": "Crayon rendering, waxy scribbled strokes, uneven pressure build-up, paper tooth showing through, out-of-register colour, material style image.",
+  "nl": "Crayon rendering, waxy scribbled strokes, uneven pressure build-up, paper tooth showing through, out-of-register colour, material style image,",
   "tags": [
    "crayon_(medium)",
    "traditional_media",
@@ -181,7 +181,7 @@
  {
   "name": "[Experimental] Lacquer Maki-e",
   "medium": "material style image",
-  "nl": "Maki-e rendering, deep black urushi lacquer, sprinkled gold and silver powder motifs, mirror-polished depth, fine metallic speckle, material style image.",
+  "nl": "Maki-e rendering, deep black urushi lacquer, sprinkled gold and silver powder motifs, mirror-polished depth, fine metallic speckle, material style image,",
   "tags": [
    "gold",
    "dark",
@@ -197,7 +197,7 @@
  {
   "name": "[Experimental] Light-Leak Overlay Photo",
   "medium": "photograph style image",
-  "nl": "Light-leak rendering, orange-red flare bleeding in from one edge, fogged shadows, lifted blacks, halated highlights, coarse film grain, photograph style image.",
+  "nl": "Light-leak rendering, orange-red flare bleeding in from one edge, fogged shadows, lifted blacks, halated highlights, coarse film grain, photograph style image,",
   "tags": [
    "lens_flare",
    "film_grain",
@@ -212,7 +212,7 @@
  {
   "name": "[Experimental] Mosaic Tesserae",
   "medium": "material style image",
-  "nl": "Mosaic rendering, image broken into small irregular tiles, visible grout lines, stepped colour transitions, uneven glaze reflections, material style image.",
+  "nl": "Mosaic rendering, image broken into small irregular tiles, visible grout lines, stepped colour transitions, uneven glaze reflections, material style image,",
   "tags": [
    "mosaic",
    "textured",
@@ -231,7 +231,7 @@
  {
   "name": "[Experimental] Neon Drip Abstract",
   "medium": "abstract style image",
-  "nl": "Neon-drip rendering, glowing fluorescent runs over dark ground, blooming edges, wet paint sheen, high-chroma trails, abstract style image.",
+  "nl": "Neon-drip rendering, glowing fluorescent runs over dark ground, blooming edges, wet paint sheen, high-chroma trails, abstract style image,",
   "tags": [
    "neon_palette",
    "glowing",
@@ -247,7 +247,7 @@
  {
   "name": "[Experimental] Photomontage",
   "medium": "material style image",
-  "nl": "Photomontage rendering, spliced photographic fragments at mismatched scale, hard cut seams, varied grain between pieces, flattened composite depth, material style image.",
+  "nl": "Photomontage rendering, spliced photographic fragments at mismatched scale, hard cut seams, varied grain between pieces, flattened composite depth, material style image,",
   "tags": [
    "collage",
    "photo_(medium)",
@@ -262,7 +262,7 @@
  {
   "name": "[Experimental] Quilt Patchwork",
   "medium": "material style image",
-  "nl": "Patchwork-quilt rendering, pieced fabric blocks, visible stitch seams and quilted relief, cotton print texture, soft batting puff, material style image.",
+  "nl": "Patchwork-quilt rendering, pieced fabric blocks, visible stitch seams and quilted relief, cotton print texture, soft batting puff, material style image,",
   "tags": [
    "patchwork",
    "embroidery",
@@ -277,7 +277,7 @@
  {
   "name": "[Experimental] Rainy Window Condensation",
   "medium": "material style image",
-  "nl": "Rain-window rendering, water beads and runnels on glass, fogged condensation haze, refracted bokeh behind, cold ambient light, material style image.",
+  "nl": "Rain-window rendering, water beads and runnels on glass, fogged condensation haze, refracted bokeh behind, cold ambient light, material style image,",
   "tags": [
    "wet",
    "glass",
@@ -293,7 +293,7 @@
  {
   "name": "[Experimental] Sand Animation Still",
   "medium": "material style image",
-  "nl": "Sand-animation rendering, backlit grains on glass, forms drawn by clearing and heaping sand, warm amber glow through the layer, soft grain edges, material style image.",
+  "nl": "Sand-animation rendering, backlit grains on glass, forms drawn by clearing and heaping sand, warm amber glow through the layer, soft grain edges, material style image,",
   "tags": [
    "backlighting",
    "monochrome",
@@ -308,7 +308,7 @@
  {
   "name": "[Experimental] Smoke and Light",
   "medium": "material style image",
-  "nl": "Smoke-and-light rendering, volumetric plumes catching a narrow beam, deep black surround, soft turbulent gradients, glowing edge scatter, material style image.",
+  "nl": "Smoke-and-light rendering, volumetric plumes catching a narrow beam, deep black surround, soft turbulent gradients, glowing edge scatter, material style image,",
   "tags": [
    "light_rays",
    "dark",
@@ -324,7 +324,7 @@
  {
   "name": "[Experimental] Soft Watercolor Deco",
   "medium": "watercolour painting style image",
-  "nl": "Soft deco-watercolour rendering, pale layered washes inside geometric deco framing, gold line accents, blooming pigment edges, paper grain, watercolour painting style image.",
+  "nl": "Soft deco-watercolour painting, pale layered washes inside geometric deco framing, gold line accents, blooming pigment edges, paper grain, watercolour painting style image,",
   "tags": [
    "watercolor_(medium)",
    "art_deco",
@@ -340,7 +340,7 @@
  {
   "name": "[Experimental] Stained Glass",
   "medium": "material style image",
-  "nl": "Stained-glass rendering, saturated coloured panes bounded by black lead lines, backlit luminosity, glass texture and bubbles, jewel palette, material style image.",
+  "nl": "Stained-glass rendering, saturated coloured panes bounded by black lead lines, backlit luminosity, glass texture and bubbles, jewel palette, material style image,",
   "tags": [
    "stained_glass",
    "glowing",
@@ -360,7 +360,7 @@
  {
   "name": "[Experimental] Tapestry Weave",
   "medium": "material style image",
-  "nl": "Tapestry rendering, interlaced warp and weft threads, stepped diagonal edges, wool colour blocks, low-relief woven texture, material style image.",
+  "nl": "Tapestry rendering, interlaced warp and weft threads, stepped diagonal edges, wool colour blocks, low-relief woven texture, material style image,",
   "tags": [
    "knitted",
    "embroidery",
@@ -375,7 +375,7 @@
  {
   "name": "[Experimental] Thermal Receipt",
   "medium": "material style image",
-  "nl": "Thermal-receipt rendering, dithered black on faintly grey paper, monospaced print bands, faded heat streaks, curled paper edge, material style image.",
+  "nl": "Thermal-receipt rendering, dithered black on faintly grey paper, monospaced print bands, faded heat streaks, curled paper edge, material style image,",
   "tags": [
    "monochrome",
    "dithering",
@@ -390,7 +390,7 @@
  {
   "name": "[Experimental] VHS Still",
   "medium": "video artefact style image",
-  "nl": "VHS rendering, chroma smear and bleed, tracking noise bands, soft blown highlights, interlace comb edges, tape-worn colour, video artefact style image.",
+  "nl": "VHS rendering, chroma smear and bleed, tracking noise bands, soft blown highlights, interlace comb edges, tape-worn colour, video artefact style image,",
   "tags": [
    "glitch",
    "film_grain",

@@ -4,7 +4,7 @@
   "family": "Illustration",
   "axis": "format",
   "medium": "collage style image",
-  "nl": "Composed as a mood board, a grid of pinned reference tiles at mixed scales, torn edges and tape, swatch strip along one side, collage style image.",
+  "nl": "Composed as a mood board, a grid of pinned reference tiles at mixed scales, torn edges and tape, swatch strip along one side, collage style image,",
   "tags": [
    "collage",
    "multiple_views",
@@ -20,7 +20,7 @@
   "family": "Illustration",
   "axis": "format",
   "medium": "illustration style image",
-  "nl": "Composed as a colour script, a row of small painted beats in sequence, each a different lighting key, uniform frame size, illustration style image.",
+  "nl": "Composed as a colour script, a row of small painted beats in sequence, each a different lighting key, uniform frame size, illustration style image,",
   "tags": [
    "multiple_views",
    "painting_(medium)",
@@ -36,7 +36,7 @@
   "family": "Illustration",
   "axis": "format",
   "medium": "drawing style image",
-  "nl": "Composed as an animatic frame, rough drawing inside a safe-area rectangle, timing and camera notes at the edge, flat grey values, drawing style image.",
+  "nl": "Composed as an animatic frame, rough drawing inside a safe-area rectangle, timing and camera notes at the edge, flat grey values, drawing style image,",
   "tags": [
    "storyboard",
    "sketch",
@@ -53,7 +53,7 @@
   "family": "Photography & Film",
   "axis": "format",
   "medium": "photograph style image",
-  "nl": "Composed as a film strip, consecutive frames in a row with sprocket holes, frame numbers and edge markings, orange base, photograph style image.",
+  "nl": "Composed as a film strip, consecutive frames in a row with sprocket holes, frame numbers and edge markings, orange base, photograph style image,",
   "tags": [
    "contact_sheet",
    "multiple_views",
@@ -70,7 +70,7 @@
   "family": "Comics & Print",
   "axis": "format",
   "medium": "collage style image",
-  "nl": "Composed as a zine spread, two photocopied pages side by side, cut-and-paste blocks, hand-scrawled captions, staple gutter, collage style image.",
+  "nl": "Composed as a zine spread, two photocopied pages side by side, cut-and-paste blocks, hand-scrawled captions, staple gutter, collage style image,",
   "tags": [
    "collage",
    "monochrome",
@@ -87,7 +87,7 @@
   "family": "Comics & Print",
   "axis": "format",
   "medium": "print style image",
-  "nl": "Composed as a wanted poster, heavy woodtype heading, a mugshot panel in the middle, reward line below, aged torn paper, print style image.",
+  "nl": "Composed as a wanted poster, heavy woodtype heading, a mugshot panel in the middle, reward line below, aged torn paper, print style image,",
   "tags": [
    "poster",
    "sepia",
@@ -104,7 +104,7 @@
   "family": "Photography & Film",
   "axis": "format",
   "medium": "photograph style image",
-  "nl": "Composed as a lobby card, a landscape film still inside a printed border with title lettering space at the base, faded ink, photograph style image.",
+  "nl": "Composed as a lobby card, a landscape film still inside a printed border with title lettering space at the base, faded ink, photograph style image,",
   "tags": [
    "photo_border",
    "poster",
@@ -121,7 +121,7 @@
   "family": "Comics & Print",
   "axis": "format",
   "medium": "poster style image",
-  "nl": "Composed as a VHS sleeve, cover panel with a spine strip, airbrushed montage, chunky title band, worn cardboard edges, poster style image.",
+  "nl": "Composed as a VHS sleeve, cover panel with a spine strip, airbrushed montage, chunky title band, worn cardboard edges, poster style image,",
   "tags": [
    "poster",
    "airbrush_(medium)",
@@ -138,7 +138,7 @@
   "family": "Comics & Print",
   "axis": "format",
   "medium": "poster style image",
-  "nl": "Composed as arcade side art, screenprinted flat colour, hard black keyline, bold logo space at the top, poster style image.",
+  "nl": "Composed as arcade side art, screenprinted flat colour, hard black keyline, bold logo space at the top, poster style image,",
   "tags": [
    "poster",
    "stencil",
@@ -155,7 +155,7 @@
   "family": "Comics & Print",
   "axis": "format",
   "medium": "print style image",
-  "nl": "Composed as a cassette J-card, narrow folded panels, spine text strip, small cover square, cheap two-colour print on thin card, print style image.",
+  "nl": "Composed as a cassette J-card, narrow folded panels, spine text strip, small cover square, cheap two-colour print on thin card, print style image,",
   "tags": [
    "limited_palette",
    "textured",
@@ -172,7 +172,7 @@
   "family": "Comics & Print",
   "axis": "format",
   "medium": "print style image",
-  "nl": "Composed as a record sleeve back, track-list column, credit block, a small photo panel, matte cardboard stock, print style image.",
+  "nl": "Composed as a record sleeve back, track-list column, credit block, a small photo panel, matte cardboard stock, print style image,",
   "tags": [
    "album_cover",
    "poster",
@@ -189,7 +189,7 @@
   "family": "Comics & Print",
   "axis": "format",
   "medium": "illustration style image",
-  "nl": "Composed as a playing-card face, mirrored double-ended figure, ornate border rule, corner index marks, flat printed inks, illustration style image.",
+  "nl": "Composed as a playing-card face, mirrored double-ended figure, ornate border rule, corner index marks, flat printed inks, illustration style image,",
   "tags": [
    "trading_card",
    "flat_color",
@@ -206,7 +206,7 @@
   "family": "Comics & Print",
   "axis": "format",
   "medium": "print style image",
-  "nl": "Composed as a banknote, intaglio line portrait, guilloche rosette patterns, denomination corners, pastel security tints, print style image.",
+  "nl": "Composed as a banknote, intaglio line portrait, guilloche rosette patterns, denomination corners, pastel security tints, print style image,",
   "tags": [
    "lithograph",
    "lineart",
@@ -223,7 +223,7 @@
   "family": "Comics & Print",
   "axis": "format",
   "medium": "print style image",
-  "nl": "Composed as a postage stamp, perforated edge, small framed vignette, country and value lettering, limited engraved inks, print style image.",
+  "nl": "Composed as a postage stamp, perforated edge, small framed vignette, country and value lettering, limited engraved inks, print style image,",
   "tags": [
    "lithograph",
    "limited_palette",
@@ -240,7 +240,7 @@
   "family": "Comics & Print",
   "axis": "format",
   "medium": "print style image",
-  "nl": "Composed as a matchbox label, tiny rectangular panel, bold naive emblem, two or three flat inks, coarse paper and rounded corners, print style image.",
+  "nl": "Composed as a matchbox label, tiny rectangular panel, bold naive emblem, two or three flat inks, coarse paper and rounded corners, print style image,",
   "tags": [
    "limited_palette",
    "flat_color",
@@ -257,7 +257,7 @@
   "family": "Comics & Print",
   "axis": "format",
   "medium": "print style image",
-  "nl": "Composed as a seed packet, illustrated specimen panel, arched banner name, planting text below, faded lithograph inks on kraft, print style image.",
+  "nl": "Composed as a seed packet, illustrated specimen panel, arched banner name, planting text below, faded lithograph inks on kraft, print style image,",
   "tags": [
    "lithograph",
    "limited_palette",
@@ -274,7 +274,7 @@
   "family": "Comics & Print",
   "axis": "format",
   "medium": "print style image",
-  "nl": "Composed as a crate label, bold display lettering across a stone-litho scene, saturated flat inks, decorative border, print style image.",
+  "nl": "Composed as a crate label, bold display lettering across a stone-litho scene, saturated flat inks, decorative border, print style image,",
   "tags": [
    "lithograph",
    "poster",
@@ -292,7 +292,7 @@
   "family": "Comics & Print",
   "axis": "format",
   "medium": "graphic style image",
-  "nl": "Composed as a museum label, small white panel beside the work, title and date lines, generous margins, even gallery light, graphic style image.",
+  "nl": "Composed as a museum label, small white panel beside the work, title and date lines, generous margins, even gallery light, graphic style image,",
   "tags": [
    "minimalism",
    "white_theme",
@@ -308,7 +308,7 @@
   "family": "Comics & Print",
   "axis": "format",
   "medium": "print style image",
-  "nl": "Composed as a ticket stub, perforated tear line, seat and date fields, serial numbering, thin card with worn edges, print style image.",
+  "nl": "Composed as a ticket stub, perforated tear line, seat and date fields, serial numbering, thin card with worn edges, print style image,",
   "tags": [
    "limited_palette",
    "textured",
@@ -325,7 +325,7 @@
   "family": "Comics & Print",
   "axis": "format",
   "medium": "graphic style image",
-  "nl": "Composed as a boarding pass, fielded data grid, barcode strip, perforated stub, airline colour band on thermal-white stock, graphic style image.",
+  "nl": "Composed as a boarding pass, fielded data grid, barcode strip, perforated stub, airline colour band on thermal-white stock, graphic style image,",
   "tags": [
    "diagram",
    "flat_color",
@@ -342,7 +342,7 @@
   "family": "Design & Aesthetics",
   "axis": "format",
   "medium": "graphic style image",
-  "nl": "Composed as a business card, small landscape rectangle, mark at one side, name and contact lines, wide margins on heavy stock, graphic style image.",
+  "nl": "Composed as a business card, small landscape rectangle, mark at one side, name and contact lines, wide margins on heavy stock, graphic style image,",
   "tags": [
    "minimalism",
    "simple_background",
@@ -358,7 +358,7 @@
   "family": "Design & Aesthetics",
   "axis": "format",
   "medium": "graphic style image",
-  "nl": "Composed as a letterhead, mark and rule at the top, deep white body area, footer address line, uncoated paper tone, graphic style image.",
+  "nl": "Composed as a letterhead, mark and rule at the top, deep white body area, footer address line, uncoated paper tone, graphic style image,",
   "tags": [
    "minimalism",
    "white_theme",
@@ -374,7 +374,7 @@
   "family": "Design & Aesthetics",
   "axis": "format",
   "medium": "graphic style image",
-  "nl": "Composed as a menu, sectioned lists with leader dots, a rule between courses, restrained display heading, warm paper stock, graphic style image.",
+  "nl": "Composed as a menu, sectioned lists with leader dots, a rule between courses, restrained display heading, warm paper stock, graphic style image,",
   "tags": [
    "minimalism",
    "textured",
@@ -390,7 +390,7 @@
   "family": "Design & Aesthetics",
   "axis": "format",
   "medium": "graphic style image",
-  "nl": "Composed as a deck cover, title slide with a large heading block, a single flat graphic element, brand colour band, generous quiet ground, graphic style image.",
+  "nl": "Composed as a deck cover, title slide with a large heading block, a single flat graphic element, brand colour band, generous quiet ground, graphic style image,",
   "tags": [
    "flat_color",
    "minimalism",
@@ -406,7 +406,7 @@
   "family": "Design & Aesthetics",
   "axis": "format",
   "medium": "graphic style image",
-  "nl": "Composed as a store screenshot, a phone frame on a flat colour field, caption line above, device shadow, graphic style image.",
+  "nl": "Composed as a store screenshot, a phone frame on a flat colour field, caption line above, device shadow, graphic style image,",
   "tags": [
    "fake_screenshot",
    "flat_color",
@@ -423,7 +423,7 @@
   "family": "Design & Aesthetics",
   "axis": "format",
   "medium": "graphic style image",
-  "nl": "Composed as a podcast cover, square tile, oversized title lettering, one bold graphic element, high contrast for thumbnail size, graphic style image.",
+  "nl": "Composed as a podcast cover, square tile, oversized title lettering, one bold graphic element, high contrast for thumbnail size, graphic style image,",
   "tags": [
    "poster",
    "flat_color",
@@ -440,7 +440,7 @@
   "family": "Design & Aesthetics",
   "axis": "format",
   "medium": "graphic style image",
-  "nl": "Composed as an email hero banner, wide shallow strip, subject at one side, clear space for a headline and button, flat ground, graphic style image.",
+  "nl": "Composed as an email hero banner, wide shallow strip, subject at one side, clear space for a headline and button, flat ground, graphic style image,",
   "tags": [
    "flat_color",
    "gradient",
@@ -456,7 +456,7 @@
   "family": "Design & Aesthetics",
   "axis": "format",
   "medium": "graphic style image",
-  "nl": "Composed as a banner-ad set, the same layout repeated at leaderboard, square and skyscraper proportions, consistent flat colour, graphic style image.",
+  "nl": "Composed as a banner-ad set, the same layout repeated at leaderboard, square and skyscraper proportions, consistent flat colour, graphic style image,",
   "tags": [
    "multiple_views",
    "flat_color",
@@ -473,7 +473,7 @@
   "family": "Comics & Print",
   "axis": "format",
   "medium": "print style image",
-  "nl": "Composed as a newspaper front page, masthead, column rules, headline hierarchy, a halftone photo panel, grey newsprint, print style image.",
+  "nl": "Composed as a newspaper front page, masthead, column rules, headline hierarchy, a halftone photo panel, grey newsprint, print style image,",
   "tags": [
    "halftone",
    "monochrome",
@@ -490,7 +490,7 @@
   "family": "Comics & Print",
   "axis": "format",
   "medium": "print style image",
-  "nl": "Composed as a tabloid front, screaming display headline, one cropped photo, red banner strip, cheap ink on coarse newsprint, print style image.",
+  "nl": "Composed as a tabloid front, screaming display headline, one cropped photo, red banner strip, cheap ink on coarse newsprint, print style image,",
   "tags": [
    "halftone",
    "high_contrast",

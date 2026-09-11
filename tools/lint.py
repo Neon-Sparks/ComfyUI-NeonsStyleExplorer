@@ -124,11 +124,13 @@ def main():
         else:
             if not clause[0].isupper() and not clause[0].isdigit():
                 errors.append(f"{where}: clause not sentence-cased")
-            if clause[-1] != ".":
-                errors.append(f"{where}: clause must end with a period")
+            # the clause is a prompt fragment, not a sentence: it hands over
+            # to whatever the user typed, so it closes with a comma
+            if clause[-1] != ",":
+                errors.append(f"{where}: clause must end with a comma")
             if len(clause) > MAX:
                 errors.append(f"{where}: clause {len(clause)} chars > {MAX}")
-            if TRUNCATED.search(clause.rstrip(".")):
+            if TRUNCATED.search(clause.rstrip(".,")):
                 errors.append(f"{where}: clause looks truncated -> ...{clause[-40:]}")
             if INSTRUCTION.search(clause) and not imported:
                 errors.append(f"{where}: instruction/scope language in the clause")
@@ -137,10 +139,14 @@ def main():
             # the process phrase is separated by a comma, not a colon
             if ": " in clause and not imported:
                 errors.append(f"{where}: colon after the process phrase, use a comma")
+            # "rendering" reads as CGI to the model, so a painted medium says
+            # painting (or drawing for ink line work) instead
+            if "rendering" in clause.lower() and "painting" in medium.lower() and not imported:
+                errors.append(f"{where}: painted medium should not say 'rendering'")
             # the workflow sets the frame size, so a clause never names one
             if RATIO.search(clause) and not imported:
                 errors.append(f"{where}: names an aspect ratio, the workflow sets that")
-            if medium and entry.get("written") and not clause.rstrip(".").lower().endswith(medium.lower()):
+            if medium and entry.get("written") and not clause.rstrip(".,").lower().endswith(medium.lower()):
                 errors.append(f"{where}: clause must close with '{medium}'")
 
         tags = entry.get("tags") or []

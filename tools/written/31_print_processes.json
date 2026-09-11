@@ -4,7 +4,7 @@
   "family": "Comics & Print",
   "axis": "style",
   "medium": "print style image",
-  "nl": "End-grain engraving rendering, white line cut into polished boxwood, tone built from parallel gouge strokes, highlights carved out of solid black, crisp letterpress bite into the sheet, print style image.",
+  "nl": "End-grain engraving rendering, white line cut into polished boxwood, tone built from parallel gouge strokes, highlights carved out of solid black, crisp letterpress bite into the sheet, print style image,",
   "tags": [
    "woodcut",
    "monochrome",
@@ -21,7 +21,7 @@
   "family": "Comics & Print",
   "axis": "style",
   "medium": "print style image",
-  "nl": "Chiaroscuro woodcut rendering, two or three tone blocks printed over a key line, mid-tones as flat overlapping fields, highlights cut back to bare paper, slight registration drift between blocks, print style image.",
+  "nl": "Chiaroscuro woodcut rendering, two or three tone blocks printed over a key line, mid-tones as flat overlapping fields, highlights cut back to bare paper, slight registration drift between blocks, print style image,",
   "tags": [
    "woodcut",
    "limited_palette",
@@ -38,7 +38,7 @@
   "family": "Comics & Print",
   "axis": "style",
   "medium": "print style image",
-  "nl": "Pochoir rendering, flat gouache brushed through hand-cut stencils, crisp bordered shapes with a faint raised ridge of paint, opaque unmodulated colour, a fine ink keyline dropped over the top, print style image.",
+  "nl": "Pochoir rendering, flat gouache brushed through hand-cut stencils, crisp bordered shapes with a faint raised ridge of paint, opaque unmodulated colour, a fine ink keyline dropped over the top, print style image,",
   "tags": [
    "stencil",
    "flat_color",
@@ -55,7 +55,7 @@
   "family": "Comics & Print",
   "axis": "style",
   "medium": "print style image",
-  "nl": "Collagraph rendering, an assembled textured plate printed under heavy pressure, fabric weave, card edges and grit all reading as tone, embossed plate mark, ink pooling in the low ground, print style image.",
+  "nl": "Collagraph rendering, an assembled textured plate printed under heavy pressure, fabric weave, card edges and grit all reading as tone, embossed plate mark, ink pooling in the low ground, print style image,",
   "tags": [
    "textured",
    "traditional_media",
@@ -71,7 +71,7 @@
   "family": "Comics & Print",
   "axis": "style",
   "medium": "print style image",
-  "nl": "Monotype rendering, ink painted onto a smooth plate and pulled once, brush and rag marks preserved in the transfer, softened edges, wipe streaks and a visible plate border, print style image.",
+  "nl": "Monotype rendering, ink painted onto a smooth plate and pulled once, brush and rag marks preserved in the transfer, softened edges, wipe streaks and a visible plate border, print style image,",
   "tags": [
    "ink_(medium)",
    "textured",
@@ -88,7 +88,7 @@
   "family": "Comics & Print",
   "axis": "style",
   "medium": "print style image",
-  "nl": "Katazome rendering, rice-paste resist brushed through a cut mulberry stencil, undyed white pattern against saturated indigo, fine paste cracks breaking the line, cloth weave showing through, print style image.",
+  "nl": "Katazome rendering, rice-paste resist brushed through a cut mulberry stencil, undyed white pattern against saturated indigo, fine paste cracks breaking the line, cloth weave showing through, print style image,",
   "tags": [
    "stencil",
    "blue_theme",
@@ -105,7 +105,7 @@
   "family": "Comics & Print",
   "axis": "style",
   "medium": "comic style image",
-  "nl": "Wash-tone comic rendering, brush-diluted ink laid over a confident pen line, grey values doing the modelling instead of dots, wet edges pooling at the panel borders, bare paper kept for highlights, comic style image.",
+  "nl": "Wash-tone comic rendering, brush-diluted ink laid over a confident pen line, grey values doing the modelling instead of dots, wet edges pooling at the panel borders, bare paper kept for highlights, comic style image,",
   "tags": [
    "ink_wash_painting",
    "comic",
@@ -122,7 +122,7 @@
   "family": "Comics & Print",
   "axis": "style",
   "medium": "print style image",
-  "nl": "Duotone pulp rendering, two inks only on cheap absorbent stock, black line beside one flat spot colour, coarse halftone dots spreading as they soak, colour creeping past its own edges, print style image.",
+  "nl": "Duotone pulp rendering, two inks only on cheap absorbent stock, black line beside one flat spot colour, coarse halftone dots spreading as they soak, colour creeping past its own edges, print style image,",
   "tags": [
    "duotone",
    "halftone",
@@ -139,7 +139,7 @@
   "family": "Comics & Print",
   "axis": "style",
   "medium": "print style image",
-  "nl": "Rotogravure rendering, continuous-tone photographic printing in one warm brown ink, velvety mid-greys with soft edges, screen too fine to read, newsprint absorbency dulling the blacks, print style image.",
+  "nl": "Rotogravure rendering, continuous-tone photographic printing in one warm brown ink, velvety mid-greys with soft edges, screen too fine to read, newsprint absorbency dulling the blacks, print style image,",
   "tags": [
    "sepia",
    "photo_(medium)",
@@ -156,7 +156,7 @@
   "family": "Comics & Print",
   "axis": "style",
   "medium": "comic style image",
-  "nl": "Blue-line comic rendering, page pencils photographed before inking, non-photo blue construction beneath grey graphite, panel borders ruled but unfilled, eraser haze and hand smudging across the board, comic style image.",
+  "nl": "Blue-line comic rendering, page pencils photographed before inking, non-photo blue construction beneath grey graphite, panel borders ruled but unfilled, eraser haze and hand smudging across the board, comic style image,",
   "tags": [
    "sketch",
    "unfinished",
@@ -173,7 +173,7 @@
   "family": "Illustration",
   "axis": "style",
   "medium": "technical drawing style image",
-  "nl": "Patent-drawing rendering, uniform ink line with no tone at all, parts numbered on leader lines, section cuts filled with even ruled hatching, wide white ground and a labelled figure caption, technical drawing style image.",
+  "nl": "Patent-drawing rendering, uniform ink line with no tone at all, parts numbered on leader lines, section cuts filled with even ruled hatching, wide white ground and a labelled figure caption, technical drawing style image,",
   "tags": [
    "lineart",
    "monochrome",

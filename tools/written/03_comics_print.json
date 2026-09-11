@@ -2,7 +2,7 @@
  {
   "name": "[Format] Album Cover",
   "medium": "graphic style image",
-  "nl": "Composed as an album sleeve, centred iconic subject, print-flat colour, generous margin for a title block, sleeve-edge trim, graphic style image.",
+  "nl": "Composed as an album sleeve, centred iconic subject, print-flat colour, generous margin for a title block, sleeve-edge trim, graphic style image,",
   "tags": [
    "album_cover",
    "poster",
@@ -15,7 +15,7 @@
  {
   "name": "[Format] App Icon",
   "medium": "vector style image",
-  "nl": "Composed as an app icon, one bold centred symbol, rounded-square safe area, flat colour with a soft inner gradient, readable at thumbnail size, vector style image.",
+  "nl": "Composed as an app icon, one bold centred symbol, rounded-square safe area, flat colour with a soft inner gradient, readable at thumbnail size, vector style image,",
   "tags": [
    "icon_(computing)",
    "flat_color",
@@ -30,7 +30,7 @@
  {
   "name": "[Format] Avatar Bust",
   "medium": "photograph style image",
-  "nl": "Composed as an avatar bust, head and shoulders centred, tight crop, plain even backdrop, front-facing clarity, photograph style image.",
+  "nl": "Composed as an avatar bust, head and shoulders centred, tight crop, plain even backdrop, front-facing clarity, photograph style image,",
   "tags": [
    "portrait",
    "upper_body",
@@ -44,7 +44,7 @@
  {
   "name": "[Format] Book Jacket",
   "medium": "graphic style image",
-  "nl": "Composed as a book jacket, full-bleed cover art, clear band left for the title, spine-aware left margin, print colour, graphic style image.",
+  "nl": "Composed as a book jacket, full-bleed cover art, clear band left for the title, spine-aware left margin, print colour, graphic style image,",
   "tags": [
    "cover",
    "poster",
@@ -56,7 +56,7 @@
  {
   "name": "[Format] Box Art 3/4",
   "medium": "graphic style image",
-  "nl": "Composed as product box art, three-quarter hero angle, staged studio-bright light, glossy packaging surface, shelf-ready hierarchy, graphic style image.",
+  "nl": "Composed as product box art, three-quarter hero angle, staged studio-bright light, glossy packaging surface, shelf-ready hierarchy, graphic style image,",
   "tags": [
    "cover",
    "simple_background",
@@ -69,7 +69,7 @@
  {
   "name": "[Format] Cadaster Map",
   "medium": "technical drawing style image",
-  "nl": "Composed as a cadastral map, ruled parcel boundaries, numbered plots, hairline hatching, flat survey colour on paper, technical drawing style image.",
+  "nl": "Composed as a cadastral map, ruled parcel boundaries, numbered plots, hairline hatching, flat survey colour on paper, technical drawing style image,",
   "tags": [
    "map",
    "diagram",
@@ -84,7 +84,7 @@
  {
   "name": "[Format] Campaign Portrait",
   "medium": "photograph style image",
-  "nl": "Composed as a campaign portrait, single figure filling the frame, styled studio light, brand-clean backdrop, poster-grade retouch, photograph style image.",
+  "nl": "Composed as a campaign portrait, single figure filling the frame, styled studio light, brand-clean backdrop, poster-grade retouch, photograph style image,",
   "tags": [
    "portrait",
    "promotional_art",
@@ -97,7 +97,7 @@
  {
   "name": "[Format] Character Select",
   "medium": "game art style image",
-  "nl": "Composed as a character-select portrait, full costume visible, neutral upright read, plain gradient backdrop, rim light separating the silhouette, game art style image.",
+  "nl": "Composed as a character-select portrait, full costume visible, neutral upright read, plain gradient backdrop, rim light separating the silhouette, game art style image,",
   "tags": [
    "official_art",
    "multiple_views",
@@ -112,7 +112,7 @@
  {
   "name": "[Format] Character Sheet",
   "medium": "drawing style image",
-  "nl": "Composed as a character sheet, several aligned views of one design, flat even light, colour swatches at the margin, plain neutral ground, drawing style image.",
+  "nl": "Composed as a character sheet, several aligned views of one design, flat even light, colour swatches at the margin, plain neutral ground, drawing style image,",
   "tags": [
    "character_sheet",
    "reference_sheet",
@@ -127,7 +127,7 @@
  {
   "name": "[Format] Cinematic Still",
   "medium": "film still style image",
-  "nl": "Composed as a cinematic still, motivated key light, shallow focus, deep shadow with lifted black, film colour grade with gentle halation, film still style image.",
+  "nl": "Composed as a cinematic still, motivated key light, shallow focus, deep shadow with lifted black, film colour grade with gentle halation, film still style image,",
   "tags": [
    "cinematic_lighting",
    "depth_of_field",
@@ -139,7 +139,7 @@
  {
   "name": "[Format] Comic Panel",
   "medium": "comic style image",
-  "nl": "Composed as a comic panel, ruled border and gutter, inked contour, flat colour fills, space reserved for a balloon, comic style image.",
+  "nl": "Composed as a comic panel, ruled border and gutter, inked contour, flat colour fills, space reserved for a balloon, comic style image,",
   "tags": [
    "comic",
    "comic_panel",
@@ -154,7 +154,7 @@
  {
   "name": "[Format] Contact Sheet",
   "medium": "photograph style image",
-  "nl": "Composed as a contact sheet, grid of small frames with sprocket edges and frame numbers, uniform exposure, printed paper base, photograph style image.",
+  "nl": "Composed as a contact sheet, grid of small frames with sprocket edges and frame numbers, uniform exposure, printed paper base, photograph style image,",
   "tags": [
    "contact_sheet",
    "multiple_views",
@@ -167,7 +167,7 @@
  {
   "name": "[Format] Cutaway",
   "medium": "technical drawing style image",
-  "nl": "Composed as a cutaway diagram, outer shell sliced away to reveal the interior, ruled section hatching, callout leaders, flat neutral ground, technical drawing style image.",
+  "nl": "Composed as a cutaway diagram, outer shell sliced away to reveal the interior, ruled section hatching, callout leaders, flat neutral ground, technical drawing style image,",
   "tags": [
    "diagram",
    "lineart",
@@ -182,7 +182,7 @@
  {
   "name": "[Format] Detail Callout Sheet",
   "medium": "drawing style image",
-  "nl": "Composed as a detail callout sheet, zoomed close-ups of small features arranged in boxes, leader lines to the main view, flat even light, drawing style image.",
+  "nl": "Composed as a detail callout sheet, zoomed close-ups of small features arranged in boxes, leader lines to the main view, flat even light, drawing style image,",
   "tags": [
    "reference_sheet",
    "multiple_views",
@@ -197,7 +197,7 @@
  {
   "name": "[Format] Die-Cut Sticker",
   "medium": "vector style image",
-  "nl": "Composed as a die-cut sticker, thick white keyline around the subject, flat bold colour, no environment, glossy vinyl sheen, vector style image.",
+  "nl": "Composed as a die-cut sticker, thick white keyline around the subject, flat bold colour, no environment, glossy vinyl sheen, vector style image,",
   "tags": [
    "sticker",
    "flat_color",
@@ -212,7 +212,7 @@
  {
   "name": "[Format] Diptych Before / After",
   "medium": "photograph style image",
-  "nl": "Composed as a before-and-after diptych, two matched frames side by side, identical framing and exposure, thin dividing gutter, photograph style image.",
+  "nl": "Composed as a before-and-after diptych, two matched frames side by side, identical framing and exposure, thin dividing gutter, photograph style image,",
   "tags": [
    "multiple_views",
    "photo_(medium)",
@@ -224,7 +224,7 @@
  {
   "name": "[Format] Editorial Double-Page",
   "medium": "photograph style image",
-  "nl": "Composed as an editorial double-page spread, the gutter kept clear, magazine styling, column of quiet space for text, photograph style image.",
+  "nl": "Composed as an editorial double-page spread, the gutter kept clear, magazine styling, column of quiet space for text, photograph style image,",
   "tags": [
    "magazine_cover",
    "photo_(medium)",
@@ -236,7 +236,7 @@
  {
   "name": "[Format] Exploded View",
   "medium": "technical drawing style image",
-  "nl": "Composed as an exploded view, components separated along assembly axes, thin alignment leaders, uniform flat lighting, plain ground, technical drawing style image.",
+  "nl": "Composed as an exploded view, components separated along assembly axes, thin alignment leaders, uniform flat lighting, plain ground, technical drawing style image,",
   "tags": [
    "diagram",
    "lineart",
@@ -251,7 +251,7 @@
  {
   "name": "[Format] Expression Sheet",
   "medium": "drawing style image",
-  "nl": "Composed as an expression sheet, a grid of the same head in different moods, consistent scale and lighting, plain ground, drawing style image.",
+  "nl": "Composed as an expression sheet, a grid of the same head in different moods, consistent scale and lighting, plain ground, drawing style image,",
   "tags": [
    "multiple_views",
    "reference_sheet",
@@ -266,7 +266,7 @@
  {
   "name": "[Format] Gacha Splash",
   "medium": "game art style image",
-  "nl": "Composed as a gacha splash, dynamic hero pose, layered effect particles, bright rim light, space kept clear at the top for a title, game art style image.",
+  "nl": "Composed as a gacha splash, dynamic hero pose, layered effect particles, bright rim light, space kept clear at the top for a title, game art style image,",
   "tags": [
    "official_art",
    "sparkle",
@@ -281,7 +281,7 @@
  {
   "name": "[Format] Infographic Still",
   "medium": "technical drawing style image",
-  "nl": "Composed as an infographic, diagram blocks and connectors, ruled alignment, flat limited palette, plenty of labelled white space, technical drawing style image.",
+  "nl": "Composed as an infographic, diagram blocks and connectors, ruled alignment, flat limited palette, plenty of labelled white space, technical drawing style image,",
   "tags": [
    "diagram",
    "chart",
@@ -296,7 +296,7 @@
  {
   "name": "[Format] Key Visual",
   "medium": "poster style image",
-  "nl": "Composed as a campaign key visual, one hero frame, staged lighting, deliberate empty space for a logo, poster-grade colour and polish, poster style image.",
+  "nl": "Composed as a campaign key visual, one hero frame, staged lighting, deliberate empty space for a logo, poster-grade colour and polish, poster style image,",
   "tags": [
    "key_visual",
    "promotional_art",
@@ -309,7 +309,7 @@
  {
   "name": "[Format] Lifestyle Product",
   "medium": "photograph style image",
-  "nl": "Composed as a lifestyle product still, the object in a lived setting, natural window light, shallow focus, warm believable colour, photograph style image.",
+  "nl": "Composed as a lifestyle product still, the object in a lived setting, natural window light, shallow focus, warm believable colour, photograph style image,",
   "tags": [
    "photo_(medium)",
    "depth_of_field",
@@ -324,7 +324,7 @@
  {
   "name": "[Format] Loading Screen",
   "medium": "game art style image",
-  "nl": "Composed as a game loading screen, wide illustrated art with a clear lower band for a progress bar, atmospheric depth, game art style image.",
+  "nl": "Composed as a game loading screen, wide illustrated art with a clear lower band for a progress bar, atmospheric depth, game art style image,",
   "tags": [
    "official_art",
    "scenery",
@@ -336,7 +336,7 @@
  {
   "name": "[Format] Lookbook Row",
   "medium": "photograph style image",
-  "nl": "Composed as a lookbook row, full-length figures repeated across the frame at even spacing, flat studio light, garment clearly readable, photograph style image.",
+  "nl": "Composed as a lookbook row, full-length figures repeated across the frame at even spacing, flat studio light, garment clearly readable, photograph style image,",
   "tags": [
    "multiple_views",
    "full_body",
@@ -349,7 +349,7 @@
  {
   "name": "[Format] Magazine Cover",
   "medium": "photograph style image",
-  "nl": "Composed as a magazine cover, masthead space at the top, direct gaze, centred subject, high-key styled light, cover-print colour, photograph style image.",
+  "nl": "Composed as a magazine cover, masthead space at the top, direct gaze, centred subject, high-key styled light, cover-print colour, photograph style image,",
   "tags": [
    "magazine_cover",
    "fake_magazine_cover",
@@ -362,7 +362,7 @@
  {
   "name": "[Format] Map As Picture",
   "medium": "technical drawing style image",
-  "nl": "Composed as a map, plan-view geography, ruled graticule, legend and compass rose, flat cartographic colour on paper, technical drawing style image.",
+  "nl": "Composed as a map, plan-view geography, ruled graticule, legend and compass rose, flat cartographic colour on paper, technical drawing style image,",
   "tags": [
    "map",
    "diagram",
@@ -377,7 +377,7 @@
  {
   "name": "[Format] Packshot",
   "medium": "photograph style image",
-  "nl": "Composed as a packshot, object centred on a seamless sweep, even soft light, true colour, crisp edge separation, no props, photograph style image.",
+  "nl": "Composed as a packshot, object centred on a seamless sweep, even soft light, true colour, crisp edge separation, no props, photograph style image,",
   "tags": [
    "simple_background",
    "still_life",
@@ -395,7 +395,7 @@
  {
   "name": "[Format] Phone Wallpaper",
   "medium": "graphic style image",
-  "nl": "Composed as a phone wallpaper, subject placed off the middle so the centre stays calm, clean gradient ground, simple graphic shapes, graphic style image.",
+  "nl": "Composed as a phone wallpaper, subject placed off the middle so the centre stays calm, clean gradient ground, simple graphic shapes, graphic style image,",
   "tags": [
    "wallpaper",
    "gradient",
@@ -407,7 +407,7 @@
  {
   "name": "[Format] Playbill",
   "medium": "poster style image",
-  "nl": "Composed as a playbill, stage-graphic hierarchy, flat ink colour, ornamental border, generous type space at the base, poster style image.",
+  "nl": "Composed as a playbill, stage-graphic hierarchy, flat ink colour, ornamental border, generous type space at the base, poster style image,",
   "tags": [
    "poster",
    "flat_color",
@@ -421,7 +421,7 @@
  {
   "name": "[Format] Polaroid Frame",
   "medium": "instant photograph style image",
-  "nl": "Composed as an instant print, white plastic border with a fat lower margin, soft low-contrast emulsion colour, slight vignette, instant photograph style image.",
+  "nl": "Composed as an instant print, white plastic border with a fat lower margin, soft low-contrast emulsion colour, slight vignette, instant photograph style image,",
   "tags": [
    "instant_photo",
    "photo_border",
@@ -436,7 +436,7 @@
  {
   "name": "[Format] Portolan Chart",
   "medium": "technical drawing style image",
-  "nl": "Composed as a portolan chart, radiating rhumb lines, coastal place-names, iron-gall ink on vellum, hand-tinted flags, technical drawing style image.",
+  "nl": "Composed as a portolan chart, radiating rhumb lines, coastal place-names, iron-gall ink on vellum, hand-tinted flags, technical drawing style image,",
   "tags": [
    "map",
    "sepia",
@@ -451,7 +451,7 @@
  {
   "name": "[Format] Pose Sheet",
   "medium": "drawing style image",
-  "nl": "Composed as a pose sheet, the same figure in several action poses across the frame, consistent scale, flat even light, plain ground, drawing style image.",
+  "nl": "Composed as a pose sheet, the same figure in several action poses across the frame, consistent scale, flat even light, plain ground, drawing style image,",
   "tags": [
    "multiple_views",
    "reference_sheet",
@@ -466,7 +466,7 @@
  {
   "name": "[Format] Poster One-Sheet",
   "medium": "poster style image",
-  "nl": "Composed as a theatrical one-sheet, stacked hierarchy, hero element up top, dark banded base for credits, dramatic key light, poster style image.",
+  "nl": "Composed as a theatrical one-sheet, stacked hierarchy, hero element up top, dark banded base for credits, dramatic key light, poster style image,",
   "tags": [
    "poster",
    "cinematic_lighting",
@@ -478,7 +478,7 @@
  {
   "name": "[Format] Splash Art",
   "medium": "illustration style image",
-  "nl": "Composed as splash art, sweeping diagonal action, effect flourishes behind the subject, poster polish, clear title space, illustration style image.",
+  "nl": "Composed as splash art, sweeping diagonal action, effect flourishes behind the subject, poster polish, clear title space, illustration style image,",
   "tags": [
    "official_art",
    "key_visual",
@@ -493,7 +493,7 @@
  {
   "name": "[Format] Sticker Sheet",
   "medium": "vector style image",
-  "nl": "Composed as a kiss-cut sticker sheet, many small motifs on one page, white keylines, flat bold colour, even spacing, vector style image.",
+  "nl": "Composed as a kiss-cut sticker sheet, many small motifs on one page, white keylines, flat bold colour, even spacing, vector style image,",
   "tags": [
    "sticker",
    "multiple_views",
@@ -508,7 +508,7 @@
  {
   "name": "[Format] Storyboard Panel",
   "medium": "drawing style image",
-  "nl": "Composed as a storyboard panel, rough grease-pencil line inside a ruled frame, two-value blocking, camera-move arrows, drawing style image.",
+  "nl": "Composed as a storyboard panel, rough grease-pencil line inside a ruled frame, two-value blocking, camera-move arrows, drawing style image,",
   "tags": [
    "storyboard",
    "sketch",
@@ -526,7 +526,7 @@
  {
   "name": "[Format] Styleguide Tile",
   "medium": "photograph style image",
-  "nl": "Composed as a styleguide tile, one garment or prop centred on a neutral ground, flat even light, catalogue-true colour, photograph style image.",
+  "nl": "Composed as a styleguide tile, one garment or prop centred on a neutral ground, flat even light, catalogue-true colour, photograph style image,",
   "tags": [
    "reference_sheet",
    "simple_background",
@@ -541,7 +541,7 @@
  {
   "name": "[Format] Tarot Card",
   "medium": "illustration style image",
-  "nl": "Composed as a tarot card, bordered panel, symmetrical emblem composition, flat symbolic colour, banner space at the base, illustration style image.",
+  "nl": "Composed as a tarot card, bordered panel, symmetrical emblem composition, flat symbolic colour, banner space at the base, illustration style image,",
   "tags": [
    "trading_card",
    "flat_color",
@@ -556,7 +556,7 @@
  {
   "name": "[Format] Trading Card",
   "medium": "illustration style image",
-  "nl": "Composed as a trading card, ornate frame around a bust-length subject, name plate at the base, glossy foil sheen, illustration style image.",
+  "nl": "Composed as a trading card, ornate frame around a bust-length subject, name plate at the base, glossy foil sheen, illustration style image,",
   "tags": [
    "trading_card",
    "upper_body",
@@ -569,7 +569,7 @@
  {
   "name": "[Format] Triptych",
   "medium": "graphic style image",
-  "nl": "Composed as a triptych, three equal panels reading as one story, matched palette and light, thin dividing gutters, graphic style image.",
+  "nl": "Composed as a triptych, three equal panels reading as one story, matched palette and light, thin dividing gutters, graphic style image,",
   "tags": [
    "multiple_views",
    "simple_background"
@@ -580,7 +580,7 @@
  {
   "name": "[Format] Turnaround Front / Side / Back",
   "medium": "drawing style image",
-  "nl": "Composed as a turnaround, front, side and back views of one design in a row, identical scale and flat light, plain ground, drawing style image.",
+  "nl": "Composed as a turnaround, front, side and back views of one design in a row, identical scale and flat light, plain ground, drawing style image,",
   "tags": [
    "turnaround",
    "multiple_views",
@@ -595,7 +595,7 @@
  {
   "name": "[Format] UI Mock",
   "medium": "graphic style image",
-  "nl": "Composed as an interface mock, screen-flat panels and controls, aligned grid, flat UI colour, crisp pixel-true edges, graphic style image.",
+  "nl": "Composed as an interface mock, screen-flat panels and controls, aligned grid, flat UI colour, crisp pixel-true edges, graphic style image,",
   "tags": [
    "fake_screenshot",
    "flat_color",
@@ -610,7 +610,7 @@
  {
   "name": "[Format] Video Thumbnail",
   "medium": "graphic style image",
-  "nl": "Composed as a video thumbnail, large face or hero object, punchy high contrast, saturated colour, clear space for a caption, graphic style image.",
+  "nl": "Composed as a video thumbnail, large face or hero object, punchy high contrast, saturated colour, clear space for a caption, graphic style image,",
   "tags": [
    "poster",
    "high_contrast",
@@ -625,7 +625,7 @@
  {
   "name": "[Format] Wallpaper Desktop",
   "medium": "graphic style image",
-  "nl": "Composed as a desktop wallpaper, subject set off-centre with clear quiet ground beside it, calm even light, flat colour field, graphic style image.",
+  "nl": "Composed as a desktop wallpaper, subject set off-centre with clear quiet ground beside it, calm even light, flat colour field, graphic style image,",
   "tags": [
    "wallpaper",
    "scenery",
@@ -637,7 +637,7 @@
  {
   "name": "[Format] Webtoon Vertical",
   "medium": "webtoon style image",
-  "nl": "Composed as a webtoon slice, continuous read, stacked beats, soft airbrushed colour, clear gutters between moments, webtoon style image.",
+  "nl": "Composed as a webtoon slice, continuous read, stacked beats, soft airbrushed colour, clear gutters between moments, webtoon style image,",
   "tags": [
    "webtoon",
    "manhwa",
@@ -652,7 +652,7 @@
  {
   "name": "[Format] Widescreen Still",
   "medium": "film still style image",
-  "nl": "Composed as a wide-angle film still, sweeping deep space, open staging with air around the subject, motivated light, film colour grade, film still style image.",
+  "nl": "Composed as a wide-angle film still, sweeping deep space, open staging with air around the subject, motivated light, film colour grade, film still style image,",
   "tags": [
    "cinematic_lighting",
    "film_grain",
@@ -664,7 +664,7 @@
  {
   "name": "[Comic] Bronze Age Grit",
   "medium": "comic style image",
-  "nl": "Bronze-age comic rendering, heavier brush ink, muddy four-colour print, dense hatch shadow, newsprint dot texture, muted street palette, comic style image.",
+  "nl": "Bronze-age comic rendering, heavier brush ink, muddy four-colour print, dense hatch shadow, newsprint dot texture, muted street palette, comic style image,",
   "tags": [
    "comic",
    "halftone",
@@ -680,7 +680,7 @@
  {
   "name": "[Comic] Golden Age Superhero",
   "medium": "comic style image",
-  "nl": "Golden-age comic rendering, simple bold outline, flat primary four-colour inks, visible dot screens, off-register plates, yellowed pulp paper, comic style image.",
+  "nl": "Golden-age comic rendering, simple bold outline, flat primary four-colour inks, visible dot screens, off-register plates, yellowed pulp paper, comic style image,",
   "tags": [
    "comic",
    "halftone",
@@ -696,7 +696,7 @@
  {
   "name": "[Comic] Indie Alt",
   "medium": "comic style image",
-  "nl": "Indie-alt comic rendering, scratchy personal pen line, flat spot colour or none, uneven hand-lettered texture, cheap photocopy grain, comic style image.",
+  "nl": "Indie-alt comic rendering, scratchy personal pen line, flat spot colour or none, uneven hand-lettered texture, cheap photocopy grain, comic style image,",
   "tags": [
    "comic",
    "spot_color",
@@ -712,7 +712,7 @@
  {
   "name": "[Comic] Modern Prestige Color",
   "medium": "comic style image",
-  "nl": "Modern prestige comic rendering, digital painted colour over clean ink, cinematic light modelling, muted sophisticated palette, subtle grain, comic style image.",
+  "nl": "Modern prestige comic rendering, digital painted colour over clean ink, cinematic light modelling, muted sophisticated palette, subtle grain, comic style image,",
   "tags": [
    "comic",
    "painting_(medium)",
@@ -727,7 +727,7 @@
  {
   "name": "[Comic] Silver Age",
   "medium": "comic style image",
-  "nl": "Silver-age comic rendering, clean confident outline, bright optimistic four-colour inks, benday dot shading, thought-balloon clarity, comic style image.",
+  "nl": "Silver-age comic rendering, clean confident outline, bright optimistic four-colour inks, benday dot shading, thought-balloon clarity, comic style image,",
   "tags": [
    "comic",
    "halftone",
@@ -743,7 +743,7 @@
  {
   "name": "[Comic] Underground Comix",
   "medium": "comic style image",
-  "nl": "Underground comix rendering, obsessive crosshatch texture, wobbling hand line, acid limited colour, dense cluttered black, cheap print bleed, comic style image.",
+  "nl": "Underground comix rendering, obsessive crosshatch texture, wobbling hand line, acid limited colour, dense cluttered black, cheap print bleed, comic style image,",
   "tags": [
    "comic",
    "cross-hatching",
@@ -759,7 +759,7 @@
  {
   "name": "[Comic][v2] Adi Granov",
   "medium": "comic style image",
-  "nl": "Painted-armour comic rendering, photoreal metal reflections, airbrushed volume, cool desaturated grade, hard specular edges, comic style image.",
+  "nl": "Painted-armour comic rendering, photoreal metal reflections, airbrushed volume, cool desaturated grade, hard specular edges, comic style image,",
   "tags": [
    "painting_(medium)",
    "metallic",
@@ -775,7 +775,7 @@
  {
   "name": "[Comic][v2] Alex Ross",
   "medium": "comic style image",
-  "nl": "Painterly heroic-realism rendering, gouache-modelled figures, warm classical light, subdued muscular palette, brush texture, comic style image.",
+  "nl": "Painterly heroic-realism rendering, gouache-modelled figures, warm classical light, subdued muscular palette, brush texture, comic style image,",
   "tags": [
    "painting_(medium)",
    "traditional_media",
@@ -790,7 +790,7 @@
  {
   "name": "[Comic][v2] Alternative Comics",
   "medium": "comic style image",
-  "nl": "Alternative-comics rendering, idiosyncratic pen line, flat limited spot colour, plain framing, print texture, quiet deadpan tone, comic style image.",
+  "nl": "Alternative-comics rendering, idiosyncratic pen line, flat limited spot colour, plain framing, print texture, quiet deadpan tone, comic style image,",
   "tags": [
    "comic",
    "spot_color",
@@ -806,7 +806,7 @@
  {
   "name": "[Comic][v2] Amanda Conner Illustration",
   "medium": "comic style image",
-  "nl": "Bright pin-up comic rendering, bouncy clean ink, glossy candy colour, crisp cel shadows, sparkle highlight accents, comic style image.",
+  "nl": "Bright pin-up comic rendering, bouncy clean ink, glossy candy colour, crisp cel shadows, sparkle highlight accents, comic style image,",
   "tags": [
    "comic",
    "colorful",
@@ -822,7 +822,7 @@
  {
   "name": "[Comic][v2] American Comic Realism",
   "medium": "comic style image",
-  "nl": "Realist American comic rendering, anatomically grounded figures, feathered ink shadow, restrained colour holds, print texture, comic style image.",
+  "nl": "Realist American comic rendering, anatomically grounded figures, feathered ink shadow, restrained colour holds, print texture, comic style image,",
   "tags": [
    "comic",
    "cross-hatching",
@@ -837,7 +837,7 @@
  {
   "name": "[Comic][v2] American Pulp Illustration",
   "medium": "illustration style image",
-  "nl": "Pulp-magazine illustration rendering, loose oil brushwork, lurid saturated colour, hard pulp-cover lighting, paper aging, illustration style image.",
+  "nl": "Pulp-magazine illustration rendering, loose oil brushwork, lurid saturated colour, hard pulp-cover lighting, paper aging, illustration style image,",
   "tags": [
    "oil_painting_(medium)",
    "colorful",
@@ -853,7 +853,7 @@
  {
   "name": "[Comic][v2] Archie Comics",
   "medium": "comic style image",
-  "nl": "Teen-humour comic rendering, rounded friendly outline, flat cheerful primaries, simple dot shading, clean small-panel clarity, comic style image.",
+  "nl": "Teen-humour comic rendering, rounded friendly outline, flat cheerful primaries, simple dot shading, clean small-panel clarity, comic style image,",
   "tags": [
    "comic",
    "flat_color",
@@ -869,7 +869,7 @@
  {
   "name": "[Comic][v2] Bande Dessinée (Hergé/Goscinny Tradition)",
   "medium": "comic style image",
-  "nl": "Bande-dessinée rendering, even ligne-claire contour, flat unshaded colour, precise architectural detail, calm readable staging, comic style image.",
+  "nl": "Bande-dessinée rendering, even ligne-claire contour, flat unshaded colour, precise architectural detail, calm readable staging, comic style image,",
   "tags": [
    "comic",
    "lineart",
@@ -884,7 +884,7 @@
  {
   "name": "[Comic][v2] Bengal Illustration",
   "medium": "comic style image",
-  "nl": "Modern French comic rendering, elegant tapering ink, flat luminous colour blocking, art-deco shape rhythm, poster-clean edges, comic style image.",
+  "nl": "Modern French comic rendering, elegant tapering ink, flat luminous colour blocking, art-deco shape rhythm, poster-clean edges, comic style image,",
   "tags": [
    "comic",
    "flat_color",
@@ -900,7 +900,7 @@
  {
   "name": "[Comic][v2] Bold Contour",
   "medium": "comic style image",
-  "nl": "Bold-contour comic rendering, heavy uniform outline, flat colour inside the shapes, minimal interior detail, poster contrast, comic style image.",
+  "nl": "Bold-contour comic rendering, heavy uniform outline, flat colour inside the shapes, minimal interior detail, poster contrast, comic style image,",
   "tags": [
    "comic",
    "outline",
@@ -915,7 +915,7 @@
  {
   "name": "[Comic][v2] Clean Line Art",
   "medium": "comic style image",
-  "nl": "Clean-line comic rendering, even confident stroke weight, no hatching, flat colour fills, generous readable space, comic style image.",
+  "nl": "Clean-line comic rendering, even confident stroke weight, no hatching, flat colour fills, generous readable space, comic style image,",
   "tags": [
    "comic",
    "lineart",
@@ -930,7 +930,7 @@
  {
   "name": "[Comic][v2] Comic Européen Prestige",
   "medium": "comic style image",
-  "nl": "European prestige album rendering, fine ink detail, watercolour-tinted flats, muted sophisticated palette, heavy-stock paper tone, comic style image.",
+  "nl": "European prestige album rendering, fine ink detail, watercolour-tinted flats, muted sophisticated palette, heavy-stock paper tone, comic style image,",
   "tags": [
    "comic",
    "watercolor_(medium)",
@@ -946,7 +946,7 @@
  {
   "name": "[Comic][v2] Comics",
   "medium": "comic style image",
-  "nl": "General comic rendering, inked contour, flat colour fills with simple shadow holds, halftone shading, print texture, comic style image.",
+  "nl": "General comic rendering, inked contour, flat colour fills with simple shadow holds, halftone shading, print texture, comic style image,",
   "tags": [
    "comic",
    "flat_color",
@@ -961,7 +961,7 @@
  {
   "name": "[Comic][v2] Crosshatched Graphic Novel",
   "medium": "comic style image",
-  "nl": "Crosshatched graphic-novel rendering, dense pen hatching for every tone, monochrome or duotone palette, dry paper texture, comic style image.",
+  "nl": "Crosshatched graphic-novel rendering, dense pen hatching for every tone, monochrome or duotone palette, dry paper texture, comic style image,",
   "tags": [
    "cross-hatching",
    "monochrome",
@@ -977,7 +977,7 @@
  {
   "name": "[Comic][v2] DC Comics",
   "medium": "comic style image",
-  "nl": "Mainstream superhero rendering, clean heavy ink, saturated costume colour, hard cel shadows, digital gradient sky, print sharpness, comic style image.",
+  "nl": "Mainstream superhero rendering, clean heavy ink, saturated costume colour, hard cel shadows, digital gradient sky, print sharpness, comic style image,",
   "tags": [
    "comic",
    "flat_color",
@@ -993,7 +993,7 @@
  {
   "name": "[Comic][v2] Enki Bilal-Inspired Comic and Digital Painting",
   "medium": "comic style image",
-  "nl": "Bilal-adjacent rendering, bruised violet and ochre palette, smeared painterly texture over ink, cracked surface detail, cold melancholy light, comic style image.",
+  "nl": "Bilal-adjacent rendering, bruised violet and ochre palette, smeared painterly texture over ink, cracked surface detail, cold melancholy light, comic style image,",
   "tags": [
    "painting_(medium)",
    "muted_color",
@@ -1009,7 +1009,7 @@
  {
   "name": "[Comic][v2] Franco-Belgian Ultradetailed Comics",
   "medium": "comic style image",
-  "nl": "Ultradetailed Franco-Belgian rendering, obsessive fine ink detail, flat precise colour, ruled perspective, dense scenery information, comic style image.",
+  "nl": "Ultradetailed Franco-Belgian rendering, obsessive fine ink detail, flat precise colour, ruled perspective, dense scenery information, comic style image,",
   "tags": [
    "comic",
    "lineart",
@@ -1025,7 +1025,7 @@
  {
   "name": "[Comic][v2] Frank Cho",
   "medium": "comic style image",
-  "nl": "Slick brush-ink comic rendering, sculpted anatomy, confident tapering brush line, clean flat colour, high-gloss finish, comic style image.",
+  "nl": "Slick brush-ink comic rendering, sculpted anatomy, confident tapering brush line, clean flat colour, high-gloss finish, comic style image,",
   "tags": [
    "comic",
    "ink_(medium)",
@@ -1041,7 +1041,7 @@
  {
   "name": "[Comic][v2] Frank Miller",
   "medium": "comic style image",
-  "nl": "High-contrast noir comic rendering, massive black shapes, white cut-outs, spatter texture, one hot spot colour, brutal graphic simplification, comic style image.",
+  "nl": "High-contrast noir comic rendering, massive black shapes, white cut-outs, spatter texture, one hot spot colour, brutal graphic simplification, comic style image,",
   "tags": [
    "monochrome",
    "high_contrast",
@@ -1057,7 +1057,7 @@
  {
   "name": "[Comic][v2] Glossy Comic Digital",
   "medium": "comic style image",
-  "nl": "Glossy digital comic rendering, airbrushed volume over clean ink, saturated highlight sheen, smooth gradient skies, polished finish, comic style image.",
+  "nl": "Glossy digital comic rendering, airbrushed volume over clean ink, saturated highlight sheen, smooth gradient skies, polished finish, comic style image,",
   "tags": [
    "comic",
    "airbrush_(medium)",
@@ -1073,7 +1073,7 @@
  {
   "name": "[Comic][v2] Graphic Novel",
   "medium": "comic style image",
-  "nl": "Graphic-novel rendering, restrained ink line, limited muted palette, atmospheric flat shadow, matte paper texture, comic style image.",
+  "nl": "Graphic-novel rendering, restrained ink line, limited muted palette, atmospheric flat shadow, matte paper texture, comic style image,",
   "tags": [
    "comic",
    "muted_color",
@@ -1089,7 +1089,7 @@
  {
   "name": "[Comic][v2] Hellboy",
   "medium": "comic style image",
-  "nl": "Mignola-adjacent rendering, enormous flat black shapes, angular geometric shadow, blood-red and ochre spot colour, sparse detail, comic style image.",
+  "nl": "Mignola-adjacent rendering, enormous flat black shapes, angular geometric shadow, blood-red and ochre spot colour, sparse detail, comic style image,",
   "tags": [
    "high_contrast",
    "spot_color",
@@ -1105,7 +1105,7 @@
  {
   "name": "[Comic][v2] Jim Lee",
   "medium": "comic style image",
-  "nl": "90s superhero rendering, dense feathered ink hatching, hyper-defined musculature, sharp crosshatch shadow, bright saturated colour, comic style image.",
+  "nl": "90s superhero rendering, dense feathered ink hatching, hyper-defined musculature, sharp crosshatch shadow, bright saturated colour, comic style image,",
   "tags": [
    "comic",
    "cross-hatching",
@@ -1121,7 +1121,7 @@
  {
   "name": "[Comic][v2] Joe Quesada",
   "medium": "comic style image",
-  "nl": "Dynamic ink-heavy comic rendering, bold spotted blacks, angular energy lines, saturated primary colour, dramatic low angles, comic style image.",
+  "nl": "Dynamic ink-heavy comic rendering, bold spotted blacks, angular energy lines, saturated primary colour, dramatic low angles, comic style image,",
   "tags": [
    "comic",
    "ink_(medium)",
@@ -1137,7 +1137,7 @@
  {
   "name": "[Comic][v2] Mark Brooks / Manapul",
   "medium": "comic style image",
-  "nl": "Modern cover-art rendering, fluid brush ink, watercolour-washed colour, luminous rim light, decorative negative space, comic style image.",
+  "nl": "Modern cover-art rendering, fluid brush ink, watercolour-washed colour, luminous rim light, decorative negative space, comic style image,",
   "tags": [
    "comic",
    "watercolor_(medium)",
@@ -1153,7 +1153,7 @@
  {
   "name": "[Comic][v2] Marvel Comics",
   "medium": "comic style image",
-  "nl": "Marvel house rendering, bold ink contour, punchy saturated costume colour, hard cel shadow, dynamic foreshortened action, comic style image.",
+  "nl": "Marvel house rendering, bold ink contour, punchy saturated costume colour, hard cel shadow, dynamic foreshortened action, comic style image,",
   "tags": [
    "comic",
    "flat_color",
@@ -1169,7 +1169,7 @@
  {
   "name": "[Comic][v2] Marvel Cover Art",
   "medium": "comic style image",
-  "nl": "Comic cover rendering, hero centred with clear masthead space, rim-lit silhouette, saturated poster colour, glossy print finish, comic style image.",
+  "nl": "Comic cover rendering, hero centred with clear masthead space, rim-lit silhouette, saturated poster colour, glossy print finish, comic style image,",
   "tags": [
    "cover",
    "comic",
@@ -1185,7 +1185,7 @@
  {
   "name": "[Comic][v2] Milo Manara",
   "medium": "comic style image",
-  "nl": "Manara-adjacent rendering, fluid sensual contour line, minimal shading, warm pale watercolour flats, airy white space, comic style image.",
+  "nl": "Manara-adjacent rendering, fluid sensual contour line, minimal shading, warm pale watercolour flats, airy white space, comic style image,",
   "tags": [
    "lineart",
    "watercolor_(medium)",
@@ -1201,7 +1201,7 @@
  {
   "name": "[Comic][v2] Moebius-Inspired Illustration",
   "medium": "comic style image",
-  "nl": "Moebius-adjacent rendering, fine even contour line, flat sun-bleached desert palette, stippled surface texture, weightless clarity, comic style image.",
+  "nl": "Moebius-adjacent rendering, fine even contour line, flat sun-bleached desert palette, stippled surface texture, weightless clarity, comic style image,",
   "tags": [
    "comic",
    "lineart",
@@ -1217,7 +1217,7 @@
  {
   "name": "[Comic][v2] Photorealistic Comic Ink-and-Paint Hybrid",
   "medium": "comic style image",
-  "nl": "Ink-and-photo hybrid rendering, photographic tonal detail under comic ink contour, spot flat colour, halftone overlay, comic style image.",
+  "nl": "Ink-and-photo hybrid rendering, photographic tonal detail under comic ink contour, spot flat colour, halftone overlay, comic style image,",
   "tags": [
    "comic",
    "photorealistic",
@@ -1233,7 +1233,7 @@
  {
   "name": "[Comic][v2] Psychological Thriller Pulp Digital Painting",
   "medium": "comic style image",
-  "nl": "Pulp-thriller painted rendering, smeared digital brushwork, sickly amber-green grade, harsh single-source light, grimy texture, comic style image.",
+  "nl": "Pulp-thriller painted rendering, smeared digital brushwork, sickly amber-green grade, harsh single-source light, grimy texture, comic style image,",
   "tags": [
    "painting_(medium)",
    "dark",
@@ -1249,7 +1249,7 @@
  {
   "name": "[Comic][v2] Ryan Benjamin",
   "medium": "comic style image",
-  "nl": "Kinetic modern comic rendering, sharp angular ink, streaked speed texture, cool saturated grade, hard graphic shadow shapes, comic style image.",
+  "nl": "Kinetic modern comic rendering, sharp angular ink, streaked speed texture, cool saturated grade, hard graphic shadow shapes, comic style image,",
   "tags": [
    "comic",
    "speed_lines",
@@ -1265,7 +1265,7 @@
  {
   "name": "[Comic][v2] Travis Charest",
   "medium": "comic style image",
-  "nl": "Hyper-refined comic rendering, engraving-fine line detail, sculpted metal and cloth, cool restrained palette, immaculate finish, comic style image.",
+  "nl": "Hyper-refined comic rendering, engraving-fine line detail, sculpted metal and cloth, cool restrained palette, immaculate finish, comic style image,",
   "tags": [
    "comic",
    "lineart",
@@ -1281,7 +1281,7 @@
  {
   "name": "[Comic][v2] Vintage Comics",
   "medium": "comic style image",
-  "nl": "Vintage comic rendering, faded four-colour inks, coarse dot screens, plate misregistration, yellowed pulp paper, simple bold line, comic style image.",
+  "nl": "Vintage comic rendering, faded four-colour inks, coarse dot screens, plate misregistration, yellowed pulp paper, simple bold line, comic style image,",
   "tags": [
    "comic",
    "halftone",
@@ -1297,7 +1297,7 @@
  {
   "name": "[Comic][v2] Zenescope Illustration",
   "medium": "comic style image",
-  "nl": "Glossy fantasy-cover rendering, airbrushed skin sheen, jewel-saturated colour, dramatic rim light, high-polish digital finish, comic style image.",
+  "nl": "Glossy fantasy-cover rendering, airbrushed skin sheen, jewel-saturated colour, dramatic rim light, high-polish digital finish, comic style image,",
   "tags": [
    "comic",
    "airbrush_(medium)",
@@ -1313,7 +1313,7 @@
  {
   "name": "[Print] 16-Bit Portrait",
   "medium": "pixel art style image",
-  "nl": "16-bit portrait rendering, limited console palette, chunky visible pixels, dithered shading ramps, hard aliased contour, pixel art style image.",
+  "nl": "16-bit portrait rendering, limited console palette, chunky visible pixels, dithered shading ramps, hard aliased contour, pixel art style image,",
   "tags": [
    "pixel_art",
    "dithering",
@@ -1329,7 +1329,7 @@
  {
   "name": "[Print] Aquatint",
   "medium": "print style image",
-  "nl": "Aquatint rendering, soft granular tonal fields bitten into the plate, velvety mid greys, plate-edge impression, cream rag paper, print style image.",
+  "nl": "Aquatint rendering, soft granular tonal fields bitten into the plate, velvety mid greys, plate-edge impression, cream rag paper, print style image,",
   "tags": [
    "lithograph",
    "monochrome",
@@ -1344,7 +1344,7 @@
  {
   "name": "[Print] Chromolithograph",
   "medium": "print style image",
-  "nl": "Chromolithograph rendering, many flat stone-printed colour layers, slight registration drift, decorative Victorian palette, paper tooth, print style image.",
+  "nl": "Chromolithograph rendering, many flat stone-printed colour layers, slight registration drift, decorative Victorian palette, paper tooth, print style image,",
   "tags": [
    "lithograph",
    "limited_palette",
@@ -1360,7 +1360,7 @@
  {
   "name": "[Print] Comic Ink",
   "medium": "ink painting style image",
-  "nl": "Comic inking, brush and pen contour with spotted blacks, feathered hatching, dry-brush texture, white paper ground, ink painting style image.",
+  "nl": "Comic inking, brush and pen contour with spotted blacks, feathered hatching, dry-brush texture, white paper ground, ink painting style image,",
   "tags": [
    "ink_(medium)",
    "monochrome",
@@ -1376,7 +1376,7 @@
  {
   "name": "[Print] Engraving",
   "medium": "print style image",
-  "nl": "Engraving rendering, incised parallel burin lines, tonal build from line density, crisp hard contour, ivory paper base, print style image.",
+  "nl": "Engraving rendering, incised parallel burin lines, tonal build from line density, crisp hard contour, ivory paper base, print style image,",
   "tags": [
    "lithograph",
    "monochrome",
@@ -1391,7 +1391,7 @@
  {
   "name": "[Print] Etching Drypoint",
   "medium": "print style image",
-  "nl": "Etching and drypoint rendering, bitten line with burred velvety edges, plate tone, uneven ink wipe, rag paper impression, print style image.",
+  "nl": "Etching and drypoint rendering, bitten line with burred velvety edges, plate tone, uneven ink wipe, rag paper impression, print style image,",
   "tags": [
    "lithograph",
    "monochrome",
@@ -1406,7 +1406,7 @@
  {
   "name": "[Print] Halftone Newsprint",
   "medium": "comic style image",
-  "nl": "Halftone newsprint rendering, coarse dot screens, four-colour rosettes, ink bleed into absorbent paper, faded contrast, comic style image.",
+  "nl": "Halftone newsprint rendering, coarse dot screens, four-colour rosettes, ink bleed into absorbent paper, faded contrast, comic style image,",
   "tags": [
    "halftone",
    "comic",
@@ -1422,7 +1422,7 @@
  {
   "name": "[Print] Letterpress",
   "medium": "print style image",
-  "nl": "Letterpress rendering, impressed type and line into thick paper, ink squash at the edges, one or two flat inks, deckled stock, print style image.",
+  "nl": "Letterpress rendering, impressed type and line into thick paper, ink squash at the edges, one or two flat inks, deckled stock, print style image,",
   "tags": [
    "traditional_media",
    "limited_palette",
@@ -1440,7 +1440,7 @@
  {
   "name": "[Print] Linocut",
   "medium": "print style image",
-  "nl": "Linocut rendering, gouged bold shapes, chattering carve marks, uneven ink coverage, high-contrast two-colour print, print style image.",
+  "nl": "Linocut rendering, gouged bold shapes, chattering carve marks, uneven ink coverage, high-contrast two-colour print, print style image,",
   "tags": [
    "woodcut",
    "high_contrast",
@@ -1456,7 +1456,7 @@
  {
   "name": "[Print] Lithograph",
   "medium": "print style image",
-  "nl": "Lithograph rendering, greasy crayon texture on stone, soft granular tone, muted ink palette, plate edge and paper grain, print style image.",
+  "nl": "Lithograph rendering, greasy crayon texture on stone, soft granular tone, muted ink palette, plate edge and paper grain, print style image,",
   "tags": [
    "lithograph",
    "muted_color",
@@ -1471,7 +1471,7 @@
  {
   "name": "[Print] Mezzotint",
   "medium": "print style image",
-  "nl": "Mezzotint rendering, velvety dense blacks scraped to light, smooth tonal gradation without line, rich plate depth, print style image.",
+  "nl": "Mezzotint rendering, velvety dense blacks scraped to light, smooth tonal gradation without line, rich plate depth, print style image,",
   "tags": [
    "lithograph",
    "monochrome",
@@ -1486,7 +1486,7 @@
  {
   "name": "[Print] Photogravure",
   "medium": "print style image",
-  "nl": "Photogravure rendering, ink held in etched pits, soft continuous tone, warm sepia-black, matte rag paper, delicate highlight roll-off, print style image.",
+  "nl": "Photogravure rendering, ink held in etched pits, soft continuous tone, warm sepia-black, matte rag paper, delicate highlight roll-off, print style image,",
   "tags": [
    "sepia",
    "monochrome",
@@ -1501,7 +1501,7 @@
  {
   "name": "[Print] Pop Art Ben-Day",
   "medium": "comic style image",
-  "nl": "Ben-Day pop rendering, enlarged printed dots, flat primary inks, thick black keyline, deliberate registration offset, comic style image.",
+  "nl": "Ben-Day pop rendering, enlarged printed dots, flat primary inks, thick black keyline, deliberate registration offset, comic style image,",
   "tags": [
    "halftone",
    "flat_color",
@@ -1517,7 +1517,7 @@
  {
   "name": "[Print] Riso Misreg",
   "medium": "print style image",
-  "nl": "Risograph misregistration, two spot inks printed slightly off, overlap multiply colours, dotty uneven coverage, paper show-through, print style image.",
+  "nl": "Risograph misregistration, two spot inks printed slightly off, overlap multiply colours, dotty uneven coverage, paper show-through, print style image,",
   "tags": [
    "risograph",
    "spot_color",
@@ -1533,7 +1533,7 @@
  {
   "name": "[Print] Risograph",
   "medium": "print style image",
-  "nl": "Risograph rendering, fluorescent spot inks, grainy uneven laydown, visible screen texture, limited two or three colour palette, print style image.",
+  "nl": "Risograph rendering, fluorescent spot inks, grainy uneven laydown, visible screen texture, limited two or three colour palette, print style image,",
   "tags": [
    "risograph",
    "limited_palette",
@@ -1549,7 +1549,7 @@
  {
   "name": "[Print] Scratchboard",
   "medium": "print style image",
-  "nl": "Scratchboard rendering, white lines scratched out of solid black clay board, engraving-like hatch, stark contrast, print style image.",
+  "nl": "Scratchboard rendering, white lines scratched out of solid black clay board, engraving-like hatch, stark contrast, print style image,",
   "tags": [
    "monochrome",
    "high_contrast",
@@ -1564,7 +1564,7 @@
  {
   "name": "[Print] Screenprint",
   "medium": "print style image",
-  "nl": "Screenprint rendering, flat opaque ink layers, hard-edged stencil shapes, slight mesh texture, limited spot palette, print style image.",
+  "nl": "Screenprint rendering, flat opaque ink layers, hard-edged stencil shapes, slight mesh texture, limited spot palette, print style image,",
   "tags": [
    "stencil",
    "flat_color",
@@ -1579,7 +1579,7 @@
  {
   "name": "[Print] Screenprint Gig Poster",
   "medium": "poster style image",
-  "nl": "Gig-poster screenprint rendering, two or three loud spot inks, halftone shading, hand-drawn display shapes, paper show-through, poster style image.",
+  "nl": "Gig-poster screenprint rendering, two or three loud spot inks, halftone shading, hand-drawn display shapes, paper show-through, poster style image,",
   "tags": [
    "poster",
    "stencil",
@@ -1595,7 +1595,7 @@
  {
   "name": "[Print] Shin-Hanga",
   "medium": "print style image",
-  "nl": "Shin-hanga rendering, soft woodblock gradations, muted twilight palette, delicate key-block line, bokashi sky wash, mulberry paper, print style image.",
+  "nl": "Shin-hanga rendering, soft woodblock gradations, muted twilight palette, delicate key-block line, bokashi sky wash, mulberry paper, print style image,",
   "tags": [
    "ukiyo-e",
    "woodcut",
@@ -1611,7 +1611,7 @@
  {
   "name": "[Print] Silkscreen Factory Poster",
   "medium": "poster style image",
-  "nl": "Factory-silkscreen rendering, bold flat colour separations, photographic halftone underneath, repeated motif blocks, misregistered edges, poster style image.",
+  "nl": "Factory-silkscreen rendering, bold flat colour separations, photographic halftone underneath, repeated motif blocks, misregistered edges, poster style image,",
   "tags": [
    "stencil",
    "halftone",
@@ -1627,7 +1627,7 @@
  {
   "name": "[Print] Stipple Engraving",
   "medium": "print style image",
-  "nl": "Stipple engraving rendering, tone built entirely from fine dots, soft granular gradation, no visible hatching, ivory paper, print style image.",
+  "nl": "Stipple engraving rendering, tone built entirely from fine dots, soft granular gradation, no visible hatching, ivory paper, print style image,",
   "tags": [
    "halftone",
    "monochrome",
@@ -1642,7 +1642,7 @@
  {
   "name": "[Print] Ukiyo-e Woodblock",
   "medium": "print style image",
-  "nl": "Ukiyo-e woodblock rendering, flat mineral colour fields, keyblock outline, bokashi gradient skies, visible wood grain and paper fibre, print style image.",
+  "nl": "Ukiyo-e woodblock rendering, flat mineral colour fields, keyblock outline, bokashi gradient skies, visible wood grain and paper fibre, print style image,",
   "tags": [
    "ukiyo-e",
    "woodcut",
@@ -1658,7 +1658,7 @@
  {
   "name": "[Print] Woodcut",
   "medium": "print style image",
-  "nl": "Woodcut rendering, carved chunky black shapes, chisel-chattered edges, stark two-value contrast, wood grain showing in the ink, print style image.",
+  "nl": "Woodcut rendering, carved chunky black shapes, chisel-chattered edges, stark two-value contrast, wood grain showing in the ink, print style image,",
   "tags": [
    "woodcut",
    "high_contrast",
@@ -1678,7 +1678,7 @@
  {
   "name": "[Print] Xerox Decay",
   "medium": "collage style image",
-  "nl": "Photocopy-decay rendering, generation-loss contrast, crushed blacks and blown whites, toner speckle, skewed paper edges, collage style image.",
+  "nl": "Photocopy-decay rendering, generation-loss contrast, crushed blacks and blown whites, toner speckle, skewed paper edges, collage style image,",
   "tags": [
    "monochrome",
    "high_contrast",

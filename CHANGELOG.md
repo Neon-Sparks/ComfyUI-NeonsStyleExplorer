@@ -1,5 +1,42 @@
 # Changelog
 
+## 2.1.5 — a refresh keeps your settings
+
+* **Refreshing the browser reset the style node's widgets.** ComfyUI restores a
+  workflow before an extension's catalog has been fetched, so the dropdowns
+  still held the short list the node definition ships with — and the guard that
+  rejects impossible values judged every saved style against that stub list and
+  replaced it with the default. The saved values are now held by widget name and
+  applied once the real lists exist, and nothing is judged while the catalog is
+  still loading.
+* A style that has genuinely left the catalog still falls back to None, with the
+  name reported in the console rather than silently swallowed.
+* `tools/harness/restore_after_refresh.mjs` replays the refresh order and shows
+  the old behaviour losing the style and the new one keeping it.
+
+## 2.1.4 — clauses end with a comma
+
+* **All 3,015 clauses now close with a comma instead of a full stop.** A clause
+  is a prompt fragment handing over to whatever you typed, and a full stop reads
+  as the end of a thought.
+* The composer follows: a trailing comma counts as punctuation when joining, so
+  nothing doubles up, the weighted form is now `(…:2.50),`, and when the style
+  sits last in the prompt the handover comma is trimmed — there is nothing after
+  it to hand over to.
+* The linter requires the comma, and `tools/import_pack.py` writes it, so an
+  imported pack arrives in the same shape.
+
+## 2.1.3 — painting, not rendering
+
+* **158 painted clauses said "rendering"**, which reads as CGI to the model and
+  was pulling results away from paint. Every clause whose medium is a painting
+  variant — oil, watercolour, ink, or plain painting — now says *painting*:
+  *Sfumato painting*, *Acrylic painting*, *Barbizon painting*. Ink line-work
+  entries say *drawing* (*Pen-and-ink drawing*, *Chinese ink drawing*), and
+  clauses that already carried the word simply drop the extra one
+  (*Dot-painting rendering* → *Dot-painting*).
+* The linter now rejects "rendering" in a clause with a painted medium.
+
 ## 2.1.2 — no frame shape in a clause either
 
 * **Framing language is gone, not just ratios.** 2.1.1 swapped `16:9` for

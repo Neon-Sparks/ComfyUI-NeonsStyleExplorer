@@ -4,7 +4,7 @@
   "family": "Anime & Manga",
   "axis": "style",
   "medium": "anime style image",
-  "nl": "Effects-heavy anime rendering, digitally composited flame and water layers, glowing particle spray, motion trails over cel figures, deep colour grade, anime style image.",
+  "nl": "Effects-heavy anime rendering, digitally composited flame and water layers, glowing particle spray, motion trails over cel figures, deep colour grade, anime style image,",
   "tags": [
    "anime_coloring",
    "glowing",
@@ -22,7 +22,7 @@
   "family": "Anime & Manga",
   "axis": "style",
   "medium": "anime style image",
-  "nl": "Soft-realist anime rendering, delicate thin line, pale skin gradients, observed everyday detail, warm window light, shallow focus, anime style image.",
+  "nl": "Soft-realist anime rendering, delicate thin line, pale skin gradients, observed everyday detail, warm window light, shallow focus, anime style image,",
   "tags": [
    "anime_coloring",
    "soft_focus",
@@ -39,7 +39,7 @@
   "family": "Anime & Manga",
   "axis": "style",
   "medium": "anime style image",
-  "nl": "Kinetic anime rendering, neon-clashing palette, thick expressive outline, smeared impact frames, chunky graphic effects, anime style image.",
+  "nl": "Kinetic anime rendering, neon-clashing palette, thick expressive outline, smeared impact frames, chunky graphic effects, anime style image,",
   "tags": [
    "anime_coloring",
    "neon_palette",
@@ -57,7 +57,7 @@
   "family": "Anime & Manga",
   "axis": "style",
   "medium": "anime style image",
-  "nl": "Montage anime rendering, flat colour-field backdrops, typographic intertitles, tilted symmetrical staging, abrupt graphic cuts, anime style image.",
+  "nl": "Montage anime rendering, flat colour-field backdrops, typographic intertitles, tilted symmetrical staging, abrupt graphic cuts, anime style image,",
   "tags": [
    "anime_coloring",
    "flat_color",
@@ -75,7 +75,7 @@
   "family": "Anime & Manga",
   "axis": "style",
   "medium": "anime style image",
-  "nl": "VTuber-model rendering, separated flat colour layers, ultra-clean outline, glossy eye highlights, symmetrical front-facing design, anime style image.",
+  "nl": "VTuber-model rendering, separated flat colour layers, ultra-clean outline, glossy eye highlights, symmetrical front-facing design, anime style image,",
   "tags": [
    "anime_coloring",
    "flat_color",
@@ -93,7 +93,7 @@
   "family": "Anime & Manga",
   "axis": "style",
   "medium": "anime style image",
-  "nl": "Transformation-sequence rendering, ribbon light trails, prismatic sparkle bursts, silhouette against radiating colour, glowing rim, anime style image.",
+  "nl": "Transformation-sequence rendering, ribbon light trails, prismatic sparkle bursts, silhouette against radiating colour, glowing rim, anime style image,",
   "tags": [
    "sparkle",
    "glowing",
@@ -111,7 +111,7 @@
   "family": "Anime & Manga",
   "axis": "format",
   "medium": "anime style image",
-  "nl": "Composed as an anime eyecatch, single subject on a flat patterned field, logo space in one corner, bold graphic framing, anime style image.",
+  "nl": "Composed as an anime eyecatch, single subject on a flat patterned field, logo space in one corner, bold graphic framing, anime style image,",
   "tags": [
    "anime_coloring",
    "flat_color",
@@ -128,7 +128,7 @@
   "family": "Anime & Manga",
   "axis": "format",
   "medium": "anime style image",
-  "nl": "Composed as an episode title card, painted backdrop held still with a wide empty band for lettering, soft vignette, anime style image.",
+  "nl": "Composed as an episode title card, painted backdrop held still with a wide empty band for lettering, soft vignette, anime style image,",
   "tags": [
    "anime_coloring",
    "scenery",
@@ -145,7 +145,7 @@
   "family": "Anime & Manga",
   "axis": "style",
   "medium": "anime style image",
-  "nl": "Soft romance-manga rendering, airy pastel palette, delicate tapering line, blush gradients, floating flower screentone, anime style image.",
+  "nl": "Soft romance-manga rendering, airy pastel palette, delicate tapering line, blush gradients, floating flower screentone, anime style image,",
   "tags": [
    "shoujo",
    "pastel_colors",
@@ -163,7 +163,7 @@
   "family": "Anime & Manga",
   "axis": "format",
   "medium": "anime style image",
-  "nl": "Composed as an emote sheet, a grid of tiny chibi expressions at equal size, flat bold colour, thick outline for small display, anime style image.",
+  "nl": "Composed as an emote sheet, a grid of tiny chibi expressions at equal size, flat bold colour, thick outline for small display, anime style image,",
   "tags": [
    "chibi",
    "multiple_views",
@@ -181,7 +181,7 @@
   "family": "Anime & Manga",
   "axis": "style",
   "medium": "anime style image",
-  "nl": "Low-bitrate anime rendering, macroblocked gradients, smeared motion, colour banding, softened line detail, interlace combing, anime style image.",
+  "nl": "Low-bitrate anime rendering, macroblocked gradients, smeared motion, colour banding, softened line detail, interlace combing, anime style image,",
   "tags": [
    "glitch",
    "dithering",
@@ -198,7 +198,7 @@
   "family": "Anime & Manga",
   "axis": "style",
   "medium": "manga style image",
-  "nl": "Tankobon-print rendering, slightly grey newsprint, ink gain thickening the line, coarse screentone dots, tight gutter margin, manga style image.",
+  "nl": "Tankobon-print rendering, slightly grey newsprint, ink gain thickening the line, coarse screentone dots, tight gutter margin, manga style image,",
   "tags": [
    "manga",
    "screentones",
@@ -216,7 +216,7 @@
   "family": "Western Animation",
   "axis": "style",
   "medium": "cartoon style image",
-  "nl": "Angular action-cartoon rendering, sharp geometric character shapes, thick tapering outline, flat saturated colour, wide empty staging, cartoon style image.",
+  "nl": "Angular action-cartoon rendering, sharp geometric character shapes, thick tapering outline, flat saturated colour, wide empty staging, cartoon style image,",
   "tags": [
    "outline",
    "flat_color",
@@ -233,7 +233,7 @@
   "family": "Western Animation",
   "axis": "style",
   "medium": "cartoon style image",
-  "nl": "Grotesque cartoon rendering, bulging asymmetric features, scratchy uneven outline, sour clashing colour, collaged photo backgrounds, cartoon style image.",
+  "nl": "Grotesque cartoon rendering, bulging asymmetric features, scratchy uneven outline, sour clashing colour, collaged photo backgrounds, cartoon style image,",
   "tags": [
    "outline",
    "colorful",
@@ -250,7 +250,7 @@
   "family": "Western Animation",
   "axis": "style",
   "medium": "cartoon style image",
-  "nl": "Flat folk-animation rendering, decorative flattened perspective, illuminated-manuscript pattern, warm limited palette, clean shape outline, cartoon style image.",
+  "nl": "Flat folk-animation rendering, decorative flattened perspective, illuminated-manuscript pattern, warm limited palette, clean shape outline, cartoon style image,",
   "tags": [
    "flat_color",
    "limited_palette",
@@ -267,7 +267,7 @@
   "family": "Western Animation",
   "axis": "style",
   "medium": "cartoon style image",
-  "nl": "Gross-out cartoon rendering, sudden hyper-detailed painted close-up amid flat cel art, greasy texture, bulging veins and sweat, cartoon style image.",
+  "nl": "Gross-out cartoon rendering, sudden hyper-detailed painted close-up amid flat cel art, greasy texture, bulging veins and sweat, cartoon style image,",
   "tags": [
    "painting_(medium)",
    "textured",
@@ -284,7 +284,7 @@
   "family": "Western Animation",
   "axis": "style",
   "medium": "cartoon style image",
-  "nl": "Lo-fi adult-animation rendering, minimal held drawings, thin uneven outline, muddy limited palette, deadpan flat staging, cartoon style image.",
+  "nl": "Lo-fi adult-animation rendering, minimal held drawings, thin uneven outline, muddy limited palette, deadpan flat staging, cartoon style image,",
   "tags": [
    "flat_color",
    "limited_palette",
@@ -301,7 +301,7 @@
   "family": "Western Animation",
   "axis": "style",
   "medium": "vector style image",
-  "nl": "Preschool-animation rendering, simple rounded vector shapes, thick soft outline, primary-bright flat fills, no shading at all, vector style image.",
+  "nl": "Preschool-animation rendering, simple rounded vector shapes, thick soft outline, primary-bright flat fills, no shading at all, vector style image,",
   "tags": [
    "vector_trace",
    "flat_color",
@@ -318,7 +318,7 @@
   "family": "Western Animation",
   "axis": "style",
   "medium": "photograph style image",
-  "nl": "Pixilation rendering, live subjects frozen frame by frame, slight pose jumps, hard practical light, real-world texture, photograph style image.",
+  "nl": "Pixilation rendering, live subjects frozen frame by frame, slight pose jumps, hard practical light, real-world texture, photograph style image,",
   "tags": [
    "stop_motion",
    "photo_(medium)",
@@ -335,7 +335,7 @@
   "family": "Western Animation",
   "axis": "style",
   "medium": "cartoon style image",
-  "nl": "Modernist-animation rendering, spare graphic figures, flat mid-century colour, textured paper ground, huge empty space, cartoon style image.",
+  "nl": "Modernist-animation rendering, spare graphic figures, flat mid-century colour, textured paper ground, huge empty space, cartoon style image,",
   "tags": [
    "flat_color",
    "minimalism",
@@ -353,7 +353,7 @@
   "family": "Western Animation",
   "axis": "style",
   "medium": "handmade style image",
-  "nl": "Puppet-animation rendering, coarse cloth and wood figures, grubby handmade texture, cold practical light, cramped set depth, handmade style image.",
+  "nl": "Puppet-animation rendering, coarse cloth and wood figures, grubby handmade texture, cold practical light, cramped set depth, handmade style image,",
   "tags": [
    "stop_motion",
    "textured",
@@ -370,7 +370,7 @@
   "family": "Western Animation",
   "axis": "style",
   "medium": "cartoon style image",
-  "nl": "Sing-along-short rendering, black-and-white ink figures over grey wash, lyric card lettering space, projector flicker and dust, cartoon style image.",
+  "nl": "Sing-along-short rendering, black-and-white ink figures over grey wash, lyric card lettering space, projector flicker and dust, cartoon style image,",
   "tags": [
    "monochrome",
    "retro_artstyle",
@@ -387,7 +387,7 @@
   "family": "Comics & Print",
   "axis": "style",
   "medium": "comic style image",
-  "nl": "Cosmic-comic rendering, fields of black energy dots, blocky machine detail, hot primary inks, heavy square-fingered forms, comic style image.",
+  "nl": "Cosmic-comic rendering, fields of black energy dots, blocky machine detail, hot primary inks, heavy square-fingered forms, comic style image,",
   "tags": [
    "comic",
    "halftone",
@@ -405,7 +405,7 @@
   "family": "Comics & Print",
   "axis": "style",
   "medium": "comic style image",
-  "nl": "Fumetti rendering, photographic panels with drawn balloon space, coarse halftone print, flat posterised colour, cheap paper, comic style image.",
+  "nl": "Fumetti rendering, photographic panels with drawn balloon space, coarse halftone print, flat posterised colour, cheap paper, comic style image,",
   "tags": [
    "photo_(medium)",
    "halftone",
@@ -423,7 +423,7 @@
   "family": "Comics & Print",
   "axis": "style",
   "medium": "comic style image",
-  "nl": "Italian-digest rendering, clean brush ink with hatched greys, tight three-tier panel rhythm, coarse pulp paper, no colour, comic style image.",
+  "nl": "Italian-digest rendering, clean brush ink with hatched greys, tight three-tier panel rhythm, coarse pulp paper, no colour, comic style image,",
   "tags": [
    "comic",
    "monochrome",
@@ -440,7 +440,7 @@
   "family": "Comics & Print",
   "axis": "style",
   "medium": "comic style image",
-  "nl": "Wordless-comic rendering, no balloons or captions, even panel rhythm, clear staging carrying the beat, restrained flat colour, comic style image.",
+  "nl": "Wordless-comic rendering, no balloons or captions, even panel rhythm, clear staging carrying the beat, restrained flat colour, comic style image,",
   "tags": [
    "comic",
    "multiple_views",
@@ -457,7 +457,7 @@
   "family": "Comics & Print",
   "axis": "style",
   "medium": "comic style image",
-  "nl": "Webcomic rendering, crisp digital line, flat bucket-filled colour, simple gradient sky, screen-bright palette, no print texture, comic style image.",
+  "nl": "Webcomic rendering, crisp digital line, flat bucket-filled colour, simple gradient sky, screen-bright palette, no print texture, comic style image,",
   "tags": [
    "comic",
    "flat_color",
@@ -475,7 +475,7 @@
   "family": "Comics & Print",
   "axis": "style",
   "medium": "illustration style image",
-  "nl": "Sci-fi digest rendering, two-colour interior plates, scratchy ink linework, cheap pulp stock, spot mechanical detail, illustration style image.",
+  "nl": "Sci-fi digest rendering, two-colour interior plates, scratchy ink linework, cheap pulp stock, spot mechanical detail, illustration style image,",
   "tags": [
    "limited_palette",
    "ink_(medium)",
@@ -492,7 +492,7 @@
   "family": "Comics & Print",
   "axis": "format",
   "medium": "comic style image",
-  "nl": "Composed as a Sunday broadsheet strip, a tier of panels with a title panel, benday colour, newsprint bleed, comic style image.",
+  "nl": "Composed as a Sunday broadsheet strip, a tier of panels with a title panel, benday colour, newsprint bleed, comic style image,",
   "tags": [
    "comic",
    "halftone",
@@ -510,7 +510,7 @@
   "family": "Comics & Print",
   "axis": "style",
   "medium": "collage style image",
-  "nl": "Mini-comic rendering, blown-contrast photocopy, hand-lettered text, wobbling ruled panels, staple and fold creases, collage style image.",
+  "nl": "Mini-comic rendering, blown-contrast photocopy, hand-lettered text, wobbling ruled panels, staple and fold creases, collage style image,",
   "tags": [
    "monochrome",
    "high_contrast",

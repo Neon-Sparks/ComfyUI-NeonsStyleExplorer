@@ -39,7 +39,7 @@ picture, never instructs the model, and never contradicts your prompt.
 ```
 Anime broadcast still, flat cel colouring in hard shadow bands, simplified
 on-model faces, painted matte background, mild compression softness and grain,
-TV-frame colour, anime style image.
+TV-frame colour, anime style image,
 ```
 
 That clause is joined to your prompt, and the result is one sentence about
@@ -48,7 +48,7 @@ rendering followed by your subject:
 ```
 masterpiece, best quality, Anime broadcast still, flat cel colouring in hard
 shadow bands, simplified on-model faces, painted matte background, mild
-compression softness and grain, TV-frame colour, anime style image. a woman on
+compression softness and grain, TV-frame colour, anime style image, a woman on
 a fire escape at night
 ```
 
@@ -493,6 +493,11 @@ you create one from the browser while it was opened from a node.
 Two rules keep the catalog consistent:
 
 * **Describe only the rendering.** No subject, no composition, no instructions.
+* **End with a comma, not a full stop.** The clause is a prompt fragment that
+  hands over to whatever you typed, so it closes `…anime style image,` — a full
+  stop reads as the end of a thought and weakens what follows. When the style
+  sits last in the prompt the handover comma is trimmed, since there is nothing
+  to hand over to.
 * **Close with the medium**, and use the family's convention — everything in the
   anime family ends `anime style image`, photography ends `photograph style
   image`, and so on.
@@ -578,6 +583,12 @@ Neither is touched by an update.
 ---
 
 ## 15. Troubleshooting
+
+**A switch or dropdown comes back wrong after a refresh.** Workflows saved
+before 2.1.6 store widget values by position, so a version that added a widget
+shifts everything after it. From 2.1.6 the node also saves them by name, which
+is immune to that — set the widget once more and save the workflow, and it will
+survive every refresh after that.
 
 **A new control does nothing, or says the server has not loaded this version.**
 Restart ComfyUI itself. Refreshing the browser updates the interface but not the

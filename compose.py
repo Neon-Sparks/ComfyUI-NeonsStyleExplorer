@@ -43,7 +43,7 @@ def emphasise(text, weight):
     if weight <= 1.001 or not text:
         return text
     body = _drop_terminal(text).replace(":", " -")
-    return f"({body}:{weight:.2f})."
+    return f"({body}:{weight:.2f}),"
 
 
 def clean(text):
@@ -52,7 +52,8 @@ def clean(text):
 
 
 def _drop_terminal(text):
-    return re.sub(r"[.\s]+$", "", clean(text))
+    """Strip the clause's closing punctuation — a comma now, a period before."""
+    return re.sub(r"[.,\s]+$", "", clean(text))
 
 
 def _lower_first(text):
@@ -88,8 +89,11 @@ def join_prompt(parts):
         if not out:
             out = part
             continue
-        out = f"{out} {part}" if re.search(r"[.!?;:]$", out) else f"{out}, {part}"
-    return out.strip()
+        # a clause already ends in a comma, so do not add a second one
+        out = f"{out} {part}" if re.search(r"[.!?;:,]$", out) else f"{out}, {part}"
+    # the closing comma exists to hand over to the next part; with nothing
+    # after it, it would only dangle
+    return out.strip().rstrip(",")
 
 
 # ---------------------------------------------------------------- entries
@@ -159,7 +163,8 @@ def style_clause(styles, fmt=None, finish=None, mix="blended with"):
     medium = _drop_terminal(entry_medium(lead))
     if medium:
         text = f"{text}, {medium}" if text else medium
-    return f"{text}." if text else ""
+    # a prompt fragment, handed over to whatever the user typed
+    return f"{text}," if text else ""
 
 
 def compose_natural(prompt, quality, styles, fmt, finish, opts):

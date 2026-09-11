@@ -37,6 +37,47 @@ function syncSlot(node, field, source) {
     if (!values.includes(w.value)) w.value = "None";
 }
 
+/**
+ * Remember what a saved workflow asked for, by widget name.
+ *
+ * On a browser refresh the graph is restored before the catalog has been
+ * fetched, so the dropdowns still hold the short list the node definition
+ * shipped with. Judging a saved style against that list condemns it, which is
+ * how a refresh used to reset everyone's settings. The values are held here and
+ * applied once the real lists exist.
+ */
+function stashSaved(node, live, values) {
+    if (!Array.isArray(values)) return;
+    node._nsSaved = node._nsSaved || {};
+    live.forEach((w, index) => {
+        if (index < values.length) node._nsSaved[w.name] = values[index];
+    });
+}
+
+/** Put those values back, now that the dropdowns carry the catalog. */
+function restoreSaved(node) {
+    const saved = node?._nsSaved;
+    if (!saved) return;
+    const lost = [];
+    for (const [name, value] of Object.entries(saved)) {
+        const w = widget(node, name);
+        if (!w || value === undefined || w.value === value) continue;
+        const options = w.options?.values;
+        if (!Array.isArray(options) || !options.length) {
+            w.value = value;
+        } else if (options.includes(value)) {
+            w.value = value;
+        } else if (value !== "None" && value !== undefined) {
+            lost.push(`${name} = '${value}'`);
+        }
+    }
+    if (lost.length) {
+        console.warn("Neons Style Explorer: a saved selection is no longer in the catalog — "
+            + lost.join(", "));
+    }
+    if (state.ready) delete node._nsSaved;
+}
+
 function hook(node) {
     for (const w of node.widgets || []) {
         if (w._nsHooked || w.name === "ns_panel") continue;
@@ -219,6 +260,8 @@ app.registerExtension({
         for (const node of app.graph?._nodes || []) {
             if (!NODE_TYPES.has(node.comfyClass || node.type)) continue;
             syncCombos(node);
+            restoreSaved(node);
+            syncCombos(node);      // the restored style decides the active slot
             refresh(node);
             layout(node);
         }
@@ -395,10 +438,14 @@ app.registerExtension({
                 }
                 // whatever happened above, nothing impossible may reach a widget
                 const finalValues = info?.widgets_values;
+                stashSaved(this, live, finalValues);
                 if (Array.isArray(finalValues)) {
                     live.forEach((w, index) => {
                         if (index >= finalValues.length) return;
                         if (valueFits(w, finalValues[index])) return;
+                        // the catalog has not arrived, so its dropdowns still
+                        // hold the definition's short list: nothing to judge by
+                        if (!state.ready && Array.isArray(w.options?.values)) return;
                         console.warn(
                             `Neons Style Explorer: '${finalValues[index]}' is not valid for `
                             + `${w.name}; using its default instead`
@@ -440,6 +487,7 @@ app.registerExtension({
                         await loadCatalog();
                         await loadGallery();
                         syncCombos(this);
+                        restoreSaved(this);   // a value held back on load
                         refresh(this);
                         composeNow(this);
                     },

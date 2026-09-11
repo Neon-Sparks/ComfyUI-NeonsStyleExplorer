@@ -4,7 +4,7 @@
   "family": "3D & Games",
   "axis": "style",
   "medium": "cgi style image",
-  "nl": "N64-era rendering, blurry bilinear-filtered textures, chunky low-poly forms, vertex-lit flat shading, distance fog, cgi style image.",
+  "nl": "N64-era rendering, blurry bilinear-filtered textures, chunky low-poly forms, vertex-lit flat shading, distance fog, cgi style image,",
   "tags": [
    "low_poly",
    "3d",
@@ -22,7 +22,7 @@
   "family": "3D & Games",
   "axis": "style",
   "medium": "cgi style image",
-  "nl": "Saturn-era rendering, quad-based flat-shaded geometry, dithered transparency, warped texture seams, dark palette, cgi style image.",
+  "nl": "Saturn-era rendering, quad-based flat-shaded geometry, dithered transparency, warped texture seams, dark palette, cgi style image,",
   "tags": [
    "low_poly",
    "dithering",
@@ -39,7 +39,7 @@
   "family": "3D & Games",
   "axis": "style",
   "medium": "cgi style image",
-  "nl": "Dreamcast-era rendering, clean mid-poly models, vivid saturated vertex colour, sharp small textures, hard specular dots, cgi style image.",
+  "nl": "Dreamcast-era rendering, clean mid-poly models, vivid saturated vertex colour, sharp small textures, hard specular dots, cgi style image,",
   "tags": [
    "3d",
    "low_poly",
@@ -56,7 +56,7 @@
   "family": "3D & Games",
   "axis": "style",
   "medium": "pixel art style image",
-  "nl": "Amiga-demo rendering, banded copper gradient sky, dithered pixel shading, limited indexed palette, hard sprite edges, pixel art style image.",
+  "nl": "Amiga-demo rendering, banded copper gradient sky, dithered pixel shading, limited indexed palette, hard sprite edges, pixel art style image,",
   "tags": [
    "dithering",
    "gradient",
@@ -74,7 +74,7 @@
   "family": "3D & Games",
   "axis": "style",
   "medium": "pixel art style image",
-  "nl": "VGA-era rendering, 320x200 chunky pixels, 256-colour palette, heavy ordered dithering, dark saturated ramps, pixel art style image.",
+  "nl": "VGA-era rendering, 320x200 chunky pixels, 256-colour palette, heavy ordered dithering, dark saturated ramps, pixel art style image,",
   "tags": [
    "pixel_art",
    "dithering",
@@ -91,7 +91,7 @@
   "family": "3D & Games",
   "axis": "style",
   "medium": "cgi style image",
-  "nl": "Vector-arcade rendering, glowing coloured wireframe lines on pure black, no fills, phosphor bloom at the joints, cgi style image.",
+  "nl": "Vector-arcade rendering, glowing coloured wireframe lines on pure black, no fills, phosphor bloom at the joints, cgi style image,",
   "tags": [
    "wireframe",
    "glowing",
@@ -109,7 +109,7 @@
   "family": "3D & Games",
   "axis": "style",
   "medium": "game art style image",
-  "nl": "Isometric CRPG rendering, pre-rendered parallel-projection scene, painted texture detail, baked shadows, small sprite figures, game art style image.",
+  "nl": "Isometric CRPG rendering, pre-rendered parallel-projection scene, painted texture detail, baked shadows, small sprite figures, game art style image,",
   "tags": [
    "3d",
    "scenery",
@@ -126,7 +126,7 @@
   "family": "3D & Games",
   "axis": "style",
   "medium": "cgi style image",
-  "nl": "Raymarched rendering, procedural infinite geometry, soft ambient occlusion, glowing distance fog, mathematical repetition, cgi style image.",
+  "nl": "Raymarched rendering, procedural infinite geometry, soft ambient occlusion, glowing distance fog, mathematical repetition, cgi style image,",
   "tags": [
    "3d",
    "glowing",
@@ -144,7 +144,7 @@
   "family": "3D & Games",
   "axis": "style",
   "medium": "abstract style image",
-  "nl": "Fractal-flame rendering, luminous filament swirls on black, additive colour blending, infinite self-similar detail, abstract style image.",
+  "nl": "Fractal-flame rendering, luminous filament swirls on black, additive colour blending, infinite self-similar detail, abstract style image,",
   "tags": [
    "glowing",
    "dark",
@@ -162,7 +162,7 @@
   "family": "3D & Games",
   "axis": "style",
   "medium": "cgi style image",
-  "nl": "Point-cloud rendering, surfaces made of scattered coloured points, gaps where the scan missed, thinning density at distance, cgi style image.",
+  "nl": "Point-cloud rendering, surfaces made of scattered coloured points, gaps where the scan missed, thinning density at distance, cgi style image,",
   "tags": [
    "3d",
    "dithering",
@@ -179,7 +179,7 @@
   "family": "3D & Games",
   "axis": "style",
   "medium": "cgi style image",
-  "nl": "Failed-photoscan rendering, melted stretched geometry, smeared projected texture, floating fragments, holes in the mesh, cgi style image.",
+  "nl": "Failed-photoscan rendering, melted stretched geometry, smeared projected texture, floating fragments, holes in the mesh, cgi style image,",
   "tags": [
    "3d",
    "glitch",
@@ -196,7 +196,7 @@
   "family": "3D & Games",
   "axis": "style",
   "medium": "cgi style image",
-  "nl": "Kitbash rendering, surfaces encrusted with mechanical greeble detail, panel layers and pipes, hard edge highlights, cgi style image.",
+  "nl": "Kitbash rendering, surfaces encrusted with mechanical greeble detail, panel layers and pipes, hard edge highlights, cgi style image,",
   "tags": [
    "3d",
    "metallic",
@@ -213,7 +213,7 @@
   "family": "3D & Games",
   "axis": "style",
   "medium": "cgi style image",
-  "nl": "Destruction rendering, fractured chunks mid-flight, dust plumes, trailing debris, hard rim light through the cloud, cgi style image.",
+  "nl": "Destruction rendering, fractured chunks mid-flight, dust plumes, trailing debris, hard rim light through the cloud, cgi style image,",
   "tags": [
    "3d",
    "motion_blur",
@@ -230,7 +230,7 @@
   "family": "3D & Games",
   "axis": "style",
   "medium": "cgi style image",
-  "nl": "Fluid-sim rendering, sheeting liquid surfaces, thin-film droplets, refraction and caustics through the volume, frozen splash, cgi style image.",
+  "nl": "Fluid-sim rendering, sheeting liquid surfaces, thin-film droplets, refraction and caustics through the volume, frozen splash, cgi style image,",
   "tags": [
    "3d",
    "wet",
@@ -248,7 +248,7 @@
   "family": "3D & Games",
   "axis": "style",
   "medium": "cgi style image",
-  "nl": "Cloth-sim rendering, draped fabric with settled folds, weave texture and slight sheen, soft contact wrinkles, cgi style image.",
+  "nl": "Cloth-sim rendering, draped fabric with settled folds, weave texture and slight sheen, soft contact wrinkles, cgi style image,",
   "tags": [
    "3d",
    "textured",
@@ -265,7 +265,7 @@
   "family": "3D & Games",
   "axis": "style",
   "medium": "cgi style image",
-  "nl": "Particle rendering, millions of glowing motes forming a shape, additive density falloff, motion trails, dark surround, cgi style image.",
+  "nl": "Particle rendering, millions of glowing motes forming a shape, additive density falloff, motion trails, dark surround, cgi style image,",
   "tags": [
    "glowing",
    "dark",
@@ -283,7 +283,7 @@
   "family": "3D & Games",
   "axis": "style",
   "medium": "cgi style image",
-  "nl": "Motion-design rendering, looping abstract primitives, soft studio gradient light, glossy pastel materials, tidy depth of field, cgi style image.",
+  "nl": "Motion-design rendering, looping abstract primitives, soft studio gradient light, glossy pastel materials, tidy depth of field, cgi style image,",
   "tags": [
    "3d",
    "gradient",
@@ -301,7 +301,7 @@
   "family": "3D & Games",
   "axis": "style",
   "medium": "cgi style image",
-  "nl": "Inflatable rendering, puffed balloon volumes with seam creases, taut glossy skin, soft pinch points, bright studio light, cgi style image.",
+  "nl": "Inflatable rendering, puffed balloon volumes with seam creases, taut glossy skin, soft pinch points, bright studio light, cgi style image,",
   "tags": [
    "plastic",
    "shiny",
@@ -318,7 +318,7 @@
   "family": "3D & Games",
   "axis": "style",
   "medium": "cgi style image",
-  "nl": "Gummy rendering, jelly-translucent bodies with deep subsurface glow, sticky specular sheen, soft squash deformation, cgi style image.",
+  "nl": "Gummy rendering, jelly-translucent bodies with deep subsurface glow, sticky specular sheen, soft squash deformation, cgi style image,",
   "tags": [
    "transparent",
    "glowing",
@@ -336,7 +336,7 @@
   "family": "3D & Games",
   "axis": "style",
   "medium": "cgi style image",
-  "nl": "Knit-shader rendering, everything modelled as looped yarn stitches, fibre fuzz halo, soft wool colour, contact shadow, cgi style image.",
+  "nl": "Knit-shader rendering, everything modelled as looped yarn stitches, fibre fuzz halo, soft wool colour, contact shadow, cgi style image,",
   "tags": [
    "knitted",
    "textured",
@@ -353,7 +353,7 @@
   "family": "3D & Games",
   "axis": "style",
   "medium": "cgi style image",
-  "nl": "Felt-shader rendering, matte fuzzy surfaces with short fibre nap, soft rounded edges, muted craft colour, gentle light, cgi style image.",
+  "nl": "Felt-shader rendering, matte fuzzy surfaces with short fibre nap, soft rounded edges, muted craft colour, gentle light, cgi style image,",
   "tags": [
    "textured",
    "fur",
@@ -370,7 +370,7 @@
   "family": "3D & Games",
   "axis": "style",
   "medium": "cgi style image",
-  "nl": "Groom rendering, layered hair strands with clumping and flyaways, backlit rim scatter, soft depth falloff, cgi style image.",
+  "nl": "Groom rendering, layered hair strands with clumping and flyaways, backlit rim scatter, soft depth falloff, cgi style image,",
   "tags": [
    "fur",
    "3d",
@@ -388,7 +388,7 @@
   "family": "3D & Games",
   "axis": "style",
   "medium": "cgi style image",
-  "nl": "Automotive-render setup, long softbox strips reflected down the bodywork, dark gradient sweep, crisp panel highlights, cgi style image.",
+  "nl": "Automotive-render setup, long softbox strips reflected down the bodywork, dark gradient sweep, crisp panel highlights, cgi style image,",
   "tags": [
    "3d",
    "metallic",
@@ -406,7 +406,7 @@
   "family": "3D & Games",
   "axis": "style",
   "medium": "cgi style image",
-  "nl": "Medical-viz rendering, translucent anatomical layers, clean subsurface reds, isolated dark ground, clinical rim light, cgi style image.",
+  "nl": "Medical-viz rendering, translucent anatomical layers, clean subsurface reds, isolated dark ground, clinical rim light, cgi style image,",
   "tags": [
    "3d",
    "transparent",
@@ -424,7 +424,7 @@
   "family": "3D & Games",
   "axis": "style",
   "medium": "cgi style image",
-  "nl": "Data-viz rendering, extruded bars and nodes on a grid plane, emissive accent colour, clean matte materials, soft ambient light, cgi style image.",
+  "nl": "Data-viz rendering, extruded bars and nodes on a grid plane, emissive accent colour, clean matte materials, soft ambient light, cgi style image,",
   "tags": [
    "3d",
    "diagram",
@@ -442,7 +442,7 @@
   "family": "3D & Games",
   "axis": "style",
   "medium": "cgi style image",
-  "nl": "White-model rendering, untextured matte white massing, soft ambient occlusion at the joints, thin context lines, cgi style image.",
+  "nl": "White-model rendering, untextured matte white massing, soft ambient occlusion at the joints, thin context lines, cgi style image,",
   "tags": [
    "3d",
    "white_theme",
@@ -459,7 +459,7 @@
   "family": "3D & Games",
   "axis": "style",
   "medium": "cgi style image",
-  "nl": "Section-cut rendering, building sliced open to show interiors, flat cut planes in solid colour, tidy miniature scale, cgi style image.",
+  "nl": "Section-cut rendering, building sliced open to show interiors, flat cut planes in solid colour, tidy miniature scale, cgi style image,",
   "tags": [
    "diagram",
    "3d",
@@ -476,7 +476,7 @@
   "family": "3D & Games",
   "axis": "style",
   "medium": "cgi style image",
-  "nl": "Miniature rendering, 28mm-scale figure with visible mould lines, layered brush paint, wash-shaded recesses, textured base, cgi style image.",
+  "nl": "Miniature rendering, 28mm-scale figure with visible mould lines, layered brush paint, wash-shaded recesses, textured base, cgi style image,",
   "tags": [
    "3d",
    "plastic",
@@ -493,7 +493,7 @@
   "family": "3D & Games",
   "axis": "style",
   "medium": "cgi style image",
-  "nl": "Terrain rendering, foam-carved rock and flock grass, dry-brushed highlights, visible base edges, tabletop scale light, cgi style image.",
+  "nl": "Terrain rendering, foam-carved rock and flock grass, dry-brushed highlights, visible base edges, tabletop scale light, cgi style image,",
   "tags": [
    "textured",
    "3d",

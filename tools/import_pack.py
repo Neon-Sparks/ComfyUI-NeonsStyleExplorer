@@ -82,7 +82,7 @@ def clause(parts, medium):
     """The record's own text, capitalised and closed with the medium."""
     body = ", ".join(parts)
     body = body[0].upper() + body[1:] if body else ""
-    tail = f", {medium}."
+    tail = f", {medium},"
     room = MAX_CLAUSE - len(tail)
     if len(body) > room:                      # trim on a descriptor boundary
         kept = []

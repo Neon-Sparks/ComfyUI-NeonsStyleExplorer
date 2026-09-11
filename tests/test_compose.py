@@ -31,15 +31,15 @@ catalog_sets = importlib.import_module(f"{PKG}.catalogs")
 gallery = importlib.import_module(f"{PKG}.gallery")
 
 A = {"id": "t.a", "name": "[Test] A", "family": "Anime & Manga", "axis": "style",
-     "medium": "anime style image", "nl": "Flat cel colour in hard bands, anime style image.",
+     "medium": "anime style image", "nl": "Flat cel colour in hard bands, anime style image,",
      "tags": ["anime_coloring", "cel_shading"], "tags_negative": ["photorealistic"],
      "negative": "photo, 3d render", "aliases": [], "written": True, "source": "shipped"}
 B = {"id": "t.b", "name": "[Test] B", "family": "Photography & Film", "axis": "style",
-     "medium": "photograph style image", "nl": "Fine grain and warm skin, photograph style image.",
+     "medium": "photograph style image", "nl": "Fine grain and warm skin, photograph style image,",
      "tags": ["photo_(medium)", "film_grain"], "tags_negative": ["3d"],
      "negative": "illustration", "aliases": [], "written": True, "source": "shipped"}
 F = {"id": "t.f", "name": "[Format] Sheet", "family": "Comics & Print", "axis": "format",
-     "medium": "comic style image", "nl": "Panel gutters and balloon space, comic style image.",
+     "medium": "comic style image", "nl": "Panel gutters and balloon space, comic style image,",
      "tags": ["comic"], "tags_negative": [], "negative": "", "aliases": [], "written": True,
      "source": "shipped"}
 
@@ -95,10 +95,18 @@ class Natural(unittest.TestCase):
         self.assertTrue(pos.startswith("masterpiece, Flat cel colour"))
         self.assertTrue(pos.endswith("a fox"))
 
+    def test_no_dangling_comma_at_the_end(self):
+        """The clause's comma hands over to the next part — with nothing after
+        it, it would just dangle."""
+        out, _ = compose.compose(prompt="a fox", styles=[A], style_position="end")
+        self.assertFalse(out.rstrip().endswith(","), out)
+        self.assertTrue(out.rstrip().endswith("anime style image"), out)
+
     def test_style_last(self):
         pos, _ = compose.compose(prompt="a fox", styles=[A], style_position="end")
         self.assertTrue(pos.startswith("a fox"))
-        self.assertTrue(pos.rstrip().endswith("anime style image."))
+        # the clause closes the prompt, so its handover comma is trimmed
+        self.assertTrue(pos.rstrip().endswith("anime style image"))
 
     def test_no_instruction_language(self):
         pos, _ = compose.compose(prompt="a fox", styles=[A])
@@ -107,7 +115,7 @@ class Natural(unittest.TestCase):
 
     def test_medium_closes_the_clause(self):
         pos, _ = compose.compose(prompt="", styles=[A])
-        self.assertTrue(pos.rstrip().endswith("anime style image."))
+        self.assertTrue(pos.rstrip().endswith("anime style image"))
 
     def test_mixing(self):
         pos, _ = compose.compose(prompt="a fox", styles=[A, B], style_mix="mixed with")
@@ -124,7 +132,7 @@ class Natural(unittest.TestCase):
     def test_weight_emphasises_the_clause(self):
         pos, _ = compose.compose(prompt="a fox", styles=[A], style_weight=2.5)
         self.assertIn("(Flat cel colour", pos)
-        self.assertIn(":2.50).", pos)
+        self.assertIn(":2.50),", pos)
         self.assertNotIn("::", pos)
 
     def test_weight_one_leaves_the_clause_alone(self):
@@ -146,27 +154,27 @@ class Medium(unittest.TestCase):
 
     def test_format_does_not_hijack_the_medium(self):
         clause = compose.style_clause([A], fmt=F)
-        self.assertTrue(clause.endswith("anime style image."), clause)
+        self.assertTrue(clause.endswith("anime style image,"), clause)
         self.assertEqual(clause.count("style image"), 1)
         self.assertIn("panel gutters", clause)
 
     def test_finish_does_not_hijack_the_medium(self):
         finish = dict(A, id="t.n", name="[Finish] Real", axis="finish",
                       medium="photograph style image",
-                      nl="Natural skin texture, photograph style image.")
+                      nl="Natural skin texture, photograph style image,")
         clause = compose.style_clause([A], finish=finish)
-        self.assertTrue(clause.endswith("anime style image."), clause)
+        self.assertTrue(clause.endswith("anime style image,"), clause)
         self.assertIn("natural skin texture", clause.lower())
         self.assertNotIn("photograph style image", clause)
 
     def test_format_alone_keeps_its_own_medium(self):
         clause = compose.style_clause([], fmt=F)
-        self.assertTrue(clause.endswith("comic style image."), clause)
+        self.assertTrue(clause.endswith("comic style image,"), clause)
 
     def test_second_style_medium_is_dropped(self):
         clause = compose.style_clause([A, B])
         self.assertEqual(clause.count("style image"), 1)
-        self.assertTrue(clause.endswith("anime style image."), clause)
+        self.assertTrue(clause.endswith("anime style image,"), clause)
 
     def test_whole_catalog_emits_one_medium(self):
         pool = catalog.by_axis("style")[:200]
@@ -175,7 +183,7 @@ class Medium(unittest.TestCase):
         for entry in pool:
             clause = compose.style_clause([entry], fmt=fmt, finish=finish)
             self.assertEqual(clause.count(" style image"), 1, entry["name"])
-            self.assertTrue(clause.endswith(entry["medium"] + "."), entry["name"])
+            self.assertTrue(clause.endswith(entry["medium"] + ","), entry["name"])
 
 
 class Tags(unittest.TestCase):
@@ -497,7 +505,7 @@ class Catalog(unittest.TestCase):
         try:
             ok, name = store.save_custom(
                 name="Probe Chrome Bloom", family="Probe Metal", axis="style",
-                nl="Probe rendering: mirrored liquid metal bulging into soft blobs, chrome style image.",
+                nl="Probe rendering: mirrored liquid metal bulging into soft blobs, chrome style image,",
                 medium="chrome style image", negative="matte surfaces",
                 tags=["liquid_metal", "chrome_(medium)"],       # not in the vocabulary
                 tags_negative=["matte_finish"],
@@ -535,11 +543,11 @@ class Catalog(unittest.TestCase):
         try:
             ok, first = store.save_custom(
                 name="Probe Figurine", family="Material Test", axis="style",
-                nl="Probe rendering: matte resin cast, style image.", medium="style image")
+                nl="Probe rendering: matte resin cast, style image,", medium="style image")
             self.assertTrue(first.startswith("[Material][Custom]"), first)
             ok, second = store.save_custom(
                 name=first, family="Figurine", axis="style", update=True,
-                nl="Probe rendering: matte resin cast, style image.", medium="style image")
+                nl="Probe rendering: matte resin cast, style image,", medium="style image")
             self.assertTrue(second.startswith("[Figurine][Custom]"), second)
             self.assertEqual(catalog.resolve(first)["name"], second)   # old name still resolves
 
@@ -776,7 +784,7 @@ class Catalog(unittest.TestCase):
         gallery_mod = importlib.import_module(f"{PKG}.gallery")
         wipe_user_files("custom.json", "overrides.json")
         try:
-            clause = "Probe rendering: flat test clause, illustration style image."
+            clause = "Probe rendering: flat test clause, illustration style image,"
             ok, first = store.save_custom(name="rename probe", family="Illustration", axis="style",
                                           nl=clause, medium="illustration style image")
             original = catalog.resolve(first)

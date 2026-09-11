@@ -4,7 +4,7 @@
   "family": "Traditional Painting",
   "axis": "style",
   "medium": "abstract style image",
-  "nl": "Concrete-art rendering, exact geometry fixed by rule before the brush, hard-edged bars and squares in flat unmodulated paint, mathematical spacing, no gesture anywhere on the surface, abstract style image.",
+  "nl": "Concrete-art rendering, exact geometry fixed by rule before the brush, hard-edged bars and squares in flat unmodulated paint, mathematical spacing, no gesture anywhere on the surface, abstract style image,",
   "tags": [
    "flat_color",
    "minimalism",
@@ -21,7 +21,7 @@
   "family": "Traditional Painting",
   "axis": "style",
   "medium": "abstract style image",
-  "nl": "Nested-square rendering, concentric flat rectangles stepped downward, neighbouring colours chosen so each shifts the other, matte board-like surface, no blending at the joins, abstract style image.",
+  "nl": "Nested-square rendering, concentric flat rectangles stepped downward, neighbouring colours chosen so each shifts the other, matte board-like surface, no blending at the joins, abstract style image,",
   "tags": [
    "flat_color",
    "minimalism",
@@ -37,7 +37,7 @@
   "family": "Traditional Painting",
   "axis": "style",
   "medium": "abstract style image",
-  "nl": "Neo-concrete rendering, geometric planes folded off the flat, hinged panels and cut angles casting their own thin shadows, restrained palette on white, hand-finished matte edges, abstract style image.",
+  "nl": "Neo-concrete rendering, geometric planes folded off the flat, hinged panels and cut angles casting their own thin shadows, restrained palette on white, hand-finished matte edges, abstract style image,",
   "tags": [
    "minimalism",
    "flat_color",
@@ -53,7 +53,7 @@
   "family": "Traditional Painting",
   "axis": "style",
   "medium": "abstract style image",
-  "nl": "Informel rendering, blots and stabs of loaded pigment, scraped smears dragged across each other, no composition beyond the mark itself, earthy palette on raw ground, abstract style image.",
+  "nl": "Informel rendering, blots and stabs of loaded pigment, scraped smears dragged across each other, no composition beyond the mark itself, earthy palette on raw ground, abstract style image,",
   "tags": [
    "painting_(medium)",
    "textured",
@@ -70,7 +70,7 @@
   "family": "Traditional Painting",
   "axis": "style",
   "medium": "abstract style image",
-  "nl": "Monochrome-relief rendering, an all-white field broken only by cast shadow, folds, cuts and studs raked by low side light, chalky matte surface, tonal range built from depth rather than colour, abstract style image.",
+  "nl": "Monochrome-relief rendering, an all-white field broken only by cast shadow, folds, cuts and studs raked by low side light, chalky matte surface, tonal range built from depth rather than colour, abstract style image,",
   "tags": [
    "white_theme",
    "minimalism",
@@ -87,7 +87,7 @@
   "family": "Traditional Painting",
   "axis": "style",
   "medium": "abstract style image",
-  "nl": "Single-hue rendering, one colour carried across the whole surface, tonal life coming only from brush drag and weave grain, edges left frankly visible, no drawn incident, abstract style image.",
+  "nl": "Single-hue rendering, one colour carried across the whole surface, tonal life coming only from brush drag and weave grain, edges left frankly visible, no drawn incident, abstract style image,",
   "tags": [
    "minimalism",
    "monochrome",
@@ -103,7 +103,7 @@
   "family": "Traditional Painting",
   "axis": "style",
   "medium": "abstract style image",
-  "nl": "Hard-edge rendering, flat bands meeting on razor-taped boundaries, the panel's own irregular outline treated as part of the design, matte acrylic evenness, no tonal modelling, abstract style image.",
+  "nl": "Hard-edge rendering, flat bands meeting on razor-taped boundaries, the panel's own irregular outline treated as part of the design, matte acrylic evenness, no tonal modelling, abstract style image,",
   "tags": [
    "flat_color",
    "minimalism",
@@ -120,7 +120,7 @@
   "family": "Traditional Painting",
   "axis": "style",
   "medium": "drawing style image",
-  "nl": "Rule-drawn rendering, pencil lines set out to a written instruction, dense hatched bands meeting at fixed angles, flat wall tone showing between passes, faint construction marks left in place, drawing style image.",
+  "nl": "Rule-drawn rendering, pencil lines set out to a written instruction, dense hatched bands meeting at fixed angles, flat wall tone showing between passes, faint construction marks left in place, drawing style image,",
   "tags": [
    "graphite_(medium)",
    "lineart",
@@ -137,7 +137,7 @@
   "family": "Traditional Painting",
   "axis": "style",
   "medium": "abstract style image",
-  "nl": "Decalcomania rendering, paint pressed between two surfaces and pulled apart, veined lace and coral textures left behind, accidental near-symmetry, dark tonal pooling at the edges, abstract style image.",
+  "nl": "Decalcomania rendering, paint pressed between two surfaces and pulled apart, veined lace and coral textures left behind, accidental near-symmetry, dark tonal pooling at the edges, abstract style image,",
   "tags": [
    "textured",
    "painting_(medium)",
@@ -153,7 +153,7 @@
   "family": "Traditional Painting",
   "axis": "style",
   "medium": "drawing style image",
-  "nl": "Frottage rendering, graphite rubbed over paper laid on rough boards, grain and knots printing through as tonal fields, no drawn line at all, smudged open edges where the rubbing stops, drawing style image.",
+  "nl": "Frottage rendering, graphite rubbed over paper laid on rough boards, grain and knots printing through as tonal fields, no drawn line at all, smudged open edges where the rubbing stops, drawing style image,",
   "tags": [
    "graphite_(medium)",
    "monochrome",
@@ -170,7 +170,7 @@
   "family": "Traditional Painting",
   "axis": "style",
   "medium": "collage style image",
-  "nl": "Décollage rendering, layers of pasted street posters torn back into each other, fragments of type and flat colour surfacing at random, ragged wet edges, paste bloom and grime across the sheet, collage style image.",
+  "nl": "Décollage rendering, layers of pasted street posters torn back into each other, fragments of type and flat colour surfacing at random, ragged wet edges, paste bloom and grime across the sheet, collage style image,",
   "tags": [
    "collage",
    "textured",
@@ -186,7 +186,7 @@
   "family": "Experimental & Material",
   "axis": "style",
   "medium": "abstract style image",
-  "nl": "Pen-plotter rendering, single-weight ink strokes laid down by machine, thousands of parallel passes building tone by density, faint wobble and blob where each stroke starts, bare paper between the lines, abstract style image.",
+  "nl": "Pen-plotter rendering, single-weight ink strokes laid down by machine, thousands of parallel passes building tone by density, faint wobble and blob where each stroke starts, bare paper between the lines, abstract style image,",
   "tags": [
    "pen_(medium)",
    "lineart",
@@ -203,7 +203,7 @@
   "family": "Experimental & Material",
   "axis": "style",
   "medium": "abstract style image",
-  "nl": "Automata rendering, a cell grid stepped through one simple rule, triangular growth fronts and repeating fractal wedges, hard black-or-white cells with no anti-aliasing, rigid pixel lattice, abstract style image.",
+  "nl": "Automata rendering, a cell grid stepped through one simple rule, triangular growth fronts and repeating fractal wedges, hard black-or-white cells with no anti-aliasing, rigid pixel lattice, abstract style image,",
   "tags": [
    "monochrome",
    "high_contrast",
@@ -220,7 +220,7 @@
   "family": "Experimental & Material",
   "axis": "style",
   "medium": "abstract style image",
-  "nl": "Reaction-diffusion rendering, spots and stripes grown by two competing chemicals, labyrinthine ridges branching and merging, soft fronts where growth meets growth, even coverage across the field, abstract style image.",
+  "nl": "Reaction-diffusion rendering, spots and stripes grown by two competing chemicals, labyrinthine ridges branching and merging, soft fronts where growth meets growth, even coverage across the field, abstract style image,",
   "tags": [
    "textured",
    "gradient",
@@ -236,7 +236,7 @@
   "family": "Experimental & Material",
   "axis": "style",
   "medium": "abstract style image",
-  "nl": "Flow-field rendering, thin curves each following an invisible vector field, strands bunching into eddies and thinning over open ground, uniform stroke weight throughout, pale unmarked paper behind, abstract style image.",
+  "nl": "Flow-field rendering, thin curves each following an invisible vector field, strands bunching into eddies and thinning over open ground, uniform stroke weight throughout, pale unmarked paper behind, abstract style image,",
   "tags": [
    "lineart",
    "minimalism",
@@ -253,7 +253,7 @@
   "family": "Experimental & Material",
   "axis": "style",
   "medium": "abstract style image",
-  "nl": "Voronoi rendering, the plane divided into cells around scattered seed points, straight shared borders meeting at sharp junctions, cells ranging from splinters to slabs, one flat fill per cell, abstract style image.",
+  "nl": "Voronoi rendering, the plane divided into cells around scattered seed points, straight shared borders meeting at sharp junctions, cells ranging from splinters to slabs, one flat fill per cell, abstract style image,",
   "tags": [
    "flat_color",
    "mosaic",
@@ -269,7 +269,7 @@
   "family": "Experimental & Material",
   "axis": "style",
   "medium": "abstract style image",
-  "nl": "Truchet rendering, one square tile rotated at random across a strict grid, quarter-arcs joining tile to tile into wandering continuous paths, two-tone fills, tile seams left visible, abstract style image.",
+  "nl": "Truchet rendering, one square tile rotated at random across a strict grid, quarter-arcs joining tile to tile into wandering continuous paths, two-tone fills, tile seams left visible, abstract style image,",
   "tags": [
    "minimalism",
    "monochrome",
@@ -286,7 +286,7 @@
   "family": "Experimental & Material",
   "axis": "style",
   "medium": "abstract style image",
-  "nl": "Noise-contour rendering, smooth pseudo-random terrain sliced into nested iso-lines, bands crowding tight where the slope steepens and opening out where it flattens, one ink weight on pale ground, abstract style image.",
+  "nl": "Noise-contour rendering, smooth pseudo-random terrain sliced into nested iso-lines, bands crowding tight where the slope steepens and opening out where it flattens, one ink weight on pale ground, abstract style image,",
   "tags": [
    "lineart",
    "minimalism",
@@ -303,7 +303,7 @@
   "family": "Experimental & Material",
   "axis": "style",
   "medium": "abstract style image",
-  "nl": "Attractor rendering, one traced trajectory looped millions of times, density building luminous wings out of darkness, hairline filaments crossing, additive glow blooming where paths pile up, abstract style image.",
+  "nl": "Attractor rendering, one traced trajectory looped millions of times, density building luminous wings out of darkness, hairline filaments crossing, additive glow blooming where paths pile up, abstract style image,",
   "tags": [
    "glowing",
    "dark",
@@ -320,7 +320,7 @@
   "family": "Experimental & Material",
   "axis": "style",
   "medium": "abstract style image",
-  "nl": "Harmonograph rendering, interlaced pendulum loops drawn as one unbroken line, rosette symmetry drifting slowly out of true, ink tapering as the swing decays, faint warm paper tone behind, abstract style image.",
+  "nl": "Harmonograph rendering, interlaced pendulum loops drawn as one unbroken line, rosette symmetry drifting slowly out of true, ink tapering as the swing decays, faint warm paper tone behind, abstract style image,",
   "tags": [
    "lineart",
    "pen_(medium)",
