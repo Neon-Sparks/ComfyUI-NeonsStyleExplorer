@@ -123,10 +123,22 @@ def save_override(name, **fields):
 
 
 def delete_override(name):
-    name = clean_name(name).lower()
+    """Drop an override, found by either name it answers to.
+
+    A patch is keyed by the SHIPPED name so the entry keeps its id through a
+    rename — but the browser only knows the name on screen, which after a rename
+    is the new one. Matching only the key meant a renamed style could never be
+    reverted.
+    """
+    wanted = clean_name(name).lower()
+    if not wanted:
+        return False
     overrides = load_overrides()
-    for key in list(overrides):
-        if key.lower() == name:
+    for key, patch in list(overrides.items()):
+        renamed = ""
+        if isinstance(patch, dict):
+            renamed = clean_name(patch.get("name") or "").lower()
+        if key.lower() == wanted or (renamed and renamed == wanted):
             overrides.pop(key)
             write_json(OVERRIDES_PATH, overrides)
             entries(force=True)

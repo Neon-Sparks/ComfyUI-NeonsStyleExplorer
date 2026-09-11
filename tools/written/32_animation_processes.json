@@ -4,7 +4,7 @@
   "family": "Western Animation",
   "axis": "style",
   "medium": "cartoon style image",
-  "nl": "Xerographic cel rendering, pencil drawings photocopied straight onto cels, scratchy doubled grey-black outlines, construction lines left in place, flat paint filling loosely inside the line, cartoon style image,",
+  "nl": "Xerographic cel, pencil drawings photocopied straight onto cels, scratchy doubled grey-black outlines, construction lines left in place, flat paint filling loosely inside the line, cartoon style image,",
   "tags": [
    "lineart",
    "sketch",
@@ -21,7 +21,7 @@
   "family": "Western Animation",
   "axis": "style",
   "medium": "cartoon style image",
-  "nl": "Direct-on-film rendering, forms scratched and inked into the emulsion by hand, a jittering line that never repeats twice, raw flare along the sprocket side, dust and splice damage riding through, cartoon style image,",
+  "nl": "Direct-on-film animation, forms scratched and inked into the emulsion by hand, a jittering line that never repeats twice, raw flare along the sprocket side, dust and splice damage riding through, cartoon style image,",
   "tags": [
    "film_grain",
    "high_contrast",
@@ -38,7 +38,7 @@
   "family": "Western Animation",
   "axis": "style",
   "medium": "cartoon style image",
-  "nl": "Paint-on-glass rendering, wet oils smeared and reworked under the camera, brush ridges catching the light, forms half-dissolving into one another, luminous backlit colour, cartoon style image,",
+  "nl": "Paint-on-glass animation, wet oils smeared and reworked under the camera, brush ridges catching the light, forms half-dissolving into one another, luminous backlit colour, cartoon style image,",
   "tags": [
    "oil_painting_(medium)",
    "textured",
@@ -55,7 +55,7 @@
   "family": "Western Animation",
   "axis": "style",
   "medium": "cartoon style image",
-  "nl": "Pinscreen rendering, an image formed by thousands of pins pushed to differing depths, tone made only from tiny cast shadows, soft grainy relief, an even matte grey field behind, cartoon style image,",
+  "nl": "Pinscreen animation, an image formed by thousands of pins pushed to differing depths, tone made only from tiny cast shadows, soft grainy relief, an even matte grey field behind, cartoon style image,",
   "tags": [
    "monochrome",
    "textured",
@@ -72,7 +72,7 @@
   "family": "Western Animation",
   "axis": "style",
   "medium": "cartoon style image",
-  "nl": "Squiggle rendering, every contour vibrating with hand-redrawn wobble, flat unshaded fills inside restless outlines, cheerfully crude proportions, plain colour cards behind, cartoon style image,",
+  "nl": "Squiggle animation, every contour vibrating with hand-redrawn wobble, flat unshaded fills inside restless outlines, cheerfully crude proportions, plain colour cards behind, cartoon style image,",
   "tags": [
    "lineart",
    "flat_color",
@@ -106,7 +106,7 @@
   "family": "Western Animation",
   "axis": "style",
   "medium": "collage style image",
-  "nl": "Cutout collage rendering, old engravings clipped out and hinged into new arrangements, hard scissor edges, line weights and greys frankly mismatched, flat coloured card behind them, collage style image,",
+  "nl": "Cutout collage, old engravings clipped out and hinged into new arrangements, hard scissor edges, line weights and greys frankly mismatched, flat coloured card behind them, collage style image,",
   "tags": [
    "collage",
    "monochrome",
@@ -123,7 +123,7 @@
   "family": "Western Animation",
   "axis": "style",
   "medium": "comic style image",
-  "nl": "Motion-comic rendering, finished comic artwork separated onto sliding layers, hard panel edges kept intact, print halftone still visible inside the drawing, painted backgrounds behind flat figures, comic style image,",
+  "nl": "Motion-comic, finished comic artwork separated onto sliding layers, hard panel edges kept intact, print halftone still visible inside the drawing, painted backgrounds behind flat figures, comic style image,",
   "tags": [
    "comic",
    "halftone",
@@ -140,7 +140,7 @@
   "family": "Anime & Manga",
   "axis": "style",
   "medium": "anime style image",
-  "nl": "Kanada-school rendering, angular explosion shapes with cracked highlight rims, debris flung outward in hard cel shapes, exaggerated perspective smears, hot yellow-white cores, anime style image,",
+  "nl": "Kanada-school animation, angular explosion shapes with cracked highlight rims, debris flung outward in hard cel shapes, exaggerated perspective smears, hot yellow-white cores, anime style image,",
   "tags": [
    "anime_coloring",
    "high_contrast",
@@ -157,7 +157,7 @@
   "family": "Anime & Manga",
   "axis": "style",
   "medium": "anime style image",
-  "nl": "Smear-frame rendering, deliberately distorted in-between drawings, limbs stretched into ribbons for a single beat, several ghosted contours at once, flat cel colour kept flat through the distortion, anime style image,",
+  "nl": "Smear-frame animation, deliberately distorted in-between drawings, limbs stretched into ribbons for a single beat, several ghosted contours at once, flat cel colour kept flat through the distortion, anime style image,",
   "tags": [
    "anime_coloring",
    "motion_blur",
@@ -174,7 +174,7 @@
   "family": "Anime & Manga",
   "axis": "style",
   "medium": "anime style image",
-  "nl": "Missile-swarm rendering, dozens of thin smoke trails spiralling in dense parallel curves, hard cel-shaded plumes, steep perspective on the trail bundle, high-contrast sky behind it, anime style image,",
+  "nl": "Missile-swarm art, dozens of thin smoke trails spiralling in dense parallel curves, hard cel-shaded plumes, steep perspective on the trail bundle, high-contrast sky behind it, anime style image,",
   "tags": [
    "anime_coloring",
    "motion_lines",
@@ -191,7 +191,7 @@
   "family": "Anime & Manga",
   "axis": "style",
   "medium": "manga style image",
-  "nl": "Copy-shop doujin rendering, toner-heavy monochrome printing, screentone crushed into flat black patches, line thickened and slightly ghosted, cheap absorbent paper stock, manga style image,",
+  "nl": "Copy-shop doujin art, toner-heavy monochrome printing, screentone crushed into flat black patches, line thickened and slightly ghosted, cheap absorbent paper stock, manga style image,",
   "tags": [
    "screentones",
    "monochrome",
@@ -208,7 +208,7 @@
   "family": "Anime & Manga",
   "axis": "style",
   "medium": "anime style image",
-  "nl": "OVA airbrush rendering, airbrushed gradients over hand-inked line, chrome sparkle and hard rim light on every edge, deep purple-to-magenta sky wash, faint print halftone in the flats, anime style image,",
+  "nl": "OVA airbrush art, airbrushed gradients over hand-inked line, chrome sparkle and hard rim light on every edge, deep purple-to-magenta sky wash, faint print halftone in the flats, anime style image,",
   "tags": [
    "airbrush_(medium)",
    "1980s_(style)",

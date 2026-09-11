@@ -8,7 +8,7 @@
       "family": "3D & Games",
       "axis": "format",
       "medium": "technical drawing style image",
-      "nl": "Shaded CAD rendering, flat grey surfaces with crisp edge lines, ruled dimension arrows, blue technical ground, no texture, technical drawing style image,",
+      "nl": "Shaded CAD drawing, flat grey surfaces with crisp edge lines, ruled dimension arrows, blue technical ground, no texture, technical drawing style image,",
       "tags": [
         "diagram",
         "wireframe",
@@ -29,7 +29,7 @@
       "family": "3D & Games",
       "axis": "format",
       "medium": "technical drawing style image",
-      "nl": "Blueprint rendering, white line drawing on cyanotype blue, orthographic projection, dimension callouts, faint grid, technical drawing style image,",
+      "nl": "Blueprint drawing, white line drawing on cyanotype blue, orthographic projection, dimension callouts, faint grid, technical drawing style image,",
       "tags": [
         "diagram",
         "blue_theme",
@@ -316,7 +316,7 @@
       "family": "3D & Games",
       "axis": "style",
       "medium": "handmade style image",
-      "nl": "Cut-paper stop-motion rendering, layered paper shapes with visible edges and drop shadows, matte stock texture, slight jitter, handmade style image,",
+      "nl": "Cut-paper stop-motion, layered paper shapes with visible edges and drop shadows, matte stock texture, slight jitter, handmade style image,",
       "tags": [
         "papercraft",
         "stop_motion",
@@ -707,7 +707,7 @@
       "family": "3D & Games",
       "axis": "style",
       "medium": "cgi style image",
-      "nl": "Grease-pencil hybrid rendering, hand-drawn strokes in 3D space, flat inked shapes over volumetric staging, paper-grain overlay, cgi style image,",
+      "nl": "Grease-pencil hybrid drawing, hand-drawn strokes in 3D space, flat inked shapes over volumetric staging, paper-grain overlay, cgi style image,",
       "tags": [
         "3d",
         "lineart",
@@ -1740,7 +1740,7 @@
       "family": "3D & Games",
       "axis": "style",
       "medium": "illustration style image",
-      "nl": "Visionary rendering, anatomical transparency layered with glowing energy lattices, symmetrical mandala framing, electric palette, illustration style image,",
+      "nl": "Visionary illustration, anatomical transparency layered with glowing energy lattices, symmetrical mandala framing, electric palette, illustration style image,",
       "tags": [
         "psychedelic",
         "glowing",
@@ -1807,7 +1807,7 @@
       "family": "3D & Games",
       "axis": "style",
       "medium": "illustration style image",
-      "nl": "Arts-and-crafts pattern rendering, flat stylised birds and foliage, even outline, muted heritage palette, repeating rhythm, illustration style image,",
+      "nl": "Arts-and-crafts pattern, flat stylised birds and foliage, even outline, muted heritage palette, repeating rhythm, illustration style image,",
       "tags": [
         "art_nouveau",
         "flat_color",
@@ -1829,7 +1829,7 @@
       "family": "3D & Games",
       "axis": "style",
       "medium": "graphic style image",
-      "nl": "Bold pattern-block rendering, clashing primary geometry, thick black stripes, flat poster colour, playful repetition, graphic style image,",
+      "nl": "Bold pattern-block graphics, clashing primary geometry, thick black stripes, flat poster colour, playful repetition, graphic style image,",
       "tags": [
         "flat_color",
         "colorful",
@@ -1873,7 +1873,7 @@
       "family": "3D & Games",
       "axis": "style",
       "medium": "collage style image",
-      "nl": "Collage rendering, layered cut fragments with visible edges, mismatched scale and grain, tape and shadow between pieces, collage style image,",
+      "nl": "Collage, layered cut fragments with visible edges, mismatched scale and grain, tape and shadow between pieces, collage style image,",
       "tags": [
         "collage",
         "textured",
@@ -1917,7 +1917,7 @@
       "family": "3D & Games",
       "axis": "style",
       "medium": "print style image",
-      "nl": "Contemporary litho rendering, grainy crayon tone on stone, limited ink palette, soft edge bleed, heavy rag paper, print style image,",
+      "nl": "Contemporary lithograph, grainy crayon tone on stone, limited ink palette, soft edge bleed, heavy rag paper, print style image,",
       "tags": [
         "lithograph",
         "limited_palette",
@@ -1939,7 +1939,7 @@
       "family": "3D & Games",
       "axis": "style",
       "medium": "print style image",
-      "nl": "Modern ukiyo-e rendering, flat woodblock colour fields, keyblock outline, bokashi gradients, contemporary palette, paper grain, print style image,",
+      "nl": "Modern ukiyo-e, flat woodblock colour fields, keyblock outline, bokashi gradients, contemporary palette, paper grain, print style image,",
       "tags": [
         "ukiyo-e",
         "woodcut",
@@ -1962,7 +1962,7 @@
       "family": "3D & Games",
       "axis": "style",
       "medium": "handmade style image",
-      "nl": "Stop-motion puppet rendering, fabric and resin materials, visible stitch and seam detail, macro depth of field, moody practical light, handmade style image,",
+      "nl": "Stop-motion puppet, fabric and resin materials, visible stitch and seam detail, macro depth of field, moody practical light, handmade style image,",
       "tags": [
         "stop_motion",
         "textured",
@@ -2118,7 +2118,7 @@
       "family": "3D & Games",
       "axis": "style",
       "medium": "material style image",
-      "nl": "Bas-relief rendering, shallow carved depth, raking light picking out edges, uniform stone or plaster material, material style image,",
+      "nl": "Bas-relief work, shallow carved depth, raking light picking out edges, uniform stone or plaster material, material style image,",
       "tags": [
         "stone",
         "monochrome",
@@ -2140,7 +2140,7 @@
       "family": "3D & Games",
       "axis": "style",
       "medium": "illustration style image",
-      "nl": "Lowbrow rendering, cartoon-grotesque characters painted with slick airbrush polish, candy palette, glossy highlights, illustration style image,",
+      "nl": "Lowbrow illustration, cartoon-grotesque characters painted with slick airbrush polish, candy palette, glossy highlights, illustration style image,",
       "tags": [
         "airbrush_(medium)",
         "colorful",
@@ -2162,7 +2162,7 @@
       "family": "3D & Games",
       "axis": "style",
       "medium": "print style image",
-      "nl": "Impossible-geometry rendering, tessellated interlocking forms, contradictory perspective, meticulous hatched monochrome, print style image,",
+      "nl": "Impossible-geometry print, tessellated interlocking forms, contradictory perspective, meticulous hatched monochrome, print style image,",
       "tags": [
         "lithograph",
         "monochrome",
@@ -2185,7 +2185,7 @@
       "family": "3D & Games",
       "axis": "style",
       "medium": "material style image",
-      "nl": "Marble rendering, translucent white stone with grey veining, polished subsurface glow, carved chisel planes, museum light, material style image,",
+      "nl": "Marble work, translucent white stone with grey veining, polished subsurface glow, carved chisel planes, museum light, material style image,",
       "tags": [
         "marble",
         "stone",
@@ -2208,7 +2208,7 @@
       "family": "3D & Games",
       "axis": "style",
       "medium": "collage style image",
-      "nl": "Mixed-media rendering, paint over collaged paper and photo fragments, stitched and taped joins, layered surface texture, collage style image,",
+      "nl": "Mixed-media collage, paint over collaged paper and photo fragments, stitched and taped joins, layered surface texture, collage style image,",
       "tags": [
         "collage",
         "textured",
@@ -2230,7 +2230,7 @@
       "family": "3D & Games",
       "axis": "style",
       "medium": "print style image",
-      "nl": "Modern litho rendering, flat layered spot inks, subtle grain, hand-drawn crayon texture, deckled paper edge, print style image,",
+      "nl": "Modern lithograph, flat layered spot inks, subtle grain, hand-drawn crayon texture, deckled paper edge, print style image,",
       "tags": [
         "lithograph",
         "limited_palette",
@@ -2274,7 +2274,7 @@
       "family": "3D & Games",
       "axis": "style",
       "medium": "handmade style image",
-      "nl": "Puppet rendering, felted fabric skin and fur, oversized soft features, hand-operated posing, warm even stage light, handmade style image,",
+      "nl": "Puppet, felted fabric skin and fur, oversized soft features, hand-operated posing, warm even stage light, handmade style image,",
       "tags": [
         "textured",
         "fur",
@@ -2296,7 +2296,7 @@
       "family": "3D & Games",
       "axis": "style",
       "medium": "illustration style image",
-      "nl": "Negative-space rendering, subject implied by the empty ground, few bold shapes, high contrast, generous emptiness, illustration style image,",
+      "nl": "Negative-space illustration, subject implied by the empty ground, few bold shapes, high contrast, generous emptiness, illustration style image,",
       "tags": [
         "minimalism",
         "silhouette",
@@ -2318,7 +2318,7 @@
       "family": "3D & Games",
       "axis": "style",
       "medium": "illustration style image",
-      "nl": "Retro-thriller rendering, neon magenta and cyan halftone screens, hard shadow blocking, print misregistration, grain, illustration style image,",
+      "nl": "Retro-thriller illustration, neon magenta and cyan halftone screens, hard shadow blocking, print misregistration, grain, illustration style image,",
       "tags": [
         "halftone",
         "neon_palette",
@@ -2341,7 +2341,7 @@
       "family": "3D & Games",
       "axis": "style",
       "medium": "graphic style image",
-      "nl": "Neon-sign rendering, glowing glass tubing against a dark wall, halo bloom and reflected spill, warm transformer flicker, graphic style image,",
+      "nl": "Neon-sign, glowing glass tubing against a dark wall, halo bloom and reflected spill, warm transformer flicker, graphic style image,",
       "tags": [
         "neon_palette",
         "glowing",
@@ -2363,7 +2363,7 @@
       "family": "3D & Games",
       "axis": "style",
       "medium": "graphic style image",
-      "nl": "Neon-line rendering, luminous drawn strokes on black, additive glow at crossings, saturated hue shifts, soft bloom, graphic style image,",
+      "nl": "Neon-line graphics, luminous drawn strokes on black, additive glow at crossings, saturated hue shifts, soft bloom, graphic style image,",
       "tags": [
         "neon_palette",
         "glowing",
@@ -2385,7 +2385,7 @@
       "family": "3D & Games",
       "axis": "style",
       "medium": "illustration style image",
-      "nl": "Hero-shooter concept rendering, clean shape language, saturated team colour, painted material blocking, crisp rim light, illustration style image,",
+      "nl": "Hero-shooter concept illustration, clean shape language, saturated team colour, painted material blocking, crisp rim light, illustration style image,",
       "tags": [
         "concept_art",
         "colorful",
@@ -2407,7 +2407,7 @@
       "family": "3D & Games",
       "axis": "style",
       "medium": "handmade style image",
-      "nl": "Paper-cutout rendering, layered card shapes with soft drop shadows, matte stock texture, hand-cut edge wobble, handmade style image,",
+      "nl": "Paper-cutout, layered card shapes with soft drop shadows, matte stock texture, hand-cut edge wobble, handmade style image,",
       "tags": [
         "papercraft",
         "flat_color",
@@ -2474,7 +2474,7 @@
       "family": "3D & Games",
       "axis": "style",
       "medium": "material style image",
-      "nl": "Sculptural rendering, modelled volume in a single material, raking gallery light, honest tool marks, neutral plinth ground, material style image,",
+      "nl": "Sculptural work, modelled volume in a single material, raking gallery light, honest tool marks, neutral plinth ground, material style image,",
       "tags": [
         "stone",
         "greyscale",
@@ -2496,7 +2496,7 @@
       "family": "3D & Games",
       "axis": "style",
       "medium": "graphic style image",
-      "nl": "Retro-pop rendering, mid-century flat shapes, halftone texture, cheerful limited palette, chunky rounded forms, graphic style image,",
+      "nl": "Retro-pop graphics, mid-century flat shapes, halftone texture, cheerful limited palette, chunky rounded forms, graphic style image,",
       "tags": [
         "retro_artstyle",
         "halftone",
@@ -2541,7 +2541,7 @@
       "family": "3D & Games",
       "axis": "style",
       "medium": "graphic style image",
-      "nl": "Psychedelic rendering, kaleidoscopic symmetry, melting saturated colour, vibrating complementary edges, dense ornament, graphic style image,",
+      "nl": "Psychedelic graphics, kaleidoscopic symmetry, melting saturated colour, vibrating complementary edges, dense ornament, graphic style image,",
       "tags": [
         "psychedelic",
         "colorful",
@@ -2563,7 +2563,7 @@
       "family": "3D & Games",
       "axis": "style",
       "medium": "handmade style image",
-      "nl": "Paper-quilling rendering, coiled paper strips set on edge, layered spiral shapes, soft shadow between coils, matte stock, handmade style image,",
+      "nl": "Paper-quilling, coiled paper strips set on edge, layered spiral shapes, soft shadow between coils, matte stock, handmade style image,",
       "tags": [
         "papercraft",
         "textured",
@@ -2630,7 +2630,7 @@
       "family": "3D & Games",
       "axis": "style",
       "medium": "graphic style image",
-      "nl": "Tessellated rendering, interlocking repeated shapes filling the plane, no gaps, flat alternating colour, precise geometry, graphic style image,",
+      "nl": "Tessellated graphics, interlocking repeated shapes filling the plane, no gaps, flat alternating colour, precise geometry, graphic style image,",
       "tags": [
         "mosaic",
         "flat_color",
@@ -2697,7 +2697,7 @@
       "family": "3D & Games",
       "axis": "style",
       "medium": "technical drawing style image",
-      "nl": "Topographic rendering, nested contour lines describing elevation, even stroke weight, limited two-tone palette, technical drawing style image,",
+      "nl": "Topographic drawing, nested contour lines describing elevation, even stroke weight, limited two-tone palette, technical drawing style image,",
       "tags": [
         "diagram",
         "lineart",
@@ -2742,7 +2742,7 @@
       "family": "3D & Games",
       "axis": "style",
       "medium": "print style image",
-      "nl": "Ben-day rendering, tone built from dots that grow and shrink, hard black keyline, flat spot inks, visible registration, print style image,",
+      "nl": "Ben-day, tone built from dots that grow and shrink, hard black keyline, flat spot inks, visible registration, print style image,",
       "tags": [
         "halftone",
         "flat_color",
@@ -2787,7 +2787,7 @@
       "family": "3D & Games",
       "axis": "style",
       "medium": "illustration style image",
-      "nl": "Tattoo-flash rendering, bold black contour, limited spot colour, tight shading hatch, flat print layout on cream paper, illustration style image,",
+      "nl": "Tattoo-flash illustration, bold black contour, limited spot colour, tight shading hatch, flat print layout on cream paper, illustration style image,",
       "tags": [
         "lineart",
         "limited_palette",
@@ -2810,7 +2810,7 @@
       "family": "3D & Games",
       "axis": "style",
       "medium": "illustration style image",
-      "nl": "Vignette-framed rendering, subject centred in a soft-edged oval of light, surroundings fading to the paper, illustration style image,",
+      "nl": "Vignette-framed illustration, subject centred in a soft-edged oval of light, surroundings fading to the paper, illustration style image,",
       "tags": [
         "vignetting",
         "simple_background",
@@ -2832,7 +2832,7 @@
       "family": "3D & Games",
       "axis": "style",
       "medium": "handmade style image",
-      "nl": "Plasticine stop-motion rendering, fingerprint-dented clay, wide toothy grins, warm even set light, visible armature bulk, handmade style image,",
+      "nl": "Plasticine stop-motion, fingerprint-dented clay, wide toothy grins, warm even set light, visible armature bulk, handmade style image,",
       "tags": [
         "claymation",
         "stop_motion",
@@ -2897,7 +2897,7 @@
       "family": "3D & Games",
       "axis": "style",
       "medium": "handmade style image",
-      "nl": "Plasticine object rendering, soft dented clay surfaces, thumbprint texture, slightly uneven volumes, warm set light, handmade style image,",
+      "nl": "Plasticine object, soft dented clay surfaces, thumbprint texture, slightly uneven volumes, warm set light, handmade style image,",
       "tags": [
         "claymation",
         "stop_motion",
@@ -2940,7 +2940,7 @@
       "family": "3D & Games",
       "axis": "style",
       "medium": "handmade style image",
-      "nl": "Needle-felt rendering, fuzzy wool fibre surface, compressed soft volumes, needle pocks, heathered colour, handmade style image,",
+      "nl": "Needle-felt, fuzzy wool fibre surface, compressed soft volumes, needle pocks, heathered colour, handmade style image,",
       "tags": [
         "knitted",
         "textured",
@@ -2959,7 +2959,7 @@
       "family": "3D & Games",
       "axis": "style",
       "medium": "handmade style image",
-      "nl": "Origami rendering, crisp folded planes, sharp crease lines, matte paper colour, soft shadow in the valleys, handmade style image,",
+      "nl": "Origami, crisp folded planes, sharp crease lines, matte paper colour, soft shadow in the valleys, handmade style image,",
       "tags": [
         "papercraft",
         "textured",
@@ -2981,7 +2981,7 @@
       "family": "3D & Games",
       "axis": "style",
       "medium": "handmade style image",
-      "nl": "Papercraft rendering, faceted card panels with glue tabs, visible fold seams, matte stock, soft studio shadow, handmade style image,",
+      "nl": "Papercraft, faceted card panels with glue tabs, visible fold seams, matte stock, soft studio shadow, handmade style image,",
       "tags": [
         "papercraft",
         "low_poly",
@@ -3023,7 +3023,7 @@
       "family": "3D & Games",
       "axis": "style",
       "medium": "handmade style image",
-      "nl": "Plush rendering, soft pile fabric, visible seam stitching, embroidered features, stuffed rounded volumes, handmade style image,",
+      "nl": "Plush, soft pile fabric, visible seam stitching, embroidered features, stuffed rounded volumes, handmade style image,",
       "tags": [
         "textured",
         "embroidery",
@@ -3063,7 +3063,7 @@
       "family": "3D & Games",
       "axis": "style",
       "medium": "handmade style image",
-      "nl": "Stop-motion puppet rendering, fabric and silicone materials over an armature, macro depth of field, practical set light, handmade style image,",
+      "nl": "Stop-motion puppet, fabric and silicone materials over an armature, macro depth of field, practical set light, handmade style image,",
       "tags": [
         "stop_motion",
         "textured",

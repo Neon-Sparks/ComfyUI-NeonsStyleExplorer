@@ -215,7 +215,7 @@
       "family": "Western Animation",
       "axis": "style",
       "medium": "comic style image",
-      "nl": "Newspaper-strip rendering, economical pen line, benday dot tone, four-colour newsprint registration, small-panel clarity, paper yellowing, comic style image,",
+      "nl": "Newspaper-strip, economical pen line, benday dot tone, four-colour newsprint registration, small-panel clarity, paper yellowing, comic style image,",
       "tags": [
         "comic",
         "halftone",
@@ -236,7 +236,7 @@
       "family": "Western Animation",
       "axis": "style",
       "medium": "cartoon style image",
-      "nl": "Angular action-cartoon rendering, sharp geometric character shapes, thick tapering outline, flat saturated colour, wide empty staging, cartoon style image,",
+      "nl": "Angular action-cartoon, sharp geometric character shapes, thick tapering outline, flat saturated colour, wide empty staging, cartoon style image,",
       "tags": [
         "outline",
         "flat_color",
@@ -276,7 +276,7 @@
       "family": "Western Animation",
       "axis": "style",
       "medium": "cartoon style image",
-      "nl": "Sing-along-short rendering, black-and-white ink figures over grey wash, lyric card lettering space, projector flicker and dust, cartoon style image,",
+      "nl": "Sing-along-short animation, black-and-white ink figures over grey wash, lyric card lettering space, projector flicker and dust, cartoon style image,",
       "tags": [
         "monochrome",
         "retro_artstyle",
@@ -317,7 +317,7 @@
       "family": "Western Animation",
       "axis": "style",
       "medium": "collage style image",
-      "nl": "Cutout collage rendering, old engravings clipped out and hinged into new arrangements, hard scissor edges, line weights and greys frankly mismatched, flat coloured card behind them, collage style image,",
+      "nl": "Cutout collage, old engravings clipped out and hinged into new arrangements, hard scissor edges, line weights and greys frankly mismatched, flat coloured card behind them, collage style image,",
       "tags": [
         "collage",
         "monochrome",
@@ -337,7 +337,7 @@
       "family": "Western Animation",
       "axis": "style",
       "medium": "handmade style image",
-      "nl": "Puppet-animation rendering, coarse cloth and wood figures, grubby handmade texture, cold practical light, cramped set depth, handmade style image,",
+      "nl": "Puppet-animation, coarse cloth and wood figures, grubby handmade texture, cold practical light, cramped set depth, handmade style image,",
       "tags": [
         "stop_motion",
         "textured",
@@ -398,7 +398,7 @@
       "family": "Western Animation",
       "axis": "style",
       "medium": "cartoon style image",
-      "nl": "Flat folk-animation rendering, decorative flattened perspective, illuminated-manuscript pattern, warm limited palette, clean shape outline, cartoon style image,",
+      "nl": "Flat folk-animation, decorative flattened perspective, illuminated-manuscript pattern, warm limited palette, clean shape outline, cartoon style image,",
       "tags": [
         "flat_color",
         "limited_palette",
@@ -418,7 +418,7 @@
       "family": "Western Animation",
       "axis": "style",
       "medium": "comic style image",
-      "nl": "Atom-style Franco-Belgian rendering, bouncy geometric character design, even ligne-claire outline, flat retro colour, mid-century pattern accents, comic style image,",
+      "nl": "Atom-style Franco-Belgian comic art, bouncy geometric character design, even ligne-claire outline, flat retro colour, mid-century pattern accents, comic style image,",
       "tags": [
         "comic",
         "flat_color",
@@ -438,7 +438,7 @@
       "family": "Western Animation",
       "axis": "style",
       "medium": "cartoon style image",
-      "nl": "Gross-out cartoon rendering, sudden hyper-detailed painted close-up amid flat cel art, greasy texture, bulging veins and sweat, cartoon style image,",
+      "nl": "Gross-out cartoon, sudden hyper-detailed painted close-up amid flat cel art, greasy texture, bulging veins and sweat, cartoon style image,",
       "tags": [
         "painting_(medium)",
         "textured",
@@ -458,7 +458,7 @@
       "family": "Western Animation",
       "axis": "style",
       "medium": "cartoon style image",
-      "nl": "Grotesque cartoon rendering, bulging asymmetric features, scratchy uneven outline, sour clashing colour, collaged photo backgrounds, cartoon style image,",
+      "nl": "Grotesque cartoon, bulging asymmetric features, scratchy uneven outline, sour clashing colour, collaged photo backgrounds, cartoon style image,",
       "tags": [
         "outline",
         "colorful",
@@ -498,7 +498,7 @@
       "family": "Western Animation",
       "axis": "style",
       "medium": "cartoon style image",
-      "nl": "Lo-fi adult-animation rendering, minimal held drawings, thin uneven outline, muddy limited palette, deadpan flat staging, cartoon style image,",
+      "nl": "Lo-fi adult-animation, minimal held drawings, thin uneven outline, muddy limited palette, deadpan flat staging, cartoon style image,",
       "tags": [
         "flat_color",
         "limited_palette",
@@ -518,7 +518,7 @@
       "family": "Western Animation",
       "axis": "style",
       "medium": "comic style image",
-      "nl": "Ligne-claire rendering, uniform confident contour, no hatching, flat even colour, clear readable space, precise architectural detail, comic style image,",
+      "nl": "Ligne-claire comic art, uniform confident contour, no hatching, flat even colour, clear readable space, precise architectural detail, comic style image,",
       "tags": [
         "comic",
         "lineart",
@@ -538,7 +538,7 @@
       "family": "Western Animation",
       "axis": "style",
       "medium": "cartoon style image",
-      "nl": "Modern TV cartoon rendering, rounded bean shapes, thin coloured outline, soft pastel-bright palette, minimal shading, clean digital finish, cartoon style image,",
+      "nl": "Modern TV cartoon, rounded bean shapes, thin coloured outline, soft pastel-bright palette, minimal shading, clean digital finish, cartoon style image,",
       "tags": [
         "flat_color",
         "outline",
@@ -558,7 +558,7 @@
       "family": "Western Animation",
       "axis": "style",
       "medium": "comic style image",
-      "nl": "Motion-comic rendering, finished comic artwork separated onto sliding layers, hard panel edges kept intact, print halftone still visible inside the drawing, painted backgrounds behind flat figures, comic style image,",
+      "nl": "Motion-comic, finished comic artwork separated onto sliding layers, hard panel edges kept intact, print halftone still visible inside the drawing, painted backgrounds behind flat figures, comic style image,",
       "tags": [
         "comic",
         "halftone",
@@ -598,7 +598,7 @@
       "family": "Western Animation",
       "axis": "style",
       "medium": "comic style image",
-      "nl": "Métal-Hurlant rendering, dense ink linework, airbrushed sci-fi gradients, acid-and-earth palette, ornate machine detail, printed grain, comic style image,",
+      "nl": "Métal-Hurlant comic art, dense ink linework, airbrushed sci-fi gradients, acid-and-earth palette, ornate machine detail, printed grain, comic style image,",
       "tags": [
         "comic",
         "airbrush_(medium)",
@@ -619,7 +619,7 @@
       "family": "Western Animation",
       "axis": "style",
       "medium": "cartoon style image",
-      "nl": "Paint-on-glass rendering, wet oils smeared and reworked under the camera, brush ridges catching the light, forms half-dissolving into one another, luminous backlit colour, cartoon style image,",
+      "nl": "Paint-on-glass animation, wet oils smeared and reworked under the camera, brush ridges catching the light, forms half-dissolving into one another, luminous backlit colour, cartoon style image,",
       "tags": [
         "oil_painting_(medium)",
         "textured",
@@ -659,7 +659,7 @@
       "family": "Western Animation",
       "axis": "style",
       "medium": "cartoon style image",
-      "nl": "Pinscreen rendering, an image formed by thousands of pins pushed to differing depths, tone made only from tiny cast shadows, soft grainy relief, an even matte grey field behind, cartoon style image,",
+      "nl": "Pinscreen animation, an image formed by thousands of pins pushed to differing depths, tone made only from tiny cast shadows, soft grainy relief, an even matte grey field behind, cartoon style image,",
       "tags": [
         "monochrome",
         "textured",
@@ -679,7 +679,7 @@
       "family": "Western Animation",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Pixilation rendering, live subjects frozen frame by frame, slight pose jumps, hard practical light, real-world texture, photograph style image,",
+      "nl": "Pixilation capture, live subjects frozen frame by frame, slight pose jumps, hard practical light, real-world texture, photograph style image,",
       "tags": [
         "stop_motion",
         "photo_(medium)",
@@ -780,7 +780,7 @@
       "family": "Western Animation",
       "axis": "style",
       "medium": "cartoon style image",
-      "nl": "Direct-on-film rendering, forms scratched and inked into the emulsion by hand, a jittering line that never repeats twice, raw flare along the sprocket side, dust and splice damage riding through, cartoon style image,",
+      "nl": "Direct-on-film animation, forms scratched and inked into the emulsion by hand, a jittering line that never repeats twice, raw flare along the sprocket side, dust and splice damage riding through, cartoon style image,",
       "tags": [
         "film_grain",
         "high_contrast",
@@ -840,7 +840,7 @@
       "family": "Western Animation",
       "axis": "style",
       "medium": "cartoon style image",
-      "nl": "Squiggle rendering, every contour vibrating with hand-redrawn wobble, flat unshaded fills inside restless outlines, cheerfully crude proportions, plain colour cards behind, cartoon style image,",
+      "nl": "Squiggle animation, every contour vibrating with hand-redrawn wobble, flat unshaded fills inside restless outlines, cheerfully crude proportions, plain colour cards behind, cartoon style image,",
       "tags": [
         "lineart",
         "flat_color",
@@ -860,7 +860,7 @@
       "family": "Western Animation",
       "axis": "style",
       "medium": "comic style image",
-      "nl": "Sunday funnies rendering, bright four-colour newsprint inks, visible dot rosettes, slight plate misregistration, simple pen line, paper cream, comic style image,",
+      "nl": "Sunday funnies, bright four-colour newsprint inks, visible dot rosettes, slight plate misregistration, simple pen line, paper cream, comic style image,",
       "tags": [
         "comic",
         "halftone",
@@ -881,7 +881,7 @@
       "family": "Western Animation",
       "axis": "style",
       "medium": "drawing style image",
-      "nl": "Whiteboard-marker rendering, squeaky dry-erase strokes on white, uneven ink coverage, ghosted erasures, one or two accent colours, drawing style image,",
+      "nl": "Whiteboard-marker drawing, squeaky dry-erase strokes on white, uneven ink coverage, ghosted erasures, one or two accent colours, drawing style image,",
       "tags": [
         "sketch",
         "white_theme",
@@ -901,7 +901,7 @@
       "family": "Western Animation",
       "axis": "style",
       "medium": "cartoon style image",
-      "nl": "Xerographic cel rendering, pencil drawings photocopied straight onto cels, scratchy doubled grey-black outlines, construction lines left in place, flat paint filling loosely inside the line, cartoon style image,",
+      "nl": "Xerographic cel, pencil drawings photocopied straight onto cels, scratchy doubled grey-black outlines, construction lines left in place, flat paint filling loosely inside the line, cartoon style image,",
       "tags": [
         "lineart",
         "sketch",
@@ -921,7 +921,7 @@
       "family": "Western Animation",
       "axis": "style",
       "medium": "cartoon style image",
-      "nl": "Modernist-animation rendering, spare graphic figures, flat mid-century colour, textured paper ground, huge empty space, cartoon style image,",
+      "nl": "Modernist-animation, spare graphic figures, flat mid-century colour, textured paper ground, huge empty space, cartoon style image,",
       "tags": [
         "flat_color",
         "minimalism",
@@ -942,7 +942,7 @@
       "family": "Western Animation",
       "axis": "style",
       "medium": "cartoon style image",
-      "nl": "Noodle-limb cartoon rendering, simple dot-eyed faces, bendy rubbery limbs, flat candy palette, thin even outline, soft pastel skies, cartoon style image,",
+      "nl": "Noodle-limb cartoon, simple dot-eyed faces, bendy rubbery limbs, flat candy palette, thin even outline, soft pastel skies, cartoon style image,",
       "tags": [
         "flat_color",
         "outline",
@@ -987,7 +987,7 @@
       "family": "Western Animation",
       "axis": "style",
       "medium": "cartoon style image",
-      "nl": "Deco-noir animation rendering, heavy black shape blocking, angular art-deco design, limited palette against dark grounds, hard graphic shadow, cartoon style image,",
+      "nl": "Deco-noir animation, heavy black shape blocking, angular art-deco design, limited palette against dark grounds, hard graphic shadow, cartoon style image,",
       "tags": [
         "art_deco",
         "high_contrast",
@@ -1010,7 +1010,7 @@
       "family": "Western Animation",
       "axis": "style",
       "medium": "cartoon style image",
-      "nl": "General cartoon rendering, bold even outline, flat bright colour, exaggerated squashy shapes, single soft shadow tone, cartoon style image,",
+      "nl": "General cartoon, bold even outline, flat bright colour, exaggerated squashy shapes, single soft shadow tone, cartoon style image,",
       "tags": [
         "outline",
         "flat_color",
@@ -1032,7 +1032,7 @@
       "family": "Western Animation",
       "axis": "style",
       "medium": "cartoon style image",
-      "nl": "Classic feature-animation rendering, soft airbrushed cel shading, warm rounded appeal, painted watercolour backgrounds, gentle glow, film grain, cartoon style image,",
+      "nl": "Classic feature-animation, soft airbrushed cel shading, warm rounded appeal, painted watercolour backgrounds, gentle glow, film grain, cartoon style image,",
       "tags": [
         "airbrush_(medium)",
         "watercolor_(medium)",
@@ -1055,7 +1055,7 @@
       "family": "Western Animation",
       "axis": "style",
       "medium": "cartoon style image",
-      "nl": "Neon action-animation rendering, acid magenta and cyan lighting, hard cel shadows, glitch chroma fringing, saturated impact glow, cartoon style image,",
+      "nl": "Neon action-animation, acid magenta and cyan lighting, hard cel shadows, glitch chroma fringing, saturated impact glow, cartoon style image,",
       "tags": [
         "neon_palette",
         "cel_shading",
@@ -1078,7 +1078,7 @@
       "family": "Western Animation",
       "axis": "style",
       "medium": "illustration style image",
-      "nl": "Ultradetailed feature-illustration rendering, polished airbrush gradients, luminous eyes, ornate costume detail, warm storybook light, illustration style image,",
+      "nl": "Ultradetailed feature-illustration, polished airbrush gradients, luminous eyes, ornate costume detail, warm storybook light, illustration style image,",
       "tags": [
         "airbrush_(medium)",
         "gradient",
@@ -1100,7 +1100,7 @@
       "family": "Western Animation",
       "axis": "style",
       "medium": "cartoon style image",
-      "nl": "Flat sitcom-animation rendering, rounded simple heads, thin uniform outline, unshaded flat colour, plain suburban backdrops, cartoon style image,",
+      "nl": "Flat sitcom-animation, rounded simple heads, thin uniform outline, unshaded flat colour, plain suburban backdrops, cartoon style image,",
       "tags": [
         "flat_color",
         "outline",
@@ -1122,7 +1122,7 @@
       "family": "Western Animation",
       "axis": "style",
       "medium": "cartoon style image",
-      "nl": "Retro-future sitcom rendering, thick clean outline, flat colour with one shadow tone, chrome-and-teal palette, receding grid perspective, cartoon style image,",
+      "nl": "Retro-future sitcom animation, thick clean outline, flat colour with one shadow tone, chrome-and-teal palette, receding grid perspective, cartoon style image,",
       "tags": [
         "outline",
         "flat_color",
@@ -1144,7 +1144,7 @@
       "family": "Western Animation",
       "axis": "style",
       "medium": "cartoon style image",
-      "nl": "Mystery-cartoon rendering, chunky rounded shapes, thin brown outline, autumn pine palette, flat colour with soft shadow, cartoon style image,",
+      "nl": "Mystery-cartoon, chunky rounded shapes, thin brown outline, autumn pine palette, flat colour with soft shadow, cartoon style image,",
       "tags": [
         "outline",
         "flat_color",
@@ -1166,7 +1166,7 @@
       "family": "Western Animation",
       "axis": "style",
       "medium": "cartoon style image",
-      "nl": "Hanna-Barbera limited rendering, flat three-colour characters, thick ink line, repeated background panning plates, telecine warmth and dust, cartoon style image,",
+      "nl": "Hanna-Barbera limited animation, flat three-colour characters, thick ink line, repeated background panning plates, telecine warmth and dust, cartoon style image,",
       "tags": [
         "retro_artstyle",
         "flat_color",
@@ -1189,7 +1189,7 @@
       "family": "Western Animation",
       "axis": "style",
       "medium": "cartoon style image",
-      "nl": "Angular gothic-cartoon rendering, spindly sharp shapes, acid green and purple palette, harsh perspective distortion, thick jagged outline, cartoon style image,",
+      "nl": "Angular gothic-cartoon, spindly sharp shapes, acid green and purple palette, harsh perspective distortion, thick jagged outline, cartoon style image,",
       "tags": [
         "outline",
         "green_theme",
@@ -1212,7 +1212,7 @@
       "family": "Western Animation",
       "axis": "style",
       "medium": "cartoon style image",
-      "nl": "Modern cartoon rendering, confident simplified outline, flat bright fills, minimal contact shadow, geometric appeal, clean digital edges, cartoon style image,",
+      "nl": "Modern cartoon, confident simplified outline, flat bright fills, minimal contact shadow, geometric appeal, clean digital edges, cartoon style image,",
       "tags": [
         "flat_color",
         "outline",
@@ -1234,7 +1234,7 @@
       "family": "Western Animation",
       "axis": "style",
       "medium": "cartoon style image",
-      "nl": "Nickelodeon-style rendering, rubbery asymmetric shapes, uneven brush outline, saturated slime-bright palette, wobbly hand-drawn energy, cartoon style image,",
+      "nl": "Nickelodeon-style animation, rubbery asymmetric shapes, uneven brush outline, saturated slime-bright palette, wobbly hand-drawn energy, cartoon style image,",
       "tags": [
         "outline",
         "colorful",
@@ -1256,7 +1256,7 @@
       "family": "Western Animation",
       "axis": "style",
       "medium": "comic style image",
-      "nl": "Peanuts-strip rendering, wobbling thin pen line, tiny simple features, flat pale colour, huge empty white ground, comic style image,",
+      "nl": "Peanuts-strip, wobbling thin pen line, tiny simple features, flat pale colour, huge empty white ground, comic style image,",
       "tags": [
         "comic",
         "lineart",
@@ -1279,7 +1279,7 @@
       "family": "Western Animation",
       "axis": "style",
       "medium": "cartoon style image",
-      "nl": "Wobble-line sci-fi cartoon rendering, nervous uneven outline, bulging eyes, flat pastel-acid palette, minimal shading, cartoon style image,",
+      "nl": "Wobble-line sci-fi cartoon, nervous uneven outline, bulging eyes, flat pastel-acid palette, minimal shading, cartoon style image,",
       "tags": [
         "outline",
         "flat_color",
@@ -1301,7 +1301,7 @@
       "family": "Western Animation",
       "axis": "style",
       "medium": "cartoon style image",
-      "nl": "Rubber-hose rendering, jointless curving limbs, pie-cut eyes, glove hands, black-and-white ink with grey wash, projector flicker, cartoon style image,",
+      "nl": "Rubber-hose animation, jointless curving limbs, pie-cut eyes, glove hands, black-and-white ink with grey wash, projector flicker, cartoon style image,",
       "tags": [
         "monochrome",
         "retro_artstyle",
@@ -1323,7 +1323,7 @@
       "family": "Western Animation",
       "axis": "style",
       "medium": "cartoon style image",
-      "nl": "Yellow-family sitcom rendering, overbite profiles, thick uniform black outline, flat unshaded colour, primary-heavy palette, cartoon style image,",
+      "nl": "Yellow-family sitcom animation, overbite profiles, thick uniform black outline, flat unshaded colour, primary-heavy palette, cartoon style image,",
       "tags": [
         "outline",
         "flat_color",
@@ -1345,7 +1345,7 @@
       "family": "Western Animation",
       "axis": "style",
       "medium": "cartoon style image",
-      "nl": "Construction-paper cutout rendering, flat geometric shapes, thin dark outline, matte paper colour, deliberately stiff staging, cartoon style image,",
+      "nl": "Construction-paper cutout animation, flat geometric shapes, thin dark outline, matte paper colour, deliberately stiff staging, cartoon style image,",
       "tags": [
         "papercraft",
         "flat_color",
@@ -1367,7 +1367,7 @@
       "family": "Western Animation",
       "axis": "style",
       "medium": "cartoon style image",
-      "nl": "Soft-shape cartoon rendering, rounded chunky forms, thin coloured outline, gradient sunset palette, gentle glow shading, cartoon style image,",
+      "nl": "Soft-shape cartoon, rounded chunky forms, thin coloured outline, gradient sunset palette, gentle glow shading, cartoon style image,",
       "tags": [
         "outline",
         "gradient",
@@ -1389,7 +1389,7 @@
       "family": "Western Animation",
       "axis": "style",
       "medium": "cartoon style image",
-      "nl": "Tex-Avery rendering, extreme squash-and-stretch, popping eye takes, hot saturated primaries, bold ink line, wild smear frames, cartoon style image,",
+      "nl": "Tex-Avery animation, extreme squash-and-stretch, popping eye takes, hot saturated primaries, bold ink line, wild smear frames, cartoon style image,",
       "tags": [
         "retro_artstyle",
         "outline",

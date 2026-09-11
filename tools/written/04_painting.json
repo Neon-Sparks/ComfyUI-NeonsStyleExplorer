@@ -160,7 +160,7 @@
  {
   "name": "[Painting] Ballpoint Sketch",
   "medium": "drawing style image",
-  "nl": "Ballpoint rendering, humble blue-black hatching, glossy ink build-up, blotted starts, notebook paper grain, drawing style image,",
+  "nl": "Ballpoint drawing, humble blue-black hatching, glossy ink build-up, blotted starts, notebook paper grain, drawing style image,",
   "tags": [
    "ballpoint_pen_(medium)",
    "cross-hatching",
@@ -298,7 +298,7 @@
  {
   "name": "[Painting] Charcoal",
   "medium": "drawing style image",
-  "nl": "Charcoal rendering, velvet blacks smudged with the finger, lifted white highlights, dusty grain, toothy paper, drawing style image,",
+  "nl": "Charcoal drawing, velvet blacks smudged with the finger, lifted white highlights, dusty grain, toothy paper, drawing style image,",
   "tags": [
    "charcoal_(medium)",
    "monochrome",
@@ -363,7 +363,7 @@
  {
   "name": "[Painting] Color Field",
   "medium": "abstract style image",
-  "nl": "Colour-field rendering, large stained planes of hovering colour, soft bleeding boundaries, matte unvarnished surface, no drawing, abstract style image,",
+  "nl": "Colour-field composition, large stained planes of hovering colour, soft bleeding boundaries, matte unvarnished surface, no drawing, abstract style image,",
   "tags": [
    "gradient",
    "flat_color",
@@ -378,7 +378,7 @@
  {
   "name": "[Painting] Colored Pencil",
   "medium": "drawing style image",
-  "nl": "Coloured-pencil rendering, waxy layered strokes, visible directional hatching, paper tooth breaking the colour, gentle burnish, drawing style image,",
+  "nl": "Coloured-pencil drawing, waxy layered strokes, visible directional hatching, paper tooth breaking the colour, gentle burnish, drawing style image,",
   "tags": [
    "colored_pencil_(medium)",
    "traditional_media",
@@ -411,7 +411,7 @@
  {
   "name": "[Painting] Cross-Hatching",
   "medium": "drawing style image",
-  "nl": "Cross-hatch rendering, form built purely from crossing pen strokes, tonal density by line spacing, white paper as light, drawing style image,",
+  "nl": "Cross-hatch drawing, form built purely from crossing pen strokes, tonal density by line spacing, white paper as light, drawing style image,",
   "tags": [
    "cross-hatching",
    "monochrome",
@@ -426,7 +426,7 @@
  {
   "name": "[Painting] Dada Collage",
   "medium": "collage style image",
-  "nl": "Dada collage rendering, cut newsprint fragments, mismatched scales, typographic scraps, glue wrinkles, torn edges, collage style image,",
+  "nl": "Dada collage, cut newsprint fragments, mismatched scales, typographic scraps, glue wrinkles, torn edges, collage style image,",
   "tags": [
    "collage",
    "halftone",
@@ -661,7 +661,7 @@
  {
   "name": "[Painting] Graphite Plate",
   "medium": "drawing style image",
-  "nl": "Graphite plate rendering, silvery pencil sheen, tight even hatching, smooth tonal gradation, hot-press paper, drawing style image,",
+  "nl": "Graphite plate drawing, silvery pencil sheen, tight even hatching, smooth tonal gradation, hot-press paper, drawing style image,",
   "tags": [
    "graphite_(medium)",
    "monochrome",
@@ -1062,7 +1062,7 @@
  {
   "name": "[Painting] Op Art",
   "medium": "abstract style image",
-  "nl": "Op-art rendering, precise repeating geometry, vibrating black-and-white contrast, illusory bulge and movement, flat inks, abstract style image,",
+  "nl": "Op-art composition, precise repeating geometry, vibrating black-and-white contrast, illusory bulge and movement, flat inks, abstract style image,",
   "tags": [
    "psychedelic",
    "high_contrast",
@@ -1307,7 +1307,7 @@
  {
   "name": "[Painting] Stipple",
   "medium": "drawing style image",
-  "nl": "Stipple rendering, tone built from thousands of ink dots, no lines at all, soft granular gradation, white paper, drawing style image,",
+  "nl": "Stipple drawing, tone built from thousands of ink dots, no lines at all, soft granular gradation, white paper, drawing style image,",
   "tags": [
    "halftone",
    "monochrome",
@@ -1493,7 +1493,7 @@
  {
   "name": "[Painting] Ukiyo-e",
   "medium": "print style image",
-  "nl": "Ukiyo-e rendering, flat mineral colour fields, keyblock contour, bokashi sky gradient, wood grain and paper fibre, print style image,",
+  "nl": "Ukiyo-e, flat mineral colour fields, keyblock contour, bokashi sky gradient, wood grain and paper fibre, print style image,",
   "tags": [
    "ukiyo-e",
    "woodcut",
@@ -1588,7 +1588,7 @@
  {
   "name": "[Painting][v2] 2020s Pin-Up",
   "medium": "illustration style image",
-  "nl": "Modern pin-up rendering, clean digital paint, glossy skin highlights, saturated retro palette, crisp rim light, illustration style image,",
+  "nl": "Modern pin-up, clean digital paint, glossy skin highlights, saturated retro palette, crisp rim light, illustration style image,",
   "tags": [
    "painting_(medium)",
    "colorful",
@@ -1633,7 +1633,7 @@
  {
   "name": "[Painting][v2] Adventure Illustration",
   "medium": "illustration style image",
-  "nl": "Adventure-illustration rendering, dynamic staging, warm painted light, brushy energetic texture, saturated pulp palette, illustration style image,",
+  "nl": "Adventure-illustration, dynamic staging, warm painted light, brushy energetic texture, saturated pulp palette, illustration style image,",
   "tags": [
    "painting_(medium)",
    "colorful",
@@ -1664,7 +1664,7 @@
  {
   "name": "[Painting][v2] Airbrush Fantasy",
   "medium": "illustration style image",
-  "nl": "Airbrush fantasy rendering, seamless sprayed gradients, chrome and skin sheen, glowing atmospheric haze, 1980s palette, illustration style image,",
+  "nl": "Airbrush fantasy illustration, seamless sprayed gradients, chrome and skin sheen, glowing atmospheric haze, 1980s palette, illustration style image,",
   "tags": [
    "airbrush_(medium)",
    "gradient",
@@ -1680,7 +1680,7 @@
  {
   "name": "[Painting][v2] Alphonse Mucha Masterwork",
   "medium": "illustration style image",
-  "nl": "Mucha-style rendering, whiplash contour line, pastel-and-gold decorative panels, mosaic halo framing, flat ornamental colour, illustration style image,",
+  "nl": "Mucha-style illustration, whiplash contour line, pastel-and-gold decorative panels, mosaic halo framing, flat ornamental colour, illustration style image,",
   "tags": [
    "art_nouveau",
    "gold",
@@ -1696,7 +1696,7 @@
  {
   "name": "[Painting][v2] Anato Finnstark",
   "medium": "illustration style image",
-  "nl": "Epic-fantasy digital rendering, glowing focal light against near-black surroundings, textured brush chaos, teal-and-ember palette, illustration style image,",
+  "nl": "Epic-fantasy digital illustration, glowing focal light against near-black surroundings, textured brush chaos, teal-and-ember palette, illustration style image,",
   "tags": [
    "dark",
    "glowing",
@@ -1712,7 +1712,7 @@
  {
   "name": "[Painting][v2] Andy Warhol",
   "medium": "print style image",
-  "nl": "Pop-silkscreen rendering, high-contrast photographic base, flat clashing colour blocks, offset registration, mechanical print flatness, print style image,",
+  "nl": "Pop-silkscreen, high-contrast photographic base, flat clashing colour blocks, offset registration, mechanical print flatness, print style image,",
   "tags": [
    "stencil",
    "flat_color",
@@ -1897,7 +1897,7 @@
  {
   "name": "[Painting][v2] Commercial Illustration",
   "medium": "illustration style image",
-  "nl": "Commercial illustration rendering, clean confident shapes, controlled palette, polished light modelling, print-ready clarity, illustration style image,",
+  "nl": "Commercial illustration, clean confident shapes, controlled palette, polished light modelling, print-ready clarity, illustration style image,",
   "tags": [
    "painting_(medium)",
    "flat_color",
@@ -1973,7 +1973,7 @@
  {
   "name": "[Painting][v2] Giallo Poster Art",
   "medium": "poster style image",
-  "nl": "Giallo-poster rendering, lurid red-and-cyan lighting, hand-painted airbrush figures, hard vignette, pulp print texture, poster style image,",
+  "nl": "Giallo-poster, lurid red-and-cyan lighting, hand-painted airbrush figures, hard vignette, pulp print texture, poster style image,",
   "tags": [
    "poster",
    "airbrush_(medium)",
@@ -2005,7 +2005,7 @@
  {
   "name": "[Painting][v2] Grindhouse Poster Illustration",
   "medium": "poster style image",
-  "nl": "Grindhouse-poster rendering, blown four-colour print, scratched grindy texture, hot red and yellow, hand-painted montage, poster style image,",
+  "nl": "Grindhouse-poster, blown four-colour print, scratched grindy texture, hot red and yellow, hand-painted montage, poster style image,",
   "tags": [
    "poster",
    "halftone",
@@ -2070,7 +2070,7 @@
  {
   "name": "[Painting][v2] Jackson Pollock",
   "medium": "abstract style image",
-  "nl": "Drip-painting rendering, skeins of poured enamel crossing the whole surface, no focal point, layered rhythmic tangle, abstract style image,",
+  "nl": "Drip-painting, skeins of poured enamel crossing the whole surface, no focal point, layered rhythmic tangle, abstract style image,",
   "tags": [
    "painting_(medium)",
    "textured",
@@ -2144,7 +2144,7 @@
  {
   "name": "[Painting][v2] Pin-Up",
   "medium": "illustration style image",
-  "nl": "Classic pin-up rendering, airbrushed gouache skin, saturated candy palette, cheerful poster light, crisp contour, illustration style image,",
+  "nl": "Classic pin-up, airbrushed gouache skin, saturated candy palette, cheerful poster light, crisp contour, illustration style image,",
   "tags": [
    "airbrush_(medium)",
    "gouache_(medium)",
@@ -2159,7 +2159,7 @@
  {
   "name": "[Painting][v2] Pop Art",
   "medium": "print style image",
-  "nl": "Pop-art rendering, ben-day dots, thick black keyline, flat primary inks, comic-panel simplification, print style image,",
+  "nl": "Pop-art print, ben-day dots, thick black keyline, flat primary inks, comic-panel simplification, print style image,",
   "tags": [
    "halftone",
    "flat_color",

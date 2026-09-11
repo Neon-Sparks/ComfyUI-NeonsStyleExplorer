@@ -46,6 +46,18 @@ function syncSlot(node, field, source) {
  * how a refresh used to reset everyone's settings. The values are held here and
  * applied once the real lists exist.
  */
+const SKIP_WIDGETS = new Set(["ns_panel"]);
+
+/** Every widget value this node owns, keyed by name. */
+function namedValues(node) {
+    const out = {};
+    for (const w of node?.widgets || []) {
+        if (!w?.name || SKIP_WIDGETS.has(w.name) || w.options?.serialize === false) continue;
+        out[w.name] = w.value;
+    }
+    return out;
+}
+
 function stashSaved(node, live, values) {
     if (!Array.isArray(values)) return;
     node._nsSaved = node._nsSaved || {};
@@ -63,11 +75,15 @@ function restoreSaved(node) {
         const w = widget(node, name);
         if (!w || value === undefined || w.value === value) continue;
         const options = w.options?.values;
-        if (!Array.isArray(options) || !options.length) {
+        const isCombo = Array.isArray(options) && options.length;
+        if (!isCombo) {
+            // switches, numbers and text have nothing to be checked against
             w.value = value;
+        } else if (!state.ready) {
+            continue;                    // judge it against the real list later
         } else if (options.includes(value)) {
             w.value = value;
-        } else if (value !== "None" && value !== undefined) {
+        } else if (value !== "None") {
             lost.push(`${name} = '${value}'`);
         }
     }
@@ -281,10 +297,30 @@ app.registerExtension({
             return result;
         };
 
+        // Litegraph restores widget values BY INDEX, so any change to the
+        // widget list shifts every value after it — which is how a switch came
+        // back on a refresh holding its neighbour's setting. A copy keyed by
+        // NAME travels with the workflow and settles the question.
+        const onSerialize = nodeType.prototype.onSerialize;
+        nodeType.prototype.onSerialize = function (info) {
+            const result = onSerialize?.apply(this, arguments);
+            try {
+                if (info) info.ns_values = namedValues(this);
+            } catch (err) {
+                /* never let bookkeeping break saving a workflow */
+            }
+            return result;
+        };
+
         const onConfigure = nodeType.prototype.onConfigure;
-        nodeType.prototype.onConfigure = function () {
+        nodeType.prototype.onConfigure = function (info) {
             const result = onConfigure?.apply(this, arguments);
+            // the by-name copy wins over anything index-mapping produced
+            if (info?.ns_values && typeof info.ns_values === "object") {
+                this._nsSaved = { ...(this._nsSaved || {}), ...info.ns_values };
+            }
             setup(this);
+            restoreSaved(this);
             return result;
         };
 

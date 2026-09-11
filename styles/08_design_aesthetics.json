@@ -183,7 +183,7 @@
       "family": "Design & Aesthetics",
       "axis": "style",
       "medium": "graphic style image",
-      "nl": "Acid-graphics rendering, chrome-liquid gradients, blown-out spectral colour, warped grid overlays, gritty photocopy texture, harsh flash contrast, graphic style image,",
+      "nl": "Acid-graphics, chrome-liquid gradients, blown-out spectral colour, warped grid overlays, gritty photocopy texture, harsh flash contrast, graphic style image,",
       "tags": [
         "metallic",
         "iridescent",
@@ -204,7 +204,7 @@
       "family": "Design & Aesthetics",
       "axis": "style",
       "medium": "poster style image",
-      "nl": "Acid-house flyer rendering, smiley motifs, fluorescent yellow and magenta inks, photocopied blur, misregistered overprint, poster style image,",
+      "nl": "Acid-house flyer, smiley motifs, fluorescent yellow and magenta inks, photocopied blur, misregistered overprint, poster style image,",
       "tags": [
         "risograph",
         "high_saturation",
@@ -225,7 +225,7 @@
       "family": "Design & Aesthetics",
       "axis": "style",
       "medium": "graphic style image",
-      "nl": "Afrofuturist rendering, deep indigo and gold palette, patterned textile motifs, polished metal and beadwork highlights, cosmic glow behind the subject, graphic style image,",
+      "nl": "Afrofuturist graphics, deep indigo and gold palette, patterned textile motifs, polished metal and beadwork highlights, cosmic glow behind the subject, graphic style image,",
       "tags": [
         "gold",
         "glowing",
@@ -246,7 +246,7 @@
       "family": "Design & Aesthetics",
       "axis": "style",
       "medium": "video artefact style image",
-      "nl": "Analog-horror rendering, degraded VHS colour, tracking tears, scanline crawl, blown highlights, timestamp burn-in, murky underexposed shadows, video artefact style image,",
+      "nl": "Analog-horror capture, degraded VHS colour, tracking tears, scanline crawl, blown highlights, timestamp burn-in, murky underexposed shadows, video artefact style image,",
       "tags": [
         "analog_horror",
         "glitch",
@@ -267,7 +267,7 @@
       "family": "Design & Aesthetics",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Angelcore rendering, milky diffused light with feathers adrift in it, marble and pearl surfaces, gold leaf glints, pale cream and blush palette blown gently towards white, photograph style image,",
+      "nl": "Angelcore capture, milky diffused light with feathers adrift in it, marble and pearl surfaces, gold leaf glints, pale cream and blush palette blown gently towards white, photograph style image,",
       "tags": [
         "pale_color",
         "soft_focus",
@@ -288,7 +288,7 @@
       "family": "Design & Aesthetics",
       "axis": "style",
       "medium": "graphic style image",
-      "nl": "Anti-design rendering, deliberately clashing type and colour, misaligned boxes, stretched imagery, ugly-on-purpose composition, graphic style image,",
+      "nl": "Anti-design, deliberately clashing type and colour, misaligned boxes, stretched imagery, ugly-on-purpose composition, graphic style image,",
       "tags": [
         "colorful",
         "high_contrast",
@@ -308,7 +308,7 @@
       "family": "Design & Aesthetics",
       "axis": "style",
       "medium": "graphic style image",
-      "nl": "Arts-and-Crafts rendering, hand-worked surfaces, botanical line ornament, earth-dye palette of moss, madder and oak, matte handmade texture, graphic style image,",
+      "nl": "Arts-and-Crafts graphics, hand-worked surfaces, botanical line ornament, earth-dye palette of moss, madder and oak, matte handmade texture, graphic style image,",
       "tags": [
         "art_nouveau",
         "muted_color",
@@ -328,7 +328,7 @@
       "family": "Design & Aesthetics",
       "axis": "style",
       "medium": "graphic style image",
-      "nl": "Atompunk rendering, 1950s Googie curves, atomic starburst motifs, turquoise-and-tangerine palette, chrome trim gleam, optimistic hard-edge poster light, graphic style image,",
+      "nl": "Atompunk graphics, 1950s Googie curves, atomic starburst motifs, turquoise-and-tangerine palette, chrome trim gleam, optimistic hard-edge poster light, graphic style image,",
       "tags": [
         "retro_artstyle",
         "metallic",
@@ -348,7 +348,7 @@
       "family": "Design & Aesthetics",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Backrooms rendering, sickly yellow fluorescent cast, damp carpet and wall texture, flat overhead buzz light, faint camcorder noise, endless dull depth, photograph style image,",
+      "nl": "Backrooms capture, sickly yellow fluorescent cast, damp carpet and wall texture, flat overhead buzz light, faint camcorder noise, endless dull depth, photograph style image,",
       "tags": [
         "yellow_theme",
         "scenery",
@@ -368,7 +368,7 @@
       "family": "Design & Aesthetics",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Balletcore rendering, chalk-pink and ivory palette, satin sheen, soft studio window light, powder haze, delicate low-contrast shading, photograph style image,",
+      "nl": "Balletcore capture, chalk-pink and ivory palette, satin sheen, soft studio window light, powder haze, delicate low-contrast shading, photograph style image,",
       "tags": [
         "pastel_colors",
         "soft_focus",
@@ -388,7 +388,7 @@
       "family": "Design & Aesthetics",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Barbiecore rendering, hot fuchsia and bubblegum palette, glossy plastic surfaces, bright even flash, saturated candy contrast, photograph style image,",
+      "nl": "Barbiecore capture, hot fuchsia and bubblegum palette, glossy plastic surfaces, bright even flash, saturated candy contrast, photograph style image,",
       "tags": [
         "pink_theme",
         "plastic",
@@ -409,7 +409,7 @@
       "family": "Design & Aesthetics",
       "axis": "style",
       "medium": "poster style image",
-      "nl": "Bauhaus rendering, primary red-yellow-blue on off-white, hard geometric shape blocking, ruled grid structure, flat unmodulated colour, poster style image,",
+      "nl": "Bauhaus poster, primary red-yellow-blue on off-white, hard geometric shape blocking, ruled grid structure, flat unmodulated colour, poster style image,",
       "tags": [
         "minimalism",
         "flat_color",
@@ -432,7 +432,7 @@
       "family": "Design & Aesthetics",
       "axis": "style",
       "medium": "graphic style image",
-      "nl": "Bento-grid rendering, modular rounded cards packed tight into a strict grid, generous inner padding, one accent hue against near-black, tiny mono labels and soft inner glow, graphic style image,",
+      "nl": "Bento-grid graphics, modular rounded cards packed tight into a strict grid, generous inner padding, one accent hue against near-black, tiny mono labels and soft inner glow, graphic style image,",
       "tags": [
         "minimalism",
         "dark",
@@ -452,7 +452,7 @@
       "family": "Design & Aesthetics",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Biopunk rendering, wet organic surfaces, sickly green-amber lab light, membrane translucency, condensation and fluid gloss, clinical fluorescent haze, photograph style image,",
+      "nl": "Biopunk capture, wet organic surfaces, sickly green-amber lab light, membrane translucency, condensation and fluid gloss, clinical fluorescent haze, photograph style image,",
       "tags": [
         "green_theme",
         "wet",
@@ -473,7 +473,7 @@
       "family": "Design & Aesthetics",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Blokecore rendering, 1990s terrace colour, nylon sheen, overcast flat light, grainy tabloid print feel, photograph style image,",
+      "nl": "Blokecore capture, 1990s terrace colour, nylon sheen, overcast flat light, grainy tabloid print feel, photograph style image,",
       "tags": [
         "1990s_(style)",
         "film_grain",
@@ -493,7 +493,7 @@
       "family": "Design & Aesthetics",
       "axis": "style",
       "medium": "graphic style image",
-      "nl": "Brat-green rendering, flat acid lime field, low-resolution blur, deliberately cheap type-space, harsh compression, graphic style image,",
+      "nl": "Brat-green graphics, flat acid lime field, low-resolution blur, deliberately cheap type-space, harsh compression, graphic style image,",
       "tags": [
         "green_theme",
         "minimalism",
@@ -513,7 +513,7 @@
       "family": "Design & Aesthetics",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Brutalist rendering, raw board-marked concrete, monolithic mass, hard overcast grey light, deep shadow slabs, near-monochrome palette, photograph style image,",
+      "nl": "Brutalist capture, raw board-marked concrete, monolithic mass, hard overcast grey light, deep shadow slabs, near-monochrome palette, photograph style image,",
       "tags": [
         "stone",
         "grey_background",
@@ -534,7 +534,7 @@
       "family": "Design & Aesthetics",
       "axis": "style",
       "medium": "graphic style image",
-      "nl": "Brutalist-web rendering, default system type, raw blue links, hard black rules, unstyled boxes on stark white, graphic style image,",
+      "nl": "Brutalist-web, default system type, raw blue links, hard black rules, unstyled boxes on stark white, graphic style image,",
       "tags": [
         "white_theme",
         "minimalism",
@@ -554,7 +554,7 @@
       "family": "Design & Aesthetics",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Cabincore rendering, pine-and-wool palette, warm lamplight against cold window blue, wood grain texture, soft morning haze, gentle film grain, photograph style image,",
+      "nl": "Cabincore capture, pine-and-wool palette, warm lamplight against cold window blue, wood grain texture, soft morning haze, gentle film grain, photograph style image,",
       "tags": [
         "wood",
         "brown_theme",
@@ -575,7 +575,7 @@
       "family": "Design & Aesthetics",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Cassette-futurist rendering, the future imagined through 1970s hardware, beige and grey mouldings, amber CRT glow and rocker switches, chunky bezels under fluorescent office light, photograph style image,",
+      "nl": "Cassette-futurist capture, the future imagined through 1970s hardware, beige and grey mouldings, amber CRT glow and rocker switches, chunky bezels under fluorescent office light, photograph style image,",
       "tags": [
         "1970s_(style)",
         "muted_color",
@@ -595,7 +595,7 @@
       "family": "Design & Aesthetics",
       "axis": "style",
       "medium": "graphic style image",
-      "nl": "Mid-1990s clipart rendering, bevelled headings with hard drop shadows, rainbow gradient fills, mismatched stock vector shapes, tiled background pattern and dithered 256-colour banding, graphic style image,",
+      "nl": "Mid-1990s clipart, bevelled headings with hard drop shadows, rainbow gradient fills, mismatched stock vector shapes, tiled background pattern and dithered 256-colour banding, graphic style image,",
       "tags": [
         "1990s_(style)",
         "gradient",
@@ -615,7 +615,7 @@
       "family": "Design & Aesthetics",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Chaotic-academia rendering, ink-stained paper texture, warm lamplight clutter, amber and oxblood palette, uneven layered depth, soft grain, photograph style image,",
+      "nl": "Chaotic-academia capture, ink-stained paper texture, warm lamplight clutter, amber and oxblood palette, uneven layered depth, soft grain, photograph style image,",
       "tags": [
         "brown_theme",
         "film_grain",
@@ -635,7 +635,7 @@
       "family": "Design & Aesthetics",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Clean-girl rendering, dewy skin sheen, neutral beige-and-cream palette, soft diffused daylight, minimal shadow, crisp low-saturation finish, photograph style image,",
+      "nl": "Clean-girl capture, dewy skin sheen, neutral beige-and-cream palette, soft diffused daylight, minimal shadow, crisp low-saturation finish, photograph style image,",
       "tags": [
         "photo_(medium)",
         "pale_color",
@@ -655,7 +655,7 @@
       "family": "Design & Aesthetics",
       "axis": "style",
       "medium": "graphic style image",
-      "nl": "Clowncore rendering, primary polka dots and stripes clashing, glossy vinyl texture, harsh flash, unsettling saturation, graphic style image,",
+      "nl": "Clowncore graphics, primary polka dots and stripes clashing, glossy vinyl texture, harsh flash, unsettling saturation, graphic style image,",
       "tags": [
         "colorful",
         "high_saturation",
@@ -675,7 +675,7 @@
       "family": "Design & Aesthetics",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Cluttercore rendering, every surface layered with objects, warm mixed lamplight, dense pattern collisions, soft depth falloff, photograph style image,",
+      "nl": "Cluttercore capture, every surface layered with objects, warm mixed lamplight, dense pattern collisions, soft depth falloff, photograph style image,",
       "tags": [
         "textured",
         "colorful",
@@ -695,7 +695,7 @@
       "family": "Design & Aesthetics",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Coastal-cowgirl rendering, sun-bleached denim blue and sand, salt haze, hard afternoon sunlight with warm bounce, faded film colour, photograph style image,",
+      "nl": "Coastal-cowgirl capture, sun-bleached denim blue and sand, salt haze, hard afternoon sunlight with warm bounce, faded film colour, photograph style image,",
       "tags": [
         "blue_theme",
         "sunlight",
@@ -715,7 +715,7 @@
       "family": "Design & Aesthetics",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Coastal-grandmother rendering, white linen and pale hydrangea blue, breezy overcast daylight, low contrast, soft natural texture, photograph style image,",
+      "nl": "Coastal-grandmother capture, white linen and pale hydrangea blue, breezy overcast daylight, low contrast, soft natural texture, photograph style image,",
       "tags": [
         "white_theme",
         "pale_color",
@@ -735,7 +735,7 @@
       "family": "Design & Aesthetics",
       "axis": "style",
       "medium": "poster style image",
-      "nl": "Constructivist rendering, red-black-cream palette, aggressive diagonal composition, photomontage fragments, heavy geometric blocking, printed ink texture, poster style image,",
+      "nl": "Constructivist poster, red-black-cream palette, aggressive diagonal composition, photomontage fragments, heavy geometric blocking, printed ink texture, poster style image,",
       "tags": [
         "poster",
         "limited_palette",
@@ -756,7 +756,7 @@
       "family": "Design & Aesthetics",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Coquette rendering, ballet-pink and cream palette, ribbon-satin sheen, soft filtered daylight, delicate lace texture, gentle bloom, photograph style image,",
+      "nl": "Coquette capture, ballet-pink and cream palette, ribbon-satin sheen, soft filtered daylight, delicate lace texture, gentle bloom, photograph style image,",
       "tags": [
         "pink_theme",
         "pastel_colors",
@@ -776,7 +776,7 @@
       "family": "Design & Aesthetics",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Corporate-gothic rendering, green fluorescent tube light, grey carpet and glass partitions, cold cathedral-tall symmetry, dead-flat overhead illumination, photograph style image,",
+      "nl": "Corporate-gothic capture, green fluorescent tube light, grey carpet and glass partitions, cold cathedral-tall symmetry, dead-flat overhead illumination, photograph style image,",
       "tags": [
         "green_theme",
         "desaturated",
@@ -820,7 +820,7 @@
       "family": "Design & Aesthetics",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Cottagecore rendering, soft morning daylight, warm linen-and-cream palette, meadow greens, hand-made surface texture, gentle grain and bloom, photograph style image,",
+      "nl": "Cottagecore capture, soft morning daylight, warm linen-and-cream palette, meadow greens, hand-made surface texture, gentle grain and bloom, photograph style image,",
       "tags": [
         "sunlight",
         "pale_color",
@@ -841,7 +841,7 @@
       "family": "Design & Aesthetics",
       "axis": "style",
       "medium": "graphic style image",
-      "nl": "Cybergrunge rendering, scanned texture over glitched screenshots, acid green on black, distressed type blocks, heavy noise, graphic style image,",
+      "nl": "Cybergrunge graphics, scanned texture over glitched screenshots, acid green on black, distressed type blocks, heavy noise, graphic style image,",
       "tags": [
         "glitch",
         "dark",
@@ -862,7 +862,7 @@
       "family": "Design & Aesthetics",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Cyberpunk rendering, magenta-and-cyan neon spill on wet surfaces, deep black shadow, volumetric haze, hard specular chrome, heavy colour contrast, photograph style image,",
+      "nl": "Cyberpunk capture, magenta-and-cyan neon spill on wet surfaces, deep black shadow, volumetric haze, hard specular chrome, heavy colour contrast, photograph style image,",
       "tags": [
         "neon_palette",
         "wet",
@@ -883,7 +883,7 @@
       "family": "Design & Aesthetics",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Dense cyberpunk night rendering, layered neon signage glow, rain-soaked reflections, smog volumetrics, sodium-and-cyan clash, crushed blacks, photograph style image,",
+      "nl": "Dense cyberpunk night capture, layered neon signage glow, rain-soaked reflections, smog volumetrics, sodium-and-cyan clash, crushed blacks, photograph style image,",
       "tags": [
         "neon_palette",
         "wet",
@@ -904,7 +904,7 @@
       "family": "Design & Aesthetics",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Dark-academia rendering, tweed-brown and ink-black palette, low tungsten lamplight, oak and paper texture, autumn window haze, soft grain, photograph style image,",
+      "nl": "Dark-academia capture, tweed-brown and ink-black palette, low tungsten lamplight, oak and paper texture, autumn window haze, soft grain, photograph style image,",
       "tags": [
         "brown_theme",
         "dark",
@@ -925,7 +925,7 @@
       "family": "Design & Aesthetics",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Dark-fairycore rendering, deep forest greens and bruised violet, moonlit rim glow, mist volumetrics, thorn and moss texture, low-key contrast, photograph style image,",
+      "nl": "Dark-fairycore capture, deep forest greens and bruised violet, moonlit rim glow, mist volumetrics, thorn and moss texture, low-key contrast, photograph style image,",
       "tags": [
         "dark",
         "green_theme",
@@ -946,7 +946,7 @@
       "family": "Design & Aesthetics",
       "axis": "style",
       "medium": "abstract style image",
-      "nl": "De Stijl rendering, black rectilinear bands, primary red, yellow and blue blocks on white, perfectly flat colour, no depth cues, abstract style image,",
+      "nl": "De Stijl composition, black rectilinear bands, primary red, yellow and blue blocks on white, perfectly flat colour, no depth cues, abstract style image,",
       "tags": [
         "minimalism",
         "flat_color",
@@ -967,7 +967,7 @@
       "family": "Design & Aesthetics",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Deconstructivist rendering, fragmented tilted planes, non-parallel geometry, metal and glass skins, hard directional daylight, photograph style image,",
+      "nl": "Deconstructivist capture, fragmented tilted planes, non-parallel geometry, metal and glass skins, hard directional daylight, photograph style image,",
       "tags": [
         "metallic",
         "glass",
@@ -987,7 +987,7 @@
       "family": "Design & Aesthetics",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Decora rendering, layered plastic accessories in clashing candy colour, glitter sparkle, bright flat flash, dense visual noise, photograph style image,",
+      "nl": "Decora capture, layered plastic accessories in clashing candy colour, glitter sparkle, bright flat flash, dense visual noise, photograph style image,",
       "tags": [
         "colorful",
         "plastic",
@@ -1008,7 +1008,7 @@
       "family": "Design & Aesthetics",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Dieselpunk rendering, interwar machine grime, riveted steel and oiled leather, smoky amber-grey palette, harsh work lamps, soot texture, photograph style image,",
+      "nl": "Dieselpunk capture, interwar machine grime, riveted steel and oiled leather, smoky amber-grey palette, harsh work lamps, soot texture, photograph style image,",
       "tags": [
         "brown_theme",
         "metallic",
@@ -1029,7 +1029,7 @@
       "family": "Design & Aesthetics",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Dreamcore rendering, soft over-lit pastel haze, impossible flat lighting, slight lens blur, washed film colour, quiet unresolved depth, photograph style image,",
+      "nl": "Dreamcore capture, soft over-lit pastel haze, impossible flat lighting, slight lens blur, washed film colour, quiet unresolved depth, photograph style image,",
       "tags": [
         "pastel_colors",
         "soft_focus",
@@ -1049,7 +1049,7 @@
       "family": "Design & Aesthetics",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "E-girl rendering, webcam-flat frontal light, magenta and cyan LED wash, slight sensor noise, glossy highlight on skin, saturated screen glow, photograph style image,",
+      "nl": "E-girl capture, webcam-flat frontal light, magenta and cyan LED wash, slight sensor noise, glossy highlight on skin, saturated screen glow, photograph style image,",
       "tags": [
         "neon_palette",
         "glowing",
@@ -1069,7 +1069,7 @@
       "family": "Design & Aesthetics",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Fairy-kei rendering, faded 1980s pastel palette, plush toy texture, soft diffuse light, milky low contrast, photograph style image,",
+      "nl": "Fairy-kei capture, faded 1980s pastel palette, plush toy texture, soft diffuse light, milky low contrast, photograph style image,",
       "tags": [
         "pastel_colors",
         "soft_focus",
@@ -1089,7 +1089,7 @@
       "family": "Design & Aesthetics",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Fairycore rendering, gossamer backlight, dew-lit greens and blush pink, floating bokeh motes, gauzy soft focus, luminous low contrast, photograph style image,",
+      "nl": "Fairycore capture, gossamer backlight, dew-lit greens and blush pink, floating bokeh motes, gauzy soft focus, luminous low contrast, photograph style image,",
       "tags": [
         "backlighting",
         "bokeh",
@@ -1110,7 +1110,7 @@
       "family": "Design & Aesthetics",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Farmcore rendering, gold-hour field light, mud and hay texture, worn workwear denim, dusty air haze, warm faded film colour, photograph style image,",
+      "nl": "Farmcore capture, gold-hour field light, mud and hay texture, worn workwear denim, dusty air haze, warm faded film colour, photograph style image,",
       "tags": [
         "sunlight",
         "brown_theme",
@@ -1151,7 +1151,7 @@
       "family": "Design & Aesthetics",
       "axis": "style",
       "medium": "graphic style image",
-      "nl": "Frutiger Aero rendering, glossy glass and water surfaces, aqua-and-lime gradients, lens bloom, bubble specularity, clean sky-bright optimism, graphic style image,",
+      "nl": "Frutiger Aero graphics, glossy glass and water surfaces, aqua-and-lime gradients, lens bloom, bubble specularity, clean sky-bright optimism, graphic style image,",
       "tags": [
         "glass",
         "gradient",
@@ -1175,7 +1175,7 @@
       "family": "Design & Aesthetics",
       "axis": "style",
       "medium": "graphic style image",
-      "nl": "Metro-flat rendering, bold colour tiles, thin geometric icons, generous grid space, zero shadow or gloss, graphic style image,",
+      "nl": "Metro-flat graphics, bold colour tiles, thin geometric icons, generous grid space, zero shadow or gloss, graphic style image,",
       "tags": [
         "flat_color",
         "minimalism",
@@ -1216,7 +1216,7 @@
       "family": "Design & Aesthetics",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Goblincore rendering, damp moss and bark texture, mushroom browns and mineral greens, dim forest-floor light, cluttered close focus, photograph style image,",
+      "nl": "Goblincore capture, damp moss and bark texture, mushroom browns and mineral greens, dim forest-floor light, cluttered close focus, photograph style image,",
       "tags": [
         "green_theme",
         "brown_theme",
@@ -1237,7 +1237,7 @@
       "family": "Design & Aesthetics",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Googie rendering, boomerang angles, starbursts and cantilevered roof planes, plate glass beside terrazzo and neon tubing, optimistic desert daylight with hard shadow, photograph style image,",
+      "nl": "Googie capture, boomerang angles, starbursts and cantilevered roof planes, plate glass beside terrazzo and neon tubing, optimistic desert daylight with hard shadow, photograph style image,",
       "tags": [
         "1970s_(style)",
         "colorful",
@@ -1257,7 +1257,7 @@
       "family": "Design & Aesthetics",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Gorpcore rendering, technical nylon sheen, reflective trims, alpine overcast light, utilitarian colour blocking, photograph style image,",
+      "nl": "Gorpcore capture, technical nylon sheen, reflective trims, alpine overcast light, utilitarian colour blocking, photograph style image,",
       "tags": [
         "shiny",
         "muted_color",
@@ -1277,7 +1277,7 @@
       "family": "Design & Aesthetics",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Gothic-academia rendering, cloister stone and candle amber, vaulted shadow, cold blue window light against warm flame, dust motes, soft grain, photograph style image,",
+      "nl": "Gothic-academia capture, cloister stone and candle amber, vaulted shadow, cold blue window light against warm flame, dust motes, soft grain, photograph style image,",
       "tags": [
         "dark",
         "chiaroscuro",
@@ -1298,7 +1298,7 @@
       "family": "Design & Aesthetics",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Grandmacore rendering, faded floral pattern, tea-rose and butter palette, soft net-curtain light, knitted and lace texture, gentle low contrast, photograph style image,",
+      "nl": "Grandmacore capture, faded floral pattern, tea-rose and butter palette, soft net-curtain light, knitted and lace texture, gentle low contrast, photograph style image,",
       "tags": [
         "pastel_colors",
         "textured",
@@ -1319,7 +1319,7 @@
       "family": "Design & Aesthetics",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Grandmillennial rendering, layered florals, chintz glaze and pleated shades, scalloped trims against wallpaper pattern, warm lamp light on polished mahogany, photograph style image,",
+      "nl": "Grandmillennial capture, layered florals, chintz glaze and pleated shades, scalloped trims against wallpaper pattern, warm lamp light on polished mahogany, photograph style image,",
       "tags": [
         "colorful",
         "textured",
@@ -1339,7 +1339,7 @@
       "family": "Design & Aesthetics",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Grunge rendering, muddy flannel palette, dim basement light, dust and scratch texture, blown practical bulbs, coarse pushed film grain, photograph style image,",
+      "nl": "Grunge capture, muddy flannel palette, dim basement light, dust and scratch texture, blown practical bulbs, coarse pushed film grain, photograph style image,",
       "tags": [
         "desaturated",
         "film_grain",
@@ -1359,7 +1359,7 @@
       "family": "Design & Aesthetics",
       "axis": "style",
       "medium": "collage style image",
-      "nl": "Grunge-zine rendering, photocopied high-contrast blacks, torn paper edges, tape and staple marks, hand-scrawled marker, generation-loss texture, collage style image,",
+      "nl": "Grunge-zine, photocopied high-contrast blacks, torn paper edges, tape and staple marks, hand-scrawled marker, generation-loss texture, collage style image,",
       "tags": [
         "collage",
         "high_contrast",
@@ -1380,7 +1380,7 @@
       "family": "Design & Aesthetics",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Gyaru rendering, bleached hair sheen, bronzed skin, glossy highlights, purikura-bright flash with soft bloom, photograph style image,",
+      "nl": "Gyaru capture, bleached hair sheen, bronzed skin, glossy highlights, purikura-bright flash with soft bloom, photograph style image,",
       "tags": [
         "glowing",
         "flash_photography",
@@ -1400,7 +1400,7 @@
       "family": "Design & Aesthetics",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Hearthcore rendering, fire-warm key light, terracotta and butter palette, soot-smudged stone, steam haze, cosy low-contrast falloff, photograph style image,",
+      "nl": "Hearthcore capture, fire-warm key light, terracotta and butter palette, soot-smudged stone, steam haze, cosy low-contrast falloff, photograph style image,",
       "tags": [
         "orange_theme",
         "glowing",
@@ -1420,7 +1420,7 @@
       "family": "Design & Aesthetics",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "High-tech architecture rendering, exposed steel truss and duct, glass curtain reflections, cool grey-silver palette, crisp hard daylight, photograph style image,",
+      "nl": "High-tech architecture capture, exposed steel truss and duct, glass curtain reflections, cool grey-silver palette, crisp hard daylight, photograph style image,",
       "tags": [
         "metallic",
         "glass",
@@ -1441,7 +1441,7 @@
       "family": "Design & Aesthetics",
       "axis": "style",
       "medium": "film still style image",
-      "nl": "Hollywood-Regency rendering, black-and-white lacquer contrast, brass and palm-green accents, glossy surfaces, theatrical key light, film still style image,",
+      "nl": "Hollywood-Regency capture, black-and-white lacquer contrast, brass and palm-green accents, glossy surfaces, theatrical key light, film still style image,",
       "tags": [
         "high_contrast",
         "gold",
@@ -1461,7 +1461,7 @@
       "family": "Design & Aesthetics",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Indie-sleaze rendering, harsh on-camera flash, blown skin, crushed black surround, red-eye and motion smear, cheap digital noise, photograph style image,",
+      "nl": "Indie-sleaze capture, harsh on-camera flash, blown skin, crushed black surround, red-eye and motion smear, cheap digital noise, photograph style image,",
       "tags": [
         "flash_photography",
         "dark",
@@ -1482,7 +1482,7 @@
       "family": "Design & Aesthetics",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Industrial-loft rendering, brick and blackened steel, huge window daylight raking across concrete, dust in the air, cool neutral palette, photograph style image,",
+      "nl": "Industrial-loft capture, brick and blackened steel, huge window daylight raking across concrete, dust in the air, cool neutral palette, photograph style image,",
       "tags": [
         "stone",
         "metallic",
@@ -1503,7 +1503,7 @@
       "family": "Design & Aesthetics",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Japandi rendering, warm oak and clay palette, paper-diffused daylight, restrained empty space, matte natural texture, soft shadow gradation, photograph style image,",
+      "nl": "Japandi capture, warm oak and clay palette, paper-diffused daylight, restrained empty space, matte natural texture, soft shadow gradation, photograph style image,",
       "tags": [
         "minimalism",
         "muted_color",
@@ -1524,7 +1524,7 @@
       "family": "Design & Aesthetics",
       "axis": "style",
       "medium": "poster style image",
-      "nl": "Rave-flyer rendering, chrome bevel lettering, laser gradients, black backdrop, cluttered logo stack, cheap print bleed, poster style image,",
+      "nl": "Rave-flyer, chrome bevel lettering, laser gradients, black backdrop, cluttered logo stack, cheap print bleed, poster style image,",
       "tags": [
         "metallic",
         "gradient",
@@ -1545,7 +1545,7 @@
       "family": "Design & Aesthetics",
       "axis": "style",
       "medium": "graphic style image",
-      "nl": "Kidcore rendering, primary plastic colours, chunky rounded shapes, glossy sticker highlights, flat bright light, playful clutter, graphic style image,",
+      "nl": "Kidcore graphics, primary plastic colours, chunky rounded shapes, glossy sticker highlights, flat bright light, playful clutter, graphic style image,",
       "tags": [
         "colorful",
         "plastic",
@@ -1565,7 +1565,7 @@
       "family": "Design & Aesthetics",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Dolce-vita rendering, 1960s Mediterranean sun, cream and terracotta palette, hard noon shadow, warm faded film colour, gentle grain, photograph style image,",
+      "nl": "Dolce-vita capture, 1960s Mediterranean sun, cream and terracotta palette, hard noon shadow, warm faded film colour, gentle grain, photograph style image,",
       "tags": [
         "sunlight",
         "film_grain",
@@ -1587,7 +1587,7 @@
       "family": "Design & Aesthetics",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Light-academia rendering, cream and honey palette, warm library daylight, paper and linen texture, airy low contrast, soft grain, photograph style image,",
+      "nl": "Light-academia capture, cream and honey palette, warm library daylight, paper and linen texture, airy low contrast, soft grain, photograph style image,",
       "tags": [
         "pale_color",
         "sunlight",
@@ -1607,7 +1607,7 @@
       "family": "Design & Aesthetics",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Liminal-dreamcore rendering, empty over-lit interior, flat fluorescent wash, faded pastel surfaces, slight lens distortion, camcorder noise, photograph style image,",
+      "nl": "Liminal-dreamcore capture, empty over-lit interior, flat fluorescent wash, faded pastel surfaces, slight lens distortion, camcorder noise, photograph style image,",
       "tags": [
         "pastel_colors",
         "scenery",
@@ -1628,7 +1628,7 @@
       "family": "Design & Aesthetics",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Liminal-space rendering, deserted familiar architecture, buzzing overhead fluorescents, flat shadowless light, muted institutional colour, faint noise, photograph style image,",
+      "nl": "Liminal-space capture, deserted familiar architecture, buzzing overhead fluorescents, flat shadowless light, muted institutional colour, faint noise, photograph style image,",
       "tags": [
         "scenery",
         "desaturated",
@@ -1648,7 +1648,7 @@
       "family": "Design & Aesthetics",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Lolita rendering, layered lace and ruffle texture, bell silhouettes, powdery pastel or blackwork palette, soft even light, photograph style image,",
+      "nl": "Lolita capture, layered lace and ruffle texture, bell silhouettes, powdery pastel or blackwork palette, soft even light, photograph style image,",
       "tags": [
         "pastel_colors",
         "textured",
@@ -1668,7 +1668,7 @@
       "family": "Design & Aesthetics",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Lunarpunk rendering, bioluminescent teal and violet glow, moonlit rim light, deep indigo shadow, wet foliage sheen, mist volumetrics, photograph style image,",
+      "nl": "Lunarpunk capture, bioluminescent teal and violet glow, moonlit rim light, deep indigo shadow, wet foliage sheen, mist volumetrics, photograph style image,",
       "tags": [
         "glowing",
         "dark",
@@ -1689,7 +1689,7 @@
       "family": "Design & Aesthetics",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Mall-goth rendering, black vinyl and mesh texture, hot magenta and acid green accents, harsh on-camera flash, dark mall ambience, photograph style image,",
+      "nl": "Mall-goth capture, black vinyl and mesh texture, hot magenta and acid green accents, harsh on-camera flash, dark mall ambience, photograph style image,",
       "tags": [
         "dark",
         "neon_palette",
@@ -1709,7 +1709,7 @@
       "family": "Design & Aesthetics",
       "axis": "style",
       "medium": "graphic style image",
-      "nl": "Maximalist rendering, clashing pattern on pattern, saturated jewel palette, dense layered ornament, every surface decorated, graphic style image,",
+      "nl": "Maximalist graphics, clashing pattern on pattern, saturated jewel palette, dense layered ornament, every surface decorated, graphic style image,",
       "tags": [
         "colorful",
         "high_saturation",
@@ -1731,7 +1731,7 @@
       "family": "Design & Aesthetics",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "McBling rendering, mid-2000s chrome and rhinestone glitter, hot pink and silver, on-camera flash blowout, glossy lip and lens sparkle, photograph style image,",
+      "nl": "McBling capture, mid-2000s chrome and rhinestone glitter, hot pink and silver, on-camera flash blowout, glossy lip and lens sparkle, photograph style image,",
       "tags": [
         "shiny",
         "metallic",
@@ -1752,7 +1752,7 @@
       "family": "Design & Aesthetics",
       "axis": "style",
       "medium": "graphic style image",
-      "nl": "Memphis-Milano rendering, squiggle and confetti motifs, laminate pastel-plus-primary palette, flat geometric blocking, playful asymmetry, graphic style image,",
+      "nl": "Memphis-Milano graphics, squiggle and confetti motifs, laminate pastel-plus-primary palette, flat geometric blocking, playful asymmetry, graphic style image,",
       "tags": [
         "colorful",
         "flat_color",
@@ -1772,7 +1772,7 @@
       "family": "Design & Aesthetics",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Metabolist rendering, stacked prefabricated capsules clipped to concrete cores, repeated round windows, raw grey precast surfaces streaked by weather, flat overcast light, photograph style image,",
+      "nl": "Metabolist capture, stacked prefabricated capsules clipped to concrete cores, repeated round windows, raw grey precast surfaces streaked by weather, flat overcast light, photograph style image,",
       "tags": [
         "desaturated",
         "stone",
@@ -1792,7 +1792,7 @@
       "family": "Design & Aesthetics",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Metalhead rendering, black denim and patch texture, hot stage backlight through haze, harsh rim contrast, crushed blacks, coarse grain, photograph style image,",
+      "nl": "Metalhead capture, black denim and patch texture, hot stage backlight through haze, harsh rim contrast, crushed blacks, coarse grain, photograph style image,",
       "tags": [
         "dark",
         "backlighting",
@@ -1812,7 +1812,7 @@
       "family": "Design & Aesthetics",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Mid-century-modern rendering, teak and mustard palette, clean tapered geometry, warm even daylight, matte surfaces, faded Kodachrome colour, photograph style image,",
+      "nl": "Mid-century-modern capture, teak and mustard palette, clean tapered geometry, warm even daylight, matte surfaces, faded Kodachrome colour, photograph style image,",
       "tags": [
         "retro_artstyle",
         "wood",
@@ -1832,7 +1832,7 @@
       "family": "Design & Aesthetics",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Minimal-lifestyle rendering, near-empty composition, off-white and grey palette, single soft light source, long clean shadow, matte texture, photograph style image,",
+      "nl": "Minimal-lifestyle capture, near-empty composition, off-white and grey palette, single soft light source, long clean shadow, matte texture, photograph style image,",
       "tags": [
         "minimalism",
         "white_theme",
@@ -1852,7 +1852,7 @@
       "family": "Design & Aesthetics",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Mob-wife rendering, heavy fur texture, gold jewellery glint, leopard print, smoky low light with hard flash, photograph style image,",
+      "nl": "Mob-wife capture, heavy fur texture, gold jewellery glint, leopard print, smoky low light with hard flash, photograph style image,",
       "tags": [
         "fur",
         "gold",
@@ -1873,7 +1873,7 @@
       "family": "Design & Aesthetics",
       "axis": "style",
       "medium": "graphic style image",
-      "nl": "Bitmap-editor rendering, hard aliased brush strokes at one pixel weight, flood-filled areas leaking through gaps, dithered fill patterns, default sixteen-colour palette on white, graphic style image,",
+      "nl": "Bitmap-editor graphics, hard aliased brush strokes at one pixel weight, flood-filled areas leaking through gaps, dithered fill patterns, default sixteen-colour palette on white, graphic style image,",
       "tags": [
         "pixel_art",
         "dithering",
@@ -1893,7 +1893,7 @@
       "family": "Design & Aesthetics",
       "axis": "style",
       "medium": "film still style image",
-      "nl": "Neo-noir rendering, colour noir with neon key against deep shadow, wet reflective streets, smoky volumetrics, teal-and-amber contrast, film still style image,",
+      "nl": "Neo-noir capture, colour noir with neon key against deep shadow, wet reflective streets, smoky volumetrics, teal-and-amber contrast, film still style image,",
       "tags": [
         "neon_palette",
         "chiaroscuro",
@@ -1914,7 +1914,7 @@
       "family": "Design & Aesthetics",
       "axis": "style",
       "medium": "graphic style image",
-      "nl": "Neumorphic rendering, forms extruded from one pale ground, soft dual shadows above and below every shape, near-invisible edges, monochrome surface with faint inner glow, graphic style image,",
+      "nl": "Neumorphic graphics, forms extruded from one pale ground, soft dual shadows above and below every shape, near-invisible edges, monochrome surface with faint inner glow, graphic style image,",
       "tags": [
         "minimalism",
         "pale_color",
@@ -1934,7 +1934,7 @@
       "family": "Design & Aesthetics",
       "axis": "style",
       "medium": "poster style image",
-      "nl": "New-wave rendering, layered translucent planes of pastel colour, wide letterspacing and stepped baselines, dotted rules and floating fragments, early digital gradients over halftone, poster style image,",
+      "nl": "New-wave poster, layered translucent planes of pastel colour, wide letterspacing and stepped baselines, dotted rules and floating fragments, early digital gradients over halftone, poster style image,",
       "tags": [
         "pastel_colors",
         "gradient",
@@ -1954,7 +1954,7 @@
       "family": "Design & Aesthetics",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Night-luxe rendering, black-and-gold palette, jewellery-hard specular sparkle, wet asphalt reflections, flash-lit foreground against dark depth, photograph style image,",
+      "nl": "Night-luxe capture, black-and-gold palette, jewellery-hard specular sparkle, wet asphalt reflections, flash-lit foreground against dark depth, photograph style image,",
       "tags": [
         "dark",
         "gold",
@@ -1975,7 +1975,7 @@
       "family": "Design & Aesthetics",
       "axis": "style",
       "medium": "film still style image",
-      "nl": "Classic-noir rendering, silver-gelatin monochrome, hard key with slatted shadow, smoke haze, deep blacks and clipped highlights, 35mm grain, film still style image,",
+      "nl": "Classic-noir capture, silver-gelatin monochrome, hard key with slatted shadow, smoke haze, deep blacks and clipped highlights, 35mm grain, film still style image,",
       "tags": [
         "monochrome",
         "chiaroscuro",
@@ -1996,7 +1996,7 @@
       "family": "Design & Aesthetics",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Normcore rendering, plain neutral palette, unstyled available light, flat mid contrast, ordinary lens rendering, faint sensor noise, photograph style image,",
+      "nl": "Normcore capture, plain neutral palette, unstyled available light, flat mid contrast, ordinary lens rendering, faint sensor noise, photograph style image,",
       "tags": [
         "photo_(medium)",
         "desaturated",
@@ -2015,7 +2015,7 @@
       "family": "Design & Aesthetics",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Nu-goth rendering, matte black on charcoal, minimal cold light, hard-edged silhouette, low saturation, clean modern contrast, photograph style image,",
+      "nl": "Nu-goth capture, matte black on charcoal, minimal cold light, hard-edged silhouette, low saturation, clean modern contrast, photograph style image,",
       "tags": [
         "dark",
         "monochrome",
@@ -2035,7 +2035,7 @@
       "family": "Design & Aesthetics",
       "axis": "style",
       "medium": "film still style image",
-      "nl": "Old-Hollywood rendering, glamour monochrome, hard focused key with soft fill, satin highlight roll-off, halo backlight on hair, fine grain, film still style image,",
+      "nl": "Old-Hollywood capture, glamour monochrome, hard focused key with soft fill, satin highlight roll-off, halo backlight on hair, fine grain, film still style image,",
       "tags": [
         "monochrome",
         "greyscale",
@@ -2076,7 +2076,7 @@
       "family": "Design & Aesthetics",
       "axis": "style",
       "medium": "poster style image",
-      "nl": "Polish-poster rendering, metaphoric collage imagery, hand-painted lettering forms, limited ink palette, coarse printed texture, poster style image,",
+      "nl": "Polish-poster, metaphoric collage imagery, hand-painted lettering forms, limited ink palette, coarse printed texture, poster style image,",
       "tags": [
         "poster",
         "collage",
@@ -2096,7 +2096,7 @@
       "family": "Design & Aesthetics",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Preppy rendering, navy, white and kelly-green palette, crisp stripe and cable texture, bright campus daylight, clean mid contrast, photograph style image,",
+      "nl": "Preppy capture, navy, white and kelly-green palette, crisp stripe and cable texture, bright campus daylight, clean mid contrast, photograph style image,",
       "tags": [
         "blue_theme",
         "sunlight",
@@ -2116,7 +2116,7 @@
       "family": "Design & Aesthetics",
       "axis": "style",
       "medium": "poster style image",
-      "nl": "Psychedelic-poster rendering, melting warped forms, vibrating complementary colour, dense curvilinear pattern, flat screenprint ink, poster style image,",
+      "nl": "Psychedelic-poster, melting warped forms, vibrating complementary colour, dense curvilinear pattern, flat screenprint ink, poster style image,",
       "tags": [
         "psychedelic",
         "colorful",
@@ -2137,7 +2137,7 @@
       "family": "Design & Aesthetics",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Quiet-luxury rendering, taupe, camel and ivory palette, cashmere and fine-wool texture, soft directional daylight, restrained low contrast, photograph style image,",
+      "nl": "Quiet-luxury capture, taupe, camel and ivory palette, cashmere and fine-wool texture, soft directional daylight, restrained low contrast, photograph style image,",
       "tags": [
         "muted_color",
         "pale_color",
@@ -2157,7 +2157,7 @@
       "family": "Design & Aesthetics",
       "axis": "style",
       "medium": "graphic style image",
-      "nl": "Raygun-gothic rendering, streamlined deco rocket forms, chrome fins, turquoise-and-cream palette, hard poster light, optimistic flat shading, graphic style image,",
+      "nl": "Raygun-gothic graphics, streamlined deco rocket forms, chrome fins, turquoise-and-cream palette, hard poster light, optimistic flat shading, graphic style image,",
       "tags": [
         "retro_artstyle",
         "art_deco",
@@ -2177,7 +2177,7 @@
       "family": "Design & Aesthetics",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Regency rendering, candle-warm interiors, silk and embroidery sheen, pastel-and-gold palette, soft painterly diffusion, photograph style image,",
+      "nl": "Regency capture, candle-warm interiors, silk and embroidery sheen, pastel-and-gold palette, soft painterly diffusion, photograph style image,",
       "tags": [
         "gold",
         "pastel_colors",
@@ -2198,7 +2198,7 @@
       "family": "Design & Aesthetics",
       "axis": "style",
       "medium": "graphic style image",
-      "nl": "1950s retro-futurist rendering, airbrushed tomorrow-world colour, chrome and enamel gloss, atomic curves, printed halftone texture, graphic style image,",
+      "nl": "1950s retro-futurist graphics, airbrushed tomorrow-world colour, chrome and enamel gloss, atomic curves, printed halftone texture, graphic style image,",
       "tags": [
         "retro_artstyle",
         "airbrush_(medium)",
@@ -2218,7 +2218,7 @@
       "family": "Design & Aesthetics",
       "axis": "style",
       "medium": "graphic style image",
-      "nl": "Retrofuturist rendering, yesterday's tomorrow in faded print colour, streamlined machine forms, airbrush gradients, halftone dot texture, graphic style image,",
+      "nl": "Retrofuturist graphics, yesterday's tomorrow in faded print colour, streamlined machine forms, airbrush gradients, halftone dot texture, graphic style image,",
       "tags": [
         "retro_artstyle",
         "airbrush_(medium)",
@@ -2238,7 +2238,7 @@
       "family": "Design & Aesthetics",
       "axis": "style",
       "medium": "collage style image",
-      "nl": "Riot-grrrl rendering, xerox blown contrast, hand-lettered marker type texture, torn cut-paper layering, single spot colour, collage style image,",
+      "nl": "Riot-grrrl collage, xerox blown contrast, hand-lettered marker type texture, torn cut-paper layering, single spot colour, collage style image,",
       "tags": [
         "collage",
         "monochrome",
@@ -2259,7 +2259,7 @@
       "family": "Design & Aesthetics",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Romantic-academia rendering, candle-warm amber, dusty rose and sepia paper, soft window haze, gauzy low contrast, fine grain, photograph style image,",
+      "nl": "Romantic-academia capture, candle-warm amber, dusty rose and sepia paper, soft window haze, gauzy low contrast, fine grain, photograph style image,",
       "tags": [
         "sepia",
         "soft_focus",
@@ -2279,7 +2279,7 @@
       "family": "Design & Aesthetics",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Romantic-gothic rendering, moonlit ruin blues, candle amber accents, mist volumetrics, velvet and stone texture, deep soft shadow, photograph style image,",
+      "nl": "Romantic-gothic capture, moonlit ruin blues, candle amber accents, mist volumetrics, velvet and stone texture, deep soft shadow, photograph style image,",
       "tags": [
         "dark",
         "blue_theme",
@@ -2300,7 +2300,7 @@
       "family": "Design & Aesthetics",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Scandinavian-quiet rendering, pale birch and chalk-white palette, cold soft northern daylight, long gentle shadow, matte texture, photograph style image,",
+      "nl": "Scandinavian-quiet capture, pale birch and chalk-white palette, cold soft northern daylight, long gentle shadow, matte texture, photograph style image,",
       "tags": [
         "white_theme",
         "minimalism",
@@ -2321,7 +2321,7 @@
       "family": "Design & Aesthetics",
       "axis": "style",
       "medium": "graphic style image",
-      "nl": "Seapunk rendering, aqua and lilac gradients, dolphin-and-wave motifs, glossy 3D clip-art sheen, low-res web texture, graphic style image,",
+      "nl": "Seapunk graphics, aqua and lilac gradients, dolphin-and-wave motifs, glossy 3D clip-art sheen, low-res web texture, graphic style image,",
       "tags": [
         "gradient",
         "glowing",
@@ -2342,7 +2342,7 @@
       "family": "Design & Aesthetics",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Shabby-chic rendering, chipped white paint over wood, faded floral fabric, soft window daylight, powdery pastel palette, photograph style image,",
+      "nl": "Shabby-chic capture, chipped white paint over wood, faded floral fabric, soft window daylight, powdery pastel palette, photograph style image,",
       "tags": [
         "pale_color",
         "textured",
@@ -2362,7 +2362,7 @@
       "family": "Design & Aesthetics",
       "axis": "style",
       "medium": "graphic style image",
-      "nl": "Skeuomorphic rendering, brushed metal and linen textures, glossy bevelled buttons, inner shadows and stitching, drop-shadow depth, graphic style image,",
+      "nl": "Skeuomorphic graphics, brushed metal and linen textures, glossy bevelled buttons, inner shadows and stitching, drop-shadow depth, graphic style image,",
       "tags": [
         "metallic",
         "shiny",
@@ -2383,7 +2383,7 @@
       "family": "Design & Aesthetics",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Soft-girl rendering, candy pastel palette, plush matte texture, diffuse frontal light, glossy highlight dots, low contrast bloom, photograph style image,",
+      "nl": "Soft-girl capture, candy pastel palette, plush matte texture, diffuse frontal light, glossy highlight dots, low contrast bloom, photograph style image,",
       "tags": [
         "pastel_colors",
         "soft_focus",
@@ -2403,7 +2403,7 @@
       "family": "Design & Aesthetics",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Solarpunk rendering, sunlit greens over white architecture, glass and solar-panel reflections, dappled leaf light, clean warm optimism, photograph style image,",
+      "nl": "Solarpunk capture, sunlit greens over white architecture, glass and solar-panel reflections, dappled leaf light, clean warm optimism, photograph style image,",
       "tags": [
         "green_theme",
         "sunlight",
@@ -2424,7 +2424,7 @@
       "family": "Design & Aesthetics",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Southern-gothic rendering, humid haze, moss-green and bleached-wood palette, peeling paint texture, heavy overcast light, faded film colour, photograph style image,",
+      "nl": "Southern-gothic capture, humid haze, moss-green and bleached-wood palette, peeling paint texture, heavy overcast light, faded film colour, photograph style image,",
       "tags": [
         "green_theme",
         "desaturated",
@@ -2445,7 +2445,7 @@
       "family": "Design & Aesthetics",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Soviet-modernist rendering, monumental concrete geometry, mosaic panel accents, flat overcast light, muted grey-ochre palette, photograph style image,",
+      "nl": "Soviet-modernist capture, monumental concrete geometry, mosaic panel accents, flat overcast light, muted grey-ochre palette, photograph style image,",
       "tags": [
         "stone",
         "mosaic",
@@ -2466,7 +2466,7 @@
       "family": "Design & Aesthetics",
       "axis": "style",
       "medium": "poster style image",
-      "nl": "Soviet-print rendering, limited red, ochre and grey inks, misregistered offset layers, coarse paper texture, flat heroic shape blocking, poster style image,",
+      "nl": "Soviet-print, limited red, ochre and grey inks, misregistered offset layers, coarse paper texture, flat heroic shape blocking, poster style image,",
       "tags": [
         "poster",
         "limited_palette",
@@ -2487,7 +2487,7 @@
       "family": "Design & Aesthetics",
       "axis": "style",
       "medium": "poster style image",
-      "nl": "Soviet-poster rendering, red-and-black ink on newsprint cream, monumental diagonal composition, flat stencil shapes, print texture, poster style image,",
+      "nl": "Soviet-poster, red-and-black ink on newsprint cream, monumental diagonal composition, flat stencil shapes, print texture, poster style image,",
       "tags": [
         "poster",
         "limited_palette",
@@ -2508,7 +2508,7 @@
       "family": "Design & Aesthetics",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Steampunk rendering, brass, copper and dark wood materials, oxidised patina, warm gaslight glow, rivet and gear surface texture, photograph style image,",
+      "nl": "Steampunk capture, brass, copper and dark wood materials, oxidised patina, warm gaslight glow, rivet and gear surface texture, photograph style image,",
       "tags": [
         "metallic",
         "brown_theme",
@@ -2532,7 +2532,7 @@
       "family": "Design & Aesthetics",
       "axis": "style",
       "medium": "graphic style image",
-      "nl": "Streamline-Moderne rendering, 1930s speed curves, horizontal chrome banding, cream-and-jade palette, airbrushed gradient shading, graphic style image,",
+      "nl": "Streamline-Moderne graphics, 1930s speed curves, horizontal chrome banding, cream-and-jade palette, airbrushed gradient shading, graphic style image,",
       "tags": [
         "art_deco",
         "metallic",
@@ -2552,7 +2552,7 @@
       "family": "Design & Aesthetics",
       "axis": "style",
       "medium": "poster style image",
-      "nl": "Swiss-punk rendering, the grid broken on purpose, type stepped and letterspaced to breaking point, heavy rules and rotated blocks colliding, photocopy grain across flat spot colour, poster style image,",
+      "nl": "Swiss-punk poster, the grid broken on purpose, type stepped and letterspaced to breaking point, heavy rules and rotated blocks colliding, photocopy grain across flat spot colour, poster style image,",
       "tags": [
         "high_contrast",
         "limited_palette",
@@ -2572,7 +2572,7 @@
       "family": "Design & Aesthetics",
       "axis": "style",
       "medium": "graphic style image",
-      "nl": "Synthwave rendering, magenta-to-cyan gradient sky, glowing horizon grid, chrome highlight sheen, scanline haze, saturated night palette, graphic style image,",
+      "nl": "Synthwave graphics, magenta-to-cyan gradient sky, glowing horizon grid, chrome highlight sheen, scanline haze, saturated night palette, graphic style image,",
       "tags": [
         "neon_palette",
         "gradient",
@@ -2595,7 +2595,7 @@
       "family": "Design & Aesthetics",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Techwear rendering, matte black synthetic layers, strap and buckle hardware, cold city light, desaturated grey-black palette, photograph style image,",
+      "nl": "Techwear capture, matte black synthetic layers, strap and buckle hardware, cold city light, desaturated grey-black palette, photograph style image,",
       "tags": [
         "dark",
         "desaturated",
@@ -2615,7 +2615,7 @@
       "family": "Design & Aesthetics",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Tiki-lounge rendering, carved dark wood, bamboo texture, amber lantern pools, tropical print saturation, deep shadow, photograph style image,",
+      "nl": "Tiki-lounge capture, carved dark wood, bamboo texture, amber lantern pools, tropical print saturation, deep shadow, photograph style image,",
       "tags": [
         "wood",
         "brown_theme",
@@ -2636,7 +2636,7 @@
       "family": "Design & Aesthetics",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Tomato-girl rendering, Mediterranean noon sun, red-and-white palette, linen texture, hard leaf shadows, warm film grain, photograph style image,",
+      "nl": "Tomato-girl capture, Mediterranean noon sun, red-and-white palette, linen texture, hard leaf shadows, warm film grain, photograph style image,",
       "tags": [
         "red_theme",
         "sunlight",
@@ -2656,7 +2656,7 @@
       "family": "Design & Aesthetics",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Trad-goth rendering, batcave monochrome, powder-pale skin against black lace, hard flash contrast, deep crushed shadow, coarse grain, photograph style image,",
+      "nl": "Trad-goth capture, batcave monochrome, powder-pale skin against black lace, hard flash contrast, deep crushed shadow, coarse grain, photograph style image,",
       "tags": [
         "monochrome",
         "dark",
@@ -2677,7 +2677,7 @@
       "family": "Design & Aesthetics",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Tropical-modernist rendering, louvred light slats, cross-ventilated shade, terrazzo and teak texture, humid warm haze, photograph style image,",
+      "nl": "Tropical-modernist capture, louvred light slats, cross-ventilated shade, terrazzo and teak texture, humid warm haze, photograph style image,",
       "tags": [
         "sunlight",
         "scenery",
@@ -2700,7 +2700,7 @@
       "family": "Design & Aesthetics",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "2014 blog rendering, washed pastel grade, lifted milky blacks, heavy vignette, soft focus and dust overlay, photograph style image,",
+      "nl": "2014 blog capture, washed pastel grade, lifted milky blacks, heavy vignette, soft focus and dust overlay, photograph style image,",
       "tags": [
         "pastel_colors",
         "soft_focus",
@@ -2720,7 +2720,7 @@
       "family": "Design & Aesthetics",
       "axis": "style",
       "medium": "graphic style image",
-      "nl": "Rationalist rendering, strict modular grid, one accent colour on grey, systematic geometry, no ornament at all, graphic style image,",
+      "nl": "Rationalist graphics, strict modular grid, one accent colour on grey, systematic geometry, no ornament at all, graphic style image,",
       "tags": [
         "minimalism",
         "grey_background",
@@ -2740,7 +2740,7 @@
       "family": "Design & Aesthetics",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Vampcore rendering, candle-warm highlights against cold deep shadow, oxblood and black palette, antique velvet and tarnished silver texture, soft vignette, photograph style image,",
+      "nl": "Vampcore capture, candle-warm highlights against cold deep shadow, oxblood and black palette, antique velvet and tarnished silver texture, soft vignette, photograph style image,",
       "tags": [
         "dark",
         "red_theme",
@@ -2761,7 +2761,7 @@
       "family": "Design & Aesthetics",
       "axis": "style",
       "medium": "graphic style image",
-      "nl": "Vaporwave rendering, pink-and-cyan wash, marble and mall-tile texture, VHS chroma bleed, low-res gradient banding, flat dreamy light, graphic style image,",
+      "nl": "Vaporwave graphics, pink-and-cyan wash, marble and mall-tile texture, VHS chroma bleed, low-res gradient banding, flat dreamy light, graphic style image,",
       "tags": [
         "vaporwave",
         "neon_palette",
@@ -2782,7 +2782,7 @@
       "family": "Design & Aesthetics",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Victorian-mourning rendering, jet-black crepe texture, sepia-grey tonality, soft studio daylight, matte surfaces, aged plate softness, photograph style image,",
+      "nl": "Victorian-mourning capture, jet-black crepe texture, sepia-grey tonality, soft studio daylight, matte surfaces, aged plate softness, photograph style image,",
       "tags": [
         "sepia",
         "monochrome",
@@ -2803,7 +2803,7 @@
       "family": "Design & Aesthetics",
       "axis": "style",
       "medium": "graphic style image",
-      "nl": "Secession rendering, gold-leaf ornament over flat geometric pattern, ivory ground, decorative linear border, matte-and-metallic contrast, graphic style image,",
+      "nl": "Secession graphics, gold-leaf ornament over flat geometric pattern, ivory ground, decorative linear border, matte-and-metallic contrast, graphic style image,",
       "tags": [
         "gold",
         "art_nouveau",
@@ -2823,7 +2823,7 @@
       "family": "Design & Aesthetics",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Wabi-sabi rendering, honourable wear on natural materials, muted earth palette, soft raking daylight, chipped matte texture, quiet asymmetry, photograph style image,",
+      "nl": "Wabi-sabi capture, honourable wear on natural materials, muted earth palette, soft raking daylight, chipped matte texture, quiet asymmetry, photograph style image,",
       "tags": [
         "muted_color",
         "textured",
@@ -2843,7 +2843,7 @@
       "family": "Design & Aesthetics",
       "axis": "style",
       "medium": "graphic style image",
-      "nl": "Webcore rendering, early-web GIF colour banding, dithered gradients, pixel-edged interface fragments, harsh blue-and-silver palette, graphic style image,",
+      "nl": "Webcore, early-web GIF colour banding, dithered gradients, pixel-edged interface fragments, harsh blue-and-silver palette, graphic style image,",
       "tags": [
         "dithering",
         "pixel_art",
@@ -2864,7 +2864,7 @@
       "family": "Design & Aesthetics",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Weirdcore rendering, low-resolution photo with wrong-scale distortion, oversaturated blown light, crude overlay artefacts, uneasy flat depth, photograph style image,",
+      "nl": "Weirdcore capture, low-resolution photo with wrong-scale distortion, oversaturated blown light, crude overlay artefacts, uneasy flat depth, photograph style image,",
       "tags": [
         "surreal",
         "glitch",
@@ -2884,7 +2884,7 @@
       "family": "Design & Aesthetics",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Whimsigoth rendering, 1990s celestial velvet palette, plum and midnight blue, soft candle-warm haze, star-glint highlights, gauzy grain, photograph style image,",
+      "nl": "Whimsigoth capture, 1990s celestial velvet palette, plum and midnight blue, soft candle-warm haze, star-glint highlights, gauzy grain, photograph style image,",
       "tags": [
         "purple_theme",
         "dark",
@@ -2905,7 +2905,7 @@
       "family": "Design & Aesthetics",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Witchcore rendering, candlelit amber pools in deep shadow, dried-herb and iron texture, smoky air, warm-cold contrast, soft grain, photograph style image,",
+      "nl": "Witchcore capture, candlelit amber pools in deep shadow, dried-herb and iron texture, smoky air, warm-cold contrast, soft grain, photograph style image,",
       "tags": [
         "dark",
         "glowing",
@@ -2926,7 +2926,7 @@
       "family": "Design & Aesthetics",
       "axis": "style",
       "medium": "poster style image",
-      "nl": "WPA-poster rendering, flat bands of muted 1930s colour, simplified monumental shapes, silkscreen ink texture, cream paper ground, poster style image,",
+      "nl": "WPA-poster, flat bands of muted 1930s colour, simplified monumental shapes, silkscreen ink texture, cream paper ground, poster style image,",
       "tags": [
         "poster",
         "stencil",
@@ -2949,7 +2949,7 @@
       "family": "Design & Aesthetics",
       "axis": "style",
       "medium": "graphic style image",
-      "nl": "Y2K rendering, chrome and frosted-plastic surfaces, iridescent butterfly sheen, silver-and-ice-blue palette, hard flash sparkle, graphic style image,",
+      "nl": "Y2K graphics, chrome and frosted-plastic surfaces, iridescent butterfly sheen, silver-and-ice-blue palette, hard flash sparkle, graphic style image,",
       "tags": [
         "metallic",
         "iridescent",
@@ -2970,7 +2970,7 @@
       "family": "Design & Aesthetics",
       "axis": "style",
       "medium": "graphic style image",
-      "nl": "Y2K-chrome rendering, liquid mercury surfaces, mirrored reflections, blue-white specular blowout, glossy bevelled type forms, graphic style image,",
+      "nl": "Y2K-chrome graphics, liquid mercury surfaces, mirrored reflections, blue-white specular blowout, glossy bevelled type forms, graphic style image,",
       "tags": [
         "metallic",
         "shiny",
@@ -2990,7 +2990,7 @@
       "family": "Design & Aesthetics",
       "axis": "style",
       "medium": "graphic style image",
-      "nl": "Pop-mashup rendering, vintage comic halftone dots, blown four-colour print registration, hard black keyline, retro pulp palette, graphic style image,",
+      "nl": "Pop-mashup graphics, vintage comic halftone dots, blown four-colour print registration, hard black keyline, retro pulp palette, graphic style image,",
       "tags": [
         "halftone",
         "comic",
@@ -3013,7 +3013,7 @@
       "family": "Design & Aesthetics",
       "axis": "style",
       "medium": "graphic style image",
-      "nl": "Graphic-design rendering, deliberate flat colour system, strong shape hierarchy, generous negative space, crisp geometric edges, graphic style image,",
+      "nl": "Graphic-design, deliberate flat colour system, strong shape hierarchy, generous negative space, crisp geometric edges, graphic style image,",
       "tags": [
         "flat_color",
         "minimalism",
@@ -3079,7 +3079,7 @@
       "family": "Design & Aesthetics",
       "axis": "style",
       "medium": "graphic style image",
-      "nl": "Gradient-led rendering, smooth multi-stop colour blends, soft mesh transitions, glowing edge falloff, no line, no texture, graphic style image,",
+      "nl": "Gradient-led graphics, smooth multi-stop colour blends, soft mesh transitions, glowing edge falloff, no line, no texture, graphic style image,",
       "tags": [
         "gradient",
         "glowing",
@@ -3125,7 +3125,7 @@
       "family": "Design & Aesthetics",
       "axis": "style",
       "medium": "graphic style image",
-      "nl": "Kintsugi rendering, dark ceramic surfaces veined with gold repair lines, matte glaze texture, spot metallic gleam, restrained palette, graphic style image,",
+      "nl": "Kintsugi graphics, dark ceramic surfaces veined with gold repair lines, matte glaze texture, spot metallic gleam, restrained palette, graphic style image,",
       "tags": [
         "gold",
         "porcelain",
@@ -3170,7 +3170,7 @@
       "family": "Design & Aesthetics",
       "axis": "style",
       "medium": "abstract style image",
-      "nl": "Minimalist rendering, one or two flat colour fields, a single clean form, enormous negative space, no texture or gradient, abstract style image,",
+      "nl": "Minimalist composition, one or two flat colour fields, a single clean form, enormous negative space, no texture or gradient, abstract style image,",
       "tags": [
         "minimalism",
         "flat_color",
@@ -3193,7 +3193,7 @@
       "family": "Design & Aesthetics",
       "axis": "style",
       "medium": "abstract style image",
-      "nl": "Minimal line rendering, one continuous even-weight stroke, no shading, flat single-colour ground, abundant empty space, abstract style image,",
+      "nl": "Minimal line composition, one continuous even-weight stroke, no shading, flat single-colour ground, abundant empty space, abstract style image,",
       "tags": [
         "lineart",
         "minimalism",
@@ -3216,7 +3216,7 @@
       "family": "Design & Aesthetics",
       "axis": "style",
       "medium": "illustration style image",
-      "nl": "Ornamental-hyperreal rendering, photoreal skin detail fused with flat decorative pattern fields, gold linework, symmetrical border motifs, illustration style image,",
+      "nl": "Ornamental-hyperreal illustration, photoreal skin detail fused with flat decorative pattern fields, gold linework, symmetrical border motifs, illustration style image,",
       "tags": [
         "photorealistic",
         "gold",
@@ -3239,7 +3239,7 @@
       "family": "Design & Aesthetics",
       "axis": "style",
       "medium": "poster style image",
-      "nl": "Poster-art rendering, bold flat shapes, strong value hierarchy, limited screenprint palette, hard graphic edges, generous type space, poster style image,",
+      "nl": "Poster-art, bold flat shapes, strong value hierarchy, limited screenprint palette, hard graphic edges, generous type space, poster style image,",
       "tags": [
         "poster",
         "flat_color",
@@ -3261,7 +3261,7 @@
       "family": "Design & Aesthetics",
       "axis": "style",
       "medium": "poster style image",
-      "nl": "Propaganda-poster rendering, red-black-cream inks, monumental low-angle shape blocking, hard stencil edges, coarse paper texture, poster style image,",
+      "nl": "Propaganda-poster, red-black-cream inks, monumental low-angle shape blocking, hard stencil edges, coarse paper texture, poster style image,",
       "tags": [
         "poster",
         "stencil",

@@ -502,6 +502,27 @@ Two rules keep the catalog consistent:
   anime family ends `anime style image`, photography ends `photograph style
   image`, and so on.
 
+The opening word matches the craft, and the linter enforces the pairing against
+each entry's medium:
+
+| the work | the word |
+| --- | --- |
+| oil, watercolour, ink, acrylic | painting |
+| pencil, pen, crayon, charcoal, chalk, technical | drawing |
+| camera, film, instant | capture |
+| etching, lithograph, screenprint, woodcut | print |
+| anime, manga, webtoon | art (animation for sakuga and impact frames) |
+| comic, graphic novel | comic / comic art |
+| cartoon, cel, stop motion | animation |
+| poster, flyer | poster |
+| collage, photomontage, zine | collage |
+| textile, ceramic, wax, carving | work |
+| CGI, 3D, game art, pixel art, vector, generative | **rendering** |
+
+**Rendering** is kept for work a computer makes — CGI, 3D, game engines, pixel
+art, vector graphics and generative systems. Nothing painted, drawn,
+photographed, printed or made by hand uses it.
+
 The written clauses open by naming the process and then carry on in commas —
 `Plein-air rendering, fast wet-into-wet strokes, ... oil painting style image.`
 There is no colon after the opening phrase; the whole clause is one comma list,
@@ -583,6 +604,11 @@ Neither is touched by an update.
 ---
 
 ## 15. Troubleshooting
+
+**Revert does nothing after editing a style.** Fixed in 2.2.0 — an override is
+keyed by the style's shipped name, and after a rename the browser only knew the
+new one, so Revert matched nothing and said nothing. It now finds the override
+under either name, and reports a failure instead of closing silently.
 
 **A switch or dropdown comes back wrong after a refresh.** Workflows saved
 before 2.1.6 store widget values by position, so a version that added a widget

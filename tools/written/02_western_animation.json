@@ -159,7 +159,7 @@
  {
   "name": "[Cartoon] American Newspaper Strip",
   "medium": "comic style image",
-  "nl": "Newspaper-strip rendering, economical pen line, benday dot tone, four-colour newsprint registration, small-panel clarity, paper yellowing, comic style image,",
+  "nl": "Newspaper-strip, economical pen line, benday dot tone, four-colour newsprint registration, small-panel clarity, paper yellowing, comic style image,",
   "tags": [
    "comic",
    "halftone",
@@ -237,7 +237,7 @@
  {
   "name": "[Cartoon] Franco-Belgian Atom Style",
   "medium": "comic style image",
-  "nl": "Atom-style Franco-Belgian rendering, bouncy geometric character design, even ligne-claire outline, flat retro colour, mid-century pattern accents, comic style image,",
+  "nl": "Atom-style Franco-Belgian comic art, bouncy geometric character design, even ligne-claire outline, flat retro colour, mid-century pattern accents, comic style image,",
   "tags": [
    "comic",
    "flat_color",
@@ -267,7 +267,7 @@
  {
   "name": "[Cartoon] Ligne Claire",
   "medium": "comic style image",
-  "nl": "Ligne-claire rendering, uniform confident contour, no hatching, flat even colour, clear readable space, precise architectural detail, comic style image,",
+  "nl": "Ligne-claire comic art, uniform confident contour, no hatching, flat even colour, clear readable space, precise architectural detail, comic style image,",
   "tags": [
    "comic",
    "lineart",
@@ -282,7 +282,7 @@
  {
   "name": "[Cartoon] Modern TV CalArts-adjacent",
   "medium": "cartoon style image",
-  "nl": "Modern TV cartoon rendering, rounded bean shapes, thin coloured outline, soft pastel-bright palette, minimal shading, clean digital finish, cartoon style image,",
+  "nl": "Modern TV cartoon, rounded bean shapes, thin coloured outline, soft pastel-bright palette, minimal shading, clean digital finish, cartoon style image,",
   "tags": [
    "flat_color",
    "outline",
@@ -297,7 +297,7 @@
  {
   "name": "[Cartoon] Métal Hurlant Adult Comic",
   "medium": "comic style image",
-  "nl": "Métal-Hurlant rendering, dense ink linework, airbrushed sci-fi gradients, acid-and-earth palette, ornate machine detail, printed grain, comic style image,",
+  "nl": "Métal-Hurlant comic art, dense ink linework, airbrushed sci-fi gradients, acid-and-earth palette, ornate machine detail, printed grain, comic style image,",
   "tags": [
    "comic",
    "airbrush_(medium)",
@@ -404,7 +404,7 @@
  {
   "name": "[Cartoon] Sunday Fun-Page Color",
   "medium": "comic style image",
-  "nl": "Sunday funnies rendering, bright four-colour newsprint inks, visible dot rosettes, slight plate misregistration, simple pen line, paper cream, comic style image,",
+  "nl": "Sunday funnies, bright four-colour newsprint inks, visible dot rosettes, slight plate misregistration, simple pen line, paper cream, comic style image,",
   "tags": [
    "comic",
    "halftone",
@@ -420,7 +420,7 @@
  {
   "name": "[Cartoon] Whiteboard Marker",
   "medium": "drawing style image",
-  "nl": "Whiteboard-marker rendering, squeaky dry-erase strokes on white, uneven ink coverage, ghosted erasures, one or two accent colours, drawing style image,",
+  "nl": "Whiteboard-marker drawing, squeaky dry-erase strokes on white, uneven ink coverage, ghosted erasures, one or two accent colours, drawing style image,",
   "tags": [
    "sketch",
    "white_theme",
@@ -435,7 +435,7 @@
  {
   "name": "[Cartoon][v2] Adventure Time",
   "medium": "cartoon style image",
-  "nl": "Noodle-limb cartoon rendering, simple dot-eyed faces, bendy rubbery limbs, flat candy palette, thin even outline, soft pastel skies, cartoon style image,",
+  "nl": "Noodle-limb cartoon, simple dot-eyed faces, bendy rubbery limbs, flat candy palette, thin even outline, soft pastel skies, cartoon style image,",
   "tags": [
    "flat_color",
    "outline",
@@ -466,7 +466,7 @@
  {
   "name": "[Cartoon][v2] Bruce Timm Noir",
   "medium": "cartoon style image",
-  "nl": "Deco-noir animation rendering, heavy black shape blocking, angular art-deco design, limited palette against dark grounds, hard graphic shadow, cartoon style image,",
+  "nl": "Deco-noir animation, heavy black shape blocking, angular art-deco design, limited palette against dark grounds, hard graphic shadow, cartoon style image,",
   "tags": [
    "art_deco",
    "high_contrast",
@@ -482,7 +482,7 @@
  {
   "name": "[Cartoon][v2] Cartoon",
   "medium": "cartoon style image",
-  "nl": "General cartoon rendering, bold even outline, flat bright colour, exaggerated squashy shapes, single soft shadow tone, cartoon style image,",
+  "nl": "General cartoon, bold even outline, flat bright colour, exaggerated squashy shapes, single soft shadow tone, cartoon style image,",
   "tags": [
    "outline",
    "flat_color",
@@ -497,7 +497,7 @@
  {
   "name": "[Cartoon][v2] Classic Disney Feature Animation",
   "medium": "cartoon style image",
-  "nl": "Classic feature-animation rendering, soft airbrushed cel shading, warm rounded appeal, painted watercolour backgrounds, gentle glow, film grain, cartoon style image,",
+  "nl": "Classic feature-animation, soft airbrushed cel shading, warm rounded appeal, painted watercolour backgrounds, gentle glow, film grain, cartoon style image,",
   "tags": [
    "airbrush_(medium)",
    "watercolor_(medium)",
@@ -513,7 +513,7 @@
  {
   "name": "[Cartoon][v2] Cyberpunk: Edgerunners",
   "medium": "cartoon style image",
-  "nl": "Neon action-animation rendering, acid magenta and cyan lighting, hard cel shadows, glitch chroma fringing, saturated impact glow, cartoon style image,",
+  "nl": "Neon action-animation, acid magenta and cyan lighting, hard cel shadows, glitch chroma fringing, saturated impact glow, cartoon style image,",
   "tags": [
    "neon_palette",
    "cel_shading",
@@ -529,7 +529,7 @@
  {
   "name": "[Cartoon][v2] Disney Ultradetailed Illustration",
   "medium": "illustration style image",
-  "nl": "Ultradetailed feature-illustration rendering, polished airbrush gradients, luminous eyes, ornate costume detail, warm storybook light, illustration style image,",
+  "nl": "Ultradetailed feature-illustration, polished airbrush gradients, luminous eyes, ornate costume detail, warm storybook light, illustration style image,",
   "tags": [
    "airbrush_(medium)",
    "gradient",
@@ -544,7 +544,7 @@
  {
   "name": "[Cartoon][v2] Family Guy",
   "medium": "cartoon style image",
-  "nl": "Flat sitcom-animation rendering, rounded simple heads, thin uniform outline, unshaded flat colour, plain suburban backdrops, cartoon style image,",
+  "nl": "Flat sitcom-animation, rounded simple heads, thin uniform outline, unshaded flat colour, plain suburban backdrops, cartoon style image,",
   "tags": [
    "flat_color",
    "outline",
@@ -559,7 +559,7 @@
  {
   "name": "[Cartoon][v2] Futurama",
   "medium": "cartoon style image",
-  "nl": "Retro-future sitcom rendering, thick clean outline, flat colour with one shadow tone, chrome-and-teal palette, receding grid perspective, cartoon style image,",
+  "nl": "Retro-future sitcom animation, thick clean outline, flat colour with one shadow tone, chrome-and-teal palette, receding grid perspective, cartoon style image,",
   "tags": [
    "outline",
    "flat_color",
@@ -574,7 +574,7 @@
  {
   "name": "[Cartoon][v2] Gravity Falls",
   "medium": "cartoon style image",
-  "nl": "Mystery-cartoon rendering, chunky rounded shapes, thin brown outline, autumn pine palette, flat colour with soft shadow, cartoon style image,",
+  "nl": "Mystery-cartoon, chunky rounded shapes, thin brown outline, autumn pine palette, flat colour with soft shadow, cartoon style image,",
   "tags": [
    "outline",
    "flat_color",
@@ -589,7 +589,7 @@
  {
   "name": "[Cartoon][v2] Hanna-Barbera",
   "medium": "cartoon style image",
-  "nl": "Hanna-Barbera limited rendering, flat three-colour characters, thick ink line, repeated background panning plates, telecine warmth and dust, cartoon style image,",
+  "nl": "Hanna-Barbera limited animation, flat three-colour characters, thick ink line, repeated background panning plates, telecine warmth and dust, cartoon style image,",
   "tags": [
    "retro_artstyle",
    "flat_color",
@@ -605,7 +605,7 @@
  {
   "name": "[Cartoon][v2] Invader Zim",
   "medium": "cartoon style image",
-  "nl": "Angular gothic-cartoon rendering, spindly sharp shapes, acid green and purple palette, harsh perspective distortion, thick jagged outline, cartoon style image,",
+  "nl": "Angular gothic-cartoon, spindly sharp shapes, acid green and purple palette, harsh perspective distortion, thick jagged outline, cartoon style image,",
   "tags": [
    "outline",
    "green_theme",
@@ -621,7 +621,7 @@
  {
   "name": "[Cartoon][v2] Modern Cartoon",
   "medium": "cartoon style image",
-  "nl": "Modern cartoon rendering, confident simplified outline, flat bright fills, minimal contact shadow, geometric appeal, clean digital edges, cartoon style image,",
+  "nl": "Modern cartoon, confident simplified outline, flat bright fills, minimal contact shadow, geometric appeal, clean digital edges, cartoon style image,",
   "tags": [
    "flat_color",
    "outline",
@@ -636,7 +636,7 @@
  {
   "name": "[Cartoon][v2] Nickelodeon Animation",
   "medium": "cartoon style image",
-  "nl": "Nickelodeon-style rendering, rubbery asymmetric shapes, uneven brush outline, saturated slime-bright palette, wobbly hand-drawn energy, cartoon style image,",
+  "nl": "Nickelodeon-style animation, rubbery asymmetric shapes, uneven brush outline, saturated slime-bright palette, wobbly hand-drawn energy, cartoon style image,",
   "tags": [
    "outline",
    "colorful",
@@ -651,7 +651,7 @@
  {
   "name": "[Cartoon][v2] Peanuts Cartoon",
   "medium": "comic style image",
-  "nl": "Peanuts-strip rendering, wobbling thin pen line, tiny simple features, flat pale colour, huge empty white ground, comic style image,",
+  "nl": "Peanuts-strip, wobbling thin pen line, tiny simple features, flat pale colour, huge empty white ground, comic style image,",
   "tags": [
    "comic",
    "lineart",
@@ -667,7 +667,7 @@
  {
   "name": "[Cartoon][v2] Rick and Morty",
   "medium": "cartoon style image",
-  "nl": "Wobble-line sci-fi cartoon rendering, nervous uneven outline, bulging eyes, flat pastel-acid palette, minimal shading, cartoon style image,",
+  "nl": "Wobble-line sci-fi cartoon, nervous uneven outline, bulging eyes, flat pastel-acid palette, minimal shading, cartoon style image,",
   "tags": [
    "outline",
    "flat_color",
@@ -682,7 +682,7 @@
  {
   "name": "[Cartoon][v2] Rubber Hose Cartoon",
   "medium": "cartoon style image",
-  "nl": "Rubber-hose rendering, jointless curving limbs, pie-cut eyes, glove hands, black-and-white ink with grey wash, projector flicker, cartoon style image,",
+  "nl": "Rubber-hose animation, jointless curving limbs, pie-cut eyes, glove hands, black-and-white ink with grey wash, projector flicker, cartoon style image,",
   "tags": [
    "monochrome",
    "retro_artstyle",
@@ -697,7 +697,7 @@
  {
   "name": "[Cartoon][v2] Simpsons",
   "medium": "cartoon style image",
-  "nl": "Yellow-family sitcom rendering, overbite profiles, thick uniform black outline, flat unshaded colour, primary-heavy palette, cartoon style image,",
+  "nl": "Yellow-family sitcom animation, overbite profiles, thick uniform black outline, flat unshaded colour, primary-heavy palette, cartoon style image,",
   "tags": [
    "outline",
    "flat_color",
@@ -712,7 +712,7 @@
  {
   "name": "[Cartoon][v2] South Park",
   "medium": "cartoon style image",
-  "nl": "Construction-paper cutout rendering, flat geometric shapes, thin dark outline, matte paper colour, deliberately stiff staging, cartoon style image,",
+  "nl": "Construction-paper cutout animation, flat geometric shapes, thin dark outline, matte paper colour, deliberately stiff staging, cartoon style image,",
   "tags": [
    "papercraft",
    "flat_color",
@@ -727,7 +727,7 @@
  {
   "name": "[Cartoon][v2] Steven Universe",
   "medium": "cartoon style image",
-  "nl": "Soft-shape cartoon rendering, rounded chunky forms, thin coloured outline, gradient sunset palette, gentle glow shading, cartoon style image,",
+  "nl": "Soft-shape cartoon, rounded chunky forms, thin coloured outline, gradient sunset palette, gentle glow shading, cartoon style image,",
   "tags": [
    "outline",
    "gradient",
@@ -742,7 +742,7 @@
  {
   "name": "[Cartoon][v2] Tex Avery",
   "medium": "cartoon style image",
-  "nl": "Tex-Avery rendering, extreme squash-and-stretch, popping eye takes, hot saturated primaries, bold ink line, wild smear frames, cartoon style image,",
+  "nl": "Tex-Avery animation, extreme squash-and-stretch, popping eye takes, hot saturated primaries, bold ink line, wild smear frames, cartoon style image,",
   "tags": [
    "retro_artstyle",
    "outline",

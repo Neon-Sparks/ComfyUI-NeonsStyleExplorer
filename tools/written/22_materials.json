@@ -4,7 +4,7 @@
   "family": "Experimental & Material",
   "axis": "style",
   "medium": "material style image",
-  "nl": "Encaustic rendering, pigmented wax fused in translucent layers, tool scrapes and drips, milky depth under a glossy skin, material style image,",
+  "nl": "Encaustic work, pigmented wax fused in translucent layers, tool scrapes and drips, milky depth under a glossy skin, material style image,",
   "tags": [
    "textured",
    "traditional_media",
@@ -21,7 +21,7 @@
   "family": "Experimental & Material",
   "axis": "style",
   "medium": "material style image",
-  "nl": "Suminagashi rendering, concentric ink rings floated on water, drifting feathered lines, pale absorbent paper, material style image,",
+  "nl": "Suminagashi work, concentric ink rings floated on water, drifting feathered lines, pale absorbent paper, material style image,",
   "tags": [
    "ink_wash_painting",
    "monochrome",
@@ -38,7 +38,7 @@
   "family": "Experimental & Material",
   "axis": "style",
   "medium": "material style image",
-  "nl": "Ebru rendering, combed pigment swirls on size, feathered tulip patterns, saturated interleaved colour veins, material style image,",
+  "nl": "Ebru work, combed pigment swirls on size, feathered tulip patterns, saturated interleaved colour veins, material style image,",
   "tags": [
    "colorful",
    "gradient",
@@ -55,7 +55,7 @@
   "family": "Experimental & Material",
   "axis": "style",
   "medium": "print style image",
-  "nl": "Gelli-plate rendering, soft mottled ink pull, ghost layers from previous prints, mask silhouettes, uneven texture, print style image,",
+  "nl": "Gelli-plate, soft mottled ink pull, ghost layers from previous prints, mask silhouettes, uneven texture, print style image,",
   "tags": [
    "stencil",
    "textured",
@@ -72,7 +72,7 @@
   "family": "Experimental & Material",
   "axis": "style",
   "medium": "material style image",
-  "nl": "Shibori rendering, resist-bound cloth patterns, indigo gradients bleeding at the folds, white creases, woven texture, material style image,",
+  "nl": "Shibori work, resist-bound cloth patterns, indigo gradients bleeding at the folds, white creases, woven texture, material style image,",
   "tags": [
    "blue_theme",
    "textured",
@@ -89,7 +89,7 @@
   "family": "Experimental & Material",
   "axis": "style",
   "medium": "material style image",
-  "nl": "Batik rendering, wax-resist outlines with crackle veins, layered dye baths, earthy saturated colour on cotton weave, material style image,",
+  "nl": "Batik work, wax-resist outlines with crackle veins, layered dye baths, earthy saturated colour on cotton weave, material style image,",
   "tags": [
    "textured",
    "colorful",
@@ -106,7 +106,7 @@
   "family": "Experimental & Material",
   "axis": "style",
   "medium": "material style image",
-  "nl": "Tie-dye rendering, radiating dye spirals, bleeding colour boundaries, white resist lines, soft cotton fibre, material style image,",
+  "nl": "Tie-dye work, radiating dye spirals, bleeding colour boundaries, white resist lines, soft cotton fibre, material style image,",
   "tags": [
    "colorful",
    "gradient",
@@ -123,7 +123,7 @@
   "family": "Experimental & Material",
   "axis": "style",
   "medium": "handmade style image",
-  "nl": "Macramé rendering, knotted cord lattice, fringed loose ends, natural jute colour, soft shadow between the knots, handmade style image,",
+  "nl": "Macramé, knotted cord lattice, fringed loose ends, natural jute colour, soft shadow between the knots, handmade style image,",
   "tags": [
    "knitted",
    "textured",
@@ -139,7 +139,7 @@
   "family": "Experimental & Material",
   "axis": "style",
   "medium": "material style image",
-  "nl": "Beadwork rendering, image built from strung glass beads on a grid, stepped colour blocks, tiny specular glints, material style image,",
+  "nl": "Beadwork, image built from strung glass beads on a grid, stepped colour blocks, tiny specular glints, material style image,",
   "tags": [
    "mosaic",
    "textured",
@@ -156,7 +156,7 @@
   "family": "Experimental & Material",
   "axis": "style",
   "medium": "material style image",
-  "nl": "Wire rendering, form drawn in bent metal line, open volumes, cast shadow doing the drawing, plain ground, material style image,",
+  "nl": "Wirework, form drawn in bent metal line, open volumes, cast shadow doing the drawing, plain ground, material style image,",
   "tags": [
    "metallic",
    "lineart",
@@ -207,7 +207,7 @@
   "family": "Experimental & Material",
   "axis": "style",
   "medium": "material style image",
-  "nl": "Chalkboard rendering, dusty white chalk on dark slate, smudged erasure ghosts, gritty granular strokes, material style image,",
+  "nl": "Chalkboard drawing, dusty white chalk on dark slate, smudged erasure ghosts, gritty granular strokes, material style image,",
   "tags": [
    "chalk_(medium)",
    "dark",
@@ -224,7 +224,7 @@
   "family": "Experimental & Material",
   "axis": "style",
   "medium": "material style image",
-  "nl": "Latte-art rendering, poured milk foam on espresso crema, feathered rosetta lines, warm brown-to-cream contrast, material style image,",
+  "nl": "Latte-art, poured milk foam on espresso crema, feathered rosetta lines, warm brown-to-cream contrast, material style image,",
   "tags": [
    "brown_theme",
    "gradient",
@@ -241,7 +241,7 @@
   "family": "Experimental & Material",
   "axis": "style",
   "medium": "material style image",
-  "nl": "Sugar-glass rendering, brittle translucent amber sheets, sharp fracture edges, caustic light through the shards, material style image,",
+  "nl": "Sugar-glass work, brittle translucent amber sheets, sharp fracture edges, caustic light through the shards, material style image,",
   "tags": [
    "transparent",
    "caustics",
@@ -258,7 +258,7 @@
   "family": "Experimental & Material",
   "axis": "style",
   "medium": "material style image",
-  "nl": "Ice-carving rendering, clear carved block with frosted tool marks, internal fracture planes, cold refracted light, meltwater sheen, material style image,",
+  "nl": "Ice-carving work, clear carved block with frosted tool marks, internal fracture planes, cold refracted light, meltwater sheen, material style image,",
   "tags": [
    "transparent",
    "crystal",
@@ -276,7 +276,7 @@
   "family": "Experimental & Material",
   "axis": "style",
   "medium": "material style image",
-  "nl": "Soap-carving rendering, waxy matte block with blade facets, soft rounded edges, pastel opacity, fine shaving debris, material style image,",
+  "nl": "Soap-carving work, waxy matte block with blade facets, soft rounded edges, pastel opacity, fine shaving debris, material style image,",
   "tags": [
    "textured",
    "pastel_colors",
@@ -292,7 +292,7 @@
   "family": "Experimental & Material",
   "axis": "style",
   "medium": "material style image",
-  "nl": "Tape-art rendering, image built from straight strips of coloured tape, overlapping edges and air bubbles, hard angular shapes, material style image,",
+  "nl": "Tape-art, image built from straight strips of coloured tape, overlapping edges and air bubbles, hard angular shapes, material style image,",
   "tags": [
    "flat_color",
    "textured",
@@ -309,7 +309,7 @@
   "family": "Experimental & Material",
   "axis": "style",
   "medium": "collage style image",
-  "nl": "Sticker-bomb rendering, overlapping die-cut decals covering every inch, peeling corners, clashing logos and colour, collage style image,",
+  "nl": "Sticker-bomb collage, overlapping die-cut decals covering every inch, peeling corners, clashing logos and colour, collage style image,",
   "tags": [
    "sticker",
    "collage",
@@ -360,7 +360,7 @@
   "family": "Experimental & Material",
   "axis": "style",
   "medium": "material style image",
-  "nl": "Thermochromic rendering, heat-reactive pigment fading between two colours, soft blooming transitions, handprint-shaped patches, material style image,",
+  "nl": "Thermochromic work, heat-reactive pigment fading between two colours, soft blooming transitions, handprint-shaped patches, material style image,",
   "tags": [
    "gradient",
    "glowing",

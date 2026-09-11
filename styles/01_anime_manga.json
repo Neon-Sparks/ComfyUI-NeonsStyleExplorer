@@ -742,7 +742,7 @@
       "family": "Anime & Manga",
       "axis": "style",
       "medium": "anime style image",
-      "nl": "Bishoujo beauty rendering, delicate thin line, large luminous eyes, soft cheek gradient, smooth hair sheen, gentle warm palette, anime style image,",
+      "nl": "Bishoujo beauty art, delicate thin line, large luminous eyes, soft cheek gradient, smooth hair sheen, gentle warm palette, anime style image,",
       "tags": [
         "bishoujo",
         "anime_coloring",
@@ -787,7 +787,7 @@
       "family": "Anime & Manga",
       "axis": "style",
       "medium": "anime style image",
-      "nl": "Chibi proportion rendering, two-to-three head-tall bodies, oversized rounded head, simplified stub limbs, thick friendly outline, flat bright colour, anime style image,",
+      "nl": "Chibi proportion art, two-to-three head-tall bodies, oversized rounded head, simplified stub limbs, thick friendly outline, flat bright colour, anime style image,",
       "tags": [
         "chibi",
         "super_deformed",
@@ -831,7 +831,7 @@
       "family": "Anime & Manga",
       "axis": "style",
       "medium": "anime style image",
-      "nl": "Low-bitrate anime rendering, macroblocked gradients, smeared motion, colour banding, softened line detail, interlace combing, anime style image,",
+      "nl": "Low-bitrate anime art, macroblocked gradients, smeared motion, colour banding, softened line detail, interlace combing, anime style image,",
       "tags": [
         "glitch",
         "dithering",
@@ -871,7 +871,7 @@
       "family": "Anime & Manga",
       "axis": "style",
       "medium": "anime style image",
-      "nl": "Cinematic donghua rendering, silk-smooth gradient shading, jade and gold palette, flowing ribbon light effects, ink-wash background haze, high-gloss finish, anime style image,",
+      "nl": "Cinematic donghua art, silk-smooth gradient shading, jade and gold palette, flowing ribbon light effects, ink-wash background haze, high-gloss finish, anime style image,",
       "tags": [
         "anime_coloring",
         "gradient",
@@ -891,7 +891,7 @@
       "family": "Anime & Manga",
       "axis": "style",
       "medium": "manga style image",
-      "nl": "Semi-realistic doujin rendering, fine hatching over anime structure, careful anatomy, soft screentone gradients, ink-heavy contrast, print paper tone, manga style image,",
+      "nl": "Semi-realistic doujin art, fine hatching over anime structure, careful anatomy, soft screentone gradients, ink-heavy contrast, print paper tone, manga style image,",
       "tags": [
         "manga",
         "screentones",
@@ -952,7 +952,7 @@
       "family": "Anime & Manga",
       "axis": "style",
       "medium": "manga style image",
-      "nl": "Gekiga rendering, heavy brush ink, dense cross-hatching, adult angular faces, blunt flat blacks, gritty newsprint tone, manga style image,",
+      "nl": "Gekiga art, heavy brush ink, dense cross-hatching, adult angular faces, blunt flat blacks, gritty newsprint tone, manga style image,",
       "tags": [
         "gekiga",
         "manga",
@@ -1061,7 +1061,7 @@
       "family": "Anime & Manga",
       "axis": "style",
       "medium": "anime style image",
-      "nl": "Montage anime rendering, flat colour-field backdrops, typographic intertitles, tilted symmetrical staging, abrupt graphic cuts, anime style image,",
+      "nl": "Montage anime animation, flat colour-field backdrops, typographic intertitles, tilted symmetrical staging, abrupt graphic cuts, anime style image,",
       "tags": [
         "anime_coloring",
         "flat_color",
@@ -1082,7 +1082,7 @@
       "family": "Anime & Manga",
       "axis": "style",
       "medium": "anime style image",
-      "nl": "Sakuga action rendering, smeared motion drawing, impact debris shapes, dynamic foreshortening, hot flat highlights, motion-blurred limb arcs, anime style image,",
+      "nl": "Sakuga action animation, smeared motion drawing, impact debris shapes, dynamic foreshortening, hot flat highlights, motion-blurred limb arcs, anime style image,",
       "tags": [
         "anime_coloring",
         "motion_blur",
@@ -1124,7 +1124,7 @@
       "family": "Anime & Manga",
       "axis": "style",
       "medium": "anime style image",
-      "nl": "Bishounen rendering, elongated elegant proportions, sharp jaw line, glossy layered hair with sparkle accents, cool violet-and-silver palette, delicate ink line, anime style image,",
+      "nl": "Bishounen art, elongated elegant proportions, sharp jaw line, glossy layered hair with sparkle accents, cool violet-and-silver palette, delicate ink line, anime style image,",
       "tags": [
         "anime_coloring",
         "sparkle",
@@ -1144,7 +1144,7 @@
       "family": "Anime & Manga",
       "axis": "style",
       "medium": "anime style image",
-      "nl": "Isekai fantasy anime rendering, warm storybook palette, soft cel shading with painted scenery, gentle golden hour bloom, ornate costume detail lines, anime style image,",
+      "nl": "Isekai fantasy anime art, warm storybook palette, soft cel shading with painted scenery, gentle golden hour bloom, ornate costume detail lines, anime style image,",
       "tags": [
         "anime_coloring",
         "cel_shading",
@@ -1164,7 +1164,7 @@
       "family": "Anime & Manga",
       "axis": "style",
       "medium": "anime style image",
-      "nl": "Iyashikei healing rendering, pale airy palette, low contrast, diffuse ambient light, soft-edged shading, watercolour-tinted backgrounds, anime style image,",
+      "nl": "Iyashikei healing art, pale airy palette, low contrast, diffuse ambient light, soft-edged shading, watercolour-tinted backgrounds, anime style image,",
       "tags": [
         "anime_coloring",
         "pastel_colors",
@@ -1185,7 +1185,7 @@
       "family": "Anime & Manga",
       "axis": "style",
       "medium": "anime style image",
-      "nl": "Josei rendering, adult proportions, restrained muted palette, fine tapering line, fabric weight and fold detail, quiet even light, anime style image,",
+      "nl": "Josei art, adult proportions, restrained muted palette, fine tapering line, fabric weight and fold detail, quiet even light, anime style image,",
       "tags": [
         "josei",
         "anime_coloring",
@@ -1206,7 +1206,7 @@
       "family": "Anime & Manga",
       "axis": "style",
       "medium": "anime style image",
-      "nl": "Josei fashion rendering, elegant elongated figures, editorial neutral palette, precise garment seam and drape lines, matte skin shading, anime style image,",
+      "nl": "Josei fashion art, elegant elongated figures, editorial neutral palette, precise garment seam and drape lines, matte skin shading, anime style image,",
       "tags": [
         "josei",
         "anime_coloring",
@@ -1228,7 +1228,7 @@
       "family": "Anime & Manga",
       "axis": "style",
       "medium": "anime style image",
-      "nl": "Kanada-school rendering, angular explosion shapes with cracked highlight rims, debris flung outward in hard cel shapes, exaggerated perspective smears, hot yellow-white cores, anime style image,",
+      "nl": "Kanada-school animation, angular explosion shapes with cracked highlight rims, debris flung outward in hard cel shapes, exaggerated perspective smears, hot yellow-white cores, anime style image,",
       "tags": [
         "anime_coloring",
         "high_contrast",
@@ -1248,7 +1248,7 @@
       "family": "Anime & Manga",
       "axis": "style",
       "medium": "anime style image",
-      "nl": "Kawaii pastel rendering, strawberry-milk, mint and lilac colour blocks, soft rounded shapes, low-contrast shading, glossy dot highlights, anime style image,",
+      "nl": "Kawaii pastel colouring, strawberry-milk, mint and lilac colour blocks, soft rounded shapes, low-contrast shading, glossy dot highlights, anime style image,",
       "tags": [
         "pastel_colors",
         "anime_coloring",
@@ -1271,7 +1271,7 @@
       "family": "Anime & Manga",
       "axis": "style",
       "medium": "anime style image",
-      "nl": "Kawaii rounded rendering, every form softened to a bubble, thick friendly outline, minimal shading, cheerful saturated pastels, sticker-clean edges, anime style image,",
+      "nl": "Kawaii rounded art, every form softened to a bubble, thick friendly outline, minimal shading, cheerful saturated pastels, sticker-clean edges, anime style image,",
       "tags": [
         "moe",
         "chibi",
@@ -1292,7 +1292,7 @@
       "family": "Anime & Manga",
       "axis": "style",
       "medium": "anime style image",
-      "nl": "Kemono rendering, anime line over animal-featured design, fur tuft linework, flat cel colour with airbrushed muzzle shading, bright poster palette, anime style image,",
+      "nl": "Kemono art, anime line over animal-featured design, fur tuft linework, flat cel colour with airbrushed muzzle shading, bright poster palette, anime style image,",
       "tags": [
         "kemonomimi",
         "anime_coloring",
@@ -1312,7 +1312,7 @@
       "family": "Anime & Manga",
       "axis": "style",
       "medium": "anime style image",
-      "nl": "Kinetic anime rendering, neon-clashing palette, thick expressive outline, smeared impact frames, chunky graphic effects, anime style image,",
+      "nl": "Kinetic anime art, neon-clashing palette, thick expressive outline, smeared impact frames, chunky graphic effects, anime style image,",
       "tags": [
         "anime_coloring",
         "neon_palette",
@@ -1333,7 +1333,7 @@
       "family": "Anime & Manga",
       "axis": "style",
       "medium": "anime style image",
-      "nl": "Kodomo rendering, simple bold shapes, thick even outline, primary saturated colour, single flat shadow tone, cheerful high-key light, anime style image,",
+      "nl": "Kodomo art, simple bold shapes, thick even outline, primary saturated colour, single flat shadow tone, cheerful high-key light, anime style image,",
       "tags": [
         "anime_coloring",
         "flat_color",
@@ -1354,7 +1354,7 @@
       "family": "Anime & Manga",
       "axis": "style",
       "medium": "anime style image",
-      "nl": "Soft-realist anime rendering, delicate thin line, pale skin gradients, observed everyday detail, warm window light, shallow focus, anime style image,",
+      "nl": "Soft-realist anime art, delicate thin line, pale skin gradients, observed everyday detail, warm window light, shallow focus, anime style image,",
       "tags": [
         "anime_coloring",
         "soft_focus",
@@ -1374,7 +1374,7 @@
       "family": "Anime & Manga",
       "axis": "style",
       "medium": "anime style image",
-      "nl": "Light-novel cover rendering, crisp illustration line, glossy hair and eye highlights, decorative pattern behind the figure, cream-and-pastel palette, generous title space, anime style image,",
+      "nl": "Light-novel cover art, crisp illustration line, glossy hair and eye highlights, decorative pattern behind the figure, cream-and-pastel palette, generous title space, anime style image,",
       "tags": [
         "official_art",
         "anime_coloring",
@@ -1394,7 +1394,7 @@
       "family": "Anime & Manga",
       "axis": "style",
       "medium": "anime style image",
-      "nl": "Live2D-ready rendering, separated flat colour layers, ultra-clean uniform outline, soft cel shading, symmetrical front-facing design clarity, anime style image,",
+      "nl": "Live2D-ready art, separated flat colour layers, ultra-clean uniform outline, soft cel shading, symmetrical front-facing design clarity, anime style image,",
       "tags": [
         "anime_coloring",
         "flat_color",
@@ -1434,7 +1434,7 @@
       "family": "Anime & Manga",
       "axis": "style",
       "medium": "manga style image",
-      "nl": "Screentone manga rendering, dot-pattern greys for every shadow, sharp black ink line, gradient tone sheets, white paper ground, print moire, manga style image,",
+      "nl": "Screentone manga art, dot-pattern greys for every shadow, sharp black ink line, gradient tone sheets, white paper ground, print moire, manga style image,",
       "tags": [
         "screentones",
         "manga",
@@ -1457,7 +1457,7 @@
       "family": "Anime & Manga",
       "axis": "style",
       "medium": "webtoon style image",
-      "nl": "Manhwa long-scroll rendering, airbrushed skin gradients, thin brown outline, glossy hair sheen, backlit rim glow, clean pastel background washes, webtoon style image,",
+      "nl": "Manhwa long-scroll art, airbrushed skin gradients, thin brown outline, glossy hair sheen, backlit rim glow, clean pastel background washes, webtoon style image,",
       "tags": [
         "manhwa",
         "webtoon",
@@ -1478,7 +1478,7 @@
       "family": "Anime & Manga",
       "axis": "style",
       "medium": "anime style image",
-      "nl": "Mascot character rendering, bold readable silhouette, minimal facial marks, flat block colour, thick outline, plush-soft volumes, anime style image,",
+      "nl": "Mascot character art, bold readable silhouette, minimal facial marks, flat block colour, thick outline, plush-soft volumes, anime style image,",
       "tags": [
         "chibi",
         "flat_color",
@@ -1500,7 +1500,7 @@
       "family": "Anime & Manga",
       "axis": "style",
       "medium": "anime style image",
-      "nl": "Mecha technical rendering, panel-line precision, flat metal colour with hard shadow wedges, colour-hold detailing instead of chrome, decal and stencil marks, anime style image,",
+      "nl": "Mecha technical art, panel-line precision, flat metal colour with hard shadow wedges, colour-hold detailing instead of chrome, decal and stencil marks, anime style image,",
       "tags": [
         "anime_coloring",
         "lineart",
@@ -1520,7 +1520,7 @@
       "family": "Anime & Manga",
       "axis": "style",
       "medium": "anime style image",
-      "nl": "Mini super-deformed mascot rendering, palm-sized proportions, simplified two-dot eyes, flat bright fill, soft contact shadow, sticker outline, anime style image,",
+      "nl": "Mini super-deformed mascot art, palm-sized proportions, simplified two-dot eyes, flat bright fill, soft contact shadow, sticker outline, anime style image,",
       "tags": [
         "super_deformed",
         "chibi",
@@ -1540,7 +1540,7 @@
       "family": "Anime & Manga",
       "axis": "style",
       "medium": "anime style image",
-      "nl": "Missile-swarm rendering, dozens of thin smoke trails spiralling in dense parallel curves, hard cel-shaded plumes, steep perspective on the trail bundle, high-contrast sky behind it, anime style image,",
+      "nl": "Missile-swarm art, dozens of thin smoke trails spiralling in dense parallel curves, hard cel-shaded plumes, steep perspective on the trail bundle, high-contrast sky behind it, anime style image,",
       "tags": [
         "anime_coloring",
         "motion_lines",
@@ -1581,7 +1581,7 @@
       "family": "Anime & Manga",
       "axis": "style",
       "medium": "anime style image",
-      "nl": "Moe rendering, large glossy eyes, small nose and mouth, soft round cheeks, pale pastel shading, thin light line, anime style image,",
+      "nl": "Moe art, large glossy eyes, small nose and mouth, soft round cheeks, pale pastel shading, thin light line, anime style image,",
       "tags": [
         "moe",
         "anime_coloring",
@@ -1603,7 +1603,7 @@
       "family": "Anime & Manga",
       "axis": "style",
       "medium": "anime style image",
-      "nl": "Soft-blob moe rendering, marshmallow-round forms, barely-there outline, cotton pastel palette, diffuse shadowless light, anime style image,",
+      "nl": "Soft-blob moe art, marshmallow-round forms, barely-there outline, cotton pastel palette, diffuse shadowless light, anime style image,",
       "tags": [
         "moe",
         "pastel_colors",
@@ -1646,7 +1646,7 @@
       "family": "Anime & Manga",
       "axis": "style",
       "medium": "anime style image",
-      "nl": "Oekaki board rendering, jagged mouse-drawn line, low-resolution pixel edges, small default palette, dithered shading, early-web canvas feel, anime style image,",
+      "nl": "Oekaki board art, jagged mouse-drawn line, low-resolution pixel edges, small default palette, dithered shading, early-web canvas feel, anime style image,",
       "tags": [
         "oekaki",
         "dithering",
@@ -1688,7 +1688,7 @@
       "family": "Anime & Manga",
       "axis": "style",
       "medium": "anime style image",
-      "nl": "OVA airbrush rendering, airbrushed gradients over hand-inked line, chrome sparkle and hard rim light on every edge, deep purple-to-magenta sky wash, faint print halftone in the flats, anime style image,",
+      "nl": "OVA airbrush art, airbrushed gradients over hand-inked line, chrome sparkle and hard rim light on every edge, deep purple-to-magenta sky wash, faint print halftone in the flats, anime style image,",
       "tags": [
         "airbrush_(medium)",
         "1980s_(style)",
@@ -1832,7 +1832,7 @@
       "family": "Anime & Manga",
       "axis": "style",
       "medium": "anime style image",
-      "nl": "Retro limited-TV rendering, bold graphic character shapes, flat primary paint, minimal shading, held key poses, cel dust and telecine warmth, anime style image,",
+      "nl": "Retro limited-TV animation, bold graphic character shapes, flat primary paint, minimal shading, held key poses, cel dust and telecine warmth, anime style image,",
       "tags": [
         "anime_coloring",
         "retro_artstyle",
@@ -1873,7 +1873,7 @@
       "family": "Anime & Manga",
       "axis": "style",
       "medium": "anime style image",
-      "nl": "Seinen rendering, adult facial structure, restrained desaturated palette, weighty ink line, understated shading, sober even light, anime style image,",
+      "nl": "Seinen art, adult facial structure, restrained desaturated palette, weighty ink line, understated shading, sober even light, anime style image,",
       "tags": [
         "seinen",
         "anime_coloring",
@@ -1894,7 +1894,7 @@
       "family": "Anime & Manga",
       "axis": "style",
       "medium": "anime style image",
-      "nl": "Gritty seinen rendering, dense hatch shadow, skin blemish and stubble detail, ashen desaturated palette, harsh low-key light, paper grain overlay, anime style image,",
+      "nl": "Gritty seinen art, dense hatch shadow, skin blemish and stubble detail, ashen desaturated palette, harsh low-key light, paper grain overlay, anime style image,",
       "tags": [
         "seinen",
         "cross-hatching",
@@ -1916,7 +1916,7 @@
       "family": "Anime & Manga",
       "axis": "style",
       "medium": "anime style image",
-      "nl": "Sharp graphic action rendering, angular silhouette shapes, flat high-contrast colour, hard diagonal shadow cuts, comic impact framing, anime style image,",
+      "nl": "Sharp graphic action art, angular silhouette shapes, flat high-contrast colour, hard diagonal shadow cuts, comic impact framing, anime style image,",
       "tags": [
         "anime_coloring",
         "high_contrast",
@@ -1936,7 +1936,7 @@
       "family": "Anime & Manga",
       "axis": "style",
       "medium": "anime style image",
-      "nl": "Shoujo romance rendering, sparkle-filled eyes, feather-fine hair strands, flower and bubble decorative fills, rose-and-cream palette, soft focus glow, anime style image,",
+      "nl": "Shoujo romance art, sparkle-filled eyes, feather-fine hair strands, flower and bubble decorative fills, rose-and-cream palette, soft focus glow, anime style image,",
       "tags": [
         "shoujo",
         "sparkle",
@@ -1957,7 +1957,7 @@
       "family": "Anime & Manga",
       "axis": "style",
       "medium": "anime style image",
-      "nl": "Shounen action rendering, heavy inked outline, speed lines and impact bursts, hot saturated primaries, hard cel shadows, dynamic foreshortening, anime style image,",
+      "nl": "Shounen action art, heavy inked outline, speed lines and impact bursts, hot saturated primaries, hard cel shadows, dynamic foreshortening, anime style image,",
       "tags": [
         "shounen",
         "speed_lines",
@@ -2025,7 +2025,7 @@
       "family": "Anime & Manga",
       "axis": "style",
       "medium": "anime style image",
-      "nl": "Smear-frame rendering, deliberately distorted in-between drawings, limbs stretched into ribbons for a single beat, several ghosted contours at once, flat cel colour kept flat through the distortion, anime style image,",
+      "nl": "Smear-frame animation, deliberately distorted in-between drawings, limbs stretched into ribbons for a single beat, several ghosted contours at once, flat cel colour kept flat through the distortion, anime style image,",
       "tags": [
         "anime_coloring",
         "motion_blur",
@@ -2045,7 +2045,7 @@
       "family": "Anime & Manga",
       "axis": "style",
       "medium": "anime style image",
-      "nl": "Soft glow acting rendering, gentle rim light around figures, warm ambient bounce, subtle blush gradients, feather-edged shadows, delicate bloom, anime style image,",
+      "nl": "Soft glow acting art, gentle rim light around figures, warm ambient bounce, subtle blush gradients, feather-edged shadows, delicate bloom, anime style image,",
       "tags": [
         "anime_coloring",
         "rim_lighting",
@@ -2066,7 +2066,7 @@
       "family": "Anime & Manga",
       "axis": "style",
       "medium": "anime style image",
-      "nl": "Soft romance-manga rendering, airy pastel palette, delicate tapering line, blush gradients, floating flower screentone, anime style image,",
+      "nl": "Soft romance-manga art, airy pastel palette, delicate tapering line, blush gradients, floating flower screentone, anime style image,",
       "tags": [
         "shoujo",
         "pastel_colors",
@@ -2107,7 +2107,7 @@
       "family": "Anime & Manga",
       "axis": "style",
       "medium": "anime style image",
-      "nl": "Impact-frame rendering, radiating speed lines, white flash burst, debris shards, extreme foreshortening, near-monochrome high contrast, anime style image,",
+      "nl": "Impact-frame animation, radiating speed lines, white flash burst, debris shards, extreme foreshortening, near-monochrome high contrast, anime style image,",
       "tags": [
         "speed_lines",
         "emphasis_lines",
@@ -2130,7 +2130,7 @@
       "family": "Anime & Manga",
       "axis": "style",
       "medium": "anime style image",
-      "nl": "Sports anime rendering, sweat-fleck highlights, radial speed lines, tense muscle line detail, hot stadium light, saturated team colour, anime style image,",
+      "nl": "Sports anime art, sweat-fleck highlights, radial speed lines, tense muscle line detail, hot stadium light, saturated team colour, anime style image,",
       "tags": [
         "shounen",
         "speed_lines",
@@ -2150,7 +2150,7 @@
       "family": "Anime & Manga",
       "axis": "style",
       "medium": "anime style image",
-      "nl": "Super-deformed rendering, two-head-tall proportions, oversized eyes, stubby simplified limbs, bold outline, flat cheerful colour, anime style image,",
+      "nl": "Super-deformed art, two-head-tall proportions, oversized eyes, stubby simplified limbs, bold outline, flat cheerful colour, anime style image,",
       "tags": [
         "super_deformed",
         "chibi",
@@ -2173,7 +2173,7 @@
       "family": "Anime & Manga",
       "axis": "style",
       "medium": "anime style image",
-      "nl": "Superflat rendering, zero depth, pure flat colour planes, hard vector-clean contours, repeating motif fields, glossy plastic-bright palette, anime style image,",
+      "nl": "Superflat art, zero depth, pure flat colour planes, hard vector-clean contours, repeating motif fields, glossy plastic-bright palette, anime style image,",
       "tags": [
         "flat_color",
         "vector_trace",
@@ -2194,7 +2194,7 @@
       "family": "Anime & Manga",
       "axis": "style",
       "medium": "manga style image",
-      "nl": "Tankobon-print rendering, slightly grey newsprint, ink gain thickening the line, coarse screentone dots, tight gutter margin, manga style image,",
+      "nl": "Tankobon-print art, slightly grey newsprint, ink gain thickening the line, coarse screentone dots, tight gutter margin, manga style image,",
       "tags": [
         "manga",
         "screentones",
@@ -2215,7 +2215,7 @@
       "family": "Anime & Manga",
       "axis": "style",
       "medium": "anime style image",
-      "nl": "Heavy-outline anime rendering, uniform bold black contour around every shape, flat interior colour, poster-simple shadows, anime style image,",
+      "nl": "Heavy-outline anime art, uniform bold black contour around every shape, flat interior colour, poster-simple shadows, anime style image,",
       "tags": [
         "outline",
         "flat_color",
@@ -2237,7 +2237,7 @@
       "family": "Anime & Manga",
       "axis": "style",
       "medium": "anime style image",
-      "nl": "Transformation-sequence rendering, ribbon light trails, prismatic sparkle bursts, silhouette against radiating colour, glowing rim, anime style image,",
+      "nl": "Transformation-sequence animation, ribbon light trails, prismatic sparkle bursts, silhouette against radiating colour, glowing rim, anime style image,",
       "tags": [
         "sparkle",
         "glowing",
@@ -2279,7 +2279,7 @@
       "family": "Anime & Manga",
       "axis": "style",
       "medium": "anime style image",
-      "nl": "Effects-heavy anime rendering, digitally composited flame and water layers, glowing particle spray, motion trails over cel figures, deep colour grade, anime style image,",
+      "nl": "Effects-heavy anime art, digitally composited flame and water layers, glowing particle spray, motion trails over cel figures, deep colour grade, anime style image,",
       "tags": [
         "anime_coloring",
         "glowing",
@@ -2323,7 +2323,7 @@
       "family": "Anime & Manga",
       "axis": "style",
       "medium": "anime style image",
-      "nl": "Visual-novel sprite rendering, glossy cel shading, clean separated hair layers, even front lighting, plain or blurred backdrop, high-gloss eye highlights, anime style image,",
+      "nl": "Visual-novel sprite art, glossy cel shading, clean separated hair layers, even front lighting, plain or blurred backdrop, high-gloss eye highlights, anime style image,",
       "tags": [
         "game_cg",
         "anime_coloring",
@@ -2343,7 +2343,7 @@
       "family": "Anime & Manga",
       "axis": "style",
       "medium": "anime style image",
-      "nl": "VTuber-model rendering, separated flat colour layers, ultra-clean outline, glossy eye highlights, symmetrical front-facing design, anime style image,",
+      "nl": "VTuber-model art, separated flat colour layers, ultra-clean outline, glossy eye highlights, symmetrical front-facing design, anime style image,",
       "tags": [
         "anime_coloring",
         "flat_color",
@@ -2521,7 +2521,7 @@
       "family": "Anime & Manga",
       "axis": "style",
       "medium": "anime style image",
-      "nl": "Rounded adventure-manga rendering, springy tubular limbs, clean even outline, bright primary flat colour, crisp white highlight dots, airy simple shading, anime style image,",
+      "nl": "Rounded adventure-manga art, springy tubular limbs, clean even outline, bright primary flat colour, crisp white highlight dots, airy simple shading, anime style image,",
       "tags": [
         "anime_coloring",
         "flat_color",
@@ -2544,7 +2544,7 @@
       "family": "Anime & Manga",
       "axis": "style",
       "medium": "anime style image",
-      "nl": "General anime rendering, clean ink outline, flat base colour with hard shadow shapes, glossy eye highlights, simple bright palette, anime style image,",
+      "nl": "General anime art, clean ink outline, flat base colour with hard shadow shapes, glossy eye highlights, simple bright palette, anime style image,",
       "tags": [
         "anime_coloring",
         "cel_shading",
@@ -2589,7 +2589,7 @@
       "family": "Anime & Manga",
       "axis": "style",
       "medium": "anime style image",
-      "nl": "Graphic-punk manga rendering, exaggerated angular silhouettes, thick tapering ink, flame and pattern motifs as flat black shapes, hot two-colour accents, anime style image,",
+      "nl": "Graphic-punk manga art, exaggerated angular silhouettes, thick tapering ink, flame and pattern motifs as flat black shapes, hot two-colour accents, anime style image,",
       "tags": [
         "anime_coloring",
         "high_contrast",
@@ -2611,7 +2611,7 @@
       "family": "Anime & Manga",
       "axis": "style",
       "medium": "anime style image",
-      "nl": "Grim survival-anime rendering, desaturated slate palette, harsh directional light, dense sinew and rope detail, cross-hatch shadow texture, cold film grade, anime style image,",
+      "nl": "Grim survival-anime art, desaturated slate palette, harsh directional light, dense sinew and rope detail, cross-hatch shadow texture, cold film grade, anime style image,",
       "tags": [
         "anime_coloring",
         "muted_color",
@@ -2658,7 +2658,7 @@
       "family": "Anime & Manga",
       "axis": "style",
       "medium": "anime style image",
-      "nl": "Sleek shounen rendering, elongated slim figures, whip-thin tapering ink, stark black-and-white costume blocking, cool spirit-glow accents, anime style image,",
+      "nl": "Sleek shounen art, elongated slim figures, whip-thin tapering ink, stark black-and-white costume blocking, cool spirit-glow accents, anime style image,",
       "tags": [
         "shounen",
         "anime_coloring",
@@ -2681,7 +2681,7 @@
       "family": "Anime & Manga",
       "axis": "style",
       "medium": "anime style image",
-      "nl": "Hyper-detailed manga rendering, photographic anatomy under anime line, dense hatch and screentone gradients, glossy skin highlights, cinematic staging, anime style image,",
+      "nl": "Hyper-detailed manga art, photographic anatomy under anime line, dense hatch and screentone gradients, glossy skin highlights, cinematic staging, anime style image,",
       "tags": [
         "manga",
         "screentones",
@@ -2703,7 +2703,7 @@
       "family": "Anime & Manga",
       "axis": "style",
       "medium": "anime style image",
-      "nl": "Rough modern manga rendering, scratchy nervous ink line, blunt flat blacks, grubby desaturated palette, splattered texture, deadpan flat framing, anime style image,",
+      "nl": "Rough modern manga art, scratchy nervous ink line, blunt flat blacks, grubby desaturated palette, splattered texture, deadpan flat framing, anime style image,",
       "tags": [
         "manga",
         "seinen",
@@ -2726,7 +2726,7 @@
       "family": "Anime & Manga",
       "axis": "style",
       "medium": "anime style image",
-      "nl": "Cinematic anime rendering, motivated key light, atmospheric haze layers, shallow focus, film grade with soft bloom and grain, anime style image,",
+      "nl": "Cinematic anime art, motivated key light, atmospheric haze layers, shallow focus, film grade with soft bloom and grain, anime style image,",
       "tags": [
         "anime_coloring",
         "cinematic_lighting",
@@ -2748,7 +2748,7 @@
       "family": "Anime & Manga",
       "axis": "style",
       "medium": "anime style image",
-      "nl": "Ornate shoujo-fantasy rendering, impossibly elongated figures, lace and feather pattern detail, ribbon-flow composition, jewel pastel palette, sparkle overlay, anime style image,",
+      "nl": "Ornate shoujo-fantasy art, impossibly elongated figures, lace and feather pattern detail, ribbon-flow composition, jewel pastel palette, sparkle overlay, anime style image,",
       "tags": [
         "shoujo",
         "sparkle",
@@ -2794,7 +2794,7 @@
       "family": "Anime & Manga",
       "axis": "style",
       "medium": "anime style image",
-      "nl": "Gag-anime rendering, wobbly childlike outline, squashed simple faces, flat unmodulated colour, minimal detail, cheerful daylight palette, anime style image,",
+      "nl": "Gag-anime art, wobbly childlike outline, squashed simple faces, flat unmodulated colour, minimal detail, cheerful daylight palette, anime style image,",
       "tags": [
         "anime_coloring",
         "flat_color",
@@ -2817,7 +2817,7 @@
       "family": "Anime & Manga",
       "axis": "style",
       "medium": "anime style image",
-      "nl": "Psychological-thriller anime rendering, severe high contrast, sickly green and amber grade, harsh underlighting, dense hatch shadow, sharp angular faces, anime style image,",
+      "nl": "Psychological-thriller anime art, severe high contrast, sickly green and amber grade, harsh underlighting, dense hatch shadow, sharp angular faces, anime style image,",
       "tags": [
         "anime_coloring",
         "high_contrast",
@@ -2840,7 +2840,7 @@
       "family": "Anime & Manga",
       "axis": "style",
       "medium": "anime style image",
-      "nl": "Euro-manga hybrid rendering, bande-dessinée colour flats over anime line, ligne-claire precision, printed halftone texture, muted sophisticated palette, anime style image,",
+      "nl": "Euro-manga hybrid art, bande-dessinée colour flats over anime line, ligne-claire precision, printed halftone texture, muted sophisticated palette, anime style image,",
       "tags": [
         "comic",
         "flat_color",
@@ -2863,7 +2863,7 @@
       "family": "Anime & Manga",
       "axis": "style",
       "medium": "anime style image",
-      "nl": "Gentle fantasy anime rendering, pale watercolour-tinted palette, thin delicate line, quiet even light, soft painted scenery, restrained shading, anime style image,",
+      "nl": "Gentle fantasy anime art, pale watercolour-tinted palette, thin delicate line, quiet even light, soft painted scenery, restrained shading, anime style image,",
       "tags": [
         "anime_coloring",
         "pastel_colors",
@@ -2886,7 +2886,7 @@
       "family": "Anime & Manga",
       "axis": "style",
       "medium": "anime style image",
-      "nl": "Hand-painted feature-anime rendering, gouache scenery with no outlines, warm natural daylight, soft cel figures, wind-swept organic detail, gentle grain, anime style image,",
+      "nl": "Hand-painted feature-anime art, gouache scenery with no outlines, warm natural daylight, soft cel figures, wind-swept organic detail, gentle grain, anime style image,",
       "tags": [
         "anime_coloring",
         "painting_(medium)",
@@ -2910,7 +2910,7 @@
       "family": "Anime & Manga",
       "axis": "style",
       "medium": "anime style image",
-      "nl": "Gacha pin-up rendering, silky airbrushed skin, ornate armour and lace detail, jewel-tone palette, layered rim light and sparkle, poster polish, anime style image,",
+      "nl": "Gacha pin-up art, silky airbrushed skin, ornate armour and lace detail, jewel-tone palette, layered rim light and sparkle, poster polish, anime style image,",
       "tags": [
         "official_art",
         "anime_coloring",
@@ -2933,7 +2933,7 @@
       "family": "Anime & Manga",
       "axis": "style",
       "medium": "anime style image",
-      "nl": "Fashion-posed manga rendering, sculpted muscle hatching, art-nouveau pattern fills, clashing high-key colour swaps, hard graphic shadow shapes, anime style image,",
+      "nl": "Fashion-posed manga art, sculpted muscle hatching, art-nouveau pattern fills, clashing high-key colour swaps, hard graphic shadow shapes, anime style image,",
       "tags": [
         "anime_coloring",
         "high_contrast",
@@ -2956,7 +2956,7 @@
       "family": "Anime & Manga",
       "axis": "style",
       "medium": "anime style image",
-      "nl": "Modern dark-shounen rendering, cool desaturated palette, hard black shadow blocking, smoky curse-energy glow, sharp foreshortened action line, anime style image,",
+      "nl": "Modern dark-shounen art, cool desaturated palette, hard black shadow blocking, smoky curse-energy glow, sharp foreshortened action line, anime style image,",
       "tags": [
         "shounen",
         "anime_coloring",
@@ -3002,7 +3002,7 @@
       "family": "Anime & Manga",
       "axis": "style",
       "medium": "anime style image",
-      "nl": "Dense illustrative rendering, baroque line accumulation, ornamental pattern everywhere, earthy saturated palette, ink-and-watercolour texture, anime style image,",
+      "nl": "Dense illustrative art, baroque line accumulation, ornamental pattern everywhere, earthy saturated palette, ink-and-watercolour texture, anime style image,",
       "tags": [
         "ink_(medium)",
         "watercolor_(medium)",
@@ -3024,7 +3024,7 @@
       "family": "Anime & Manga",
       "axis": "style",
       "medium": "anime style image",
-      "nl": "Modern web-illustration rendering, soft luminous skin gradients, delicate line, dreamy pastel-and-teal palette, bloom-heavy backlight, particle dust, anime style image,",
+      "nl": "Modern web-illustration, soft luminous skin gradients, delicate line, dreamy pastel-and-teal palette, bloom-heavy backlight, particle dust, anime style image,",
       "tags": [
         "anime_coloring",
         "gradient",
@@ -3047,7 +3047,7 @@
       "family": "Anime & Manga",
       "axis": "style",
       "medium": "manga style image",
-      "nl": "Black-and-white manga rendering, ink line of varied weight, screentone greys, hatch shadows, spot blacks, white paper ground, manga style image,",
+      "nl": "Black-and-white manga art, ink line of varied weight, screentone greys, hatch shadows, spot blacks, white paper ground, manga style image,",
       "tags": [
         "manga",
         "monochrome",
@@ -3069,7 +3069,7 @@
       "family": "Anime & Manga",
       "axis": "style",
       "medium": "webtoon style image",
-      "nl": "Ultra-detailed manhwa rendering, glossy airbrushed skin, intricate armour and hair strand detail, cool cinematic grade, dramatic rim light, webtoon style image,",
+      "nl": "Ultra-detailed manhwa art, glossy airbrushed skin, intricate armour and hair strand detail, cool cinematic grade, dramatic rim light, webtoon style image,",
       "tags": [
         "manhwa",
         "webtoon",
@@ -3092,7 +3092,7 @@
       "family": "Anime & Manga",
       "axis": "style",
       "medium": "anime style image",
-      "nl": "Mecha anime rendering, panel-lined machine surfaces, flat metal paint with hard shadow wedges, thruster glow, decal detail, painted sky backdrop, anime style image,",
+      "nl": "Mecha anime art, panel-lined machine surfaces, flat metal paint with hard shadow wedges, thruster glow, decal detail, painted sky backdrop, anime style image,",
       "tags": [
         "anime_coloring",
         "metallic",
@@ -3139,7 +3139,7 @@
       "family": "Anime & Manga",
       "axis": "style",
       "medium": "anime style image",
-      "nl": "Modern kids-anime rendering, clean uniform outline, flat bright primaries, single soft shadow tone, cheerful high-key light, simple painted scenery, anime style image,",
+      "nl": "Modern kids-anime art, clean uniform outline, flat bright primaries, single soft shadow tone, cheerful high-key light, simple painted scenery, anime style image,",
       "tags": [
         "anime_coloring",
         "flat_color",
@@ -3162,7 +3162,7 @@
       "family": "Anime & Manga",
       "axis": "style",
       "medium": "anime style image",
-      "nl": "Hyper-detailed manga rendering, photographic proportion under precise ink, immaculate perspective, fine screentone gradients, glossy specular highlights, anime style image,",
+      "nl": "Hyper-detailed manga art, photographic proportion under precise ink, immaculate perspective, fine screentone gradients, glossy specular highlights, anime style image,",
       "tags": [
         "manga",
         "realistic",
@@ -3185,7 +3185,7 @@
       "family": "Anime & Manga",
       "axis": "style",
       "medium": "anime style image",
-      "nl": "Modern hero-anime rendering, bold comic outline, flat saturated costume colour, hard cel shadows, impact burst effects, energetic diagonal framing, anime style image,",
+      "nl": "Modern hero-anime art, bold comic outline, flat saturated costume colour, hard cel shadows, impact burst effects, energetic diagonal framing, anime style image,",
       "tags": [
         "shounen",
         "anime_coloring",
@@ -3208,7 +3208,7 @@
       "family": "Anime & Manga",
       "axis": "style",
       "medium": "anime style image",
-      "nl": "Late-90s shounen rendering, heavy black outline, flat warm ochre palette, two-band cel shadow, brush-textured effect shapes, painted matte scenery, anime style image,",
+      "nl": "Late-90s shounen art, heavy black outline, flat warm ochre palette, two-band cel shadow, brush-textured effect shapes, painted matte scenery, anime style image,",
       "tags": [
         "shounen",
         "anime_coloring",
@@ -3231,7 +3231,7 @@
       "family": "Anime & Manga",
       "axis": "style",
       "medium": "anime style image",
-      "nl": "Rubbery adventure-anime rendering, springy exaggerated shapes, thick uneven ink line, tropical saturated primaries, flat bold shadow shapes, anime style image,",
+      "nl": "Rubbery adventure-anime art, springy exaggerated shapes, thick uneven ink line, tropical saturated primaries, flat bold shadow shapes, anime style image,",
       "tags": [
         "shounen",
         "anime_coloring",
@@ -3254,7 +3254,7 @@
       "family": "Anime & Manga",
       "axis": "style",
       "medium": "anime style image",
-      "nl": "Golden-age manga rendering, rubber-hose rounded forms, uniform pen line, wide expressive eyes, simple hatch shadow, aged paper tone, anime style image,",
+      "nl": "Golden-age manga art, rubber-hose rounded forms, uniform pen line, wide expressive eyes, simple hatch shadow, aged paper tone, anime style image,",
       "tags": [
         "retro_artstyle",
         "monochrome",
@@ -3300,7 +3300,7 @@
       "family": "Anime & Manga",
       "axis": "style",
       "medium": "anime style image",
-      "nl": "Semi-real anime pin-up rendering, photographic skin shading under anime features, glossy hair specularity, studio soft-box light, high-gloss retouch finish, anime style image,",
+      "nl": "Semi-real anime pin-up art, photographic skin shading under anime features, glossy hair specularity, studio soft-box light, high-gloss retouch finish, anime style image,",
       "tags": [
         "anime_coloring",
         "realistic",
@@ -3322,7 +3322,7 @@
       "family": "Anime & Manga",
       "axis": "style",
       "medium": "anime style image",
-      "nl": "2.5D anime rendering, anime line over volumetric realistic shading, soft subsurface skin light, physical fabric texture, shallow depth of field, anime style image,",
+      "nl": "2.5D anime art, anime line over volumetric realistic shading, soft subsurface skin light, physical fabric texture, shallow depth of field, anime style image,",
       "tags": [
         "anime_coloring",
         "realistic",
@@ -3366,7 +3366,7 @@
       "family": "Anime & Manga",
       "axis": "style",
       "medium": "anime style image",
-      "nl": "1990s magical-girl rendering, pastel cel paint, huge glossy eyes with stacked catchlights, ribbon and star light shapes, airbrushed blush, soft grain, anime style image,",
+      "nl": "1990s magical-girl art, pastel cel paint, huge glossy eyes with stacked catchlights, ribbon and star light shapes, airbrushed blush, soft grain, anime style image,",
       "tags": [
         "shoujo",
         "anime_coloring",
@@ -3389,7 +3389,7 @@
       "family": "Anime & Manga",
       "axis": "style",
       "medium": "anime style image",
-      "nl": "Emotive doujin rendering, soft rounded features, heavy dark shadow shapes, sweat and tear highlight detail, tight cropped framing, print tone texture, anime style image,",
+      "nl": "Emotive doujin art, soft rounded features, heavy dark shadow shapes, sweat and tear highlight detail, tight cropped framing, print tone texture, anime style image,",
       "tags": [
         "manga",
         "screentones",
@@ -3411,7 +3411,7 @@
       "family": "Anime & Manga",
       "axis": "style",
       "medium": "anime style image",
-      "nl": "Modern action-manhwa rendering, cold blue-black palette, chrome specular armour, volumetric aura glow, sharp cinematic contrast, glossy digital finish, anime style image,",
+      "nl": "Modern action-manhwa art, cold blue-black palette, chrome specular armour, volumetric aura glow, sharp cinematic contrast, glossy digital finish, anime style image,",
       "tags": [
         "manhwa",
         "glowing",
@@ -3434,7 +3434,7 @@
       "family": "Anime & Manga",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Anime-photo hybrid rendering, whisper-thin anime outline over photographic skin and fabric, real lens bokeh, warm romantic grade, fine film grain, photograph style image,",
+      "nl": "Anime-photo hybrid capture, whisper-thin anime outline over photographic skin and fabric, real lens bokeh, warm romantic grade, fine film grain, photograph style image,",
       "tags": [
         "anime_coloring",
         "photorealistic",
@@ -3480,7 +3480,7 @@
       "family": "Anime & Manga",
       "axis": "style",
       "medium": "anime style image",
-      "nl": "Ethereal fantasy-illustration rendering, ink line with watercolour bleed, ivory and gold palette, ornamental linear detail, weightless floating composition, anime style image,",
+      "nl": "Ethereal fantasy-illustration, ink line with watercolour bleed, ivory and gold palette, ornamental linear detail, weightless floating composition, anime style image,",
       "tags": [
         "watercolor_(medium)",
         "ink_(medium)",
@@ -3502,7 +3502,7 @@
       "family": "Anime & Manga",
       "axis": "style",
       "medium": "anime style image",
-      "nl": "Fine-art fantasy rendering, dry-brush ink filigree, muted ivory-rose washes, gold leaf accents, decorative flatness with sparse detail, anime style image,",
+      "nl": "Fine-art fantasy, dry-brush ink filigree, muted ivory-rose washes, gold leaf accents, decorative flatness with sparse detail, anime style image,",
       "tags": [
         "watercolor_(medium)",
         "gold",
@@ -3525,7 +3525,7 @@
       "family": "Anime & Manga",
       "axis": "style",
       "medium": "anime style image",
-      "nl": "Restrained character-design rendering, fine anatomical line, subdued desaturated palette, soft airbrushed volumes, quiet even light, anime style image,",
+      "nl": "Restrained character-design art, fine anatomical line, subdued desaturated palette, soft airbrushed volumes, quiet even light, anime style image,",
       "tags": [
         "anime_coloring",
         "muted_color",
@@ -3547,7 +3547,7 @@
       "family": "Anime & Manga",
       "axis": "style",
       "medium": "anime style image",
-      "nl": "Late-90s duel-anime rendering, extreme spiky silhouettes, hard black outline, hot saturated cel colour, dramatic underlight, glowing card-effect shapes, anime style image,",
+      "nl": "Late-90s duel-anime art, extreme spiky silhouettes, hard black outline, hot saturated cel colour, dramatic underlight, glowing card-effect shapes, anime style image,",
       "tags": [
         "anime_coloring",
         "1990s_(style)",
@@ -3611,7 +3611,7 @@
       "family": "Anime & Manga",
       "axis": "style",
       "medium": "manga style image",
-      "nl": "Copy-shop doujin rendering, toner-heavy monochrome printing, screentone crushed into flat black patches, line thickened and slightly ghosted, cheap absorbent paper stock, manga style image,",
+      "nl": "Copy-shop doujin art, toner-heavy monochrome printing, screentone crushed into flat black patches, line thickened and slightly ghosted, cheap absorbent paper stock, manga style image,",
       "tags": [
         "screentones",
         "monochrome",
@@ -3631,7 +3631,7 @@
       "family": "Anime & Manga",
       "axis": "style",
       "medium": "anime style image",
-      "nl": "Contemporary full-colour manga rendering, clean ink over flat digital colour, soft cel shading, bright modern palette, subtle texture overlay, anime style image,",
+      "nl": "Contemporary full-colour manga drawing, clean ink over flat digital colour, soft cel shading, bright modern palette, subtle texture overlay, anime style image,",
       "tags": [
         "manga",
         "anime_coloring",
@@ -3651,7 +3651,7 @@
       "family": "Anime & Manga",
       "axis": "style",
       "medium": "webtoon style image",
-      "nl": "Manhua ink-wash fantasy rendering, brushed ink gradients, jade-and-ink palette, flowing ribbon and mist shapes, rice-paper texture, webtoon style image,",
+      "nl": "Manhua ink-wash fantasy art, brushed ink gradients, jade-and-ink palette, flowing ribbon and mist shapes, rice-paper texture, webtoon style image,",
       "tags": [
         "ink_wash_painting",
         "manhwa",
@@ -3712,7 +3712,7 @@
       "family": "Anime & Manga",
       "axis": "style",
       "medium": "drawing style image",
-      "nl": "Seinen hatch rendering, pen-built tonal hatching, weathered adult faces, heavy blacks, no colour, dry paper texture, drawing style image,",
+      "nl": "Seinen hatch drawing, pen-built tonal hatching, weathered adult faces, heavy blacks, no colour, dry paper texture, drawing style image,",
       "tags": [
         "seinen",
         "cross-hatching",
@@ -3733,7 +3733,7 @@
       "family": "Anime & Manga",
       "axis": "style",
       "medium": "anime style image",
-      "nl": "Shoujo ribbon-magazine rendering, sparkle-flecked eyes, flower screentone fills, feathery hair line, candy-pastel palette, decorative frame flourishes, anime style image,",
+      "nl": "Shoujo ribbon-magazine art, sparkle-flecked eyes, flower screentone fills, feathery hair line, candy-pastel palette, decorative frame flourishes, anime style image,",
       "tags": [
         "shoujo",
         "sparkle",
@@ -3753,7 +3753,7 @@
       "family": "Anime & Manga",
       "axis": "style",
       "medium": "anime style image",
-      "nl": "Weekly shounen rendering, bold rushed ink line, dense speed lines, flat spot blacks, high-energy diagonal layout, cheap print tone, anime style image,",
+      "nl": "Weekly shounen art, bold rushed ink line, dense speed lines, flat spot blacks, high-energy diagonal layout, cheap print tone, anime style image,",
       "tags": [
         "shounen",
         "manga",

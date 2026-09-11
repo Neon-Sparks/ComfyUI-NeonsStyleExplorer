@@ -1,5 +1,70 @@
 # Changelog
 
+## 2.2.0 — every clause names its own craft, and Revert works
+
+* **475 more clauses stopped calling themselves renderings.** Every opening was
+  reviewed against its medium, family by family: comics are *comic art*,
+  cartoons *animation*, anime and manga *art* (with *animation* for sakuga,
+  impact and smear frames), prints keep their own process word (*Etching*,
+  *Linocut*, *Mezzotint*), posters are *posters*, collage is *collage*
+  (*Dada collage*, as you pointed out), textiles, ceramics and carving are
+  *work*, handmade things simply name themselves (*Origami*, *Plush*,
+  *Puppet*), and illustration is *illustration*.
+* **Rendering now survives only where a computer makes the picture** — CGI 78,
+  game art 13, vector 11, pixel art 7, generative work in the abstract and
+  material families, and the digital-artefact entries. 134 in all, down from
+  609.
+* Fourteen were written by hand where a rule read badly: *Décollage*,
+  *Beadwork*, *Latte-art*, *Photomontage*, *Sand animation*, *X-ray imaging*,
+  *Long-blur exposure*, *Chromolithograph*, *Modern lithograph*, *Wirework*,
+  *Papercraft*, *Faceted painterly illustration*, *Fully painterly
+  illustration*, and *Nested-square painting*.
+* The linter now checks the opening word against the medium in both directions:
+  a painted, drawn, photographic, printed or handmade entry may not say
+  rendering, and only computer-made work may.
+
+### Fixed
+
+* **Revert did nothing after editing a style.** An override is keyed by the
+  style's shipped name so the entry keeps its id through a rename — but the
+  browser only knows the name on screen, which after a rename is the new one, so
+  Revert matched no key, returned false, and the editor ignored it. It now finds
+  the override under either name, and a failure is reported rather than swallowed.
+
+## 2.1.7 — drawn work is drawn, photographs are captured
+
+* **53 drawn entries still said "rendering"** — ballpoint, charcoal,
+  coloured-pencil, conté, silverpoint, crayon, marker, chalkboard, blueprint,
+  patent and technical entries among them. They now say *drawing*, and the ones
+  that already carried the word simply lose the duplicate (*Sketch rendering* →
+  *Sketch*, *Child-drawing rendering* → *Child-drawing*).
+* **155 photographic entries said it too.** A camera captures, so they now open
+  with *capture* — the word 123 photo entries already used.
+* Eight false positives were caught by hand rather than left to the pattern:
+  *Paper-quilling* is a paper craft, not a quill; *Stipple engraving*,
+  *Engraved plate* and *Contemporary lithograph* are prints, pulled not drawn;
+  *Kawaii pastel* and *Luminous pastel* mean the palette, not the stick, so they
+  say *colouring*; *Fraktur* is *lettering*; and *Rule-drawn drawing* stuttered,
+  so it is *Rule-drawn line work*.
+* The linter now checks the opening word against the medium: paint must not say
+  rendering, a drawn medium must say drawing, a photographic one must say
+  capture. *Rendering* stays where it belongs — CGI, 3D and digital art.
+
+## 2.1.6 — widget values save by name
+
+* **`crawl_missing_only` came back wrong after a refresh** — and any other
+  switch could too. Litegraph restores widget values BY POSITION, so a release
+  that inserted a widget (`crawl_source`, in 1.15) shifts every value after it:
+  the switch inherited its neighbour's setting. The node now also writes a copy
+  keyed by NAME into the saved workflow and restores from that, which no
+  reordering can disturb.
+* Combos are no longer judged while the catalog is still loading, so a valid
+  style is never reported as lost during start-up.
+* `tools/harness/values_by_name.mjs` shows the drift and the cure side by side.
+
+**Note:** a workflow saved by an older version has no by-name copy yet. Set the
+switch once, save the workflow, and it is correct from then on.
+
 ## 2.1.5 — a refresh keeps your settings
 
 * **Refreshing the browser reset the style node's widgets.** ComfyUI restores a

@@ -421,9 +421,15 @@ export async function openEditor(opts = {}) {
     });
     if (!creating && source === "override") {
         add("Revert", "", async () => {
-            await revertOverride(name);
+            const result = await revertOverride(name);
+            if (result && result.ok === false) {
+                $("#ns-err").textContent = "Could not revert this style — see the console";
+                console.warn("Neons Style Explorer: revert failed for", name, result);
+                return;
+            }
             await loadCatalog();
             wrap.remove();
+            forgetDetail(name);
             opts.onSaved?.(name);
         });
     }

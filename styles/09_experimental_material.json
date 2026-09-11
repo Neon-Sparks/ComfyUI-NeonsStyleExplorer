@@ -124,7 +124,7 @@
       "family": "Experimental & Material",
       "axis": "style",
       "medium": "collage style image",
-      "nl": "Paper-collage rendering, torn and scissor-cut edges, layered magazine stock, visible glue wrinkle and drop shadow, mixed halftone textures, collage style image,",
+      "nl": "Paper-collage, torn and scissor-cut edges, layered magazine stock, visible glue wrinkle and drop shadow, mixed halftone textures, collage style image,",
       "tags": [
         "collage",
         "halftone",
@@ -144,7 +144,7 @@
       "family": "Experimental & Material",
       "axis": "style",
       "medium": "material style image",
-      "nl": "Anthotype rendering, crushed petal juice coated on paper and bleached by weeks of sun, pale magenta or spinach-green monochrome, soft undefined edges, uneven brush-coated border, material style image,",
+      "nl": "Anthotype work, crushed petal juice coated on paper and bleached by weeks of sun, pale magenta or spinach-green monochrome, soft undefined edges, uneven brush-coated border, material style image,",
       "tags": [
         "pale_color",
         "pink_theme",
@@ -184,7 +184,7 @@
       "family": "Experimental & Material",
       "axis": "style",
       "medium": "material style image",
-      "nl": "Batik rendering, wax-resist outlines with crackle veins, layered dye baths, earthy saturated colour on cotton weave, material style image,",
+      "nl": "Batik work, wax-resist outlines with crackle veins, layered dye baths, earthy saturated colour on cotton weave, material style image,",
       "tags": [
         "textured",
         "colorful",
@@ -204,7 +204,7 @@
       "family": "Experimental & Material",
       "axis": "style",
       "medium": "material style image",
-      "nl": "Beadwork rendering, image built from strung glass beads on a grid, stepped colour blocks, tiny specular glints, material style image,",
+      "nl": "Beadwork, image built from strung glass beads on a grid, stepped colour blocks, tiny specular glints, material style image,",
       "tags": [
         "mosaic",
         "textured",
@@ -244,7 +244,7 @@
       "family": "Experimental & Material",
       "axis": "style",
       "medium": "material style image",
-      "nl": "Glazed-ceramic rendering, pooled glossy glaze over matte clay body, crackle craze lines, kiln colour shifts, soft specular sheen, material style image,",
+      "nl": "Glazed-ceramic work, pooled glossy glaze over matte clay body, crackle craze lines, kiln colour shifts, soft specular sheen, material style image,",
       "tags": [
         "porcelain",
         "shiny",
@@ -264,7 +264,7 @@
       "family": "Experimental & Material",
       "axis": "style",
       "medium": "material style image",
-      "nl": "Chalkboard rendering, dusty white chalk on dark slate, smudged erasure ghosts, gritty granular strokes, material style image,",
+      "nl": "Chalkboard drawing, dusty white chalk on dark slate, smudged erasure ghosts, gritty granular strokes, material style image,",
       "tags": [
         "chalk_(medium)",
         "dark",
@@ -304,7 +304,7 @@
       "family": "Experimental & Material",
       "axis": "style",
       "medium": "material style image",
-      "nl": "Coffee-wash rendering, tannin-stained tonal washes on absorbent paper, hard tide lines at every dried edge, ring marks and granular sediment, warm sepia range only, material style image,",
+      "nl": "Coffee-wash work, tannin-stained tonal washes on absorbent paper, hard tide lines at every dried edge, ring marks and granular sediment, warm sepia range only, material style image,",
       "tags": [
         "sepia",
         "brown_theme",
@@ -324,7 +324,7 @@
       "family": "Experimental & Material",
       "axis": "style",
       "medium": "material style image",
-      "nl": "Cross-stitch rendering, X-shaped floss stitches on aida grid, stepped blocky colour, visible weave holes, slight thread sheen, material style image,",
+      "nl": "Cross-stitch work, X-shaped floss stitches on aida grid, stepped blocky colour, visible weave holes, slight thread sheen, material style image,",
       "tags": [
         "embroidery",
         "textured",
@@ -384,7 +384,7 @@
       "family": "Experimental & Material",
       "axis": "style",
       "medium": "material style image",
-      "nl": "Delftware rendering, cobalt brushwork on white tin glaze, every tone drawn from one pigment, fine outline over broad wash, glaze pooling darker at the edges with a faint kiln crackle, material style image,",
+      "nl": "Delftware work, cobalt brushwork on white tin glaze, every tone drawn from one pigment, fine outline over broad wash, glaze pooling darker at the edges with a faint kiln crackle, material style image,",
       "tags": [
         "blue_theme",
         "porcelain",
@@ -444,7 +444,7 @@
       "family": "Experimental & Material",
       "axis": "style",
       "medium": "material style image",
-      "nl": "Ebru rendering, combed pigment swirls on size, feathered tulip patterns, saturated interleaved colour veins, material style image,",
+      "nl": "Ebru work, combed pigment swirls on size, feathered tulip patterns, saturated interleaved colour veins, material style image,",
       "tags": [
         "colorful",
         "gradient",
@@ -464,7 +464,7 @@
       "family": "Experimental & Material",
       "axis": "style",
       "medium": "handmade style image",
-      "nl": "Needlepoint rendering, raised satin-stitch floss, directional thread sheen, canvas showing at the edges, soft fibre halo, handmade style image,",
+      "nl": "Needlepoint, raised satin-stitch floss, directional thread sheen, canvas showing at the edges, soft fibre halo, handmade style image,",
       "tags": [
         "embroidery",
         "textured",
@@ -483,7 +483,7 @@
       "family": "Experimental & Material",
       "axis": "style",
       "medium": "material style image",
-      "nl": "Encaustic rendering, pigmented wax fused in translucent layers, tool scrapes and drips, milky depth under a glossy skin, material style image,",
+      "nl": "Encaustic work, pigmented wax fused in translucent layers, tool scrapes and drips, milky depth under a glossy skin, material style image,",
       "tags": [
         "textured",
         "traditional_media",
@@ -503,7 +503,7 @@
       "family": "Experimental & Material",
       "axis": "style",
       "medium": "material style image",
-      "nl": "Long-blur rendering, smeared directional streaks, dissolved edges, ghost trails through mid tones, soft luminous falloff, material style image,",
+      "nl": "Long-blur exposure, smeared directional streaks, dissolved edges, ghost trails through mid tones, soft luminous falloff, material style image,",
       "tags": [
         "motion_blur",
         "long_exposure",
@@ -523,7 +523,7 @@
       "family": "Experimental & Material",
       "axis": "style",
       "medium": "material style image",
-      "nl": "Ferrofluid rendering, oily black liquid pulled into ordered spikes by a magnetic field, mirror-wet surface, sharp specular points along every peak, sterile studio reflection behind, material style image,",
+      "nl": "Ferrofluid work, oily black liquid pulled into ordered spikes by a magnetic field, mirror-wet surface, sharp specular points along every peak, sterile studio reflection behind, material style image,",
       "tags": [
         "shiny",
         "dark",
@@ -563,7 +563,7 @@
       "family": "Experimental & Material",
       "axis": "style",
       "medium": "print style image",
-      "nl": "Gelli-plate rendering, soft mottled ink pull, ghost layers from previous prints, mask silhouettes, uneven texture, print style image,",
+      "nl": "Gelli-plate, soft mottled ink pull, ghost layers from previous prints, mask silhouettes, uneven texture, print style image,",
       "tags": [
         "stencil",
         "textured",
@@ -623,7 +623,7 @@
       "family": "Experimental & Material",
       "axis": "style",
       "medium": "material style image",
-      "nl": "Holographic-foil rendering, iridescent rainbow shift across a mirrored surface, hard specular banding, prismatic edge flare, embossed sheen, material style image,",
+      "nl": "Holographic-foil work, iridescent rainbow shift across a mirrored surface, hard specular banding, prismatic edge flare, embossed sheen, material style image,",
       "tags": [
         "holographic",
         "iridescent",
@@ -643,7 +643,7 @@
       "family": "Experimental & Material",
       "axis": "style",
       "medium": "material style image",
-      "nl": "Hydro-dip rendering, a printed film floated on water and wrapped around a solid form, pattern stretching and pooling over every curve, seams meeting out of register, glossy clear coat over it, material style image,",
+      "nl": "Hydro-dip work, a printed film floated on water and wrapped around a solid form, pattern stretching and pooling over every curve, seams meeting out of register, glossy clear coat over it, material style image,",
       "tags": [
         "shiny",
         "wet",
@@ -663,7 +663,7 @@
       "family": "Experimental & Material",
       "axis": "style",
       "medium": "material style image",
-      "nl": "Ice-carving rendering, clear carved block with frosted tool marks, internal fracture planes, cold refracted light, meltwater sheen, material style image,",
+      "nl": "Ice-carving work, clear carved block with frosted tool marks, internal fracture planes, cold refracted light, meltwater sheen, material style image,",
       "tags": [
         "transparent",
         "crystal",
@@ -704,7 +704,7 @@
       "family": "Experimental & Material",
       "axis": "style",
       "medium": "material style image",
-      "nl": "Khokhloma rendering, gold foliage and berries over deep black lacquer, vermilion accents, fine curling stems drawn in one stroke, glassy varnish depth catching the light, material style image,",
+      "nl": "Khokhloma work, gold foliage and berries over deep black lacquer, vermilion accents, fine curling stems drawn in one stroke, glassy varnish depth catching the light, material style image,",
       "tags": [
         "gold",
         "dark",
@@ -725,7 +725,7 @@
       "family": "Experimental & Material",
       "axis": "style",
       "medium": "material style image",
-      "nl": "Crayon rendering, waxy scribbled strokes, uneven pressure build-up, paper tooth showing through, out-of-register colour, material style image,",
+      "nl": "Crayon drawing, waxy scribbled strokes, uneven pressure build-up, paper tooth showing through, out-of-register colour, material style image,",
       "tags": [
         "crayon_(medium)",
         "traditional_media",
@@ -745,7 +745,7 @@
       "family": "Experimental & Material",
       "axis": "style",
       "medium": "handmade style image",
-      "nl": "Kirigami rendering, card cut and folded into upright layers, crisp scored creases and hard cast shadows between planes, white stock with one accent colour, depth built from stepped tiers, handmade style image,",
+      "nl": "Kirigami, card cut and folded into upright layers, crisp scored creases and hard cast shadows between planes, white stock with one accent colour, depth built from stepped tiers, handmade style image,",
       "tags": [
         "papercraft",
         "white_theme",
@@ -765,7 +765,7 @@
       "family": "Experimental & Material",
       "axis": "style",
       "medium": "material style image",
-      "nl": "Maki-e rendering, deep black urushi lacquer, sprinkled gold and silver powder motifs, mirror-polished depth, fine metallic speckle, material style image,",
+      "nl": "Maki-e work, deep black urushi lacquer, sprinkled gold and silver powder motifs, mirror-polished depth, fine metallic speckle, material style image,",
       "tags": [
         "gold",
         "dark",
@@ -786,7 +786,7 @@
       "family": "Experimental & Material",
       "axis": "style",
       "medium": "material style image",
-      "nl": "Latte-art rendering, poured milk foam on espresso crema, feathered rosetta lines, warm brown-to-cream contrast, material style image,",
+      "nl": "Latte-art, poured milk foam on espresso crema, feathered rosetta lines, warm brown-to-cream contrast, material style image,",
       "tags": [
         "brown_theme",
         "gradient",
@@ -846,7 +846,7 @@
       "family": "Experimental & Material",
       "axis": "style",
       "medium": "photograph style image",
-      "nl": "Light-leak rendering, orange-red flare bleeding in from one edge, fogged shadows, lifted blacks, halated highlights, coarse film grain, photograph style image,",
+      "nl": "Light-leak capture, orange-red flare bleeding in from one edge, fogged shadows, lifted blacks, halated highlights, coarse film grain, photograph style image,",
       "tags": [
         "lens_flare",
         "film_grain",
@@ -866,7 +866,7 @@
       "family": "Experimental & Material",
       "axis": "style",
       "medium": "handmade style image",
-      "nl": "Macramé rendering, knotted cord lattice, fringed loose ends, natural jute colour, soft shadow between the knots, handmade style image,",
+      "nl": "Macramé, knotted cord lattice, fringed loose ends, natural jute colour, soft shadow between the knots, handmade style image,",
       "tags": [
         "knitted",
         "textured",
@@ -885,7 +885,7 @@
       "family": "Experimental & Material",
       "axis": "style",
       "medium": "material style image",
-      "nl": "Mosaic rendering, image broken into small irregular tiles, visible grout lines, stepped colour transitions, uneven glaze reflections, material style image,",
+      "nl": "Mosaic work, image broken into small irregular tiles, visible grout lines, stepped colour transitions, uneven glaze reflections, material style image,",
       "tags": [
         "mosaic",
         "textured",
@@ -908,7 +908,7 @@
       "family": "Experimental & Material",
       "axis": "style",
       "medium": "handmade style image",
-      "nl": "String-art rendering, coloured thread strung between panel pins, straight chords massing into curved moiré envelopes, thread crossings darkening the overlaps, stained board behind, handmade style image,",
+      "nl": "String-art, coloured thread strung between panel pins, straight chords massing into curved moiré envelopes, thread crossings darkening the overlaps, stained board behind, handmade style image,",
       "tags": [
         "textured",
         "minimalism",
@@ -928,7 +928,7 @@
       "family": "Experimental & Material",
       "axis": "style",
       "medium": "abstract style image",
-      "nl": "Neon-drip rendering, glowing fluorescent runs over dark ground, blooming edges, wet paint sheen, high-chroma trails, abstract style image,",
+      "nl": "Neon-drip composition, glowing fluorescent runs over dark ground, blooming edges, wet paint sheen, high-chroma trails, abstract style image,",
       "tags": [
         "neon_palette",
         "glowing",
@@ -969,7 +969,7 @@
       "family": "Experimental & Material",
       "axis": "style",
       "medium": "handmade style image",
-      "nl": "Papier-mâché rendering, pulped paper forms with visible seams and lumps, matte poster colour in clashing bright patterns, dotted and striped decoration, uneven hand-finished edges, handmade style image,",
+      "nl": "Papier-mâché, pulped paper forms with visible seams and lumps, matte poster colour in clashing bright patterns, dotted and striped decoration, uneven hand-finished edges, handmade style image,",
       "tags": [
         "papercraft",
         "colorful",
@@ -989,7 +989,7 @@
       "family": "Experimental & Material",
       "axis": "style",
       "medium": "material style image",
-      "nl": "Culture-plate rendering, colonies spreading across nutrient agar in concentric fringed rings, translucent gel catching light from below, velvety and glossy patches side by side, glass rim shadow, material style image,",
+      "nl": "Culture-plate work, colonies spreading across nutrient agar in concentric fringed rings, translucent gel catching light from below, velvety and glossy patches side by side, glass rim shadow, material style image,",
       "tags": [
         "transparent",
         "textured",
@@ -1009,7 +1009,7 @@
       "family": "Experimental & Material",
       "axis": "style",
       "medium": "material style image",
-      "nl": "Photomontage rendering, spliced photographic fragments at mismatched scale, hard cut seams, varied grain between pieces, flattened composite depth, material style image,",
+      "nl": "Photomontage, spliced photographic fragments at mismatched scale, hard cut seams, varied grain between pieces, flattened composite depth, material style image,",
       "tags": [
         "collage",
         "photo_(medium)",
@@ -1049,7 +1049,7 @@
       "family": "Experimental & Material",
       "axis": "style",
       "medium": "abstract style image",
-      "nl": "Pen-plotter rendering, single-weight ink strokes laid down by machine, thousands of parallel passes building tone by density, faint wobble and blob where each stroke starts, bare paper between the lines, abstract style image,",
+      "nl": "Pen-plotter drawing, single-weight ink strokes laid down by machine, thousands of parallel passes building tone by density, faint wobble and blob where each stroke starts, bare paper between the lines, abstract style image,",
       "tags": [
         "pen_(medium)",
         "lineart",
@@ -1069,7 +1069,7 @@
       "family": "Experimental & Material",
       "axis": "style",
       "medium": "material style image",
-      "nl": "Pyrography rendering, scorched line burned into pale timber, tone built by dwell time from honey to charcoal, singed halo at the edges, grain deflecting every stroke, material style image,",
+      "nl": "Pyrography work, scorched line burned into pale timber, tone built by dwell time from honey to charcoal, singed halo at the edges, grain deflecting every stroke, material style image,",
       "tags": [
         "wood",
         "woodgrain",
@@ -1089,7 +1089,7 @@
       "family": "Experimental & Material",
       "axis": "style",
       "medium": "material style image",
-      "nl": "Patchwork-quilt rendering, pieced fabric blocks, visible stitch seams and quilted relief, cotton print texture, soft batting puff, material style image,",
+      "nl": "Patchwork-quilt, pieced fabric blocks, visible stitch seams and quilted relief, cotton print texture, soft batting puff, material style image,",
       "tags": [
         "patchwork",
         "embroidery",
@@ -1109,7 +1109,7 @@
       "family": "Experimental & Material",
       "axis": "style",
       "medium": "material style image",
-      "nl": "Rain-window rendering, water beads and runnels on glass, fogged condensation haze, refracted bokeh behind, cold ambient light, material style image,",
+      "nl": "Rain-window work, water beads and runnels on glass, fogged condensation haze, refracted bokeh behind, cold ambient light, material style image,",
       "tags": [
         "wet",
         "glass",
@@ -1130,7 +1130,7 @@
       "family": "Experimental & Material",
       "axis": "style",
       "medium": "material style image",
-      "nl": "Rangoli rendering, coloured powder poured into symmetrical floor patterns, radial geometry with soft grainy borders, saturated pigment mounds catching side light, swept stone beneath, material style image,",
+      "nl": "Rangoli work, coloured powder poured into symmetrical floor patterns, radial geometry with soft grainy borders, saturated pigment mounds catching side light, swept stone beneath, material style image,",
       "tags": [
         "colorful",
         "textured",
@@ -1169,7 +1169,7 @@
       "family": "Experimental & Material",
       "axis": "style",
       "medium": "material style image",
-      "nl": "Rust-transfer rendering, oxidised iron printed onto damp cloth, orange-brown bloom spreading along the weave, hard object silhouettes where metal lay, salt speckle and tide edges, material style image,",
+      "nl": "Rust-transfer work, oxidised iron printed onto damp cloth, orange-brown bloom spreading along the weave, hard object silhouettes where metal lay, salt speckle and tide edges, material style image,",
       "tags": [
         "rust",
         "brown_theme",
@@ -1189,7 +1189,7 @@
       "family": "Experimental & Material",
       "axis": "style",
       "medium": "material style image",
-      "nl": "Sand-animation rendering, backlit grains on glass, forms drawn by clearing and heaping sand, warm amber glow through the layer, soft grain edges, material style image,",
+      "nl": "Sand animation, backlit grains on glass, forms drawn by clearing and heaping sand, warm amber glow through the layer, soft grain edges, material style image,",
       "tags": [
         "backlighting",
         "monochrome",
@@ -1229,7 +1229,7 @@
       "family": "Experimental & Material",
       "axis": "style",
       "medium": "material style image",
-      "nl": "Scrimshaw rendering, fine incisions scratched into polished bone and rubbed with ink, tone made of hatch density alone, warm cream ground with age crazing, shallow surface sheen, material style image,",
+      "nl": "Scrimshaw work, fine incisions scratched into polished bone and rubbed with ink, tone made of hatch density alone, warm cream ground with age crazing, shallow surface sheen, material style image,",
       "tags": [
         "monochrome",
         "cross-hatching",
@@ -1249,7 +1249,7 @@
       "family": "Experimental & Material",
       "axis": "style",
       "medium": "material style image",
-      "nl": "Sgraffito rendering, coloured plaster layers scratched back to reveal the tone beneath, incised line with a raised burr, flat fields of lime colour, chipped edges and trowel marks, material style image,",
+      "nl": "Sgraffito work, coloured plaster layers scratched back to reveal the tone beneath, incised line with a raised burr, flat fields of lime colour, chipped edges and trowel marks, material style image,",
       "tags": [
         "textured",
         "traditional_media",
@@ -1269,7 +1269,7 @@
       "family": "Experimental & Material",
       "axis": "style",
       "medium": "material style image",
-      "nl": "Shibori rendering, resist-bound cloth patterns, indigo gradients bleeding at the folds, white creases, woven texture, material style image,",
+      "nl": "Shibori work, resist-bound cloth patterns, indigo gradients bleeding at the folds, white creases, woven texture, material style image,",
       "tags": [
         "blue_theme",
         "textured",
@@ -1289,7 +1289,7 @@
       "family": "Experimental & Material",
       "axis": "style",
       "medium": "material style image",
-      "nl": "Smoke-and-light rendering, volumetric plumes catching a narrow beam, deep black surround, soft turbulent gradients, glowing edge scatter, material style image,",
+      "nl": "Smoke-and-light work, volumetric plumes catching a narrow beam, deep black surround, soft turbulent gradients, glowing edge scatter, material style image,",
       "tags": [
         "light_rays",
         "dark",
@@ -1310,7 +1310,7 @@
       "family": "Experimental & Material",
       "axis": "style",
       "medium": "material style image",
-      "nl": "Soap-carving rendering, waxy matte block with blade facets, soft rounded edges, pastel opacity, fine shaving debris, material style image,",
+      "nl": "Soap-carving work, waxy matte block with blade facets, soft rounded edges, pastel opacity, fine shaving debris, material style image,",
       "tags": [
         "textured",
         "pastel_colors",
@@ -1350,7 +1350,7 @@
       "family": "Experimental & Material",
       "axis": "style",
       "medium": "material style image",
-      "nl": "Stained-glass rendering, saturated coloured panes bounded by black lead lines, backlit luminosity, glass texture and bubbles, jewel palette, material style image,",
+      "nl": "Stained-glass work, saturated coloured panes bounded by black lead lines, backlit luminosity, glass texture and bubbles, jewel palette, material style image,",
       "tags": [
         "stained_glass",
         "glowing",
@@ -1374,7 +1374,7 @@
       "family": "Experimental & Material",
       "axis": "style",
       "medium": "collage style image",
-      "nl": "Sticker-bomb rendering, overlapping die-cut decals covering every inch, peeling corners, clashing logos and colour, collage style image,",
+      "nl": "Sticker-bomb collage, overlapping die-cut decals covering every inch, peeling corners, clashing logos and colour, collage style image,",
       "tags": [
         "sticker",
         "collage",
@@ -1414,7 +1414,7 @@
       "family": "Experimental & Material",
       "axis": "style",
       "medium": "material style image",
-      "nl": "Pavement-chalk rendering, soft pastel dust worked into rough paving, deliberate anamorphic stretch across the slabs, joint lines cutting through the drawing, dusty bloom over the whole surface, material style image,",
+      "nl": "Pavement-chalk drawing, soft pastel dust worked into rough paving, deliberate anamorphic stretch across the slabs, joint lines cutting through the drawing, dusty bloom over the whole surface, material style image,",
       "tags": [
         "chalk_(medium)",
         "pastel_(medium)",
@@ -1434,7 +1434,7 @@
       "family": "Experimental & Material",
       "axis": "style",
       "medium": "material style image",
-      "nl": "Sugar-glass rendering, brittle translucent amber sheets, sharp fracture edges, caustic light through the shards, material style image,",
+      "nl": "Sugar-glass work, brittle translucent amber sheets, sharp fracture edges, caustic light through the shards, material style image,",
       "tags": [
         "transparent",
         "caustics",
@@ -1454,7 +1454,7 @@
       "family": "Experimental & Material",
       "axis": "style",
       "medium": "material style image",
-      "nl": "Suminagashi rendering, concentric ink rings floated on water, drifting feathered lines, pale absorbent paper, material style image,",
+      "nl": "Suminagashi work, concentric ink rings floated on water, drifting feathered lines, pale absorbent paper, material style image,",
       "tags": [
         "ink_wash_painting",
         "monochrome",
@@ -1474,7 +1474,7 @@
       "family": "Experimental & Material",
       "axis": "style",
       "medium": "material style image",
-      "nl": "Tape-art rendering, image built from straight strips of coloured tape, overlapping edges and air bubbles, hard angular shapes, material style image,",
+      "nl": "Tape-art, image built from straight strips of coloured tape, overlapping edges and air bubbles, hard angular shapes, material style image,",
       "tags": [
         "flat_color",
         "textured",
@@ -1494,7 +1494,7 @@
       "family": "Experimental & Material",
       "axis": "style",
       "medium": "material style image",
-      "nl": "Tapestry rendering, interlaced warp and weft threads, stepped diagonal edges, wool colour blocks, low-relief woven texture, material style image,",
+      "nl": "Tapestry work, interlaced warp and weft threads, stepped diagonal edges, wool colour blocks, low-relief woven texture, material style image,",
       "tags": [
         "knitted",
         "embroidery",
@@ -1514,7 +1514,7 @@
       "family": "Experimental & Material",
       "axis": "style",
       "medium": "material style image",
-      "nl": "Thermal-receipt rendering, dithered black on faintly grey paper, monospaced print bands, faded heat streaks, curled paper edge, material style image,",
+      "nl": "Thermal-receipt work, dithered black on faintly grey paper, monospaced print bands, faded heat streaks, curled paper edge, material style image,",
       "tags": [
         "monochrome",
         "dithering",
@@ -1534,7 +1534,7 @@
       "family": "Experimental & Material",
       "axis": "style",
       "medium": "material style image",
-      "nl": "Thermochromic rendering, heat-reactive pigment fading between two colours, soft blooming transitions, handprint-shaped patches, material style image,",
+      "nl": "Thermochromic work, heat-reactive pigment fading between two colours, soft blooming transitions, handprint-shaped patches, material style image,",
       "tags": [
         "gradient",
         "glowing",
@@ -1554,7 +1554,7 @@
       "family": "Experimental & Material",
       "axis": "style",
       "medium": "material style image",
-      "nl": "Tie-dye rendering, radiating dye spirals, bleeding colour boundaries, white resist lines, soft cotton fibre, material style image,",
+      "nl": "Tie-dye work, radiating dye spirals, bleeding colour boundaries, white resist lines, soft cotton fibre, material style image,",
       "tags": [
         "colorful",
         "gradient",
@@ -1594,7 +1594,7 @@
       "family": "Experimental & Material",
       "axis": "style",
       "medium": "material style image",
-      "nl": "Reverse-glass rendering, gold leaf and paint applied behind glass and read through it, mirror-bright metal with engraved detail scratched into the leaf, glassy depth, dark backing sealing the panel, material style image,",
+      "nl": "Reverse-glass work, gold leaf and paint applied behind glass and read through it, mirror-bright metal with engraved detail scratched into the leaf, glassy depth, dark backing sealing the panel, material style image,",
       "tags": [
         "gold",
         "glass",
@@ -1615,7 +1615,7 @@
       "family": "Experimental & Material",
       "axis": "style",
       "medium": "video artefact style image",
-      "nl": "VHS rendering, chroma smear and bleed, tracking noise bands, soft blown highlights, interlace comb edges, tape-worn colour, video artefact style image,",
+      "nl": "VHS capture, chroma smear and bleed, tracking noise bands, soft blown highlights, interlace comb edges, tape-worn colour, video artefact style image,",
       "tags": [
         "glitch",
         "film_grain",
@@ -1654,7 +1654,7 @@
       "family": "Experimental & Material",
       "axis": "style",
       "medium": "material style image",
-      "nl": "Wire rendering, form drawn in bent metal line, open volumes, cast shadow doing the drawing, plain ground, material style image,",
+      "nl": "Wirework, form drawn in bent metal line, open volumes, cast shadow doing the drawing, plain ground, material style image,",
       "tags": [
         "metallic",
         "lineart",

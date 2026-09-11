@@ -42,6 +42,18 @@ RATIO = re.compile(
 )
 AXES = {"style", "format", "finish"}
 
+# Where "rendering" is the honest word: work a computer makes.
+RENDER_MEDIA = {"cgi style image", "game art style image", "pixel art style image",
+                "vector style image", "style image"}
+RENDER_HEAD = re.compile(
+    r"ascii|dot-matrix|e-ink|led-matrix|lenticular|anaglyph|\bcnc\b|\bfdm\b|flatbed-scan|"
+    r"attractor|automata|flow-field|fractal|harmonograph|noise-contour|pixel-sort|"
+    r"reaction-diffusion|truchet|voronoi|crystal-growth|cymatic|datamosh|glitch|metaball|"
+    r"photoscan|generative|algorithmic|motion-design|data-viz|medical-viz|3d|cgi|engine|"
+    r"shader|sim\b",
+    re.I,
+)
+
 # Families brought in from another project. Their structure is checked — name,
 # axis, closing medium, duplicates, clause length — but not the house writing
 # rules, which apply to clauses written for this catalog: their descriptors are
@@ -139,10 +151,23 @@ def main():
             # the process phrase is separated by a comma, not a colon
             if ": " in clause and not imported:
                 errors.append(f"{where}: colon after the process phrase, use a comma")
-            # "rendering" reads as CGI to the model, so a painted medium says
-            # painting (or drawing for ink line work) instead
-            if "rendering" in clause.lower() and "painting" in medium.lower() and not imported:
-                errors.append(f"{where}: painted medium should not say 'rendering'")
+            # "rendering" belongs to CGI and digital art. Paint is painted,
+            # pencil and pen are drawn, and a camera captures.
+            head = clause.split(",")[0].lower()
+            med = medium.lower()
+            if "rendering" in head and not imported:
+                if "painting" in med:
+                    errors.append(f"{where}: painted medium should not say 'rendering'")
+                elif "drawing" in med:
+                    errors.append(f"{where}: drawn medium should say 'drawing', not 'rendering'")
+                elif med in ("photograph style image", "instant photograph style image",
+                             "film still style image"):
+                    errors.append(f"{where}: photographic medium should say 'capture'")
+                elif med in RENDER_MEDIA or RENDER_HEAD.search(head):
+                    pass          # CGI, 3D, generative and digital art: the word is right
+                else:
+                    errors.append(f"{where}: '{med}' is not computer-generated; "
+                                  "'rendering' belongs to CGI and digital art")
             # the workflow sets the frame size, so a clause never names one
             if RATIO.search(clause) and not imported:
                 errors.append(f"{where}: names an aspect ratio, the workflow sets that")
