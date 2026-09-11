@@ -455,6 +455,29 @@ def _routes():
                        "count": len(shots), "style": record.get("name") or style},
         })
 
+    @post("/neons_style/run/record")
+    async def post_run_record(request):
+        """Record what a node will compose with, at the moment it is queued.
+
+        The node itself records when it RUNS — but ComfyUI caches a node whose
+        inputs have not changed, so a re-queue can execute nothing and leave the
+        prompt with no record at all. The browser knows the prompt id and the
+        style that prompt carries, so it files one here as well; the execution
+        record overwrites it with the same answer when the node does run.
+        """
+        body = await data(request)
+        prompt_id = str(body.get("prompt_id") or "")
+        node_id = str(body.get("node") or "")
+        style = str(body.get("style") or "")
+        if not prompt_id or not node_id or not style:
+            return web.json_response({"ok": False, "error": "prompt, node and style are required"})
+        if not resolve(style):
+            return web.json_response({"ok": False, "error": f"unknown style: {style}"})
+        runs.record(prompt_id, node_id, style=style,
+                    mode=str(body.get("mode") or "off"), prompt=str(body.get("prompt") or ""),
+                    queued=True)
+        return web.json_response({"ok": True, "prompt_id": prompt_id, "style": style})
+
     @post("/neons_style/gallery/save_run")
     async def post_gallery_save_run(request):
         """Auto-gallery for one finished prompt.
@@ -470,14 +493,18 @@ def _routes():
         body = await data(request)
         prompt_id = str(body.get("prompt_id") or "")
         records = runs.get(prompt_id)
-        if not records:
-            # a client that cannot name the prompt still gets the right style,
-            # because the newest record is the run that just finished
+        if not records and not prompt_id:
+            # an older client cannot name the prompt; the newest record is then
+            # the best available answer
             prompt_id, records = runs.latest()
         if not records:
+            # NEVER guess from another prompt: that is how an image ends up on a
+            # style it was not made with. Naming the prompt and finding nothing
+            # means this run did not record a style, so say so.
             return web.json_response({
                 "ok": False, "saved": [],
-                "error": "no run recorded for this prompt — the node did not report a style",
+                "error": "this prompt recorded no style — nothing was saved rather than "
+                         "risk filing it under another style",
             })
 
         images = [image for image in (body.get("images") or []) if image.get("filename")]

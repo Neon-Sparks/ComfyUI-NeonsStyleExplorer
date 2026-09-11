@@ -834,6 +834,17 @@ class Catalog(unittest.TestCase):
         finally:
             shutil.rmtree(os.path.join(ROOT, "user", "loras"), ignore_errors=True)
 
+    def test_run_records_do_not_leak_between_prompts(self):
+        """A prompt with no record must not borrow another prompt's style —
+        that is how an image lands on a style it was never made with."""
+        runs = importlib.import_module(f"{PKG}.runs")
+        runs.record("prompt-A", "7", style="[Painting] Ndebele Wall Geometry")
+        self.assertEqual(runs.get("prompt-A")["7"]["style"], "[Painting] Ndebele Wall Geometry")
+        self.assertEqual(runs.get("prompt-B"), {})          # nothing borrowed
+        runs.record("prompt-B", "7", style="[Painting] Neoclassical", queued=True)
+        self.assertEqual(runs.get("prompt-B")["7"]["style"], "[Painting] Neoclassical")
+        self.assertEqual(runs.get("prompt-A")["7"]["style"], "[Painting] Ndebele Wall Geometry")
+
     def test_lora_trigger_words(self):
         """A LoRA remembers the words it wants in the prompt, and the node
         hands them out as an output."""

@@ -1,5 +1,39 @@
 # Changelog
 
+## 2.2.2 — an image can no longer land on the wrong style
+
+* **The server used to guess.** Each prompt's style is recorded when the node
+  runs, but ComfyUI caches a node whose inputs have not changed, so a re-queue
+  can execute nothing and leave the prompt with no record. `save_run` then fell
+  back to the newest record it held — which, after crawling or changing style,
+  belongs to a different entry. That is how a Neoclassical image reached
+  Ndebele Wall Geometry.
+* **Two changes close it.** The browser now records the style at QUEUE time,
+  where both the prompt id and the style are known for certain (crawl advances
+  the dropdown afterwards, inside `afterQueued`, so the value read first is the
+  one the prompt carries). And the server refuses to guess: a named prompt with
+  no record returns an error saying nothing was saved, rather than filing the
+  image under another style.
+* New route `POST /neons_style/run/record`, and a test that records for two
+  prompts cannot leak into each other.
+
+## 2.2.1 — previews find their style again
+
+* **A preview could seem to save to the wrong style.** Previews are filed under
+  a style's permanent id, and the server resolves any name the style answers to
+  — current or alias — so the image always landed correctly. The browser,
+  though, indexed only the CURRENT name: a node still holding an earlier name
+  (after a rename, or from an older workflow using a `[Clio]` or `[v2]` name)
+  fell through to slugging that name and looked for previews under a key nothing
+  writes, so the card showed none. The browser now indexes every alias as well.
+* Nothing was lost — those images have been on disk all along and appear as soon
+  as this version loads.
+* A name the catalog genuinely does not know is now reported in the console
+  instead of quietly producing a key of its own.
+* `tools/harness/preview_key_aliases.mjs` checks that a current name, a renamed
+  one and an old alias all resolve to the same key the server writes, while a
+  different style stays separate.
+
 ## 2.2.0 — every clause names its own craft, and Revert works
 
 * **475 more clauses stopped calling themselves renderings.** Every opening was

@@ -1,6 +1,6 @@
 import { app } from "../../scripts/app.js";
 import { api } from "../../scripts/api.js";
-import { NODE_TYPES, RANDOM, entryOf, lastErrorText, loadCatalog, loadCatalogSets, loadGallery, namesOf, patchPreview, saveRun, shotsOf, sourceNames, state } from "./api.js";
+import { NODE_TYPES, RANDOM, entryOf, lastErrorText, loadCatalog, loadCatalogSets, loadGallery, namesOf, patchPreview, recordRun, saveRun, shotsOf, sourceNames, state } from "./api.js";
 import { STYLE_SLOTS, activeSlot, advanceCrawl, attachPanel, claimSlot, say, composeNow, effectiveStyle, fitToContent, keepFitted, layout, refresh, rollStyle, saveImage, saveLatest, syncCrawl, value, widget } from "./panel.js";
 
 function syncCombo(node, field, axis) {
@@ -233,6 +233,45 @@ function report(node, result) {
     if (skipped && skipped.reason !== "another node") say(node, `not saved — ${skipped.reason}`, true);
 }
 
+/**
+ * Record each queued prompt's style at QUEUE time.
+ *
+ * The node records what it composed with when it runs — but ComfyUI caches a
+ * node whose inputs have not changed, so a re-queue can leave a prompt with no
+ * record at all, and the server then had to guess from the most recent one.
+ * That guess is how an image reached a style it was never made with. Here the
+ * prompt id and the style are both known for certain, so no guess is needed.
+ */
+function watchQueue() {
+    if (app._nsQueueWatched) return;
+    app._nsQueueWatched = true;
+    const original = app.queuePrompt?.bind(app);
+    if (!original) return;
+    app.queuePrompt = async function (number, batchCount) {
+        // read the styles BEFORE the call: crawl advances the dropdown in
+        // afterQueued, which runs inside it
+        const carried = [];
+        for (const node of app.graph?._nodes || []) {
+            if (!NODE_TYPES.has(node.comfyClass || node.type)) continue;
+            const style = effectiveStyle(node);
+            if (style && style !== "None" && style !== RANDOM) {
+                carried.push({ node: node.id, style,
+                    mode: value(node, "auto_gallery", "off"),
+                    prompt: value(node, "prompt", "") });
+            }
+        }
+        const result = await original(number, batchCount);
+        const promptId = result?.prompt_id || api.lastPromptId || state.lastQueuedId;
+        if (promptId) {
+            state.lastQueuedId = String(promptId);
+            for (const item of carried) {
+                recordRun(promptId, item.node, item.style, item.mode, item.prompt);
+            }
+        }
+        return result;
+    };
+}
+
 let listening = false;
 function listen() {
     if (listening) return;
@@ -273,6 +312,7 @@ app.registerExtension({
         await loadCatalogSets();
         await loadGallery();
         listen();
+        watchQueue();
         for (const node of app.graph?._nodes || []) {
             if (!NODE_TYPES.has(node.comfyClass || node.type)) continue;
             syncCombos(node);
