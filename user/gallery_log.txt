@@ -1,6 +1,0 @@
-2026-09-10 00:26:42  [Anime] 1960s Limited TV  ->  anime_1960s_limited_tv--1789000002899.jpg
-2026-09-10 00:26:42  [Anime] 1970s Real Robot Military  ->  anime_1970s_real_robot_military--1789000002946.jpg
-2026-09-10 00:26:50  [Anime] 1960s Limited TV  ->  anime_1960s_limited_tv--1789000010809.jpg
-2026-09-10 00:26:50  [Anime] 1970s Real Robot Military  ->  anime_1970s_real_robot_military--1789000010843.jpg
-2026-09-10 09:57:37  [Anime] 1960s Limited TV  ->  anime_1960s_limited_tv--1789034257344.jpg
-2026-09-10 09:57:37  [Anime] 1970s Real Robot Military  ->  anime_1970s_real_robot_military--1789034257380.jpg
