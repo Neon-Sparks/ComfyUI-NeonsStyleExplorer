@@ -5,7 +5,7 @@ from . import loras
 from . import runs
 from .catalog import (RANDOM_TOKEN, SOURCES, crawl_names, custom_names, entries,
                       imported_style_names, names_for, push_recent, resolve, roll,
-                      written_names)
+                      source_pool, written_names)
 
 WEB_DIRECTORY = "./web"
 
@@ -19,7 +19,7 @@ def _combo(axis):
 def widgets():
     # the main slots carry the written catalog only; imported and custom entries
     # have their own dropdowns, which keeps every menu short enough to open
-    styles = ["None", RANDOM_TOKEN] + written_names("style")
+    styles = ["None"] + written_names("style")
     return {
         "prompt": ("STRING", {
             "multiline": True, "dynamicPrompts": True, "default": "",
@@ -37,11 +37,11 @@ def widgets():
             "default": "None",
             "tooltip": "The written catalog. Only one style slot is active at a time — choosing here switches the others off.",
         }),
-        "extra_style": (["None", RANDOM_TOKEN] + imported_style_names(), {
+        "extra_style": (["None"] + imported_style_names(), {
             "default": "None",
             "tooltip": "The imported [Extra] pack, kept out of the main dropdowns so those stay quick to open. Composes as another style slot.",
         }),
-        "custom_style": (["None", RANDOM_TOKEN] + custom_names("style"), {
+        "custom_style": (["None"] + custom_names("style"), {
             "default": "None",
             "tooltip": "Your own styles only — anything you wrote in the editor. Composes as a fourth style slot. Empty until you create one; use Refresh Node Definitions after adding one.",
         }),
@@ -90,6 +90,14 @@ def widgets():
             "default": "off",
             "tooltip": "Save generated images to the style gallery automatically.",
         }),
+        "random_roll": ("BOOLEAN", {
+            "default": False, "label_on": "random style", "label_off": "chosen style",
+            "tooltip": "Roll a random style for every run instead of using the dropdowns. Which pool it draws from is random_source, narrowed further by roll_scope; roll_seed decides the roll. Crawl overrides it while crawl is on.",
+        }),
+        "random_source": (("all",) + tuple(SOURCES), {
+            "default": "all",
+            "tooltip": "Where a random style comes from: all three lists, main (the written catalog), extra (the imported pack), or custom (your own styles).",
+        }),
         "roll_scope": (ROLL_SCOPES, {
             "default": "all",
             "tooltip": "Which styles the dice may land on, and which set crawl walks: everything, the primary style's family, your favourites, recently used, or by preview state.",
@@ -102,7 +110,18 @@ def widgets():
     }
 
 
-def pick_styles(values, pool, scope, family, seed, previews, crawl=False, kwargs_missing_only=False):
+def pick_styles(values, pool, scope, family, seed, previews, crawl=False,
+                kwargs_missing_only=False, random_roll=False, source="all"):
+    """The styles one run composes with.
+
+    random_roll replaces the dropdowns entirely: the dice used to live in the
+    lists themselves, which meant picking it and losing sight of what you had
+    chosen. Crawl still wins — it owns the sequence.
+    """
+    if random_roll and not crawl:
+        entry = roll(axis="style", scope=scope, family=family, seed=seed or None,
+                     previews=previews, source=source)
+        return [entry] if entry else []
     picked, used = [], set()
     for value in values:
         if value == RANDOM_TOKEN and crawl:
@@ -136,6 +155,16 @@ def pick_axis(value, axis, pool, previews, crawl=False):
     return entry if entry and entry["axis"] == axis else None
 
 
+def _random_line(kwargs):
+    """How the dice is set, and whether its source had anything in it."""
+    if not kwargs.get("random_roll"):
+        return "off"
+    source = str(kwargs.get("random_source", "all") or "all")
+    if source != "all" and not source_pool(source):
+        return f"on — {source} is empty, rolled from the whole catalog instead"
+    return f"on — {source}"
+
+
 def build_debug(kwargs, positive, negative, styles, fmt, finish):
     lines = [
         "Neons Style Explorer",
@@ -146,6 +175,7 @@ def build_debug(kwargs, positive, negative, styles, fmt, finish):
         f"finish:         {finish['name'] if finish else 'None'}",
         f"medium:         {styles[0]['medium'] if styles else 'n/a'}",
         f"style_weight:   {kwargs.get('style_weight', 1.0)}",
+        f"random:         {_random_line(kwargs)}",
         f"crawl:          {'on — ' + str(kwargs.get('roll_scope', 'all')) + (', missing previews only' if kwargs.get('crawl_missing_only') else '') if kwargs.get('crawl') else 'off'}",
         f"hand-written:   {all(e['written'] for e in styles) if styles else 'n/a'}",
         "",
@@ -175,13 +205,19 @@ def run(**kwargs):
             family_hint = entry["family"]
             break
 
+    # an older workflow may still hold the dice token in a slot; that is what
+    # the switch means now
+    slots = [kwargs.get("style", "None"), kwargs.get("custom_style", "None"),
+             kwargs.get("extra_style", "None")]
+    random_roll = bool(kwargs.get("random_roll", False)) or RANDOM_TOKEN in slots
     styles = pick_styles(
         # one active slot, but all three are read so an older workflow that set
         # several still composes rather than losing a style silently
-        [kwargs.get("style", "None"), kwargs.get("custom_style", "None"),
-         kwargs.get("extra_style", "None")],
+        slots,
         pool, scope, family_hint, seed, previews, crawl,
         bool(kwargs.get("crawl_missing_only", False)),
+        random_roll=random_roll,
+        source=str(kwargs.get("random_source", "all") or "all"),
     )
     fmt = pick_axis(kwargs.get("format", "None"), "format", pool, previews, crawl)
     finish = pick_axis(kwargs.get("finish", "None"), "finish", pool, previews, crawl)

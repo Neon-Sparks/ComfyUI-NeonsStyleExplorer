@@ -55,6 +55,8 @@
     "main",
     false,
     "off",
+    false,
+    "all",
     "missing preview",
     54321,
     "randomize"

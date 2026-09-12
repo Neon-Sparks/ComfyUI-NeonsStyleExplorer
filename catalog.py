@@ -356,13 +356,17 @@ def preview_key(text):
     return re.sub(r"[^A-Za-z0-9]+", "_", str(text or "").strip()).strip("_")[:140]
 
 
-def scope_pool(axis="style", scope="all", family=None, previews=None, exclude=()):
+def scope_pool(axis="style", scope="all", family=None, previews=None, exclude=(), source="all"):
     """Entries a scope allows, in catalog order.
 
     scope: all | family | favourites | recent | has preview | missing preview.
+    source: all | main | extra | custom — which dropdown's pool to draw from.
     Shared by the dice and by crawl mode so both walk exactly the same set.
     """
     pool = by_axis(axis)
+    if source and source != "all":
+        wanted = {name.lower() for name in source_pool(source)}
+        pool = [entry for entry in pool if entry["name"].lower() in wanted]
     if scope == "family" and family:
         pool = [entry for entry in pool if entry["family"] == family]
     if scope == "favourites":
@@ -381,9 +385,13 @@ def scope_pool(axis="style", scope="all", family=None, previews=None, exclude=()
     return [entry for entry in pool if entry["name"] not in exclude]
 
 
-def roll(axis="style", scope="all", family=None, seed=None, previews=None, exclude=()):
-    """Pick a random entry from the scope's pool."""
-    pool = scope_pool(axis, scope, family, previews, exclude)
+def roll(axis="style", scope="all", family=None, seed=None, previews=None, exclude=(),
+         source="all"):
+    """Pick a random entry from the scope's pool, limited to one source."""
+    pool = scope_pool(axis, scope, family, previews, exclude, source)
+    if not pool and source != "all":
+        # an empty source (no custom styles yet) must not mean no style at all
+        pool = scope_pool(axis, scope, family, previews, exclude)
     if not pool:
         return None
     rng = random.Random(seed) if seed not in (None, 0) else random

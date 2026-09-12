@@ -475,11 +475,12 @@ export async function adoptStyle(node, name) {
     await loadCatalog();
     const all = namesOf("style");
     const mine = all.filter((entry) => (entryOf(entry)?.source || "shipped") === "custom");
+    // the dice is the random_roll switch now, not an option in the lists
     const lists = {
-        style: ["None", RANDOM, ...all],
-        style_2: ["None", RANDOM, ...all],
-        style_3: ["None", RANDOM, ...all],
-        custom_style: ["None", RANDOM, ...mine],
+        style: ["None", ...all],
+        style_2: ["None", ...all],
+        style_3: ["None", ...all],
+        custom_style: ["None", ...mine],
     };
     for (const [field, values] of Object.entries(lists)) {
         const found = widget(node, field);
@@ -541,7 +542,8 @@ export function refresh(node) {
     const panel = node._nsPanel;
     if (!panel) return;
     const picked = value(node, "style", "None");
-    const rolled = picked === RANDOM;
+    // the switch, or a slot still holding the retired token
+    const rolled = Boolean(value(node, "random_roll", false)) || picked === RANDOM;
     const name = effectiveStyle(node);
     const entry = entryOf(name);
     const shots = name ? shotsOf(name) : null;
@@ -564,7 +566,10 @@ export function refresh(node) {
 
     const crawling = Boolean(value(node, "crawl", false));
     label.textContent = rolled && name ? `rolled: ${name}` : (name || "");
-    chip.textContent = rolled ? "random" : (entry ? entry.family.replace(" & ", "/") : "");
+    const source = String(value(node, "random_source", "all"));
+    chip.textContent = rolled
+        ? (source === "all" ? "random" : `random: ${source}`)
+        : (entry ? entry.family.replace(" & ", "/") : "");
     chip.style.display = chip.textContent ? "block" : "none";
 
     // the dice is inert while crawling; say so rather than letting it look broken
@@ -654,7 +659,7 @@ async function saveLatest(node, silent = false) {
     const name = effectiveStyle(node);
     if (!name) {
         if (!silent) {
-            alert(value(node, "style", "None") === RANDOM
+            alert(value(node, "random_roll", false) || value(node, "style", "None") === RANDOM
                 ? "Nothing rolled yet — run the graph once, then Save."
                 : "Pick a style first.");
         }

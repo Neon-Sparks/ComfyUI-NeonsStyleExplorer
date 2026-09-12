@@ -834,6 +834,28 @@ class Catalog(unittest.TestCase):
         finally:
             shutil.rmtree(os.path.join(ROOT, "user", "loras"), ignore_errors=True)
 
+    def test_random_roll_switch(self):
+        """The dice is a switch now: it rolls from its source, an old workflow
+        holding the retired token still rolls, and crawl still wins."""
+        pool = catalog.entries()
+        for source in ("all", "main", "extra"):
+            picked = nodes.pick_styles(["None", "None", "None"], pool, "all", None, 11, {},
+                                       random_roll=True, source=source)
+            self.assertEqual(len(picked), 1, source)
+            if source == "extra":
+                self.assertIn(picked[0]["family"], catalog.IMPORTED_FAMILIES)
+            if source == "main":
+                self.assertNotIn(picked[0]["family"], catalog.IMPORTED_FAMILIES)
+        # the same seed rolls the same style
+        one = nodes.pick_styles(["None"] * 3, pool, "all", None, 99, {}, random_roll=True)
+        two = nodes.pick_styles(["None"] * 3, pool, "all", None, 99, {}, random_roll=True)
+        self.assertEqual(one[0]["name"], two[0]["name"])
+        # the dice is gone from the dropdowns
+        fields = nodes.NeonsStyleExplorer.INPUT_TYPES()["required"]
+        for slot in ("style", "extra_style", "custom_style"):
+            self.assertNotIn(catalog.RANDOM_TOKEN, fields[slot][0], slot)
+        self.assertEqual(fields["random_source"][0], ("all",) + tuple(catalog.SOURCES))
+
     def test_run_records_do_not_leak_between_prompts(self):
         """A prompt with no record must not borrow another prompt's style —
         that is how an image lands on a style it was never made with."""

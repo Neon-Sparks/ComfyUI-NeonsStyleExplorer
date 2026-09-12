@@ -71,6 +71,8 @@
     "main",
     false,
     "off",
+    false,
+    "all",
     "all",
     54321,
     "randomize"

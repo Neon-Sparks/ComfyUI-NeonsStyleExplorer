@@ -233,6 +233,16 @@ output. On by default.
 
 ### The dice and the crawl
 
+**random_roll** rolls a style for every run. It replaced the `🎲 Random` entry
+that used to sit in the dropdowns — picking it there meant losing sight of the
+style you had chosen, and the option had to be filtered out of every list that
+touched the catalog. **random_source** says where a roll may land: *all*, *main*
+(the written catalog), *extra* (the imported pack) or *custom* (your own
+styles). `roll_scope` narrows it further, `roll_seed` decides the roll, and
+crawl overrides it while crawl is on. If the chosen source is empty — no custom
+styles yet, say — the node rolls from the whole catalog and says so in its debug
+output rather than producing nothing.
+
 **crawl** — walk the main style dropdown one entry per queued run instead of
 rolling. Section 9.
 

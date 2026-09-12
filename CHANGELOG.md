@@ -1,5 +1,23 @@
 # Changelog
 
+## 2.3.0 — the dice is a switch
+
+* **`random_roll`** replaces the `🎲 Random` entry in the style dropdowns.
+  Choosing the dice from a list meant giving up the style you had selected, and
+  every piece of code that read a slot had to remember the token was not a
+  style — which is exactly the kind of special case that goes wrong.
+* **`random_source`** decides where a roll lands: *all*, *main* (the written
+  catalog), *extra* (the imported pack) or *custom* (your own styles), narrowed
+  further by `roll_scope` and decided by `roll_seed`. An empty source rolls from
+  the whole catalog and says so in the node's debug output instead of quietly
+  producing nothing.
+* Crawl still overrides the dice while it is on, as before.
+* **Workflows that used the old dice keep working**: a slot still holding the
+  token turns the switch on, and the node accepts the retired value rather than
+  rejecting it. The 2.1.x–2.2.2 widget layout was added to the migration table
+  so index-restored workflows land correctly too.
+* `PublisherId` is lowercase `neon-sparks`, matching the registry publisher.
+
 ## 2.2.2 — an image can no longer land on the wrong style
 
 * **The server used to guess.** Each prompt's style is recorded when the node

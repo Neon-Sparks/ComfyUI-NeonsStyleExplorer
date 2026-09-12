@@ -11,7 +11,8 @@ function syncCombo(node, field, axis) {
     const known = axis === "style" ? sourceNames("main") : namesOf(axis);
     // nothing loaded yet: leave the list the node definition supplied
     if (!known.length) return;
-    const values = ["None", RANDOM, ...known];
+    // the dice left the style lists in 2.3.0 — it is the random_roll switch now
+    const values = axis === "style" ? ["None", ...known] : ["None", RANDOM, ...known];
     w.options = w.options || {};
     w.options.values = values;
     if (!values.includes(w.value)) w.value = "None";
@@ -31,7 +32,7 @@ function syncCombos(node) {
 function syncSlot(node, field, source) {
     const w = widget(node, field);
     if (!w || !(state.catalog.styles || []).length) return;
-    const values = ["None", RANDOM, ...sourceNames(source)];
+    const values = ["None", ...sourceNames(source)];
     w.options = w.options || {};
     w.options.values = values;
     if (!values.includes(w.value)) w.value = "None";
@@ -129,8 +130,28 @@ function hook(node) {
     }
 }
 
+/** An older workflow parked the dice in a slot; that is the switch now. */
+function adoptRetiredDice(node) {
+    let found = false;
+    for (const name of STYLE_SLOTS) {
+        const w = widget(node, name);
+        if (w && w.value === RANDOM) {
+            w.value = "None";
+            found = true;
+        }
+    }
+    if (!found) return;
+    const roll = widget(node, "random_roll");
+    if (roll && !roll.value) {
+        roll.value = true;
+        console.log("Neons Style Explorer: this workflow used the dice option — "
+            + "random_roll is on instead");
+    }
+}
+
 function setup(node) {
     attachPanel(node);
+    adoptRetiredDice(node);
     syncCombos(node);
     hook(node);
     if (value(node, "crawl", false)) syncCrawl(node);
@@ -403,6 +424,12 @@ app.registerExtension({
         // wrong match loads every value one place out of step. Each includes
         // the control widget litegraph adds after roll_seed.
         const LAYOUTS = [
+            // 2.1.x - 2.2.2 — before the dice became a switch
+            ["prompt", "quality", "negative", "style", "extra_style", "custom_style",
+             "format", "finish", "output_format", "style_position",
+             "include_style_negative", "style_weight", "tag_separator", "crawl",
+             "crawl_source", "crawl_missing_only", "auto_gallery", "roll_scope",
+             "roll_seed", "control_after_generate"],
             // 1.15.0 — style_2/3 and the imported slot, roll controls mid-list
             ["prompt", "quality", "negative", "style", "style_2", "style_3", "extra_style",
              "custom_style", "style_mix", "format", "finish", "output_format", "style_position",
@@ -431,6 +458,9 @@ app.registerExtension({
          * state on the node — a style_weight of 0.00 when its minimum is 1.
          */
         function valueFits(widget, value) {
+            // an older workflow may hold the retired dice token; the switch
+            // takes over from it rather than the value being rejected
+            if (value === RANDOM && STYLE_SLOTS.includes(widget?.name)) return true;
             const options = widget?.options?.values;
             if (Array.isArray(options) && options.length) return options.includes(value);
             if (widget?.type === "number" && typeof value === "number") {

@@ -79,6 +79,13 @@ the panel body is click-through so the node still drags from anywhere. Buttons:
 finishes, roll style 2/3, new custom style, clear, delete shots). The composed
 prompt updates live underneath.
 
+## Random
+
+`random_roll` rolls a style each run; `random_source` picks the pool — all,
+main, extra or custom — and `roll_scope` narrows it (family, favourites,
+recent, by preview state). The old `🎲 Random` entry in the dropdowns is gone;
+a workflow that used it switches over on load.
+
 ## Catalog browser
 
 Banner at the top that scrolls away under a sticky toolbar, then a virtualised
