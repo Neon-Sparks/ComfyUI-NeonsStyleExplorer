@@ -422,12 +422,18 @@ export const deleteAllShots = () => call("/neons_style/gallery/delete_family", {
 export const exportStyles = () => call("/neons_style/export");
 export const importStyles = (styles) => call("/neons_style/import", { styles });
 
-/** Tell the server which style a queued prompt carries. */
-export async function recordRun(promptId, node, style, mode, prompt) {
+/**
+ * Tell the server which style a queued prompt carries.
+ *
+ * Deliberately minimal: the prompt id, the node, the style and the auto-gallery
+ * mode. Your prompt TEXT is not sent — the node already has it when it runs,
+ * and shipping it back over a route only widens what this extension touches.
+ */
+export async function recordRun(promptId, node, style, mode) {
     if (!promptId || !node || !style || style === "None") return null;
     return call("/neons_style/run/record", {
         prompt_id: String(promptId), node: String(node), style,
-        mode: String(mode ?? "off"), prompt: String(prompt ?? ""),
+        mode: String(mode ?? "off"),
     });
 }
 

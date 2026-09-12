@@ -1,5 +1,16 @@
 # Changelog
 
+## 2.4.3 — less to explain to a scanner
+
+* The queue-time record no longer carries your **prompt text**. It never needed
+  to — the node has the prompt when it runs — and a browser hook posting prompt
+  text to a route is exactly the shape an automated security scan treats as
+  suspicious. It now sends the prompt id, the node id, the style name and the
+  auto-gallery mode, and the route refuses anything else.
+* `AUDIT.md` opens with a data-flow statement for a registry reviewer: no
+  outbound network, no dynamic code, no shelling out, everything written under
+  the package's own `user/` folder, and how the zip importer is contained.
+
 ## 2.4.2 — the catalog cannot go blank without saying why
 
 * **2.4.1 could open the browser on an empty grid.** Splitting "My styles" into

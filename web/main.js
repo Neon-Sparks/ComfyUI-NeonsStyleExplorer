@@ -277,8 +277,7 @@ function watchQueue() {
             const style = effectiveStyle(node);
             if (style && style !== "None" && style !== RANDOM) {
                 carried.push({ node: node.id, style,
-                    mode: value(node, "auto_gallery", "off"),
-                    prompt: value(node, "prompt", "") });
+                    mode: value(node, "auto_gallery", "off") });
             }
         }
         const result = await original(number, batchCount);
@@ -286,7 +285,7 @@ function watchQueue() {
         if (promptId) {
             state.lastQueuedId = String(promptId);
             for (const item of carried) {
-                recordRun(promptId, item.node, item.style, item.mode, item.prompt);
+                recordRun(promptId, item.node, item.style, item.mode);
             }
         }
         return result;

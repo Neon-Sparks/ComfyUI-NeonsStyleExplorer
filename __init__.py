@@ -474,9 +474,9 @@ def _routes():
             return web.json_response({"ok": False, "error": "prompt, node and style are required"})
         if not resolve(style):
             return web.json_response({"ok": False, "error": f"unknown style: {style}"})
+        # no prompt text is accepted here: the node supplies it when it runs
         runs.record(prompt_id, node_id, style=style,
-                    mode=str(body.get("mode") or "off"), prompt=str(body.get("prompt") or ""),
-                    queued=True)
+                    mode=str(body.get("mode") or "off"), queued=True)
         return web.json_response({"ok": True, "prompt_id": prompt_id, "style": style})
 
     @post("/neons_style/gallery/save_run")
