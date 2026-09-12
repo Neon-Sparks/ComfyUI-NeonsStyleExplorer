@@ -49,6 +49,7 @@
     "danbooru",
     "start",
     true,
+    true,
     1.2,
     "comma+space",
     false,

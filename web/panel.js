@@ -826,6 +826,7 @@ export async function composeNow(node) {
         tag_separator: value(node, "tag_separator", "comma+space"),
         style_weight: Number(value(node, "style_weight", 1.0)) || 1,
         include_style_negative: Boolean(value(node, "include_style_negative", true)),
+        close_with_medium: Boolean(value(node, "close_with_medium", true)),
         roll_scope: value(node, "roll_scope", "all"),
     });
     // Nothing to paint any more — the readout is gone, since the node's

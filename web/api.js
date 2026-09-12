@@ -23,6 +23,7 @@ export const state = {
     gallerySig: "",
     ready: false,
     snapshotTried: false,
+    usingSnapshot: false,
     // named preview catalogs: one per model or project
     catalogs: { active: "default", name: "Default", items: [] },
     // prompt_id -> { images: [], nodes: Map(nodeId -> {style, mode, prompt}) }
@@ -118,6 +119,7 @@ export async function loadCatalog() {
         state.favourites = data.favourites || [];
         state.recents = data.recents || [];
         state.ready = true;
+        state.usingSnapshot = false;
         return state.catalog;
     }
     // The server did not answer — an old backend behind a refreshed front end,
@@ -130,6 +132,10 @@ export async function loadCatalog() {
             const module = await import("./style_index.js");
             if (module?.NEONS_STYLE_INDEX?.styles) {
                 state.catalog = indexAliases(module.NEONS_STYLE_INDEX);
+                // the snapshot carries no custom styles, no edits and no
+                // previews, so make this state visible rather than leaving it
+                // looking like the catalog lost your work
+                state.usingSnapshot = true;
                 console.warn("Neons Style Explorer: using the bundled catalog snapshot — restart ComfyUI");
             }
         } catch (err) {

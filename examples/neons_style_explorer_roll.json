@@ -49,6 +49,7 @@
     "natural",
     "start",
     true,
+    true,
     1.0,
     "comma+space",
     false,

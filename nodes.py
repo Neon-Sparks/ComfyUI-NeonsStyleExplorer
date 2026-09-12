@@ -61,6 +61,10 @@ def widgets():
             "default": "start",
             "tooltip": "Put the style clause in front of your prompt or after it.",
         }),
+        "close_with_medium": ("BOOLEAN", {
+            "default": True, "label_on": "close with medium", "label_off": "no closing medium",
+            "tooltip": "Every written clause ends with its medium — 'anime style image', 'photograph style image', 'oil painting style image'. Turn this off to drop that closing phrase from every prompt, for checkpoints that read it as a subject rather than a look. Booru output is unaffected; the medium is not a tag.",
+        }),
         "include_style_negative": ("BOOLEAN", {
             "default": True,
             "tooltip": "Merge the style's own avoid terms into the negative output.",
@@ -175,6 +179,7 @@ def build_debug(kwargs, positive, negative, styles, fmt, finish):
         f"finish:         {finish['name'] if finish else 'None'}",
         f"medium:         {styles[0]['medium'] if styles else 'n/a'}",
         f"style_weight:   {kwargs.get('style_weight', 1.0)}",
+        f"closing medium: {'on' if kwargs.get('close_with_medium', True) else 'off'}",
         f"random:         {_random_line(kwargs)}",
         f"crawl:          {'on — ' + str(kwargs.get('roll_scope', 'all')) + (', missing previews only' if kwargs.get('crawl_missing_only') else '') if kwargs.get('crawl') else 'off'}",
         f"hand-written:   {all(e['written'] for e in styles) if styles else 'n/a'}",
@@ -231,6 +236,7 @@ def run(**kwargs):
         finish=finish,
         output_format=kwargs.get("output_format", "natural"),
         style_position=kwargs.get("style_position", "start"),
+        close_with_medium=bool(kwargs.get("close_with_medium", True)),
         style_mix=kwargs.get("style_mix", "blended with"),
         tag_separator=kwargs.get("tag_separator", "comma+space"),
         style_weight=kwargs.get("style_weight", 1.0),

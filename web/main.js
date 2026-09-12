@@ -424,6 +424,12 @@ app.registerExtension({
         // wrong match loads every value one place out of step. Each includes
         // the control widget litegraph adds after roll_seed.
         const LAYOUTS = [
+            // 2.3.0 — the dice became a switch, before the medium switch
+            ["prompt", "quality", "negative", "style", "extra_style", "custom_style",
+             "format", "finish", "output_format", "style_position",
+             "include_style_negative", "style_weight", "tag_separator", "crawl",
+             "crawl_source", "crawl_missing_only", "auto_gallery", "random_roll",
+             "random_source", "roll_scope", "roll_seed", "control_after_generate"],
             // 2.1.x - 2.2.2 — before the dice became a switch
             ["prompt", "quality", "negative", "style", "extra_style", "custom_style",
              "format", "finish", "output_format", "style_position",

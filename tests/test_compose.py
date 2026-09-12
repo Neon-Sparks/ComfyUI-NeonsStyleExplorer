@@ -834,6 +834,40 @@ class Catalog(unittest.TestCase):
         finally:
             shutil.rmtree(os.path.join(ROOT, "user", "loras"), ignore_errors=True)
 
+    def test_custom_styles_round_trip(self):
+        """A custom style is named once, appears in the catalog and its source
+        lists, and deleting it takes it away again."""
+        store = importlib.import_module(f"{PKG}.store")
+        ok, name = store.save_custom("Round Trip Probe", family="Other", axis="style",
+                                     nl="Probe painting, flat grey field, painting style image,",
+                                     medium="painting style image")
+        self.assertTrue(ok)
+        self.assertEqual(name, "[Custom] Round Trip Probe")      # not [Custom][Custom]
+        self.assertIn(name, [e["name"] for e in catalog.entries()])
+        self.assertIn(name, catalog.source_pool("custom"))
+        self.assertIn(name, catalog.payload()["styles"])
+        self.assertEqual(catalog.payload()["by_name"][name]["source"], "custom")
+        self.assertTrue(store.hide_style(name))
+        self.assertNotIn(name, [e["name"] for e in catalog.entries()])
+        self.assertNotIn(name, catalog.source_pool("custom"))
+
+    def test_closing_medium_can_be_switched_off(self):
+        """The medium closes a clause by default and can be dropped entirely."""
+        on, _ = compose.compose(prompt="a fox", styles=[A])
+        self.assertIn("anime style image", on)
+        off, _ = compose.compose(prompt="a fox", styles=[A], close_with_medium=False)
+        self.assertNotIn("style image", off)
+        self.assertIn("Flat cel colour", off)          # the clause itself survives
+        self.assertTrue(off.rstrip().endswith("a fox"), off)
+        # no stray punctuation where the medium used to be
+        self.assertNotIn(", ,", off)
+        self.assertNotIn(",,", off)
+        # booru output never carried the medium, so it is unchanged
+        tags_on, _ = compose.compose(prompt="a fox", styles=[A], output_format="danbooru")
+        tags_off, _ = compose.compose(prompt="a fox", styles=[A], output_format="danbooru",
+                                      close_with_medium=False)
+        self.assertEqual(tags_on, tags_off)
+
     def test_random_roll_switch(self):
         """The dice is a switch now: it rolls from its source, an old workflow
         holding the retired token still rolls, and crawl still wins."""

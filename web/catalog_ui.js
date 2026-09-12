@@ -463,6 +463,7 @@ export async function openCatalog(options = {}) {
     overlay.innerHTML = `
       <div class="ns-scroll">
         <div class="ns-banner"><img src="/neons_style/banner" alt=""></div>
+        <div class="ns-stale" style="display:none"></div>
         <div class="ns-tools">
           <strong>Neons Style Explorer</strong>
           <span class="n"></span>
@@ -509,15 +510,28 @@ export async function openCatalog(options = {}) {
           <button class="delprompt">Delete prompt</button>
           <span class="note"></span>
         </div>
+        <div class="ns-empty" style="display:none"></div>
         <div class="ns-viewport"><div class="ns-cards"></div></div>
       </div>
       <div class="ns-foot"><span class="clause"></span><span class="cov"></span></div>
     `;
     document.body.appendChild(overlay);
 
+    // The bundled snapshot carries no custom styles, no edits and no previews.
+    // Falling back to it silently looks exactly like the catalog losing your
+    // work, so say what has happened.
+    const stale = overlay.querySelector(".ns-stale");
+    if (state.usingSnapshot) {
+        stale.textContent = "Showing the catalog bundled with this version — the running "
+            + "ComfyUI server has not loaded it. Your custom styles, edits and previews are "
+            + "not visible, and saving will fail, until you restart ComfyUI.";
+        stale.style.display = "block";
+    }
+
     const scroll = overlay.querySelector(".ns-scroll");
     const viewport = overlay.querySelector(".ns-viewport");
     const cards = overlay.querySelector(".ns-cards");
+    const empty = overlay.querySelector(".ns-empty");
     const foot = overlay.querySelector(".clause");
     const cov = overlay.querySelector(".cov");
     const counter = overlay.querySelector(".n");
@@ -532,15 +546,23 @@ export async function openCatalog(options = {}) {
     // shipped families first, then the user's own under one heading — with a
     // single option that gathers every custom family together
     const ALL_CUSTOM = "\u0000custom";
-    const MY_STYLES = "\u0000mine";
+    // NOTE: not "\u0000mine" — that was the combined "My styles" option in
+    // 2.2.0-2.4.0, and a browser left on it would restore straight into this
+    // narrower filter, showing an empty grid with no clue why.
+    const MY_CUSTOM = "\u0000own";       // styles you wrote
+    const MY_EDITED = "\u0000edited";    // shipped styles you changed
     function paintFamilies() {
         const current = famSel.value;
         const order = state.catalog.family_order || [];
         const shipped = order.filter((family) => !isCustomFamily(family));
         const mine = order.filter((family) => isCustomFamily(family));
         famSel.innerHTML = `<option value="">All families</option>`;
-        // your own work, wherever you filed it
-        famSel.add(new Option("★ My styles (custom + edited)", MY_STYLES));
+        // your own work, counted so an empty group is obvious at a glance
+        const own = Object.values(state.catalog.by_name || {});
+        const customs = own.filter((entry) => entry.source === "custom").length;
+        const edited = own.filter((entry) => entry.source === "override").length;
+        famSel.add(new Option(`★ Custom styles (${customs})`, MY_CUSTOM));
+        famSel.add(new Option(`✎ Edited styles (${edited})`, MY_EDITED));
         for (const family of shipped) famSel.add(new Option(family, family));
         if (mine.length) {
             famSel.add(new Option("— my families —", ALL_CUSTOM));
@@ -572,8 +594,10 @@ export async function openCatalog(options = {}) {
         rows = namesOf(axisSel.value)
             .map((name) => ({ name, entry: entryOf(name) || {}, shots: shotsOf(name) }))
             .filter(({ name, entry, shots }) => {
-                if (famSel.value === MY_STYLES) {
-                    if (!["custom", "override"].includes(entry.source || "shipped")) return false;
+                if (famSel.value === MY_CUSTOM) {
+                    if ((entry.source || "shipped") !== "custom") return false;
+                } else if (famSel.value === MY_EDITED) {
+                    if ((entry.source || "shipped") !== "override") return false;
                 } else if (famSel.value === ALL_CUSTOM) {
                     if (!isCustomFamily(entry.family)) return false;
                 } else if (famSel.value && entry.family !== famSel.value) {
@@ -590,7 +614,41 @@ export async function openCatalog(options = {}) {
             });
         counter.textContent = `${rows.length} of ${namesOf(axisSel.value).length}`;
         updateCoverage();
+        showEmptyState();
         measure();
+    }
+
+    /** Say why nothing is on screen, and offer one click back to everything. */
+    function showEmptyState() {
+        const total = namesOf(axisSel.value).length;
+        const active = [
+            search.value.trim() && `search "${search.value.trim()}"`,
+            famSel.value && famSel.selectedOptions[0]?.text.trim(),
+            srcSel.value && `source ${srcSel.value}`,
+            haveSel.value && haveSel.selectedOptions[0]?.text.trim(),
+        ].filter(Boolean);
+        if (rows.length || !total) {
+            empty.style.display = "none";
+            return;
+        }
+        empty.innerHTML = "";
+        const text = document.createElement("span");
+        text.textContent = active.length
+            ? `No ${axisSel.value}s match ${active.join(" + ")}.`
+            : `No ${axisSel.value}s to show.`;
+        const button = document.createElement("button");
+        button.type = "button";
+        button.textContent = "Clear filters";
+        button.onclick = () => {
+            search.value = "";
+            famSel.value = "";
+            srcSel.value = "";
+            haveSel.value = "";
+            remember();
+            filter();
+        };
+        empty.append(text, button);
+        empty.style.display = "flex";
     }
 
     function measure() {
@@ -1131,14 +1189,15 @@ export async function openCatalog(options = {}) {
     const wipeButton = overlay.querySelector(".wipe");
     const syncWipeLabel = () => {
         const label = famSel.value === ALL_CUSTOM ? "my families"
-            : famSel.value === MY_STYLES ? "my styles" : famSel.value;
+            : famSel.value === MY_CUSTOM ? "custom styles"
+            : famSel.value === MY_EDITED ? "edited styles" : famSel.value;
         wipeButton.textContent = label ? `Delete ${label} previews` : "Delete all previews";
     };
     famSel.addEventListener("change", syncWipeLabel);
     syncWipeLabel();
     wipeButton.onclick = async () => {
         const stored = Object.keys(state.previews || {}).length;
-        if (famSel.value && famSel.value !== ALL_CUSTOM && famSel.value !== MY_STYLES) {
+        if (famSel.value && ![ALL_CUSTOM, MY_CUSTOM, MY_EDITED].includes(famSel.value)) {
             if (!confirm(`Delete every gallery image for ${famSel.value}?`)) return;
             await deleteFamilyShots(famSel.value);
         } else {

@@ -215,6 +215,14 @@ when a style is leading, so the prompt stays coherent.
 
 ### Shaping the output
 
+**close_with_medium** decides whether the clause keeps its closing phrase —
+`anime style image`, `photograph style image`, `oil painting style image`. It is
+on by default, because that phrase is what stops a checkpoint reading a painting
+style as a photograph. Turn it off for models that treat it as a subject rather
+than a look: the clause itself is untouched, only the closing phrase goes, and
+nothing is left dangling where it was. Booru output never carried the medium, so
+tag modes are unaffected.
+
 **output_format** — `natural` (sentences), `danbooru` (booru tags), or
 `natural + danbooru` (sentences plus a tag line).
 
@@ -284,8 +292,9 @@ the ⋯ menu.
 * **Search** — matches name, family and booru tags. Press `/` to jump into it,
   `Escape` to close the browser.
 * **Axis** — style, format or finish.
-* **Family** — **★ My styles** (everything you wrote or edited, wherever you
-  filed it), then the nine written families, then **Extra** (the imported pack),
+* **Family** — **★ Custom styles** (the ones you wrote) and **✎ Edited styles**
+  (shipped styles you changed), each with its count, then the nine written
+  families, then **Extra** (the imported pack),
   then your own under *— my families —*. Selecting that heading shows every
   style in a family you made, whichever one.
 * **Filter** — All, ★ Favourites, Recently used, Has preview, Missing preview.
@@ -622,6 +631,10 @@ without a record — and the server then fell back to the most recent record it
 had, which might belong to a different style. The browser now files a record at
 queue time as well, and the server no longer guesses: a prompt it cannot
 identify is reported instead of saved.
+
+**The browser shows no styles at all.** The toolbar remembers how you left it,
+so a filter set last session is still on. From 2.4.2 an empty grid says which
+filters are responsible and offers **Clear filters**.
 
 **A saved preview appears on the wrong style, or on none.** Fixed in 2.2.1. A
 style keeps its id through a rename, so the server always filed the image

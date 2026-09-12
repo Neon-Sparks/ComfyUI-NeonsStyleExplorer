@@ -137,6 +137,7 @@ def _routes():
         finish = resolve(body.get("finish"), pool)
         finish = finish if (finish and finish["axis"] == "finish") else None
         positive, negative = composer.compose(
+            close_with_medium=bool(body.get("close_with_medium", True)),
             prompt=body.get("prompt", ""),
             quality=body.get("quality", ""),
             negative=body.get("negative", ""),

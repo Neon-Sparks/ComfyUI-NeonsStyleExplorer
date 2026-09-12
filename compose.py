@@ -129,7 +129,7 @@ def strip_medium(entry):
     return text
 
 
-def style_clause(styles, fmt=None, finish=None, mix="blended with"):
+def style_clause(styles, fmt=None, finish=None, mix="blended with", with_medium=True):
     """One clause chain from 1-3 styles plus optional format and finish.
 
     Only the leading entry's medium closes the chain: a magazine-cover format or
@@ -160,7 +160,9 @@ def style_clause(styles, fmt=None, finish=None, mix="blended with"):
         parts.insert(0, body) if body else None
 
     text = ", ".join(part for part in parts if part)
-    medium = _drop_terminal(entry_medium(lead))
+    # the closing medium can be switched off for the whole catalog: some
+    # checkpoints read "photograph style image" as a subject rather than a look
+    medium = _drop_terminal(entry_medium(lead)) if with_medium else ""
     if medium:
         text = f"{text}, {medium}" if text else medium
     # a prompt fragment, handed over to whatever the user typed
@@ -168,7 +170,8 @@ def style_clause(styles, fmt=None, finish=None, mix="blended with"):
 
 
 def compose_natural(prompt, quality, styles, fmt, finish, opts):
-    clause = style_clause(styles, fmt, finish, opts.get("style_mix", "blended with"))
+    clause = style_clause(styles, fmt, finish, opts.get("style_mix", "blended with"),
+                          with_medium=bool(opts.get("close_with_medium", True)))
     clause = emphasise(clause, opts.get("style_weight", 1.0))
     prompt = clean(prompt)
     quality = _drop_terminal(quality)
@@ -250,6 +253,7 @@ DEFAULTS = {
     "tag_separator": "comma+space",
     "style_weight": 1.0,  # the node ships 1.5; the composer itself stays neutral
     "include_style_negative": True,
+    "close_with_medium": True,
 }
 
 

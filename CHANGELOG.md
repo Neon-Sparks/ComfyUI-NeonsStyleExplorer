@@ -1,5 +1,50 @@
 # Changelog
 
+## 2.4.2 — the catalog cannot go blank without saying why
+
+* **2.4.1 could open the browser on an empty grid.** Splitting "My styles" into
+  Custom and Edited reused the stored filter value of the old combined option,
+  and the browser remembers its toolbar between visits — so a browser left on
+  "My styles" reopened filtered to *custom only*, which for most people is
+  nothing at all. The Custom group now carries a new value, so a view saved on
+  the retired option no longer matches anything and falls back to **All
+  families**.
+* **An empty grid now explains itself.** It names the filters responsible —
+  search, family, source, preview state — and offers **Clear filters**. Whatever
+  the cause, the catalog can no longer look simply broken.
+* `tools/harness/view_token_collision.mjs` reproduces the collision and shows
+  the fix.
+
+## 2.4.1 — custom styles: named once, and never invisible without saying why
+
+* **Custom and Edited are separate groups** in the browser's family filter, each
+  carrying its count, so an empty one is obvious at a glance. They replace the
+  single combined entry added in 2.2.0.
+* **A custom style in the 'Other' family was named `[Custom][Custom] Name`.**
+  That family already tags as Custom, and the tag was then appended again. New
+  ones are `[Custom] Name`; existing ones keep their names and go on working.
+* **The bundled-snapshot fallback is now visible.** When the running server has
+  not loaded this version, the browser falls back to the catalog snapshot
+  shipped in the package — which contains no custom styles, no edits and no
+  previews, and cannot save. That looked exactly like the catalog losing your
+  work, with only a console line to explain it. The browser now says so in a
+  red strip at the top: restart ComfyUI and everything returns.
+* New test: a custom style is named once, appears in the catalog, in
+  `source_pool('custom')` and in the payload with `source: custom`, and deleting
+  it removes it from all three.
+
+## 2.4.0 — the closing medium can be switched off
+
+* **`close_with_medium`** drops the closing phrase from every prompt —
+  `anime style image`, `photograph style image`, `oil painting style image` —
+  for checkpoints that read it as a subject rather than a look. On by default,
+  since that phrase is what keeps a painting style from drifting photographic.
+* The clause is otherwise untouched and nothing dangles where the medium was.
+  Booru output never carried the medium, so tag modes are byte-for-byte
+  identical either way — checked by the test.
+* The browser's live preview passes the switch too, so what the panel shows is
+  what the node composes.
+
 ## 2.3.0 — the dice is a switch
 
 * **`random_roll`** replaces the `🎲 Random` entry in the style dropdowns.

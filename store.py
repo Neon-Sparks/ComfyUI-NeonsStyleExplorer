@@ -63,6 +63,9 @@ def custom_name(raw, family, axis="style"):
     if not raw:
         return ""
     tag = axis.capitalize() if axis in ("format", "finish") else family_tag(family)
+    # 'Other' already tags as Custom; [Custom][Custom] helps nobody
+    if tag == "Custom":
+        return f"[Custom] {raw}"
     return f"[{tag}][Custom] {raw}"
 
 

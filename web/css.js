@@ -149,6 +149,13 @@ const CSS = `
     border:1px solid #3b5a8a; background:#10131a; color:#e7ebf2; }
 .ns-lora-trigger button { font-size:10px; padding:2px 8px; border-radius:6px; border:1px solid #333642;
     background:#1b1e26; color:#cfd3da; cursor:pointer; }
+.ns-empty { flex:0 0 auto; display:flex; align-items:center; gap:12px; margin:0 0 8px;
+    padding:12px 14px; border-radius:8px; background:#1d2430; border:1px solid #2f3a4b;
+    color:#cfd6e2; font-size:13px; }
+.ns-empty button { font-size:12px; padding:5px 12px; border-radius:6px; border:1px solid #3b5a8a;
+    background:#22344f; color:#dce6f7; cursor:pointer; }
+.ns-stale { flex:0 0 auto; margin:0 0 8px; padding:10px 14px; border-radius:8px;
+    background:#3a1d1d; border:1px solid #7a3030; color:#ffd9d9; font-size:12px; line-height:1.45; }
 .ns-banner.lora { transition:opacity .18s linear; }
 /* delete top right, favourite top left — the same way round as the style
    browser, so the two read alike */
@@ -233,8 +240,8 @@ export function ensureCss() {
         el.id = "ns-style-css";
         document.head.appendChild(el);
     }
-    if (el.dataset.v !== "19") {
+    if (el.dataset.v !== "21") {
         el.textContent = CSS;
-        el.dataset.v = "19";
+        el.dataset.v = "21";
     }
 }
