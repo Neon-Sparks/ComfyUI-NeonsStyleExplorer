@@ -8,3 +8,8 @@ CHANGELOG.md
 STYLES.md
 MANUAL.md
 AUDIT.md
+
+# Documentation images: useful on GitHub, dead weight in the install archive.
+screenshots/
+docs/
+"SIMPLE EXAMPLE WORKFLOW/"

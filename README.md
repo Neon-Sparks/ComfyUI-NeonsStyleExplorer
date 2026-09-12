@@ -15,6 +15,15 @@ Nodes (category **Neons**):
 **[Read the manual](MANUAL.md)** · [pre-release audit](AUDIT.md) — every widget, the browser, previews, the
 crawl workflow, catalogs and troubleshooting.
 
+## What it looks like
+
+| | |
+|---|---|
+| ![The catalog browser](screenshots/Image00003.jpg) | ![The node in a workflow](screenshots/Image00004.jpg) |
+| The browser: search, filter by family, source or preview state, click a card to load it. | The node in a graph, showing the style it composed with and its preview. |
+| ![Cards in the browser](screenshots/Image00002.jpg) | ![A guided workflow](screenshots/Image00006.jpg) |
+| Every card carries Use and Edit, and its own preview once you have saved one. | The whole chain: node, composed positive and negative, and the saved result. |
+
 ## Install
 
 **ComfyUI Manager** — search for *Neons Style Explorer* and install, then restart

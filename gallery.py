@@ -5,6 +5,7 @@ import json
 import os
 import re
 import threading
+import uuid
 import time
 from io import BytesIO
 
@@ -30,6 +31,22 @@ MAX_SHOTS = 8
 EXTS = (".jpg", ".jpeg", ".png", ".webp")
 _ADOPTED = set()  # catalogs whose loose files have been folded in
 
+
+
+def shot_filename(directory, key):
+    """A filename nothing else in this folder is using.
+
+    The stamp alone was not enough: two images saved inside the same
+    millisecond — a batch with auto-gallery on, or two nodes finishing together
+    — produced the SAME name, so the second overwrote the first and the
+    manifest ended up with two entries pointing at one file. Deleting it then
+    emptied the record.
+    """
+    for _ in range(100):
+        candidate = f"{key}--{int(time.time() * 1000)}-{uuid.uuid4().hex[:6]}.jpg"
+        if not os.path.exists(os.path.join(directory, candidate)):
+            return candidate
+    return f"{key}--{uuid.uuid4().hex}.jpg"
 
 def safe(text):
     return re.sub(r"[^A-Za-z0-9]+", "_", str(text or "").strip()).strip("_")[:140]
@@ -255,7 +272,7 @@ def add_shot(style, source, prompt="", make_cover=True, max_shots=MAX_SHOTS):
 
     adopt_existing()
     os.makedirs(previews_dir(), exist_ok=True)
-    filename = f"{key}--{int(time.time() * 1000)}.jpg"
+    filename = shot_filename(previews_dir(), key)
     canvas.save(os.path.join(previews_dir(), filename), "JPEG", quality=90, optimize=True)
 
     data = _load()

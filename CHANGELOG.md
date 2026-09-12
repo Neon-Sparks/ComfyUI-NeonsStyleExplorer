@@ -1,5 +1,21 @@
 # Changelog
 
+## 2.4.4 — two images saved in the same millisecond stay two images
+
+* **A preview could silently overwrite another.** Shot filenames were
+  `key--<milliseconds>.jpg`, so two images saved inside the same millisecond —
+  a batch with auto_gallery on, two nodes finishing together, a fast machine —
+  got the SAME name. The second overwrote the first, the manifest kept two
+  entries pointing at one file, and deleting that file emptied the record
+  entirely. Filenames now carry a short random token as well, checked against
+  the folder before use. Both galleries are fixed: styles and LoRAs.
+* This is what failed the build on GitHub: the runner is quick enough to save
+  two test images inside one millisecond, which my machine was not. The test
+  suite now freezes the clock and saves twice at the same instant, so the race
+  is reproduced deliberately rather than left to luck — it fails against the old
+  filename and passes against the new one.
+* Existing previews keep their names and are untouched.
+
 ## 2.4.3 — less to explain to a scanner
 
 * The queue-time record no longer carries your **prompt text**. It never needed

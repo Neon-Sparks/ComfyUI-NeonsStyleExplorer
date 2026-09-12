@@ -834,6 +834,44 @@ class Catalog(unittest.TestCase):
         finally:
             shutil.rmtree(os.path.join(ROOT, "user", "loras"), ignore_errors=True)
 
+    @unittest.skipUnless(HAVE_PILLOW, "Pillow is needed to write a test image")
+    def test_two_shots_in_the_same_millisecond(self):
+        """Two images saved inside one millisecond must stay two images.
+
+        The filename used to be key--<ms>.jpg, so a fast machine — a CI runner,
+        a batch with auto-gallery on — wrote both under the same name: the
+        second overwrote the first, the manifest held two entries pointing at
+        one file, and deleting it emptied the record.
+        """
+        import shutil
+        from io import BytesIO
+
+        loras = importlib.import_module(f"{PKG}.loras")
+        Image = _Image
+        name = "krea 2/portraits/race.safetensors"
+        buffer = BytesIO()
+        Image.new("RGB", (8, 8), (90, 30, 30)).save(buffer, "JPEG")
+        frozen = lambda: 1_789_000_000.123          # every call, the same instant
+        real = loras.time.time
+        try:
+            loras.time.time = frozen
+            first = loras.add_shot(name, buffer.getvalue())
+            second = loras.add_shot(name, buffer.getvalue(), make_cover=False)
+            self.assertNotEqual(first["file"], second["file"])
+            record = loras.manifest("krea 2")[loras.slug(name)]
+            self.assertEqual(record["count"], 2)
+            files = {shot["file"] for shot in record["shots"]}
+            self.assertEqual(len(files), 2)
+            for shot in files:
+                self.assertTrue(os.path.isfile(
+                    os.path.join(loras.previews_dir("krea 2"), shot)), shot)
+            # deleting one leaves the other, and the record alive
+            self.assertTrue(loras.delete_shot("krea 2", loras.slug(name), second["file"]))
+            self.assertEqual(loras.manifest("krea 2")[loras.slug(name)]["count"], 1)
+        finally:
+            loras.time.time = real
+            shutil.rmtree(os.path.join(ROOT, "user", "loras"), ignore_errors=True)
+
     def test_custom_styles_round_trip(self):
         """A custom style is named once, appears in the catalog and its source
         lists, and deleting it takes it away again."""
