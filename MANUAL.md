@@ -7,6 +7,9 @@ into a prompt, and build a preview library for.
 
 ---
 
+New to the node? The **[quick start](QUICKSTART.md)** covers the first five
+minutes in six steps with pictures. This manual is the long version.
+
 ## Contents
 
 1. [The idea](#1-the-idea)

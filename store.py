@@ -4,14 +4,6 @@ import re
 
 from .catalog import (
     AXES,
-    HIDDEN_PATH,
-    clear_recents,
-    is_favourite,
-    load_favourites,
-    load_recents,
-    push_recent,
-    set_favourite,
-    toggle_favourite,
     CUSTOM_PATH,
     FAMILY_MEDIUM,
     FAMILY_TAG,

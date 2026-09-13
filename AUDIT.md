@@ -97,3 +97,44 @@ over from the removed prompt readout). Removed.
 `bash tools/preflight.sh` before every push: nothing private tracked, no build
 junk, the catalog matching its source packs, lint, web check and tests passing,
 and the release metadata filled in.
+
+---
+
+## Audit, 2.4.5
+
+Ran over the whole package: every Python module, the six web modules, all
+routes, and the interactions between the features added since 2.2.
+
+### Bugs found
+
+* **`random_roll` could file an image under the previous run's style.** The
+  browser records each queued prompt's style so a saved image is paired
+  correctly. With the dice on, the style does not exist yet — the node rolls it
+  when it runs — and `effectiveStyle` falls back to the last style used, so the
+  record named the *previous* one. The browser now stays silent for a random
+  run and leaves the record to the node, which knows what it rolled. Covered by
+  `tools/harness/queue_record_random.mjs`.
+* (Fixed in 2.4.4) Two images saved in the same millisecond shared a filename.
+
+### Dead code removed
+
+* `store.py`: eight names imported and never used.
+* `__init__.py`: `FAMILY_ORDER` and `delete_custom` imports.
+* `gallery.py`: `read_log()`, orphaned with its route.
+* Two routes nothing called — `POST /neons_style/custom/delete` (the editor
+  deletes through `style/hide`) and `GET /neons_style/gallery/log`. 50 routes
+  down to 48; a delete route with no caller is only attack surface.
+* `web/main.js`, `web/panel.js`: option lists and combo syncing for `style_2`
+  and `style_3`, widgets retired in 1.16.
+
+### Checked and clean
+
+* 31 POST routes, every one behind the Origin guard; none registered raw.
+* No `eval`, `exec`, `subprocess`, `pickle`, bare `except`, or mutable default
+  arguments anywhere in the package.
+* No unused JavaScript exports; no unescaped user data interpolated into markup.
+* The export filename is slugged, so a catalog named with CRLF cannot inject a
+  response header.
+* Interaction matrix: random + family scope, random + crawl, medium off with no
+  style, medium off with a format only, medium off under weighting, and source
+  separation between main and extra — all correct.

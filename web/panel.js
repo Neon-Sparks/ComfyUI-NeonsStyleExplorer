@@ -478,8 +478,6 @@ export async function adoptStyle(node, name) {
     // the dice is the random_roll switch now, not an option in the lists
     const lists = {
         style: ["None", ...all],
-        style_2: ["None", ...all],
-        style_3: ["None", ...all],
         custom_style: ["None", ...mine],
     };
     for (const [field, values] of Object.entries(lists)) {

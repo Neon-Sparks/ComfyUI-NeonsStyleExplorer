@@ -12,17 +12,19 @@ Nodes (category **Neons**):
 * **Neons LoRA Explorer** — a LoRA loader with a preview gallery per model folder
 * **Neons Gallery Capture** — headless equivalent of the Save button
 
-**[Read the manual](MANUAL.md)** · [pre-release audit](AUDIT.md) — every widget, the browser, previews, the
+**[Quick start](QUICKSTART.md)** · **[Read the manual](MANUAL.md)** · [pre-release audit](AUDIT.md) — every widget, the browser, previews, the
 crawl workflow, catalogs and troubleshooting.
 
 ## What it looks like
 
+![The catalog browser](screenshots/browser-gallery.jpg)
+
 | | |
 |---|---|
-| ![The catalog browser](screenshots/Image00003.jpg) | ![The node in a workflow](screenshots/Image00004.jpg) |
-| The browser: search, filter by family, source or preview state, click a card to load it. | The node in a graph, showing the style it composed with and its preview. |
-| ![Cards in the browser](screenshots/Image00002.jpg) | ![A guided workflow](screenshots/Image00006.jpg) |
-| Every card carries Use and Edit, and its own preview once you have saved one. | The whole chain: node, composed positive and negative, and the saved result. |
+| <img src="screenshots/node-prompt-only.jpg" width="300" alt="The node with no style selected"> | <img src="screenshots/node-style-selected.jpg" width="300" alt="The node with a style selected"> |
+| Prompt only — every slot on None, the node passes your prompt through. | A style chosen, with its family and preview on the node. |
+
+**New here? [Read the quick start](QUICKSTART.md)** — six steps with pictures.
 
 ## Install
 

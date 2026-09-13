@@ -1,5 +1,18 @@
 # Changelog
 
+## 2.4.5 — audit: one real bug, and a clear-out
+
+* **Fixed: with `random_roll` on, a saved image could be filed under the
+  previous run's style.** The browser records a prompt's style as it is queued,
+  but a random run has no style yet — the node rolls it when it runs — and the
+  lookup fell back to the last style used. The browser now says nothing for a
+  random run and lets the node report what it actually rolled.
+* **Removed** eight unused imports, an orphaned `read_log()`, dead combo syncing
+  for the long-retired `style_2`/`style_3` widgets, and two routes nothing
+  called: `POST /neons_style/custom/delete` and `GET /neons_style/gallery/log`.
+  48 routes, down from 50.
+* Audit notes are in `AUDIT.md`, including what was checked and found clean.
+
 ## 2.4.4 — two images saved in the same millisecond stay two images
 
 * **A preview could silently overwrite another.** Shot filenames were

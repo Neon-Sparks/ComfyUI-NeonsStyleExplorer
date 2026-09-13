@@ -370,8 +370,3 @@ def log(style, filename):
     return line
 
 
-def read_log(limit=100):
-    if not os.path.isfile(LOG_PATH):
-        return []
-    with open(LOG_PATH, "r", encoding="utf-8") as handle:
-        return handle.read().splitlines()[-limit:]

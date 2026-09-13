@@ -20,8 +20,6 @@ function syncCombo(node, field, axis) {
 
 function syncCombos(node) {
     syncCombo(node, "style", "style");
-    syncCombo(node, "style_2", "style");
-    syncCombo(node, "style_3", "style");
     syncCombo(node, "format", "format");
     syncCombo(node, "finish", "finish");
     syncSlot(node, "extra_style", "extra");
@@ -274,6 +272,12 @@ function watchQueue() {
         const carried = [];
         for (const node of app.graph?._nodes || []) {
             if (!NODE_TYPES.has(node.comfyClass || node.type)) continue;
+            // With random_roll on, the style for this prompt does not exist
+            // yet — the node rolls it when it runs. effectiveStyle would hand
+            // back the PREVIOUS run's style, and recording that would file the
+            // new image under the old style. The node's own record is the only
+            // truthful one here, so leave this prompt to it.
+            if (value(node, "random_roll", false)) continue;
             const style = effectiveStyle(node);
             if (style && style !== "None" && style !== RANDOM) {
                 carried.push({ node: node.id, style,

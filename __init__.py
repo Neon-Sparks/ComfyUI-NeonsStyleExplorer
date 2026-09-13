@@ -18,7 +18,6 @@ def _routes():
     from . import catalogs as catalog_sets
     from . import runs
     from .catalog import (
-        FAMILY_ORDER,
         RANDOM_TOKEN,
         clear_recents,
         crawl_names,
@@ -34,7 +33,6 @@ def _routes():
         toggle_favourite,
     )
     from .store import (
-        delete_custom,
         delete_override,
         hidden_styles,
         hide_style,
@@ -598,10 +596,6 @@ def _routes():
         return web.json_response({"ok": True, "deleted": gallery.delete_many(names),
                                   "family": family or "all"})
 
-    @routes.get("/neons_style/gallery/log")
-    async def get_gallery_log(request):
-        return web.json_response({"lines": gallery.read_log()})
-
     # ---------------- editing ----------------
 
     @post("/neons_style/override")
@@ -631,11 +625,6 @@ def _routes():
             rename=body.get("rename") or "",
         )
         return web.json_response({"ok": ok, "name": info if ok else "", "error": "" if ok else info})
-
-    @post("/neons_style/custom/delete")
-    async def post_custom_delete(request):
-        body = await data(request)
-        return web.json_response({"ok": delete_custom(body.get("name") or "")})
 
     @post("/neons_style/style/hide")
     async def post_style_hide(request):
