@@ -180,4 +180,7 @@ web/          api, css, panel, catalog_ui, lora, main
 tools/        import, lint, harnesses, and the source in tools/written/
 ```
 
+Contributions welcome — [CONTRIBUTING.md](CONTRIBUTING.md).
+Security reports: [SECURITY.md](SECURITY.md).
+
 MIT licensed.
