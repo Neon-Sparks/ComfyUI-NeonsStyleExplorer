@@ -65,10 +65,11 @@ masterpiece, best quality, (anime_screenshot:1.1), (anime_coloring:1.1),
 * `quality` — a separate quality-prefix box, always kept at the very front
 * three axes — `style`, `format` (what job the frame does), `finish` (a
   stackable realism qualifier)
-* `🎲 Random` at the top of every style dropdown, with `roll_scope`
-  (all / family / favourites / recent / has preview / missing preview) and
-  `roll_seed` plus its control-after-generate widget (set it to randomize so
-  every run rolls anew)
+* `random_roll` — a switch that rolls a style for every run, with
+  `random_source` (all / main / extra / custom) choosing the pool, `roll_scope`
+  narrowing it (all / family / favourites / recent / has preview / missing
+  preview) and `roll_seed` plus its control-after-generate widget (set it to
+  randomize so every run rolls anew)
 * **Named catalogs** — keep a separate preview set per model ("my Krea 2", "SDXL",
   a client project): each catalog has its own gallery, favourites and recents,
   while the style texts and your edits stay shared. Pick one from the toolbar,
@@ -87,7 +88,7 @@ masterpiece, best quality, (anime_screenshot:1.1), (anime_coloring:1.1),
 The preview scales with the node on both axes, the button row sits under it, and
 the panel body is click-through so the node still drags from anywhere. Buttons:
 **Roll**, **Catalog**, **Save**, **Edit**, and a `⋯` menu (browse formats and
-finishes, roll style 2/3, new custom style, clear, delete shots). The composed
+finishes, new custom style, clear styles, delete shots). The composed
 prompt updates live underneath.
 
 ## Random

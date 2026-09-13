@@ -143,7 +143,7 @@ The panel is drawn inside the node itself.
 shot strip, and the button row]
 
 * **Preview image** — the cover shot for the current style, or a placeholder
-  when it has none. On the dice, it shows the style that was last rolled.
+  when it has none. With `random_roll` on, it shows the style last rolled.
 * **‹ › arrows** — appear over the preview on hover and step through the
   catalog one style at a time, following the same list a crawl step would (so
   they honour *only missing previews* too) and working whether crawl is on or
@@ -153,8 +153,8 @@ shot strip, and the button row]
   are looking at. With `roll_scope` set to *has preview* they visit only
   entries that have one — useful early on, when most styles are still empty. Clicking the image itself still opens the browser. To choose between several
   images of the *same* style, use the shot strip underneath.
-* **Name** and **family chip** — the chip reads `random` when the dropdown is on
-  the dice.
+* **Name** and **family chip** — with `random_roll` on the chip reads `random`,
+  or `random: extra` when `random_source` narrows the pool.
 * **Shot strip** — one thumbnail per saved image for this style. Click one to
   make it the cover; the small **✕** on a thumbnail deletes that image.
 
@@ -167,7 +167,7 @@ Buttons:
 | **Save** | File the newest generated image under the style that produced it. |
 | **Edit** | Edit the current style's text (section 12). |
 | **☆** | Add or remove the current style from favourites. |
-| **⋯** | Catalog switcher, browse formats/finishes, roll style 2 or 3, new custom style, clear styles, delete shots. |
+| **⋯** | Catalog switcher, browse formats/finishes, new custom style, clear styles, copy the composed prompt, delete shots. |
 
 **Save is prompt-aware.** It files the image under the style that actually
 generated it, which is not always the style now showing in the dropdown — while
@@ -194,9 +194,9 @@ turn that off.
 **style** — the **written catalog**. Only one style slot is active at a time:
 choosing here switches the other two off, so there is never any doubt about
 which list the arrows step or which entry the preview shows. Set it to *None* to
-switch this slot off. Each dropdown
-starts with `None`, then `🎲 Random`, then the whole catalog. Only the first
-style's medium closes the clause.
+switch this slot off. Each dropdown starts with `None` and then its list — the
+dice left the dropdowns in 2.3.0 and is the `random_roll` switch now. Only the
+first style's medium closes the clause.
 
 **extra_style** — a slot carrying **only the imported [Extra] pack**, kept out
 of the main dropdowns so those stay quick to open. Composes as another style
@@ -417,8 +417,8 @@ style that produced it. The browser footer counts up as it goes.
 
 **Details worth knowing:**
 
-* While crawl is on, every dice is inert — the extra style slots, the format and
-  the finish dice all resolve to nothing, and the Roll button is disabled.
+* While crawl is on, nothing else rolls: `random_roll` is ignored, the format
+  and finish dice resolve to nothing, and the Roll button is disabled.
 * The walk follows `roll_scope`. `missing preview` is the one you want for
   filling gaps, because it skips everything already covered; `family` covers one
   family at a time.
@@ -672,9 +672,12 @@ preview* (that is `first` doing its job), *image not found on disk*, or
 crawl leaves a trail you can read afterwards.
 
 **Nothing rolls.**
-If `roll_scope` is `favourites` or `recent` and the list is empty, the dice falls
-back to the full catalog rather than doing nothing. If it is `missing preview`
-and you have covered everything, there is nothing left to roll.
+Check `random_roll` is on and `crawl` is off — crawl overrides the dice. If
+`roll_scope` is `favourites` or `recent` and that list is empty, the roll falls
+back to the full catalog rather than doing nothing, and an empty `random_source`
+(no custom styles yet) does the same, saying so in the node's debug output. If
+the scope is `missing preview` and you have covered everything, there is nothing
+left to roll.
 
 **The dropdown moved on its own.**
 Crawl is on. It advances one entry per queued run. Turn it off to stop.
@@ -773,9 +776,9 @@ Previews live in `user/loras/<gallery>/` and trigger words in
 | prompt | text | empty |
 | quality | text | empty |
 | negative | text | empty |
-| style | None, 🎲 Random, the written catalog | None |
-| extra_style | None, 🎲 Random, the imported pack | None |
-| custom_style | None, 🎲 Random, your own styles | None |
+| style | None, the written catalog (1,271) | None |
+| extra_style | None, the imported pack (1,596) | None |
+| custom_style | None, your own styles | None |
 | format | None, 🎲 Random, 97 formats | None |
 | finish | None, 🎲 Random, 51 finishes | None |
 | output_format | natural, danbooru, natural + danbooru | natural |
@@ -783,10 +786,15 @@ Previews live in `user/loras/<gallery>/` and trigger words in
 | include_style_negative | on / off | on |
 | style_weight | 1.0 – 5.0 | 1.0 |
 | tag_separator | comma+space, comma, space | comma+space |
+| close_with_medium | on / off | on |
 | crawl | on / off | off |
+| crawl_source | main, extra, custom | main |
+| crawl_missing_only | on / off | off |
+| auto_gallery | off, first, every | off |
+| random_roll | on / off | off |
+| random_source | all, main, extra, custom | all |
 | roll_scope | all, family, favourites, recent, has preview, missing preview | all |
 | roll_seed | 0 – 4294967295 | 54321 |
-| auto_gallery | off, first, every | off |
 
 ### Families
 

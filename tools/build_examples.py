@@ -101,10 +101,13 @@ def main():
             "output_format": "danbooru",
             "style_weight": 1.2,
         }),
+        # the dice left the dropdowns in 2.3.0; it is a switch now
         "neons_style_explorer_roll.json": workflow(nodes, "NeonsStyleExplorer", {
             "prompt": "a woman on a fire escape at night",
-            "style": "\U0001F3B2 Random",
+            "random_roll": True,
+            "random_source": "main",
             "roll_scope": "missing preview",
+            "auto_gallery": "first",
         }),
     }
     for name, data in files.items():
