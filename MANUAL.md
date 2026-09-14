@@ -671,6 +671,13 @@ preview* (that is `first` doing its job), *image not found on disk*, or
 *restart ComfyUI…*. The same text goes to the browser console, so an unattended
 crawl leaves a trail you can read afterwards.
 
+**An edited style still generates the old picture.**
+Fixed in 2.4.5. ComfyUI caches a node whose widget values have not changed, and
+editing a style leaves every widget exactly as it was while changing the clause
+behind the name — so the run was skipped and the sampler kept the old
+conditioning. The node's cache signature now includes the resolved clause, tags
+and medium, so an edit re-runs it and nothing else does.
+
 **Nothing rolls.**
 Check `random_roll` is on and `crawl` is off — crawl overrides the dice. If
 `roll_scope` is `favourites` or `recent` and that list is empty, the roll falls

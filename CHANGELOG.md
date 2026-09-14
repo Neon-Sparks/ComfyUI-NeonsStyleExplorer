@@ -2,6 +2,15 @@
 
 ## 2.4.5 — audit: one real bug, and a clear-out
 
+* **Fixed: an edited style kept generating the old picture.** ComfyUI caches a
+  node whose widget values are unchanged — and editing a style leaves the
+  widgets identical while changing what they mean, so the run was skipped and
+  the sampler reused the previous conditioning. The browser showed the edit; the
+  image did not. The node's `IS_CHANGED` signature now folds in the resolved
+  clause, medium, tags and negatives of whatever is selected, so an edit re-runs
+  the node and nothing else does — picking the same style twice still caches.
+  Applies to custom styles and to overrides on shipped ones.
+
 * **Fixed: with `random_roll` on, a saved image could be filed under the
   previous run's style.** The browser records a prompt's style as it is queued,
   but a random run has no style yet — the node rolls it when it runs — and the

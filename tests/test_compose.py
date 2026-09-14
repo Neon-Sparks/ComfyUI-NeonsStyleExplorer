@@ -872,6 +872,38 @@ class Catalog(unittest.TestCase):
             loras.time.time = real
             shutil.rmtree(os.path.join(ROOT, "user", "loras"), ignore_errors=True)
 
+    def test_editing_a_style_invalidates_the_node_cache(self):
+        """ComfyUI caches a node whose widget values are unchanged. Editing a
+        style leaves the widgets identical while changing what they mean, so
+        the signature has to move or the picture keeps the old clause."""
+        store = importlib.import_module(f"{PKG}.store")
+        node = nodes.NeonsStyleExplorer
+        ok, name = store.save_custom("Cache Probe", family="Other", axis="style",
+                                     nl="First painting, version one, painting style image,",
+                                     medium="painting style image", tags=["poster"])
+        self.assertTrue(ok)
+        args = dict(prompt="a fox", style="None", extra_style="None",
+                    custom_style=name, format="None", finish="None")
+        first = node.IS_CHANGED(**args)
+        self.assertEqual(first, node.IS_CHANGED(**args))          # stable while nothing changes
+        store.save_custom(name, update=True, family="Other", axis="style",
+                          nl="Second painting, edited, painting style image,",
+                          medium="painting style image", tags=["poster"])
+        edited = node.IS_CHANGED(**args)
+        self.assertNotEqual(first, edited, "an edited clause must re-run the node")
+        store.save_custom(name, update=True, family="Other", axis="style",
+                          nl="Second painting, edited, painting style image,",
+                          medium="painting style image", tags=["poster", "flat_color"])
+        self.assertNotEqual(edited, node.IS_CHANGED(**args), "edited tags must re-run the node")
+        store.hide_style(name)
+        # a shipped style edited through an override moves too
+        before = node.IS_CHANGED(**dict(args, custom_style="None", style="[Painting] Acrylic"))
+        store.save_override("[Painting] Acrylic",
+                            nl="Acrylic painting, edited here, painting style image,")
+        after = node.IS_CHANGED(**dict(args, custom_style="None", style="[Painting] Acrylic"))
+        store.delete_override("[Painting] Acrylic")
+        self.assertNotEqual(before, after)
+
     def test_custom_styles_round_trip(self):
         """A custom style is named once, appears in the catalog and its source
         lists, and deleting it takes it away again."""

@@ -1,5 +1,7 @@
 """Neons Style Explorer — nodes."""
 
+import hashlib
+
 from . import compose as composer
 from . import loras
 from . import runs
@@ -260,6 +262,31 @@ def encode(clip, text):
 
 class _Base:
     CATEGORY = "Neons"
+
+    @classmethod
+    def IS_CHANGED(cls, **kwargs):
+        """Re-run when the *meaning* of the inputs changes.
+
+        ComfyUI caches a node whose widget values are unchanged — and editing a
+        style leaves every widget exactly as it was while changing the clause
+        behind the name. The run was then skipped and the sampler kept the old
+        conditioning: the browser showed the edit, the picture did not. Folding
+        the resolved entries into the signature fixes that, and nothing else
+        re-runs: pick the same style twice and the signature repeats.
+        """
+        pool = entries()
+        parts = []
+        for field in ("style", "extra_style", "custom_style", "format", "finish"):
+            entry = resolve(kwargs.get(field, "None"), pool)
+            if not entry:
+                parts.append(f"{field}=None")
+                continue
+            parts.append("|".join([
+                field, entry["id"], entry.get("nl", ""), entry.get("medium", ""),
+                entry.get("negative", ""), ",".join(entry.get("tags") or []),
+                ",".join(entry.get("tags_negative") or []),
+            ]))
+        return hashlib.sha1("\n".join(parts).encode("utf-8")).hexdigest()
 
     @classmethod
     def VALIDATE_INPUTS(cls, style=None, custom_style=None, extra_style=None,
