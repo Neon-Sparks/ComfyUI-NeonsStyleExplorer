@@ -175,11 +175,14 @@ def compose_natural(prompt, quality, styles, fmt, finish, opts):
     clause = emphasise(clause, opts.get("style_weight", 1.0))
     prompt = clean(prompt)
     quality = _drop_terminal(quality)
+    # LoRA triggers lead: a trigger the model does not see early enough may as
+    # well not be there, and they are the one part of a prompt a LoRA requires
+    triggers = ", ".join(opts.get("lora_triggers") or [])
     if not clause:
-        return join_prompt([quality, prompt])
+        return join_prompt([triggers, quality, prompt])
     if opts.get("style_position", "start") == "end":
-        return join_prompt([quality, prompt, clause])
-    return join_prompt([quality, clause, prompt])
+        return join_prompt([triggers, quality, prompt, clause])
+    return join_prompt([triggers, quality, clause, prompt])
 
 
 def compose_natural_negative(negative, styles, fmt, finish, include_style_negative):
@@ -223,6 +226,9 @@ def compose_tags(prompt, quality, styles, fmt, finish, opts):
     style_tags = collect_tags(styles, fmt, finish, opts.get("style_weight", 1.0))
     quality_tags = split_terms(quality)
     prompt_tags = split_terms(prompt)
+    trigger_tags = [tag for term in (opts.get("lora_triggers") or [])
+                    for tag in split_terms(term)]
+    quality_tags = trigger_tags + quality_tags
     order = (
         quality_tags + prompt_tags + style_tags
         if opts.get("style_position", "start") == "end"
@@ -254,6 +260,7 @@ DEFAULTS = {
     "style_weight": 1.0,  # the node ships 1.5; the composer itself stays neutral
     "include_style_negative": True,
     "close_with_medium": True,
+    "lora_triggers": (),
 }
 
 

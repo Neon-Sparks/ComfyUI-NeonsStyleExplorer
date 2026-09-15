@@ -157,6 +157,19 @@ favourite it.
 
 ---
 
+## Using it with LoRAs
+
+The **Neons LoRA Explorer** keeps its own gallery per LoRA folder, remembers
+each LoRA's trigger words, and has a **triggers** output. Wire that into the
+style node's `lora_triggers_1`, `_2` or `_3` inputs and the words are placed at
+the very start of the composed prompt — the LoRA and its triggers travel
+together instead of being retyped.
+
+Its **random_roll** switch loads a random LoRA each run, at a strength drawn
+between `random_low` and `random_high`.
+
+---
+
 ## 6. Where to go next
 
 ![The catalog browser](screenshots/browser-gallery.jpg)

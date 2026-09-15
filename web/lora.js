@@ -37,6 +37,8 @@ async function loadCatalog(refresh = false) {
         galleries: data.galleries || [],
         favourites: data.favourites || [],
         triggers: data.triggers || {},
+        moved: data.moved || [],
+        detached: data.detached || [],
         previews: data.previews || {},
         ready: true,
     });
@@ -305,7 +307,21 @@ function openBrowser(node) {
     });
     galSel.addEventListener("change", remember);
     overlay.querySelector(".rescan").onclick = async () => {
-        await loadCatalog(true);
+        const fresh = await loadCatalog(true);
+        const moved = fresh?.moved || catalog.moved || [];
+        const detached = fresh?.detached || catalog.detached || [];
+        if (moved.length || detached.length) {
+            // a move is silent otherwise, and the previews appear to have
+            // wandered — say what was reattached
+            const lines = [
+                ...moved.map((m) => `moved: ${m.from} → ${m.to}`),
+                ...detached.map((p) => `different file now at: ${p}`),
+            ];
+            console.log("Neons LoRA Explorer: " + lines.join(" | "));
+            alert(`Rescan reattached ${moved.length} moved LoRA${moved.length === 1 ? "" : "s"}`
+                + (detached.length ? `, and parked previews for ${detached.length} replaced file${detached.length === 1 ? "" : "s"}` : "")
+                + ".");
+        }
         paintGalleries();
         paintFamilies();
         draw();
@@ -514,6 +530,38 @@ function fitNode(node) {
     return [width, height];
 }
 
+/**
+ * Only one of the two strength controls is ever in charge.
+ *
+ * With random_roll on, the strength comes from random_low/random_high, so
+ * leaving the strength sliders live invites you to set a value that is then
+ * ignored. With it off, the range is the dead pair instead. The unused ones are
+ * disabled and dimmed rather than hidden, so the node does not change height
+ * as you flip the switch.
+ */
+function syncStrengthMode(node) {
+    const rolling = Boolean(valueOf(node, "random_roll", false));
+    const state = {
+        strength_model: rolling,
+        strength_clip: rolling,
+        random_low: !rolling,
+        random_high: !rolling,
+        roll_seed: !rolling,
+    };
+    for (const [name, off] of Object.entries(state)) {
+        const found = widget(node, name);
+        if (!found) continue;
+        found.disabled = off;
+        // litegraph dims a disabled widget; say why in the tooltip too
+        const why = name.startsWith("strength")
+            ? "Set by random_low / random_high while random_roll is on"
+            : "Used only while random_roll is on";
+        found._nsWhy = found._nsWhy ?? found.tooltip ?? "";
+        found.tooltip = off ? why : found._nsWhy;
+    }
+    node.setDirtyCanvas?.(true, true);
+}
+
 function attachPanel(node) {
     if (node._nsLoraPanel) return;
     ensureCss();
@@ -622,22 +670,26 @@ app.registerExtension({
             attachPanel(this);
             if (!catalog.ready) loadCatalog().then(() => refresh(this));
             else refresh(this);
-            const found = widget(this, "lora");
-            if (found && !found._nsHooked) {
+            for (const name of ["lora", "random_roll"]) {
+                const found = widget(this, name);
+                if (!found || found._nsHooked) continue;
                 found._nsHooked = true;
                 const original = found.callback;
                 found.callback = (...args) => {
                     const out = original?.apply(found, args);
+                    if (name === "random_roll") syncStrengthMode(this);
                     refresh(this);
                     return out;
                 };
             }
+            syncStrengthMode(this);
             this.setSize?.([Math.max(this.size?.[0] || 380, 380), this.size?.[1] || 460]);
             sizePanel(this);
             // last_y only exists after a draw, so settle the height next frame
             requestAnimationFrame(() => fitNode(this));
             return result;
         };
+
 
         // dragging the node's corner has to reach the panel
         const onResize = nodeType.prototype.onResize;
@@ -664,7 +716,10 @@ app.registerExtension({
         const onConfigure = nodeType.prototype.onConfigure;
         nodeType.prototype.onConfigure = function (info) {
             const result = onConfigure?.apply(this, arguments);
-            requestAnimationFrame(() => fitNode(this));
+            requestAnimationFrame(() => {
+                fitNode(this);
+                syncStrengthMode(this);   // a saved workflow may have it on
+            });
             return result;
         };
 

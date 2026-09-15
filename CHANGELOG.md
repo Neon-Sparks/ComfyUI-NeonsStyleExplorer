@@ -1,5 +1,58 @@
 # Changelog
 
+## 2.5.2 — the LoRA node loads again
+
+* **Fixed: `ReferenceError: value is not defined` in `lora.js`**, which aborted
+  the workflow load. 2.5.1's new strength-mode code called `value(node, …)` —
+  the helper in `panel.js` — while `lora.js` has its own, named `valueOf`. One
+  wrong word, and the whole extension script failed to evaluate.
+* **The checker that exists to catch this had a hole, and it is closed.**
+  `tools/check_web.mjs` collected every function parameter in a module as a
+  declared name, so a parameter called `value` in `restoreSelect(select, value)`
+  made a module-scope call to `value()` look defined. Calls are now checked
+  against declared functions, function-valued constants, classes and imports —
+  and a parameter counts only inside the function that declares it. Verified
+  both ways: it reports the bug when reintroduced and passes on the fix.
+
+
+## 2.5.1 — one strength control at a time
+
+* **The strength sliders are dimmed while `random_roll` is on**, and the range
+  and seed are dimmed while it is off. Whichever pair is not deciding the
+  strength is disabled, so the node never invites you to set a value it will
+  ignore. Nothing is hidden and the node keeps its height. A workflow that loads
+  with the switch already on arrives in the right state.
+* **The trigger inputs reached the wrong node.** `lora_triggers_1/2/3` went onto
+  Neons Gallery Capture — which only files an image and has no prompt to put
+  them in — and were missing from **Neons Style Explorer (Encode)**, which
+  composes exactly like the styler. Both composing nodes now have them; the
+  capture node does not. A test checks all three nodes so this cannot drift
+  again.
+
+## 2.5.0 — LoRAs keep their identity, and roll
+
+### Fixed
+
+* **Moving or deleting a LoRA mismatched its previews.** Everything about a
+  LoRA — previews, trigger words, favourite — was filed under its PATH, so a
+  move looked like a deletion, and a different file dropped into the old path
+  inherited the previous LoRA's gallery. Each record now carries a fingerprint
+  of the file it was saved against (its size plus its first and last megabyte,
+  cached so a rescan costs nothing). Rescan then reattaches what moved, carries
+  its images into the new gallery folder, brings its triggers and favourite
+  along, and refuses to hand any of it to a replacement file. A LoRA you delete
+  keeps its record, so putting the file back restores its gallery.
+
+### Added
+
+* **`random_roll` on the LoRA node**, with **`random_low`** and
+  **`random_high`** bounding the strength it rolls and **`roll_seed`** deciding
+  the roll. The range reads in either order; equal ends mean a fixed strength.
+* **Three trigger inputs on the style node** — `lora_triggers_1`, `_2`, `_3`.
+  Wire the LoRA node's **triggers** output into them and the words lead the
+  composed prompt, ahead of the quality prefix, in input order, with repeats
+  across the three dropped.
+
 ## 2.4.5 — audit: one real bug, and a clear-out
 
 * **Fixed: an edited style kept generating the old picture.** ComfyUI caches a

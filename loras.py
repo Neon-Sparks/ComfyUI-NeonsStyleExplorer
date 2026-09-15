@@ -15,6 +15,7 @@ Nothing here writes to the loras folder. Previews and favourites live under
 `user/loras/`, alongside everything else the node stores.
 """
 
+import hashlib
 import json
 import os
 import re
@@ -27,6 +28,10 @@ USER_DIR = os.path.join(ROOT, "user")
 LORA_DIR = os.path.join(USER_DIR, "loras")
 FAVOURITES_PATH = os.path.join(LORA_DIR, "favourites.json")
 TRIGGERS_PATH = os.path.join(LORA_DIR, "triggers.json")
+FINGERPRINTS_PATH = os.path.join(LORA_DIR, "fingerprints.json")
+# how much of a file is read to identify it: enough to be unique in practice,
+# little enough that scanning hundreds of LoRAs costs nothing noticeable
+FINGERPRINT_BYTES = 1 << 20
 MAX_TRIGGER = 400
 
 UNSORTED = "Unsorted"
@@ -101,6 +106,61 @@ def names(refresh=False):
     return found
 
 
+def _full_path(name):
+    try:
+        import folder_paths
+
+        return folder_paths.get_full_path("loras", name)
+    except Exception:
+        return None
+
+
+def fingerprint(name):
+    """A stable identity for a LoRA file: its size plus its first and last MiB.
+
+    Previews used to be filed under the LoRA's PATH, which made a move look like
+    a deletion and made a new file dropped into the old path inherit the old
+    previews. A fingerprint follows the file instead: rename it, move it between
+    folders, and its gallery follows; replace it with a different file and the
+    previews stay with the original.
+    """
+    path = _full_path(name)
+    if not path or not os.path.isfile(path):
+        return ""
+    try:
+        size = os.path.getsize(path)
+        stamp = int(os.path.getmtime(path))
+    except OSError:
+        return ""
+
+    cached = read_json(FINGERPRINTS_PATH, {})
+    cached = cached if isinstance(cached, dict) else {}
+    record = cached.get(str(name))
+    if isinstance(record, dict) and record.get("size") == size and record.get("mtime") == stamp:
+        return str(record.get("fingerprint") or "")
+
+    digest = hashlib.sha1()
+    digest.update(str(size).encode("ascii"))
+    try:
+        with open(path, "rb") as handle:
+            digest.update(handle.read(FINGERPRINT_BYTES))
+            if size > FINGERPRINT_BYTES * 2:
+                handle.seek(-FINGERPRINT_BYTES, os.SEEK_END)
+                digest.update(handle.read(FINGERPRINT_BYTES))
+    except OSError:
+        return ""
+    value = digest.hexdigest()
+    with _LOCK:
+        cached = read_json(FINGERPRINTS_PATH, {})
+        cached = cached if isinstance(cached, dict) else {}
+        cached[str(name)] = {"size": size, "mtime": stamp, "fingerprint": value}
+        # forget files that are no longer there, so the file cannot grow forever
+        live = set(names())
+        cached = {k: v for k, v in cached.items() if k in live}
+        write_json(FINGERPRINTS_PATH, cached)
+    return value
+
+
 def split(name):
     """(gallery, family, label) for a LoRA path."""
     parts = [part for part in str(name or "").replace("\\", "/").split("/") if part]
@@ -154,9 +214,111 @@ def set_triggers(name, text):
     return text
 
 
+def reconcile(live=None):
+    """Follow LoRAs that moved, and detach previews from files that were replaced.
+
+    Records carry the fingerprint of the file they were saved against. Three
+    cases matter, and all three used to be wrong:
+
+    * the LoRA moved or was renamed — its record is re-keyed to the new path,
+      and moved into the new top folder's gallery if that changed;
+    * a different file now sits at a path we have previews for — the record is
+      parked under its fingerprint instead of handed to the new file;
+    * the LoRA is simply gone — its record is left alone, so putting the file
+      back restores its gallery.
+    """
+    live = list(live if live is not None else names(True))
+    by_print = {}
+    for name in live:
+        value = fingerprint(name)
+        if value:
+            by_print.setdefault(value, name)
+
+    moved, detached = [], []
+    with _LOCK:
+        for gallery in _galleries_on_disk():
+            data = read_json(manifest_path(gallery), {})
+            if not isinstance(data, dict) or not data:
+                continue
+            changed = False
+            for key, record in list(data.items()):
+                if not isinstance(record, dict):
+                    continue
+                stored = str(record.get("fingerprint") or "")
+                # 'lora' is the path; 'name' is only the label shown on a card
+                path = str(record.get("lora") or "")
+                if not stored:
+                    continue                       # saved before fingerprints; leave it
+                now_here = fingerprint(path) if path in live else ""
+                if now_here == stored:
+                    continue                       # still the same file: nothing to do
+                target = by_print.get(stored)
+                if target and target != path:
+                    # the file moved: take the record with it
+                    record["lora"] = target
+                    record["name"] = split(target)[2]
+                    data.pop(key)
+                    _place(record, target, gallery)
+                    moved.append((path, target))
+                    changed = True
+                elif now_here and now_here != stored:
+                    # a different file is at that path now
+                    record["detached"] = True
+                    data.pop(key)
+                    data[f"{key}--was-{stored[:8]}"] = record
+                    detached.append(path)
+                    changed = True
+            if changed:
+                write_json(manifest_path(gallery), data)
+
+    # triggers follow the file too
+    if moved:
+        with _LOCK:
+            triggers = load_triggers()
+            for old, new in moved:
+                if old in triggers and new not in triggers:
+                    triggers[new] = triggers.pop(old)
+            write_json(TRIGGERS_PATH, triggers)
+            favourites = load_favourites()
+            for old, new in moved:
+                if old in favourites:
+                    favourites = [new if item == old else item for item in favourites]
+            write_json(FAVOURITES_PATH, favourites)
+    return {"moved": moved, "detached": detached}
+
+
+def _galleries_on_disk():
+    if not os.path.isdir(LORA_DIR):
+        return []
+    return [name for name in os.listdir(LORA_DIR)
+            if os.path.isdir(os.path.join(LORA_DIR, name))]
+
+
+def _place(record, name, from_gallery):
+    """Write a record into the gallery its LoRA now belongs to."""
+    gallery, _family, _label = split(name)
+    key = slug(name)
+    target = read_json(manifest_path(gallery), {})
+    target = target if isinstance(target, dict) else {}
+    target[key] = record
+    os.makedirs(previews_dir(gallery), exist_ok=True)
+    # the images live in the old gallery folder; carry them across
+    if gallery != from_gallery:
+        for shot in record.get("shots", []):
+            source = os.path.join(previews_dir(from_gallery), shot.get("file", ""))
+            if shot.get("file") and os.path.isfile(source):
+                try:
+                    os.replace(source, os.path.join(previews_dir(gallery), shot["file"]))
+                except OSError:
+                    pass
+    write_json(manifest_path(gallery), target)
+
+
 def catalog(refresh=False):
     """Everything the browser needs: the LoRAs, their galleries and families."""
-    rows = [entry(name) for name in names(refresh)]
+    live = names(refresh)
+    fixed = reconcile(live) if refresh else {"moved": [], "detached": []}
+    rows = [entry(name) for name in live]
     galleries = {}
     for row in rows:
         bucket = galleries.setdefault(row["gallery"], {"name": row["gallery"], "count": 0, "families": []})
@@ -172,6 +334,8 @@ def catalog(refresh=False):
         "favourites": load_favourites(),
         "triggers": load_triggers(),
         "count": len(rows),
+        "moved": [{"from": old, "to": new} for old, new in fixed["moved"]],
+        "detached": fixed["detached"],
     }
 
 
@@ -295,6 +459,7 @@ def add_shot(name, source, prompt="", make_cover=True):
         record = data.get(key) if isinstance(data.get(key), dict) else {}
         shots = [shot for shot in record.get("shots", []) if isinstance(shot, dict) and shot.get("file")]
         shots.append({"file": filename, "prompt": str(prompt or "")[:600], "ts": int(time.time())})
+        record["fingerprint"] = fingerprint(name)
         while len(shots) > MAX_SHOTS:
             dropped = shots.pop(0)
             stale = os.path.join(previews_dir(gallery), dropped.get("file", ""))

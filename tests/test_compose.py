@@ -904,6 +904,59 @@ class Catalog(unittest.TestCase):
         store.delete_override("[Painting] Acrylic")
         self.assertNotEqual(before, after)
 
+    def test_lora_triggers_lead_the_prompt(self):
+        """Three trigger inputs, in order, de-duplicated, at the very front."""
+        out, _ = compose.compose(prompt="a fox", quality="masterpiece", styles=[A],
+                                 lora_triggers=["soft light", "glow", "film grain"])
+        self.assertTrue(out.startswith("soft light, glow, film grain, masterpiece"), out)
+        # nothing wired in leaves the prompt exactly as it was
+        plain, _ = compose.compose(prompt="a fox", quality="masterpiece", styles=[A])
+        self.assertNotIn("soft light", plain)
+        # the node de-duplicates across the three inputs
+        picked = nodes.lora_triggers({
+            "lora_triggers_1": "soft light, glow",
+            "lora_triggers_2": "GLOW, film grain",
+            "lora_triggers_3": "  ",
+        })
+        self.assertEqual(picked, ["soft light", "glow", "film grain"])
+        # booru mode puts them in front of the tag list
+        tags, _ = compose.compose(prompt="1girl", styles=[A], output_format="danbooru",
+                                  lora_triggers=["soft_light"])
+        self.assertTrue(tags.startswith("soft_light"), tags)
+
+    def test_trigger_inputs_on_both_style_nodes(self):
+        """Both composing nodes take the LoRA trigger inputs; the capture node,
+        which only files an image, does not."""
+        for cls in (nodes.NeonsStyleExplorer, nodes.NeonsStyleExplorerEncode):
+            optional = cls.INPUT_TYPES().get("optional", {})
+            for slot in ("lora_triggers_1", "lora_triggers_2", "lora_triggers_3"):
+                self.assertIn(slot, optional, cls.__name__)
+        capture = nodes.NeonsGalleryCapture.INPUT_TYPES().get("optional", {})
+        self.assertNotIn("lora_triggers_1", capture)
+
+    def test_lora_random_roll_range(self):
+        """The roll is seeded, honours the range, and reads it in either order."""
+        node = nodes.NeonsLoraExplorer
+        one = node._roll(7, 0.6, 1.0)
+        self.assertEqual(one, node._roll(7, 0.6, 1.0))            # same seed, same roll
+        for seed in range(1, 12):
+            _name, strength = node._roll(seed, 0.6, 1.0)
+            if _name != "None":
+                self.assertGreaterEqual(strength, 0.6)
+                self.assertLessEqual(strength, 1.0)
+        # with no LoRAs installed the roll declines rather than inventing one
+        name, strength = node._roll(3, 0.6, 1.0)
+        if name == "None":
+            self.assertEqual(strength, 0.0)
+            return
+        # reversed range is the same range
+        _n2, high_low = node._roll(3, 1.0, 0.6)
+        self.assertGreaterEqual(high_low, 0.6)
+        self.assertLessEqual(high_low, 1.0)
+        # a range with no width is a fixed strength
+        _n3, fixed = node._roll(3, 0.8, 0.8)
+        self.assertEqual(fixed, 0.8)
+
     def test_custom_styles_round_trip(self):
         """A custom style is named once, appears in the catalog and its source
         lists, and deleting it takes it away again."""

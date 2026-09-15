@@ -42,6 +42,59 @@ const GLOBALS = new Set([
     "beforeRegisterNodeDef", "setup", "nodeCreated",
 ]);
 
+/**
+ * Names that can legitimately be CALLED.
+ *
+ * The earlier version collected every parameter and destructured local in the
+ * module, so a callback argument named `value` anywhere made a module-scope
+ * call to `value()` look defined — which is exactly the mistake it exists to
+ * catch. A parameter is a value, not necessarily a function, so calls are
+ * checked against declared functions, function-valued constants, classes and
+ * imports only. Parameters remain valid inside the function that declares them.
+ */
+function callables(source) {
+    const names = new Set();
+    const add = (re, group = 1) => {
+        for (const match of source.matchAll(re)) names.add(match[group]);
+    };
+    add(/(?:export\s+)?(?:async\s+)?function\s+([A-Za-z_$][\w$]*)/g);
+    add(/(?:export\s+)?class\s+([A-Za-z_$][\w$]*)/g);
+    // const f = (…) => … / const f = function … / const f = async (…) =>
+    add(/(?:export\s+)?(?:const|let|var)\s+([A-Za-z_$][\w$]*)\s*=\s*(?:async\s*)?(?:function\b|\(|[A-Za-z_$][\w$]*\s*=>)/g);
+    // const original = app.queuePrompt?.bind(app) — bound and aliased functions
+    add(/(?:const|let|var)\s+([A-Za-z_$][\w$]*)\s*=\s*[^;\n]*(?:\.bind\(|=>|function\b)/g);
+    return names;
+}
+
+/** Parameter names of the function body a call sits inside. */
+function enclosingParams(source, index) {
+    const names = new Set();
+    const head = /(?:function\s*[A-Za-z_$\w$]*\s*\(([^()]*)\)|\(([^()]*)\)\s*=>|([A-Za-z_$][\w$]*)\s*=>)/g;
+    for (const match of source.matchAll(head)) {
+        const open = source.indexOf("{", match.index + match[0].length - 1);
+        if (open < 0 || open > index) continue;
+        // walk to the matching brace; if the call is inside, its params count
+        let depth = 0;
+        let end = open;
+        for (; end < source.length; end += 1) {
+            if (source[end] === "{") depth += 1;
+            else if (source[end] === "}") {
+                depth -= 1;
+                if (depth === 0) break;
+            }
+        }
+        if (index < open || index > end) continue;
+        const list = match[1] ?? match[2] ?? match[3] ?? "";
+        for (const part of list.split(",")) {
+            const clean = part.trim().split(/[=:]/)[0].replace(/[{}[\].]/g, "").trim();
+            if (/^[A-Za-z_$][\w$]*$/.test(clean)) names.add(clean);
+        }
+    }
+    return names;
+}
+
+const PARAM_ONLY_IS_SUSPECT = true;
+
 function declarations(source) {
     const names = new Set();
     const add = (re, group = 1) => {
@@ -129,6 +182,7 @@ let problems = 0;
 
 for (const [name, source] of sources) {
     const declared = declarations(source);
+    const callable = callables(source);
     const imported = new Set();
     for (const entry of imports(raw.get(name))) {
         for (const importedName of entry.names) imported.add(importedName);
@@ -143,11 +197,17 @@ for (const [name, source] of sources) {
         }
     }
 
-    const called = new Set();
-    for (const match of source.matchAll(/(?<![.\w$])([A-Za-z_$][\w$]*)\s*\(/g)) called.add(match[1]);
-    for (const identifier of called) {
-        if (GLOBALS.has(identifier) || declared.has(identifier) || imported.has(identifier)) continue;
-        console.log(`  UNDEFINED CALL  ${name}: ${identifier}() is never defined or imported`);
+    // every call SITE, not every called name: a parameter is callable inside
+    // its own function and nowhere else, so the position matters
+    const reported = new Set();
+    for (const match of source.matchAll(/(?<![.\w$])([A-Za-z_$][\w$]*)\s*\(/g)) {
+        const identifier = match[1];
+        if (reported.has(identifier)) continue;
+        if (GLOBALS.has(identifier) || imported.has(identifier) || callable.has(identifier)) continue;
+        if (enclosingParams(source, match.index).has(identifier)) continue;
+        reported.add(identifier);
+        const line = source.slice(0, match.index).split("\n").length;
+        console.log(`  UNDEFINED CALL  ${name}:${line}: ${identifier}() is not a function here`);
         problems += 1;
     }
 

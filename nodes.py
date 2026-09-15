@@ -1,6 +1,7 @@
 """Neons Style Explorer — nodes."""
 
 import hashlib
+import random
 
 from . import compose as composer
 from . import loras
@@ -116,6 +117,29 @@ def widgets():
     }
 
 
+LORA_TRIGGER_INPUTS = {
+    f"lora_triggers_{n}": ("STRING", {
+        "forceInput": True,
+        "tooltip": "Trigger words from a Neons LoRA Explorer's 'triggers' output. "
+                   "They are placed at the very start of the composed prompt, "
+                   "before the quality prefix, in input order. Duplicates are dropped.",
+    })
+    for n in (1, 2, 3)
+}
+
+
+def lora_triggers(kwargs):
+    """The trigger strings wired in, in order, without repeats."""
+    seen, out = set(), []
+    for n in (1, 2, 3):
+        for term in str(kwargs.get(f"lora_triggers_{n}") or "").split(","):
+            term = term.strip()
+            if term and term.lower() not in seen:
+                seen.add(term.lower())
+                out.append(term)
+    return out
+
+
 def pick_styles(values, pool, scope, family, seed, previews, crawl=False,
                 kwargs_missing_only=False, random_roll=False, source="all"):
     """The styles one run composes with.
@@ -229,6 +253,7 @@ def run(**kwargs):
     fmt = pick_axis(kwargs.get("format", "None"), "format", pool, previews, crawl)
     finish = pick_axis(kwargs.get("finish", "None"), "finish", pool, previews, crawl)
 
+    triggers = lora_triggers(kwargs)
     positive, negative = composer.compose(
         prompt=kwargs.get("prompt", ""),
         quality=kwargs.get("quality", ""),
@@ -239,6 +264,7 @@ def run(**kwargs):
         output_format=kwargs.get("output_format", "natural"),
         style_position=kwargs.get("style_position", "start"),
         close_with_medium=bool(kwargs.get("close_with_medium", True)),
+        lora_triggers=triggers,
         style_mix=kwargs.get("style_mix", "blended with"),
         tag_separator=kwargs.get("tag_separator", "comma+space"),
         style_weight=kwargs.get("style_weight", 1.0),
@@ -326,7 +352,8 @@ class _Base:
 class NeonsStyleExplorer(_Base):
     @classmethod
     def INPUT_TYPES(cls):
-        return {"required": widgets(), "hidden": {"unique_id": "UNIQUE_ID"}}
+        return {"required": widgets(), "optional": dict(LORA_TRIGGER_INPUTS),
+                "hidden": {"unique_id": "UNIQUE_ID"}}
 
     RETURN_TYPES = ("STRING", "STRING", "STRING")
     RETURN_NAMES = ("positive", "negative", "debug")
@@ -344,7 +371,8 @@ class NeonsStyleExplorerEncode(_Base):
     def INPUT_TYPES(cls):
         required = {"clip": ("CLIP",)}
         required.update(widgets())
-        return {"required": required, "hidden": {"unique_id": "UNIQUE_ID"}}
+        return {"required": required, "optional": dict(LORA_TRIGGER_INPUTS),
+                "hidden": {"unique_id": "UNIQUE_ID"}}
 
     RETURN_TYPES = ("CONDITIONING", "CONDITIONING", "STRING", "STRING", "STRING")
     RETURN_NAMES = ("positive_conditioning", "negative_conditioning", "positive", "negative", "debug")
@@ -420,6 +448,23 @@ class NeonsLoraExplorer:
                     "default": 1.0, "min": -20.0, "max": 20.0, "step": 0.01,
                     "tooltip": "How strongly the LoRA is applied to the text encoder.",
                 }),
+                "random_roll": ("BOOLEAN", {
+                    "default": False, "label_on": "random LoRA", "label_off": "chosen LoRA",
+                    "tooltip": "Roll a random LoRA for every run instead of using the dropdown, at a strength drawn from the range below. roll_seed decides the roll — set its control to randomize.",
+                }),
+                "random_low": ("FLOAT", {
+                    "default": 0.6, "min": -20.0, "max": 20.0, "step": 0.05,
+                    "tooltip": "Lowest strength a random roll may choose. Applied to both the model and the text encoder.",
+                }),
+                "random_high": ("FLOAT", {
+                    "default": 1.0, "min": -20.0, "max": 20.0, "step": 0.05,
+                    "tooltip": "Highest strength a random roll may choose. Set it equal to random_low to roll the LoRA but keep a fixed strength.",
+                }),
+                "roll_seed": ("INT", {
+                    "default": 54321, "min": 0, "max": 0xFFFFFFFF,
+                    "control_after_generate": True,
+                    "tooltip": "Seeds the roll: which LoRA, and which strength inside the range. Use the control under it (randomize) so every run differs.",
+                }),
             },
             "hidden": {"unique_id": "UNIQUE_ID"},
         }
@@ -430,7 +475,27 @@ class NeonsLoraExplorer:
     CATEGORY = "Neons"
     DESCRIPTION = "Neons LoRA Explorer — load a LoRA, with a preview gallery per model folder."
 
-    def apply(self, model, clip, lora="None", strength_model=1.0, strength_clip=1.0, unique_id=None):
+    @staticmethod
+    def _roll(seed, low, high):
+        """Pick a LoRA and a strength inside the range.
+
+        The range is read in either order, so low=1.0 high=0.6 behaves the same
+        as the other way round rather than rolling nothing.
+        """
+        pool = [name for name in loras.names() if name]
+        if not pool:
+            return "None", 0.0
+        rng = random.Random(seed) if seed else random
+        low, high = (low, high) if low <= high else (high, low)
+        chosen = rng.choice(pool)
+        strength = low if low == high else round(rng.uniform(low, high), 3)
+        return chosen, strength
+
+    def apply(self, model, clip, lora="None", strength_model=1.0, strength_clip=1.0,
+              random_roll=False, random_low=0.6, random_high=1.0, roll_seed=0, unique_id=None):
+        if random_roll:
+            lora, strength = self._roll(roll_seed, random_low, random_high)
+            strength_model = strength_clip = strength
         name = str(lora or "None")
         triggers = loras.triggers_for(name) if name != "None" else ""
         if name in ("", "None") or (not strength_model and not strength_clip):

@@ -179,6 +179,13 @@ crawling, the dropdown has already moved on.
 
 ### Writing the prompt
 
+**lora_triggers_1 / 2 / 3** are on both the styler and the **Encode** variant.
+They are optional inputs, not widgets: wire the
+**triggers** output of up to three Neons LoRA Explorer nodes into them and the
+words land at the very start of the composed prompt, ahead of the quality
+prefix, in input order. Repeats across the three are dropped, so two LoRAs that
+both want `glow` contribute it once. In booru mode they lead the tag list.
+
 **prompt** — your subject and scene. This is the only place picture content
 belongs.
 
@@ -760,7 +767,20 @@ see how it behaves on each model rather than one pile of mixed results.
 * Each thumbnail in the strip has a **✕** to delete that image, and clicking one
   makes it the cover. **⋯** deletes every image for the current LoRA.
 * **Rescan** in the browser re-reads the folder after you add LoRAs, without
-  restarting ComfyUI.
+  restarting ComfyUI. It also reattaches anything you have moved: each preview
+  record carries a fingerprint of the file it was saved against, so renaming a
+  LoRA or moving it to another folder brings its previews, triggers and
+  favourite with it — and a different file dropped into the old path does not
+  inherit them. Moves are reported when the rescan finishes.
+* **random_roll** loads a random LoRA each run at a strength drawn from
+  **random_low** to **random_high**, seeded by **roll_seed** (set its control to
+  randomize). The range reads in either order, and setting both ends the same
+  rolls the LoRA but keeps the strength fixed.
+* **Only one pair of controls is ever live.** With the switch off, the strength
+  sliders are in charge and the range is dimmed. With it on, the range and seed
+  are in charge and the strength sliders are dimmed — they would otherwise
+  invite you to set a number that is then ignored. Nothing is hidden, so the
+  node does not change height as you flip the switch.
 * **The browser remembers how you left it** — search text, gallery, family, the
   previews/favourites filter and your place in the grid all come back next time
   you open it, and survive a Rescan. A gallery that no longer exists on disk
