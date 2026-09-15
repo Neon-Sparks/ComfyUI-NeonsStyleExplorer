@@ -15,7 +15,11 @@ ok()   { note "ok" "$1"; }
 bad()  { note "PROBLEM" "$1"; fail=$((fail + 1)); }
 
 echo "== private data =="
-private=$(git ls-files | grep -E '^user/|^previews/.*\.(jpg|jpeg|png|webp)$|\.tmp$' || true)
+# anything under previews/ except its README is generated per install, and a
+# tracked manifest.json fails CI's `git diff --exit-code` the moment a test runs
+private=$(git ls-files | grep -E '^user/|\.tmp$' || true)
+previews_tracked=$(git ls-files previews/ | grep -v '^previews/README.md$' || true)
+private=$(printf '%s\n%s' "$private" "$previews_tracked" | sed '/^$/d')
 if [ -n "$private" ]; then bad "these are tracked but should not be:"; echo "$private" | sed 's/^/           /'
 else ok "no user data, previews or scratch files tracked"; fi
 

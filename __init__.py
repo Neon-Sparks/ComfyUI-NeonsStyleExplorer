@@ -16,6 +16,7 @@ def _routes():
     from . import gallery
     from . import bundle as bundles
     from . import catalogs as catalog_sets
+    from . import models
     from . import runs
     from .catalog import (
         RANDOM_TOKEN,
@@ -341,13 +342,19 @@ def _routes():
         body = await data(request)
         return web.json_response({"ok": True, "removed": loras.delete_lora_shots(body.get("lora") or "")})
 
-    @post("/neons_lora/triggers")
-    async def post_lora_triggers(request):
+    @post("/neons_lora/text")
+    async def post_lora_text(request):
         """Save (or clear) the words a LoRA wants in the prompt."""
         body = await data(request)
         name = body.get("lora") or ""
         text = loras.set_triggers(name, body.get("text") or "")
-        return web.json_response({"ok": bool(name), "lora": name, "triggers": text})
+        return web.json_response({"ok": bool(name), "lora": name, "triggers": text,
+                                  "text": text})
+
+    @post("/neons_lora/triggers")
+    async def post_lora_triggers(request):
+        """The name this route had in 2.4; kept so an older browser still works."""
+        return await post_lora_text(request)
 
     @post("/neons_lora/favourite")
     async def post_lora_favourite(request):
@@ -357,6 +364,97 @@ def _routes():
             loras.set_favourite(name, bool(body.get("on", True)))
         return web.json_response({"ok": True, "lora": name, "favourite": state,
                                   "favourites": loras.load_favourites()})
+
+    # ---------------- families ----------------
+
+    @routes.get("/neons_model/catalog")
+    async def get_model_catalog(request):
+        """Every checkpoint ComfyUI can see, grouped by its folders, with previews."""
+        refresh = request.query.get("refresh") in ("1", "true", "True")
+        data = models.catalog(refresh=refresh)
+        data["previews"] = models.all_manifests()
+        return web.json_response({"ok": True, **data})
+
+    @routes.get("/neons_model/banner")
+    async def get_model_banner(request):
+        path = os.path.join(HERE, "web", "model_banner.jpg")
+        if not os.path.isfile(path):
+            # no dedicated artwork yet: the style banner beats an empty strip
+            path = os.path.join(HERE, "web", "banner.jpg")
+        if not os.path.isfile(path):
+            raise web.HTTPNotFound()
+        return web.FileResponse(path, headers={"Cache-Control": "public, max-age=86400"})
+
+    @routes.get("/neons_model/shot")
+    async def get_model_shot(request):
+        path = models.shot_path(
+            request.query.get("gallery") or "",
+            request.query.get("key") or "",
+            request.query.get("file"),
+        )
+        if not path or not os.path.isfile(path):
+            raise web.HTTPNotFound()
+        return web.FileResponse(path, headers={"Cache-Control": "public, max-age=604800"})
+
+    @post("/neons_model/save")
+    async def post_model_save(request):
+        """File a generated image against a model, in that model's own gallery."""
+        import folder_paths
+
+        body = await data(request)
+        name = body.get("model") or ""
+        filename = body.get("filename") or ""
+        if not name or not filename:
+            return web.json_response({"ok": False, "error": "missing model or image"})
+        directory = folder_paths.get_directory_by_type(body.get("type") or "output") \
+            or folder_paths.get_output_directory()
+        full = inside(directory, body.get("subfolder") or "", filename)
+        if not full:
+            return web.json_response({"ok": False, "error": "that path is outside the output folder"})
+        if not os.path.isfile(full):
+            return web.json_response({"ok": False, "error": "image not found on disk"})
+        with open(full, "rb") as handle:
+            raw = handle.read()
+        saved = models.add_shot(name, raw, prompt=body.get("prompt") or "")
+        if not saved:
+            return web.json_response({"ok": False, "error": "could not save that image"})
+        return web.json_response({"ok": True, **saved})
+
+    @post("/neons_model/cover")
+    async def post_model_cover(request):
+        body = await data(request)
+        return web.json_response({"ok": models.set_cover(
+            body.get("gallery") or "", body.get("key") or "", body.get("file") or "")})
+
+    @post("/neons_model/shot/delete")
+    async def post_model_shot_delete(request):
+        body = await data(request)
+        return web.json_response({"ok": models.delete_shot(
+            body.get("gallery") or "", body.get("key") or "", body.get("file") or "")})
+
+    @post("/neons_model/delete")
+    async def post_model_delete(request):
+        """Every image for one model."""
+        body = await data(request)
+        return web.json_response({"ok": True, "removed": models.delete_model_shots(body.get("model") or "")})
+
+    @post("/neons_model/text")
+    async def post_model_text(request):
+        """Save (or clear) a checkpoint's notes."""
+        body = await data(request)
+        name = body.get("model") or ""
+        text = models.set_notes(name, body.get("text") or "")
+        return web.json_response({"ok": bool(name), "model": name, "notes": text,
+                                  "text": text})
+
+    @post("/neons_model/favourite")
+    async def post_model_favourite(request):
+        body = await data(request)
+        name = body.get("model") or ""
+        state = models.toggle_favourite(name) if body.get("toggle") else \
+            models.set_favourite(name, bool(body.get("on", True)))
+        return web.json_response({"ok": True, "model": name, "favourite": state,
+                                  "favourites": models.load_favourites()})
 
     # ---------------- families ----------------
 

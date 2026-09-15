@@ -134,20 +134,20 @@ const CSS = `
     padding:2px; height:auto !important; }
 .ns-cards.flow .ns-card { position:relative; flex:0 0 auto; }
 
-/* The LoRA panel sizes itself: the style node's layout code sets its panel's
-   heights in pixels, and without that the preview collapsed to nothing. */
-.ns-panel.lora { height:100%; }
-.ns-panel.lora .ns-stage { flex:1 1 auto; min-height:0; }
-.ns-panel.lora .ns-thumb { height:100%; aspect-ratio:1 / 1; max-width:100%; }
-.ns-panel.lora .ns-shots { flex:0 0 auto; }
-.ns-lora-trigger { flex:0 0 auto; display:flex; align-items:center; gap:6px; padding:0 1px;
+/* the LoRA and checkpoint panels: sized here rather than by the style node's
+   layout code, which they do not run */
+.ns-panel.asset { height:100%; }
+.ns-panel.asset .ns-stage { flex:1 1 auto; min-height:0; }
+.ns-panel.asset .ns-thumb { height:100%; aspect-ratio:1 / 1; max-width:100%; }
+.ns-panel.asset .ns-shots { flex:0 0 auto; }
+.ns-asset-text { flex:0 0 auto; display:flex; align-items:center; gap:6px; padding:0 1px;
     font-size:11px; color:#9aa2b1; pointer-events:auto; min-height:18px; }
-.ns-lora-trigger .words { flex:1 1 auto; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;
+.ns-asset-text .words { flex:1 1 auto; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;
     color:#cfd6e2; }
-.ns-lora-trigger .words.none { color:#5c626e; font-style:italic; }
-.ns-lora-trigger input { flex:1 1 auto; min-width:0; padding:3px 7px; font-size:11px; border-radius:6px;
+.ns-asset-text .words.none { color:#5c626e; font-style:italic; }
+.ns-asset-text input { flex:1 1 auto; min-width:0; padding:3px 7px; font-size:11px; border-radius:6px;
     border:1px solid #3b5a8a; background:#10131a; color:#e7ebf2; }
-.ns-lora-trigger button { font-size:10px; padding:2px 8px; border-radius:6px; border:1px solid #333642;
+.ns-asset-text button { font-size:10px; padding:2px 8px; border-radius:6px; border:1px solid #333642;
     background:#1b1e26; color:#cfd3da; cursor:pointer; }
 .ns-empty { flex:0 0 auto; display:flex; align-items:center; gap:12px; margin:0 0 8px;
     padding:12px 14px; border-radius:8px; background:#1d2430; border:1px solid #2f3a4b;
@@ -156,7 +156,7 @@ const CSS = `
     background:#22344f; color:#dce6f7; cursor:pointer; }
 .ns-stale { flex:0 0 auto; margin:0 0 8px; padding:10px 14px; border-radius:8px;
     background:#3a1d1d; border:1px solid #7a3030; color:#ffd9d9; font-size:12px; line-height:1.45; }
-.ns-banner.lora { transition:opacity .18s linear; }
+.ns-banner.asset, .ns-banner.lora { transition:opacity .18s linear; }
 /* delete top right, favourite top left — the same way round as the style
    browser, so the two read alike */
 .ns-card .trig { display:block; margin-top:2px; font-size:10px; color:#8b93a1;
@@ -240,8 +240,8 @@ export function ensureCss() {
         el.id = "ns-style-css";
         document.head.appendChild(el);
     }
-    if (el.dataset.v !== "21") {
+    if (el.dataset.v !== "23") {
         el.textContent = CSS;
-        el.dataset.v = "21";
+        el.dataset.v = "23";
     }
 }
