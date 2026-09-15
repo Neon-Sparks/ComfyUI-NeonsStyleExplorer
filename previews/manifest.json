@@ -1,0 +1,36 @@
+{
+  "probe_bundle": {
+    "shots": [
+      {
+        "file": "probe_bundle--1.jpg",
+        "prompt": "a pier",
+        "ts": 1
+      }
+    ],
+    "cover": "probe_bundle--1.jpg",
+    "count": 1,
+    "style": "[Anime] Chibi"
+  },
+  "traditio_abstract_expressionism_2": {
+    "name": "traditio abstract expressionism 2",
+    "cover": "traditio_abstract_expressionism_2--1789126494375.jpg",
+    "shots": [
+      {
+        "file": "traditio_abstract_expressionism_2--1789126494375.jpg",
+        "prompt": "",
+        "ts": 1789126494
+      }
+    ]
+  },
+  "traditio_expressionism": {
+    "name": "traditio expressionism",
+    "cover": "traditio_expressionism--1789126494337.jpg",
+    "shots": [
+      {
+        "file": "traditio_expressionism--1789126494337.jpg",
+        "prompt": "",
+        "ts": 1789126494
+      }
+    ]
+  }
+}

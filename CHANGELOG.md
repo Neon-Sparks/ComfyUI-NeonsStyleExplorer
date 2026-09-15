@@ -1,5 +1,78 @@
 # Changelog
 
+## 2.6.4 — the notes and triggers outputs keep up
+
+* **Editing a note left the `notes` output handing out the old text**, and the
+  same was true of a LoRA's `triggers`. ComfyUI caches a node whose widget
+  values have not changed, and a note is not a widget — so the node was never
+  re-run and the stale string went downstream. Both nodes now fold their text
+  into `IS_CHANGED`, exactly as the style node does with an edited clause.
+  Choosing the same model or LoRA twice still caches; only the text moving
+  re-runs it.
+
+## 2.6.3 — notes save, and say so
+
+* **A note typed on the model node looked like it had not saved.** It had: the
+  server stored it and the browser then read the wrong field off the reply —
+  `triggers`, which the LoRA route returns and the model route does not — so the
+  panel recorded `undefined` and reported "cleared". Both routes now also answer
+  with a plain `text` field, which is what the panel reads.
+* A failed save now says so on the node instead of closing the editor as though
+  it had worked, and the message uses the node's own word: notes for a
+  checkpoint, trigger words for a LoRA.
+
+## 2.6.2 — the model gallery saves, stars and deletes its own data
+
+* **Saving an image on the model node failed with "missing lora or image".**
+  When the LoRA interface was generalised in 2.6.0, three call sites kept their
+  LoRA wiring: the save payload still sent `lora:` as its key, so the model
+  route looked for `model` and found nothing — and, worse, the star and the
+  per-card delete were still calling `/neons_lora/favourite` and
+  `/neons_lora/delete`, which pointed the model gallery's buttons at the LoRA
+  gallery's data. All three now come from the node's own configuration.
+* **A guard so this cannot recur.** `tools/audit_web.mjs` fails the build on any
+  route or payload key hardcoded in the shared explorer, since that is the one
+  mistake the shared module invites. Checked by reintroducing the bug: it
+  reports both the route and the key.
+* Stale LoRA wording cleared from the model routes' messages.
+
+## 2.6.1 — diffusion models too
+
+* **The model explorer reads `diffusion_models` as well as `checkpoints`**,
+  which is where Flux and the newer models live. Each folder is its own
+  gallery, so the browser's existing gallery dropdown is the switch between
+  them and their previews never mix. Names carry their source, so the same
+  filename in both folders is two entries with two galleries.
+* **A diffusion model loads as the UNET alone** — there is no CLIP or VAE in
+  the file — so those outputs stay empty for one while a checkpoint fills all
+  three. The node picks the right loader from where the file came from.
+* `ckpt_name` is now `model_name`, since it is no longer always a checkpoint.
+* The model gallery has its own banner.
+
+## 2.6.0 — Neons Model Explorer
+
+* **A checkpoint loader with a gallery**, working exactly like the LoRA
+  explorer: folders as galleries, previews per top folder, Save, Rescan,
+  favourites, per-card ✕ and ★, cover promotion, and fingerprint identity so a
+  moved checkpoint keeps its previews. Outputs `model`, `clip`, `vae`,
+  `ckpt_name` and `notes`. Its previews live in `user/models/`, separate from
+  the LoRA galleries.
+* **Notes instead of trigger words.** A checkpoint wants a reminder — sampler,
+  CFG, resolution — not words in your prompt, and the note comes out of the
+  node as a string.
+* **No roll**, deliberately: a checkpoint is a choice, and rolling one mid-batch
+  would reload gigabytes.
+
+### Under the hood
+
+* The gallery is now **one engine** (`assets.py`) used by both explorers, and
+  the interface is one module (`web/explorer.js`) configured twice. Two copies
+  of this code is precisely how the LoRA node's bugs got their own flavour, so
+  the LoRA explorer was moved onto the shared engine first and the existing
+  tests were used to prove nothing changed.
+* `POST /neons_lora/triggers` is now `/neons_lora/text`, with the old path kept
+  as an alias so an un-refreshed browser keeps working.
+
 ## 2.5.2 — the LoRA node loads again
 
 * **Fixed: `ReferenceError: value is not defined` in `lora.js`**, which aborted

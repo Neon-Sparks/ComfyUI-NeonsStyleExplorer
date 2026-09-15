@@ -29,6 +29,7 @@ minutes in six steps with pictures. This manual is the long version.
 15. [Troubleshooting](#15-troubleshooting)
 16. [The Extra family](#16-the-extra-family)
 17. [The LoRA node](#17-the-lora-node)
+17a. [The model node](#17a-the-model-node)
 18. [Reference tables](#18-reference-tables)
 
 ---
@@ -793,6 +794,35 @@ into empty space, and it cannot creep longer on repeated drags.
 
 Previews live in `user/loras/<gallery>/` and trigger words in
 `user/loras/triggers.json`. Nothing is ever written to your loras folder.
+
+## 17a. The model node
+
+**Neons Model Explorer** loads a base model and keeps a gallery beside it, the
+same way the LoRA node does — same folders-as-galleries rule, same preview
+strip, same Save, Rescan, favourites, ✕ and ★, and the same fingerprint
+identity, so moving a checkpoint takes its previews with it.
+
+It reads **both** of ComfyUI's model folders — `checkpoints` and
+`diffusion_models` — and each is its own gallery, so the browser's **gallery
+dropdown switches between them** and their previews never mix. A folder inside
+either one is a family, as usual. Names carry their source, so
+`diffusion_models/flux/flux1-dev.safetensors` and a checkpoint of the same name
+are different entries with different previews.
+
+A **diffusion model is the UNET alone** — there is no CLIP or VAE inside the
+file — so those two outputs stay empty for one and you wire your own loaders.
+A checkpoint fills all three.
+
+Three differences from the LoRA node, all deliberate:
+
+* **Notes instead of trigger words.** A checkpoint does not want words in your
+  prompt, but it usually does want a reminder: `dpmpp_2m, cfg 4.5, 1024`. Edit
+  it under the preview; it comes out of the node's **notes** output.
+* **No roll.** A checkpoint is a deliberate choice, and swapping it mid-batch
+  reloads gigabytes, so there is no dice here.
+
+Outputs are `model`, `clip`, `vae`, `model_name` and `notes`. Previews live in
+`user/models/<gallery>/`, entirely separate from the LoRA galleries.
 
 ## 18. Reference tables
 

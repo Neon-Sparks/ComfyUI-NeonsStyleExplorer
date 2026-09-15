@@ -10,6 +10,7 @@ Nodes (category **Neons**):
 * **Neons Style Explorer** — text in, text out
 * **Neons Style Explorer (Encode)** — the same plus CLIP encode
 * **Neons LoRA Explorer** — a LoRA loader with a preview gallery per model folder
+* **Neons Model Explorer** — a checkpoint loader with the same gallery, and notes
 * **Neons Gallery Capture** — headless equivalent of the Save button
 
 **[Quick start](QUICKSTART.md)** · **[Read the manual](MANUAL.md)** · [pre-release audit](AUDIT.md) — every widget, the browser, previews, the
@@ -144,6 +145,18 @@ model instead of one mixed pile.
 
 Previews live in `user/loras/<gallery>/` and trigger words in
 `user/loras/triggers.json`. Nothing is ever written to your loras folder.
+
+## Model node
+
+**Neons Model Explorer** is the LoRA explorer pointed at your base models — both
+`checkpoints` and `diffusion_models`, each its own gallery so the gallery
+dropdown switches between them. The folders do the filing, each top folder keeps its own previews, **Save** files
+the newest image against the checkpoint that made it, and each one can carry a
+**note** — the sampler, CFG and resolution it likes, which comes out of the
+node as a string. No roll: a checkpoint is a choice, not a variation.
+
+Outputs: `model`, `clip`, `vae`, `model_name`, `notes`. A diffusion model has no
+CLIP or VAE of its own, so those stay empty for one — wire your own loaders.
 
 ## The catalog
 

@@ -7,7 +7,9 @@
  *   * exports no other module imports and the module itself never uses;
  *   * interpolations of catalog or user data into innerHTML that are not run
  *     through escapeHtml — a style, family or catalog name is user-controlled
- *     text and must not be treated as markup.
+ *     text and must not be treated as markup;
+ *   * routes or payload keys hardcoded in the shared explorer, which would send
+ *     one node's clicks at the other node's data.
  */
 
 import { readFileSync, readdirSync } from "node:fs";
@@ -86,4 +88,20 @@ for (const { file, name } of dead) console.log(`  ${file}: ${name}`);
 const bad = RISKY.filter((row) => row.bad);
 console.log(`\nunescaped user data in markup (${bad.length})`);
 for (const row of bad) console.log(`  ${row.file}:${row.line}  ${row.text}`);
-process.exit(bad.length ? 1 : 0);
+
+/* ------------------------------------------- the shared explorer's wiring */
+
+// explorer.js is used by two nodes. A route or payload key baked in there
+// sends one node's clicks at the other node's data — which is exactly what
+// happened when it was first extracted from lora.js: the model gallery's star
+// and delete buttons were still calling /neons_lora.
+const shared = sources.get("explorer.js") ?? "";
+const baked = [...stripComments(shared)
+    .matchAll(/["'`](\/neons_(?:lora|model|style)\/[^"'`$]*)["'`]/g)].map((m) => m[1]);
+const bakedKeys = [...stripComments(shared)
+    .matchAll(/\b(?:lora|model)\s*:\s*(?:name|row\.name)\b/g)].map((m) => m[0]);
+console.log(`\nhardcoded routes or keys in the shared explorer (${baked.length + bakedKeys.length})`);
+for (const route of baked) console.log(`  explorer.js: ${route} — use cfg.route`);
+for (const key of bakedKeys) console.log(`  explorer.js: ${key} — use [cfg.key]`);
+
+process.exit(bad.length + baked.length + bakedKeys.length ? 1 : 0);

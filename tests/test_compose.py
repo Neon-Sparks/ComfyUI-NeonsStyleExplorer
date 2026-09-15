@@ -851,10 +851,11 @@ class Catalog(unittest.TestCase):
         name = "krea 2/portraits/race.safetensors"
         buffer = BytesIO()
         Image.new("RGB", (8, 8), (90, 30, 30)).save(buffer, "JPEG")
+        assets = importlib.import_module(f"{PKG}.assets")   # the shared engine
         frozen = lambda: 1_789_000_000.123          # every call, the same instant
-        real = loras.time.time
+        real = assets.time.time
         try:
-            loras.time.time = frozen
+            assets.time.time = frozen
             first = loras.add_shot(name, buffer.getvalue())
             second = loras.add_shot(name, buffer.getvalue(), make_cover=False)
             self.assertNotEqual(first["file"], second["file"])
@@ -869,7 +870,7 @@ class Catalog(unittest.TestCase):
             self.assertTrue(loras.delete_shot("krea 2", loras.slug(name), second["file"]))
             self.assertEqual(loras.manifest("krea 2")[loras.slug(name)]["count"], 1)
         finally:
-            loras.time.time = real
+            assets.time.time = real
             shutil.rmtree(os.path.join(ROOT, "user", "loras"), ignore_errors=True)
 
     def test_editing_a_style_invalidates_the_node_cache(self):
@@ -956,6 +957,77 @@ class Catalog(unittest.TestCase):
         # a range with no width is a fixed strength
         _n3, fixed = node._roll(3, 0.8, 0.8)
         self.assertEqual(fixed, 0.8)
+
+    def test_model_explorer_shares_the_gallery_engine(self):
+        """The checkpoint explorer is the same engine with its own storage: the
+        two must not share a folder, a favourites list or a text file."""
+        models = importlib.import_module(f"{PKG}.models")
+        loras = importlib.import_module(f"{PKG}.loras")
+        self.assertNotEqual(models.previews_dir("krea 2"), loras.previews_dir("krea 2"))
+        self.assertEqual(models.split("krea 2/anime/base.safetensors"),
+                         ("krea 2", "anime", "base"))
+        self.assertEqual(models.set_notes("krea 2/base.safetensors", "  dpmpp_2m,  cfg 4.5 "),
+                         "dpmpp_2m, cfg 4.5")
+        self.assertEqual(models.notes_for("krea 2/base.safetensors"), "dpmpp_2m, cfg 4.5")
+        # a note on a checkpoint is not a trigger on a LoRA of the same name
+        self.assertEqual(loras.triggers_for("krea 2/base.safetensors"), "")
+        self.assertEqual(models.entry("krea 2/base.safetensors")["notes"], "dpmpp_2m, cfg 4.5")
+        # the text routes answer with a generic `text` as well as their own
+        # field name — the panel reads `text`, and reading only `triggers` is
+        # how notes appeared not to save
+        import inspect
+        routes_src = inspect.getsource(importlib.import_module(PKG))
+        for marker in ('"triggers": text,', '"notes": text,'):
+            self.assertIn(marker, routes_src)
+        self.assertEqual(routes_src.count('"text": text}'), 2)
+
+        node = nodes.NeonsModelExplorer
+        self.assertEqual(node.RETURN_NAMES, ("model", "clip", "vae", "model_name", "notes"))
+        self.assertNotIn("random_roll", node.INPUT_TYPES()["required"])
+        # two folders, one gallery each, and a name that says where it came from
+        self.assertEqual(models.FOLDERS, ("checkpoints", "diffusion_models"))
+        self.assertEqual(models.source_of("diffusion_models/flux/flux1-dev.safetensors"),
+                         ("diffusion_models", "flux/flux1-dev.safetensors"))
+        self.assertEqual(models.source_of("checkpoints/sdxl/base.safetensors"),
+                         ("checkpoints", "sdxl/base.safetensors"))
+        self.assertEqual(models.split("diffusion_models/flux/flux1-dev.safetensors"),
+                         ("diffusion_models", "flux", "flux1-dev"))
+        # the same relative name in both folders is two different assets
+        self.assertNotEqual(models.slug("checkpoints/flux/x.safetensors"),
+                            models.slug("diffusion_models/flux/x.safetensors"))
+        # a LoRA name is untouched by any of this
+        self.assertEqual(loras.split("krea 2/portraits/soft.safetensors"),
+                         ("krea 2", "portraits", "soft"))
+        import shutil
+        shutil.rmtree(os.path.join(ROOT, "user", "models"), ignore_errors=True)
+
+    def test_editing_text_refreshes_the_asset_nodes(self):
+        """A note or a trigger word is not a widget, so ComfyUI cannot see it
+        change. Both nodes fold it into their signature or their text output
+        keeps handing out the old value."""
+        import shutil
+
+        models = importlib.import_module(f"{PKG}.models")
+        loras = importlib.import_module(f"{PKG}.loras")
+        try:
+            name = "checkpoints/krea 2/base.safetensors"
+            first = nodes.NeonsModelExplorer.IS_CHANGED(ckpt_name=name)
+            self.assertEqual(first, nodes.NeonsModelExplorer.IS_CHANGED(ckpt_name=name))
+            models.set_notes(name, "dpmpp_2m, cfg 4.5")
+            self.assertNotEqual(first, nodes.NeonsModelExplorer.IS_CHANGED(ckpt_name=name))
+
+            lora = "krea 2/portraits/soft.safetensors"
+            before = nodes.NeonsLoraExplorer.IS_CHANGED(lora=lora)
+            loras.set_triggers(lora, "soft light, glow")
+            self.assertNotEqual(before, nodes.NeonsLoraExplorer.IS_CHANGED(lora=lora))
+            # the widgets still matter too
+            self.assertNotEqual(nodes.NeonsLoraExplorer.IS_CHANGED(lora=lora, strength_model=0.8),
+                                nodes.NeonsLoraExplorer.IS_CHANGED(lora=lora, strength_model=1.0))
+            self.assertNotEqual(nodes.NeonsLoraExplorer.IS_CHANGED(lora=lora, roll_seed=1),
+                                nodes.NeonsLoraExplorer.IS_CHANGED(lora=lora, roll_seed=2))
+        finally:
+            for folder in ("loras", "models"):
+                shutil.rmtree(os.path.join(ROOT, "user", folder), ignore_errors=True)
 
     def test_custom_styles_round_trip(self):
         """A custom style is named once, appears in the catalog and its source

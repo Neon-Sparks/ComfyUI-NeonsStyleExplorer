@@ -5,6 +5,7 @@ import random
 
 from . import compose as composer
 from . import loras
+from . import models
 from . import runs
 from .catalog import (RANDOM_TOKEN, SOURCES, crawl_names, custom_names, entries,
                       imported_style_names, names_for, push_recent, resolve, roll,
@@ -469,6 +470,16 @@ class NeonsLoraExplorer:
             "hidden": {"unique_id": "UNIQUE_ID"},
         }
 
+    @classmethod
+    def IS_CHANGED(cls, lora="None", strength_model=1.0, strength_clip=1.0,
+                   random_roll=False, random_low=0.6, random_high=1.0, roll_seed=0, **_kw):
+        """Re-run when the trigger words change, not just when the LoRA does."""
+        name = str(lora or "None")
+        triggers = loras.triggers_for(name) if name != "None" else ""
+        parts = [name, triggers, str(strength_model), str(strength_clip),
+                 str(bool(random_roll)), str(random_low), str(random_high), str(roll_seed)]
+        return hashlib.sha1("\n".join(parts).encode("utf-8")).hexdigest()
+
     RETURN_TYPES = ("MODEL", "CLIP", "STRING", "STRING")
     RETURN_NAMES = ("model", "clip", "lora_name", "triggers")
     FUNCTION = "apply"
@@ -526,11 +537,92 @@ class NeonsLoraExplorer:
         }
 
 
+class NeonsModelExplorer:
+    """A checkpoint loader with the gallery beside it.
+
+    The same idea as the LoRA explorer, and the same engine underneath: the
+    folders in ComfyUI's checkpoints directory do the filing, each top folder
+    keeps its own previews, and every checkpoint can carry a note — the sampler
+    it likes, the CFG, the resolution. There is nothing to roll here: a
+    checkpoint is a deliberate choice, not a variation.
+    """
+
+    @classmethod
+    def INPUT_TYPES(cls):
+        available = models.names(refresh=True)
+        return {
+            "required": {
+                "ckpt_name": (["None"] + available, {
+                    "default": "None",
+                    "tooltip": "Which model to load, from your checkpoints and diffusion_models folders. The folder it came from is its gallery, so the browser's gallery dropdown switches between the two; a folder inside that is its family. A diffusion model has no CLIP or VAE of its own — those outputs stay empty and you wire your own loaders.",
+                }),
+            },
+            "hidden": {"unique_id": "UNIQUE_ID"},
+        }
+
+    @classmethod
+    def IS_CHANGED(cls, ckpt_name="None", **_kw):
+        """Re-run when the note changes, not just when the model does.
+
+        ComfyUI caches a node whose widget values are unchanged, and editing a
+        note leaves the picker exactly as it was — so the `notes` output kept
+        handing out the old text. Folding the note into the signature fixes
+        that; choosing the same model twice still caches.
+        """
+        name = str(ckpt_name or "None")
+        note = models.notes_for(name) if name != "None" else ""
+        return hashlib.sha1(f"{name}\n{note}".encode("utf-8")).hexdigest()
+
+    RETURN_TYPES = ("MODEL", "CLIP", "VAE", "STRING", "STRING")
+    RETURN_NAMES = ("model", "clip", "vae", "model_name", "notes")
+    FUNCTION = "load"
+    CATEGORY = "Neons"
+    DESCRIPTION = "Neons Model Explorer — load a checkpoint or diffusion model, with a preview gallery."
+
+    def load(self, ckpt_name="None", unique_id=None):
+        import comfy.sd
+        import folder_paths
+
+        name = str(ckpt_name or "None")
+        if name == "None":
+            raise ValueError("Neons Model Explorer: choose a model.")
+        note = models.notes_for(name)
+        source, relative = models.source_of(name)
+        path = folder_paths.get_full_path(source, relative)
+        if not path:
+            raise ValueError(f"Neons Model Explorer: '{relative}' is not in your {source} folder.")
+
+        if source == "checkpoints":
+            model, clip, vae = comfy.sd.load_checkpoint_guess_config(
+                path, output_vae=True, output_clip=True,
+                embedding_directory=folder_paths.get_folder_paths("embeddings"),
+            )[:3]
+            return {"ui": self._ui(name), "result": (model, clip, vae, name, note)}
+
+        # A diffusion model is the UNET on its own: there is no CLIP or VAE in
+        # the file, so those outputs stay empty and you wire your own loaders.
+        # ComfyUI renamed this function once; accept either.
+        loader = getattr(comfy.sd, "load_diffusion_model", None) or getattr(comfy.sd, "load_unet")
+        model = loader(path)
+        return {"ui": self._ui(name), "result": (model, None, None, name, note)}
+
+    def _ui(self, name):
+        gallery, family, label = models.split(name) if name not in ("", "None") else ("", "", "")
+        return {
+            "ns_model": [name if name != "None" else ""],
+            "ns_model_gallery": [gallery],
+            "ns_model_family": [family],
+            "ns_model_label": [label],
+            "ns_model_notes": [models.notes_for(name) if name not in ("", "None") else ""],
+        }
+
+
 NODE_CLASS_MAPPINGS = {
     "NeonsStyleExplorer": NeonsStyleExplorer,
     "NeonsStyleExplorerEncode": NeonsStyleExplorerEncode,
     "NeonsGalleryCapture": NeonsGalleryCapture,
     "NeonsLoraExplorer": NeonsLoraExplorer,
+    "NeonsModelExplorer": NeonsModelExplorer,
 }
 
 NODE_DISPLAY_NAME_MAPPINGS = {
@@ -538,4 +630,5 @@ NODE_DISPLAY_NAME_MAPPINGS = {
     "NeonsStyleExplorerEncode": "Neons Style Explorer (Encode)",
     "NeonsGalleryCapture": "Neons Gallery Capture",
     "NeonsLoraExplorer": "Neons LoRA Explorer",
+    "NeonsModelExplorer": "Neons Model Explorer",
 }

@@ -1,17 +1,25 @@
-"""The LoRA explorer's gallery: folders as galleries, previews, trigger words.
+"""The checkpoint explorer's gallery.
 
-The engine lives in `assets.py` and is shared with the checkpoint explorer —
-two copies of this logic is how the two drifted apart in the first place. This
-module is the LoRA-shaped view of it, keeping the names the rest of the package
-already calls.
+The same engine as the LoRA explorer (`assets.py`), pointed at ComfyUI's
+checkpoints folder with its own storage under `user/models/`. Its per-file text
+is **notes** rather than trigger words: a checkpoint does not want words in the
+prompt, but it usually does want a reminder — the sampler, the CFG, the
+resolution it likes.
 """
 
 from .assets import Gallery, UNSORTED, slug  # noqa: F401  (re-exported)
 
 MAX_SHOTS = 8
-MAX_TRIGGER = 400
+MAX_NOTE = 400
 
-_GALLERY = Gallery(kind="lora", folder_key="loras", storage="loras", text_field="triggers")
+# Both places ComfyUI keeps a base model. Checkpoints carry their own CLIP and
+# VAE; a diffusion model (Flux and friends) is the UNET alone, so the loader
+# treats them differently while the gallery treats them alike.
+FOLDERS = ("checkpoints", "diffusion_models")
+
+_GALLERY = Gallery(kind="model", folder_key=FOLDERS, storage="models",
+                   text_field="notes")
+source_of = _GALLERY.source_of
 
 # --- listing -----------------------------------------------------------------
 
@@ -26,17 +34,17 @@ def entry(name):
 
 
 def catalog(refresh=False):
-    """Everything the browser needs, under the keys it already expects."""
+    """Everything the browser needs, with the checkpoints under `models`."""
     data = _GALLERY.catalog(refresh)
-    data["loras"] = data.pop("assets")
+    data["models"] = data.pop("assets")
     return data
 
 
-# --- trigger words -----------------------------------------------------------
+# --- notes -------------------------------------------------------------------
 
-load_triggers = _GALLERY.load_text
-triggers_for = _GALLERY.text_for
-set_triggers = _GALLERY.set_text
+load_notes = _GALLERY.load_text
+notes_for = _GALLERY.text_for
+set_notes = _GALLERY.set_text
 
 # --- favourites --------------------------------------------------------------
 
@@ -56,7 +64,7 @@ shot_path = _GALLERY.shot_path
 shot_filename = _GALLERY.shot_filename
 set_cover = _GALLERY.set_cover
 delete_shot = _GALLERY.delete_shot
-delete_lora_shots = _GALLERY.delete_all_shots
+delete_model_shots = _GALLERY.delete_all_shots
 
 
 def add_shot(name, source, prompt="", make_cover=True, max_shots=MAX_SHOTS):
