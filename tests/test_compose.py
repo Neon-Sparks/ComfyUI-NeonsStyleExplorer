@@ -873,6 +873,37 @@ class Catalog(unittest.TestCase):
             shutil.rmtree(os.path.join(ROOT, "user", "loras"), ignore_errors=True)
 
     @unittest.skipUnless(HAVE_PILLOW, "Pillow is needed to write a test image")
+    def test_gallery_names_survive_the_folder_slug(self):
+        """A gallery folder is slugged on disk, so the manifest must carry the
+        real name — otherwise a folder with a space, dot or dash appears to
+        have no previews at all, while a plain one works."""
+        import json as json_mod
+        import shutil
+        from io import BytesIO
+
+        loras = importlib.import_module(f"{PKG}.loras")
+        Image = _Image
+        buffer = BytesIO()
+        Image.new("RGBA", (8, 8), (90, 30, 120, 128)).save(buffer, "PNG")   # alpha is fine
+        name = "Qwen-Image 2.1/probe.safetensors"
+        try:
+            saved = loras.add_shot(name, buffer.getvalue())
+            self.assertEqual(saved["gallery"], "Qwen-Image 2.1")
+            row = loras.entry(name)
+            # this is the lookup the browser performs
+            found = (loras.all_manifests().get(row["gallery"]) or {}).get(row["key"])
+            self.assertTrue(found, "a gallery whose folder is slugged must still be found")
+
+            # a manifest written before the name was stored still resolves
+            path = loras.manifest_path("Qwen-Image 2.1")
+            data = json_mod.load(open(path))
+            data.pop("__gallery__", None)
+            json_mod.dump(data, open(path, "w"))
+            self.assertIn("Qwen-Image 2.1", loras.all_manifests())
+        finally:
+            shutil.rmtree(os.path.join(ROOT, "user", "loras"), ignore_errors=True)
+
+    @unittest.skipUnless(HAVE_PILLOW, "Pillow is needed to write a test image")
     def test_two_shots_in_the_same_millisecond(self):
         """Two images saved inside one millisecond must stay two images.
 

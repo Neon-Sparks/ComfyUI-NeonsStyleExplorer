@@ -1,5 +1,19 @@
 # Changelog
 
+## 2.6.6 — galleries whose names contain a space, dot or dash
+
+* **Previews saved against a LoRA in a folder like `Qwen-Image 2.1` never
+  appeared.** A gallery's folder on disk is slugged — `Qwen-Image 2.1` becomes
+  `Qwen_Image_2_1` — and the server was handing the browser its manifests keyed
+  by that folder name while the browser asked for the real one. A folder that
+  slugs to itself (`krea2`, `illustrious`) matched and worked, which is why it
+  looked like a problem with particular models. Manifests now carry their
+  gallery's real name, and one written before this release has it derived from
+  its own records, so previews already saved come back on their own.
+* Nothing to do with the alpha channel: an RGBA image converts cleanly and is
+  now covered by the test.
+* Applies to the model explorer too, which shares the same engine.
+
 ## 2.6.5 — a test run leaves the repository as it found it
 
 * **CI failed on `git diff --exit-code`** because the test suite saves a preview,

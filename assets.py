@@ -250,6 +250,7 @@ class Gallery:
         target = read_json(self.manifest_path(gallery), {})
         target = target if isinstance(target, dict) else {}
         target[slug(name)] = record
+        target[self.GALLERY_KEY] = gallery
         os.makedirs(self.previews_dir(gallery), exist_ok=True)
         if gallery != from_gallery:
             for shot in record.get("shots", []):
@@ -360,13 +361,35 @@ class Gallery:
     def previews_dir(self, gallery):
         return os.path.join(self.gallery_dir(gallery), "previews")
 
+    # the folder a gallery lives in is slugged ("Qwen-Image 2.1" ->
+    # "Qwen_Image_2_1"), so the real name is kept inside the manifest under
+    # this key. Without it the browser asked for a gallery the server had
+    # filed under a different name, and any folder containing a space, a dot
+    # or a dash appeared to have no previews at all.
+    GALLERY_KEY = "__gallery__"
+
+    def real_gallery(self, directory):
+        """The gallery name a manifest folder belongs to."""
+        data = read_json(os.path.join(self.root, directory, "manifest.json"), {})
+        if isinstance(data, dict):
+            named = data.get(self.GALLERY_KEY)
+            if isinstance(named, str) and named:
+                return named
+            # written before the name was stored: take it from any record
+            for record in data.values():
+                if isinstance(record, dict):
+                    path = record.get("asset") or record.get("lora")
+                    if path:
+                        return self.split(path)[0]
+        return directory
+
     def manifest(self, gallery):
         data = read_json(self.manifest_path(gallery), {})
         if not isinstance(data, dict):
             return {}
         out = {}
         for key, record in data.items():
-            if not isinstance(record, dict):
+            if key == self.GALLERY_KEY or not isinstance(record, dict):
                 continue
             shots = [shot for shot in record.get("shots", [])
                      if isinstance(shot, dict) and shot.get("file")]
@@ -378,7 +401,12 @@ class Gallery:
         return out
 
     def all_manifests(self):
-        return {gallery: self.manifest(gallery) for gallery in self._galleries_on_disk()}
+        """Every gallery's previews, keyed by the name the browser knows."""
+        out = {}
+        for directory in self._galleries_on_disk():
+            name = self.real_gallery(directory)
+            out[name] = self.manifest(name)
+        return out
 
     def shot_path(self, gallery, key, filename=None):
         directory = self.previews_dir(gallery)
@@ -447,6 +475,7 @@ class Gallery:
             if make_cover or not record.get("cover"):
                 record["cover"] = filename
             data[key] = record
+            data[self.GALLERY_KEY] = gallery
             write_json(self.manifest_path(gallery), data)
         return {"gallery": gallery, "key": key, "file": filename,
                 "record": {"shots": shots, "cover": record["cover"], "count": len(shots),
