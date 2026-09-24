@@ -1,5 +1,20 @@
 # Changelog
 
+## 2.9.4 — the test run stops eating a tracked file
+
+* **CI failed in teardown with a missing `.testbak`.** The suite stashes
+  `previews/manifest.json` before it runs, and 2.9.0's migration test then
+  cleaned the folder with "delete everything except the README" — which
+  included that stash. Teardown had nothing to put back, and the tracked file
+  was gone. It only showed on the runner, where the file exists: my clone does
+  not track it.
+* The migration test now leaves `.testbak` files alone, and teardown reports a
+  missing stash instead of failing the whole run, so a mistake like this can
+  never destroy the file it was protecting.
+* Verified by seeding a tracked `previews/manifest.json`, running the full
+  build, and confirming both that the suite passes and that the file comes back
+  byte for byte.
+
 ## 2.9.3 — clearing the registry flag
 
 * **The scan's one finding was `Function.prototype.bind`.** A YARA rule for
