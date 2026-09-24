@@ -5,6 +5,8 @@ import json
 import os
 import re
 import threading
+
+from .assets import build_derived, derived_thumb, drop_derived  # noqa: F401
 import uuid
 import time
 from io import BytesIO
@@ -273,7 +275,8 @@ def add_shot(style, source, prompt="", make_cover=True, max_shots=MAX_SHOTS):
     adopt_existing()
     os.makedirs(previews_dir(), exist_ok=True)
     filename = shot_filename(previews_dir(), key)
-    canvas.save(os.path.join(previews_dir(), filename), "JPEG", quality=90, optimize=True)
+    canvas.save(os.path.join(previews_dir(), filename), "JPEG", quality=88,
+                optimize=True, progressive=True)
 
     data = _load()
     record = _record(data, key)
@@ -289,6 +292,7 @@ def add_shot(style, source, prompt="", make_cover=True, max_shots=MAX_SHOTS):
                 os.remove(path)
             except OSError:
                 pass
+            drop_derived(path)
     if make_cover or not record["cover"]:
         record["cover"] = filename
     data[key] = record
@@ -326,6 +330,7 @@ def delete_shot(key, filename):
             os.remove(path)
         except OSError:
             pass
+        drop_derived(path)
     record["shots"] = shots
     if record.get("cover") == filename:
         record["cover"] = shots[-1]["file"] if shots else ""
@@ -352,6 +357,7 @@ def delete_style(style):
                     removed = True
                 except OSError:
                     pass
+                drop_derived(path)
         _save(data)
     return removed
 
@@ -370,3 +376,18 @@ def log(style, filename):
     return line
 
 
+def shot_paths(cid=None):
+    """Every preview image in one catalog."""
+    folder = previews_dir(cid)
+    found = []
+    for record in manifest().values():
+        for shot in record.get("shots", []):
+            path = os.path.join(folder, shot.get("file", ""))
+            if shot.get("file") and os.path.isfile(path):
+                found.append(path)
+    return found
+
+
+def build_thumbs(cid=None):
+    """Pre-build the cached card sizes for a catalog's previews."""
+    return build_derived(shot_paths(cid))

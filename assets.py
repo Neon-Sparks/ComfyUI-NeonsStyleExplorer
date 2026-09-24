@@ -30,6 +30,78 @@ FINGERPRINT_BYTES = 1 << 20
 CACHE_SECONDS = 20
 
 
+# Cards render at about 190px and the stored preview is 512px, so serving the
+# master to a grid ships roughly seven times the pixels a card can show. These
+# are derived on first request and cached beside the original; the master is
+# still served to the node's panel and to a zoomed-in card.
+THUMB_SIZES = (256, 384)
+THUMB_QUALITY = 85
+
+
+def derived_thumb(path, size):
+    """A cached, card-sized copy of a preview. Falls back to the original."""
+    try:
+        size = int(size)
+    except (TypeError, ValueError):
+        return path
+    if size not in THUMB_SIZES or not path or not os.path.isfile(path):
+        return path
+    folder = os.path.join(os.path.dirname(path), "thumbs")
+    stem = os.path.splitext(os.path.basename(path))[0]
+    target = os.path.join(folder, f"{stem}.{size}.jpg")
+    try:
+        if os.path.isfile(target) and os.path.getmtime(target) >= os.path.getmtime(path):
+            return target
+        from PIL import Image
+
+        os.makedirs(folder, exist_ok=True)
+        with Image.open(path) as image:
+            image = image.convert("RGB")
+            image.thumbnail((size, size), Image.LANCZOS)
+            temporary = f"{target}.tmp"
+            image.save(temporary, "JPEG", quality=THUMB_QUALITY, optimize=True,
+                       progressive=True)
+        os.replace(temporary, target)
+        return target
+    except Exception:
+        # a thumbnail is an optimisation; never fail a page over one
+        return path
+
+
+def build_derived(paths):
+    """Make every cached size for a list of previews, reporting what it did.
+
+    Only useful after updating from a version that had no cached sizes: from
+    then on they are made as images are first shown. Running it is safe at any
+    time — anything already built is skipped.
+    """
+    built = skipped = 0
+    for path in paths:
+        for size in THUMB_SIZES:
+            before = os.path.isfile(os.path.join(
+                os.path.dirname(path), "thumbs",
+                f"{os.path.splitext(os.path.basename(path))[0]}.{size}.jpg"))
+            derived_thumb(path, size)
+            if before:
+                skipped += 1
+            else:
+                built += 1
+    return {"built": built, "skipped": skipped, "previews": len(paths)}
+
+
+def drop_derived(path):
+    """Remove the cached sizes of a preview that has been deleted."""
+    folder = os.path.join(os.path.dirname(path), "thumbs")
+    stem = os.path.splitext(os.path.basename(path))[0]
+    for size in THUMB_SIZES:
+        stale = os.path.join(folder, f"{stem}.{size}.jpg")
+        if os.path.isfile(stale):
+            try:
+                os.remove(stale)
+            except OSError:
+                pass
+
+
 def slug(text):
     return re.sub(r"[^A-Za-z0-9]+", "_", str(text or "").strip()).strip("_")[:140]
 
@@ -442,7 +514,7 @@ class Gallery:
         image = image.convert("RGB")
         image.thumbnail((THUMB, THUMB), Image.LANCZOS)
         buffer = io.BytesIO()
-        image.save(buffer, "JPEG", quality=90, optimize=True)
+        image.save(buffer, "JPEG", quality=88, optimize=True, progressive=True)
         return buffer.getvalue()
 
     def add_shot(self, name, source, prompt="", make_cover=True, max_shots=MAX_SHOTS):
@@ -469,6 +541,7 @@ class Gallery:
                 stale = os.path.join(self.previews_dir(gallery), dropped.get("file", ""))
                 if os.path.isfile(stale):
                     os.remove(stale)
+                drop_derived(stale)
                 if record.get("cover") == dropped.get("file"):
                     record["cover"] = ""
             record.update({"shots": shots, "asset": name, "lora": name, "name": label})
@@ -505,6 +578,7 @@ class Gallery:
             stale = os.path.join(self.previews_dir(gallery), os.path.basename(filename))
             if os.path.isfile(stale):
                 os.remove(stale)
+            drop_derived(stale)
             record["shots"] = kept
             if record.get("cover") == filename:
                 record["cover"] = kept[-1]["file"] if kept else ""
@@ -512,6 +586,22 @@ class Gallery:
                 data.pop(slug(key), None)
             write_json(self.manifest_path(gallery), data)
         return True
+
+    def shot_paths(self):
+        """Every preview image this gallery holds, across its folders."""
+        found = []
+        for directory in self._galleries_on_disk():
+            name = self.real_gallery(directory)
+            folder = self.previews_dir(name)
+            for record in self.manifest(name).values():
+                for shot in record.get("shots", []):
+                    path = os.path.join(folder, shot.get("file", ""))
+                    if shot.get("file") and os.path.isfile(path):
+                        found.append(path)
+        return found
+
+    def build_thumbs(self):
+        return build_derived(self.shot_paths())
 
     def delete_all_shots(self, name):
         gallery, _family, _label = self.split(name)
@@ -525,5 +615,6 @@ class Gallery:
                 stale = os.path.join(self.previews_dir(gallery), shot.get("file", ""))
                 if os.path.isfile(stale):
                     os.remove(stale)
+                drop_derived(stale)
             write_json(self.manifest_path(gallery), data)
         return True

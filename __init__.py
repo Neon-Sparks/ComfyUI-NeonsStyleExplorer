@@ -10,12 +10,14 @@ def _routes():
     except Exception:
         return
 
+    import asyncio
     import os
 
     from . import compose as composer
     from . import gallery
     from . import bundle as bundles
     from . import catalogs as catalog_sets
+    from . import assets
     from . import models
     from . import runs
     from .catalog import (
@@ -298,7 +300,11 @@ def _routes():
         )
         if not path or not os.path.isfile(path):
             raise web.HTTPNotFound()
-        return web.FileResponse(path, headers={"Cache-Control": "public, max-age=604800"})
+        loop = asyncio.get_running_loop()
+        path = await loop.run_in_executor(
+            None, assets.derived_thumb, path, request.query.get("size"))
+        return web.FileResponse(path, headers={
+            "Cache-Control": "public, max-age=31536000, immutable"})
 
     @post("/neons_lora/save")
     async def post_lora_save(request):
@@ -356,6 +362,13 @@ def _routes():
         """The name this route had in 2.4; kept so an older browser still works."""
         return await post_lora_text(request)
 
+    @post("/neons_lora/thumbs")
+    async def post_lora_thumbs(request):
+        """Pre-build the cached card sizes for every lora preview."""
+        loop = asyncio.get_running_loop()
+        result = await loop.run_in_executor(None, loras.build_thumbs)
+        return web.json_response({"ok": True, **result})
+
     @post("/neons_lora/favourite")
     async def post_lora_favourite(request):
         body = await data(request)
@@ -394,7 +407,11 @@ def _routes():
         )
         if not path or not os.path.isfile(path):
             raise web.HTTPNotFound()
-        return web.FileResponse(path, headers={"Cache-Control": "public, max-age=604800"})
+        loop = asyncio.get_running_loop()
+        path = await loop.run_in_executor(
+            None, assets.derived_thumb, path, request.query.get("size"))
+        return web.FileResponse(path, headers={
+            "Cache-Control": "public, max-age=31536000, immutable"})
 
     @post("/neons_model/save")
     async def post_model_save(request):
@@ -446,6 +463,13 @@ def _routes():
         text = models.set_notes(name, body.get("text") or "")
         return web.json_response({"ok": bool(name), "model": name, "notes": text,
                                   "text": text})
+
+    @post("/neons_model/thumbs")
+    async def post_model_thumbs(request):
+        """Pre-build the cached card sizes for every model preview."""
+        loop = asyncio.get_running_loop()
+        result = await loop.run_in_executor(None, models.build_thumbs)
+        return web.json_response({"ok": True, **result})
 
     @post("/neons_model/favourite")
     async def post_model_favourite(request):
@@ -510,7 +534,26 @@ def _routes():
         path = gallery.shot_path(key, request.query.get("file"))
         if not path or not os.path.isfile(path):
             raise web.HTTPNotFound()
-        return web.FileResponse(path, headers={"Cache-Control": "public, max-age=604800"})
+        # a card asks for the size it actually renders; the panel asks for the
+        # master. Every filename is unique, so the answer never changes.
+        # deriving a thumbnail is CPU work: run it in a worker so a first pass
+        # over a gallery cannot stall the rest of ComfyUI
+        loop = asyncio.get_running_loop()
+        path = await loop.run_in_executor(
+            None, gallery.derived_thumb, path, request.query.get("size"))
+        return web.FileResponse(path, headers={
+            "Cache-Control": "public, max-age=31536000, immutable"})
+
+    @post("/neons_style/gallery/thumbs")
+    async def post_gallery_thumbs(request):
+        """Pre-build the cached card sizes for this catalog's previews.
+
+        Only useful after updating from a version that had none: from then on
+        they are made as images are first shown.
+        """
+        loop = asyncio.get_running_loop()
+        result = await loop.run_in_executor(None, gallery.build_thumbs)
+        return web.json_response({"ok": True, **result})
 
     @routes.get("/neons_style/banner")
     async def get_banner(request):

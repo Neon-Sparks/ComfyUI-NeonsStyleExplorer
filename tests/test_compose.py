@@ -595,7 +595,15 @@ class Catalog(unittest.TestCase):
             renamed = [e for e in catalog.entries() if e.get("source") == "custom"][0]
             self.assertTrue(renamed["name"].startswith("[Resin][Custom]"))
 
+            # a shipped style edited into the family must move as well, or the
+            # family survives its own deletion
+            store.save_override("[Painting] Acrylic", family="Resin Figures")
             ok, family, moved = store.delete_family("Resin Figures")
+            self.assertEqual(moved, 2, "both the custom style and the override move")
+            acrylic = next(e for e in catalog.entries() if e["name"] == "[Painting] Acrylic")
+            self.assertEqual(acrylic["family"], "Lonely")
+            self.assertNotIn("Resin Figures", {f["name"] for f in store.families_admin()})
+            store.delete_override("[Painting] Acrylic")
             self.assertTrue(ok)
             self.assertEqual(family, "Lonely")
             orphan = [e for e in catalog.entries() if e.get("source") == "custom"][0]
@@ -869,6 +877,108 @@ class Catalog(unittest.TestCase):
             self.assertEqual(loras.manifest("krea 2")[loras.slug(name)]["cover"], again["file"])
             self.assertTrue(loras.delete_shot("krea 2", loras.slug(name), again["file"]))
             self.assertEqual(loras.manifest("krea 2")[loras.slug(name)]["count"], 1)
+        finally:
+            shutil.rmtree(os.path.join(ROOT, "user", "loras"), ignore_errors=True)
+
+    @unittest.skipUnless(HAVE_PILLOW, "Pillow is needed to write a test image")
+    def test_building_thumbs_is_idempotent(self):
+        """Build fast thumbs makes what is missing and skips what exists."""
+        import shutil
+        from io import BytesIO
+
+        loras = importlib.import_module(f"{PKG}.loras")
+        Image = _Image
+        buffer = BytesIO()
+        Image.new("RGB", (600, 600), (30, 30, 30)).save(buffer, "JPEG")
+        try:
+            loras.add_shot("krea2/build-probe.safetensors", buffer.getvalue())
+            first = loras.build_thumbs()
+            self.assertEqual(first["previews"], 1)
+            self.assertEqual(first["built"], 2)      # one per cached size
+            self.assertEqual(first["skipped"], 0)
+            second = loras.build_thumbs()
+            self.assertEqual(second["built"], 0)     # nothing to redo
+            self.assertEqual(second["skipped"], 2)
+        finally:
+            shutil.rmtree(os.path.join(ROOT, "user", "loras"), ignore_errors=True)
+
+    @unittest.skipUnless(HAVE_PILLOW, "Pillow is needed to write a test image")
+    def test_default_previews_move_out_of_the_package(self):
+        """The Default catalog's previews used to live inside the package, so
+        replacing the folder to update took them with it. They are relocated
+        under user/ on load, once, without losing the manifest."""
+        import json as json_mod
+        import shutil
+
+        catalogs = importlib.import_module(f"{PKG}.catalogs")
+        gallery_mod = importlib.import_module(f"{PKG}.gallery")
+        Image = _Image
+        legacy = os.path.join(ROOT, "previews")
+        target = os.path.join(ROOT, "user", "catalogs", "default", "previews")
+        shot = "traditio_probe--1-aaa.jpg"
+        try:
+            os.makedirs(legacy, exist_ok=True)
+            Image.new("RGB", (32, 32), (10, 10, 10)).save(os.path.join(legacy, shot), "JPEG")
+            json_mod.dump(
+                {"traditio_probe": {"name": "[Probe] Style", "cover": shot,
+                                    "shots": [{"file": shot, "prompt": "", "ts": 1}]}},
+                open(os.path.join(legacy, "manifest.json"), "w"))
+
+            catalogs._MIGRATED[0] = False
+            report = catalogs.migrate_default_previews()
+            self.assertGreaterEqual(report["moved"], 2)
+            self.assertTrue(os.path.isfile(os.path.join(target, shot)))
+            self.assertFalse(os.path.isfile(os.path.join(legacy, shot)))
+            self.assertIn("traditio_probe", gallery_mod.manifest())
+
+            # running again moves nothing and breaks nothing
+            catalogs._MIGRATED[0] = False
+            self.assertEqual(catalogs.migrate_default_previews()["moved"], 0)
+            self.assertIn("traditio_probe", gallery_mod.manifest())
+            # the README stays where it is
+            self.assertTrue(os.path.isfile(os.path.join(legacy, "README.md")))
+        finally:
+            shutil.rmtree(os.path.join(ROOT, "user", "catalogs"), ignore_errors=True)
+            for name in os.listdir(legacy):
+                if name != "README.md":
+                    path = os.path.join(legacy, name)
+                    shutil.rmtree(path) if os.path.isdir(path) else os.remove(path)
+            catalogs._MIGRATED[0] = False
+
+    @unittest.skipUnless(HAVE_PILLOW, "Pillow is needed to write a test image")
+    def test_card_thumbnails_are_derived_and_cleaned_up(self):
+        """Cards are served a copy their own size, cached beside the original
+        and removed with it. An unknown size falls back to the master rather
+        than letting a URL fill the disk with arbitrary renders."""
+        import shutil
+
+        assets = importlib.import_module(f"{PKG}.assets")
+        loras = importlib.import_module(f"{PKG}.loras")
+        Image = _Image
+        from io import BytesIO
+
+        buffer = BytesIO()
+        Image.new("RGB", (900, 900), (40, 90, 160)).save(buffer, "JPEG")
+        name = "krea2/thumb-probe.safetensors"
+        try:
+            saved = loras.add_shot(name, buffer.getvalue())
+            master = loras.shot_path("krea2", loras.slug(name), saved["file"])
+            small = assets.derived_thumb(master, 256)
+            self.assertNotEqual(small, master)
+            self.assertTrue(os.path.isfile(small))
+            self.assertLess(os.path.getsize(small), os.path.getsize(master))
+            with Image.open(small) as image:
+                self.assertLessEqual(max(image.size), 256)
+            # asked for again, the cached file is reused rather than rebuilt
+            stamp = os.path.getmtime(small)
+            self.assertEqual(assets.derived_thumb(master, 256), small)
+            self.assertEqual(os.path.getmtime(small), stamp)
+            # a size nobody offers falls back to the master
+            self.assertEqual(assets.derived_thumb(master, 999), master)
+            self.assertEqual(assets.derived_thumb(master, "nonsense"), master)
+            # deleting the shot takes its derived copies with it
+            loras.delete_shot("krea2", loras.slug(name), saved["file"])
+            self.assertFalse(os.path.isfile(small))
         finally:
             shutil.rmtree(os.path.join(ROOT, "user", "loras"), ignore_errors=True)
 

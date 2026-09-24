@@ -180,9 +180,33 @@ const CSS = `
 .ns-card .pic .star { opacity:.6; }
 .ns-card:hover .pic .star, .ns-card .pic .star.on { opacity:1; }
 .ns-card .pic .star.on { color:#ffd66e; border-color:#6a5a2a; }
+/* cycle through a style's saved images without leaving the grid: the arrows
+   appear on hover, and stay out of the way of the ★ and ✕ in the corners */
+.ns-card .pic .flip { position:absolute; top:50%; transform:translateY(-50%);
+    width:26px; height:34px; padding:0; border:0; border-radius:6px;
+    background:rgba(8,10,14,.62); color:#eef2f8; font-size:20px; line-height:32px;
+    cursor:pointer; opacity:0; transition:opacity .12s linear; z-index:3; }
+.ns-card .pic .flip.prev { left:4px; }
+.ns-card .pic .flip.next { right:4px; }
+.ns-card:hover .pic .flip { opacity:.85; }
+.ns-card .pic .flip:hover { opacity:1; background:rgba(8,10,14,.85); }
+/* a small card has no room for them; the counter still shows there is more */
+.ns-card.compact .pic .flip { display:none; }
 .ns-card .pic .killshot { position:absolute; top:5px; right:5px; width:22px; height:22px; padding:0; line-height:20px;
     font-size:11px; border-radius:50%; border:1px solid rgba(255,255,255,.16); background:rgba(0,0,0,.55);
     color:#f0b4b4; cursor:pointer; opacity:0; transition:opacity .12s; }
+/* cycle through a style's saved images without leaving the grid: the arrows
+   appear on hover, and stay out of the way of the ★ and ✕ in the corners */
+.ns-card .pic .flip { position:absolute; top:50%; transform:translateY(-50%);
+    width:26px; height:34px; padding:0; border:0; border-radius:6px;
+    background:rgba(8,10,14,.62); color:#eef2f8; font-size:20px; line-height:32px;
+    cursor:pointer; opacity:0; transition:opacity .12s linear; z-index:3; }
+.ns-card .pic .flip.prev { left:4px; }
+.ns-card .pic .flip.next { right:4px; }
+.ns-card:hover .pic .flip { opacity:.85; }
+.ns-card .pic .flip:hover { opacity:1; background:rgba(8,10,14,.85); }
+/* a small card has no room for them; the counter still shows there is more */
+.ns-card.compact .pic .flip { display:none; }
 .ns-card .pic .killshot { opacity:.6; }
 .ns-card:hover .pic .killshot { opacity:1; }
 .ns-card .body { flex:1 1 auto; display:grid; grid-template-rows:minmax(0,1fr) auto; gap:6px;
@@ -240,8 +264,8 @@ export function ensureCss() {
         el.id = "ns-style-css";
         document.head.appendChild(el);
     }
-    if (el.dataset.v !== "23") {
+    if (el.dataset.v !== "24") {
         el.textContent = CSS;
-        el.dataset.v = "23";
+        el.dataset.v = "24";
     }
 }

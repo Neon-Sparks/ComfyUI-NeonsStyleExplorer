@@ -227,8 +227,14 @@ def families_admin():
 
 
 def _move_family(old, new):
-    """Move every custom entry from one family to another, rebuilding the
-    bracket tag on each name and keeping the old name as an alias."""
+    """Move everything out of one family into another.
+
+    Two kinds of entry can sit in a family you made: a style you wrote, and a
+    SHIPPED style you edited into it — the second is an override carrying a
+    family patch. Only the first used to be moved, so a family holding an
+    edited shipped style could not be deleted: it emptied of your own styles
+    and then reappeared, still holding the rest.
+    """
     from .catalog import FAMILY_ORDER, entries
 
     old = clean_name(old)
@@ -251,9 +257,26 @@ def _move_family(old, new):
                 aliases.append(previous)
             item["aliases"] = aliases
         moved += 1
+
+    # shipped styles edited into this family: their patch moves with them. The
+    # name keeps its own bracket tag — a shipped style is not renamed by this.
+    overrides = load_overrides()
+    touched = False
+    for key, patch in overrides.items():
+        if not isinstance(patch, dict):
+            continue
+        if clean_name(patch.get("family", "")) != old:
+            continue
+        patch["family"] = new
+        moved += 1
+        touched = True
+
     if not moved:
         return False, "no styles in that family", 0
-    write_json(CUSTOM_PATH, customs)
+    if customs:
+        write_json(CUSTOM_PATH, customs)
+    if touched:
+        write_json(OVERRIDES_PATH, overrides)
     entries(force=True)
     return True, new, moved
 

@@ -418,6 +418,7 @@ export const restoreStyle = (name) => call("/neons_style/style/restore", { name 
 export const restoreAllStyles = () => call("/neons_style/style/restore_all", {});
 export const toggleFavourite = (name) => call("/neons_style/favourite", { name, toggle: true });
 export const clearRecents = () => call("/neons_style/recent", { clear: true });
+export const buildThumbs = () => call("/neons_style/gallery/thumbs", {});
 export const deleteAllShots = () => call("/neons_style/gallery/delete_family", { family: "" });
 export const exportStyles = () => call("/neons_style/export");
 export const importStyles = (styles) => call("/neons_style/import", { styles });
@@ -462,9 +463,24 @@ export function shotsOf(name) {
     return state.previews[keyOf(name)] || null;
 }
 
-export function shotUrl(name, file) {
+/**
+ * The URL of a preview, at the size the caller will actually display.
+ *
+ * Previews are stored at 512px; a card renders at about 190. Asking for a
+ * card-sized copy is the difference between ~11 MB and ~2 MB for one screen of
+ * a full gallery. Omit `size` for the master, which the node's panel wants.
+ */
+export function shotUrl(name, file, size) {
     const suffix = file ? `&file=${encodeURIComponent(file)}` : "";
-    return `/neons_style/shot?key=${encodeURIComponent(keyOf(name))}${suffix}`;
+    const scaled = size ? `&size=${size}` : "";
+    return `/neons_style/shot?key=${encodeURIComponent(keyOf(name))}${suffix}${scaled}`;
+}
+
+/** The cached size to request for a card of this rendered width. */
+export function thumbSize(width) {
+    if (!width || width <= 240) return 256;
+    if (width <= 380) return 384;
+    return 0;                       // bigger than any cached size: the master
 }
 
 /**

@@ -311,10 +311,17 @@ the ⋯ menu.
 * **Filter** — All, ★ Favourites, Recently used, Has preview, Missing preview.
 * **Source** — stock, v2, custom, override. Useful for finding your own edits.
 * **Catalog** picker, **+ New catalog**, **⋯** — section 10.
+* **‹ ›** on a card with more than one image — step through that style's saved
+  images without leaving the grid. The counter reads `2/5`, the arrows wrap at
+  both ends, and the card remembers where you left it while you scroll. They
+  appear on hover, and are hidden below 60% preview size where there is no room.
+  Cycling only looks: to change which image is the cover, open the style and
+  click a thumbnail in the strip.
 * **Roll** — pick a random card from what is currently filtered.
 * **Restore deleted** — bring back styles you hid, individually or all at once.
 * **New style** — write your own (section 12).
-* **Import / export** — section 13.
+* **Options** — catalogs, import and export, families, favourites and recents,
+  fast thumbs, clearing gallery images. Section 13.
 * **Delete previews** — the images for the selected family, or for everything
   when the family filter is on *All families*.
 
@@ -371,6 +378,21 @@ The footer shows preview coverage and your favourites count, so you can watch
 ---
 
 ## 8. Previews and the gallery
+
+**Build fast thumbs** (⋯ menu in the style browser, a button in the LoRA and
+model browsers) makes the small copies up front instead of as you browse. You
+only need it once, after updating from a version that did not have them —
+anything saved since gets its own automatically. ComfyUI is busy for a few
+seconds while it runs, and it reports how many it built; running it again does
+nothing.
+
+**How previews are served.** A saved preview is kept at 512px, which is what
+the node's panel shows. A card in the browser renders at about 190px, so the
+gallery asks for a 256px copy instead — derived on first request, cached beside
+the original, and deleted with it. One screen of a full gallery is around 2 MB
+rather than 11. Previews are served with a long immutable cache, so a second
+visit paints from the browser's cache, and the next couple of rows are warmed
+while you read the current ones.
 
 A preview is an image you generated, stored against a style so the catalog shows
 you what that style looks like **on your model**. Up to 8 images per style; one
@@ -484,7 +506,7 @@ shortlist.
 keeping the last 24. Filter by Recently used, or roll within `roll_scope:
 recent` to explore around what you have been working with.
 
-Both are per catalog. Clear either from Import / export.
+Both are per catalog. Clear either from **Options**.
 
 ---
 
@@ -573,7 +595,9 @@ Changing a custom style's family rebuilds its bracket tag — move one to
 Thing`. The old name is kept as an alias, so saved workflows and existing
 gallery images still find it.
 
-**Import / export → Manage my families…** lists every family with its counts.
+**⋯ → Delete a family…** removes the family you have selected in the filter,
+telling you how many styles will move first. **Options → Manage my
+families…** lists every family with its counts and renames them.
 Yours can be renamed (all their styles are re-tagged) or deleted. Deleting never
 deletes styles: they move to **Lonely**, the holding family for styles with
 nowhere else to be. The nine shipped families are listed but locked.
@@ -587,7 +611,8 @@ deleted** in the toolbar brings any of them back.
 
 ## 13. Import and export
 
-**Import / export** in the toolbar:
+**Options** in the toolbar — it began as import and export and now holds
+everything that is not a filter:
 
 * **Export this catalog (previews + names)…** — packs the active catalog into a
   zip. Chrome and Edge ask where to save it; other browsers put it in the
@@ -628,7 +653,12 @@ ComfyUI-NeonsStyleExplorer/
 └─ styles/, data/            the shipped catalog — never written to
 ```
 
-Back up `user/` and `previews/` and you have backed up everything that is yours.
+Back up `user/` and you have backed up everything that is yours — previews
+included. Nothing of yours lives in the part of the package an update replaces.
+
+**Moved in 2.9.0.** The Default catalog's previews used to sit in `previews/`
+beside the code. They are now in `user/catalogs/default/previews/` with every
+other catalog, and are relocated for you the first time this version loads.
 Neither is touched by an update.
 
 ---
@@ -756,7 +786,8 @@ see how it behaves on each model rather than one pile of mixed results.
   as you scroll into the grid and returns at the top.
 * Each card carries a **✕** at the top right to delete that LoRA's previews, and
   a **★** at the top left to favourite it — the same corners as the style
-  browser.
+  browser. With more than one image saved, **‹ ›** step through them and the
+  counter shows where you are.
 * **Trigger words** sit under the preview. Press **Edit**, type the words that
   LoRA wants in the prompt, press Enter. They show on every card in the browser
   and come out of the node's **triggers** output, so they can go straight into

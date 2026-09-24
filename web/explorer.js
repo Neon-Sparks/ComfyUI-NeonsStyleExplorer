@@ -93,10 +93,20 @@ export function createExplorer(cfg) {
         return (catalog.previews[row.gallery] || {})[row.key] || null;
     }
 
-    function shotUrl(name, file) {
+    // Which image each card is showing. Kept outside the cards so scrolling a
+    // virtualised grid — or a repaint after a save — does not lose your place.
+    const shotIndex = new Map();
+
+    const coverIndex = (shots) => Math.max(0, shots.shots.findIndex((s) => s.file === shots.cover));
+
+    // cards are 190px; the stored preview is 512. Ask for what fits.
+    const CARD_THUMB = 256;
+
+    function shotUrl(name, file, size) {
         const row = entryOf(name);
         if (!row) return "";
         const query = new URLSearchParams({ gallery: row.gallery, key: row.key, file: file || "" });
+        if (size) query.set("size", String(size));
         return `${cfg.route}/shot?${query}`;
     }
 
@@ -144,6 +154,7 @@ export function createExplorer(cfg) {
                 <option value="missing">Missing preview</option>
               </select>
               <button class="rescan" title="Re-read the ${cfg.folder} folder">Rescan</button>
+          <button class="thumbs" title="Only needed if you are updating from an earlier version: it builds the small copies the gallery loads instead of the full-size previews, so the grid opens faster. New previews get theirs automatically. ComfyUI will be busy while it runs.">Build fast thumbs</button>
               <button class="close">Close</button>
             </div>
             <div class="ns-viewport"><div class="ns-cards flow"></div></div>
@@ -234,8 +245,12 @@ export function createExplorer(cfg) {
                 card.innerHTML = `
                   <div class="pic" style="height:190px">
                     ${shots
-                        ? `<img loading="lazy" decoding="async" draggable="false" src="${shotUrl(row.name, shots.cover)}" alt="">
-                           ${shots.count > 1 ? `<span class="cnt">${shots.count}</span>` : ""}
+                        ? `<img loading="lazy" decoding="async" draggable="false" src="${shotUrl(row.name, shots.shots[shotIndex.get(row.name) ?? coverIndex(shots)]?.file || shots.cover, CARD_THUMB)}" alt="">
+                           ${shots.count > 1
+                               ? `<button class="flip prev" type="button" title="Previous image">&#8249;</button>
+                                  <button class="flip next" type="button" title="Next image">&#8250;</button>
+                                  <span class="cnt">${(shotIndex.get(row.name) ?? coverIndex(shots)) + 1}/${shots.count}</span>`
+                               : ""}
                            <button class="killshot" type="button" title="Delete this preview">&#10005;</button>`
                         : `<div class="empty">no preview</div>`}
                     <button class="star${isFavourite(row.name) ? " on" : ""}" type="button"
@@ -259,6 +274,26 @@ export function createExplorer(cfg) {
                     line.title = trig;
                     card.querySelector(".ttl").after(line);
                 }
+                if (shots && shots.count > 1) {
+                    const picture = card.querySelector("img");
+                    const counter = card.querySelector(".cnt");
+                    const step = (by) => {
+                        const at = shotIndex.get(row.name) ?? coverIndex(shots);
+                        // wraps at both ends, so you can keep going either way
+                        const next = (at + by + shots.count) % shots.count;
+                        shotIndex.set(row.name, next);
+                        picture.src = shotUrl(row.name, shots.shots[next].file, CARD_THUMB);
+                        counter.textContent = `${next + 1}/${shots.count}`;
+                    };
+                    for (const [selector, by] of [[".prev", -1], [".next", 1]]) {
+                        card.querySelector(selector).addEventListener("click", (ev) => {
+                            ev.stopPropagation();   // not a click on the card
+                            ev.preventDefault();
+                            step(by);
+                        });
+                    }
+                }
+
                 card.querySelector(".killshot")?.addEventListener("click", async (ev) => {
                     ev.stopPropagation();
                     const shot = shotsOf(row.name);
@@ -267,6 +302,7 @@ export function createExplorer(cfg) {
                         ? `Delete all ${shot.count} images for ${row.label}?`
                         : `Delete the preview for ${row.label}?`;
                     if (!confirm(question)) return;
+                    shotIndex.delete(row.name);
                     await call(`${cfg.route}/delete`, { [cfg.key]: row.name });
                     await loadCatalog();
                     draw();
@@ -318,7 +354,22 @@ export function createExplorer(cfg) {
             control.addEventListener("change", remember);
         });
         galSel.addEventListener("change", remember);
-        overlay.querySelector(".rescan").onclick = async () => {
+        overlay.querySelector(".thumbs").onclick = async () => {
+        const total = Object.values(catalog.previews || {})
+            .reduce((sum, bucket) => sum + Object.keys(bucket).length, 0);
+        if (!confirm(`Build fast thumbs for your ${cfg.plural}?\n\n`
+            + `About ${total} preview${total === 1 ? "" : "s"} to check. ComfyUI will be `
+            + "busy for a few seconds while it works, and the gallery will open faster "
+            + "afterwards.\n\nOnly worth doing once, after updating from a version that "
+            + "did not have them.")) return;
+        const result = await call(`${cfg.route}/thumbs`, {});
+        if (!result?.ok) return alert("Could not build the thumbs.");
+        alert(result.built
+            ? `Built ${result.built} for ${result.previews} preview(s).`
+            : `Nothing to do — all ${result.previews} preview(s) already have theirs.`);
+    };
+
+    overlay.querySelector(".rescan").onclick = async () => {
             const fresh = await loadCatalog(true);
             const moved = fresh?.moved || catalog.moved || [];
             const detached = fresh?.detached || catalog.detached || [];

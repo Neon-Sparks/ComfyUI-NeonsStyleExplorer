@@ -15,6 +15,7 @@ import {
     createCatalogSet,
     deleteCatalogPrompt,
     deleteCatalogSet,
+    buildThumbs,
     deleteAllShots,
     deleteFamilyShots,
     deleteStyleShots,
@@ -38,6 +39,7 @@ import {
     saveCustom,
     saveOverride,
     shotUrl,
+    thumbSize,
     shotsOf,
     state,
     useCatalogSet,
@@ -154,6 +156,9 @@ export function menu(event, items) {
         }
         const button = document.createElement("button");
         button.textContent = item.label;
+        // an item can explain itself on hover, for the ones whose effect is
+        // not obvious from four words
+        if (item.title) button.title = item.title;
         if (item.bad) button.className = "bad";
         if (item.disabled) {
             button.disabled = true;
@@ -494,7 +499,7 @@ export async function openCatalog(options = {}) {
           <button class="roll" title="Jump to a random card from whatever is currently filtered">Roll</button>
           <button class="hidden-styles" title="Styles you deleted are hidden, not destroyed — bring any of them back">Restore deleted</button>
           <button class="new key" title="Write your own style: a clause, a family, tags. Saved to user/custom.json; shipped files are never touched.">New style</button>
-          <button class="io" title="Back up or share your own styles, manage families, clear favourites and recents">Import / export</button>
+          <button class="io" title="Catalogs, import and export, families, favourites and recents, fast thumbs, and clearing gallery images">Options</button>
           <button class="wipe">Delete family thumbs</button>
           <button class="close" title="Close the browser (Escape)">Close</button>
         </div>
@@ -719,15 +724,7 @@ export async function openCatalog(options = {}) {
         const source = entry.source || "shipped";
         const starred = isFavourite(name);
         node.innerHTML = `
-          <div class="pic">
-            ${shots
-                ? `<img loading="lazy" decoding="async" draggable="false" src="${shotUrl(name, shots.cover)}" alt="">
-                   ${shots.count > 1 ? `<span class="cnt">${shots.count}</span>` : ""}
-                   <button class="killshot" type="button" title="Delete this preview">&#10005;</button>`
-                : `<div class="empty">no preview</div>`}
-            <button class="star${starred ? " on" : ""}" type="button"
-                    title="${starred ? "Remove from favourites" : "Add to favourites"}">${starred ? "&#9733;" : "&#9734;"}</button>
-          </div>
+          <div class="pic">${picMarkup(name, shots, starred)}</div>
           <div class="body">
             <div class="ttl"></div>
             <div class="meta">
@@ -802,6 +799,32 @@ export async function openCatalog(options = {}) {
                 mounted.delete(index);
             }
         }
+        prefetch(last);
+    }
+
+    // Warm the next couple of rows so scrolling meets images already in the
+    // cache rather than starting their download on arrival. Each URL is asked
+    // for once per session; the browser cache does the rest.
+    const prefetched = new Set();
+    let prefetchTimer = null;
+    function prefetch(lastRow) {
+        clearTimeout(prefetchTimer);
+        prefetchTimer = setTimeout(() => {
+            const size = thumbSize(layout.cardW);
+            const from = (lastRow + 1) * layout.columns;
+            const to = Math.min(rows.length, from + layout.columns * 2);
+            for (let index = from; index < to; index++) {
+                const row = rows[index];
+                const shots = row && shotsOf(row.name);
+                if (!shots) continue;
+                const url = shotUrl(row.name, shots.cover, size);
+                if (prefetched.has(url)) continue;
+                prefetched.add(url);
+                const warm = new Image();
+                warm.decoding = "async";
+                warm.src = url;
+            }
+        }, 150);   // only once the scroll has settled
     }
 
     scroll.addEventListener("scroll", render, { passive: true });
@@ -849,8 +872,52 @@ export async function openCatalog(options = {}) {
         }, 250);
     };
 
-    /** Star and delete-preview handlers for a card's picture area. */
+    // Which image each card is showing. Held outside the cards because the
+    // grid is virtualised: scroll away and back and your place is kept.
+    const shotIndex = new Map();
+    const coverIndex = (shots) =>
+        Math.max(0, (shots.shots || []).findIndex((shot) => shot.file === shots.cover));
+
+    /** The inside of a card's picture area: image, arrows, counter, buttons. */
+    function picMarkup(name, shots, starred) {
+        const at = shots ? (shotIndex.get(name) ?? coverIndex(shots)) : 0;
+        const file = shots ? (shots.shots[at]?.file || shots.cover) : "";
+        const size = thumbSize(layout.cardW);
+        return `
+            ${shots
+                ? `<img loading="lazy" decoding="async" draggable="false" src="${shotUrl(name, file, size)}" alt="">
+                   ${shots.count > 1
+                       ? `<button class="flip prev" type="button" title="Previous image">&#8249;</button>
+                          <button class="flip next" type="button" title="Next image">&#8250;</button>
+                          <span class="cnt">${at + 1}/${shots.count}</span>`
+                       : ""}
+                   <button class="killshot" type="button" title="Delete this preview">&#10005;</button>`
+                : `<div class="empty">no preview</div>`}
+            <button class="star${starred ? " on" : ""}" type="button"
+                    title="${starred ? "Remove from favourites" : "Add to favourites"}">${starred ? "&#9733;" : "&#9734;"}</button>`;
+    }
+
+    /** Star, delete-preview and image-cycling handlers for a card's picture. */
     function wirePic(element, name) {
+        const shots = shotsOf(name);
+        if (shots && shots.count > 1) {
+            const picture = element.querySelector("img");
+            const counter = element.querySelector(".cnt");
+            const step = (by) => {
+                const at = shotIndex.get(name) ?? coverIndex(shots);
+                const next = (at + by + shots.count) % shots.count;   // wraps
+                shotIndex.set(name, next);
+                if (picture) picture.src = shotUrl(name, shots.shots[next].file, thumbSize(layout.cardW));
+                if (counter) counter.textContent = `${next + 1}/${shots.count}`;
+            };
+            for (const [selector, by] of [[".prev", -1], [".next", 1]]) {
+                element.querySelector(selector)?.addEventListener("click", (ev) => {
+                    ev.preventDefault();
+                    ev.stopPropagation();       // not a click on the card itself
+                    step(by);
+                });
+            }
+        }
         element.querySelector(".star")?.addEventListener("click", async (ev) => {
             ev.preventDefault();
             ev.stopPropagation();
@@ -861,6 +928,7 @@ export async function openCatalog(options = {}) {
             ev.preventDefault();
             ev.stopPropagation();
             if (!confirm(`Delete the preview for ${name}?`)) return;
+            shotIndex.delete(name);
             await deleteStyleShots(name);
             await loadGallery();
             filter();
@@ -872,14 +940,7 @@ export async function openCatalog(options = {}) {
         const pic = element.querySelector(".pic");
         if (!pic) return;
         const starred = isFavourite(name);
-        pic.innerHTML = `
-            ${shots
-                ? `<img loading="lazy" decoding="async" draggable="false" src="${shotUrl(name, shots.cover)}" alt="">
-                   ${shots.count > 1 ? `<span class="cnt">${shots.count}</span>` : ""}
-                   <button class="killshot" type="button" title="Delete this preview">&#10005;</button>`
-                : `<div class="empty">no preview</div>`}
-            <button class="star${starred ? " on" : ""}" type="button"
-                    title="${starred ? "Remove from favourites" : "Add to favourites"}">${starred ? "&#9733;" : "&#9734;"}</button>`;
+        pic.innerHTML = picMarkup(name, shots, starred);
         pic.style.height = `${layout.cardW}px`;
         wirePic(element, name);
     }
@@ -1272,6 +1333,60 @@ export async function openCatalog(options = {}) {
                             + ". It is now the active catalog.");
                     };
                     picker.click();
+                },
+            },
+            {
+                // the manager was the only way in, and nobody found it
+                label: famSel.value && ![ALL_CUSTOM, MY_CUSTOM, MY_EDITED].includes(famSel.value)
+                    && isCustomFamily(famSel.value)
+                    ? `Delete the family “${famSel.value}”…`
+                    : "Delete a family…",
+                disabled: !(state.catalog.family_order || []).some(isCustomFamily),
+                run: async () => {
+                    const selected = famSel.value;
+                    if (selected && isCustomFamily(selected)
+                        && ![ALL_CUSTOM, MY_CUSTOM, MY_EDITED].includes(selected)) {
+                        const count = Object.values(state.catalog.by_name || {})
+                            .filter((entry) => entry.family === selected).length;
+                        if (!confirm(`Delete the family “${selected}”?\n\n`
+                            + `${count} style${count === 1 ? "" : "s"} move to Lonely — `
+                            + "nothing is deleted, and you can file them somewhere else afterwards.")) return;
+                        const result = await deleteFamily(selected);
+                        if (!result?.ok) return alert(result?.error || "Could not delete that family.");
+                        await loadCatalog();
+                        famSel.value = "";
+                        paintFamilies();
+                        filter();
+                        alert(`“${selected}” is gone. ${result.moved} style${result.moved === 1 ? "" : "s"} `
+                            + `moved to ${result.family}.`);
+                        return;
+                    }
+                    openFamilies({ onChanged: async () => {
+                        await loadCatalog();
+                        paintFamilies();
+                        filter();
+                    } });
+                },
+            },
+            {
+                label: "Build fast thumbs",
+                title: "Only needed if you are updating from an earlier version: "
+                    + "it builds the small copies the gallery loads instead of the "
+                    + "full-size previews, so the grid opens faster. New previews "
+                    + "get theirs automatically. ComfyUI will be busy while it runs.",
+                run: async () => {
+                    const total = Object.keys(state.previews || {}).length;
+                    if (!confirm(`Build fast thumbs for this catalog?\n\n`
+                        + `About ${total} preview${total === 1 ? "" : "s"} to check. `
+                        + "ComfyUI will be busy for a few seconds while it works, and "
+                        + "the gallery will open faster afterwards.\n\n"
+                        + "Only worth doing once, after updating from a version that "
+                        + "did not have them.")) return;
+                    const result = await buildThumbs();
+                    if (!result?.ok) return alert(result?.error || "Could not build the thumbs.");
+                    alert(result.built
+                        ? `Built ${result.built} for ${result.previews} preview(s).`
+                        : `Nothing to do — all ${result.previews} preview(s) already have theirs.`);
                 },
             },
             {

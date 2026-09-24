@@ -142,27 +142,65 @@ def safe_id(cid):
     return re.sub(r"[^a-z0-9-]+", "-", str(cid or "").strip().lower())[:40] or DEFAULT_ID
 
 
+LEGACY_PREVIEWS = os.path.join(ROOT, "previews")
+_MIGRATED = [False]
+
+
+def migrate_default_previews():
+    """Move the default catalog's previews out of the package and into user/.
+
+    They used to live in `previews/` beside the code, which kept early installs
+    working when catalogs were added — but it put your images inside the folder
+    an update replaces, so updating by swapping the folder took them with it.
+    Everything else already lives under `user/`; now this does too. Runs once,
+    does nothing if there is nothing to move, and never overwrites a migrated
+    catalog.
+    """
+    if _MIGRATED[0]:
+        return {"moved": 0}
+    _MIGRATED[0] = True
+    target = os.path.join(CATALOGS_DIR, DEFAULT_ID, "previews")
+    moved = 0
+    try:
+        if not os.path.isdir(LEGACY_PREVIEWS):
+            return {"moved": 0}
+        stale = [name for name in os.listdir(LEGACY_PREVIEWS)
+                 if name != "README.md" and not name.endswith(".testbak")]
+        if not stale:
+            return {"moved": 0}
+        if os.path.isfile(os.path.join(target, "manifest.json")):
+            # already migrated and in use: leave the old folder alone rather
+            # than merging two manifests behind the user's back
+            return {"moved": 0, "skipped": True}
+        os.makedirs(target, exist_ok=True)
+        for name in stale:
+            source = os.path.join(LEGACY_PREVIEWS, name)
+            destination = os.path.join(target, name)
+            if os.path.exists(destination):
+                continue
+            os.replace(source, destination)
+            moved += 1
+    except OSError:
+        return {"moved": moved, "error": True}
+    return {"moved": moved}
+
+
 def paths(cid=None):
     """Where one catalog keeps its files.
 
-    The default catalog keeps the original locations so an existing install is
-    untouched by this feature.
+    Every catalog, the default included, lives under `user/catalogs/<id>/` —
+    outside the part of the package an update replaces.
     """
+    migrate_default_previews()
     cid = cid or active()
-    if cid == DEFAULT_ID:
-        previews = os.path.join(ROOT, "previews")
-        return {
-            "previews": previews,
-            "manifest": os.path.join(previews, "manifest.json"),
-            "favourites": os.path.join(USER_DIR, "favourites.json"),
-            "recents": os.path.join(USER_DIR, "recents.json"),
-        }
     base = os.path.join(CATALOGS_DIR, safe_id(cid))
     return {
         "previews": os.path.join(base, "previews"),
         "manifest": os.path.join(base, "previews", "manifest.json"),
-        "favourites": os.path.join(base, "favourites.json"),
-        "recents": os.path.join(base, "recents.json"),
+        "favourites": os.path.join(USER_DIR, "favourites.json") if cid == DEFAULT_ID
+        else os.path.join(base, "favourites.json"),
+        "recents": os.path.join(USER_DIR, "recents.json") if cid == DEFAULT_ID
+        else os.path.join(base, "recents.json"),
     }
 
 

@@ -1,5 +1,109 @@
 # Changelog
 
+## 2.9.3 — clearing the registry flag
+
+* **The scan's one finding was `Function.prototype.bind`.** A YARA rule for
+  Python sockets (`sock.bind(...)`) matched the same method name in JavaScript
+  at `web/main.js:267`, where it bound `this` for a wrapper around ComfyUI's
+  `queuePrompt` — and reported it as exfiltration over a C2 channel at 90%
+  confidence. Nothing was sent by that line.
+* The wrapper now calls through with the live `this` instead, and a function
+  named `listen()` — another string that rule family greps for — is now
+  `watchExecution()`. Neither name is left in the package, comments included.
+* `AUDIT.md` records the finding, why it fired, and what was re-checked:
+  41 Origin-guarded POST routes, 20 read-only GETs, no uncontained paths, the
+  thumbnail `size` allow-list, and the absence of any HTTP client, dynamic code
+  or subprocess use.
+
+## 2.9.2 — the Options button
+
+* The browser's **Import / export** button is now **Options**. It stopped being
+  about import and export a while ago: it holds catalogs, families, favourites
+  and recents, fast thumbs and clearing gallery images, which is why deleting a
+  family was impossible to find in it.
+
+## 2.9.1 — thumbnail work stops blocking ComfyUI
+
+* **Deriving a card-sized preview ran on ComfyUI's event loop**, so the first
+  pass over a gallery held up everything else the server was doing — including
+  generation progress. That was my mistake in 2.8.0: it is CPU work and belongs
+  in a worker. It now runs in a thread, so the gallery fills at the same speed
+  while nothing else stalls.
+* **Build fast thumbs** — in the style browser's ⋯ menu and beside Rescan in the
+  LoRA and model browsers. It builds the small copies up front rather than as
+  you browse, says how many previews it will check before starting, warns that
+  ComfyUI will be busy, and reports what it did. Running it twice does nothing
+  the second time.
+* Worth doing once after updating from a version without cached sizes; new
+  previews get theirs automatically.
+
+## 2.9.0 — nothing of yours lives in the package any more
+
+* **The Default catalog's previews move to `user/catalogs/default/previews/`.**
+  They used to sit in `previews/` beside the code — the part of the folder an
+  update replaces — so updating by swapping the folder took them with it. Every
+  catalog you make already lived under `user/`; now the default does too.
+* **Relocated for you on first load**, once, with the manifest and any derived
+  thumbnails carried across. It does nothing if there is nothing to move, and
+  refuses to merge if a migrated default catalog already exists rather than
+  reconciling two manifests behind your back.
+* Back up `user/` and you have backed up everything of yours: previews,
+  catalogs, custom styles, edits, favourites, LoRA trigger words and model
+  notes.
+
+## 2.8.1 — deleting a family removes all of it
+
+* **A family holding an edited shipped style could not be deleted.** Two kinds
+  of entry can sit in a family you made: a style you wrote, and a shipped style
+  you edited into it — the second is an override, and family moves only ever
+  touched the first. So the family emptied of your own styles and then
+  reappeared, still holding the rest, looking exactly as though the button did
+  nothing. Renaming a family had the same hole. Both now move everything, and
+  a shipped style keeps its own name while its family changes.
+* **Deleting a family is no longer hidden under Import / export.** The browser's
+  ⋯ menu now offers `Delete the family “…”` for whichever of your families is
+  selected in the filter, and says how many styles will move to Lonely before
+  you confirm. The full manager is still there for renaming.
+
+## 2.8.0 — the gallery loads about five times less
+
+Previews are stored at 512px and a card renders at about 190, so every gallery
+screen was shipping roughly seven times the pixels it could show — around 11 MB
+for sixty cards on a cold cache.
+
+* **Cards are served a copy their own size.** A 256px version is derived on
+  first request and cached beside the original, so existing previews benefit
+  without being re-saved; deriving one takes about 8 ms and happens once. The
+  node's panel and the shot strip still get the 512px master. Sixty cards:
+  ~11 MB to ~2.3 MB.
+* **New previews are progressive JPEGs at quality 88**, so an image paints a
+  rough version immediately instead of arriving top to bottom.
+* **Previews are cached as immutable for a year.** Every filename is unique, so
+  the answer can never change and the browser stops revalidating on repeat
+  views.
+* **The next two rows are prefetched** once scrolling settles, so scrolling
+  meets images that are already there.
+* Derived copies are removed when their preview is deleted, aged out of the
+  shot limit, or when a whole style's images are cleared.
+
+All three galleries — styles, LoRAs and checkpoints — share this.
+
+## 2.7.0 — step through a card's images in the gallery
+
+* **‹ › arrows on every card that has more than one image**, in all three
+  galleries — styles, LoRAs and checkpoints. The count badge becomes a position
+  (`2/5`), the arrows wrap at both ends, and each card remembers which image it
+  was showing while you scroll a virtualised grid or the gallery repaints after
+  a save.
+* They appear on hover and sit clear of the ★ and ✕ in the corners, and are
+  hidden below 60% preview size where a card has no room for them.
+* Cycling only changes what you are looking at. The cover is still chosen by
+  clicking a thumbnail in the node's shot strip, so browsing cannot quietly
+  rearrange your galleries.
+* The style browser built its card picture in two places; both now come from
+  one function, so the arrows could not appear in the grid but go missing after
+  a repaint.
+
 ## 2.6.6 — galleries whose names contain a space, dot or dash
 
 * **Previews saved against a LoRA in a folder like `Qwen-Image 2.1` never

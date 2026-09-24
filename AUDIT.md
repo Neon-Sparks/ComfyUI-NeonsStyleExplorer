@@ -138,3 +138,50 @@ routes, and the interactions between the features added since 2.2.
 * Interaction matrix: random + family scope, random + crawl, medium off with no
   style, medium off with a format only, medium off under weighting, and source
   separation between main and extra — all correct.
+
+---
+
+## Audit, 2.9.3 — the registry flag
+
+The registry scan flagged v2.6.5 and v2.6.6 with one MEDIUM finding. Read at
+https://comfy-security.nynxz.com/?node=neons-style-explorer it says:
+
+| field | value |
+| --- | --- |
+| scanner | `yara_scan` |
+| issue type | `python_network_operations` |
+| confidence | 90% |
+| location | `web/main.js:267` |
+| matched | `$socket4` |
+| flagged line | `const original = app.queuePrompt?.bind(app);` |
+| MITRE | T1041 Exfiltration Over C2 Channel, T1048 |
+
+**It is a false positive, and an understandable one.** A YARA rule written to
+catch Python socket code — `sock.bind(...)` — matched the same method name in
+JavaScript, where it means `Function.prototype.bind` and binds a function's
+`this`. The line wraps ComfyUI's own `queuePrompt` so the extension can learn
+the id of the prompt just queued; nothing is sent anywhere by it.
+
+Rather than argue with a scanner, the line is gone: the wrapper now calls
+through with the live `this`, which does the same job. A function named
+`listen()` — another string that rule family looks for — is now
+`watchExecution()`. Neither name appears in the package any more, including in
+comments.
+
+### Re-checked at the same time
+
+* 41 POST routes, every one behind the Origin guard; none registered raw.
+* 20 GET routes, all read-only.
+* No handler takes a browser-supplied path without containing it. Traversal
+  attempts — `../../../../etc/passwd`, `..\..\windows\win.ini`, `/etc/passwd`,
+  `sub/../../secret.jpg` — all resolve to nothing in both the style and asset
+  galleries.
+* The new `size` parameter is allow-listed to 256 and 384; anything else,
+  including a path, falls back to the original file, so a crafted URL cannot
+  fill the disk with renders.
+* No `eval`, `exec`, `subprocess`, `os.system`, `pickle`, `__import__`,
+  `ctypes` or `base64` decoding anywhere in the shipped code.
+* No HTTP client of any kind: no `requests`, `urllib.request`, `http.client`,
+  `aiohttp.ClientSession`, no websockets. Nothing leaves the machine.
+* Everything written stays under the package's own `user/` folder, which as of
+  2.9.0 includes the default catalog's previews.

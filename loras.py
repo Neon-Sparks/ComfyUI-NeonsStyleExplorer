@@ -47,6 +47,8 @@ toggle_favourite = _GALLERY.toggle_favourite
 
 # --- previews ----------------------------------------------------------------
 
+build_thumbs = _GALLERY.build_thumbs
+shot_paths = _GALLERY.shot_paths
 gallery_dir = _GALLERY.gallery_dir
 manifest_path = _GALLERY.manifest_path
 previews_dir = _GALLERY.previews_dir
