@@ -1,5 +1,17 @@
 # Changelog
 
+## 2.9.5 — the test run stops eating a tracked file (properly this time)
+
+* 2.9.4 claimed this fix and did not contain it: the edit matched a similar
+  block elsewhere in the file and changed nothing, so CI failed again in the
+  same place. Both changes are now really in — the migration test leaves
+  `.testbak` files alone, and teardown reports a missing stash instead of
+  raising.
+* Verified against the real condition rather than an approximation: a
+  `previews/manifest.json` committed to git, the full build run, and the file
+  compared by checksum afterwards. 73 tests pass and the file is byte for byte
+  unchanged.
+
 ## 2.9.4 — the test run stops eating a tracked file
 
 * **CI failed in teardown with a missing `.testbak`.** The suite stashes

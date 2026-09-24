@@ -82,6 +82,12 @@ def _restore_previews():
             if os.path.isfile(path):
                 os.remove(path)            # written by this run
     for live, aside in _PREVIEWS:
+        if not os.path.isfile(aside):
+            # a test deleted the stash. Report it loudly and carry on: failing
+            # in teardown hides the cause, and the file is already gone.
+            print(f"WARNING: {os.path.basename(aside)} disappeared during the run — "
+                  f"{os.path.basename(live)} could not be restored")
+            continue
         os.replace(aside, live)
     _PREVIEWS.clear()
 
@@ -940,9 +946,12 @@ class Catalog(unittest.TestCase):
         finally:
             shutil.rmtree(os.path.join(ROOT, "user", "catalogs"), ignore_errors=True)
             for name in os.listdir(legacy):
-                if name != "README.md":
-                    path = os.path.join(legacy, name)
-                    shutil.rmtree(path) if os.path.isdir(path) else os.remove(path)
+                # a .testbak belongs to setUpModule and holds the real file —
+                # deleting one loses it, and on CI that file is tracked
+                if name == "README.md" or name.endswith(".testbak"):
+                    continue
+                path = os.path.join(legacy, name)
+                shutil.rmtree(path) if os.path.isdir(path) else os.remove(path)
             catalogs._MIGRATED[0] = False
 
     @unittest.skipUnless(HAVE_PILLOW, "Pillow is needed to write a test image")
