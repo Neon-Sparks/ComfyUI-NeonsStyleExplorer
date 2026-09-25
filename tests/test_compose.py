@@ -955,6 +955,46 @@ class Catalog(unittest.TestCase):
             catalogs._MIGRATED[0] = False
 
     @unittest.skipUnless(HAVE_PILLOW, "Pillow is needed to write a test image")
+    def test_manifest_is_cached_but_never_stale(self):
+        """Every request for a preview asks for the manifest, and building it
+        stats every image it lists — so it is cached against the file's own
+        metadata. The cache must disappear the moment anything changes."""
+        import shutil
+        from io import BytesIO
+
+        gallery_mod = importlib.import_module(f"{PKG}.gallery")
+        Image = _Image
+        buffer = BytesIO()
+        Image.new("RGB", (64, 64), (10, 90, 160)).save(buffer, "JPEG")
+        name = "[Anime] Chibi"
+        key = gallery_mod.key_for(name)
+        try:
+            saved = gallery_mod.add_shot(name, buffer.getvalue())
+            first = gallery_mod.manifest()
+            self.assertIn(key, first)
+            # the same call again is served from the cache: same object
+            self.assertIs(gallery_mod.manifest(), first)
+
+            # a second save invalidates it
+            gallery_mod.add_shot(name, buffer.getvalue(), make_cover=False)
+            grown = gallery_mod.manifest()
+            self.assertIsNot(grown, first)
+            self.assertEqual(grown[key]["count"], 2)
+
+            # so does deleting a shot
+            gallery_mod.delete_shot(key, grown[key]["shots"][0]["file"])
+            self.assertEqual(gallery_mod.manifest()[key]["count"], 1)
+
+            # and so does a file vanishing behind the manifest's back
+            os.remove(gallery_mod.shot_path(key))
+            self.assertIsNone(gallery_mod.manifest().get(key))
+        finally:
+            for name in os.listdir(gallery_mod.previews_dir()):
+                path = os.path.join(gallery_mod.previews_dir(), name)
+                shutil.rmtree(path) if os.path.isdir(path) else os.remove(path)
+            shutil.rmtree(os.path.join(ROOT, "user", "catalogs"), ignore_errors=True)
+
+    @unittest.skipUnless(HAVE_PILLOW, "Pillow is needed to write a test image")
     def test_card_thumbnails_are_derived_and_cleaned_up(self):
         """Cards are served a copy their own size, cached beside the original
         and removed with it. An unknown size falls back to the master rather

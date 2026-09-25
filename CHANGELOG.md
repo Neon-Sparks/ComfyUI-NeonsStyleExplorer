@@ -1,5 +1,28 @@
 # Changelog
 
+## 2.9.6 — the gallery is roughly fifteen times faster
+
+Measured on a 300-preview catalog, one screenful of sixty cards:
+
+| | before | after |
+| --- | --- | --- |
+| first view | 2,437 ms | 126 ms |
+| revisited | 1,564 ms | 111 ms |
+| sixty requests at once | 1,464 ms | 90 ms |
+
+* **`manifest()` cost 22 ms and every single image request called it.** Building
+  it stats every image it lists, so one screen of sixty cards meant roughly
+  eighteen thousand filesystem checks. The built manifest is now held against
+  the manifest file's own size and modification time: a save, a delete, or a
+  file removed behind its back all change that and the next request rebuilds
+  it. 22 ms becomes 0.15 ms.
+* The same per-request parsing is cached for the LoRA and checkpoint galleries.
+* Nothing a browser sends takes part in the cache key — it is filesystem
+  metadata only — one catalog is held at a time, and no caller writes into the
+  shared result, which was checked rather than assumed.
+* Covered by a test that asserts the cache is used **and** that it vanishes on
+  a save, a deleted shot, and a file disappearing from the folder.
+
 ## 2.9.5 — the test run stops eating a tracked file (properly this time)
 
 * 2.9.4 claimed this fix and did not contain it: the edit matched a similar

@@ -194,8 +194,33 @@ def signature(cid=None):
         return "0:0"
 
 
+# Building the manifest stats every image it lists, and every request for a
+# preview asks for it — sixty cards on screen meant tens of thousands of stat
+# calls for one gallery. The built result is kept against the manifest file's
+# own metadata: any write changes that, so the cache cannot go stale, and the
+# key comes from the filesystem rather than from anything a browser sends.
+_BUILT = {}
+
+
+def _manifest_signature(path, folder):
+    try:
+        stamp = os.stat(path)
+    except OSError:
+        return None
+    try:
+        folder_stamp = os.stat(folder).st_mtime_ns
+    except OSError:
+        folder_stamp = 0
+    return (stamp.st_mtime_ns, stamp.st_size, folder_stamp)
+
+
 def manifest():
     adopt_existing()
+    path, folder = manifest_path(), previews_dir()
+    signature = _manifest_signature(path, folder)
+    cached = _BUILT.get(path)
+    if cached and signature is not None and cached[0] == signature:
+        return cached[1]          # treat as read-only
     raw = _load()
     out = {}
     for key, record in raw.items():
@@ -217,6 +242,9 @@ def manifest():
             "count": len(shots),
             "mtime": max(int(shot.get("ts", 0)) for shot in shots),
         }
+    if signature is not None:
+        _BUILT.clear()            # one catalog is active at a time
+        _BUILT[path] = (signature, out)
     return out
 
 

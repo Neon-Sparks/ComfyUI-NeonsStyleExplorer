@@ -148,6 +148,7 @@ class Gallery:
         self.fingerprints_path = os.path.join(self.root, "fingerprints.json")
         self._lock = threading.RLock()
         self._cache = {"names": None, "at": 0.0}
+        self._built = {}          # manifest path -> (file signature, built)
 
     # ------------------------------------------------------------- listing
 
@@ -455,8 +456,24 @@ class Gallery:
                         return self.split(path)[0]
         return directory
 
+    def _signature(self, path, folder):
+        try:
+            stamp = os.stat(path)
+        except OSError:
+            return None
+        try:
+            folder_stamp = os.stat(folder).st_mtime_ns
+        except OSError:
+            folder_stamp = 0
+        return (stamp.st_mtime_ns, stamp.st_size, folder_stamp)
+
     def manifest(self, gallery):
-        data = read_json(self.manifest_path(gallery), {})
+        path = self.manifest_path(gallery)
+        signature = self._signature(path, self.previews_dir(gallery))
+        cached = self._built.get(path)
+        if cached and signature is not None and cached[0] == signature:
+            return cached[1]      # treat as read-only
+        data = read_json(path, {})
         if not isinstance(data, dict):
             return {}
         out = {}
@@ -470,6 +487,8 @@ class Gallery:
             cover = record.get("cover") if record.get("cover") in {s["file"] for s in shots} \
                 else shots[-1]["file"]
             out[key] = {**record, "shots": shots, "cover": cover, "count": len(shots)}
+        if signature is not None:
+            self._built[path] = (signature, out)
         return out
 
     def all_manifests(self):

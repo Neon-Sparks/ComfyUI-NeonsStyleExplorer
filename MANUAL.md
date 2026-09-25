@@ -386,6 +386,12 @@ anything saved since gets its own automatically. ComfyUI is busy for a few
 seconds while it runs, and it reports how many it built; running it again does
 nothing.
 
+**Why the gallery is quick.** Every request for a preview needs the catalog's
+manifest, and building that checks each listed image is still on disk — so the
+built manifest is held in memory against the file's own size and timestamp.
+Saving, deleting, or a file disappearing behind its back all change that, and
+the next request rebuilds. Nothing browser-supplied is part of the key.
+
 **How previews are served.** A saved preview is kept at 512px, which is what
 the node's panel shows. A card in the browser renders at about 190px, so the
 gallery asks for a 256px copy instead — derived on first request, cached beside
