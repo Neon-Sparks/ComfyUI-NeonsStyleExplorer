@@ -281,26 +281,44 @@ function setFolded(w, folded) {
     return true;
 }
 
-/** Fold away whatever the current switches make irrelevant. */
-export function syncFold(node) {
+/**
+ * Fold away whatever the current switches make irrelevant.
+ *
+ * *resize* is for a switch the user has just flipped: the node's bottom edge
+ * moves with the rows. Loading a workflow must not do that — its saved size
+ * already allows for the rows it shows.
+ */
+export function syncFold(node, resize = false) {
     if (!node?.widgets) return;
     let changed = false;
+    const flip = (found, folded) => {
+        if (setFolded(found, folded)) changed = true;
+    };
     for (const fold of FOLDS) {
         const folded = !fold.open(node);
         for (const name of fold.fields) {
             const found = widget(node, name);
-            changed = setFolded(found, folded) || changed;
+            flip(found, folded);
             // a seed's control (randomize / increment / fixed) goes with it
-            for (const linked of found?.linkedWidgets || []) {
-                changed = setFolded(linked, folded) || changed;
-            }
+            for (const linked of found?.linkedWidgets || []) flip(linked, folded);
         }
     }
     if (!changed) return;
+    // On the canvas the preview takes whatever height is left, so rows that
+    // appear would squeeze it and rows that go would stretch it. Remember how
+    // big it is now; once the next draw says where the panel has moved to,
+    // keepFitted puts the node's bottom edge wherever keeps it that size.
+    const shown = node._nsPanel?.querySelector(".ns-thumb")?.offsetWidth || 0;
+    if (resize && !pageNodes() && shown > 0) {
+        node._nsKeepSide = { side: shown, y: widget(node, "ns_panel")?.last_y, draws: 0 };
+    }
     node.setDirtyCanvas?.(true, true);
     layout(node);
-    // the panel's position is only known after the next draw: fit the node then
-    requestAnimationFrame(() => requestAnimationFrame(() => fitToContent(node)));
+    // the panel's position is only known after the next draw: fit the node
+    // then — unless keepFitted is about to place it deliberately
+    requestAnimationFrame(() => requestAnimationFrame(() => {
+        if (!node._nsKeepSide) fitToContent(node);
+    }));
 }
 
 /**
@@ -376,10 +394,70 @@ function rowHeight(el, fallback) {
  * heights. Estimating was what left a dead strip at the bottom: every small
  * error in the estimate of the fourteen widgets above became blank canvas.
  */
+/**
+ * ComfyUI's newer node interface ("Nodes 2.0") builds each node out of page
+ * elements instead of drawing it on the canvas. Nothing is drawn, so `last_y`
+ * never exists and the draw-loop fit never runs — and the node's size is only
+ * a MINIMUM there: the element grows to fit whatever is inside it.
+ */
+export function pageNodes() {
+    return Boolean(window.LiteGraph?.vueNodesMode);
+}
+
+/** The smallest height the node is ever given; main.js clamps to the same. */
+export const NODE_MIN_H = 620;
+
+/**
+ * Layout for the page-element interface: size the panel from the node's
+ * WIDTH and ask for the minimum height, so the page sizes the node to its
+ * content.
+ *
+ * The canvas layout could not work here. With no measured position it fell
+ * back to an estimate built from canvas widget heights, which are not the
+ * heights these widgets have — so the node was told to be several hundred
+ * pixels taller than its content, and the panel was stretched to fill the
+ * difference: a strip of nothing under the buttons.
+ */
+function layoutPage(node) {
+    const panel = node._nsPanel;
+    const width = Math.max(node.size?.[0] || 430, 320);
+    // the button row wraps onto a second line on a narrow node; measure it
+    const barH = rowHeight(panel?.querySelector(".ns-bar"), 30);
+    const shell = barH + STRIP_H + GAP + GAP * 3;
+    const side = Math.max(THUMB_MIN, Math.min(THUMB_MAX, width - 26));
+    const panelH = side + shell;
+
+    apply(node, "prompt", BASE_TEXT.prompt, width);
+    apply(node, "quality", BASE_TEXT.quality, width);
+    apply(node, "negative", BASE_TEXT.negative, width);
+    apply(node, "ns_panel", panelH, width);
+    if (panel) {
+        panel.style.height = `${panelH}px`;
+        const stage = panel.querySelector(".ns-stage");
+        const thumb = panel.querySelector(".ns-thumb");
+        if (stage) stage.style.height = `${side}px`;
+        if (thumb) {
+            thumb.style.width = `${side}px`;
+            thumb.style.height = `${side}px`;
+        }
+    }
+    // anything above the floor is only ever empty space under the content
+    if ((node.size?.[1] || 0) > NODE_MIN_H + 1 && !node._nsGrowing) {
+        node._nsGrowing = true;
+        node.setSize?.([node.size?.[0] || 430, NODE_MIN_H]);
+        node._nsGrowing = false;
+    }
+    node.setDirtyCanvas?.(true, true);
+}
+
 export function layout(node) {
     if (!node || node._nsLaying) return;
     node._nsLaying = true;
     try {
+        if (pageNodes()) {
+            layoutPage(node);
+            return;
+        }
         const panel = node._nsPanel;
         const width = Math.max(node.size?.[0] || 430, 320);
         const height = node.size?.[1] || 0;
@@ -391,6 +469,7 @@ export function layout(node) {
         // panel grew mid-session and pushed the buttons out of the node.
         const stripH = STRIP_H + GAP;
         const shell = barH + stripH + GAP * 3;
+        node._nsShell = shell;
         const minPanel = THUMB_MIN + shell;
 
         const promptH = BASE_TEXT.prompt;
@@ -468,6 +547,8 @@ export function fitToContent(node, quiet = false) {
     node._nsFitting = true;
     try {
         layout(node);
+        // the page-element interface sizes the node itself; nothing to snap
+        if (pageNodes()) return;
         const panel = node._nsPanel;
         const panelWidget = widget(node, "ns_panel");
         let bottom = node._nsIdealHeight || 0;
@@ -492,6 +573,26 @@ export function fitToContent(node, quiet = false) {
 
 /** Called from the node's draw loop: keeps the fit true as things change. */
 export function keepFitted(node) {
+    if (pageNodes()) return;
+    const keep = node._nsKeepSide;
+    if (keep) {
+        // a fold has just changed: wait for the draw that moves the panel
+        // (its position changes, or a few frames pass), then size the node so
+        // the preview is exactly as big as it was before
+        const at = widget(node, "ns_panel")?.last_y;
+        keep.draws += 1;
+        if (typeof at !== "number" || (at === keep.y && keep.draws < 4)) return;
+        delete node._nsKeepSide;
+        const shell = node._nsShell || 0;
+        if (at > 40 && shell) {
+            node._nsGrowing = true;
+            node.setSize?.([node.size?.[0] || 430, Math.round(at + keep.side + shell + 6)]);
+            node._nsGrowing = false;
+            layout(node);
+        }
+        node._nsFitAt = 0;
+        return;
+    }
     const now = performance.now();
     if (node._nsFitAt && now - node._nsFitAt < 250) return;
     node._nsFitAt = now;
@@ -892,6 +993,20 @@ export function attachPanel(node) {
     const w = node.addDOMWidget("ns_panel", "panel", panel, { serialize: false });
     w.computeSize = () => [node.size?.[0] || 420, PANEL_MIN];
     node._nsPanel = panel;
+    // In the page-element interface nothing redraws the node, so nothing
+    // re-runs the layout when the panel finally reaches the page or its button
+    // row wraps onto a second line. Watch the row and lay out again when it
+    // changes height.
+    if (typeof ResizeObserver === "function") {
+        let seen = -1;
+        new ResizeObserver(() => {
+            const bar = panel.querySelector(".ns-bar");
+            const height = bar ? bar.offsetHeight : 0;
+            if (height === seen) return;
+            seen = height;
+            if (pageNodes()) layout(node);
+        }).observe(panel.querySelector(".ns-bar"));
+    }
 }
 
 /* --------------------------------------------------------- live compose */

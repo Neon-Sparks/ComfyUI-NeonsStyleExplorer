@@ -1,7 +1,7 @@
 import { app } from "../../scripts/app.js";
 import { api } from "../../scripts/api.js";
 import { NODE_TYPES, RANDOM, entryOf, lastErrorText, loadCatalog, loadCatalogSets, loadGallery, namesOf, patchPreview, recordRun, saveRun, shotsOf, sourceNames, state } from "./api.js";
-import { FOLD_SWITCHES, STYLE_SLOTS, activeSlot, advanceCrawl, attachPanel, claimSlot, say, composeNow, effectiveStyle, fitToContent, holdSeed, keepFitted, layout, refresh, rollStyle, saveImage, saveLatest, syncCrawl, syncFold, value, widget } from "./panel.js";
+import { FOLD_SWITCHES, NODE_MIN_H, STYLE_SLOTS, activeSlot, advanceCrawl, attachPanel, claimSlot, say, composeNow, effectiveStyle, fitToContent, holdSeed, keepFitted, layout, refresh, rollStyle, saveImage, saveLatest, syncCrawl, syncFold, value, widget } from "./panel.js";
 
 function syncCombo(node, field, axis) {
     const w = widget(node, field);
@@ -110,7 +110,7 @@ function hook(node) {
                 syncCrawl(node);
             }
             // settings that only matter while this switch is on fold with it
-            if (FOLD_SWITCHES.includes(w.name)) syncFold(node);
+            if (FOLD_SWITCHES.includes(w.name)) syncFold(node, true);
             return result;
         };
         if (w.name === "crawl") {
@@ -419,7 +419,7 @@ app.registerExtension({
             const result = onResize?.apply(this, arguments);
             if (size) {
                 size[0] = Math.max(size[0], 360);
-                size[1] = Math.max(size[1], 620);
+                size[1] = Math.max(size[1], NODE_MIN_H);
             }
             layout(this);
             return result;

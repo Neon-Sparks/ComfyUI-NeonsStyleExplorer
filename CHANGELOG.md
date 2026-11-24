@@ -1,5 +1,23 @@
 # Changelog
 
+## 2.10.1 — no dead space under the buttons in the new node interface
+
+* **The style nodes had an empty strip below the button row** in ComfyUI's
+  newer node interface (Nodes 2.0). That interface builds a node from page
+  elements rather than drawing it, so the position the layout measures from
+  never existed and it fell back to an estimate made from canvas widget
+  heights — several hundred pixels too tall — and stretched the panel to fill
+  it. There the node's size is only a minimum, so the layout now sizes the
+  panel from the node's width and asks for the minimum height: the node ends
+  where its content does, at any width, including when the button row wraps.
+* **Opening a folded setting no longer squeezes the preview** in the classic
+  interface. The preview used to take whatever height was left, so rows that
+  appeared shrank it; the node's bottom edge now moves instead and the preview
+  stays the size it was.
+* Checked in both interfaces: new nodes, narrow and wide, every fold open and
+  closed, a workflow saved at the old over-tall size, and switching between
+  the two.
+
 ## 2.10.0 — rolls that actually roll, a style_name output, and a second security pass
 
 ### Fixed
