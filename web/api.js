@@ -419,7 +419,8 @@ export const restoreAllStyles = () => call("/neons_style/style/restore_all", {})
 export const toggleFavourite = (name) => call("/neons_style/favourite", { name, toggle: true });
 export const clearRecents = () => call("/neons_style/recent", { clear: true });
 export const buildThumbs = () => call("/neons_style/gallery/thumbs", {});
-export const deleteAllShots = () => call("/neons_style/gallery/delete_family", { family: "" });
+// every family: the server only does this when it is asked for outright
+export const deleteAllShots = () => call("/neons_style/gallery/delete_family", { family: "", all: true });
 export const exportStyles = () => call("/neons_style/export");
 export const importStyles = (styles) => call("/neons_style/import", { styles });
 

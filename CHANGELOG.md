@@ -1,5 +1,67 @@
 # Changelog
 
+## 2.10.0 — rolls that actually roll, a style_name output, and a second security pass
+
+### Fixed
+
+* **`roll_seed` 0 did not roll afresh.** The tooltip promised a new style every
+  run, but nothing on the node changes between runs, so ComfyUI served the last
+  roll from its cache. The same was true of the LoRA explorer's roll and of a
+  dice left on the format or finish slot. All three now re-run every time.
+* **A seeded roll went stale when its pool changed.** Starring a favourite,
+  saving a preview under `missing preview`, or editing the style the dice had
+  landed on changed what a roll should produce without changing a widget, and
+  the node was skipped. The signature now includes what the dice lands on, so
+  the run is skipped only when the answer really is the same.
+* **`roll_seed` kept randomizing while the dice was off.** A changed seed made
+  ComfyUI re-run the node and everything after it, so an identical prompt was
+  re-encoded and re-sampled on every queue. The seed's control now does nothing
+  unless `random_roll` is on.
+* **An empty favourites or recent list rolled from everything without a word.**
+  It still does — a run should never be styleless — but the debug output's
+  `random:` line now says so.
+* **Opening the LoRA or model browser read two files per row.** Five hundred
+  LoRAs meant a thousand file reads; it is now two. A first Rescan rewrote the
+  fingerprint file once per LoRA; it now writes it once.
+* **Two saves at once could collide in the LoRA and model stores.** They shared
+  one scratch file name. Each write now has its own, as the style store's did.
+* **The shipped example workflows loaded with their settings out of step.** A
+  present-day save written without the panel's trailing value — which is what
+  `tools/build_examples.py` writes — was only compared against past layouts,
+  matched one of the same length, and came up with `output_format` reset and
+  `style_weight` off. Today's own order is now a candidate, and wins.
+* **Wiring a diffusion model's `clip` or `vae` failed far downstream** with an
+  error about `None`. The model explorer now stops with a message that names
+  the cause, before loading the model.
+
+### Added
+
+* **`style_name` output** on both style nodes: the style the run used, rolls and
+  crawl steps included. It is the last output, so existing wiring is untouched.
+* **`roll_scope` on the LoRA explorer** — all, same gallery, same family or
+  favourites — so a random roll stays among the LoRAs for the model in use. It
+  is optional and last in the list, so older workflows and API prompts load
+  unchanged; a workflow saved before it existed opens with it on *all*.
+* **Settings fold away until they matter**: `crawl_source`, `random_source`,
+  `roll_seed` and `tag_separator` are hidden while the switch that gives them
+  meaning is off. Their values are still saved.
+
+### Security
+
+* **An empty request could delete every preview.** `gallery/delete_family`
+  treated a missing family as "all of them", so a blank or malformed body wiped
+  the gallery. Deleting everything now has to be asked for outright.
+* **The LoRA and model routes accepted any name.** Save, trigger words, notes
+  and favourites now only act on a file ComfyUI itself lists, so a request
+  cannot plant records under invented names or steer a path lookup.
+* **A JSON list or string as a request body raised an error** and answered with
+  a server traceback. Every route now treats it as an empty request.
+* **Preview filenames are escaped where they sit in markup**, and previews are
+  served with `nosniff`.
+* `tools/security_probe.py` runs these attacks, plus cross-site and
+  path-traversal attempts, against every route on a throwaway copy of the
+  package. See `AUDIT.md`.
+
 ## 2.9.6 — the gallery is roughly fifteen times faster
 
 Measured on a 300-preview catalog, one screenful of sixty cards:

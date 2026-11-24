@@ -116,11 +116,17 @@ If you would rather not wire two text encoders, use **Neons Style Explorer
 Three nodes, all under the **Neons** category.
 
 **Neons Style Explorer** — text in, text out.
-Outputs: `positive`, `negative`, `debug`.
+Outputs: `positive`, `negative`, `debug`, `style_name`.
 
 **Neons Style Explorer (Encode)** — the same, plus a `CLIP` input.
 Outputs: `positive_conditioning`, `negative_conditioning`, `positive`,
-`negative`, `debug`.
+`negative`, `debug`, `style_name`.
+
+`style_name` is the style this run actually used — the one the dice landed on
+or the crawl stepped to, not just the one in the dropdown — and an empty string
+when no style is set. Wire it into a filename prefix, a text label, or the
+`style_name` input of Neons Gallery Capture. It is the last output on both
+nodes, so workflows saved before it existed keep their wiring.
 
 **Neons LoRA Explorer** — a LoRA loader with its own gallery. Model and clip in,
 model and clip out, plus the LoRA's name as a string. See section 17.
@@ -273,6 +279,21 @@ rolling. Section 9.
 `roll_scope` sit at the bottom of the widget list, directly above the preview
 panel. Set that control to
 *randomize* so every run rolls afresh; `0` also rolls freshly each run.
+
+A seeded roll is repeatable, so ComfyUI may skip the node when nothing has
+changed — but "nothing" includes the pool. Star a favourite, save a preview
+under `missing preview`, or edit the style it landed on, and the next run rolls
+again without you touching a widget. While `random_roll` is off the seed's
+control does nothing at all: it used to keep randomizing, which made ComfyUI
+re-encode and re-sample an identical prompt on every queue.
+
+**Folded settings.** Four widgets only mean something while a switch is on, so
+they stay out of sight until it is: `crawl_source` (needs `crawl`),
+`random_source` and `roll_seed` with its control (need `random_roll`), and
+`tag_separator` (needs a booru `output_format`). They are hidden, not removed —
+their values are still saved with the workflow. `roll_scope` and
+`crawl_missing_only` always show, because the preview's arrows follow them
+whether or not anything is rolling or crawling.
 
 ### Saving previews
 
@@ -726,7 +747,8 @@ and medium, so an edit re-runs it and nothing else does.
 Check `random_roll` is on and `crawl` is off — crawl overrides the dice. If
 `roll_scope` is `favourites` or `recent` and that list is empty, the roll falls
 back to the full catalog rather than doing nothing, and an empty `random_source`
-(no custom styles yet) does the same, saying so in the node's debug output. If
+(no custom styles yet) does the same. Both say so on the `random:` line of the
+node's debug output. If
 the scope is `missing preview` and you have covered everything, there is nothing
 left to roll.
 
@@ -812,8 +834,14 @@ see how it behaves on each model rather than one pile of mixed results.
   inherit them. Moves are reported when the rescan finishes.
 * **random_roll** loads a random LoRA each run at a strength drawn from
   **random_low** to **random_high**, seeded by **roll_seed** (set its control to
-  randomize). The range reads in either order, and setting both ends the same
-  rolls the LoRA but keeps the strength fixed.
+  randomize, or use seed 0). The range reads in either order, and setting both
+  ends the same rolls the LoRA but keeps the strength fixed.
+* **roll_scope** says which LoRAs the dice may land on: *all*, *same gallery*
+  (the top folder of the LoRA in the picker), *same family* (the folder inside
+  that) or *favourites*. Pick any LoRA from `krea 2/` and set *same gallery*,
+  and a roll never loads one made for another model. A scope with nothing in it
+  — no favourites yet, or no LoRA picked to take the folder from — rolls from
+  all of them and says so on the node.
 * **Only one pair of controls is ever live.** With the switch off, the strength
   sliders are in charge and the range is dimmed. With it on, the range and seed
   are in charge and the strength sliders are dimmed — they would otherwise
@@ -857,6 +885,10 @@ Three differences from the LoRA node, all deliberate:
   it under the preview; it comes out of the node's **notes** output.
 * **No roll.** A checkpoint is a deliberate choice, and swapping it mid-batch
   reloads gigabytes, so there is no dice here.
+
+A diffusion model carries no CLIP or VAE. If either of those outputs is wired
+when one is loaded, the node stops with a message naming the problem — unplug
+it and add your own loaders — rather than handing `None` down the graph.
 
 Outputs are `model`, `clip`, `vae`, `model_name` and `notes`. Previews live in
 `user/models/<gallery>/`, entirely separate from the LoRA galleries.

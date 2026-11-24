@@ -110,8 +110,11 @@ export function createExplorer(cfg) {
         return `${cfg.route}/shot?${query}`;
     }
 
-    const escapeHtml = (text) => String(text ?? "").replace(/[&<>]/g, (ch) =>
-        ({ "&": "&amp;", "<": "&lt;", ">": "&gt;" }[ch]));
+    // quotes too: this is used inside attribute values as well as text
+    // (keyed by character code so no bare quote character sits in this file)
+    const HTML_ESCAPES = { 38: "&amp;", 60: "&lt;", 62: "&gt;", 34: "&quot;", 39: "&#39;" };
+    const escapeHtml = (text) => String(text ?? "").replace(/[&<>\x22\x27]/g,
+        (ch) => HTML_ESCAPES[ch.charCodeAt(0)]);
 
     /* --------------------------------------------------------------- widgets */
 
@@ -446,10 +449,10 @@ export function createExplorer(cfg) {
         strip.innerHTML = shots
             ? shots.shots.map((shot) => `
                 <span class="ns-shot${shot.file === shots.cover ? " on" : ""}">
-                  <button type="button" class="pick" data-file="${shot.file}" title="Use as cover">
+                  <button type="button" class="pick" data-file="${escapeHtml(shot.file)}" title="Use as cover">
                     <img loading="lazy" draggable="false" src="${shotUrl(name, shot.file)}" alt="">
                   </button>
-                  <button type="button" class="drop" data-file="${shot.file}" title="Delete this preview">&#10005;</button>
+                  <button type="button" class="drop" data-file="${escapeHtml(shot.file)}" title="Delete this preview">&#10005;</button>
                 </span>`).join("")
             : "";
         strip.querySelectorAll(".pick").forEach((button) => {
@@ -610,6 +613,7 @@ export function createExplorer(cfg) {
             random_low: !rolling,
             random_high: !rolling,
             roll_seed: !rolling,
+            roll_scope: !rolling,
         };
         if (!cfg.strengthMode) return;
         for (const [name, off] of Object.entries(state)) {
@@ -787,6 +791,16 @@ export function createExplorer(cfg) {
             const onConfigure = nodeType.prototype.onConfigure;
             nodeType.prototype.onConfigure = function (info) {
                 const result = onConfigure?.apply(this, arguments);
+                // Values are restored by position, and a workflow saved before
+                // a dropdown existed hands it whatever sat at that position —
+                // the panel's empty string, for roll_scope. A dropdown holding
+                // something it does not offer goes back to its first option.
+                for (const found of this.widgets || []) {
+                    const options = found?.options?.values;
+                    if (found?.name === cfg.picker || !Array.isArray(options) || !options.length) continue;
+                    if (found.name === "control_after_generate") continue;
+                    if (!options.includes(found.value)) found.value = options[0];
+                }
                 requestAnimationFrame(() => {
                     fitNode(this);
                     syncStrengthMode(this);   // a saved workflow may have it on
@@ -812,6 +826,9 @@ export function createExplorer(cfg) {
             nodeType.prototype.onExecuted = function (message) {
                 const result = onExecuted?.apply(this, arguments);
                 refresh(this);
+                // a roll whose scope was empty widened to everything: say so
+                const note = message?.[`ns_${cfg.kind}_note`]?.[0];
+                if (note) say(this, note, true);
                 return result;
             };
 

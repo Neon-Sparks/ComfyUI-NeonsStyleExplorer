@@ -2,6 +2,7 @@
 
 import hashlib
 import random
+import uuid
 
 from . import compose as composer
 from . import loras
@@ -9,11 +10,12 @@ from . import models
 from . import runs
 from .catalog import (RANDOM_TOKEN, SOURCES, crawl_names, custom_names, entries,
                       imported_style_names, names_for, push_recent, resolve, roll,
-                      source_pool, written_names)
+                      scope_fell_back, source_pool, written_names)
 
 WEB_DIRECTORY = "./web"
 
 ROLL_SCOPES = ["all", "family", "favourites", "recent", "has preview", "missing preview"]
+LORA_ROLL_SCOPES = ["all", "same gallery", "same family", "favourites"]
 
 
 def _combo(axis):
@@ -108,12 +110,12 @@ def widgets():
         }),
         "roll_scope": (ROLL_SCOPES, {
             "default": "all",
-            "tooltip": "Which styles the dice may land on, and which set crawl walks: everything, the primary style's family, your favourites, recently used, or by preview state.",
+            "tooltip": "Which styles the dice may land on, and which set crawl walks: everything, the primary style's family, your favourites, recently used, or by preview state. An empty favourites or recent list rolls from everything, and the debug output says so.",
         }),
         "roll_seed": ("INT", {
             "default": 54321, "min": 0, "max": 0xFFFFFFFF,
             "control_after_generate": True,
-            "tooltip": "Seeds the dice. Use the control under it (randomize / increment) so every run rolls a different style; 0 also rolls freshly each run.",
+            "tooltip": "Seeds the dice. Use the control under it (randomize / increment) so every run rolls a different style; 0 also rolls freshly each run. The control only advances while random_roll is on.",
         }),
     }
 
@@ -191,9 +193,15 @@ def _random_line(kwargs):
     if not kwargs.get("random_roll"):
         return "off"
     source = str(kwargs.get("random_source", "all") or "all")
+    scope = str(kwargs.get("roll_scope", "all") or "all")
     if source != "all" and not source_pool(source):
         return f"on — {source} is empty, rolled from the whole catalog instead"
-    return f"on — {source}"
+    if scope_fell_back(scope, source):
+        # an empty shortlist rolls from everything; say so rather than letting
+        # the dice look as though it ignored the scope
+        where = "the whole catalog" if source == "all" else f"every {source} style"
+        return f"on — {source}, but '{scope}' is empty so it rolled from {where} instead"
+    return f"on — {source}, scope {scope}"
 
 
 def build_debug(kwargs, positive, negative, styles, fmt, finish):
@@ -220,6 +228,37 @@ def build_debug(kwargs, positive, negative, styles, fmt, finish):
     return "\n".join(lines)
 
 
+def style_slots(kwargs):
+    return [kwargs.get("style", "None"), kwargs.get("custom_style", "None"),
+            kwargs.get("extra_style", "None")]
+
+
+def family_hint_of(kwargs, pool):
+    """The family 'family' scope works from: whichever slot holds a concrete
+    style, since slot 1 may be the dice itself."""
+    for field in ("style", "custom_style", "extra_style"):
+        entry = resolve(kwargs.get(field, "None"), pool)
+        if entry:
+            return entry["family"]
+    return None
+
+
+def is_rolling(kwargs):
+    """Is the dice deciding this run's style?
+
+    An older workflow may still hold the dice token in a slot; that is what the
+    switch means now. Crawl owns the sequence while it is on.
+    """
+    if bool(kwargs.get("crawl", False)):
+        return False
+    return bool(kwargs.get("random_roll", False)) or RANDOM_TOKEN in style_slots(kwargs)
+
+
+def style_name_of(styles):
+    """The name of the style a run used, for the style_name output."""
+    return styles[0]["name"] if styles else ""
+
+
 def run(**kwargs):
     from .gallery import manifest
 
@@ -228,19 +267,9 @@ def run(**kwargs):
     seed = int(kwargs.get("roll_seed") or 0)
     scope = kwargs.get("roll_scope", "all")
     crawl = bool(kwargs.get("crawl", False))
-    # 'family' scope needs a family to work from: take it from whichever slot
-    # holds a concrete style, since slot 1 may be the dice itself
-    family_hint = None
-    for field in ("style", "custom_style", "extra_style"):
-        entry = resolve(kwargs.get(field, "None"), pool)
-        if entry:
-            family_hint = entry["family"]
-            break
+    family_hint = family_hint_of(kwargs, pool)
 
-    # an older workflow may still hold the dice token in a slot; that is what
-    # the switch means now
-    slots = [kwargs.get("style", "None"), kwargs.get("custom_style", "None"),
-             kwargs.get("extra_style", "None")]
+    slots = style_slots(kwargs)
     random_roll = bool(kwargs.get("random_roll", False)) or RANDOM_TOKEN in slots
     styles = pick_styles(
         # one active slot, but all three are read so an older workflow that set
@@ -303,16 +332,42 @@ class _Base:
         """
         pool = entries()
         parts = []
-        for field in ("style", "extra_style", "custom_style", "format", "finish"):
-            entry = resolve(kwargs.get(field, "None"), pool)
+
+        def fold(field, entry):
             if not entry:
                 parts.append(f"{field}=None")
-                continue
+                return
             parts.append("|".join([
                 field, entry["id"], entry.get("nl", ""), entry.get("medium", ""),
                 entry.get("negative", ""), ",".join(entry.get("tags") or []),
                 ",".join(entry.get("tags_negative") or []),
             ]))
+
+        for field in ("style", "extra_style", "custom_style", "format", "finish"):
+            fold(field, resolve(kwargs.get(field, "None"), pool))
+
+        # A dice on the format or finish slot is unseeded, and roll_seed 0 means
+        # "roll afresh every run". Neither moves a widget, so without this the
+        # node was served from cache and the promised new roll never happened.
+        crawl = bool(kwargs.get("crawl", False))
+        if not crawl and RANDOM_TOKEN in (kwargs.get("format"), kwargs.get("finish")):
+            return uuid.uuid4().hex
+        if is_rolling(kwargs):
+            seed = int(kwargs.get("roll_seed") or 0)
+            if not seed:
+                return uuid.uuid4().hex
+            # A seeded roll repeats only while its pool stands still, and the
+            # pool moves without any widget moving — a favourite starred, a
+            # preview saved under 'missing preview'. Fold in what the dice
+            # would land on now: the run is skipped only when the answer is
+            # the same one.
+            from .gallery import manifest
+
+            fold("rolled", roll(
+                axis="style", scope=kwargs.get("roll_scope", "all"),
+                family=family_hint_of(kwargs, pool), seed=seed, previews=manifest(),
+                source=str(kwargs.get("random_source", "all") or "all"),
+            ))
         return hashlib.sha1("\n".join(parts).encode("utf-8")).hexdigest()
 
     @classmethod
@@ -356,15 +411,25 @@ class NeonsStyleExplorer(_Base):
         return {"required": widgets(), "optional": dict(LORA_TRIGGER_INPUTS),
                 "hidden": {"unique_id": "UNIQUE_ID"}}
 
-    RETURN_TYPES = ("STRING", "STRING", "STRING")
-    RETURN_NAMES = ("positive", "negative", "debug")
+    # style_name is last so the outputs a saved workflow already wires keep
+    # their positions
+    RETURN_TYPES = ("STRING", "STRING", "STRING", "STRING")
+    RETURN_NAMES = ("positive", "negative", "debug", "style_name")
+    OUTPUT_TOOLTIPS = (
+        "The composed prompt.",
+        "The composed avoid terms.",
+        "What the node did and why — wire it to a Preview Text node.",
+        "The style this run used, rolls and crawl steps included; empty when no style "
+        "is set. Use it in a filename, a label, or Gallery Capture's style_name.",
+    )
     FUNCTION = "apply"
     DESCRIPTION = "Neons Style Explorer — style prefixes in natural language or booru tags."
 
     def apply(self, unique_id=None, **kwargs):
         positive, negative, debug, styles = run(**kwargs)
         self._record(unique_id, kwargs, styles)
-        return {"ui": self._ui(kwargs, styles), "result": (positive, negative, debug)}
+        return {"ui": self._ui(kwargs, styles),
+                "result": (positive, negative, debug, style_name_of(styles))}
 
 
 class NeonsStyleExplorerEncode(_Base):
@@ -375,8 +440,9 @@ class NeonsStyleExplorerEncode(_Base):
         return {"required": required, "optional": dict(LORA_TRIGGER_INPUTS),
                 "hidden": {"unique_id": "UNIQUE_ID"}}
 
-    RETURN_TYPES = ("CONDITIONING", "CONDITIONING", "STRING", "STRING", "STRING")
-    RETURN_NAMES = ("positive_conditioning", "negative_conditioning", "positive", "negative", "debug")
+    RETURN_TYPES = ("CONDITIONING", "CONDITIONING", "STRING", "STRING", "STRING", "STRING")
+    RETURN_NAMES = ("positive_conditioning", "negative_conditioning", "positive", "negative",
+                    "debug", "style_name")
     FUNCTION = "apply"
     DESCRIPTION = "Neons Style Explorer with CLIP encode."
 
@@ -385,7 +451,8 @@ class NeonsStyleExplorerEncode(_Base):
         self._record(unique_id, kwargs, styles)
         return {
             "ui": self._ui(kwargs, styles),
-            "result": (encode(clip, positive), encode(clip, negative), positive, negative, debug),
+            "result": (encode(clip, positive), encode(clip, negative), positive, negative,
+                       debug, style_name_of(styles)),
         }
 
 
@@ -464,7 +531,16 @@ class NeonsLoraExplorer:
                 "roll_seed": ("INT", {
                     "default": 54321, "min": 0, "max": 0xFFFFFFFF,
                     "control_after_generate": True,
-                    "tooltip": "Seeds the roll: which LoRA, and which strength inside the range. Use the control under it (randomize) so every run differs.",
+                    "tooltip": "Seeds the roll: which LoRA, and which strength inside the range. Use the control under it (randomize) so every run differs; 0 also rolls freshly each run.",
+                }),
+            },
+            # Optional, and last: a workflow saved before this existed loads
+            # every value in its place, and an API-format prompt that does not
+            # mention it still validates.
+            "optional": {
+                "roll_scope": (LORA_ROLL_SCOPES, {
+                    "default": "all",
+                    "tooltip": "Which LoRAs a random roll may land on: all of them, only the gallery (top folder) of the LoRA chosen above, only its family (the folder inside that), or your favourites. Keeps the dice inside the LoRAs made for the model you are using. An empty set rolls from all of them.",
                 }),
             },
             "hidden": {"unique_id": "UNIQUE_ID"},
@@ -472,13 +548,33 @@ class NeonsLoraExplorer:
 
     @classmethod
     def IS_CHANGED(cls, lora="None", strength_model=1.0, strength_clip=1.0,
-                   random_roll=False, random_low=0.6, random_high=1.0, roll_seed=0, **_kw):
+                   random_roll=False, random_low=0.6, random_high=1.0, roll_seed=0,
+                   roll_scope="all", **_kw):
         """Re-run when the trigger words change, not just when the LoRA does."""
         name = str(lora or "None")
+        if random_roll:
+            # seed 0 rolls afresh each run, which no widget change announces
+            if not int(roll_seed or 0):
+                return uuid.uuid4().hex
+            # a seeded roll depends on the pool — a rescan or a new favourite
+            # moves it — so key on what the dice lands on now
+            name = cls._roll(roll_seed, random_low, random_high, roll_scope, name)[0]
         triggers = loras.triggers_for(name) if name != "None" else ""
         parts = [name, triggers, str(strength_model), str(strength_clip),
-                 str(bool(random_roll)), str(random_low), str(random_high), str(roll_seed)]
+                 str(bool(random_roll)), str(random_low), str(random_high), str(roll_seed),
+                 str(roll_scope)]
         return hashlib.sha1("\n".join(parts).encode("utf-8")).hexdigest()
+
+    @classmethod
+    def VALIDATE_INPUTS(cls, roll_scope="all"):
+        """Accept whatever an older workflow left in roll_scope.
+
+        Naming the input here takes it out of ComfyUI's own dropdown check. A
+        workflow saved before the widget existed restores values by position
+        and can leave an empty string in it; refusing to run over a setting
+        that falls back to "all" anyway would be a poor welcome to an update.
+        """
+        return True
 
     RETURN_TYPES = ("MODEL", "CLIP", "STRING", "STRING")
     RETURN_NAMES = ("model", "clip", "lora_name", "triggers")
@@ -487,13 +583,45 @@ class NeonsLoraExplorer:
     DESCRIPTION = "Neons LoRA Explorer — load a LoRA, with a preview gallery per model folder."
 
     @staticmethod
-    def _roll(seed, low, high):
+    def roll_pool(scope="all", anchor="None"):
+        """(the LoRAs a roll may land on, whether the scope had to be widened).
+
+        The folders are the filing, so a scope is just a folder test: the same
+        gallery is the same top folder as the LoRA in the picker, the same
+        family is the same folder inside it. A scope with nothing in it — no
+        favourites yet, no LoRA picked to take the folder from — widens to
+        every LoRA rather than loading none, and reports that it did.
+        """
+        everything = [name for name in loras.names() if name]
+        anchor = str(anchor or "None").replace("\\", "/")
+        scope = str(scope or "all")
+        if scope not in LORA_ROLL_SCOPES:
+            scope = "all"       # an older workflow can hand this slot anything
+        if scope == "all":
+            return everything, False
+        pool = []
+        if scope == "favourites":
+            wanted = set(loras.load_favourites())
+            pool = [name for name in everything if name in wanted]
+        elif scope in ("same gallery", "same family") and anchor not in ("", "None"):
+            gallery, family, _label = loras.split(anchor)
+            for name in everything:
+                other_gallery, other_family, _other = loras.split(name)
+                if other_gallery != gallery:
+                    continue
+                if scope == "same family" and other_family != family:
+                    continue
+                pool.append(name)
+        return (pool, False) if pool else (everything, True)
+
+    @classmethod
+    def _roll(cls, seed, low, high, scope="all", anchor="None"):
         """Pick a LoRA and a strength inside the range.
 
         The range is read in either order, so low=1.0 high=0.6 behaves the same
         as the other way round rather than rolling nothing.
         """
-        pool = [name for name in loras.names() if name]
+        pool, _widened = cls.roll_pool(scope, anchor)
         if not pool:
             return "None", 0.0
         rng = random.Random(seed) if seed else random
@@ -503,14 +631,18 @@ class NeonsLoraExplorer:
         return chosen, strength
 
     def apply(self, model, clip, lora="None", strength_model=1.0, strength_clip=1.0,
-              random_roll=False, random_low=0.6, random_high=1.0, roll_seed=0, unique_id=None):
+              random_roll=False, random_low=0.6, random_high=1.0, roll_seed=0,
+              roll_scope="all", unique_id=None):
+        note = ""
         if random_roll:
-            lora, strength = self._roll(roll_seed, random_low, random_high)
+            if self.roll_pool(roll_scope, lora)[1]:
+                note = f"'{roll_scope}' is empty — rolled from every LoRA"
+            lora, strength = self._roll(roll_seed, random_low, random_high, roll_scope, lora)
             strength_model = strength_clip = strength
         name = str(lora or "None")
         triggers = loras.triggers_for(name) if name != "None" else ""
         if name in ("", "None") or (not strength_model and not strength_clip):
-            return {"ui": self._ui(name),
+            return {"ui": self._ui(name, note),
                     "result": (model, clip, "" if name == "None" else name, triggers)}
 
         import comfy.sd
@@ -519,16 +651,18 @@ class NeonsLoraExplorer:
 
         path = folder_paths.get_full_path("loras", name)
         if not path:
-            return {"ui": self._ui(name), "result": (model, clip, name, triggers)}
+            return {"ui": self._ui(name, note), "result": (model, clip, name, triggers)}
         weights = comfy.utils.load_torch_file(path, safe_load=True)
         patched_model, patched_clip = comfy.sd.load_lora_for_models(
             model, clip, weights, strength_model, strength_clip
         )
-        return {"ui": self._ui(name), "result": (patched_model, patched_clip, name, triggers)}
+        return {"ui": self._ui(name, note),
+                "result": (patched_model, patched_clip, name, triggers)}
 
-    def _ui(self, name):
+    def _ui(self, name, note=""):
         gallery, family, label = loras.split(name) if name not in ("", "None") else ("", "", "")
         return {
+            "ns_lora_note": [note],
             "ns_lora": [name if name != "None" else ""],
             "ns_lora_gallery": [gallery],
             "ns_lora_family": [family],
@@ -557,7 +691,8 @@ class NeonsModelExplorer:
                     "tooltip": "Which model to load, from your checkpoints and diffusion_models folders. The folder it came from is its gallery, so the browser's gallery dropdown switches between the two; a folder inside that is its family. A diffusion model has no CLIP or VAE of its own — those outputs stay empty and you wire your own loaders.",
                 }),
             },
-            "hidden": {"unique_id": "UNIQUE_ID"},
+            # the queued graph, read only to see whether clip or vae is wired
+            "hidden": {"unique_id": "UNIQUE_ID", "prompt": "PROMPT"},
         }
 
     @classmethod
@@ -579,7 +714,23 @@ class NeonsModelExplorer:
     CATEGORY = "Neons"
     DESCRIPTION = "Neons Model Explorer — load a checkpoint or diffusion model, with a preview gallery."
 
-    def load(self, ckpt_name="None", unique_id=None):
+    @staticmethod
+    def wired_outputs(prompt, unique_id):
+        """Which of this node's output slots something in the graph reads."""
+        used = set()
+        if not isinstance(prompt, dict) or unique_id is None:
+            return used
+        for node in prompt.values():
+            inputs = node.get("inputs") if isinstance(node, dict) else None
+            if not isinstance(inputs, dict):
+                continue
+            for value in inputs.values():
+                if (isinstance(value, (list, tuple)) and len(value) == 2
+                        and str(value[0]) == str(unique_id) and isinstance(value[1], int)):
+                    used.add(value[1])
+        return used
+
+    def load(self, ckpt_name="None", unique_id=None, prompt=None):
         import comfy.sd
         import folder_paths
 
@@ -601,6 +752,18 @@ class NeonsModelExplorer:
 
         # A diffusion model is the UNET on its own: there is no CLIP or VAE in
         # the file, so those outputs stay empty and you wire your own loaders.
+        # Something reading them would otherwise fail far downstream with an
+        # error about None that never mentions this node, so say it here —
+        # and before the model is loaded, not after.
+        missing = [label for slot, label in ((1, "clip"), (2, "vae"))
+                   if slot in self.wired_outputs(prompt, unique_id)]
+        if missing:
+            raise ValueError(
+                f"Neons Model Explorer: '{relative}' is a diffusion model, which carries no "
+                f"{' or '.join(label.upper() for label in missing)} of its own, but this node's "
+                f"{' and '.join(missing)} output{'s are' if len(missing) > 1 else ' is'} wired. "
+                "Unplug it and add a CLIP loader and a VAE loader instead."
+            )
         # ComfyUI renamed this function once; accept either.
         loader = getattr(comfy.sd, "load_diffusion_model", None) or getattr(comfy.sd, "load_unet")
         model = loader(path)

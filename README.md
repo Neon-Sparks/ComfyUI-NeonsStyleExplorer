@@ -7,7 +7,7 @@ No instructions to the model, no sentences about what the image contains.
 
 Nodes (category **Neons**):
 
-* **Neons Style Explorer** — text in, text out
+* **Neons Style Explorer** — text in, text out, plus the name of the style used
 * **Neons Style Explorer (Encode)** — the same plus CLIP encode
 * **Neons LoRA Explorer** — a LoRA loader with a preview gallery per model folder
 * **Neons Model Explorer** — a checkpoint loader with the same gallery, and notes
@@ -70,7 +70,11 @@ masterpiece, best quality, (anime_screenshot:1.1), (anime_coloring:1.1),
   `random_source` (all / main / extra / custom) choosing the pool, `roll_scope`
   narrowing it (all / family / favourites / recent / has preview / missing
   preview) and `roll_seed` plus its control-after-generate widget (set it to
-  randomize so every run rolls anew)
+  randomize so every run rolls anew; a seed of 0 does the same)
+* `style_name` — an output carrying the style this run used, rolls and crawl
+  steps included, for filenames, labels or **Neons Gallery Capture**
+* settings that only matter while a switch is on — the crawl source, the dice's
+  source and seed, the tag separator — stay folded away until it is
 * **Named catalogs** — keep a separate preview set per model ("my Krea 2", "SDXL",
   a client project): each catalog has its own gallery, favourites and recents,
   while the style texts and your edits stay shared. Pick one from the toolbar,
@@ -141,6 +145,9 @@ model instead of one mixed pile.
   straight into your prompt.
 * **Save** files the newest generated image against the current LoRA. Saving is
   manual — no crawl, no auto-populate.
+* **random_roll** loads a random LoRA each run; **roll_scope** keeps the dice
+  inside the picked LoRA's gallery, its family, or your favourites, so it stays
+  among the LoRAs made for the model you are using.
 * Outputs: `model`, `clip`, `lora_name`, `triggers`.
 
 Previews live in `user/loras/<gallery>/` and trigger words in
@@ -157,6 +164,8 @@ node as a string. No roll: a checkpoint is a choice, not a variation.
 
 Outputs: `model`, `clip`, `vae`, `model_name`, `notes`. A diffusion model has no
 CLIP or VAE of its own, so those stay empty for one — wire your own loaders.
+If something is wired to them anyway, the node stops with a message saying so
+instead of failing further down the graph.
 
 ## The catalog
 
@@ -166,7 +175,8 @@ CLIP or VAE of its own, so those stay empty for one — wire your own loaders.
 tools/build_all.sh               # import + lint + index + docs + examples + tests
 python3 tools/lint.py --all      # every finding
 node tools/check_web.mjs         # UI: undefined calls and bad imports
-python3 tests/test_compose.py    # 57 tests
+python3 tests/test_compose.py    # 89 tests
+python3 tools/security_probe.py  # attacks every route on a throwaway copy
 ```
 
 The source of truth for the text is `tools/written/*.json`; `import_source.py`

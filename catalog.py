@@ -398,6 +398,25 @@ def roll(axis="style", scope="all", family=None, seed=None, previews=None, exclu
     return rng.choice(pool)
 
 
+def scope_fell_back(scope="all", source="all", axis="style"):
+    """Did this scope have nothing to offer, so the whole pool was used instead?
+
+    Favourites and recent fall back to everything when they are empty — a run
+    must never be styleless — but doing that without a word made the dice look
+    as though it was ignoring the setting.
+    """
+    if scope not in ("favourites", "recent"):
+        return False
+    wanted = {name.lower() for name in
+              (load_favourites() if scope == "favourites" else load_recents())}
+    pool = by_axis(axis)
+    if source and source != "all":
+        allowed = {name.lower() for name in source_pool(source)}
+        if allowed:  # an empty source already falls back to every source
+            pool = [entry for entry in pool if entry["name"].lower() in allowed]
+    return not any(entry["name"].lower() in wanted for entry in pool)
+
+
 def written_names(axis="style"):
     """Names on an axis excluding imported packs and the user's own entries.
 

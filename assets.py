@@ -117,8 +117,14 @@ def read_json(path, default):
 
 
 def write_json(path, data):
+    """Atomically replace *path*.
+
+    The scratch name carries the process and thread, as catalog.py's does: one
+    shared ".tmp" let two saves finishing together write the same scratch file,
+    and whichever renamed second found it already gone.
+    """
     os.makedirs(os.path.dirname(path), exist_ok=True)
-    temporary = f"{path}.tmp"
+    temporary = f"{path}.{os.getpid()}.{threading.get_ident()}.tmp"
     with open(temporary, "w", encoding="utf-8") as handle:
         json.dump(data, handle, indent=1, ensure_ascii=False)
     os.replace(temporary, path)
@@ -149,6 +155,7 @@ class Gallery:
         self._lock = threading.RLock()
         self._cache = {"names": None, "at": 0.0}
         self._built = {}          # manifest path -> (file signature, built)
+        self._prints = {"stamp": None, "data": {}}   # fingerprints.json, parsed
 
     # ------------------------------------------------------------- listing
 
@@ -213,7 +220,7 @@ class Gallery:
 
     # --------------------------------------------------------- identity
 
-    def fingerprint(self, name):
+    def fingerprint(self, name, save=True):
         """A stable identity for a file: its size plus its first and last MiB.
 
         Previews used to be filed under the PATH, which made a move look like a
@@ -229,9 +236,8 @@ class Gallery:
         except OSError:
             return ""
 
-        cached = read_json(self.fingerprints_path, {})
-        cached = cached if isinstance(cached, dict) else {}
-        record = cached.get(str(name))
+        with self._lock:
+            record = self._load_prints().get(str(name))
         if isinstance(record, dict) and record.get("size") == size and record.get("mtime") == stamp:
             return str(record.get("fingerprint") or "")
 
@@ -247,22 +253,53 @@ class Gallery:
             return ""
         value = digest.hexdigest()
         with self._lock:
-            cached = read_json(self.fingerprints_path, {})
-            cached = cached if isinstance(cached, dict) else {}
-            cached[str(name)] = {"size": size, "mtime": stamp, "fingerprint": value}
-            live = set(self.names())
-            cached = {k: v for k, v in cached.items() if k in live}
-            write_json(self.fingerprints_path, cached)
+            self._load_prints()[str(name)] = {"size": size, "mtime": stamp, "fingerprint": value}
+            if save:
+                self._save_prints()
         return value
+
+    def _prints_stamp(self):
+        try:
+            stat = os.stat(self.fingerprints_path)
+            return (stat.st_mtime_ns, stat.st_size)
+        except OSError:
+            return None
+
+    def _load_prints(self):
+        """fingerprints.json, parsed once and held until the file changes.
+
+        A rescan asks for every file's fingerprint, and each ask used to parse
+        the whole file again — and each new file rewrote it, so the first scan
+        of a few hundred LoRAs read and wrote the same file hundreds of times.
+        The parsed copy is keyed on the file's own size and modification time,
+        so anything that replaces or removes it behind our back is noticed.
+        """
+        stamp = self._prints_stamp()
+        if self._prints["stamp"] != stamp:
+            data = read_json(self.fingerprints_path, {})
+            self._prints = {"stamp": stamp, "data": data if isinstance(data, dict) else {}}
+        return self._prints["data"]
+
+    def _save_prints(self):
+        """Write the held fingerprints, dropping files that are no longer there."""
+        live = set(self.names())
+        data = {k: v for k, v in self._prints["data"].items() if k in live}
+        write_json(self.fingerprints_path, data)
+        self._prints = {"stamp": self._prints_stamp(), "data": data}
 
     def reconcile(self, live=None):
         """Follow files that moved; detach previews from files that were replaced."""
         live = list(live if live is not None else self.names(True))
         by_print = {}
-        for name in live:
-            value = self.fingerprint(name)
-            if value:
-                by_print.setdefault(value, name)
+        with self._lock:
+            before = dict(self._load_prints())
+            for name in live:
+                # collect them all, then write the file once
+                value = self.fingerprint(name, save=False)
+                if value:
+                    by_print.setdefault(value, name)
+            if self._load_prints() != before:
+                self._save_prints()
 
         moved, detached = [], []
         with self._lock:
@@ -385,9 +422,19 @@ class Gallery:
 
     # --------------------------------------------------------- catalog
 
-    def entry(self, name):
+    def entry(self, name, favourites=None, texts=None):
+        """One row for the browser.
+
+        *favourites* and *texts* are the two user files, already read. A caller
+        listing many rows passes them in: reading both from disk per row meant
+        opening the browser on five hundred LoRAs parsed a thousand files.
+        """
         gallery, family, label = self.split(name)
         source, _relative = self.source_of(name)
+        if favourites is None:
+            favourites = set(self.load_favourites())
+        if texts is None:
+            texts = self.load_text()
         return {
             "name": name,
             "source": source,
@@ -395,14 +442,17 @@ class Gallery:
             "gallery": gallery,
             "family": family,
             "key": slug(name),
-            "favourite": self.is_favourite(name),
-            self.text_field: self.text_for(name),
+            "favourite": str(name) in favourites,
+            self.text_field: texts.get(str(name or "").replace("\\", "/"), ""),
         }
 
     def catalog(self, refresh=False):
         live = self.names(refresh)
         fixed = self.reconcile(live) if refresh else {"moved": [], "detached": []}
-        rows = [self.entry(name) for name in live]
+        # read after reconcile: it rewrites both files when something moved
+        favourites, texts = self.load_favourites(), self.load_text()
+        starred = set(favourites)
+        rows = [self.entry(name, starred, texts) for name in live]
         galleries = {}
         for row in rows:
             bucket = galleries.setdefault(row["gallery"],
@@ -416,8 +466,8 @@ class Gallery:
         return {
             "assets": rows,
             "galleries": [galleries[name] for name in order],
-            "favourites": self.load_favourites(),
-            self.text_field: self.load_text(),
+            "favourites": favourites,
+            self.text_field: texts,
             "count": len(rows),
             "moved": [{"from": old, "to": new} for old, new in fixed["moved"]],
             "detached": fixed["detached"],

@@ -248,6 +248,86 @@ export function setValue(node, name, next) {
     node.setDirtyCanvas?.(true, true);
 }
 
+/* -------------------------------------------------------------- folding */
+
+/**
+ * Settings that only mean something while a switch is on. Each is tucked away
+ * until then, so the node shows the controls that are doing something instead
+ * of all twenty-two at once.
+ *
+ * Only controls with NO effect while folded are listed. roll_scope and
+ * crawl_missing_only stay out: the preview's arrows honour both whether or not
+ * crawl or the dice is on, and a hidden setting that still changes behaviour
+ * is worse than a long node.
+ */
+const FOLDS = [
+    { open: (node) => Boolean(value(node, "crawl", false)), fields: ["crawl_source"] },
+    { open: (node) => Boolean(value(node, "random_roll", false)), fields: ["random_source", "roll_seed"] },
+    { open: (node) => String(value(node, "output_format", "natural")) !== "natural", fields: ["tag_separator"] },
+];
+
+/** The switches whose change opens or closes a fold. */
+export const FOLD_SWITCHES = ["crawl", "random_roll", "output_format"];
+
+/**
+ * Hide or show one widget. It is hidden, never removed: a hidden widget keeps
+ * its place in the list, so its value is still saved with the workflow and
+ * still sent with the prompt, and nothing loads out of step.
+ */
+function setFolded(w, folded) {
+    if (!w || Boolean(w._nsFolded) === folded) return false;
+    w._nsFolded = folded;
+    w.hidden = folded;
+    return true;
+}
+
+/** Fold away whatever the current switches make irrelevant. */
+export function syncFold(node) {
+    if (!node?.widgets) return;
+    let changed = false;
+    for (const fold of FOLDS) {
+        const folded = !fold.open(node);
+        for (const name of fold.fields) {
+            const found = widget(node, name);
+            changed = setFolded(found, folded) || changed;
+            // a seed's control (randomize / increment / fixed) goes with it
+            for (const linked of found?.linkedWidgets || []) {
+                changed = setFolded(linked, folded) || changed;
+            }
+        }
+    }
+    if (!changed) return;
+    node.setDirtyCanvas?.(true, true);
+    layout(node);
+    // the panel's position is only known after the next draw: fit the node then
+    requestAnimationFrame(() => requestAnimationFrame(() => fitToContent(node)));
+}
+
+/**
+ * Keep roll_seed still while the dice is off.
+ *
+ * Its control defaults to randomize, so the seed changed on every queue even
+ * when nothing was being rolled. ComfyUI re-runs a node whose inputs changed
+ * and then everything downstream of it, so an identical prompt was re-encoded
+ * and re-sampled each time for no reason. With the dice off the control now
+ * does nothing; switch the dice on and it advances as before.
+ */
+export function holdSeed(node) {
+    const seed = widget(node, "roll_seed");
+    for (const control of seed?.linkedWidgets || []) {
+        if (control._nsHeld) continue;
+        control._nsHeld = true;
+        for (const step of ["beforeQueued", "afterQueued"]) {
+            const original = control[step];
+            if (typeof original !== "function") continue;
+            control[step] = function (...args) {
+                if (!value(node, "random_roll", false)) return undefined;
+                return original.apply(this, args);
+            };
+        }
+    }
+}
+
 /* --------------------------------------------------------------- layout */
 
 const FLEX = new Set(["ns_panel", "prompt", "quality", "negative"]);
@@ -426,16 +506,23 @@ export function keepFitted(node) {
 
 /* -------------------------------------------------------------- preview */
 
+/** A value made safe to sit inside a double-quoted attribute. */
+function attr(text) {
+    // keyed by character code so no bare quote character sits in this file
+    const escapes = { 38: "&amp;", 60: "&lt;", 62: "&gt;", 34: "&quot;", 39: "&#39;" };
+    return String(text ?? "").replace(/[&<>\x22\x27]/g, (ch) => escapes[ch.charCodeAt(0)]);
+}
+
 /** One tile per saved shot: click to make it the cover, cross to delete it. */
 function stripHtml(record, name) {
     if (!record || !record.count) return "";
     return record.shots
         .map(
             (shot) => `<span class="ns-shot${shot.file === record.cover ? " on" : ""}">
-                 <button type="button" class="pick" data-file="${shot.file}" title="Use as cover">
+                 <button type="button" class="pick" data-file="${attr(shot.file)}" title="Use as cover">
                    <img loading="lazy" draggable="false" src="${shotUrl(name, shot.file)}" alt="">
                  </button>
-                 <button type="button" class="drop" data-file="${shot.file}" title="Delete this preview">&#10005;</button>
+                 <button type="button" class="drop" data-file="${attr(shot.file)}" title="Delete this preview">&#10005;</button>
                </span>`
         )
         .join("");

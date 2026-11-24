@@ -108,9 +108,33 @@ def _routes():
 
     async def data(request):
         try:
-            return await request.json() or {}
+            body = await request.json()
         except Exception:
             return {}
+        # every handler reads this with .get(): a JSON list or string in the
+        # body would otherwise raise and answer with a traceback
+        return body if isinstance(body, dict) else {}
+
+    def known_asset(store, name):
+        """Is *name* a file ComfyUI itself lists for this kind of asset?
+
+        The save, text and favourite routes take the asset's name from the
+        browser and file data under it. Held to the real list, a request can
+        only ever touch a LoRA or model that exists: it cannot plant records
+        under invented names, and the name never reaches a path lookup unless
+        ComfyUI produced it in the first place.
+        """
+        name = str(name or "").replace("\\", "/")
+        if not name:
+            return False
+        return name in store.names() or name in store.names(refresh=True)
+
+    # previews are user-supplied images served back to the page; never let a
+    # browser second-guess the declared type
+    SHOT_HEADERS = {
+        "Cache-Control": "public, max-age=31536000, immutable",
+        "X-Content-Type-Options": "nosniff",
+    }
 
     # ---------------- catalog ----------------
 
@@ -303,8 +327,7 @@ def _routes():
         loop = asyncio.get_running_loop()
         path = await loop.run_in_executor(
             None, assets.derived_thumb, path, request.query.get("size"))
-        return web.FileResponse(path, headers={
-            "Cache-Control": "public, max-age=31536000, immutable"})
+        return web.FileResponse(path, headers=SHOT_HEADERS)
 
     @post("/neons_lora/save")
     async def post_lora_save(request):
@@ -316,6 +339,8 @@ def _routes():
         filename = body.get("filename") or ""
         if not name or not filename:
             return web.json_response({"ok": False, "error": "missing lora or image"})
+        if not known_asset(loras, name):
+            return web.json_response({"ok": False, "error": "that LoRA is not in your loras folder"})
         directory = folder_paths.get_directory_by_type(body.get("type") or "output") \
             or folder_paths.get_output_directory()
         full = inside(directory, body.get("subfolder") or "", filename)
@@ -353,6 +378,9 @@ def _routes():
         """Save (or clear) the words a LoRA wants in the prompt."""
         body = await data(request)
         name = body.get("lora") or ""
+        if (body.get("text") or "").strip() and not known_asset(loras, name):
+            return web.json_response({"ok": False, "lora": name, "triggers": "", "text": "",
+                                      "error": "that LoRA is not in your loras folder"})
         text = loras.set_triggers(name, body.get("text") or "")
         return web.json_response({"ok": bool(name), "lora": name, "triggers": text,
                                   "text": text})
@@ -373,6 +401,10 @@ def _routes():
     async def post_lora_favourite(request):
         body = await data(request)
         name = body.get("lora") or ""
+        # un-starring is always allowed; starring needs a LoRA that exists
+        if not known_asset(loras, name) and not loras.is_favourite(name):
+            return web.json_response({"ok": False, "lora": name, "favourite": False,
+                                      "favourites": loras.load_favourites()})
         state = loras.toggle_favourite(name) if body.get("toggle") else \
             loras.set_favourite(name, bool(body.get("on", True)))
         return web.json_response({"ok": True, "lora": name, "favourite": state,
@@ -410,8 +442,7 @@ def _routes():
         loop = asyncio.get_running_loop()
         path = await loop.run_in_executor(
             None, assets.derived_thumb, path, request.query.get("size"))
-        return web.FileResponse(path, headers={
-            "Cache-Control": "public, max-age=31536000, immutable"})
+        return web.FileResponse(path, headers=SHOT_HEADERS)
 
     @post("/neons_model/save")
     async def post_model_save(request):
@@ -423,6 +454,8 @@ def _routes():
         filename = body.get("filename") or ""
         if not name or not filename:
             return web.json_response({"ok": False, "error": "missing model or image"})
+        if not known_asset(models, name):
+            return web.json_response({"ok": False, "error": "that model is not in your model folders"})
         directory = folder_paths.get_directory_by_type(body.get("type") or "output") \
             or folder_paths.get_output_directory()
         full = inside(directory, body.get("subfolder") or "", filename)
@@ -460,6 +493,9 @@ def _routes():
         """Save (or clear) a checkpoint's notes."""
         body = await data(request)
         name = body.get("model") or ""
+        if (body.get("text") or "").strip() and not known_asset(models, name):
+            return web.json_response({"ok": False, "model": name, "notes": "", "text": "",
+                                      "error": "that model is not in your model folders"})
         text = models.set_notes(name, body.get("text") or "")
         return web.json_response({"ok": bool(name), "model": name, "notes": text,
                                   "text": text})
@@ -475,6 +511,9 @@ def _routes():
     async def post_model_favourite(request):
         body = await data(request)
         name = body.get("model") or ""
+        if not known_asset(models, name) and not models.is_favourite(name):
+            return web.json_response({"ok": False, "model": name, "favourite": False,
+                                      "favourites": models.load_favourites()})
         state = models.toggle_favourite(name) if body.get("toggle") else \
             models.set_favourite(name, bool(body.get("on", True)))
         return web.json_response({"ok": True, "model": name, "favourite": state,
@@ -541,8 +580,7 @@ def _routes():
         loop = asyncio.get_running_loop()
         path = await loop.run_in_executor(
             None, gallery.derived_thumb, path, request.query.get("size"))
-        return web.FileResponse(path, headers={
-            "Cache-Control": "public, max-age=31536000, immutable"})
+        return web.FileResponse(path, headers=SHOT_HEADERS)
 
     @post("/neons_style/gallery/thumbs")
     async def post_gallery_thumbs(request):
@@ -731,8 +769,13 @@ def _routes():
     @post("/neons_style/gallery/delete_family")
     async def post_gallery_delete_family(request):
         body = await data(request)
-        family = (body.get("family") or "").strip()
-        # no family given means every family: used by "delete all previews"
+        family = str(body.get("family") or "").strip()
+        # "delete all previews" has to say so. A missing family used to mean
+        # every family, so an empty or malformed request wiped the whole
+        # gallery — the most destructive thing here was also the default.
+        if not family and body.get("all") is not True:
+            return web.json_response({"ok": False, "deleted": 0,
+                                      "error": "name a family, or ask for all of them"})
         names = [entry["name"] for entry in entries() if not family or entry["family"] == family]
         return web.json_response({"ok": True, "deleted": gallery.delete_many(names),
                                   "family": family or "all"})

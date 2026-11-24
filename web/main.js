@@ -1,7 +1,7 @@
 import { app } from "../../scripts/app.js";
 import { api } from "../../scripts/api.js";
 import { NODE_TYPES, RANDOM, entryOf, lastErrorText, loadCatalog, loadCatalogSets, loadGallery, namesOf, patchPreview, recordRun, saveRun, shotsOf, sourceNames, state } from "./api.js";
-import { STYLE_SLOTS, activeSlot, advanceCrawl, attachPanel, claimSlot, say, composeNow, effectiveStyle, fitToContent, keepFitted, layout, refresh, rollStyle, saveImage, saveLatest, syncCrawl, value, widget } from "./panel.js";
+import { FOLD_SWITCHES, STYLE_SLOTS, activeSlot, advanceCrawl, attachPanel, claimSlot, say, composeNow, effectiveStyle, fitToContent, holdSeed, keepFitted, layout, refresh, rollStyle, saveImage, saveLatest, syncCrawl, syncFold, value, widget } from "./panel.js";
 
 function syncCombo(node, field, axis) {
     const w = widget(node, field);
@@ -109,6 +109,8 @@ function hook(node) {
             if (w.name === "crawl" || w.name === "roll_scope") {
                 syncCrawl(node);
             }
+            // settings that only matter while this switch is on fold with it
+            if (FOLD_SWITCHES.includes(w.name)) syncFold(node);
             return result;
         };
         if (w.name === "crawl") {
@@ -152,6 +154,8 @@ function setup(node) {
     adoptRetiredDice(node);
     syncCombos(node);
     hook(node);
+    holdSeed(node);
+    syncFold(node);
     if (value(node, "crawl", false)) syncCrawl(node);
     refresh(node);
     layout(node);
@@ -347,6 +351,7 @@ app.registerExtension({
             syncCombos(node);
             restoreSaved(node);
             syncCombos(node);      // the restored style decides the active slot
+            syncFold(node);        // and the restored switches decide the folds
             refresh(node);
             layout(node);
         }
@@ -390,6 +395,7 @@ app.registerExtension({
             }
             setup(this);
             restoreSaved(this);
+            syncFold(this);       // restored switches are set without a callback
             return result;
         };
 
@@ -515,7 +521,19 @@ app.registerExtension({
                 const values = info?.widgets_values;
                 if (Array.isArray(values) && values.length) {
                     const current = live.map((w) => w.name);
-                    const candidates = [current, ...LAYOUTS]
+                    // The order litegraph really writes: every widget whose own
+                    // `serialize` is not false — which includes the seed's
+                    // control and this node's panel, neither of which is in
+                    // `live`. A file written by a tool leaves the panel's empty
+                    // value off the end, so that order is accepted as well.
+                    // Without these two, a present-day save was only ever
+                    // compared against PAST layouts: one of the same length
+                    // won by default and every value loaded out of step.
+                    const serial = (this.widgets || [])
+                        .filter((w) => w?.name && w.serialize !== false).map((w) => w.name);
+                    const core = serial.filter((name) => !SKIP_WIDGETS.has(name));
+                    const presentDay = new Set([serial, core, current]);
+                    const candidates = [serial, core, current, ...LAYOUTS]
                         .filter((names) => names.length === values.length);
                     let best = candidates[0] || current;
                     let bestScore = candidates.length ? scoreLayout(live, best, values) : -1;
@@ -526,9 +544,9 @@ app.registerExtension({
                             bestScore = score;
                         }
                     }
-                    const sameOrder = best.length === current.length
-                        && best.every((name, index) => name === current[index]);
-                    if (!sameOrder || values.length !== live.length) {
+                    // already in today's order: leave the array exactly as it is
+                    const sameOrder = candidates.length > 0 && presentDay.has(best);
+                    if (!sameOrder) {
                         const layout = candidates.length ? best : null;
                         const held = new Map((layout || []).map((name, index) => [name, values[index]]));
                         // style_2 and style_3 are gone: if an old file used one
@@ -608,6 +626,7 @@ app.registerExtension({
                         await loadGallery();
                         syncCombos(this);
                         restoreSaved(this);   // a value held back on load
+                        syncFold(this);
                         refresh(this);
                         composeNow(this);
                     },

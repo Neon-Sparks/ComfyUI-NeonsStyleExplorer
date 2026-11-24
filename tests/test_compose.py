@@ -1356,5 +1356,318 @@ class Catalog(unittest.TestCase):
                 self.assertTrue(pos.strip(), entry["name"])
 
 
+class Rerolls(unittest.TestCase):
+    """2.10.0 — a roll no widget announces must still happen, and the new
+    outputs and scopes behave as documented."""
+
+    def tearDown(self):
+        wipe_user_files("favourites.json", "recents.json")
+
+    # ------------------------------------------------------------ signature
+
+    def test_seed_zero_rolls_afresh_every_run(self):
+        """roll_seed 0 promises a new roll each run. Nothing changes on the
+        node, so the signature itself has to differ or ComfyUI serves the
+        previous roll from cache."""
+        node = nodes.NeonsStyleExplorer
+        self.assertNotEqual(node.IS_CHANGED(random_roll=True, roll_seed=0),
+                            node.IS_CHANGED(random_roll=True, roll_seed=0))
+        # a seeded roll is repeatable, so it may be cached
+        self.assertEqual(node.IS_CHANGED(random_roll=True, roll_seed=5),
+                         node.IS_CHANGED(random_roll=True, roll_seed=5))
+        # with the dice off the seed is irrelevant, and so is its being zero
+        self.assertEqual(node.IS_CHANGED(random_roll=False, roll_seed=0),
+                         node.IS_CHANGED(random_roll=False, roll_seed=0))
+        # crawl owns the sequence: the dice is not rolling underneath it
+        self.assertEqual(node.IS_CHANGED(random_roll=True, roll_seed=0, crawl=True),
+                         node.IS_CHANGED(random_roll=True, roll_seed=0, crawl=True))
+
+    def test_a_dice_on_format_or_finish_always_rolls(self):
+        node = nodes.NeonsStyleExplorer
+        for field in ("format", "finish"):
+            self.assertNotEqual(node.IS_CHANGED(**{field: catalog.RANDOM_TOKEN}),
+                                node.IS_CHANGED(**{field: catalog.RANDOM_TOKEN}), field)
+            # no rolling anywhere while crawling
+            self.assertEqual(node.IS_CHANGED(crawl=True, **{field: catalog.RANDOM_TOKEN}),
+                             node.IS_CHANGED(crawl=True, **{field: catalog.RANDOM_TOKEN}), field)
+
+    def test_a_seeded_roll_follows_its_pool(self):
+        """Starring a style changes what 'favourites' rolls without touching a
+        widget; the signature has to move with the answer."""
+        node = nodes.NeonsStyleExplorer
+        settings = {"random_roll": True, "roll_seed": 5, "roll_scope": "favourites"}
+        before = node.IS_CHANGED(**settings)
+        self.assertEqual(before, node.IS_CHANGED(**settings))
+        landed = catalog.roll(scope="favourites", seed=5)["name"]
+        other = next(name for name in catalog.names_for("style") if name != landed)
+        catalog.set_favourite(other, True)
+        self.assertEqual(catalog.roll(scope="favourites", seed=5)["name"], other)
+        self.assertNotEqual(before, node.IS_CHANGED(**settings))
+
+    # ---------------------------------------------------------- style_name
+
+    def test_style_name_output(self):
+        for cls in (nodes.NeonsStyleExplorer, nodes.NeonsStyleExplorerEncode):
+            self.assertEqual(cls.RETURN_NAMES[-1], "style_name", cls.__name__)
+            self.assertEqual(len(cls.RETURN_NAMES), len(cls.RETURN_TYPES), cls.__name__)
+        # appended, so the slots older workflows wire keep their positions
+        self.assertEqual(nodes.NeonsStyleExplorer.RETURN_NAMES[:3],
+                         ("positive", "negative", "debug"))
+        self.assertEqual(nodes.NeonsStyleExplorerEncode.RETURN_NAMES[:5],
+                         ("positive_conditioning", "negative_conditioning",
+                          "positive", "negative", "debug"))
+        name = catalog.written_names("style")[0]
+        out = nodes.NeonsStyleExplorer().apply(prompt="x", style=name)["result"]
+        self.assertEqual(len(out), 4)
+        self.assertEqual(out[3], name)
+        # no style: an empty string, never "None"
+        self.assertEqual(nodes.NeonsStyleExplorer().apply(prompt="x")["result"][3], "")
+        # a roll reports what it landed on
+        rolled = nodes.NeonsStyleExplorer().apply(prompt="x", random_roll=True, roll_seed=9)
+        self.assertEqual(rolled["result"][3], rolled["ui"]["ns_style"][0])
+        self.assertTrue(rolled["result"][3])
+
+    # -------------------------------------------------------- empty scopes
+
+    def test_an_empty_shortlist_is_reported(self):
+        """Favourites with nothing starred rolls from everything — which is
+        right — but it has to say so."""
+        self.assertTrue(catalog.scope_fell_back("favourites"))
+        self.assertTrue(catalog.scope_fell_back("recent"))
+        self.assertFalse(catalog.scope_fell_back("all"))
+        self.assertFalse(catalog.scope_fell_back("family"))
+        debug = nodes.run(prompt="x", random_roll=True, roll_seed=3, roll_scope="favourites")[2]
+        self.assertIn("'favourites' is empty", debug)
+        catalog.set_favourite(catalog.written_names("style")[0], True)
+        self.assertFalse(catalog.scope_fell_back("favourites"))
+        debug = nodes.run(prompt="x", random_roll=True, roll_seed=3, roll_scope="favourites")[2]
+        self.assertNotIn("is empty", debug)
+        self.assertIn("scope favourites", debug)
+        # starred, but not in the source being rolled: still a fallback
+        self.assertTrue(catalog.scope_fell_back("favourites", "extra"))
+
+
+class LoraScope(unittest.TestCase):
+    """The LoRA dice can be kept inside a folder or the favourites."""
+
+    FILES = ["krea 2/film.safetensors", "krea 2/portraits/soft.safetensors",
+             "krea 2/portraits/hard.safetensors", "sdxl/ink.safetensors", "loose.safetensors"]
+
+    def setUp(self):
+        self.loras = importlib.import_module(f"{PKG}.loras")
+        self._names = self.loras.names
+        self._favourites = self.loras.load_favourites
+        self.loras.names = lambda refresh=False: list(self.FILES)
+        self.loras.load_favourites = lambda: []
+
+    def tearDown(self):
+        self.loras.names = self._names
+        self.loras.load_favourites = self._favourites
+
+    def test_scopes_are_folder_tests(self):
+        node = nodes.NeonsLoraExplorer
+        self.assertEqual(node.roll_pool("all", "None"), (self.FILES, False))
+        self.assertEqual(node.roll_pool("same gallery", "krea 2/film.safetensors"),
+                         (self.FILES[:3], False))
+        self.assertEqual(node.roll_pool("same family", "krea 2/portraits/soft.safetensors"),
+                         (self.FILES[1:3], False))
+        # a LoRA at the top of its gallery has no family: its siblings are the
+        # other family-less files there, not the whole gallery
+        self.assertEqual(node.roll_pool("same family", "krea 2/film.safetensors"),
+                         (self.FILES[:1], False))
+        self.assertEqual(node.roll_pool("same gallery", "loose.safetensors"),
+                         (self.FILES[4:], False))
+        # windows separators in a saved workflow
+        self.assertEqual(node.roll_pool("same gallery", "krea 2\\film.safetensors"),
+                         (self.FILES[:3], False))
+
+    def test_an_empty_scope_widens_and_says_so(self):
+        node = nodes.NeonsLoraExplorer
+        self.assertEqual(node.roll_pool("favourites", "None"), (self.FILES, True))
+        self.assertEqual(node.roll_pool("same gallery", "None"), (self.FILES, True))
+        self.loras.load_favourites = lambda: ["sdxl/ink.safetensors", "gone.safetensors"]
+        self.assertEqual(node.roll_pool("favourites", "None"), (["sdxl/ink.safetensors"], False))
+
+    def test_the_roll_stays_inside_its_scope(self):
+        node = nodes.NeonsLoraExplorer
+        for seed in range(1, 40):
+            name, strength = node._roll(seed, 0.6, 1.0, "same gallery", "krea 2/film.safetensors")
+            self.assertTrue(name.startswith("krea 2/"), name)
+            self.assertTrue(0.6 <= strength <= 1.0)
+        # the old three-argument call still rolls from everything
+        self.assertIn(node._roll(7, 0.6, 1.0)[0], self.FILES)
+
+    def test_signature(self):
+        node = nodes.NeonsLoraExplorer
+        self.assertNotEqual(node.IS_CHANGED(random_roll=True, roll_seed=0),
+                            node.IS_CHANGED(random_roll=True, roll_seed=0))
+        seeded = {"random_roll": True, "roll_seed": 4, "roll_scope": "favourites"}
+        before = node.IS_CHANGED(**seeded)
+        self.assertEqual(before, node.IS_CHANGED(**seeded))
+        landed = node._roll(4, 0.6, 1.0, "favourites", "None")[0]
+        other = next(name for name in self.FILES if name != landed)
+        self.loras.load_favourites = lambda: [other]
+        self.assertNotEqual(before, node.IS_CHANGED(**seeded))
+
+    def test_the_new_widget_cannot_break_an_old_workflow(self):
+        """roll_scope is optional and comes last: older saved values keep their
+        positions and an API prompt without it still validates."""
+        types = nodes.NeonsLoraExplorer.INPUT_TYPES()
+        self.assertNotIn("roll_scope", types["required"])
+        self.assertEqual(list(types["optional"]), ["roll_scope"])
+        self.assertEqual(list(types["required"])[-1], "roll_seed")
+        self.assertEqual(types["optional"]["roll_scope"][0], nodes.LORA_ROLL_SCOPES)
+        # A workflow saved before the widget existed restores values by
+        # position and leaves the panel's empty string in it. That must roll
+        # from everything, quietly, and must not stop the workflow validating.
+        node = nodes.NeonsLoraExplorer
+        for junk in ("", None, "randomize", 3):
+            self.assertEqual(node.roll_pool(junk, "None"), (self.FILES, False), repr(junk))
+        self.assertIs(node.VALIDATE_INPUTS(roll_scope=""), True)
+        import inspect
+        self.assertIn("roll_scope", inspect.signature(node.VALIDATE_INPUTS).parameters)
+
+
+class ModelGuard(unittest.TestCase):
+    def test_wired_outputs(self):
+        """Which of the node's outputs the queued graph actually reads."""
+        wired = nodes.NeonsModelExplorer.wired_outputs
+        prompt = {
+            "3": {"class_type": "NeonsModelExplorer", "inputs": {"ckpt_name": "x"}},
+            "5": {"inputs": {"clip": ["3", 1], "text": "a pier", "steps": 4}},
+            "6": {"inputs": {"model": ["3", 0], "other": ["9", 2]}},
+        }
+        self.assertEqual(wired(prompt, "3"), {0, 1})
+        self.assertEqual(wired(prompt, 3), {0, 1})          # the id may be a number
+        self.assertEqual(wired(prompt, "9"), {2})
+        self.assertEqual(wired(prompt, "4"), set())
+        # nothing to go on is "nothing wired", never an error
+        self.assertEqual(wired(None, "3"), set())
+        self.assertEqual(wired({}, None), set())
+        self.assertEqual(wired({"1": "junk", "2": {"inputs": None}}, "3"), set())
+        self.assertIn("prompt", nodes.NeonsModelExplorer.INPUT_TYPES()["hidden"])
+
+
+class AssetStore(unittest.TestCase):
+    """The LoRA/model store: one read per listing, one write per rescan."""
+
+    def setUp(self):
+        import shutil
+        import tempfile
+
+        self.assets = importlib.import_module(f"{PKG}.assets")
+        self.work = tempfile.mkdtemp(prefix="ns_assets_")
+        self.addCleanup(shutil.rmtree, self.work, True)
+        self.files = [f"krea 2/lora_{n:03d}.safetensors" for n in range(60)]
+        self.store = self.assets.Gallery(kind="lora", folder_key="loras",
+                                         storage="unused", text_field="triggers")
+        self.store.root = os.path.join(self.work, "store")
+        self.store.favourites_path = os.path.join(self.store.root, "favourites.json")
+        self.store.text_path = os.path.join(self.store.root, "triggers.json")
+        self.store.fingerprints_path = os.path.join(self.store.root, "fingerprints.json")
+        self.store.names = lambda refresh=False: list(self.files)
+
+        def real(name):
+            path = os.path.join(self.work, "files", name.replace("/", "__"))
+            if not os.path.isfile(path):
+                os.makedirs(os.path.dirname(path), exist_ok=True)
+                with open(path, "wb") as handle:
+                    handle.write(name.encode("utf-8") * 20)
+            return path
+
+        self.store.full_path = real
+
+    def _count(self, name):
+        """Wrap one of the store's functions and count its calls."""
+        calls = []
+        original = getattr(self.store, name)
+
+        def counted(*args, **kwargs):
+            calls.append(args)
+            return original(*args, **kwargs)
+
+        setattr(self.store, name, counted)
+        return calls
+
+    def test_listing_reads_each_user_file_once(self):
+        self.store.set_favourite(self.files[3], True)
+        self.store.set_text(self.files[3], "soft light")
+        favourites = self._count("load_favourites")
+        texts = self._count("load_text")
+        data = self.store.catalog()
+        self.assertEqual(data["count"], 60)
+        self.assertEqual(len(favourites), 1)
+        self.assertEqual(len(texts), 1)
+        row = data["assets"][3]
+        self.assertTrue(row["favourite"])
+        self.assertEqual(row["triggers"], "soft light")
+        self.assertFalse(data["assets"][4]["favourite"])
+        self.assertEqual(data["assets"][4]["triggers"], "")
+        # a single row still answers on its own
+        self.assertTrue(self.store.entry(self.files[3])["favourite"])
+        self.assertEqual(self.store.entry(self.files[3])["triggers"], "soft light")
+
+    def test_a_rescan_writes_fingerprints_once(self):
+        writes = []
+        original = self.assets.write_json
+
+        def counted(path, data):
+            writes.append(path)
+            return original(path, data)
+
+        self.assets.write_json = counted
+        self.addCleanup(setattr, self.assets, "write_json", original)
+        self.store.reconcile(self.files)
+        prints = [path for path in writes if path == self.store.fingerprints_path]
+        self.assertEqual(len(prints), 1)
+        with open(self.store.fingerprints_path, "r", encoding="utf-8") as handle:
+            import json
+            self.assertEqual(len(json.load(handle)), 60)
+        # nothing changed: a second rescan writes nothing at all
+        del writes[:]
+        self.store.reconcile(self.files)
+        self.assertEqual(writes, [])
+        # and the values are stable and distinct
+        first = self.store.fingerprint(self.files[0])
+        self.assertEqual(first, self.store.fingerprint(self.files[0]))
+        self.assertNotEqual(first, self.store.fingerprint(self.files[1]))
+
+    def test_fingerprints_notice_the_file_changing_behind_them(self):
+        value = self.store.fingerprint(self.files[0])
+        self.assertTrue(os.path.isfile(self.store.fingerprints_path))
+        os.remove(self.store.fingerprints_path)
+        # the held copy is dropped with the file, and the value is rebuilt
+        self.assertEqual(self.store._load_prints(), {})
+        self.assertEqual(self.store.fingerprint(self.files[0]), value)
+        self.assertTrue(os.path.isfile(self.store.fingerprints_path))
+
+    def test_parallel_saves_do_not_share_a_scratch_file(self):
+        import json
+        import threading
+
+        target = os.path.join(self.work, "shared.json")
+        errors = []
+
+        def hammer(n):
+            try:
+                for step in range(40):
+                    self.assets.write_json(target, {"writer": n, "step": step})
+            except Exception as err:  # noqa: BLE001 - the test reports any failure
+                errors.append(err)
+
+        threads = [threading.Thread(target=hammer, args=(n,)) for n in range(8)]
+        for thread in threads:
+            thread.start()
+        for thread in threads:
+            thread.join()
+        # Windows may refuse a rename while another thread holds the target
+        # open; what must never happen is two writers sharing one scratch name
+        self.assertFalse([err for err in errors if not isinstance(err, PermissionError)], errors)
+        with open(target, "r", encoding="utf-8") as handle:
+            self.assertIn("writer", json.load(handle))
+        self.assertEqual([name for name in os.listdir(self.work) if name.endswith(".tmp")
+                          and not errors], [])
+
+
 if __name__ == "__main__":
     unittest.main(verbosity=2)
