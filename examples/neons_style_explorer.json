@@ -32,6 +32,11 @@
      "name": "debug",
      "type": "STRING",
      "links": null
+    },
+    {
+     "name": "style_name",
+     "type": "STRING",
+     "links": null
     }
    ],
    "properties": {
