@@ -1,0 +1,1450 @@
+# Neons Style Roller — the hand-written core of the word list.
+#
+# tools/mine_roller.py merges this with terms mined from the style catalog and
+# writes data/roller_words.txt, which is what the node reads.
+#
+#   @ aspect | kinds      starts a section; kinds are space-separated, * = every kind
+#   term                  one term per line
+#   term => booru_tag     a term with a real booru tag for the "tags" output
+#
+# Every term here is style language only: how a picture is made or how it
+# feels, never what it shows.
+
+@ look | *
+painterly
+stylized
+stylised realism
+minimalist
+maximalist
+ornate
+decorative
+intricate
+highly detailed
+loosely rendered
+simplified
+bold
+delicate
+elegant
+raw
+refined
+rough
+polished
+gestural
+expressive
+whimsical styling
+graphic
+flat
+dimensional
+layered
+textured
+clean
+messy
+handmade
+hand-drawn
+hand-painted
+handcrafted
+organic
+mechanical
+fluid
+rigid
+crisp
+soft
+hazy
+dreamy
+surreal => surreal
+uncanny
+naive
+primitive
+sophisticated
+experimental
+avant-garde
+retro
+vintage
+futuristic
+timeless
+nostalgic
+rustic
+industrial
+luxurious
+understated
+lavish
+sparse
+dense
+airy
+weighty
+luminous
+opaque
+translucent
+iridescent
+stark
+lush
+gritty
+glossy
+matte
+weathered
+pristine
+distressed
+kinetic
+static
+rhythmic
+chaotic
+orderly
+lyrical
+theatrical
+cinematic
+editorial
+documentary
+candid
+staged
+monumental
+intimate
+miniature
+exaggerated
+restrained
+playful
+austere
+opulent
+ethereal
+earthy
+otherworldly
+hypnotic
+tactile
+sculptural
+ornamental
+folk-inspired
+mythic
+heraldic
+ceremonial
+diagrammatic
+schematic
+encyclopedic
+storybook
+poster-like
+postcard-like
+mural-like
+tapestry-like
+jewel-like
+toy-like
+dollhouse-like
+dioramic
+high fidelity
+lo-fi
+mixed media => mixed_media
+multimedia
+hybrid style
+genre-blending
+eclectic
+
+@ look | realism
+photorealistic => photorealistic
+hyperrealistic
+true to life
+naturalistic
+lifelike
+unretouched
+documentary realism
+photojournalistic
+cinema verite
+film still look
+editorial photography
+fine art photography
+street photography
+studio photography
+candid snapshot
+analog photography
+digital photography
+large format photography
+medium format look
+35mm film look
+instant film look
+disposable camera look
+found footage look
+security camera look
+vhs footage look
+super 8 look
+anamorphic look
+technicolor look
+newsreel look
+tintype look
+daguerreotype look
+polaroid look => instant_photo
+cinematic realism
+gritty realism
+soft realism
+heightened realism
+magical realism
+
+@ look | anime
+anime style => anime_coloring
+manga style
+cel-shaded anime
+90s anime look
+80s anime look
+2000s anime look
+modern anime look
+retro anime
+shonen style
+shojo style
+seinen style
+josei style => josei
+chibi style => chibi
+moe style
+kawaii styling
+key visual style
+anime screenshot => anime_screenshot
+anime film look
+ova look
+light novel illustration
+visual novel art
+gacha game art
+doujin style
+mecha anime style
+magical girl style
+slice of life anime look
+isekai fantasy look
+painterly anime
+sketchy manga
+screentone manga
+ink manga
+webtoon style => webtoon
+manhwa style
+donghua style
+anime watercolor
+anime lineart => lineart
+super deformed
+bishoujo style
+bishounen style
+gekiga style
+kodomo style
+
+@ look | cartoon
+cartoon style
+saturday morning cartoon
+rubber hose animation
+golden age animation
+limited animation style
+modern tv cartoon
+adult animation style
+preschool cartoon style
+classic theatrical cartoon
+stop motion look
+claymation look => claymation
+puppet animation look
+cutout animation
+paper cutout animation
+flash animation look
+vector cartoon
+thick outline cartoon
+calarts style
+storyboard style
+animation cel look
+animated feature look
+3d animated feature look
+toon shaded
+squash and stretch styling
+bouncy cartoon forms
+caricature
+editorial cartoon
+comic strip cartoon
+retro mascot style
+mid-century cartoon modern
+ukiyo-e cartoon hybrid
+silhouette animation
+sand animation look
+pinscreen animation look
+rotoscoped animation
+
+@ look | comics
+comic book style => comic
+graphic novel style
+silver age comics
+golden age comics
+bronze age comics
+modern comics
+indie comics
+underground comix
+franco-belgian comics
+ligne claire
+bande dessinee
+pulp magazine cover
+pulp illustration
+noir comic
+superhero comic style
+newspaper strip
+zine style
+punk zine
+risograph print
+screenprint
+linocut print
+woodcut print
+woodblock print => woodblock_print
+letterpress print
+lithograph
+etching
+engraving
+mezzotint
+aquatint
+offset print look
+ben-day dots
+halftone print => halftone
+cmyk misregistration
+overprint
+spot colour print
+duotone print
+gig poster
+propaganda poster style
+travel poster style
+movie poster style => poster
+tarot card style
+playing card style
+trading card style
+sticker art => sticker
+stamp art
+banknote engraving
+bookplate style
+chapbook woodcut
+broadsheet print
+blueprint style
+cyanotype print
+photocopy art
+xerox art
+mimeograph look
+
+@ look | painting
+oil painting => oil_painting_(medium)
+watercolour painting => watercolor_(medium)
+gouache painting => gouache_(medium)
+acrylic painting => acrylic_paint_(medium)
+tempera painting
+fresco painting
+encaustic painting
+ink wash painting => ink_wash_painting
+pastel painting => pastel_(medium)
+casein painting
+enamel painting
+spray paint art
+airbrush painting => airbrush_(medium)
+plein air painting
+alla prima painting
+glazed oil painting
+impasto painting => impasto
+palette knife painting
+underpainting visible
+grisaille
+sfumato
+tenebrism
+trompe l'oeil
+miniature painting
+icon painting
+scroll painting
+mural painting
+panel painting
+academic painting
+salon painting
+genre painting
+still life painting
+landscape painting tradition
+portrait painting tradition
+history painting
+vanitas style
+sumi-e
+nihonga
+gongbi painting
+literati painting
+thangka painting
+mughal miniature style
+persian miniature style
+aboriginal dot painting
+folk art painting
+naive painting
+outsider art
+colour field painting
+action painting
+drip painting
+hard-edge painting
+matte painting
+speed painting
+digital painting
+concept painting
+photobash painting
+
+@ look | illustration
+illustration style
+editorial illustration
+children's book illustration
+storybook illustration
+picture book art
+botanical illustration
+scientific illustration
+medical illustration
+technical illustration
+architectural illustration
+fashion illustration
+spot illustration
+vintage illustration
+golden age illustration
+mid-century illustration
+pen and ink illustration => pen_(medium)
+ink drawing => ink_(medium)
+pencil drawing => graphite_(medium)
+graphite sketch
+charcoal drawing => charcoal_(medium)
+conte crayon drawing
+chalk drawing => chalk_(medium)
+pastel drawing
+coloured pencil drawing => colored_pencil_(medium)
+marker drawing => marker_(medium)
+copic marker art => copic_(medium)
+ballpoint pen drawing => ballpoint_pen_(medium)
+crayon drawing => crayon_(medium)
+brush pen drawing
+silverpoint drawing
+scratchboard
+stipple drawing
+cross-hatched drawing
+contour drawing
+gesture drawing
+life drawing
+sketchbook page
+rough sketch => sketch
+loose sketch
+thumbnail sketch
+concept art => concept_art
+character design sheet
+production art
+visual development art
+ink and wash
+line and wash
+watercolour and ink
+gouache illustration
+cut paper illustration
+paper collage => collage
+vector illustration => vector_trace
+flat illustration
+isometric illustration => isometric
+textured digital illustration
+lineless illustration
+limited palette illustration => limited_palette
+retro textbook illustration
+field guide illustration
+map illustration
+tattoo flash
+doodle art
+zentangle
+calligraphic illustration
+manuscript illumination
+art nouveau illustration => art_nouveau
+woodland storybook style
+fairy tale illustration
+
+@ look | 3d
+3d render => 3d
+cgi
+octane render look
+path traced render
+ray traced render
+real-time render
+game engine look
+unreal engine look
+stylised 3d
+low poly => low_poly
+high poly sculpt
+voxel art => voxel_art
+pixel art => pixel_art
+16-bit pixel art
+8-bit pixel art
+32-bit era graphics
+ps1 era graphics
+n64 era graphics
+dreamcast era graphics
+retro 3d
+pre-rendered background
+isometric game art
+hand-painted textures
+cel-shaded 3d => cel_shading
+toon shader
+clay render
+matcap render
+wireframe render => wireframe
+ambient occlusion pass
+subsurface scattering
+physically based rendering
+procedural shading
+volumetric render
+sculpted digital clay
+zbrush sculpt look
+hard surface modelling
+kitbash look
+photogrammetry scan look
+point cloud render
+vector 3d
+blocky geometry
+chunky proportions
+miniature diorama render
+toy render
+vinyl figure look
+action figure look
+plastic model look
+papercraft render
+felt render
+knitted render
+inflatable 3d look
+glass render
+chrome render
+holographic render => holographic
+game splash art
+card game art
+jrpg art
+wrpg art
+roguelike pixel look
+visual effects shot
+motion graphics look
+tilt-shift miniature
+
+@ look | design
+graphic design
+flat design
+vector art
+swiss design
+international typographic style
+bauhaus design
+constructivist design
+de stijl
+memphis design
+mid-century modern design
+art deco design => art_deco
+art nouveau design
+brutalist design
+minimalist design
+maximalist design
+neo-brutalism
+skeuomorphic
+glassmorphism
+claymorphism
+material design look
+corporate memphis
+editorial layout
+magazine layout => magazine_cover
+album cover design
+book cover design
+packaging design
+logo style
+emblem style
+badge style
+icon style
+pictogram style
+infographic style
+data visualisation style
+diagram style => diagram
+blueprint design
+technical drawing
+patent drawing
+wayfinding signage
+vintage advertising
+retro packaging
+matchbox label art
+enamel sign style
+sign painting
+hand lettering
+typographic poster
+psychedelic poster => psychedelic
+wpa poster style
+ukiyo-e print => ukiyo-e
+pattern design
+textile print
+wallpaper pattern
+tile pattern
+stained glass design => stained_glass
+mosaic design => mosaic
+paper cut design => papercraft
+origami design
+embroidery design
+quilt pattern
+batik pattern
+ikat pattern
+tartan pattern
+paisley pattern
+damask pattern
+chinoiserie
+art deco geometry
+streamline moderne
+googie style
+atomic age design
+y2k aesthetic
+frutiger aero
+vaporwave aesthetic => vaporwave
+synthwave aesthetic
+cottagecore aesthetic
+dark academia aesthetic
+light academia aesthetic
+solarpunk aesthetic
+steampunk aesthetic => steampunk
+dieselpunk aesthetic
+cyberpunk aesthetic => cyberpunk
+atompunk aesthetic
+biopunk aesthetic
+goblincore aesthetic
+fairycore aesthetic
+kidcore aesthetic
+weirdcore aesthetic
+dreamcore aesthetic
+liminal aesthetic
+grunge aesthetic
+kitsch
+camp styling
+wabi-sabi
+japandi
+scandinavian minimalism
+
+@ look | abstract
+abstract => abstract
+non-representational
+geometric abstraction
+lyrical abstraction
+abstract expressionism
+biomorphic abstraction
+hard-edge abstraction
+gestural abstraction
+minimal abstraction
+op art
+kinetic art look
+generative art
+algorithmic art
+fractal art
+glitch art => glitch
+datamosh
+pixel sorting
+databending
+ascii art
+procedural pattern
+reaction-diffusion pattern
+voronoi pattern
+flow field art
+cellular automata pattern
+moire pattern
+interference pattern
+kaleidoscopic
+tessellated
+mandala-like
+psychedelic
+fluid art
+marbled
+ink in water
+smoke art
+light painting
+double exposure
+multiple exposure
+photogram
+cameraless photography
+solarised
+collage abstraction
+assemblage
+deconstructed
+fragmented
+cubist fragmentation => cubism
+futurist motion
+suprematist composition
+constructivist composition
+dada collage
+surrealist automatism
+neo-plasticism
+tachisme
+art informel
+spatialism
+process art
+conceptual art look
+installation art look
+land art look
+textile art look
+fibre art look
+ceramic art look
+glass art look
+liquid chrome
+iridescent foil
+holographic sheen
+chromatic distortion
+vaporous forms
+amorphous forms
+crystalline forms
+cellular forms
+
+@ lighting | *
+golden hour light
+blue hour light
+soft diffused light
+hard directional light
+rim lighting => rim_lighting
+backlighting => backlighting
+side lighting
+top lighting
+under lighting
+three-point lighting
+single source lighting
+window light
+candlelight
+firelight
+moonlight
+starlight
+twilight glow
+dawn light
+overcast light
+dappled light => dappled_sunlight
+god rays => god_rays
+volumetric light
+crepuscular rays
+shafts of light
+light leaks
+lens flare => lens_flare
+bloom
+glow
+halation
+specular highlights
+soft shadows
+hard shadows
+deep shadows
+long shadows
+cast shadows
+chiaroscuro
+low-key lighting
+high-key lighting
+contrast lighting
+flat lighting
+ambient light
+bounce light
+fill light
+practical lighting
+motivated lighting
+mixed lighting
+coloured gel lighting
+split lighting
+rembrandt lighting
+butterfly lighting
+loop lighting
+silhouette lighting => silhouette
+spotlight
+stage lighting
+footlights
+studio strobe
+ring light
+softbox light
+beauty dish light
+on-camera flash
+harsh flash
+bioluminescent glow
+phosphorescent glow
+neon glow
+incandescent glow
+fluorescent light
+sodium vapour light
+lantern light
+torchlight
+underwater light => caustics
+caustic light
+reflected light
+refracted light
+prismatic light
+iridescent light
+glittering light
+shimmering light
+smouldering light
+dim light
+bright light
+luminous haze
+atmospheric glow
+subsurface glow
+emissive glow
+light bloom
+sun flare
+sunbeams => sunbeam
+sunlight => sunlight
+cinematic lighting => cinematic_lighting
+dramatic lighting
+moody lighting
+natural lighting
+theatrical lighting
+painterly light
+northern light studio
+tenebrist lighting
+luminist light
+
+@ colour | *
+monochrome => monochrome
+black and white
+greyscale => greyscale
+sepia tone => sepia
+duotone
+tritone
+limited palette => limited_palette
+muted palette => muted_color
+desaturated palette
+pastel palette => pastel_colors
+vivid palette
+saturated colour
+high saturation
+low saturation
+earth tones
+jewel tones
+neutral tones
+warm palette
+cool palette
+warm and cool contrast
+complementary colours
+analogous colours
+triadic colours
+split-complementary palette
+monochromatic palette
+tonal palette
+high contrast => high_contrast
+low contrast
+high key
+low key
+dark palette
+light palette
+bleached palette
+washed-out colour
+faded colour
+sun-bleached colour
+rich colour
+deep colour
+bright colour
+candy colours
+primary colours
+secondary colours
+tertiary colours
+teal and orange grade
+cross-processed colour
+bleach bypass
+technicolor
+kodachrome colour
+autochrome colour
+hand-tinted colour
+selective colour
+spot colour => spot_color
+colour blocking
+gradient colour => gradient
+ombre
+iridescent colour
+metallic colour
+gold accents => gold
+silver accents
+copper tones
+bronze tones
+rust tones
+ochre tones
+umber tones
+sienna tones
+terracotta tones
+indigo tones
+ultramarine tones
+cobalt tones
+cerulean tones
+turquoise tones
+teal tones
+emerald tones
+sage tones
+olive tones
+chartreuse accents
+mustard tones
+amber tones
+saffron tones
+coral tones
+vermilion accents
+crimson accents
+burgundy tones
+magenta accents
+rose tones
+blush tones
+lavender tones
+violet tones
+plum tones
+ivory tones
+cream tones
+charcoal tones
+slate tones
+ink black
+chalk white
+red theme => red_theme
+blue theme => blue_theme
+green theme => green_theme
+yellow theme => yellow_theme
+purple theme => purple_theme
+pink theme => pink_theme
+orange theme => orange_theme
+harmonious colour
+discordant colour
+clashing colours
+colour harmony
+tonal harmony
+chromatic richness
+subtle colour shifts
+bold colour
+flat colour => flat_color
+broken colour
+optical colour mixing
+underpainted warmth
+colour temperature contrast
+
+@ texture | *
+film grain => film_grain
+fine grain
+coarse grain
+noise texture
+paper texture
+canvas texture
+linen texture
+rough paper
+watercolour paper
+toned paper
+newsprint texture
+cardboard texture
+wood grain
+stone texture
+marble texture
+concrete texture
+plaster texture
+stucco texture
+rust texture => rust
+patina
+tarnish
+cracked paint
+craquelure
+peeling paint
+chipped enamel
+weathered surface
+worn edges
+scratches
+dust and scratches
+scuffed surface
+smudges
+fingerprints
+ink bleed
+ink splatter
+paint splatter
+paint drips
+dry brush
+wet-on-wet
+visible brushstrokes
+thick impasto
+palette knife marks
+glazing layers
+scumbling
+sgraffito
+stippling => stippling
+hatching => hatching_(texture)
+cross-hatching => cross-hatching
+halftone dots
+screentone => screentones
+dithering => dithering
+scanlines => scanlines
+pixel grid
+crt glow
+vhs artefacts
+jpeg artefacts
+compression artefacts
+chromatic aberration => chromatic_aberration
+lens distortion
+vignette => vignetting
+soft focus
+sharp detail
+glossy surface
+matte surface
+satin finish
+metallic sheen
+pearlescent sheen
+iridescent sheen
+velvet texture
+silk texture
+felt texture
+wool texture
+knitted texture
+woven texture
+embroidered texture
+leather texture
+fur texture
+feathered texture
+glass texture
+frosted glass
+crystal facets
+porcelain finish => porcelain
+ceramic glaze
+terracotta surface
+clay texture
+wax texture
+resin finish
+plastic finish
+rubber finish
+chrome finish
+brushed metal
+hammered metal
+gilded surface
+gold leaf
+foil stamping
+embossed surface
+debossed surface
+letterpress impression
+torn paper edges
+deckled edges
+folded creases
+tape marks
+staple marks
+water stains
+foxing
+sun fading
+grunge texture
+organic texture
+smooth gradients
+airbrushed smoothness
+powdery finish
+chalky finish
+granular texture
+pebbled texture
+crackle glaze
+mottled surface
+speckled surface
+marbled surface
+frosted surface
+dewy surface
+wet surface
+oily sheen
+soot and smoke
+
+@ mood | *
+moody
+serene
+tranquil
+peaceful
+calm
+melancholic
+wistful
+nostalgic mood
+dreamlike
+ethereal mood
+mysterious
+enigmatic
+eerie
+ominous
+foreboding
+haunting
+unsettling
+sinister
+gothic mood
+macabre
+somber
+bleak
+desolate
+lonely
+contemplative
+meditative
+introspective
+romantic
+tender
+intimate mood
+sensual
+joyful
+cheerful
+playful mood
+whimsical
+quirky
+energetic
+dynamic
+dramatic
+epic
+heroic
+majestic
+grand
+awe-inspiring
+sublime
+triumphant
+tense
+suspenseful
+frantic
+chaotic mood
+feverish
+hallucinatory
+psychedelic mood
+surreal mood
+absurd
+uncanny mood
+cosy
+warm mood
+comforting
+homely
+festive
+celebratory
+solemn
+reverent
+sacred
+spiritual
+mystical
+magical
+enchanted
+fairy-tale mood
+mythic mood
+primal
+wild
+untamed
+gritty mood
+raw mood
+rebellious
+defiant
+edgy
+cool detachment
+aloof
+clinical
+sterile
+austere mood
+minimal calm
+luxurious mood
+decadent
+glamorous
+elegant mood
+sophisticated mood
+bittersweet
+hopeful
+optimistic
+dystopian
+utopian
+apocalyptic
+post-apocalyptic
+noir mood
+pulp mood
+retro mood
+vintage mood
+futuristic mood
+otherworldly mood
+alien
+cosmic
+oceanic
+pastoral
+bucolic
+idyllic
+wintry
+autumnal
+summery
+vernal
+nocturnal
+twilit
+sun-drenched
+rain-soaked
+fog-bound
+storm-charged
+dust-laden
+smoke-filled
+heat-hazed
+frostbitten
+
+@ composition | *
+rule of thirds
+centred composition
+symmetrical composition
+asymmetrical composition
+diagonal composition
+triangular composition
+radial composition
+golden ratio composition
+dynamic composition
+static composition
+balanced composition
+minimal composition
+dense composition
+layered composition
+negative space => negative_space
+tight framing
+loose framing
+frame within a frame
+leading lines
+strong focal point
+shallow depth of field => depth_of_field
+deep focus
+soft focus background
+bokeh => bokeh
+tilt-shift blur
+motion blur => motion_blur
+long exposure
+slow shutter
+fast shutter
+double exposure framing
+wide angle view
+telephoto compression
+fisheye distortion => fisheye
+macro detail
+close-up framing
+extreme close-up
+medium shot
+full shot
+wide shot
+establishing shot
+aerial view
+bird's-eye view
+worm's-eye view
+low angle
+high angle
+dutch angle => dutch_angle
+eye-level view
+over-the-shoulder view
+point-of-view shot
+isometric view
+orthographic view
+one-point perspective
+two-point perspective
+three-point perspective
+forced perspective
+flattened perspective
+atmospheric perspective
+foreshortening => foreshortening
+cropped framing
+panoramic framing
+cinematic framing
+tableau framing
+flat lay
+knolling arrangement
+split composition
+diptych layout
+triptych layout
+collage layout
+grid layout
+panel layout
+vignette framing
+silhouetted foreground
+foreground framing
+overlapping planes
+shallow space
+deep space
+repeating elements
+rhythm and repetition
+pattern interruption
+visual hierarchy
+scale contrast
+juxtaposition
+off-centre subject
+breathing room
+edge tension
+implied motion
+frozen motion
+sweeping curves
+s-curve composition
+z-pattern composition
+vanishing point emphasis
+
+@ movement | painting illustration
+impressionism => impressionism
+post-impressionism
+expressionism
+fauvism
+pre-raphaelite
+symbolism
+romanticism
+realism movement
+naturalism
+neoclassicism
+rococo
+baroque
+mannerism
+high renaissance
+early renaissance
+northern renaissance
+abstract expressionism movement
+colour field movement
+photorealism movement
+hyperrealism movement
+neo-expressionism
+tonalism
+luminism
+hudson river school style
+barbizon school style
+ashcan school style
+social realism
+socialist realism
+magic realism movement
+metaphysical painting
+precisionism
+regionalism
+vorticism
+orphism
+pointillism
+divisionism
+cloisonnism
+synthetism
+les nabis style
+die brucke style
+der blaue reiter style
+new objectivity
+harlem renaissance style
+mexican muralism
+art brut
+arte povera
+
+@ movement | painting illustration design comics abstract
+cubism => cubism
+futurism
+surrealism
+dadaism
+constructivism
+suprematism
+bauhaus
+de stijl movement
+art nouveau => art_nouveau
+art deco => art_deco
+arts and crafts movement
+ukiyo-e => ukiyo-e
+shin-hanga
+pop art
+op art movement
+minimalism => minimalism
+conceptualism
+postmodernism
+lowbrow art
+pop surrealism
+street art
+graffiti style => graffiti
+stencil art
+vienna secession
+jugendstil
+fluxus
+superflat
+neo-pop
+
+@ movement | painting illustration design comics
+gothic art
+byzantine art
+romanesque art
+medieval illumination
+edo period style
+tang dynasty style
+song dynasty style
+ming dynasty style
+mughal style
+persian style
+ottoman style
+celtic style
+norse style
+ancient egyptian style
+ancient greek style
+ancient roman style
+mesoamerican style
+
+@ movement | design illustration 3d comics
+retrofuturism
+afrofuturism
+neo-futurism
+steampunk => steampunk
+cyberpunk => cyberpunk
+vaporwave => vaporwave
+
+@ movement | *
+1920s style
+1930s style
+1940s style
+1950s style
+1960s style
+1970s style
+1980s style => 1980s_(style)
+1990s style => 1990s_(style)
+2000s style => 2000s_(style)
+2010s style => 2010s_(style)
+victorian era style
+edwardian era style
+belle epoque style
+jazz age style
+space age style
+mid-century style
+fin de siecle style
+turn of the century style
+
+@ shape | *
+geometric shapes
+organic shapes
+angular forms
+rounded forms
+bold shapes
+simple shapes
+flat shapes
+interlocking shapes
+overlapping shapes
+fragmented shapes
+faceted forms
+blocky forms
+flowing forms
+elongated forms
+compressed forms
+exaggerated proportions
+stylised proportions
+clean lines
+bold outlines
+thick outlines
+thin outlines
+no outlines
+varied line weight
+uniform line weight
+tapered lines
+broken lines
+sketchy lines
+scratchy lines
+wobbly lines
+confident linework
+delicate linework
+dense linework
+sparse linework
+contour lines
+hatching lines
+calligraphic lines
+brush lines
+ink lines
+pencil lines
+vector lines
+curvilinear lines
+rectilinear lines
+whiplash curves
+spirals
+concentric circles
+radiating lines
+grid structure
+lattice structure
+tessellation
+repeating pattern
+ornamental pattern
+floral pattern
+arabesque pattern
+interlace pattern
+chevron pattern
+striped pattern
+checkered pattern
+polka dot pattern
+dotted pattern
+halftone pattern
+crosshatch pattern
+woven pattern
+honeycomb pattern
+scale pattern
+wave pattern
+cloud pattern
+flame pattern
+silhouette shapes
+cut-out shapes
+stencil shapes
+hard edges
+soft edges
+lost edges
+feathered edges
+crisp edges
+ragged edges
+symmetry
+asymmetry
+radial symmetry
+bilateral symmetry
+fractal structure
+modular structure
+planar forms
+volumetric forms
+sculpted forms
+chiselled forms
+melted forms
+inflated forms
+folded forms
+ribbon-like forms
+crystalline structure
+biomorphic shapes
+architectural forms
+ornamental borders
+decorative frames
+flat planes of colour

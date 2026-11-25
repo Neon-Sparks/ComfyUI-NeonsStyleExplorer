@@ -20,6 +20,7 @@ def _routes():
     from . import assets
     from . import models
     from . import runs
+    from . import roller as word_roller
     from .catalog import (
         RANDOM_TOKEN,
         clear_recents,
@@ -146,6 +147,42 @@ def _routes():
     async def get_tags(request):
         tags = tag_vocabulary()
         return web.json_response({"tags": tags, "count": len(tags)})
+
+    # ---------------- style explorer 2 ----------------
+
+    from . import routes2
+
+    routes2.register(routes, post, inside, data, web)
+
+    # ---------------- roller ----------------
+
+    @post("/neons_roller/roll")
+    async def post_roller_roll(request):
+        """Roll words for the node's preview button. Reads nothing but the
+        word list and writes nothing; every value is clamped by the roller."""
+        body = await data(request)
+
+        def text(key, limit):
+            return str(body.get(key) or "")[:limit]
+
+        def number(key, fallback):
+            try:
+                return int(float(body.get(key)))
+            except (TypeError, ValueError, OverflowError):
+                return fallback
+
+        seed = number("seed", 0)
+        seed = seed if 0 <= seed <= 0xFFFFFFFF else 0
+        rolled, pinned, note = word_roller.roll(
+            count=number("count", 5), kind=text("kind", 40), aspect=text("aspect", 40),
+            vocabulary=text("vocabulary", 40), seed=seed,
+            never_include=text("never_include", 4000),
+            always_include=text("always_include", 4000))
+        words = word_roller.render(pinned + rolled, text("output_as", 20), body.get("weight"))
+        return web.json_response({"ok": True, "words": words, "note": note,
+                                  "terms": [row["term"] for row in pinned + rolled],
+                                  "tags": [word_roller.plain_tag(row) for row in pinned + rolled],
+                                  "seeded": bool(seed), "total": word_roller.counts()["total"]})
 
     @post("/neons_style/compose")
     async def post_compose(request):

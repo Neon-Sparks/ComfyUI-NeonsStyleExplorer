@@ -1669,5 +1669,804 @@ class AssetStore(unittest.TestCase):
                           and not errors], [])
 
 
+class Roller(unittest.TestCase):
+    """The Style Roller: its word list, the roll, and what the node hands on."""
+
+    @classmethod
+    def setUpClass(cls):
+        cls.roller = importlib.import_module(f"{PKG}.roller")
+
+    def setUp(self):
+        import tempfile
+        self.work = tempfile.mkdtemp(prefix="ns_roller_")
+        self._user = self.roller.USER
+        self.roller.USER = os.path.join(self.work, "roller_words.txt")
+
+    def tearDown(self):
+        import shutil
+        self.roller.USER = self._user
+        shutil.rmtree(self.work, ignore_errors=True)
+
+    def words(self, **kwargs):
+        rolled, pinned, _note = self.roller.roll(**kwargs)
+        return [row["term"] for row in pinned + rolled]
+
+    def own(self, text):
+        with open(self.roller.USER, "w", encoding="utf-8") as handle:
+            handle.write(text)
+
+    # ---- the list
+
+    def test_the_list_is_thousands_of_valid_terms(self):
+        rows = self.roller.terms()
+        self.assertGreater(len(rows), 5000)
+        keys = [row["key"] for row in rows]
+        self.assertEqual(len(keys), len(set(keys)), "a term is listed twice")
+        for row in rows:
+            self.assertIn(row["aspect"], self.roller.ASPECTS, row["term"])
+            self.assertTrue(row["kinds"] <= set(self.roller.KINDS), row["term"])
+            self.assertIn(row["tier"], ("a", "b"), row["term"])
+            self.assertTrue(0 < len(row["term"]) <= self.roller.MAX_TERM, row["term"])
+
+    def test_every_kind_and_aspect_has_plenty_to_roll(self):
+        counts = self.roller.counts()
+        for kind, total in counts["kinds"].items():
+            self.assertGreater(total, 100, kind)
+        for aspect, total in counts["aspects"].items():
+            self.assertGreater(total, 300, aspect)
+
+    def test_the_list_on_disk_matches_its_sources(self):
+        spec = importlib.util.spec_from_file_location(
+            "ns_mine_roller", os.path.join(ROOT, "tools", "mine_roller.py"))
+        miner = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(miner)
+        with open(miner.OUT, "r", encoding="utf-8", newline="") as handle:
+            on_disk = handle.read().replace("\r\n", "\n")
+        self.assertEqual(on_disk, miner.render(miner.build()),
+                         "run python tools/mine_roller.py")
+
+    # ---- the roll
+
+    def test_a_seed_repeats_and_a_longer_roll_extends_a_shorter_one(self):
+        self.assertEqual(self.words(count=8, seed=42), self.words(count=8, seed=42))
+        self.assertNotEqual(self.words(count=8, seed=42), self.words(count=8, seed=43))
+        self.assertEqual(self.words(count=8, seed=42)[:5], self.words(count=5, seed=42))
+
+    def test_seed_zero_rolls_afresh(self):
+        seen = {tuple(self.words(count=6, seed=0)) for _ in range(6)}
+        self.assertGreater(len(seen), 1)
+
+    def test_count_is_clamped_and_never_repeats_a_term(self):
+        for seed in range(1, 8):
+            got = self.words(count=500, seed=seed)
+            self.assertEqual(len(got), self.roller.MAX_COUNT)
+            self.assertEqual(len(got), len({self.roller.norm(term) for term in got}))
+        self.assertEqual(len(self.words(count="nonsense", seed=3)), 5)
+        self.assertEqual(self.words(count=-4, seed=3), [])
+
+    def test_kind_keeps_other_kinds_out_and_leads_with_its_own(self):
+        for label, kind in self.roller.KIND_CHOICES.items():
+            if not kind:
+                continue
+            for seed in range(1, 6):
+                rolled, _pinned, _note = self.roller.roll(count=12, kind=label, seed=seed)
+                for row in rolled:
+                    self.assertTrue(not row["kinds"] or kind in row["kinds"],
+                                    f"{row['term']} rolled for {label}")
+                self.assertIn(kind, rolled[0]["kinds"], f"{label} did not lead with its own")
+
+    def test_aspect_narrows_the_roll(self):
+        for label, aspect in self.roller.ASPECT_CHOICES.items():
+            if not aspect:
+                continue
+            rolled, _pinned, _note = self.roller.roll(count=10, aspect=label, seed=5)
+            self.assertEqual({row["aspect"] for row in rolled}, {aspect})
+
+    def test_a_balanced_roll_spreads_across_aspects(self):
+        for seed in range(1, 6):
+            rolled, _pinned, _note = self.roller.roll(count=10, seed=seed)
+            self.assertGreaterEqual(len({row["aspect"] for row in rolled}), 6)
+            self.assertEqual(rolled[0]["aspect"], "look")
+
+    def test_vocabulary_picks_the_tier(self):
+        known, _p, _n = self.roller.roll(count=20, vocabulary="well known", seed=9)
+        deep, _p, _n = self.roller.roll(count=20, vocabulary="deep cuts", seed=9)
+        self.assertEqual({row["tier"] for row in known}, {"a"})
+        self.assertEqual({row["tier"] for row in deep}, {"b"})
+
+    def test_never_include_removes_every_term_holding_the_word(self):
+        for seed in range(1, 30):
+            got = self.words(count=50, seed=seed, never_include="film, Neon ; glow")
+            for term in got:
+                self.assertNotRegex(self.roller.norm(term), r"\b(film|neon|glow)\b")
+
+    def test_always_include_leads_and_is_extra(self):
+        got = self.words(count=4, seed=6, always_include="my look, , second thing")
+        self.assertEqual(got[:2], ["my look", "second thing"])
+        self.assertEqual(len(got), 6)
+        # a pinned word is never rolled a second time
+        rolled = self.words(count=50, seed=6, always_include="film grain")
+        self.assertEqual(rolled.count("film grain"), 1)
+
+    def test_opposites_never_share_a_roll(self):
+        for seed in range(1, 60):
+            rolled, _pinned, _note = self.roller.roll(count=30, seed=seed)
+            held = set()
+            for row in rolled:
+                for index, side in row["flags"]:
+                    self.assertNotIn((index, 1 - side), held,
+                                     f"seed {seed}: {row['term']} contradicts an earlier word")
+                held |= row["flags"]
+
+    def test_a_pinned_word_rules_out_its_opposite(self):
+        for seed in range(1, 30):
+            got = self.words(count=40, seed=seed, always_include="monochrome")
+            for term in got[1:]:
+                self.assertNotRegex(term, r"\b(vivid|vibrant|rainbow|colourful|colorful)\b")
+
+    def test_an_exhausted_pool_says_so(self):
+        rolled, _pinned, note = self.roller.roll(count=5, vocabulary="my words", seed=2)
+        self.assertEqual(rolled, [])
+        self.assertIn("0 of 5", note)
+
+    # ---- the user's own words
+
+    def test_own_words_join_the_list_and_can_be_rolled_alone(self):
+        self.own("# mine\nglitter fog\nbrass haze | lighting | painting anime\n\n")
+        self.assertEqual(self.roller.counts()["user"], 2)
+        got = self.words(count=5, vocabulary="my words", seed=4)
+        self.assertEqual(sorted(got), ["brass haze", "glitter fog"])
+        lit = self.words(count=5, vocabulary="my words", aspect="lighting", kind="painting",
+                         seed=4)
+        self.assertEqual(lit, ["brass haze"])
+
+    def test_a_hostile_word_file_is_only_ever_text(self):
+        self.own("ok term\n" + "x" * 5000 + "\n\x00bad\x1b[31mterm\n"
+                 "../../etc/passwd | nonsense | nokind | z | <script>\n"
+                 "(paren) [bracket]\n")
+        rows = [row for row in self.roller.terms() if row["user"]]
+        self.assertEqual(len(rows), 5)
+        for row in rows:
+            self.assertLessEqual(len(row["term"]), self.roller.MAX_TERM)
+            self.assertNotRegex(row["term"], r"[\x00-\x1f]")
+            self.assertIn(row["aspect"], self.roller.ASPECTS)
+        text = self.roller.render(rows)
+        self.assertIn("\\(paren\\)", text)
+
+    def test_an_oversized_word_file_is_ignored(self):
+        self.own("word\n" * (self.roller.MAX_USER_BYTES // 5 + 10))
+        self.assertEqual(self.roller.counts()["user"], 0)
+        self.assertGreater(self.roller.counts()["total"], 5000)
+
+    def test_editing_the_file_changes_the_signature(self):
+        before = self.roller.signature()
+        self.own("fresh term\n")
+        self.assertNotEqual(before, self.roller.signature())
+
+    # ---- output
+
+    def test_tags_use_real_booru_tags_where_they_exist(self):
+        rows = {row["term"]: row for row in self.roller.terms()}
+        self.assertEqual(self.roller.as_tag(rows["oil painting"]), "oil_painting_\\(medium\\)")
+        self.assertEqual(self.roller.as_tag(rows["rule of thirds"]), "rule_of_thirds")
+
+    def test_weight_wraps_each_term(self):
+        rows, _p, _n = self.roller.roll(count=2, seed=3)
+        plain = self.roller.render(rows)
+        self.assertNotIn("(", plain)
+        heavy = self.roller.render(rows, weight=1.3)
+        self.assertEqual(heavy.count(":1.30)"), 2)
+        self.assertEqual(self.roller.render(rows, weight="junk"), plain)
+        self.assertEqual(self.roller.render(rows, weight=99).count(":2.00)"), 2)
+
+    def test_words_join_a_prompt_on_either_side(self):
+        join = self.roller.join_text
+        self.assertEqual(join("a fox,", "x, y"), "a fox, x, y")
+        self.assertEqual(join("a fox", "x, y", "before text"), "x, y, a fox")
+        self.assertEqual(join(None, "x, y"), "x, y")
+        self.assertEqual(join("a fox", ""), "a fox")
+
+    # ---- the node
+
+    def test_the_node_returns_text_and_words(self):
+        node = nodes.NeonsStyleRoller()
+        out = node.roll(kind="painting", count=3, seed=11, text="a red fox")
+        text, words = out["result"]
+        self.assertTrue(text.startswith("a red fox, "))
+        self.assertTrue(text.endswith(words))
+        self.assertEqual(len(words.split(", ")), 3)
+        self.assertEqual(out["ui"]["ns_rolled_words"], [words])
+        alone = node.roll(count=3, seed=11)["result"]
+        self.assertEqual(alone[0], alone[1])
+
+    def test_the_node_reruns_only_when_it_should(self):
+        changed = nodes.NeonsStyleRoller.IS_CHANGED
+        self.assertNotEqual(changed(seed=0, kind="all"), changed(seed=0, kind="all"))
+        self.assertEqual(changed(seed=5, kind="all"), changed(seed=5, kind="all"))
+        self.assertNotEqual(changed(seed=5, kind="all"), changed(seed=5, kind="anime & manga"))
+        before = changed(seed=5, kind="all")
+        self.own("something new\n")
+        self.assertNotEqual(before, changed(seed=5, kind="all"))
+
+    def test_the_node_reports_the_recipe_as_plain_lists(self):
+        out = nodes.NeonsStyleRoller().roll(count=4, seed=11, always_include="my (pin)",
+                                           output_as="tags", weight=1.3)
+        terms, tags = out["ui"]["ns_rolled_terms"][0], out["ui"]["ns_rolled_tags"][0]
+        self.assertEqual(len(terms), 5)
+        self.assertEqual(len(tags), 5)
+        self.assertEqual(terms[0], "my (pin)")
+        for term, tag in zip(terms, tags):
+            self.assertNotIn(":1.3", term)
+            self.assertNotIn(" ", tag)
+            self.assertNotIn("\\", tag)
+
+    def test_the_list_draws_on_the_version_two_catalog(self):
+        rows = self.roller.terms()
+        self.assertGreater(len(rows), 15000)
+        spec = importlib.util.spec_from_file_location(
+            "ns_mine_roller_v2", os.path.join(ROOT, "tools", "mine_roller.py"))
+        miner = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(miner)
+        self.assertGreater(len(miner.read_v2()), 3000)
+        self.assertEqual(set(miner.V2_KIND.values()) - set(self.roller.KINDS), set())
+
+    def test_the_node_is_registered_with_safe_defaults(self):
+        self.assertIs(nodes.NODE_CLASS_MAPPINGS["NeonsStyleRoller"], nodes.NeonsStyleRoller)
+        required = nodes.NeonsStyleRoller.INPUT_TYPES()["required"]
+        self.assertEqual(required["count"][1]["max"], 50)
+        for name, spec in required.items():
+            if isinstance(spec[0], list):
+                self.assertIn(spec[1]["default"], spec[0], name)
+
+
+class Explorer2(unittest.TestCase):
+    """Style Explorer 2: its catalog, the composer, user data and the node."""
+
+    @classmethod
+    def setUpClass(cls):
+        cls.v2 = importlib.import_module(f"{PKG}.explorer2")
+        cls.nodes2 = importlib.import_module(f"{PKG}.nodes2")
+
+    def setUp(self):
+        import tempfile
+        v2 = self.v2
+        self.work = tempfile.mkdtemp(prefix="ns_v2_")
+        self._paths = (v2.USER, v2.STATE, v2.CUSTOM, v2.PREVIEWS)
+        v2.USER = self.work
+        v2.STATE = os.path.join(self.work, "state.json")
+        v2.CUSTOM = os.path.join(self.work, "custom.json")
+        v2.PREVIEWS = os.path.join(self.work, "previews")
+        self._reset()
+
+    def tearDown(self):
+        import shutil
+        v2 = self.v2
+        v2.USER, v2.STATE, v2.CUSTOM, v2.PREVIEWS = self._paths
+        self._reset()
+        shutil.rmtree(self.work, ignore_errors=True)
+
+    def _reset(self):
+        v2 = self.v2
+        v2._cache.update(stamp=None, data=None)
+        v2._state.update(stamp=None, data=None)
+        v2._previews.update(stamp=None, data={})
+        v2._claimed.clear()
+
+    def png(self, size=(96, 64)):
+        from io import BytesIO
+        buffer = BytesIO()
+        _Image.new("RGB", size, (120, 90, 60)).save(buffer, "PNG")
+        return buffer.getvalue()
+
+    def names(self, count=3, cat=None):
+        styles = [s for s in self.v2.catalog()["styles"] if not cat or s["cat"] == cat]
+        return [style["name"] for style in styles[:count]]
+
+    def node(self, **overrides):
+        kwargs = {"prompt": "a red fox", "styles": "", "strength": "standard",
+                  "output_as": "natural language", "style_position": "before prompt",
+                  "roll_seed": 5, "auto_preview": "off"}
+        kwargs.update({kind: "None" for kind in self.v2.MOD_KINDS})
+        kwargs.update(overrides)
+        return self.nodes2.NeonsStyleExplorer2().apply(**kwargs)
+
+    # ---- the catalog
+
+    def test_the_catalog_is_large_and_well_formed(self):
+        data = self.v2.catalog()
+        styles = data["styles"]
+        self.assertGreater(len(styles), 1500)
+        self.assertEqual(len({s["id"] for s in styles}), len(styles))
+        self.assertEqual(len({s["name"].lower() for s in styles}), len(styles))
+        subs = {cat["id"]: set(cat["subs"]) for cat in data["cats"]}
+        for style in styles:
+            self.assertIn(style["cat"], subs, style["name"])
+            self.assertIn(style["sub"], subs[style["cat"]], style["name"])
+            self.assertGreaterEqual(len(style["parts"]), 5, style["name"])
+            self.assertTrue(style["lead"], style["name"])
+            self.assertNotRegex(style["name"], r"[,:@|]", style["name"])
+        for cat in data["cats"]:
+            self.assertTrue(any(s["cat"] == cat["id"] for s in styles), cat["id"])
+        for kind in self.v2.MOD_KINDS:
+            self.assertGreater(len(data["mods"][kind]), 40, kind)
+
+    def test_the_shipped_styles_pass_their_linter(self):
+        spec = importlib.util.spec_from_file_location(
+            "ns_v2_lint", os.path.join(ROOT, "tools", "v2_lint.py"))
+        lint = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(lint)
+        subs, traits = lint.load_taxonomy()
+        vocab = lint.load_vocab()
+        problems = []
+        for where, entry, modifier in lint.read_shipped():
+            for line in lint.check(entry, subs, traits, vocab, modifier=modifier):
+                problems.append(f"{where} {entry.get('name')}: {line}")
+        self.assertEqual(problems[:10], [])
+
+    def test_the_browser_payload_is_compact_and_complete(self):
+        import json
+        payload = self.v2.payload()
+        self.assertEqual(len(payload["styles"]), len(self.v2.catalog()["styles"]))
+        row = payload["styles"][0]
+        self.assertEqual(len(row), 8)
+        self.assertLess(len(json.dumps(payload)) / len(payload["styles"]), 700)
+
+    def test_the_node_list_carries_no_giant_dropdown(self):
+        for name, spec in self.nodes2.NeonsStyleExplorer2.INPUT_TYPES()["required"].items():
+            if isinstance(spec[0], list):
+                self.assertLess(len(spec[0]), 200, name)
+                self.assertIn(spec[1]["default"], spec[0], name)
+
+    # ---- the styles box
+
+    def test_parse_reads_weights_dice_and_stops_at_three(self):
+        parse = self.v2.parse
+        self.assertEqual(parse("Oil Paint, Film Noir:0.5 | @favourites"),
+                         [("Oil Paint", 1.0), ("Film Noir", 0.5), ("@favourites", 1.0)])
+        self.assertEqual(parse("a:9, b:0, c:x, d"), [("a", 2.0), ("b", 0.1), ("c:x", 1.0)])
+        self.assertEqual(parse(" ,, \n"), [])
+        self.assertEqual(parse(None), [])
+        self.assertEqual(len(parse("x," * 5000)), 3)
+
+    def test_a_style_resolves_by_name_or_id_in_any_case(self):
+        style = self.v2.catalog()["styles"][10]
+        self.assertIs(self.v2.resolve(style["name"].upper()), style)
+        self.assertIs(self.v2.resolve(style["id"]), style)
+        self.assertIsNone(self.v2.resolve("no such style"))
+        self.assertIsNone(self.v2.resolve(""))
+
+    # ---- composing
+
+    def test_strength_keeps_more_of_the_style(self):
+        style = next(s for s in self.v2.catalog()["styles"] if len(s["parts"]) >= 6)
+        texts = [self.v2.style_text([(style, 1.0)], strength) for strength in
+                 ("light", "standard", "heavy")]
+        self.assertTrue(len(texts[0]) < len(texts[1]) < len(texts[2]))
+        for text in texts:
+            self.assertTrue(text.startswith(style["lead"]))
+        self.assertEqual(texts[0], ", ".join([style["lead"]] + style["parts"][:2]))
+        self.assertEqual(texts[2], ", ".join([style["lead"]] + style["parts"]))
+
+    def test_weight_scales_one_style_and_shares_a_blend(self):
+        a, b = self.v2.catalog()["styles"][:2]
+        low = self.v2.style_text([(a, 0.5)], "standard")
+        high = self.v2.style_text([(a, 1.5)], "standard")
+        self.assertLess(len(low), len(high))
+        blend = self.v2.style_text([(a, 1.0), (b, 0.3)], "standard")
+        self.assertIn(" blended with ", blend)
+        self.assertTrue(blend.startswith(a["lead"]))
+        mine = sum(part in blend for part in a["parts"])
+        theirs = sum(part in blend for part in b["parts"])
+        self.assertGreater(mine, theirs)
+        self.assertGreaterEqual(theirs, 1)
+
+    def test_the_style_goes_before_or_after_the_prompt(self):
+        name = self.names(1)[0]
+        before = self.node(styles=name)["result"]
+        after = self.node(styles=name, style_position="after prompt")["result"]
+        self.assertTrue(before[0].endswith("a red fox"))
+        self.assertTrue(after[0].startswith("a red fox, "))
+        self.assertEqual(before[2], after[2])
+        self.assertEqual(before[3], name)
+
+    def test_no_style_leaves_the_prompt_alone(self):
+        out = self.node()
+        self.assertEqual(out["result"][:4], ("a red fox", "", "", ""))
+
+    def test_an_unknown_style_is_reported_not_fatal(self):
+        out = self.node(styles="Definitely Not A Style")
+        self.assertEqual(out["result"][0], "a red fox")
+        self.assertIn("no style called", out["ui"]["ns2_notes"][0])
+
+    def test_modifiers_are_added_and_random_follows_the_seed(self):
+        lighting = self.v2.modifier_names("lighting")[0]
+        out = self.node(lighting=lighting)["result"][0]
+        self.assertIn(self.v2.modifier("lighting", lighting)["nl"], out)
+        one = self.node(palette="Random", roll_seed=11)["result"][0]
+        two = self.node(palette="Random", roll_seed=11)["result"][0]
+        self.assertEqual(one, two)
+        self.assertNotEqual(one, "a red fox")
+
+    def test_tags_output_escapes_brackets_and_carries_weight(self):
+        style = next(s for s in self.v2.catalog()["styles"]
+                     if any("(" in tag for tag in s["tags"]))
+        out = self.node(styles=f"{style['name']}:1.3", output_as="tags", strength="heavy")
+        text = out["result"][2]
+        self.assertIn("\\(", text)
+        self.assertIn(":1.30)", text)
+        self.assertNotIn(style["lead"], text)
+        both = self.node(styles=style["name"], output_as="natural language + tags")["result"][2]
+        self.assertIn(style["lead"], both)
+
+    def test_lora_triggers_lead_the_prompt_whatever_the_position(self):
+        name = self.names(1)[0]
+        wired = {"lora_triggers_1": "ohwx style, film grain", "lora_triggers_2": "Film Grain, sks",
+                 "lora_triggers_3": ""}
+        for position in self.v2.POSITIONS:
+            out = self.node(styles=name, style_position=position, **wired)["result"]
+            self.assertTrue(out[0].startswith("ohwx style, film grain, sks, "), out[0][:80])
+            self.assertNotIn("ohwx", out[2], "triggers are not part of the style text")
+        plain = self.node(styles=name)["result"][0]
+        self.assertEqual(self.node(styles=name, **wired)["result"][0],
+                         "ohwx style, film grain, sks, " + plain)
+        alone = self.node(lora_triggers_1="sks")["result"][0]
+        self.assertEqual(alone, "sks, a red fox")
+        tags = self.node(styles=name, output_as="tags", lora_triggers_1="sks (v2)")["result"][0]
+        self.assertTrue(tags.startswith("sks (v2), "))
+
+    def test_the_prefix_follows_triggers_and_leads_everything_else(self):
+        name = self.names(1)[0]
+        style = self.v2.resolve(name)
+        for position in self.v2.POSITIONS:
+            out = self.node(styles=name, style_position=position, prompt_prefix="best quality, ",
+                            lora_triggers_1="sks")["result"]
+            self.assertTrue(out[0].startswith("sks, best quality, "), out[0][:60])
+            self.assertEqual(out[0].count("best quality"), 1)
+            self.assertNotIn("best quality", out[2], "the prefix is not part of the style text")
+        before = self.node(styles=name, prompt_prefix="best quality")["result"][0]
+        self.assertTrue(before.startswith(f"best quality, {style['lead']}"))
+        self.assertEqual(self.node(prompt_prefix="hi")["result"][0], "hi, a red fox")
+        self.assertEqual(self.node(prompt_prefix="  ")["result"][0], "a red fox")
+
+    def test_the_negative_is_passed_through_untouched_by_styles(self):
+        name = self.names(1)[0]
+        out = self.node(styles=name, negative="  blurry, low contrast\nextra limbs  ")["result"]
+        self.assertEqual(out[1], "blurry, low contrast\nextra limbs")
+        self.assertNotIn("blurry", out[0])
+        self.assertEqual(self.node(styles=name)["result"][1], "")
+        self.assertEqual(self.node(negative=None)["result"][1], "")
+
+    def test_debug_says_what_the_run_did(self):
+        a, b = self.names(2)
+        lighting = self.v2.modifier_names("lighting")[0]
+        out = self.node(styles=f"{a}, {b}:0.5, Not A Style", lighting=lighting, negative="blurry",
+                        prompt_prefix="best quality", lora_triggers_1="sks")["result"]
+        debug = out[4]
+        for expected in (a, f"{b} x0.5", f"lighting: {lighting}", "sks", "best quality",
+                         "no style called", "positive:", out[0], "negative:", "blurry", out[2]):
+            self.assertIn(expected, debug)
+        self.assertIn("styles used:   none", self.node()["result"][4])
+
+    def test_the_outputs_are_in_the_documented_order(self):
+        base, enc = self.nodes2.NeonsStyleExplorer2, self.nodes2.NeonsStyleExplorer2Encode
+        self.assertEqual(base.RETURN_NAMES, ("positive", "negative", "style_text", "style_name",
+                                             "debug"))
+        self.assertEqual(enc.RETURN_NAMES, ("positive_conditioning", "negative_conditioning")
+                         + base.RETURN_NAMES)
+        for cls in (base, enc):
+            self.assertEqual(len(cls.RETURN_TYPES), len(cls.RETURN_NAMES))
+            self.assertEqual(len(cls.OUTPUT_TOOLTIPS), len(cls.RETURN_NAMES))
+        self.assertEqual(enc.RETURN_TYPES[:2], ("CONDITIONING", "CONDITIONING"))
+
+    def test_the_encode_node_encodes_both_prompts(self):
+        seen = []
+
+        class Clip:
+            def tokenize(self, text):
+                seen.append(text)
+                return text
+
+            def encode_from_tokens_scheduled(self, tokens):
+                return [["cond", {"text": tokens}]]
+
+        name = self.names(1)[0]
+        kwargs = {"prompt": "a red fox", "styles": name, "negative": "blurry", "roll_seed": 5}
+        out = self.nodes2.NeonsStyleExplorer2Encode().apply(Clip(), **kwargs)["result"]
+        self.assertEqual(seen, [out[2], "blurry"])
+        self.assertEqual(out[0][0][1]["text"], out[2])
+        self.assertEqual(out[1][0][1]["text"], "blurry")
+        self.assertEqual(out[3], "blurry")
+        # no negative is still a conditioning a sampler can take
+        empty = self.nodes2.NeonsStyleExplorer2Encode().apply(
+            Clip(), prompt="x", styles="", roll_seed=5)["result"]
+        self.assertEqual(empty[1][0][1]["text"], "")
+
+    def test_a_changed_negative_or_prefix_reruns_the_node(self):
+        changed = self.nodes2.NeonsStyleExplorer2.IS_CHANGED
+        base = {"prompt": "x", "styles": "", "roll_seed": 5}
+        self.assertNotEqual(changed(**base), changed(**dict(base, negative="blurry")))
+        self.assertNotEqual(changed(**base), changed(**dict(base, prompt_prefix="hi")))
+
+    def test_the_trigger_inputs_match_the_original_node(self):
+        for cls in (self.nodes2.NeonsStyleExplorer2, self.nodes2.NeonsStyleExplorer2Encode):
+            optional = cls.INPUT_TYPES()["optional"]
+            self.assertEqual(sorted(optional), sorted(nodes.LORA_TRIGGER_INPUTS))
+            for spec in optional.values():
+                self.assertTrue(spec[1]["forceInput"])
+        changed = self.nodes2.NeonsStyleExplorer2.IS_CHANGED
+        base = {"prompt": "x", "styles": "", "roll_seed": 5}
+        self.assertNotEqual(changed(**base), changed(**dict(base, lora_triggers_1="sks")))
+
+    # ---- dice
+
+    def test_a_dice_follows_the_seed_and_its_scope(self):
+        cat = self.v2.catalog()["cats"][3]["id"]
+        picks, _notes = self.v2.pick(f"@{cat}", seed=9)
+        again, _notes = self.v2.pick(f"@{cat}", seed=9)
+        self.assertEqual(picks[0][0]["id"], again[0][0]["id"])
+        self.assertEqual(picks[0][0]["cat"], cat)
+        seen = {self.v2.pick("@all", seed=seed)[0][0][0]["id"] for seed in range(1, 12)}
+        self.assertGreater(len(seen), 5)
+
+    def test_a_dice_narrows_to_a_sub_and_to_a_collection(self):
+        style = self.v2.catalog()["styles"][0]
+        picks, notes = self.v2.pick(f"@{style['cat']}/{style['sub']}", seed=3)
+        self.assertEqual((picks[0][0]["cat"], picks[0][0]["sub"]), (style["cat"], style["sub"]))
+        self.assertEqual(notes, [])
+        self.assertEqual(self.v2.collection_edit("Keepers", ident=style["id"]), "")
+        picks, notes = self.v2.pick("@keepers", seed=3)
+        self.assertEqual(picks[0][0]["id"], style["id"])
+
+    def test_an_empty_scope_falls_back_and_says_so(self):
+        picks, notes = self.v2.pick("@favourites", seed=4)
+        self.assertEqual(len(picks), 1)
+        self.assertIn("no favourites yet", notes[0])
+        picks, notes = self.v2.pick("@nowhere at all", seed=4)
+        self.assertEqual(len(picks), 1)
+        self.assertIn("no category or collection", notes[0])
+
+    def test_two_dice_never_land_on_the_same_style(self):
+        style = self.v2.catalog()["styles"][0]
+        self.v2.collection_edit("One", ident=style["id"])
+        picks, _notes = self.v2.pick("@one, @one", seed=2)
+        self.assertEqual(len(picks), 1)
+
+    @unittest.skipUnless(HAVE_PILLOW, "needs Pillow")
+    def test_next_walks_the_styles_that_have_no_preview(self):
+        styles = self.v2.catalog()["styles"]
+        first, _n = self.v2.pick("@next", claim=True)
+        second, _n = self.v2.pick("@next", claim=True)
+        self.assertEqual(first[0][0]["id"], styles[0]["id"])
+        self.assertEqual(second[0][0]["id"], styles[1]["id"])
+        # looking without claiming does not move it on
+        peek, _n = self.v2.pick("@next")
+        self.assertEqual(peek[0][0]["id"], styles[2]["id"])
+        self.assertEqual(self.v2.pick("@next")[0][0][0]["id"], styles[2]["id"])
+        self.assertTrue(self.v2.save_preview(styles[0]["id"], self.png()))
+        third, _n = self.v2.pick("@next", claim=True)
+        self.assertEqual(third[0][0]["id"], styles[2]["id"])
+
+    # ---- favourites, recents, collections
+
+    def test_favourites_toggle_and_survive_a_reload(self):
+        style = self.v2.catalog()["styles"][5]
+        self.assertTrue(self.v2.set_favourite(style["name"]))
+        self._reset()
+        self.assertEqual(self.v2.state()["favourites"], [style["id"]])
+        self.assertFalse(self.v2.set_favourite(style["id"]))
+        self.assertIsNone(self.v2.set_favourite("no such style"))
+        self.assertEqual(self.v2.state()["favourites"], [])
+
+    def test_recents_keep_order_and_a_limit(self):
+        ids = [s["id"] for s in self.v2.catalog()["styles"][:self.v2.MAX_RECENT + 8]]
+        for ident in ids:
+            self.v2.push_recent(ident)
+        self.v2.push_recent(ids[3])
+        recents = self.v2.state()["recents"]
+        self.assertEqual(recents[0], ids[3])
+        self.assertEqual(len(recents), self.v2.MAX_RECENT)
+        self.assertEqual(len(set(recents)), len(recents))
+        self.v2.clear_recents()
+        self.assertEqual(self.v2.state()["recents"], [])
+
+    def test_collections_fill_rename_and_delete(self):
+        a, b = [s["id"] for s in self.v2.catalog()["styles"][:2]]
+        edit = self.v2.collection_edit
+        self.assertEqual(edit("Moody set", ident=a), "")
+        self.assertEqual(edit("moody SET", ident=b), "")
+        self.assertEqual(self.v2.state()["collections"], {"Moody set": [a, b]})
+        self.assertEqual(edit("Moody set", ident=a, on=False), "")
+        self.assertEqual(edit("Moody set", rename="Night"), "")
+        self.assertEqual(self.v2.state()["collections"], {"Night": [b]})
+        self.assertTrue(edit("Night", ident="no such style"))
+        self.assertTrue(edit(""))
+        self.assertEqual(edit("Night", delete=True), "")
+        self.assertEqual(self.v2.state()["collections"], {})
+
+    def test_a_damaged_state_file_reads_as_empty(self):
+        os.makedirs(self.work, exist_ok=True)
+        for junk in ("not json", "[1, 2]", '{"favourites": 7, "collections": [1], "recents": {}}'):
+            with open(self.v2.STATE, "w", encoding="utf-8") as handle:
+                handle.write(junk)
+            self._reset()
+            self.assertEqual(self.v2.state(), {"favourites": [], "recents": [], "collections": {}})
+
+    # ---- previews
+
+    @unittest.skipUnless(HAVE_PILLOW, "needs Pillow")
+    def test_a_preview_is_saved_listed_and_removed(self):
+        style = self.v2.catalog()["styles"][7]
+        self.assertFalse(self.v2.has_preview(style["id"]))
+        self.assertTrue(self.v2.save_preview(style["name"], self.png((2000, 1000))))
+        self.assertIn(style["id"], self.v2.previews())
+        path = self.v2.preview_path(style["id"])
+        with _Image.open(path) as image:
+            self.assertEqual(max(image.size), self.v2.PREVIEW_SIZE)
+        self.assertTrue(self.v2.preview_path(style["id"], "256").endswith(".256.jpg"))
+        self.assertTrue(self.v2.delete_preview(style["id"]))
+        self.assertEqual(self.v2.previews(), {})
+        self.assertIsNone(self.v2.preview_path(style["id"]))
+
+    def test_a_preview_can_only_ever_land_in_the_previews_folder(self):
+        base = os.path.realpath(self.v2.PREVIEWS)
+        for hostile in ("../../etc/passwd", "..\\..\\windows\\win.ini", "/abs/olute",
+                        "C:\\x\\y", "a/../../b", "photo.x\x00.jpg", "con", "....//....//x"):
+            path = self.v2.preview_file(hostile)
+            self.assertEqual(os.path.dirname(os.path.realpath(path)), base, hostile)
+            self.assertIsNone(self.v2.save_preview(hostile, b"x"))
+            self.assertIsNone(self.v2.preview_path(hostile))
+            self.assertFalse(self.v2.delete_preview(hostile))
+        self.assertIsNone(self.v2.preview_file(""))
+
+    def test_a_file_that_is_not_an_image_is_refused(self):
+        style = self.v2.catalog()["styles"][0]
+        self.assertIsNone(self.v2.save_preview(style["id"], b"<script>alert(1)</script>"))
+        self.assertIsNone(self.v2.save_preview(style["id"], "a string"))
+        self.assertFalse(os.path.isdir(self.v2.PREVIEWS) and os.listdir(self.v2.PREVIEWS))
+
+    @unittest.skipUnless(HAVE_PILLOW, "needs Pillow")
+    def test_previews_of_original_styles_are_carried_over_once(self):
+        import json
+        with open(os.path.join(ROOT, "styles_v2", "_aliases.json"), encoding="utf-8") as handle:
+            aliases = json.load(handle)
+        old_id, new_id = next((old, new) for old, new in aliases.items() if self.v2.resolve(new))
+        # a stand-in for the original gallery, so the test never touches a real one
+        folder = os.path.join(self.work, "original")
+        os.makedirs(folder)
+        with open(os.path.join(folder, "cover.jpg"), "wb") as handle:
+            handle.write(self.png())
+        records = {gallery.safe(old_id): {"cover": "../original/cover.jpg"},
+                   gallery.safe("not.aliased"): {"cover": "cover.jpg"}}
+        real = (gallery.manifest, gallery.previews_dir)
+        gallery.manifest, gallery.previews_dir = (lambda: records), (lambda cid=None: folder)
+        try:
+            self.assertEqual(self.v2.adopt_v1_previews(), 1)
+            self.assertTrue(self.v2.has_preview(new_id))
+            self.assertEqual(len(self.v2.previews()), 1)
+            # a one-time step: a preview the user later removes does not come back
+            self.assertTrue(self.v2.delete_preview(new_id))
+            self.assertEqual(self.v2.adopt_v1_previews(), 0)
+            self.assertFalse(self.v2.has_preview(new_id))
+            self.assertTrue(os.path.isfile(os.path.join(folder, "cover.jpg")))
+        finally:
+            gallery.manifest, gallery.previews_dir = real
+
+    # ---- the user's own styles
+
+    def test_own_styles_are_saved_edited_and_deleted(self):
+        entry, error = self.v2.save_custom({
+            "name": "My Look", "sub": "Tests", "lead": "Soft grainy test photograph",
+            "parts": "warm grain\nlow contrast, lifted blacks", "tags": "film grain, sepia"})
+        self.assertEqual(error, "")
+        self.assertEqual((entry["cat"], entry["custom"]), ("custom", True))
+        self.assertEqual(entry["parts"], ["warm grain", "low contrast", "lifted blacks"])
+        self.assertEqual(entry["tags"], ["film_grain", "sepia"])
+        self.assertIn("custom", [cat["id"] for cat in self.v2.catalog()["cats"]])
+        self.assertIn("Soft grainy test photograph", self.node(styles="my look")["result"][0])
+        entry, error = self.v2.save_custom({"name": "My Better Look", "lead": "Changed lead"},
+                                           replace="My Look")
+        self.assertEqual(error, "")
+        self.assertIsNone(self.v2.resolve("My Look"))
+        self.assertTrue(self.v2.delete_custom("My Better Look"))
+        self.assertIsNone(self.v2.resolve("My Better Look"))
+
+    def test_an_own_style_cannot_shadow_or_delete_a_shipped_one(self):
+        shipped = self.v2.catalog()["styles"][0]
+        entry, error = self.v2.save_custom({"name": shipped["name"], "lead": "x y"})
+        self.assertIsNone(entry)
+        self.assertIn("already a style", error)
+        self.assertFalse(self.v2.delete_custom(shipped["name"]))
+        self.assertIsNotNone(self.v2.resolve(shipped["name"]))
+        self.assertEqual(self.v2.save_custom({"name": "", "lead": "x"})[1], "Give the style a name.")
+        self.assertTrue(self.v2.save_custom("not a dict")[1])
+
+    def test_hostile_text_in_an_own_style_stays_text(self):
+        entry, error = self.v2.save_custom({
+            "name": "<img src=x>, @all: | (x)", "lead": "lead\x00 with\ncontrol\x1b chars",
+            "parts": ["p" * 5000, {"not": "text"}], "tags": ["(tag)"]})
+        self.assertEqual(error, "")
+        self.assertNotRegex(entry["name"], r"[,:@|()<>]")
+        self.assertNotRegex(entry["lead"], r"[\x00-\x1f]")
+        self.assertLessEqual(len(entry["parts"][0]), 100)
+        out = self.node(styles=entry["name"], output_as="tags")["result"][2]
+        self.assertIn("\\(tag\\)", out)
+
+    def test_a_recipe_saved_whole_ignores_strength(self):
+        words = [f"word number {index}" for index in range(30)]
+        tags = [f"tag_{index}" for index in range(30)]
+        entry, error = self.v2.save_custom({"name": "Rolled Recipe", "sub": "Rolled",
+                                            "lead": "Painterly", "parts": words, "tags": tags,
+                                            "fixed": True})
+        self.assertEqual(error, "")
+        self.assertTrue(entry["fixed"])
+        self.assertEqual(len(entry["parts"]), 30)
+        for strength in ("light", "standard", "heavy"):
+            text = self.node(styles="Rolled Recipe", strength=strength)["result"][2]
+            self.assertEqual(text, "Painterly, " + ", ".join(words))
+        tagged = self.node(styles="Rolled Recipe", strength="light", output_as="tags")["result"][2]
+        self.assertEqual(tagged.split(", "), tags)
+        # blended, it still brings all of itself
+        other = self.names(1)[0]
+        blend = self.node(styles=f"{other}, Rolled Recipe")["result"][2]
+        self.assertIn("word number 29", blend)
+
+    def test_a_recipe_not_saved_whole_follows_strength(self):
+        words = [f"word number {index}" for index in range(12)]
+        entry, _error = self.v2.save_custom({"name": "Loose Recipe", "lead": "Painterly",
+                                             "parts": words})
+        self.assertFalse(entry["fixed"])
+        light = self.node(styles="Loose Recipe", strength="light")["result"][2]
+        self.assertEqual(light, "Painterly, word number 0, word number 1")
+        heavy = self.node(styles="Loose Recipe", strength="heavy")["result"][2]
+        self.assertEqual(len(heavy.split(", ")), 8)
+
+    def test_a_saved_recipe_has_a_length_limit_and_shipped_styles_are_never_fixed(self):
+        entry, _error = self.v2.save_custom({"name": "Huge", "lead": "x y", "fixed": True,
+                                             "parts": [f"p {i}" for i in range(500)]})
+        self.assertEqual(len(entry["parts"]), self.v2.MAX_OWN_PARTS)
+        self.assertFalse(any(style["fixed"] for style in self.v2.catalog()["styles"]
+                             if not style["custom"]))
+        # "fixed" must be a real true, not anything truthy from a request
+        loose, _error = self.v2.save_custom({"name": "Sneaky", "lead": "x y", "fixed": "yes"})
+        self.assertFalse(loose["fixed"])
+
+    # ---- the node
+
+    def test_the_node_is_registered_beside_the_original(self):
+        for key in ("NeonsStyleExplorer", "NeonsStyleExplorer2", "NeonsStyleExplorer2Encode"):
+            self.assertIn(key, nodes.NODE_CLASS_MAPPINGS)
+        self.assertEqual(nodes.NODE_DISPLAY_NAME_MAPPINGS["NeonsStyleExplorer2"],
+                         "Neons Style Explorer 2")
+
+    def test_the_node_reports_what_it_used(self):
+        a, b = self.names(2)
+        out = self.node(styles=f"{a}, {b}:0.5")
+        self.assertEqual(out["result"][3], f"{a}, {b}")
+        self.assertEqual(len(out["ui"]["ns2_style_ids"][0]), 2)
+        self.assertEqual(self.v2.state()["recents"][0], out["ui"]["ns2_style_ids"][0][0])
+
+    def test_the_node_reruns_only_when_the_result_would_change(self):
+        changed = self.nodes2.NeonsStyleExplorer2.IS_CHANGED
+        name = self.names(1)[0]
+        base = {"prompt": "x", "styles": name, "roll_seed": 5}
+        self.assertEqual(changed(**base), changed(**base))
+        self.assertNotEqual(changed(**base), changed(**dict(base, strength="heavy")))
+        dice = dict(base, styles="@all")
+        self.assertEqual(changed(**dice), changed(**dice))
+        self.assertNotEqual(changed(**dict(dice, roll_seed=0)), changed(**dict(dice, roll_seed=0)))
+        self.assertNotEqual(changed(**dict(base, styles="@next")),
+                            changed(**dict(base, styles="@next")))
+        # asking whether to re-run must not itself use anything up
+        self.assertEqual(self.v2.state()["recents"], [])
+        self.assertEqual(self.v2._claimed, set())
+
+    def test_an_edited_own_style_reruns_the_node(self):
+        changed = self.nodes2.NeonsStyleExplorer2.IS_CHANGED
+        self.v2.save_custom({"name": "Mine", "lead": "First lead here"})
+        before = changed(prompt="x", styles="Mine", roll_seed=5)
+        self.v2.save_custom({"name": "Mine", "lead": "Second lead here"}, replace="Mine")
+        self.assertNotEqual(before, changed(prompt="x", styles="Mine", roll_seed=5))
+
+
 if __name__ == "__main__":
     unittest.main(verbosity=2)

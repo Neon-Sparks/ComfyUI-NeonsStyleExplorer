@@ -1,5 +1,101 @@
 # Changelog
 
+## 3.0.0 — Style Explorer 2 and the Style Roller
+
+Two new nodes. Nothing existing is changed or removed: every workflow built
+with the original nodes loads and runs as before.
+
+### Added: Neons Style Explorer 2
+
+* A second style node that sits beside the original, with its own catalog of
+  **5,870 styles in 16 categories and 137 sub-categories**, and 454 modifiers.
+  * The 1,596 imported "Extra" styles were keyword lists, 787 of them numbered
+    repeats. They were merged into about 640 distinct looks and each was
+    rewritten as a proper style.
+  * The 1,271 written styles were reworked into the new format and re-filed.
+    Errors found on the way were fixed (a daguerreotype described as an instant
+    photograph; three styles whose names contradicted their descriptions).
+  * About 4,000 styles are new. Half are known looks that were missing:
+    cinema, world and historical art, fantasy, science fiction and horror
+    illustration, craft and material, game art, typography, pattern and more.
+    Half are newly designed looks: unusual pairings of medium and treatment
+    such as Neon Sumi-e, Cel-Shaded Oil Painting or Woven Tapestry Pixel Grid.
+  * Every category holds between 338 and 500 styles.
+  * Real names were taken out. A studio, artist, camera or film-stock look is
+    described as a look.
+* **Fast.** The style is not a dropdown, so the node adds about 12 KB to
+  ComfyUI's node list where a catalog-sized dropdown adds megabytes. The
+  catalog loads on first use in about 0.3 s and reaches the browser as a
+  710 KB download that is then cached. The browser draws only the cards on
+  screen and opens in well under a tenth of a second.
+* **strength** (light / standard / heavy) writes more or less of a style. Every
+  style lists its descriptors most-defining first, so this works on turbo
+  models that ignore emphasis syntax.
+* **Blend up to three styles**, each with a weight.
+* **output_as**: natural language, booru tags, or both.
+* **Six modifiers**: lighting, palette, camera, mood, format, finish, each with
+  a Random option.
+* **Dice in the styles box**: `@all`, `@favourites`, `@recent`, `@missing`,
+  `@next`, `@<category>`, `@<category>/<sub>`, `@<collection>`.
+* **A new browser**: category tree, trait filters, instant search, favourites,
+  collections, your own styles, keyboard control, and a live read-out of
+  exactly what the node will write.
+* **Previews** you save from your own generations, by button or automatically;
+  `@next` with `auto_preview` fills the gallery unattended. Previews of
+  original styles are copied across to their version 2 counterparts once.
+* **Three `lora_triggers` inputs**, named as on the original node: trigger
+  words from up to three LoRA Explorers lead the prompt, ahead of the style.
+* **`prompt_prefix` and `negative` boxes.** The prefix leads the prompt after
+  any LoRA triggers. The negative is yours alone: version 2 styles add nothing
+  to it, as turbo models use none.
+* **Outputs for every wiring:** `positive`, `negative`, `style_text`,
+  `style_name` and `debug`; the Encode node adds `positive_conditioning` and
+  `negative_conditioning`.
+* `tools/v2_lint.py` enforces the writing rules on every style; the build runs it.
+
+### Added: Neons Style Roller
+
+* **Neons Style Roller**, a new node that rolls loose style language — "painterly,
+  caustic light, geometric shapes" — from a list of more than 19,000 terms. It
+  stands alone: no panel, no gallery, nothing needed from the other nodes.
+  * **kind** narrows the roll to realism, anime & manga, cartoon & animation,
+    comics & print, painting, illustration & drawing, 3D & games, graphic
+    design, or abstract & experimental; **count** rolls 1 to 50 terms.
+  * **aspect** rolls one part of a look (lighting, colour, texture, mood,
+    composition, era & movement, line & shape) or spreads the words across all
+    of them.
+  * **vocabulary** picks the well-known terms, the deep cuts, everything, or
+    only your own words from `user/roller_words.txt`.
+  * **output_as** writes phrases or booru-style tags, using the real tag where
+    a term has one; **weight** wraps each term as `(term:1.20)`.
+  * **always_include** and **never_include** pin words in or keep them out.
+  * A roll never repeats a term and never pairs opposites (monochrome with
+    vivid colour, soft light with hard light, minimalist with ornate).
+  * **save as style** turns a roll into a style for Style Explorer 2. A dialog
+    names it, lets you edit the words, and can attach the newest generated
+    image as its preview. A saved recipe keeps every word whatever the
+    strength setting, unless you choose otherwise.
+  * The same seed gives the same words, a longer roll extends a shorter one,
+    and seed 0 rolls afresh every run. **preview roll** shows the words without
+    running the workflow.
+* `tools/mine_roller.py` builds the word list from a hand-written core
+  (`tools/roller_core.txt`) and the descriptors of both catalogs; the build runs
+  it and the tests fail if the list on disk is stale.
+
+### Security
+
+* Style Explorer 2 adds eleven routes under `/neons_style2/`. Every POST is behind
+  the cross-site guard. A preview can only be read from ComfyUI's own image
+  folders and only be written inside `user/v2/previews`, under a name built
+  from the style, never from the request. All user data is one state file and
+  one styles file; names from the browser are never used as paths.
+* The roller adds one route, `POST /neons_roller/roll`, behind the same
+  cross-site guard as every other POST. It reads the word list and writes
+  nothing; every value is clamped or treated as text, and the security probe
+  now attacks it too.
+* A user's word file is only ever text: control characters are stripped, lines
+  are cut at 80 characters, and a file over 2 MB is ignored.
+
 ## 2.10.1 — no dead space under the buttons in the new node interface
 
 * **The style nodes had an empty strip below the button row** in ComfyUI's

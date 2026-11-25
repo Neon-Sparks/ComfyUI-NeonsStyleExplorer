@@ -1,0 +1,22 @@
+{
+  "categories": [
+    {"id": "photo", "name": "Photography", "subs": ["Portrait & Fashion", "Street & Documentary", "Landscape & Nature", "Studio & Product", "Film Stocks & Colour", "Darkroom & Alternative Process", "Lens & Camera Effects", "Vintage & Era Looks", "Experimental Photo", "Architecture & Interiors", "Macro & Still Life"]},
+    {"id": "cinema", "name": "Cinema & TV", "subs": ["Film Genres", "Film Eras", "Colour Grades", "Video & Broadcast Formats", "Practical & Special Effects", "Cinematography Looks", "World Cinema Movements"]},
+    {"id": "anime", "name": "Anime & Manga", "subs": ["Anime Eras", "Anime Genres", "Manga Inking", "Colouring & Shading", "Chibi & Stylised", "Painterly & Backgrounds", "Game & Visual Novel Art", "Mecha & Sci-Fi Design", "Fantasy & Adventure Art"]},
+    {"id": "cartoon", "name": "Cartoon & Animation", "subs": ["Classic Theatrical", "TV Cartoon", "Modern & Web Animation", "Stop Motion & Puppet", "Cutout & Experimental Animation", "World Animation", "Character Design Styles", "Background & Layout Art"]},
+    {"id": "comics", "name": "Comics & Graphic Novels", "subs": ["American Comics Eras", "European Comics", "Indie & Underground", "Noir & Pulp", "Strips & Cartooning", "Global & Manga-Influenced Comics", "Inking & Colouring Styles"]},
+    {"id": "print", "name": "Printmaking & Posters", "subs": ["Relief Print", "Intaglio & Engraving", "Screenprint & Riso", "Lithography & Offset", "Posters", "Ephemera & Packaging", "Book Arts & Illustrated Print", "Experimental Print"]},
+    {"id": "paint", "name": "Painting", "subs": ["Oil", "Watercolour & Gouache", "Acrylic & Mixed Media", "Ink & East Asian Brush", "Classical Movements", "Modern Movements", "Folk & Naive", "Digital Painting", "Portrait & Figure Traditions", "Landscape & Still Life Traditions"]},
+    {"id": "draw", "name": "Drawing & Illustration", "subs": ["Pencil & Charcoal", "Pen & Ink", "Marker, Crayon & Pastel", "Editorial & Advertising", "Children's & Storybook", "Scientific & Technical", "Fashion & Lifestyle", "Concept Art", "Architectural & Urban Sketch", "Tattoo & Flash"]},
+    {"id": "world", "name": "Historical & World Art", "subs": ["Ancient", "Medieval & Sacred", "East Asian", "South & Southeast Asian", "Islamic & Persian", "African & Oceanic", "Americas & Indigenous", "European Folk"]},
+    {"id": "cgi", "name": "3D & CGI", "subs": ["Photoreal Render", "Stylised 3D", "Clay, Toy & Miniature", "Material Studies", "Technical & Wireframe", "Motion Graphics & Abstract 3D", "Product & Automotive Viz", "Architectural Viz"]},
+    {"id": "games", "name": "Games & Pixel Art", "subs": ["Pixel Art", "Retro 3D", "Game Genres & Splash Art", "Cards, UI & Icons", "Voxel & Blocky", "Tabletop & Board Game Art", "Environment & Level Art", "Character & Creature Art"]},
+    {"id": "design", "name": "Graphic Design", "subs": ["Design Movements", "Flat & Vector", "Typography & Layout", "Infographic & Diagram", "Pattern & Ornament", "Branding & Icon", "Editorial & Poster Design", "Web & App Interface"]},
+    {"id": "aesthetic", "name": "Aesthetics & Subcultures", "subs": ["Internet Aesthetics", "Punk & Futurisms", "Decades", "Cosy & Nature", "Dark & Gothic", "Fashion & Street Styles", "Retro-Futures & Nostalgia", "Seasonal & Atmospheric"]},
+    {"id": "genre", "name": "Fantasy, Sci-Fi & Horror", "subs": ["High Fantasy", "Dark Fantasy", "Science Fiction", "Horror & Macabre", "Mythic & Fairy Tale", "Retro Pulp Genre", "Steampunk & Alt-History", "Post-Apocalyptic & Dystopian", "Cosmic & Weird"]},
+    {"id": "craft", "name": "Craft & Material", "subs": ["Paper & Collage", "Textile & Fibre", "Ceramic, Glass & Stone", "Wood & Metal", "Food & Organic", "Light & Projection", "Sculpture & Installation", "Jewellery & Ornament", "Models & Miniature Craft"]},
+    {"id": "abstract", "name": "Abstract & Experimental", "subs": ["Geometric", "Gestural & Colour Field", "Generative & Algorithmic", "Glitch & Signal", "Psychedelic & Optical", "Surreal & Dreamlike", "Minimal & Monochrome", "Organic & Biomorphic", "Hybrid & Invented"]}
+  ],
+  "traits": ["monochrome", "colourful", "muted", "pastel", "warm", "cool", "dark", "bright", "high-contrast", "soft", "gritty", "clean", "textured", "flat", "detailed", "minimal", "ornate", "realistic", "stylised", "vintage", "modern", "futuristic", "playful", "elegant", "moody", "dreamy", "dramatic", "cosy", "eerie", "bold", "delicate", "handmade", "digital", "geometric", "organic"],
+  "modifiers": ["lighting", "palette", "camera", "mood", "format", "finish"]
+}

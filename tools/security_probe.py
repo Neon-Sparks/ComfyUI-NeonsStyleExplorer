@@ -145,6 +145,91 @@ async def main():
             check(f"GET {path.split('?')[0]} with a traversal answers 404",
                   response.status == 404, response.status)
 
+        print("\nstyle explorer 2")
+        v2 = importlib.import_module("ns_probe_pkg.explorer2")
+        shipped = v2.catalog()["styles"][0]
+        from PIL import Image as _ProbeImage
+
+        _ProbeImage.new("RGB", (64, 64), (10, 80, 120)).save(os.path.join(OUTPUT, "probe.png"))
+        leaked = []
+        for escape in escapes:
+            status, payload = await post("/neons_style2/preview/save",
+                                         {"id": shipped["id"], **escape, "type": "output"})
+            if payload.get("ok"):
+                leaked.append(escape)
+        check("/neons_style2/preview/save cannot read outside the image folders", not leaked, leaked)
+        status, payload = await post("/neons_style2/preview/save", {
+            "id": shipped["id"], "filename": "probe.png", "type": "../../etc"})
+        check("an invented folder type is refused", not payload.get("ok"), payload)
+        status, payload = await post("/neons_style2/preview/save", {
+            "id": "../../../etc/passwd", "filename": "probe.png", "type": "output"})
+        check("a preview cannot be filed under an invented style", not payload.get("ok"), payload)
+        status, payload = await post("/neons_style2/preview/save", {
+            "id": shipped["id"], "filename": "probe.png", "type": "output"})
+        landed = v2.preview_path(shipped["id"])
+        check("a real image is saved, inside the previews folder",
+              payload.get("ok") and landed and os.path.dirname(os.path.realpath(landed))
+              == os.path.realpath(v2.PREVIEWS), payload)
+        for query in ("id=../../../secret", f"id={SECRET}", "id=..%5C..%5Cx&size=256",
+                      "id=", "size=../../x"):
+            response = await client.get(f"/neons_style2/preview?{query}")
+            check(f"GET /neons_style2/preview?{query.split('=')[0]}=<traversal> answers 404",
+                  response.status == 404, response.status)
+        response = await client.get(f"/neons_style2/preview?id={shipped['id']}")
+        check("a preview is served as an image and never sniffed",
+              response.status == 200 and response.headers.get("X-Content-Type-Options") == "nosniff"
+              and response.headers.get("Content-Type") == "image/jpeg", dict(response.headers))
+        status, payload = await post("/neons_style2/custom/save", {"style": {
+            "name": "../../evil<script>", "lead": "x" * 100000, "parts": ["y"] * 5000,
+            "tags": ["../t"]}})
+        made = v2.resolve(payload.get("name") or "")
+        check("a hostile own style is cut down to plain text",
+              bool(made) and len(made["lead"]) <= 120 and len(made["parts"]) <= v2.MAX_OWN_PARTS
+              and all(len(part) <= 100 for part in made["parts"])
+              and "<" not in made["name"] and "/" not in made["id"].split(".", 1)[1], payload)
+        status, payload = await post("/neons_style2/custom/delete", {"name": shipped["name"]})
+        check("a shipped style cannot be deleted through the own-style route",
+              not payload.get("removed") and v2.resolve(shipped["name"]) is not None, payload)
+        status, payload = await post("/neons_style2/collection", {"name": "../../x", "id": shipped["id"]})
+        status, payload = await post("/neons_style2/collection", {"name": "y" * 5000, "id": ["a"]})
+        stored = [name for name in os.listdir(v2.USER) if not name.startswith(".")]
+        check("collections live in one state file, whatever they are called",
+              sorted(stored) == ["custom.json", "previews", "state.json"], stored)
+        status, payload = await post("/neons_style2/compose", {
+            "styles": "@all, " + "x" * 100000, "prompt": "p" * 100000, "roll_seed": "1e999",
+            "strength": {"a": 1}, "lighting": ["x"], "output_as": 7})
+        check("compose with hostile values answers instead of failing",
+              status == 200 and payload.get("ok") and len(payload.get("positive", "")) < 30000,
+              (status, str(payload)[:100]))
+        response = await client.get("/neons_style2/catalog")
+        etag = response.headers.get("ETag")
+        again = await client.get("/neons_style2/catalog", headers={"If-None-Match": etag or "x"})
+        check("an unchanged catalog is answered with 304", bool(etag) and again.status == 304,
+              again.status)
+
+        print("\nthe style roller")
+        status, payload = await post("/neons_roller/roll", {"count": 10 ** 9, "seed": 5})
+        rolled = [part for part in str(payload.get("words", "")).split(", ") if part]
+        check("a huge count is clamped to 50", status == 200 and len(rolled) == 50, len(rolled))
+        hostile = {"count": "1e999", "seed": -5, "kind": {"a": 1}, "aspect": ["x"],
+                   "vocabulary": "../../etc/passwd", "output_as": None, "weight": "nan",
+                   "never_include": ["a"], "always_include": "x" * 200000}
+        status, payload = await post("/neons_roller/roll", hostile)
+        check("hostile values roll with defaults instead of failing",
+              status == 200 and payload.get("ok"), (status, str(payload)[:120]))
+        check("a pinned word cannot grow past its limit",
+              len(str(payload.get("words", ""))) < 6000, len(str(payload.get("words", ""))))
+        status, payload = await post("/neons_roller/roll", {
+            "always_include": os.path.basename(SECRET), "vocabulary": SECRET, "kind": SECRET})
+        check("a path in any field is only ever text",
+              "not yours" not in str(payload), str(payload)[:120])
+        started = asyncio.get_event_loop().time()
+        status, payload = await post("/neons_roller/roll", {
+            "count": 50, "seed": 3, "never_include": ", ".join(f"w{i}(a+)+$" for i in range(5000))})
+        took = asyncio.get_event_loop().time() - started
+        check("a huge never_include is answered quickly", status == 200 and took < 2.0,
+              f"{took:.2f}s")
+
         print("\nmalformed bodies")
         crashed = []
         for path in posts:

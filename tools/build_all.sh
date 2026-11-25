@@ -7,5 +7,7 @@ python3 tools/lint.py
 python3 tools/build_index.py
 python3 tools/build_docs.py
 python3 tools/build_examples.py
+python3 tools/mine_roller.py
+python3 tools/v2_lint.py
 node tools/check_web.mjs
 python3 tests/test_compose.py

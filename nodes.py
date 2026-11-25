@@ -7,6 +7,8 @@ import uuid
 from . import compose as composer
 from . import loras
 from . import models
+from . import nodes2
+from . import roller
 from . import runs
 from .catalog import (RANDOM_TOKEN, SOURCES, crawl_names, custom_names, entries,
                       imported_style_names, names_for, push_recent, resolve, roll,
@@ -780,12 +782,114 @@ class NeonsModelExplorer:
         }
 
 
+class NeonsStyleRoller:
+    """Rolls style language — "painterly, caustic lighting, geometric shapes" —
+    from a list of thousands of terms. Works alone or ahead of any prompt."""
+
+    CATEGORY = "Neons"
+    FUNCTION = "roll"
+    RETURN_TYPES = ("STRING", "STRING")
+    RETURN_NAMES = ("text", "words")
+    OUTPUT_TOOLTIPS = (
+        "The rolled words joined to whatever is wired into text; with nothing wired, "
+        "the rolled words on their own.",
+        "Only the rolled words.",
+    )
+    DESCRIPTION = ("Neons Style Roller — rolls style words from a list of thousands: "
+                   "looks, lighting, colour, texture, mood and more.")
+
+    @classmethod
+    def INPUT_TYPES(cls):
+        return {
+            "required": {
+                "kind": (list(roller.KIND_CHOICES), {
+                    "default": "all",
+                    "tooltip": "What sort of picture the words should suit. Lighting, colour "
+                               "and mood words suit every kind, so they stay in the mix.",
+                }),
+                "count": ("INT", {
+                    "default": 5, "min": 1, "max": roller.MAX_COUNT,
+                    "tooltip": "How many terms to roll. A term is usually one to three words.",
+                }),
+                "seed": ("INT", {
+                    "default": 54321, "min": 0, "max": 0xFFFFFFFF,
+                    "control_after_generate": True,
+                    "tooltip": "Decides the roll. The same seed and settings give the same "
+                               "words; 0 rolls afresh on every run.",
+                }),
+                "aspect": (list(roller.ASPECT_CHOICES), {
+                    "default": "any (balanced)",
+                    "tooltip": "Roll one part of a look only, or leave it balanced to spread "
+                               "the words across all of them.",
+                }),
+                "vocabulary": (roller.VOCABULARIES, {
+                    "default": "everything",
+                    "tooltip": "well known: terms most models have seen often. deep cuts: the "
+                               "unusual ones. my words: only user/roller_words.txt.",
+                }),
+                "output_as": (roller.OUTPUTS, {
+                    "default": "phrases",
+                    "tooltip": "phrases for natural-language models; tags writes "
+                               "booru_style_tags for tag-trained models.",
+                }),
+                "weight": ("FLOAT", {
+                    "default": 1.0, "min": 0.1, "max": 2.0, "step": 0.05,
+                    "tooltip": "Emphasis for the rolled words, written as (word:1.20). "
+                               "1.0 writes them plain.",
+                }),
+                "always_include": ("STRING", {
+                    "default": "", "multiline": False,
+                    "tooltip": "Comma-separated words that lead every roll, on top of count.",
+                }),
+                "never_include": ("STRING", {
+                    "default": "", "multiline": False,
+                    "tooltip": "Comma-separated words to keep out. A word here removes every "
+                               "term that contains it.",
+                }),
+                "position": (roller.POSITIONS, {
+                    "default": "after text",
+                    "tooltip": "Where the rolled words go when something is wired into text.",
+                }),
+            },
+            "optional": {
+                "text": ("STRING", {
+                    "forceInput": True,
+                    "tooltip": "A prompt to add the rolled words to. Leave unwired to get "
+                               "the words alone.",
+                }),
+            },
+        }
+
+    @classmethod
+    def IS_CHANGED(cls, seed=0, **kwargs):
+        if not int(seed or 0):
+            return uuid.uuid4().hex
+        parts = [str(seed), roller.signature()]
+        parts += [f"{key}={kwargs[key]}" for key in sorted(kwargs)]
+        return hashlib.sha1("\n".join(parts).encode("utf-8")).hexdigest()
+
+    def roll(self, kind="all", count=5, seed=0, aspect="any (balanced)",
+             vocabulary="everything", output_as="phrases", weight=1.0, always_include="",
+             never_include="", position="after text", text=None):
+        rolled, pinned, note = roller.roll(
+            count=count, kind=kind, aspect=aspect, vocabulary=vocabulary, seed=seed,
+            never_include=never_include, always_include=always_include)
+        words = roller.render(pinned + rolled, output_as, weight)
+        return {"ui": {"ns_rolled_words": [words], "ns_roller_note": [note],
+                       # the recipe as plain lists, for "save as style"
+                       "ns_rolled_terms": [[row["term"] for row in pinned + rolled]],
+                       "ns_rolled_tags": [[roller.plain_tag(row) for row in pinned + rolled]]},
+                "result": (roller.join_text(text, words, position), words)}
+
+
 NODE_CLASS_MAPPINGS = {
     "NeonsStyleExplorer": NeonsStyleExplorer,
     "NeonsStyleExplorerEncode": NeonsStyleExplorerEncode,
     "NeonsGalleryCapture": NeonsGalleryCapture,
     "NeonsLoraExplorer": NeonsLoraExplorer,
     "NeonsModelExplorer": NeonsModelExplorer,
+    "NeonsStyleRoller": NeonsStyleRoller,
+    **nodes2.NODE_CLASS_MAPPINGS,
 }
 
 NODE_DISPLAY_NAME_MAPPINGS = {
@@ -794,4 +898,6 @@ NODE_DISPLAY_NAME_MAPPINGS = {
     "NeonsGalleryCapture": "Neons Gallery Capture",
     "NeonsLoraExplorer": "Neons LoRA Explorer",
     "NeonsModelExplorer": "Neons Model Explorer",
+    "NeonsStyleRoller": "Neons Style Roller",
+    **nodes2.NODE_DISPLAY_NAME_MAPPINGS,
 }

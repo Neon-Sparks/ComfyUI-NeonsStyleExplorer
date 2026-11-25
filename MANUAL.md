@@ -30,6 +30,8 @@ minutes in six steps with pictures. This manual is the long version.
 16. [The Extra family](#16-the-extra-family)
 17. [The LoRA node](#17-the-lora-node)
 17a. [The model node](#17a-the-model-node)
+17b. [The Style Roller](#17b-the-style-roller)
+17c. [Style Explorer 2](#17c-style-explorer-2)
 18. [Reference tables](#18-reference-tables)
 
 ---
@@ -113,7 +115,7 @@ If you would rather not wire two text encoders, use **Neons Style Explorer
 
 ## 4. The nodes
 
-Three nodes, all under the **Neons** category.
+All under the **Neons** category.
 
 **Neons Style Explorer** — text in, text out.
 Outputs: `positive`, `negative`, `debug`, `style_name`.
@@ -130,6 +132,14 @@ nodes, so workflows saved before it existed keep their wiring.
 
 **Neons LoRA Explorer** — a LoRA loader with its own gallery. Model and clip in,
 model and clip out, plus the LoRA's name as a string. See section 17.
+
+**Neons Style Explorer 2** and **(Encode)** — the second-generation style
+node, with its own larger catalog and browser. It replaces nothing: use it
+beside the original or instead of it. See section 17c.
+
+**Neons Style Roller** — rolls loose style words ("painterly, caustic light,
+geometric shapes") from a list of thousands. Optional text in, text out. It
+uses nothing else from the pack and works alone. See section 17b.
 
 **Neons Gallery Capture** — the Save button as a node, for headless or batch
 workflows. Inputs: `image`, `style_name`, `mode` (`first` / `always` / `off`)
@@ -676,6 +686,8 @@ ComfyUI-NeonsStyleExplorer/
 │  ├─ favourites.json        Default catalog's favourites
 │  ├─ recents.json           Default catalog's recents
 │  ├─ catalogs.json          the catalog list + which is active
+│  ├─ roller_words.txt       your own words for the Style Roller (optional)
+│  ├─ v2/                    Style Explorer 2: favourites, collections, your styles, previews
 │  └─ catalogs/<name>/       each named catalog: previews, favourites, recents
 └─ styles/, data/            the shipped catalog — never written to
 ```
@@ -892,6 +904,321 @@ it and add your own loaders — rather than handing `None` down the graph.
 
 Outputs are `model`, `clip`, `vae`, `model_name` and `notes`. Previews live in
 `user/models/<gallery>/`, entirely separate from the LoRA galleries.
+
+## 17b. The Style Roller
+
+**Neons Style Roller** rolls loose style language rather than a written style:
+"painterly, caustic light, geometric shapes". It reads a list of more than
+19,000 terms and has no panel, gallery or catalog of its own, so it can be used
+without any other node from this pack.
+
+### What a roll is made of
+
+Every term in the list is filed two ways.
+
+* By **aspect** — what part of a look it describes: look & medium, lighting,
+  colour, texture & surface, mood, composition & camera, era & movement, or
+  line & shape.
+* By **kind** — which sort of picture it suits. A lighting or mood term usually
+  suits every kind; "screentone manga" suits one.
+
+With **aspect** on *any (balanced)* the roll deals from all the aspects in
+turn, so five words are never five kinds of lighting. The first word is always
+a *look* term, and with a **kind** chosen it is always one written for that
+kind — the word that says what sort of picture this is comes first.
+
+### Widgets
+
+| Widget | What it does |
+|---|---|
+| `kind` | all, realism, anime & manga, cartoon & animation, comics & print, painting, illustration & drawing, 3D & games, graphic design, abstract & experimental |
+| `count` | how many terms to roll, 1–50 |
+| `seed` | decides the roll; 0 rolls afresh on every run |
+| `aspect` | any (balanced), or one aspect only |
+| `vocabulary` | everything, well known, deep cuts, my words |
+| `output_as` | phrases, or booru-style tags |
+| `weight` | 1.0 writes the terms plain; anything else writes `(term:1.20)` |
+| `always_include` | comma-separated words that lead every roll, on top of `count` |
+| `never_include` | comma-separated words to keep out; removes every term containing one |
+| `position` | where the words go when a prompt is wired into `text` |
+| `preview roll` | rolls now, without running the workflow |
+| `save as style` | saves the roll in the box as a style for Style Explorer 2 |
+
+The optional **text** input takes a prompt. The **text** output is that prompt
+with the rolled words added before or after it; **words** is the rolled words
+alone. With nothing wired in, both outputs are the same.
+
+### Seeds
+
+The same seed and settings always give the same words, and a roll of eight
+starts with the same five words as a roll of five, so you can lengthen a roll
+you like without losing it. Use the control under the seed (randomize or
+increment) for a new roll each run, or set the seed to 0. **preview roll** with
+a seed set shows exactly what the next run will use.
+
+### What a roll will not do
+
+* Repeat a term, or use two terms that end in the same word (one "palette",
+  one "film grain") until it has run out of others.
+* Pair opposites: monochrome with vivid colour, high-key with low-key, soft
+  light with hard light, minimalist with ornate, warm with cool, matte with
+  glossy, sharp focus with blur, photorealistic with cartoon. A word you pin in
+  `always_include` counts too.
+
+If a narrow selection cannot fill the count, the node rolls what it can and
+says so under the words.
+
+### Tags
+
+`output_as: tags` writes each term the way a tag-trained model expects:
+lower-case with underscores. Where a term has a real booru tag the node uses
+it — *oil painting* becomes `oil_painting_(medium)`, written with its brackets
+escaped — and otherwise it writes the term's own words.
+
+### Your own words
+
+Create `user/roller_words.txt`. One term per line:
+
+```
+# lines starting with # are ignored
+glitter fog
+brass haze | lighting | painting anime
+cut-glass highlights | lighting
+```
+
+The second column is the aspect and the third the kinds, using these names:
+
+* aspects: `look` `lighting` `colour` `texture` `mood` `composition` `movement` `shape`
+* kinds: `realism` `anime` `cartoon` `comics` `painting` `illustration` `3d` `design` `abstract`
+
+A term with no aspect is filed under *look*; one with no kinds suits every
+kind. Your line wins over a shipped term with the same words, so you can
+re-file one. The file is read again whenever it changes — no restart — and
+`vocabulary: my words` rolls from it alone. Up to 20,000 terms and 2 MB are
+read; a larger file is ignored.
+
+### Saving a roll as a style
+
+**save as style** keeps a roll you like. It works on whatever is in the box:
+the last run, or the last **preview roll**.
+
+A dialog opens with everything filled in and editable:
+
+| Field | Starts as | Notes |
+|---|---|---|
+| Name | the first few words | up to 40 characters; must not match an existing style |
+| Lead | the first rolled word | the phrase the style opens with |
+| Words | the rest of the roll, one per line | edit, reorder or delete before saving |
+| Group | Rolled | the group inside *My Styles* it is filed under |
+| Always write every word | on | off lets `strength` on Style Explorer 2 shorten it: light keeps two words, standard four |
+| Use the newest generated image as its preview | on, if there is one | the last image any node made in this session |
+
+**Save style** adds it to *My Styles* in Neons Style Explorer 2. From then on
+it is a style like any other: pick it in the browser, blend it, give it a
+weight, roll it with `@Rolled`. If the roll was made in tags mode, the same
+words are kept as the style's tags too, so it works in either output.
+
+To get a preview that really shows the roll, wire the roller into your prompt,
+generate an image, then press **save as style** while that image is the newest
+one. A saved recipe can hold up to 60 words. It is one of your own styles, so
+you can edit or delete it from the browser later.
+
+### Where the list comes from
+
+`data/roller_words.txt` is built by `tools/mine_roller.py` from three sources:
+a hand-written core of well-known terms (`tools/roller_core.txt`), every short
+descriptor used by the original catalog, and the leads and descriptors of
+the version 2 catalog. Anything that names picture content is filtered out.
+The *well known* vocabulary is the core plus any term the catalogs use three
+times or more; everything else is a *deep cut*.
+
+---
+
+## 17c. Style Explorer 2
+
+**Neons Style Explorer 2** and **Neons Style Explorer 2 (Encode)** are a second
+generation of the style node. They are separate nodes with their own catalog,
+their own browser and their own user data: nothing about the original node or
+a workflow that uses it changes, and both can be used side by side.
+
+### What is different
+
+| | Original | Version 2 |
+|---|---|---|
+| Styles | 1,419 written + 1,596 imported keyword lists | 5,870, all written to one standard |
+| Filing | 10 families | 16 categories, 137 sub-categories, 35 traits |
+| Choosing | dropdowns with thousands of entries | a browser; the node holds one line of text |
+| Strength | a weight slider (emphasis syntax) | light / standard / heavy: how much of the style is written |
+| Mixing | style + extra + custom | up to three styles, each with a weight |
+| Add-ons | format, finish | lighting, palette, camera, mood, format, finish |
+| Negative prompt | yours plus each style's own | yours only: styles add nothing to it |
+
+### How a version 2 style is written
+
+Every style is a **lead** and five to seven **descriptors**:
+
+```
+Cross-hatched pen and ink drawing          <- the lead: names the look and its medium
+1. form built from layered crossing pen strokes
+2. tone made by line spacing alone         <- light strength stops here
+3. bare white paper left as the lights
+4. crisp black ink on smooth stock         <- standard stops here
+5. fine nib line of even weight
+6. dense hatching pooling in the shadows   <- heavy writes them all
+```
+
+The descriptors are ordered most-defining first. That is what makes
+**strength** work on models that ignore `(word:1.3)`: a lighter touch simply
+writes less of the style.
+
+### The node
+
+| Widget | What it does |
+|---|---|
+| `prompt` | what the picture shows |
+| `prompt_prefix` | written at the front, after any LoRA triggers: quality words, a framing phrase |
+| `negative` | what to keep out; passed to the negative outputs exactly as written |
+| `styles` | up to three styles, comma-separated; the Browse button fills it in |
+| `strength` | light (lead + 2 descriptors), standard (4), heavy (all) |
+| `output_as` | natural language, tags, or natural language + tags |
+| `style_position` | style before your prompt, or after it |
+| `lighting` `palette` `camera` `mood` `format` `finish` | one optional modifier each; **Random** picks one per run |
+| `roll_seed` | decides every dice and Random; 0 rolls afresh each run |
+| `auto_preview` | save the image a run makes as the style's preview: off, if missing, always |
+
+Inputs: `lora_triggers_1`, `lora_triggers_2` and `lora_triggers_3` take the
+`triggers` output of a Neons LoRA Explorer each. The words go at the very
+start of the prompt, ahead of the style, whichever `style_position` is set,
+in input order and without repeats. They are named as on the original node
+and are not part of `style_text`.
+
+The prompt is written in this order (with `style_position` on *after prompt*,
+the last two swap):
+
+```
+<lora triggers>, <prompt_prefix>, <style and modifiers>, <prompt>
+```
+
+| Output | What it carries |
+|---|---|
+| `positive` | the finished prompt |
+| `negative` | your negative box, unchanged |
+| `style_text` | the style and modifiers alone: no triggers, prefix or prompt |
+| `style_name` | the style or styles the run used, dice included |
+| `debug` | what the node did and why: styles, strength, modifiers, triggers, notes and both prompts. Wire it to a Preview Text node |
+
+The Encode node takes a `CLIP` and adds two outputs ahead of those:
+`positive_conditioning` and `negative_conditioning`. An empty negative is
+still encoded, so `negative_conditioning` can always go to a sampler. Use the
+plain node when you want to encode the text yourself, or send it somewhere
+else first.
+
+Version 2 styles carry no negative terms of their own. For a turbo model at
+CFG 1 the negative does nothing, so leave the box empty.
+
+Under the widgets is a panel: the style's preview, where it is filed, and four
+buttons. **Browse** opens the browser. **Roll** picks another style at random,
+from the same category when one is already chosen. **Save preview** files the
+newest generated image as the preview for the style. **Clear** removes the
+style.
+
+### The styles box
+
+The box is plain text, so it can be typed, pasted or wired.
+
+```
+Baroque Oil Glaze                     one style
+Baroque Oil Glaze, Film Noir:0.5      a blend; the number is the weight (0.1 to 2)
+@favourites                           a dice: one of your favourites, rolled each run
+@paint                                a dice: any Painting style
+@paint/Oil                            a dice: any style in Painting > Oil
+@My Collection                        a dice: any style in that collection
+@all  @recent  @missing  @next        any style / recently used / no preview yet / the next without a preview
+Baroque Oil Glaze, @favourites:0.4    a fixed style with a rolled one blended in
+```
+
+A weight changes how many of that style's descriptors are written; in tags
+output it is also written as emphasis, `(tag:1.30)`. A name the catalog does
+not have is skipped and reported on the panel, so an old workflow never fails.
+
+### The browser
+
+* **Left:** all styles, favourites, recently used, with or without a preview,
+  your collections, then the categories. Click a category to open its
+  sub-categories.
+* **Top:** search (every word must match the name, description, tags or
+  category), order, and card size. The trait chips narrow the view to styles
+  that are, say, *moody* and *textured*.
+* **Middle:** the styles. Only the cards on screen exist, so it scrolls the
+  same with 5,870 styles as with thirty.
+* **Right:** the selected style: its preview, lead, descriptors, tags and
+  traits, and below it the selection you are building, with a weight slider
+  per style and the exact text the node will write.
+
+| Key | Does |
+|---|---|
+| `/` | jump to search |
+| arrows | move the selection |
+| `Enter` or double-click | use this style and close |
+| `B` | add it to the blend |
+| `F` | favourite |
+| `Esc` | close |
+
+**Collections** are your own named sets. Add a style from its **Collections**
+button; a collection can then be rolled with `@name`.
+
+**New style** writes one of your own, and **Copy to my styles** starts from any
+shipped style. Yours are filed under *My Styles*.
+
+### Previews
+
+A style has one preview image, which you make: generate with the style, then
+press **Save preview**. `auto_preview` does it for you. To fill the gallery
+unattended, set the styles box to `@next`, `auto_preview` to *if missing*, and
+queue as many runs as you like: each run takes the next style that has no
+preview yet.
+
+The first time you open the browser, any version 2 style that was reworked
+from an original style is given that original's cover image. Copies only: the
+original gallery is not changed.
+
+### Categories
+
+| Category | Styles | Sub-categories |
+|---|---|---|
+| Photography | 500 | Portrait & Fashion, Street & Documentary, Landscape & Nature, Studio & Product, Film Stocks & Colour, Darkroom & Alternative Process, Lens & Camera Effects, Vintage & Era Looks, Experimental Photo, Architecture & Interiors, Macro & Still Life |
+| Cinema & TV | 360 | Film Genres, Film Eras, Colour Grades, Video & Broadcast Formats, Practical & Special Effects, Cinematography Looks, World Cinema Movements |
+| Anime & Manga | 370 | Anime Eras, Anime Genres, Manga Inking, Colouring & Shading, Chibi & Stylised, Painterly & Backgrounds, Game & Visual Novel Art, Mecha & Sci-Fi Design, Fantasy & Adventure Art |
+| Cartoon & Animation | 338 | Classic Theatrical, TV Cartoon, Modern & Web Animation, Stop Motion & Puppet, Cutout & Experimental Animation, World Animation, Character Design Styles, Background & Layout Art |
+| Comics & Graphic Novels | 340 | American Comics Eras, European Comics, Indie & Underground, Noir & Pulp, Strips & Cartooning, Global & Manga-Influenced Comics, Inking & Colouring Styles |
+| Printmaking & Posters | 346 | Relief Print, Intaglio & Engraving, Screenprint & Riso, Lithography & Offset, Posters, Ephemera & Packaging, Book Arts & Illustrated Print, Experimental Print |
+| Painting | 394 | Oil, Watercolour & Gouache, Acrylic & Mixed Media, Ink & East Asian Brush, Classical Movements, Modern Movements, Folk & Naive, Digital Painting, Portrait & Figure Traditions, Landscape & Still Life Traditions |
+| Drawing & Illustration | 366 | Pencil & Charcoal, Pen & Ink, Marker, Crayon & Pastel, Editorial & Advertising, Children's & Storybook, Scientific & Technical, Fashion & Lifestyle, Concept Art, Architectural & Urban Sketch, Tattoo & Flash |
+| Historical & World Art | 346 | Ancient, Medieval & Sacred, East Asian, South & Southeast Asian, Islamic & Persian, African & Oceanic, Americas & Indigenous, European Folk |
+| 3D & CGI | 346 | Photoreal Render, Stylised 3D, Clay, Toy & Miniature, Material Studies, Technical & Wireframe, Motion Graphics & Abstract 3D, Product & Automotive Viz, Architectural Viz |
+| Games & Pixel Art | 358 | Pixel Art, Retro 3D, Game Genres & Splash Art, Cards, UI & Icons, Voxel & Blocky, Tabletop & Board Game Art, Environment & Level Art, Character & Creature Art |
+| Graphic Design | 364 | Design Movements, Flat & Vector, Typography & Layout, Infographic & Diagram, Pattern & Ornament, Branding & Icon, Editorial & Poster Design, Web & App Interface |
+| Aesthetics & Subcultures | 366 | Internet Aesthetics, Punk & Futurisms, Decades, Cosy & Nature, Dark & Gothic, Fashion & Street Styles, Retro-Futures & Nostalgia, Seasonal & Atmospheric |
+| Fantasy, Sci-Fi & Horror | 363 | High Fantasy, Dark Fantasy, Science Fiction, Horror & Macabre, Mythic & Fairy Tale, Retro Pulp Genre, Steampunk & Alt-History, Post-Apocalyptic & Dystopian, Cosmic & Weird |
+| Craft & Material | 345 | Paper & Collage, Textile & Fibre, Ceramic, Glass & Stone, Wood & Metal, Food & Organic, Light & Projection, Sculpture & Installation, Jewellery & Ornament, Models & Miniature Craft |
+| Abstract & Experimental | 368 | Geometric, Gestural & Colour Field, Generative & Algorithmic, Glitch & Signal, Psychedelic & Optical, Surreal & Dreamlike, Minimal & Monochrome, Organic & Biomorphic, Hybrid & Invented |
+
+Modifiers: lighting 83, palette 93, camera 70, mood 60, format 97, finish 51.
+
+### Where version 2 keeps your files
+
+```
+user/v2/
+├─ state.json      favourites, recents, collections
+├─ custom.json     your own styles
+└─ previews/       one image per style, plus cached card sizes
+```
+
+The shipped catalog is `styles_v2/`, one file per category, and is never
+written to. `python tools/v2_lint.py` checks every style against the writing
+rules.
+
+---
 
 ## 18. Reference tables
 

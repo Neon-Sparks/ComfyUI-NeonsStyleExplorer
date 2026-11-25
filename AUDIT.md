@@ -241,3 +241,57 @@ package, because some of what it sends is destructive on purpose.
 * **If ComfyUI is started with `--listen`, anyone who can reach it can call
   these routes**, as they can call ComfyUI's own. This package adds no login
   and is not meant to face a network you do not trust.
+
+## Audit, 2.11.0 — the Style Roller
+
+One new node, one new route, two new files read from disk.
+
+| Surface | What it can reach | How it is held |
+| --- | --- | --- |
+| `POST /neons_roller/roll` | the word list, read-only | behind the same Origin guard as every POST; writes nothing; `count` clamped to 50, `seed` to 0..2^32-1, text boxes cut at 4,000 characters, unknown dropdown values fall back to their defaults |
+| `data/roller_words.txt` | shipped, never written at run time | fixed path |
+| `user/roller_words.txt` | the user's own terms | fixed path, never taken from a request; over 2 MB ignored; at most 20,000 lines; control characters stripped; each term cut at 80 characters |
+
+* A term is only ever text. It is never used as a path, a pattern or markup:
+  `never_include` is escaped before it is matched, the node's display box is a
+  textarea set through `.value`, and brackets in a term are escaped so they
+  cannot be read as prompt emphasis.
+* `tools/security_probe.py` attacks the route: a count of a billion, wrong
+  types in every field, a 200,000-character pinned word, file paths in every
+  field, and 5,000 pattern-shaped words in `never_include` (answered in well
+  under two seconds — the words are escaped, so none of them is a pattern).
+* Residuals are unchanged from 2.10.0: the Origin check compares host names
+  only, and a request with no Origin is accepted.
+
+## Audit, 3.0.0 — Style Explorer 2
+
+Two new nodes, eleven new routes, one new user folder (`user/v2/`).
+
+| Surface | What it can reach | How it is held |
+| --- | --- | --- |
+| `GET /neons_style2/catalog`, `/state` | the shipped styles; the user's favourites, collections and preview list | read-only |
+| `GET /neons_style2/preview` | one preview image | the file name is a slug of a style id the catalog knows; an unknown id is a 404 before any path is built; served as `image/jpeg` with `nosniff` |
+| `POST /neons_style2/preview/save` | reads one image, writes one preview | source held to ComfyUI's output, temp and input folders by the same containment check the original save routes use; the folder type is one of three fixed words; over 64 MB refused; decoded and re-encoded by Pillow, so what is stored is always a JPEG this code wrote; target is `user/v2/previews/<slug>.jpg` |
+| `POST /neons_style2/compose` | nothing on disk | text in, text out; inputs cut to fixed lengths |
+| `POST /neons_style2/favourite`, `/collection`, `/recents/clear` | `user/v2/state.json` | ids must resolve to a real style; collection names are keys inside one JSON file and never paths; 60 collections of 2,000 styles at most |
+| `POST /neons_style2/custom/save`, `/delete` | `user/v2/custom.json` | every field cleaned to plain text and cut to length; a name cannot contain the characters the styles box gives meaning to; a shipped style cannot be shadowed or deleted |
+
+* The browser builds every element with `textContent`; no style, collection or
+  search text is ever parsed as HTML.
+* The styles box is parsed, not evaluated. An unknown name is skipped and
+  reported; a dice scope is matched against category ids, sub names and the
+  user's collection names and falls back to the whole catalog.
+* A damaged `state.json` or `custom.json` reads as empty. (Found by test: a
+  non-list `favourites` value raised; fixed before release.)
+* The preview carry-over from the original gallery copies files into
+  `user/v2/previews` and changes nothing in the original gallery; the source
+  name is reduced to a base name before it is joined to the gallery folder.
+* `tools/security_probe.py` attacks these routes: path escapes in every field
+  of preview/save, traversal ids on the preview GET, a 100,000-character own
+  style, deleting a shipped style, collection names shaped like paths, and
+  compose with wrong types throughout.
+* The roller's "save as style" adds no route of its own. It posts the recipe to
+  `/neons_style2/custom/save` and the image to `/neons_style2/preview/save`,
+  so a saved roll goes through the same cleaning, limits (60 words of 100
+  characters) and path containment as any other own style. Its "always write
+  every word" flag is only honoured as a real JSON `true` on a user's own style.
