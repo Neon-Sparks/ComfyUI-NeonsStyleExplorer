@@ -33,7 +33,8 @@ STYLES = os.path.join(ROOT, "styles")
 STYLES_V2 = os.path.join(ROOT, "styles_v2")
 VOCAB = os.path.join(ROOT, "data", "tags.txt")
 
-ASPECTS = ["look", "lighting", "colour", "texture", "mood", "composition", "movement", "shape"]
+ASPECTS = ["look", "lighting", "colour", "texture", "mood", "composition", "movement", "shape",
+           "effects"]
 KINDS = ["realism", "anime", "cartoon", "comics", "painting", "illustration", "3d", "design",
          "abstract"]
 
@@ -120,6 +121,16 @@ WEAK_HEADS = {"capture", "truth", "feel", "feeling", "sense", "quality", "effect
 # ------------------------------------------------------------------ aspects
 
 ASPECT_RULES = [
+    # things laid over or run through a picture; first, so "light trails" is an
+    # effect and not a kind of lighting
+    ("effects", re.compile(
+        r"\b(particles?|sparks?|sparkles?|embers?|wisps?|swirls?|vortex|vortices|trails?|"
+        r"streaks?|bursts?|starbursts?|sunbursts?|explosions?|shards?|splash(?:es)?|"
+        r"splatters?|spatters?|ripples?|shockwaves?|distortions?|warps?|twists?|tendrils?|"
+        r"dissolv\w*|disintegrat\w*|dispersion|scatter(?:ing)?|shatter\w*|melt(?:ing|s)?|"
+        r"liquify|levitat\w*|orbs?|auras?|halos?|runes?|sigils?|glyphs?|stardust|confetti|"
+        r"bubbles|flares?|afterimages?|echoes|ghosting|flecks?|flakes?|flames?|"
+        r"motion lines|speed lines|light leaks?|film burns?|overlays?)\b")),
     ("lighting", re.compile(
         r"\b(light(?:ing|s|ed)?|\w+light|lit|backlit|sunlit|moonlit|candlelit|glow(?:ing|s)?|"
         r"shadows?|shading|chiaroscuro|tenebris[mt]|rim|illuminat\w*|luminous|luminosity|"
@@ -229,6 +240,16 @@ KIND_RULES = {
 
 # aspects that suit every kind unless the term itself says otherwise
 UNIVERSAL = {"lighting", "colour", "mood", "composition", "shape"}
+
+
+def _roller():
+    """roller.py itself, loaded by path: the themes are defined there, once."""
+    import importlib.util
+
+    spec = importlib.util.spec_from_file_location("ns_roller_rules", os.path.join(ROOT, "roller.py"))
+    module = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+    return module
 
 
 def norm(term):
@@ -363,7 +384,7 @@ def build():
     for row in read_core():
         key = norm(row["term"])
         if key in table:
-            raise SystemExit(f"roller_core.txt lists '{row['term']}' twice")
+            continue              # listed twice in the core: the first filing stands
         table[key] = row
 
     mined = {}
@@ -435,6 +456,9 @@ def build():
                       "tag": tag if tag in vocab else ""}
 
     rows = sorted(table.values(), key=lambda row: (ASPECTS.index(row["aspect"]), row["term"]))
+    themes_of = _roller().themes_of
+    for row in rows:
+        row["themes"] = " ".join(sorted(themes_of(row["term"])))
     return rows
 
 
@@ -444,12 +468,13 @@ def render(rows):
         "# Your own words go in user/roller_words.txt, one per line (see MANUAL.md).",
         "#",
         "# term <tab> aspect <tab> kinds (* = every kind) <tab> tier (a = well known,",
-        "# b = deep cut) <tab> booru tag, when the term has a real one",
+        "# b = deep cut) <tab> booru tag, when the term has a real one <tab> themes",
         "",
     ]
     for row in rows:
         kinds = " ".join(kind for kind in KINDS if kind in row["kinds"]) or "*"
-        lines.append("\t".join([row["term"], row["aspect"], kinds, row["tier"], row["tag"]]).rstrip())
+        lines.append("\t".join([row["term"], row["aspect"], kinds, row["tier"], row["tag"],
+                                row.get("themes", "")]).rstrip())
     return "\n".join(lines) + "\n"
 
 

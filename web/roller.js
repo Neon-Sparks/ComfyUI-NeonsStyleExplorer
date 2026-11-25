@@ -2,10 +2,10 @@
  * Neons Style Roller — shows the words a run rolled, previews a roll without
  * queueing the workflow, and saves a roll you like as a style.
  *
- * The node itself is plain widgets; this adds three things under them: a
- * "preview roll" button, a "save as style" button, and a read-only box holding
- * the last words. With a seed set, the preview is exactly what the next run
- * will roll.
+ * The node itself is plain widgets; this adds four things under them: a
+ * "preview roll" button, a "keep these words" button, a "save as style" button,
+ * and a read-only box holding the last words. With a seed set, the preview is
+ * exactly what the next run will roll.
  *
  * A saved roll becomes one of your own styles in Neons Style Explorer 2
  * (My Styles), optionally with the newest generated image as its preview.
@@ -18,7 +18,7 @@ import { h, loadCatalog, post, savePreview, store } from "./v2_api.js";
 
 const NODE = "NeonsStyleRoller";
 const SENT = ["kind", "count", "seed", "aspect", "vocabulary", "output_as", "weight",
-    "always_include", "never_include"];
+    "always_include", "never_include", "theme", "words_per_term"];
 const EMPTY = "Run the workflow, or press preview roll, to see the words here.";
 const GROUP = "Rolled";
 
@@ -37,12 +37,40 @@ function show(node, words, note) {
 }
 
 /** Keep the roll as plain lists: what "save as style" writes down. */
-function keep(node, terms, tags, words) {
+function keep(node, terms, tags, words, seed) {
     node._nsRoll = {
         terms: Array.isArray(terms) ? terms.filter(Boolean) : [],
         tags: Array.isArray(tags) ? tags.filter(Boolean) : [],
         words: words || "",
+        seed: Number(seed) || 0,
     };
+}
+
+/**
+ * Hold on to the roll in the box: put the seed it came from on the node and
+ * stop the seed from moving. Needed because the seed widget has usually moved
+ * on by the time you see the words (randomize steps it after every run), and
+ * because a seed of 0 never shows which seed it used.
+ */
+function keepWords(node) {
+    const roll = node._nsRoll;
+    if (!roll?.seed) {
+        show(node, roll?.words || "", "Roll some words first: run the workflow or press preview roll.");
+        return;
+    }
+    const seed = widgetOf(node, "seed");
+    const control = widgetOf(node, "control_after_generate")
+        || node.widgets?.find((entry) => entry.name?.startsWith("control"));
+    if (seed) {
+        seed.value = roll.seed;
+        seed.callback?.(roll.seed);
+    }
+    if (control) {
+        control.value = "fixed";
+        control.callback?.("fixed");
+    }
+    show(node, roll.words, `Kept: seed ${roll.seed}, fixed. These words repeat until you change `
+        + "a setting or the seed.");
 }
 
 async function preview(node) {
@@ -56,8 +84,9 @@ async function preview(node) {
         });
         const data = await response.json();
         if (!data?.ok) throw new Error(data?.error || `HTTP ${response.status}`);
-        keep(node, data.terms, data.tags, data.words);
-        const unseeded = data.seeded ? "" : "Seed is 0, so the run will roll different words.";
+        keep(node, data.terms, data.tags, data.words, data.seed);
+        const unseeded = data.seeded ? ""
+            : "Seed is 0, so the run will roll different words. Press keep these words to hold these.";
         show(node, data.words, [data.note, unseeded].filter(Boolean).join(" "));
     } catch (error) {
         show(node, "", `Could not roll a preview (${error?.message || error}). `
@@ -191,6 +220,11 @@ function attach(node) {
     button.options = { ...(button.options || {}), serialize: false };
     button.tooltip = "Roll now with these settings, without running the workflow.";
 
+    const holder = node.addWidget("button", "keep these words", null, () => keepWords(node));
+    holder.serialize = false;
+    holder.options = { ...(holder.options || {}), serialize: false };
+    holder.tooltip = "Set the seed to the one these words came from and fix it, so they repeat.";
+
     const keeper = node.addWidget("button", "save as style", null, () => saveDialog(node));
     keeper.serialize = false;
     keeper.options = { ...(keeper.options || {}), serialize: false };
@@ -227,7 +261,8 @@ app.registerExtension({
         nodeType.prototype.onExecuted = function (message) {
             const result = onExecuted?.apply(this, arguments);
             const words = message?.ns_rolled_words?.[0] || "";
-            keep(this, message?.ns_rolled_terms?.[0], message?.ns_rolled_tags?.[0], words);
+            keep(this, message?.ns_rolled_terms?.[0], message?.ns_rolled_tags?.[0], words,
+                message?.ns_rolled_seed?.[0]);
             show(this, words, message?.ns_roller_note?.[0] || "");
             return result;
         };

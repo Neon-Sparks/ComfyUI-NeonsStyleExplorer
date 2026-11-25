@@ -820,7 +820,9 @@ class NeonsStyleRoller:
                 "aspect": (list(roller.ASPECT_CHOICES), {
                     "default": "any (balanced)",
                     "tooltip": "Roll one part of a look only, or leave it balanced to spread "
-                               "the words across all of them.",
+                               "the words across all of them. big changes rolls the words "
+                               "that decide what kind of picture it is; fine details rolls "
+                               "the ones that adjust it.",
                 }),
                 "vocabulary": (roller.VOCABULARIES, {
                     "default": "everything",
@@ -850,6 +852,19 @@ class NeonsStyleRoller:
                     "default": "after text",
                     "tooltip": "Where the rolled words go when something is wired into text.",
                 }),
+                # added after 3.0.0, so they sit last: a workflow saved before
+                # them keeps every value it had
+                "theme": (list(roller.THEME_CHOICES), {
+                    "default": "any",
+                    "tooltip": "A flavour that cuts across everything else: dark & gothic finds "
+                               "dark lighting, dark palettes, gothic looks and grim moods. Most "
+                               "of the roll comes from the theme, the rest from outside it.",
+                }),
+                "words_per_term": (list(roller.LENGTHS), {
+                    "default": "any",
+                    "tooltip": "one word rolls plain words such as gothic, rainbow, splatter. "
+                               "three or more rolls the longer, more specific descriptions.",
+                }),
             },
             "optional": {
                 "text": ("STRING", {
@@ -870,13 +885,18 @@ class NeonsStyleRoller:
 
     def roll(self, kind="all", count=5, seed=0, aspect="any (balanced)",
              vocabulary="everything", output_as="phrases", weight=1.0, always_include="",
-             never_include="", position="after text", text=None):
-        rolled, pinned, note = roller.roll(
+             never_include="", position="after text", theme="any", words_per_term="any",
+             text=None):
+        out = roller.roll_detail(
             count=count, kind=kind, aspect=aspect, vocabulary=vocabulary, seed=seed,
-            never_include=never_include, always_include=always_include)
+            never_include=never_include, always_include=always_include, theme=theme,
+            words_per_term=words_per_term)
+        rolled, pinned, note = out["rolled"], out["pinned"], out["note"]
         words = roller.render(pinned + rolled, output_as, weight)
         return {"ui": {"ns_rolled_words": [words], "ns_roller_note": [note],
                        # the recipe as plain lists, for "save as style"
+                       # the seed the words came from, even when the widget said 0
+                       "ns_rolled_seed": [out["seed"]],
                        "ns_rolled_terms": [[row["term"] for row in pinned + rolled]],
                        "ns_rolled_tags": [[roller.plain_tag(row) for row in pinned + rolled]]},
                 "result": (roller.join_text(text, words, position), words)}

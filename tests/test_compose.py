@@ -1759,8 +1759,101 @@ class Roller(unittest.TestCase):
         for label, aspect in self.roller.ASPECT_CHOICES.items():
             if not aspect:
                 continue
-            rolled, _pinned, _note = self.roller.roll(count=10, aspect=label, seed=5)
-            self.assertEqual({row["aspect"] for row in rolled}, {aspect})
+            allowed = {aspect} if isinstance(aspect, str) else set(aspect)
+            rolled, _pinned, _note = self.roller.roll(count=12, aspect=label, seed=5)
+            self.assertEqual(len(rolled), 12, label)
+            self.assertTrue({row["aspect"] for row in rolled} <= allowed, label)
+            if isinstance(aspect, tuple):
+                self.assertGreater(len({row["aspect"] for row in rolled}), 2, label)
+
+    def test_big_changes_and_fine_details_do_not_overlap_much(self):
+        big = dict(self.roller.ASPECT_CHOICES)["big changes (look, era, colour, light)"]
+        fine = dict(self.roller.ASPECT_CHOICES)["fine details (texture, shape, mood, camera)"]
+        self.assertEqual(set(big) & set(fine), {"lighting"})
+        self.assertEqual(set(big) | set(fine), set(self.roller.ASPECTS))
+        self.assertIn("effects", big)
+
+    def test_every_theme_has_plenty_of_terms(self):
+        rows = self.roller.terms()
+        for label, theme in self.roller.THEME_CHOICES.items():
+            if not theme:
+                continue
+            total = sum(1 for row in rows if theme in row["themes"])
+            self.assertGreater(total, 200, label)
+
+    def test_a_theme_leads_and_flavours_most_of_the_roll(self):
+        for label, theme in self.roller.THEME_CHOICES.items():
+            if not theme:
+                continue
+            themed = total = 0
+            for seed in range(1, 9):
+                rolled, _pinned, _note = self.roller.roll(count=10, theme=label, seed=seed)
+                self.assertIn(theme, rolled[0]["themes"], f"{label} did not lead with its own")
+                themed += sum(1 for row in rolled if theme in row["themes"])
+                total += len(rolled)
+            self.assertGreater(themed / total, 0.55, label)
+            self.assertLess(themed / total, 0.95, f"{label} left no room for anything else")
+
+    def test_a_theme_still_obeys_the_kind(self):
+        rolled, _pinned, _note = self.roller.roll(count=12, theme="dark & gothic",
+                                                  kind="anime & manga", seed=3)
+        for row in rolled:
+            self.assertTrue(not row["kinds"] or "anime" in row["kinds"], row["term"])
+
+    def test_words_per_term_is_respected(self):
+        limits = {"one word": (1, 1), "one or two words": (1, 2), "three or more words": (3, 99)}
+        for label, (low, high) in limits.items():
+            for seed in range(1, 6):
+                rolled, _pinned, _note = self.roller.roll(count=20, words_per_term=label,
+                                                          seed=seed)
+                self.assertEqual(len(rolled), 20, label)
+                for row in rolled:
+                    self.assertTrue(low <= len(row["key"].split()) <= high,
+                                    f"{row['term']} under {label}")
+        self.assertEqual(len(self.roller.roll(count=5, words_per_term="nonsense", seed=2)[0]), 5)
+
+    def test_effects_are_an_aspect_of_their_own(self):
+        effects = [row for row in self.roller.terms() if row["aspect"] == "effects"]
+        self.assertGreater(len(effects), 400)
+        have = {row["key"] for row in effects}
+        for word in ("magical sparkles", "paint splatters", "swirling vortex", "twists",
+                     "glowing runes", "floating shapes", "shockwave", "light trails",
+                     "fractal swirls"):
+            self.assertTrue(self.roller.norm(word) in have, word)
+        rolled, _pinned, _note = self.roller.roll(count=12, aspect="effects & magic", seed=8)
+        self.assertEqual({row["aspect"] for row in rolled}, {"effects"})
+        self.assertEqual(len(rolled), 12)
+        magic, _pinned, _note = self.roller.roll(count=8, aspect="effects & magic",
+                                                 theme="fantasy & mythic", seed=8)
+        self.assertGreaterEqual(sum(1 for row in magic if "fantasy" in row["themes"]), 4)
+
+    def test_plain_words_are_there_to_roll(self):
+        have = {row["key"] for row in self.roller.terms()}
+        for word in ("neon punk", "cyberpunk", "steampunk", "futurism", "futuristic", "historic",
+                     "old", "new", "ethereal", "heavenly", "gothic", "splatter", "ink splatter",
+                     "paint spatter", "rainbow", "abstract"):
+            self.assertIn(word, have)
+        singles = sum(1 for row in self.roller.terms() if row["length"] == 1)
+        self.assertGreater(singles, 1200)
+
+    def test_a_roll_reports_the_seed_it_came_from(self):
+        first = self.roller.roll_detail(count=6, seed=0)
+        self.assertTrue(0 < first["seed"] <= 0xFFFFFFFF)
+        again = self.roller.roll_detail(count=6, seed=first["seed"])
+        self.assertEqual([row["term"] for row in first["rolled"]],
+                         [row["term"] for row in again["rolled"]])
+        self.assertEqual(self.roller.roll_detail(count=3, seed=77)["seed"], 77)
+        for junk in ("x", None, -4, 2 ** 40):
+            self.assertTrue(0 < self.roller.roll_detail(count=2, seed=junk)["seed"] <= 0xFFFFFFFF)
+
+    def test_the_shipped_list_names_its_themes_and_own_words_are_matched(self):
+        for row in self.roller.terms()[::37]:
+            self.assertEqual(row["themes"], self.roller.themes_of(row["term"]), row["term"])
+        self.own("gothic velvet gloom\nplain thing | look | * | a | | dark\n")
+        mine = {row["term"]: row for row in self.roller.terms() if row["user"]}
+        self.assertIn("dark", mine["gothic velvet gloom"]["themes"])
+        # a theme column in a user's own file is ignored: the words decide
+        self.assertNotIn("dark", mine["plain thing"]["themes"])
 
     def test_a_balanced_roll_spreads_across_aspects(self):
         for seed in range(1, 6):
@@ -1892,6 +1985,7 @@ class Roller(unittest.TestCase):
         out = nodes.NeonsStyleRoller().roll(count=4, seed=11, always_include="my (pin)",
                                            output_as="tags", weight=1.3)
         terms, tags = out["ui"]["ns_rolled_terms"][0], out["ui"]["ns_rolled_tags"][0]
+        self.assertEqual(out["ui"]["ns_rolled_seed"], [11])
         self.assertEqual(len(terms), 5)
         self.assertEqual(len(tags), 5)
         self.assertEqual(terms[0], "my (pin)")

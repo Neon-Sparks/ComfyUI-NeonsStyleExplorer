@@ -1448,3 +1448,1887 @@ architectural forms
 ornamental borders
 decorative frames
 flat planes of colour
+
+# ---------------------------------------------------------------------------
+# Plain words. One or two words each: the simple vocabulary people reach for
+# first when they describe a style.
+# ---------------------------------------------------------------------------
+
+@ look | *
+artistic
+arty
+aesthetic
+beautiful mess
+bizarre
+blocky
+boho
+bohemian
+brutal
+bubbly
+busy
+candid look
+cartoonish
+charming
+cheesy
+chic
+chunky
+cinematic look
+classic
+classy
+colourful
+comical
+complex
+conceptual
+cool
+crafty
+crazy
+creepy
+crude
+cute
+cutesy
+dainty
+dark
+daring
+dazzling
+deadpan
+dirty
+dramatic
+dreamlike
+earthy look
+eccentric
+edgy
+elaborate
+electric
+energetic
+epic
+exotic
+extravagant
+extreme
+fancy
+fantastical
+feral
+fierce
+fiery
+flamboyant
+flashy
+fragile
+freaky
+fresh
+frosty
+funky
+fuzzy
+garish
+gaudy
+gentle
+ghostly
+glam
+glamorous
+gloomy
+glorious
+glowing
+gnarly
+graceful
+grand
+graphic novel look
+grimy
+groovy
+grotesque
+grungy
+harsh
+heavy
+hectic
+high fashion
+hip
+homemade
+humble
+hypnotic look
+hyper
+iconic
+imaginative
+immersive
+impressionistic
+informal
+innocent
+intense
+inventive
+jagged
+jazzy
+juicy
+kitschy
+lavish look
+lean
+light
+lively
+loose
+loud
+lovely
+lucid
+macabre look
+magical
+majestic
+massive
+mellow
+messy look
+mighty
+modest
+moody look
+muddy
+murky
+mysterious look
+mystical
+natural
+neat
+noble
+novel
+odd
+offbeat
+old-school
+opulent look
+outlandish
+overgrown
+painted
+pale
+peculiar
+pictorial
+plain
+plush
+poetic
+posh
+pretty
+pure
+quaint
+quiet
+quirky
+radical
+ragged
+rainbow
+rare
+rebellious look
+regal
+relaxed
+rich
+romantic
+rough-hewn
+royal
+rugged
+sacred
+savage
+scruffy
+serene look
+shabby
+shabby chic
+sharp
+shiny
+showy
+silly
+simple
+sketchy
+sleek
+slick
+smoky
+smooth
+snappy
+soft-focus
+solemn
+sophisticated look
+sparkly
+spooky
+stately
+steamy
+strange
+streamlined
+striking
+strong
+stylish
+sublime
+subtle
+sugary
+sumptuous
+sunny
+swanky
+sweet
+symbolic
+tame
+tasteful
+tender
+thrilling
+tidy
+tiny
+tough
+tranquil look
+trashy
+trendy
+tribal
+trippy
+twisted
+ugly
+ultra
+unfinished
+unusual
+urbane
+velvety
+vibrant
+vivid
+wacky
+warm
+washed-out
+weird
+wicked
+wild
+wispy
+witty
+wonky
+worn
+zany
+zesty
+
+@ look | *
+gothic
+noir
+sci-fi
+fantasy
+horror
+western
+pulp
+punk
+grunge
+glam rock
+heavy metal
+hip-hop
+disco
+rave
+goth
+emo
+kawaii
+cottagecore
+dark academia
+vaporwave look
+synthwave look
+dreamcore look
+weirdcore look
+fairy tale
+folklore
+mythological
+legendary
+heroic look
+apocalyptic look
+dystopian look
+utopian look
+cosmic look
+alien look
+otherworldly look
+supernatural
+occult
+esoteric
+alchemical
+arcane
+mystic
+shamanic
+ritual
+celestial
+heavenly
+angelic
+divine
+holy
+saintly
+infernal
+hellish
+demonic look
+underworld
+ghost story
+haunted
+witchy
+wizardly
+enchanted look
+dreamland
+wonderland
+nightmare
+nightmarish
+feverish look
+hallucinatory look
+psychedelic look
+trance
+ecstatic
+euphoric
+blissful
+zen
+spiritual look
+tribal look
+nomadic
+pastoral look
+rustic look
+rural
+urban
+suburban
+industrial look
+mechanical look
+robotic
+cybernetic
+biomechanical
+organic look
+botanical
+floral
+aquatic
+oceanic look
+nautical
+maritime
+tropical
+arctic
+polar
+desert look
+volcanic
+stormy
+wintry look
+autumnal look
+springlike
+summery look
+nocturnal look
+solar
+lunar
+stellar
+galactic
+atomic
+nuclear
+electric look
+magnetic
+crystalline
+mineral
+metallic
+wooden
+stony
+earthen
+glassy
+icy
+watery
+smoky look
+fiery look
+airy look
+
+@ movement | *
+historic
+historical
+old
+old-fashioned
+old-world
+olden
+aged
+ancient
+antique
+archaic
+primeval
+primordial
+prehistoric
+stone age
+bronze age
+iron age
+classical
+classic era
+medieval
+dark ages
+feudal
+renaissance
+baroque era
+rococo era
+colonial
+imperial
+regency
+georgian
+victorian
+edwardian
+gilded age
+industrial age
+machine age
+wartime
+post-war
+cold war era
+atomic era
+modern
+modernist
+contemporary
+current
+present-day
+new
+brand new
+new wave
+new age
+novel era
+next-gen
+futuristic era
+far future
+near future
+space-age
+post-modern
+retro era
+throwback
+nostalgic era
+period piece
+turn-of-the-century
+mid-century
+late-century
+millennial
+timeless era
+ageless
+eternal
+bygone
+forgotten era
+lost age
+golden age
+silver age
+heyday
+vintage era
+heritage
+heirloom
+traditional
+ancestral
+folk tradition
+tribal tradition
+indigenous tradition
+oriental tradition
+occidental tradition
+eastern
+western tradition
+northern
+southern
+nordic
+celtic
+slavic
+mediterranean
+latin
+african
+asian
+arabian
+persian
+indian
+oceanic tradition
+polynesian
+mesoamerican
+andean
+
+@ movement | design illustration 3d comics
+neon punk
+neonpunk
+cyber punk
+steam punk
+dieselpunk
+diesel punk
+atompunk
+atom punk
+biopunk
+bio punk
+solarpunk
+solar punk
+clockpunk
+nanopunk
+stonepunk
+lunarpunk
+tidalpunk
+decopunk
+raypunk
+silkpunk
+sandalpunk
+dungeonpunk
+cassette futurism
+retro futurism
+neo-futurism
+afrofuturism
+futurist
+futuristic style
+post-cyberpunk
+cyber noir
+tech noir
+bio-mechanical
+techno
+techno-organic
+high-tech
+low-tech
+lo-fi sci-fi
+hard sci-fi
+space opera
+planetary romance
+sword and sorcery
+gaslamp fantasy
+dieselpunk noir
+weird west
+gothic horror
+cosmic horror
+folk horror
+dark fantasy
+high fantasy
+low fantasy
+urban fantasy
+science fantasy
+grimdark
+noblebright
+hopepunk
+mythpunk
+splatterpunk
+steamgoth
+cybergoth
+synthpunk
+glitchcore
+webcore
+vapor aesthetic
+outrun
+retrowave
+chillwave
+darkwave
+new retro wave
+y2k futurism
+frutiger metro
+utopian scholastic
+global village coffeehouse
+corporate grunge
+mcbling
+indie sleaze
+scene aesthetic
+old web
+
+@ texture | *
+splatter
+spatter
+paint spatter
+ink spatter
+ink splash
+paint splash
+colour splash
+watercolour splash
+ink blot
+ink blots
+ink drips
+paint runs
+dripping paint
+dribbled paint
+flicked paint
+poured paint
+smeared paint
+smudged ink
+bleeding ink
+blotted ink
+washed ink
+sprayed paint
+spray mist
+overspray
+airbrushed
+stencilled
+stamped
+scribbled
+scrawled
+scratched
+scraped
+scuffed
+sanded
+chipped
+cracked
+crackled
+crumbled
+crumpled
+creased
+wrinkled
+folded
+torn
+ripped
+frayed
+tattered
+shredded
+burnt
+scorched
+charred
+singed
+stained
+soaked
+waterlogged
+faded
+bleached
+yellowed
+aged paper
+foxed
+mouldy
+mossy
+rusty
+corroded
+oxidised
+tarnished
+pitted
+dented
+hammered
+polished
+buffed
+burnished
+lacquered
+varnished
+glazed
+enamelled
+gilded
+silvered
+plated
+anodised
+brushed
+etched
+engraved
+embossed
+debossed
+carved
+chiselled
+sculpted
+moulded
+cast
+forged
+welded
+riveted
+bolted
+stitched
+quilted
+embroidered
+woven
+knitted
+crocheted
+braided
+felted
+tufted
+beaded
+sequinned
+studded
+glittery
+glitter
+sparkle
+shimmer
+sheen
+gloss
+grit
+grain
+dust
+dusty
+sandy
+gritty texture
+powdery
+chalky
+waxy
+oily
+greasy
+slimy
+sticky
+gooey
+foamy
+bubbly texture
+frothy
+fluffy
+furry
+feathery
+downy
+silky
+satiny
+velvet
+leathery
+rubbery
+plasticky
+glassy texture
+crystal
+frosted
+icy texture
+wet
+damp
+dewy
+misty
+foggy
+hazy texture
+steamy texture
+smoky texture
+sooty
+ashy
+pixelated
+blocky pixels
+glitchy
+noisy
+static
+scanlined
+dithered
+halftoned
+stippled
+hatched
+cross-hatched
+speckled
+spotted
+mottled
+marbled
+veined
+streaked
+striated
+ribbed
+grooved
+ridged
+bumpy
+lumpy
+knobbly
+spiky texture
+prickly
+thorny
+scaly
+honeycombed
+perforated
+punched
+pierced
+latticed
+meshed
+netted
+
+@ colour | *
+rainbow colours
+rainbow palette
+multicoloured
+technicolour
+kaleidoscopic colour
+prismatic
+prismatic colour
+spectral colour
+iridescent
+holographic
+opalescent
+pearlescent
+metallic colour
+chrome colour
+golden
+gold
+silver
+bronze
+copper
+brass
+rose gold
+platinum
+gunmetal
+jet black
+pitch black
+pure white
+off-white
+bone white
+snow white
+ash grey
+steel grey
+slate
+charcoal
+smoke grey
+silver grey
+blood red
+ruby red
+cherry red
+brick red
+rust red
+wine red
+scarlet
+crimson
+vermilion
+coral
+salmon
+peach
+apricot
+tangerine
+burnt orange
+amber
+honey
+mustard
+lemon yellow
+canary yellow
+butter yellow
+lime green
+chartreuse
+mint green
+sage green
+olive green
+forest green
+emerald green
+jade green
+bottle green
+sea green
+teal
+turquoise
+aqua
+cyan
+sky blue
+baby blue
+powder blue
+cornflower blue
+royal blue
+cobalt blue
+ultramarine
+navy blue
+midnight blue
+indigo
+violet
+lilac
+lavender
+mauve
+plum
+aubergine
+magenta
+fuchsia
+hot pink
+bubblegum pink
+blush pink
+dusty rose
+rose pink
+burgundy
+maroon
+chocolate brown
+coffee brown
+caramel
+tan
+sand
+beige
+cream
+ivory
+taupe
+khaki
+sepia
+neon green
+neon pink
+neon blue
+neon orange
+neon yellow
+neon purple
+neon red
+neon colours
+fluorescent
+day-glo
+acid colours
+candy colours
+sherbet colours
+ice cream colours
+sunset colours
+sunrise colours
+ocean colours
+forest colours
+desert colours
+autumn colours
+winter colours
+spring colours
+summer colours
+fire colours
+ice colours
+earth colours
+sky colours
+jewel colours
+gemstone colours
+metal colours
+vivid
+vibrant colour
+saturated
+oversaturated
+desaturated
+muted
+subdued
+dull
+drab
+dusky
+dusty colour
+smoky colour
+milky
+creamy
+pale colour
+washed colour
+bleached colour
+faded colour
+tinted
+toned
+shaded
+two-tone
+three-tone
+duotone look
+monotone
+colourless
+black and gold
+black and red
+black and white look
+red and black
+blue and gold
+blue and orange
+pink and blue
+purple and gold
+green and gold
+teal and orange
+orange and teal
+red and cyan
+yellow and black
+white and gold
+
+@ lighting | *
+glowing
+glowy
+radiant
+luminous look
+luminescent
+incandescent
+shining
+shiny light
+gleaming
+glinting
+glittering
+twinkling
+sparkling
+shimmering
+flickering
+flashing
+blazing
+burning
+smouldering
+fiery light
+sunlit
+sunny light
+sun-kissed
+sun-drenched light
+moonlit
+starlit
+candlelit
+firelit
+lamplit
+torchlit
+backlit
+frontlit
+sidelit
+toplit
+underlit
+spotlit
+floodlit
+dim
+dimly lit
+dark lighting
+shadowy
+shaded light
+gloomy light
+murky light
+bright
+brightly lit
+brilliant
+dazzling light
+blinding
+overexposed
+underexposed
+high contrast light
+low contrast light
+soft light
+hard light
+harsh light
+gentle light
+warm light
+cool light
+cold light
+golden light
+silver light
+blue light
+red light
+green light
+purple light
+pink light
+orange light
+white light
+coloured light
+rainbow light
+neon light
+neon lighting
+neon glow light
+fluorescent light look
+ultraviolet
+blacklight
+infrared
+x-ray
+thermal
+laser light
+laser beams
+strobe
+disco lights
+stage lights
+studio lights
+street lights
+city lights
+fairy lights
+christmas lights
+lanterns
+candles
+firelight glow
+campfire glow
+sunset glow
+sunrise glow
+dusk light
+dawn glow
+twilight
+midnight
+noon light
+daylight
+nightlight
+eclipse light
+aurora
+northern lights
+lightning
+electric glow
+plasma glow
+ember glow
+lava glow
+heavenly light
+holy light
+divine light
+angelic glow
+halo
+aura
+ghostly glow
+eerie glow
+magical glow
+mystical light
+ethereal light
+dreamy light
+hazy light
+misty light
+foggy light
+smoky light
+dusty light
+dappled
+mottled light
+streaky light
+rays
+beams
+shafts
+flares
+sparkles
+glints
+highlights
+shadows
+silhouette
+silhouetted
+
+@ mood | *
+happy
+sad
+angry
+calm mood
+peaceful mood
+gentle mood
+quiet mood
+loud mood
+wild mood
+tame mood
+dark mood
+light mood
+bright mood
+gloomy mood
+grim
+grave
+dire
+doomed
+hopeless
+hopeful mood
+joyous
+jolly
+merry
+gleeful
+blissful mood
+dreamy mood
+sleepy
+drowsy
+lazy
+lively mood
+restless
+anxious
+nervous
+tense mood
+fearful
+scary
+terrifying
+horrific
+creepy mood
+spooky mood
+ghostly mood
+haunted mood
+sinister mood
+menacing
+threatening
+violent
+brutal mood
+savage mood
+fierce mood
+furious
+raging
+stormy mood
+turbulent
+chaotic look
+frenzied
+manic
+hysterical
+delirious
+intoxicated
+drunken
+woozy
+dizzy
+disorienting
+confusing
+puzzling
+curious
+wondrous
+wonderful
+awesome
+majestic mood
+noble mood
+proud
+bold mood
+brave
+daring mood
+defiant mood
+rebellious mood
+free
+carefree
+breezy
+easygoing
+laid-back
+chill
+cool mood
+warm-hearted
+loving
+tender mood
+affectionate
+passionate
+lustrous
+sultry
+steamy mood
+moody blue
+blue mood
+lonely mood
+isolated
+abandoned
+forgotten
+lost
+longing
+yearning
+nostalgic feel
+sentimental
+bittersweet mood
+wistful mood
+pensive
+thoughtful
+reflective
+dreaming
+sacred mood
+holy mood
+heavenly mood
+divine mood
+angelic mood
+celestial mood
+infernal mood
+hellish mood
+demonic mood
+cursed
+blessed
+enchanted
+bewitched
+magical mood
+mystical mood
+mythical
+legendary mood
+epic mood
+heroic mood
+tragic
+comic
+funny
+humorous
+silly mood
+absurd mood
+surreal feel
+strange mood
+weird mood
+uncanny feel
+alien mood
+otherworldly feel
+cosmic mood
+infinite
+vast
+tiny mood
+cosy mood
+homely mood
+snug
+safe
+dangerous
+risky
+edgy mood
+
+@ shape | *
+angular
+jagged shapes
+spiky
+pointed
+sharp shapes
+blunt
+rounded
+round
+curvy
+curved
+wavy
+swirly
+swirling
+spiralling
+twisting
+twisted shapes
+coiled
+looped
+knotted
+tangled
+woven shapes
+braided shapes
+straight
+linear
+boxy
+square
+cubic
+rectangular
+triangular
+circular
+oval
+elliptical
+spherical
+cylindrical
+conical
+pyramidal
+hexagonal
+octagonal
+polygonal
+star-shaped
+heart-shaped
+diamond-shaped
+crescent
+arched
+domed
+vaulted
+towering
+tall
+short
+long
+wide
+narrow
+slim
+slender
+thin
+thick
+fat
+chunky shapes
+bulky
+bulbous
+bulging
+swollen
+puffy
+inflated
+flat shapes
+flattened
+squashed
+stretched
+elongated
+compressed
+distorted
+warped
+bent
+crooked
+skewed
+slanted
+tilted
+lopsided
+uneven
+irregular
+regular
+symmetrical
+asymmetrical
+balanced
+unbalanced
+orderly shapes
+random
+scattered
+clustered
+stacked
+layered shapes
+nested
+overlapping
+interlocking
+tessellated shapes
+fragmented
+shattered
+broken
+cracked shapes
+splintered
+exploded
+melted
+melting
+dripping shapes
+flowing
+fluid shapes
+liquid
+molten
+gaseous
+cloudy
+wispy shapes
+feathered
+fuzzy shapes
+soft shapes
+hard shapes
+crisp shapes
+blurry shapes
+bold lines
+fine lines
+thin lines
+thick lines
+heavy lines
+light lines
+dotted lines
+dashed lines
+wavy lines
+zigzag
+zigzags
+stripes
+striped
+checks
+checked
+plaid
+dots
+dotted
+spots
+spotted shapes
+grid
+gridded
+honeycomb
+mosaic
+patchwork
+kaleidoscope
+mandala
+fractal
+maze
+labyrinth
+swirls
+spirals
+loops
+curls
+waves
+ripples shape
+rays shape
+bursts
+starbursts
+sunbursts
+explosions
+splashes
+blobs
+drips shape
+streaks
+smears
+scribbles
+doodles
+squiggles
+scrawls
+
+@ composition | *
+symmetrical layout
+centred
+off-centre
+cropped
+close
+close-up
+wide
+panoramic
+sweeping
+towering view
+looming
+intimate framing
+distant
+far away
+aerial
+overhead
+top-down
+bird's-eye
+low-angle
+high-angle
+tilted frame
+sideways
+upside-down
+mirrored
+reflected
+doubled
+repeated
+tiled
+framed
+bordered
+vignetted
+boxed
+circular frame
+split
+split-screen
+layered depth
+deep
+shallow
+flat depth
+foreground
+background blur
+blurred
+blurry
+sharp focus look
+soft-focus look
+out of focus
+in motion
+frozen
+still
+static shot
+dynamic shot
+action shot
+snapshot
+portrait framing
+landscape framing
+macro
+micro
+miniature scale
+giant scale
+tiny scale
+epic scale
+crowded
+empty
+sparse layout
+dense layout
+cluttered
+minimal layout
+busy layout
+calm layout
+balanced layout
+chaotic layout
+
+# ---------------------------------------------------------------------------
+# Effects. Things laid over or run through a picture: magic, particles,
+# splatters, twists, distortions. They change an image without naming a subject.
+# ---------------------------------------------------------------------------
+
+@ effects | *
+magical sparkles
+magic sparkles
+sparkles
+sparkle dust
+glitter dust
+fairy dust
+pixie dust
+stardust
+star dust trails
+twinkling stars
+tiny stars
+floating sparkles
+floating particles
+glowing particles
+drifting particles
+dust motes
+floating dust
+golden dust
+shimmering dust
+embers
+glowing embers
+floating embers
+sparks
+flying sparks
+spark shower
+fireflies
+glowing orbs
+floating orbs
+light orbs
+will-o-wisps
+wisps
+glowing wisps
+wisps of light
+wisps of smoke
+smoke wisps
+smoke trails
+smoke swirls
+curling smoke
+coloured smoke
+mist swirls
+swirling mist
+rolling fog
+ground fog
+low mist
+vapour trails
+steam wisps
+magical aura
+glowing aura
+shimmering aura
+energy aura
+radiant halo
+glowing halo
+halo of light
+ring of light
+light rings
+light trails
+light streaks
+light ribbons
+ribbons of light
+streaks of light
+trailing light
+comet trails
+shooting stars
+energy trails
+energy ribbons
+energy waves
+energy burst
+energy field
+energy arcs
+electric arcs
+crackling energy
+crackling lightning
+lightning arcs
+static sparks
+plasma arcs
+plasma tendrils
+magic runes
+glowing runes
+floating runes
+arcane symbols
+glowing sigils
+magic circle
+glowing glyphs
+spell effects
+spellcasting glow
+enchanted glow
+mystic glow
+ethereal glow
+spirit glow
+ghostly trails
+ghost trails
+spectral trails
+spectral wisps
+phantom echoes
+afterimages
+motion echoes
+double vision
+trailing afterimage
+shimmer
+shimmering air
+heat shimmer
+heat haze
+mirage shimmer
+iridescent shimmer
+rainbow shimmer
+prismatic flares
+prismatic rays
+rainbow flares
+rainbow rays
+rainbow trails
+rainbow mist
+aurora ribbons
+aurora veils
+nebula clouds
+cosmic dust
+cosmic swirls
+galaxy swirls
+starfield
+star trails
+starburst
+starbursts
+sunburst rays
+light burst
+burst of light
+flash of light
+lens flares
+anamorphic flares
+bokeh orbs
+bokeh sparkle
+glitter bokeh
+confetti
+confetti burst
+streamers
+petals drifting
+falling petals
+falling leaves
+falling snow
+snowflakes
+drifting snow
+falling ash
+drifting ash
+falling feathers
+floating feathers
+bubbles
+floating bubbles
+soap bubbles
+iridescent bubbles
+water droplets
+dew drops
+rain streaks
+rain drops
+splash
+splashes
+water splash
+paint splash burst
+colour splash burst
+ink splash burst
+splatter burst
+paint splatters
+ink splatters
+colour splatters
+splatter spray
+splatter drips
+drip trails
+paint drips running
+melting drips
+dripping colour
+bleeding colour
+colour bleed
+ink bleed bloom
+ink bloom
+ink clouds
+ink in water swirls
+paint swirls
+swirling paint
+marbled swirls
+swirling colour
+colour swirls
+swirls
+swirling patterns
+spiral swirls
+spiral trails
+vortex
+swirling vortex
+spiral vortex
+whirlpool swirl
+twist
+twists
+twisted forms
+twisting ribbons
+twisting spirals
+corkscrew twists
+helix spirals
+ribbon swirls
+flowing ribbons
+curling tendrils
+tendrils
+vines of light
+branching tendrils
+fractal branches
+fractal swirls
+fractal spirals
+fractal patterns
+fractal bloom
+kaleidoscope pattern
+kaleidoscopic burst
+mirrored kaleidoscope
+mandala burst
+radial burst
+radial rays
+radiating lines
+speed lines
+motion lines
+zoom burst
+zoom blur
+radial blur
+spin blur
+motion streaks
+warp
+warped space
+space warp
+warp distortion
+ripple distortion
+ripples
+ripple rings
+shockwave
+shockwave rings
+pulse rings
+concentric ripples
+wave distortion
+wavy distortion
+heat distortion
+glass distortion
+lens distortion
+fisheye warp
+funhouse warp
+liquid distortion
+liquify
+melting
+melting forms
+melting colours
+dripping melt
+dissolving
+dissolving edges
+dissolving into particles
+disintegrating
+disintegration
+crumbling apart
+scattering particles
+particle dispersion
+dispersion effect
+pixel dispersion
+pixel dissolve
+pixel scatter
+pixel rain
+digital rain
+glitch
+glitches
+glitch streaks
+glitch tears
+glitch blocks
+datamosh smear
+scanline tears
+signal noise
+static noise
+chromatic split
+rgb split
+colour fringing
+hologram flicker
+holographic shimmer
+shatter
+shattered glass
+shattering
+glass shards
+floating shards
+crystal shards
+ice shards
+fragments
+floating fragments
+flying debris
+exploding fragments
+explosion of colour
+colour explosion
+paint explosion
+powder explosion
+colour powder burst
+dust burst
+smoke burst
+burst
+bursts
+radiating burst
+exploding shapes
+floating shapes
+floating geometric shapes
+floating cubes
+floating spheres
+floating triangles
+geometric fragments
+geometric burst
+scattered shapes
+scattered dots
+scattered triangles
+overlapping circles
+concentric rings
+orbiting rings
+orbiting dots
+orbiting particles
+halo rings
+hexagon pattern overlay
+grid overlay
+dot grid overlay
+line overlay
+scribble overlay
+doodle overlay
+texture overlay
+light leak overlay
+film burn
+film burns
+light leaks
+double exposure effect
+multiple exposure effect
+ghosting
+echo trails
+long exposure trails
+light painting trails
+neon trails
+neon streaks
+neon outlines
+glowing outlines
+glowing edges
+rim glow
+edge glow
+inner glow
+outer glow
+soft glow
+bloom glow
+dreamy glow
+luminous haze
+glowing mist
+glowing fog
+glowing smoke
+fire
+flames
+flickering flames
+tongues of flame
+fire trails
+fire sparks
+blue flames
+magic fire
+frost
+frost crystals
+ice crystals
+crystal growth
+crystals
+glowing crystals
+crystalline shards
+snow sparkle
+frozen breath
+bubbling
+boiling
+fizzing
+foaming
+flowing water
+flowing liquid
+liquid metal flow
+liquid gold flow
+molten flow
+lava flow
+oil slick swirl
+iridescent oil slick
+soap film swirl
+pearlescent swirl
+metallic swirl
+gold flecks
+gold leaf flecks
+silver flecks
+glitter flecks
+metallic flakes
+shimmering flakes
+floating petals
+floating lanterns
+floating lights
+string lights
+fairy lights glow
+candle glow
+magic
+magical
+magical glow effect
+magical atmosphere effect
+enchantment
+enchanted sparkle
+sorcery
+arcane energy
+arcane glow
+mana glow
+spirit energy
+soul fire
+celestial light
+celestial sparkle
+heavenly rays
+heavenly glow
+divine rays
+divine glow
+angelic light
+holy glow
+unholy glow
+dark energy
+shadow tendrils
+shadow wisps
+creeping shadows
+void rifts
+dimensional rift
+portal glow
+portal swirl
+time warp
+dream haze
+dream blur
+dreamlike distortion
+surreal distortion
+impossible geometry
+gravity-defying
+weightless
+levitating
+floating
+suspended in air
+frozen in motion
+slow motion
+time freeze
+motion trails
+speed blur
+whoosh lines
+impact burst
+impact lines
+shock lines
+power lines
+emphasis burst
+comic burst
+halftone burst
+screentone burst

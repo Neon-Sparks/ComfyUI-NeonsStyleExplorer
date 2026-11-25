@@ -909,7 +909,7 @@ Outputs are `model`, `clip`, `vae`, `model_name` and `notes`. Previews live in
 
 **Neons Style Roller** rolls loose style language rather than a written style:
 "painterly, caustic light, geometric shapes". It reads a list of more than
-19,000 terms and has no panel, gallery or catalog of its own, so it can be used
+21,000 terms and has no panel, gallery or catalog of its own, so it can be used
 without any other node from this pack.
 
 ### What a roll is made of
@@ -917,8 +917,10 @@ without any other node from this pack.
 Every term in the list is filed two ways.
 
 * By **aspect** — what part of a look it describes: look & medium, lighting,
-  colour, texture & surface, mood, composition & camera, era & movement, or
-  line & shape.
+  colour, texture & surface, mood, composition & camera, era & movement,
+  line & shape, or effects & magic. Effects are things laid over or run
+  through a picture: magical sparkles, glowing runes, paint splatters,
+  swirls, twists, shockwaves, floating shapes, glitch tears.
 * By **kind** — which sort of picture it suits. A lighting or mood term usually
   suits every kind; "screentone manga" suits one.
 
@@ -934,14 +936,17 @@ kind — the word that says what sort of picture this is comes first.
 | `kind` | all, realism, anime & manga, cartoon & animation, comics & print, painting, illustration & drawing, 3D & games, graphic design, abstract & experimental |
 | `count` | how many terms to roll, 1–50 |
 | `seed` | decides the roll; 0 rolls afresh on every run |
-| `aspect` | any (balanced), or one aspect only |
+| `aspect` | any (balanced), big changes, fine details, or one aspect only |
 | `vocabulary` | everything, well known, deep cuts, my words |
 | `output_as` | phrases, or booru-style tags |
 | `weight` | 1.0 writes the terms plain; anything else writes `(term:1.20)` |
 | `always_include` | comma-separated words that lead every roll, on top of `count` |
 | `never_include` | comma-separated words to keep out; removes every term containing one |
 | `position` | where the words go when a prompt is wired into `text` |
+| `theme` | any, or one of eleven flavours such as dark & gothic or neon & glow |
+| `words_per_term` | any, one word, one or two words, three or more words |
 | `preview roll` | rolls now, without running the workflow |
+| `keep these words` | sets the seed the words came from and fixes it |
 | `save as style` | saves the roll in the box as a style for Style Explorer 2 |
 
 The optional **text** input takes a prompt. The **text** output is that prompt
@@ -988,7 +993,7 @@ cut-glass highlights | lighting
 
 The second column is the aspect and the third the kinds, using these names:
 
-* aspects: `look` `lighting` `colour` `texture` `mood` `composition` `movement` `shape`
+* aspects: `look` `lighting` `colour` `texture` `mood` `composition` `movement` `shape` `effects`
 * kinds: `realism` `anime` `cartoon` `comics` `painting` `illustration` `3d` `design` `abstract`
 
 A term with no aspect is filed under *look*; one with no kinds suits every
@@ -996,6 +1001,51 @@ kind. Your line wins over a shipped term with the same words, so you can
 re-file one. The file is read again whenever it changes — no restart — and
 `vocabulary: my words` rolls from it alone. Up to 20,000 terms and 2 MB are
 read; a larger file is ignored.
+
+### Themes, word length and big changes
+
+Three settings shape *which* words come up.
+
+**theme** is a flavour that cuts across kinds and aspects. *dark & gothic*
+finds dark lighting, dark palettes, gothic looks and grim moods alike. The
+first word always comes from the theme and about seven in ten of the rest do;
+the others come from outside it, so ten words do not all say the same thing.
+A theme still obeys `kind`.
+
+| Theme | Finds words such as |
+|---|---|
+| retro & vintage | vintage, 1970s, faded, analogue, pulp, old-school |
+| futuristic & cyber | cyberpunk, holographic, chrome, glitch, neon punk, high-tech |
+| dark & gothic | gothic, noir, macabre, shadowy, tenebrism, haunted |
+| bright & playful | kawaii, candy colours, whimsical, rainbow, doodle |
+| fantasy & mythic | ethereal, heavenly, enchanted, celestial, storybook |
+| historical & world | medieval, baroque, folk, ancient, ukiyo-e, heritage |
+| handmade & craft | woven, embroidered, linocut, papercraft, ceramic |
+| nature & seasons | botanical, autumnal, misty, volcanic, organic |
+| neon & glow | neon, fluorescent, luminous, blacklight, iridescent |
+| minimal & clean | minimalist, flat, sparse, crisp, monochrome |
+| ornate & detailed | ornate, gilded, intricate, filigree, lavish |
+
+**words_per_term** sets how long each rolled term is. *one word* gives the
+plain vocabulary people reach for first, `gothic, rainbow, splatter, heavenly`;
+*three or more words* gives the specific descriptions, `soft cut-paper
+shadows`. The list holds about 1,300 single words.
+
+**aspect** has two choices that are not a single aspect:
+
+* **big changes** deals from look, era & movement, colour, lighting and
+  effects: the words that decide what kind of picture it is.
+* **fine details** deals from texture, shape, mood and composition, with a
+  little lighting: the words that adjust a picture without changing its kind.
+
+### Keeping a roll
+
+With the seed control on *randomize*, the seed on the node has already moved
+on by the time you see the words, and with seed 0 it never showed which seed
+was used. **keep these words** fixes both: it puts the seed the words in the
+box came from onto the node and sets the control to *fixed*, so the next run
+rolls the same words. It works after a run or a **preview roll**. Changing
+any setting that affects the roll changes the words, as it would with any seed.
 
 ### Saving a roll as a style
 

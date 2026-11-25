@@ -205,7 +205,7 @@ copied across the first time you open the browser. See MANUAL.md, section 17c.
 
 **Neons Style Roller** rolls style language instead of a whole style: a handful
 of terms such as `painterly, caustic light, geometric shapes, muted palette`,
-drawn from a list of more than 19,000. It needs nothing else from the pack, so
+drawn from a list of more than 21,000. It needs nothing else from the pack, so
 it works on its own, ahead of any prompt node.
 
 * **kind** narrows the roll to what suits one sort of picture: realism, anime &
@@ -216,9 +216,17 @@ it works on its own, ahead of any prompt node.
   and a longer roll starts with the shorter one. 0 rolls afresh every run.
 * **aspect** rolls one part of a look only (look & medium, lighting, colour,
   texture & surface, mood, composition & camera, era & movement, line &
-  shape). Left on **any (balanced)**, the words are spread across all of them.
+  shape, effects & magic). Left on **any (balanced)**, the words are spread across all of them.
+  **big changes** rolls the words that decide what kind of picture it is;
+  **fine details** rolls the ones that adjust it.
 * **vocabulary** chooses between everything, the well-known terms, the deep
   cuts, or only your own words.
+* **theme** adds a flavour that cuts across everything else: retro & vintage,
+  futuristic & cyber, dark & gothic, bright & playful, fantasy & mythic,
+  historical & world, handmade & craft, nature & seasons, neon & glow, minimal
+  & clean, ornate & detailed.
+* **words_per_term** rolls plain single words (`gothic, rainbow, splatter`),
+  short terms, or the longer descriptions.
 * **output_as** writes plain phrases for natural-language models, or
   `booru_style_tags` for tag-trained ones, using the real tag where one exists.
 * **weight** wraps each term as `(term:1.20)`.
@@ -227,6 +235,8 @@ it works on its own, ahead of any prompt node.
 * **preview roll** shows the words without running the workflow. With a seed
   set, that is exactly what the next run will use.
 
+* **keep these words** sets the seed to the one the words came from and fixes
+  it, so a roll you like repeats.
 * **save as style** turns the roll you are looking at into a style for Neons
   Style Explorer 2: a dialog asks for a name, lets you edit the words, and can
   attach the newest generated image as its preview.

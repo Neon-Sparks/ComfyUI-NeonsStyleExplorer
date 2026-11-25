@@ -1,5 +1,45 @@
 # Changelog
 
+## 3.1.0 — the Style Roller grows up
+
+Everything here is the Style Roller. The other nodes are unchanged, and a
+workflow saved with the 3.0.0 roller loads with every value it had: the two
+new settings sit last and take their defaults.
+
+### Added
+
+* **About 1,800 more words, 21,489 in all**, written by hand for the plain
+  vocabulary the mined list was short of:
+  * single words and short terms: gothic, heavenly, rainbow, historic, old,
+    new, trippy, splatter, paint spatter, and some 1,300 like them;
+  * the punk and futurism families: neon punk, cyberpunk, steampunk,
+    dieselpunk, solarpunk, cassette futurism and the rest;
+  * eras, colours by name, light, mood and shape words.
+* **A ninth aspect, effects & magic**, with 981 terms: magical sparkles,
+  glowing runes, energy arcs, paint splatters, swirling vortex, twists,
+  shockwaves, floating shapes, glitch tears. Things laid over or run through a
+  picture, which change it without naming a subject.
+* **theme**, a flavour that cuts across kinds and aspects: retro & vintage,
+  futuristic & cyber, dark & gothic, bright & playful, fantasy & mythic,
+  historical & world, handmade & craft, nature & seasons, neon & glow, minimal
+  & clean, ornate & detailed. The first word comes from the theme and about
+  seven in ten of the rest; a theme still obeys `kind`.
+* **words_per_term**: any, one word, one or two words, three or more words.
+* **aspect** gains two choices that deal from several aspects: *big changes*
+  (look, era, colour, light, effects), the words that decide what kind of
+  picture it is, and *fine details* (texture, shape, mood, camera), the ones
+  that adjust it.
+* **keep these words** puts the seed the words in the box came from on the node
+  and fixes it. With the control on randomize the node's seed has already moved
+  on by the time the words are shown; this is how to hold a roll you like.
+
+### Changed
+
+* A roll with seed 0 is still fresh every run, but it is now made from a real
+  random seed, and that seed is reported, so it can be kept.
+* The first roll of a session takes about half a second while the larger list
+  is read; later rolls take a few hundredths.
+
 ## 3.0.0 — Style Explorer 2 and the Style Roller
 
 Two new nodes. Nothing existing is changed or removed: every workflow built

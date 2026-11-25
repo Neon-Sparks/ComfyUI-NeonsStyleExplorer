@@ -173,16 +173,19 @@ def _routes():
 
         seed = number("seed", 0)
         seed = seed if 0 <= seed <= 0xFFFFFFFF else 0
-        rolled, pinned, note = word_roller.roll(
-            count=number("count", 5), kind=text("kind", 40), aspect=text("aspect", 40),
+        out = word_roller.roll_detail(
+            count=number("count", 5), kind=text("kind", 40), aspect=text("aspect", 60),
             vocabulary=text("vocabulary", 40), seed=seed,
             never_include=text("never_include", 4000),
-            always_include=text("always_include", 4000))
+            always_include=text("always_include", 4000),
+            theme=text("theme", 40), words_per_term=text("words_per_term", 40))
+        rolled, pinned, note = out["rolled"], out["pinned"], out["note"]
         words = word_roller.render(pinned + rolled, text("output_as", 20), body.get("weight"))
         return web.json_response({"ok": True, "words": words, "note": note,
                                   "terms": [row["term"] for row in pinned + rolled],
                                   "tags": [word_roller.plain_tag(row) for row in pinned + rolled],
-                                  "seeded": bool(seed), "total": word_roller.counts()["total"]})
+                                  "seeded": bool(seed), "seed": out["seed"],
+                                  "total": word_roller.counts()["total"]})
 
     @post("/neons_style/compose")
     async def post_compose(request):
